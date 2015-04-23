@@ -51,6 +51,7 @@ class SpotModalEditForm extends React.Component {
         contentType: 'application/json'
       }).done(() => {
         this.props.handleDelete(this.state.id);
+        Turbolinks.visit(location.toString());
       });
     }
   }

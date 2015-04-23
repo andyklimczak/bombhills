@@ -125,6 +125,7 @@ Vagrant.configure(2) do |config|
     #ln -s ~/fog/bombhills/images /vagrant/public doesn't work on windows 10
     gem install bundler
     gem update --system
+    gem install mailcatcher
     cd /vagrant
     bundle install
     rails db:setup
