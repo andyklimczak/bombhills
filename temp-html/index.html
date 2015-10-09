@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+
+<link href="text.css" rel="stylesheet" type="text/css">
+<link href="div.css" rel="stylesheet" type="text/css">
+<link href="buttons.css" rel="stylesheet" type="text/css">
+<link href="map.js" rel="stylesheet" type="text/javascript">
+
+<title>Bomb Hills</title>
+
+<script charset="UTF-8" type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+
+var main = function() {
+  $(".button").mouseenter(function() {
+    $(this).toggleClass("activebutton");
+  });
+  $(".button").mouseleave(function() {
+    $(this).toggleClass("activebutton");
+  });
+  $('.openmap').mouseenter(function() {
+	  $(this).addClass("mapbuttonhighlight");
+  }); 
+  $('.openmap').mouseleave(function() {
+	  $(this).removeClass("mapbuttonhighlight");
+  }); 
+};
+
+
+function GetMap() {
+    Microsoft.Maps.loadModule('Microsoft.Maps.Themes.BingTheme', {
+        callback: function() {
+            map = new Microsoft.Maps.Map(document.getElementById(
+                'myMap'), {
+                credentials: 'Al9aBb7etkdbFTyp2LNeKvnuZsE7r1-gCm95LmXZru0rbfBTSNaQjRxd2WDatfii',
+                theme: new Microsoft.Maps.Themes.BingTheme()
+            });
+			
+            map.setView({
+                mapTypeId: Microsoft.Maps.MapTypeId.road,
+				zoom: 10,
+                center: new Microsoft.Maps.Location(37.776586, -122.448811)
+            });
+			
+			var newPoint = function(name, loc1, loc2, title, description) {
+    			name = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(loc1,
+        			loc2), null);
+    			map.entities.push(name);
+    			map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(
+        			loc1, loc2), {
+        			title: title,
+        			description: description,
+       				pushpin: name
+    			}));
+			}
+			var sanfranlargest = new newPoint("sanfranlargest", 37.800309, -122.418117,
+    			"Filbert Street", "high density");
+			var thevalleyamazingtrail = new newPoint("thevalleyamazingtrail", 41.460184, -81.823116,
+    			"Amazing Trail", "watch out for bikers");
+        }
+    });
+}
+
+
+var setLocation = function() {
+    $('#findmebutton').click(function() {
+        var geoLocationProvider = new Microsoft.Maps.GeoLocationProvider(
+            map);
+        geoLocationProvider.getCurrentPosition();
+    });
+}
+
+var displayMap = function() {
+    $(function() {
+        $('#pinimage').click(function() {
+			$('#myMap').animate({
+                left: '0'
+            });
+			$('#myMap').animate({
+                opacity: '1'
+            });
+			$('video').addClass('videostop');
+			$('html').addClass('htmlbodycolor');
+			$('.controlsoff').addClass('controlson');
+			$('.citation').addClass('citationoff');
+			 $('.mymapoff').addClass('mymapon');
+        });
+    });
+}
+var closeMap = function() {
+    $('#closemapbutton').click(function() {
+        $('#myMap').animate({
+            opacity: '.3'
+        });
+		$('#myMap').animate({
+            left: '-2000px'
+        });
+		$('#myMap').animate({
+            opacity: '0'
+        });
+		$('video').removeClass('videostop');
+		$('html').removeClass('htmlbodycolor');
+		$('.controlsoff').removeClass('controlson');
+		$('.citation').removeClass('citationoff');
+		$('.mymapoff').removeClass('mymapon');
+    });
+};
+
+$(document).ready(displayMap);
+$(document).ready(closeMap);
+$(document).ready(setLocation);
+$(document).ready(main);
+$(document).ready(newPoint); 
+$(document).ready(GetMap); 
+
+</script>
+
+<style type="text/css">
+	
+/* =========== MEDIA QUERIES ============== */	
+
+</style>
+
+</head>
+
+<body onload="GetMap();">
+
+    <video autoplay class="bgvid" loop poster="video3000kpbs.jpg">
+    <source src="video3000kpbs.webm" type="video/webm">
+    <source src="video3000kpbs.mp4" type="video/mp4">
+    <source src="video3000kpbs.ogv" type="video/ogv"></video>
+    
+    <div class="navdiv">
+
+    </div>
+    
+    <div class="mapbox">
+        <div class="controlsoff">
+            <ul class="controlslist">
+                <li id="findmebutton" class="button"><img height="60" id="locateicon" src=
+                  "<%=asset_path('locateicon.png') %>" width="60"></li>
+
+                <li id="addspotbutton" class="button"><img height="60" id="addicon" src=
+                "/assets/addicon.png" width="60"></li>
+
+                <li id="closemapbutton" class="button"><img height="60" id="closeicon" src=
+                "/assets/closeicon.png" width="60"></li>
+            </ul>
+        </div>
+		<div class="mymapoff" id='myMap'>
+        </div>
+    </div>
+
+    <div class="greetingbox">
+    	<h1> BOMB HILLS </h1>
+    </div>
+
+    <div class="wrapper">
+    	<p class="openmap" id="pinimage"> find a spot </p>
+        <div class="infoone" id="colorone">
+        </div>
+        <div class="infotwo" id="colorone">
+        </div>
+        <div class="infothree" id="colorone">
+        </div>
+        <div class="infofour" id="colorone">
+        </div>
+        <div class="infofive" id="colortwo">
+        	<h2> about us </h2>
+        </div>
+        <div class="infosix" id="colorone">
+        </div>
+    </div>
+    <div class="featuredcontent">
+		<p> 
+    </div>
+    <div class="footer">
+    </div>
+    
+</body>
+
+</html>

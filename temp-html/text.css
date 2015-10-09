@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 8em;
+	font-weight: 100;
+	text-align: center;
+	cursor: default;
+	color: #FFF;
+	margin: 0;
+	line-height: 320px;
+	padding: 0;
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 4em;
+	font-weight: 100;
+	font-style: italic;
+	text-align: center;
+	cursor: default;
+	color: #000;
+	margin: 0;
+	padding-top: 8px;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 4em;
+	font-weight: 100;
+	text-align: center;
+	line-height: 250PX;
+	cursor: default;
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+.date {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: 100;
+	text-align: left;
+	cursor: default;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.paragraph {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
+	font-weight: 100;
+	text-align: left;
+	cursor: default;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.openmap {
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px; 
+	font-weight: 300;
+	color: #fff;
+	text-align: center; 
+	border: thin solid rgba(223, 226, 219, .5);
+	margin: 0;
+	padding: 0;
+	margin-left: 43%;
+	margin-right: 43%;
+	margin-bottom: 40px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.controlslist {
+	position: relative;
+    top: 44%;
+    transform: translateY(-50%);
+	font-size: 1em;
+	font-family: "Lao UI";
+	color: #000;
+	list-style-type: none;
+	padding: 10px;
+	background-color: rgba(255,255,255, .4);
+	width: 70%;
+	margin-left: 11%;
+	-webkit-box-shadow: 1px 1px 1px 1px #303030;
+    -moz-box-shadow:    2px 2px 1px 1px #303030;
+    box-shadow:         1px 1px 1px 1px #303030;
+}

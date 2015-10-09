@@ -1,0 +1,57 @@
+<body onload="GetMap();">
+
+    <video autoplay class="bgvid" loop poster="video3000kpbs.jpg">
+      <source src="<%= video_path 'video3000kpbs.webm' %>" type="video/webm">
+      <source src="<%= video_path 'video3000kpbs.mp4' %>" type="video/mp4">
+      <source src="<%= video_path 'video3000kpbs.ogv' %>" type="video/ogv">
+    </video>
+
+    <%= render 'layouts/navbar' %>
+    
+    <div class="mapbox">
+        <div class="controlsoff">
+            <ul class="controlslist">
+              <li id="findmebutton" class="button">
+                <%= image_tag "locateicon.png" %>
+              </li>
+
+              <li id="addspotbutton" class="button">
+                <%= image_tag "addicon.png" %>
+              </li>
+
+              <li id="closemapbutton" class="button">
+                <%= image_tag "closeicon.png" %>
+              </li>
+            </ul>
+        </div>
+		<div class="mymapoff" id='myMap'>
+        </div>
+    </div>
+
+    <div class="greetingbox">
+    	<h1> BOMB HILLS </h1>
+    </div>
+
+    <div class="wrapper">
+    	<p class="openmap" id="pinimage"> find a spot </p>
+        <div class="infoone" id="colorone">
+        </div>
+        <div class="infotwo" id="colorone">
+        </div>
+        <div class="infothree" id="colorone">
+        </div>
+        <div class="infofour" id="colorone">
+        </div>
+        <div class="infofive" id="colortwo">
+        	<h2> about us </h2>
+        </div>
+        <div class="infosix" id="colorone">
+        </div>
+    </div>
+    <div class="featuredcontent">
+		<p> 
+    </div>
+    <div class="footer">
+    </div>
+    
+</body>
