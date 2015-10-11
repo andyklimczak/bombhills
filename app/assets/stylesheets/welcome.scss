@@ -2,6 +2,322 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	/*background-image:;*/
+	background-size: cover;
+	background-color: rgba(0,17,65,.85);
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
+}
+
+.htmlbodycolor {
+	background-color: #297ACC;
+	background-image: none;
+}
+
+.navdiv {
+	background-color: #7A6F65;
+	margin: 0;
+	height: 65px;
+}
+
+.navdivoff {
+	display: none;
+}
+
+.bgvid {
+	position: fixed; 
+  right: 0; 
+  bottom: 0;
+	min-width: 100%; 
+  min-height: 100%;
+	width: auto; 
+  height: auto; 
+  z-index: -100;
+}
+
+.greetingbox {
+	height: 300px;
+}
+
+.removegreetingbox {
+	display: none;
+}
+
+.wrapper {
+	overflow: hidden;
+}
+
+.wrapperoff {
+	/*position:;*/
+	display: none;
+	margin: 0;
+}
+
+.infoone {
+	float: left;
+	height: 30px;
+	width: 20%;
+}
+
+.infotwo {
+	overflow: hidden;
+	height: 30px;
+	width: 60%;
+}
+
+.infothree {
+	float: right;
+ 	height: 30px;
+	width: 20%;
+	margin-top: -30px;
+}
+
+.infofour {
+	float: left;
+	height: 100px;
+	width: 25%;
+}
+
+.infofive {
+	overflow: hidden;
+	height: 100px;
+	width: 50%;
+}
+
+.infosix {
+	float: right;
+ 	height: 100px;
+	width: 25%;
+	margin-top: -100px;
+}
+
+#colorone{
+	background-color: #2A438B;
+}
+
+#colortwo {
+	background-color: #FFF; 
+}
+
+.infooff {
+	display: none;
+}
+
+.featuredcontent {
+	background-color: #FFF;
+	height: 350px;
+	padding: 5%;
+}
+
+.footer {
+	height: 200px;
+	background-color: #0031C0;
+}
+
+.mapbox {
+	overflow: hidden;
+}
+
+.controlsoff {
+	display: none;
+
+}
+
+.controlson {
+	display: inherit;
+	position: absolute;
+	float: left;
+	height: 383px;
+	width: 30%;
+	background-color: #FFF;
+	padding:0;
+	background-image: url(mantwo.jpg);
+}
+
+#myMap {
+	float: left;
+	position: absolute;
+	left: -2000px;
+	height: 383px;
+	width: 70%;
+	margin-left: 30%;
+}
+
+input {
+	height: 35px;
+	color: #000;
+	background-color: #FFF;
+	text-align: center;
+}
+
+.mymapoff {
+	display: none;
+}
+
+.mymapon {
+	display: inherit;
+}
+
+.videostop {
+	display: none;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 8em;
+	font-weight: 100;
+	text-align: center;
+	cursor: default;
+	color: #FFF;
+	margin: 0;
+	line-height: 320px;
+	padding: 0;
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 4em;
+	font-weight: 100;
+	font-style: italic;
+	text-align: center;
+	cursor: default;
+	color: #000;
+	margin: 0;
+	padding-top: 8px;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 4em;
+	font-weight: 100;
+	text-align: center;
+	line-height: 250PX;
+	cursor: default;
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+.date {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: 100;
+	text-align: left;
+	cursor: default;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.paragraph {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
+	font-weight: 100;
+	text-align: left;
+	cursor: default;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.openmap {
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px; 
+	font-weight: 300;
+	color: #fff;
+	text-align: center; 
+	border: thin solid rgba(223, 226, 219, .5);
+	margin: 0;
+	padding: 0;
+	margin-left: 43%;
+	margin-right: 43%;
+	margin-bottom: 40px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.controlslist {
+	position: relative;
+    top: 44%;
+    transform: translateY(-50%);
+	font-size: 1em;
+	font-family: "Lao UI";
+	color: #000;
+	list-style-type: none;
+	padding: 10px;
+	background-color: rgba(255,255,255, .4);
+	width: 70%;
+	margin-left: 11%;
+	-webkit-box-shadow: 1px 1px 1px 1px #303030;
+    -moz-box-shadow:    2px 2px 1px 1px #303030;
+    box-shadow:         1px 1px 1px 1px #303030;
+}
+
+.activebutton {
+	opacity: .5;
+}
+
+#findmebutton {
+	cursor: pointer;
+	color: #FFF;
+	text-align: center;
+	height: 75px;
+}
+
+
+#addspotbutton {
+	cursor: pointer;
+	color: #FFF;
+	text-align: center;
+	height: 75px;
+}
+
+#closemapbutton {
+	cursor: pointer;
+	color: #FFF;
+	text-align: center;
+	height: 75px;
+}
+
+
+#locateicon {
+	display: block;
+    margin: auto;
+	padding-top: 7px;
+	cursor: pointer;
+}
+
+#addicon {
+	display: block;
+    margin: auto;
+	padding-top: 7px;
+	cursor: pointer;
+}
+
+
+#closeicon {
+	display: block;
+    margin: auto;
+	padding-top: 7px;
+	cursor: pointer;
+}
+
+#pinimage {
+	display: block;
+	cursor: pointer;
+}
+
+.mapbuttonhighlight {
+	color: #000;
+	background-color: #FFF;
+}
+
 .controlslist img {
   height: 60px;
 }
