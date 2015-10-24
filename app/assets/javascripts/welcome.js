@@ -14,6 +14,16 @@ var main = function() {
   }); 
 };
 
+var newPoint = function(name, loc1, loc2, title, description) {
+    name = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(loc1,loc2), null);
+    map.entities.push(name);
+    map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(
+        loc1, loc2), {
+        title: title,
+        description: description,
+        pushpin: name
+    }));
+}
 
 function GetMap() {
     Microsoft.Maps.loadModule('Microsoft.Maps.Themes.BingTheme', {
@@ -25,27 +35,20 @@ function GetMap() {
             });
 			
             map.setView({
-                mapTypeId: Microsoft.Maps.MapTypeId.road,
-				zoom: 10,
+                mapTypeId: Microsoft.Maps.MapTypeId.road, 
+                zoom: 10,
                 center: new Microsoft.Maps.Location(37.776586, -122.448811)
             });
+
 			
-			var newPoint = function(name, loc1, loc2, title, description) {
-    			name = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(loc1,
-        			loc2), null);
-    			map.entities.push(name);
-    			map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(
-        			loc1, loc2), {
-        			title: title,
-        			description: description,
-       				pushpin: name
-    			}));
-			}
-			var sanfranlargest = new newPoint("sanfranlargest", 37.800309, -122.418117,
-    			"Filbert Street", "high density");
-			var thevalleyamazingtrail = new newPoint("thevalleyamazingtrail", 41.460184, -81.823116,
-    			"Amazing Trail", "watch out for bikers");
+          var sanfranlargest = new newPoint("sanfranlargest", 37.800309, -122.418117,
+              "Filbert Street", "high density");
+          var thevalleyamazingtrail = new newPoint("thevalleyamazingtrail", 41.460184, -81.823116,
+              "Amazing Trail", "watch out for bikers");
+              
+          loadLocations();
         }
+
     });
 }
 
@@ -94,10 +97,22 @@ var closeMap = function() {
     });
 };
 
+function loadLocations() {
+  console.log('in load locations');
+  var $locations = $('.data-locations');
+  $locations.each(function(index, item) {
+    var temp = new newPoint(
+      $(item).data('username'),
+      $(item).data('latitude'),
+      $(item).data('longitude'),
+      $(item).data('title'),
+      $(item).data('description')
+    );
+  });
+}
+
 $(document).ready(displayMap);
 $(document).ready(closeMap);
 $(document).ready(setLocation);
 $(document).ready(main);
-$(document).ready(newPoint); 
 $(document).ready(GetMap); 
-
