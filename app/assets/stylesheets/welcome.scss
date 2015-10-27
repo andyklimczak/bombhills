@@ -8,116 +8,119 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	/*background-image:;*/
-	background-size: cover;
-	background-color: rgba(0,17,65,.85);
-	background-attachment: fixed;
-	-webkit-font-smoothing: antialiased;
-}
-
-.htmlbodycolor {
-	background-color: #297ACC;
-	background-image: none;
-}
-
-.navdiv {
-	background-color: #7A6F65;
-	margin: 0;
-	height: 65px;
-}
-
-.navdivoff {
-	display: none;
-}
-
-.bgvid {
-	position: fixed; 
-  right: 0; 
-  bottom: 0;
-	min-width: 100%; 
-  min-height: 100%;
-	width: auto; 
-  height: auto; 
-  z-index: -100;
 }
 
 .greetingbox {
-	height: 300px;
+	height: 450px;
+	background-color: #EA2E49;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row; /* works with row or column */
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .removegreetingbox {
 	display: none;
 }
 
-.wrapper {
-	overflow: hidden;
+.mapicon {
+    height: 200px;
+    width: 200px;
 }
 
-.wrapperoff {
-	/*position:;*/
-	display: none;
+.navdiv {
+	background-color: #333745;
 	margin: 0;
+	padding: 0;
+	height: 150px;
 }
 
-.infoone {
-	float: left;
-	height: 30px;
-	width: 20%;
-}
-
-.infotwo {
-	overflow: hidden;
-	height: 30px;
-	width: 60%;
-}
-
-.infothree {
-	float: right;
- 	height: 30px;
-	width: 20%;
-	margin-top: -30px;
-}
-
-.infofour {
-	float: left;
-	height: 100px;
-	width: 25%;
-}
-
-.infofive {
-	overflow: hidden;
-	height: 100px;
-	width: 50%;
-}
-
-.infosix {
-	float: right;
- 	height: 100px;
-	width: 25%;
-	margin-top: -100px;
-}
-
-#colorone{
-	background-color: #2A438B;
-}
-
-#colortwo {
-	background-color: #FFF; 
-}
-
-.infooff {
+.navdivoff {
 	display: none;
+}
+
+#maplist {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 0px;
+	margin-top: 413px;
+}
+
+#maplistitemone {
+	position: relative;
+	color: #FFF;
+	display: inline;
+	font-size: 20px;
+	background-color: #333745;
+	padding: 15px;
+	padding-left: 4%;
+	padding-right: 4%;
+	z-index: 1;
+	cursor: pointer;
+}
+
+#maplistitemtwo {
+	position: relative;
+	color: #FFF;
+	display: inline;
+	font-size: 20px;
+	background-color: #DAEDE2;
+	padding: 15px;
+	padding-left: 17%;
+	padding-right: 17%;
+	z-index: 1;
+}
+
+#maplistitemthree {
+	position: relative;
+	color: #FFF;
+	display: inline;
+	font-size: 20px;
+	background-color: #EA2E49;
+	padding: 15px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.addformoff {
+	display: none;
+}
+
+.addformon {
+	display: inherit;
+	position: absolute;
+	height: 300px;
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 50px;
+	background-color: #333745;
+	z-index: 1;
+	opacity: 0.8;
+}
+
+form {
+	padding: 15px;
+	color: #FFF;
 }
 
 .featuredcontent {
 	background-color: #FFF;
-	height: 350px;
-	padding: 5%;
+	height: 450px;
+	margin: 0;
+	padding: 0;
 }
 
 .footer {
 	height: 200px;
-	background-color: #0031C0;
+	background-color: #EA2E49;
+	margin: 0;
+	padding: 0;
 }
 
 .mapbox {
@@ -126,7 +129,6 @@ html, body {
 
 .controlsoff {
 	display: none;
-
 }
 
 .controlson {
@@ -134,8 +136,9 @@ html, body {
 	position: absolute;
 	float: left;
 	height: 383px;
-	width: 30%;
+	width: 0%;
 	background-color: #FFF;
+	margin: 0;
 	padding:0;
 	background-image: url(mantwo.jpg);
 }
@@ -143,10 +146,9 @@ html, body {
 #myMap {
 	float: left;
 	position: absolute;
-	left: -2000px;
-	height: 383px;
-	width: 70%;
-	margin-left: 30%;
+	left: -1000px;
+	height: 450px;
+	width: 100%;
 }
 
 input {
@@ -275,7 +277,9 @@ h3 {
 	cursor: pointer;
 	color: #FFF;
 	text-align: center;
-	height: 75px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
 }
 
 #closemapbutton {

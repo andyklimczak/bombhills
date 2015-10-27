@@ -1,54 +1,42 @@
 <body onload="GetMap();">
 
-    <video autoplay class="bgvid" loop poster="video3000kpbs.jpg">
-      <source src="<%= video_path 'video3000kpbs.webm' %>" type="video/webm">
-      <source src="<%= video_path 'video3000kpbs.mp4' %>" type="video/mp4">
-      <source src="<%= video_path 'video3000kpbs.ogv' %>" type="video/ogv">
-    </video>
+  <p id="notice"><%= notice %></p>
+  
 
-    
-    <div class="mapbox">
-        <div class="controlsoff">
-            <ul class="controlslist">
-              <li id="findmebutton" class="button">
-                <%= image_tag "locateicon.png" %>
-              </li>
-
-              <li id="addspotbutton" class="button">
-                <%= image_tag "addicon.png" %>
-              </li>
-
-              <li id="closemapbutton" class="button">
-                <%= image_tag "closeicon.png" %>
-              </li>
-            </ul>
-        </div>
-		<div class="mymapoff" id='myMap'>
-        </div>
+    <div class="mymapoff" id='myMap'>
+      <div class="addformoff">
+        <form action="action_page.php">
+            firdcord:<br>
+            <input type="text" name="firdcord" value="firdcord">
+            <br>
+            secondcord:<br>
+            <input type="text" name="secondcord" value="secondcord">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form> 
+      </div>
+      <ul id="maplist">
+        <li id="maplistitemone">add</li>
+        <li id="maplistitemtwo"> </li>
+        <li id="maplistitemthree"> X </li>
+      </ul>
     </div>
 
     <div class="greetingbox">
-    	<h1> BOMB HILLS </h1>
+      <div class="imgcontainer">
+        <%= image_tag "mapicon.png", class: "mapicon", id: "pinimage" %>
+      </div>
     </div>
 
-    <div class="wrapper">
-    	<p class="openmap" id="pinimage"> find a spot </p>
-        <div class="infoone" id="colorone">
-        </div>
-        <div class="infotwo" id="colorone">
-        </div>
-        <div class="infothree" id="colorone">
-        </div>
-        <div class="infofour" id="colorone">
-        </div>
-        <div class="infofive" id="colortwo">
-        	<h2> about us </h2>
-        </div>
-        <div class="infosix" id="colorone">
-        </div>
+    <div class="navdiv">
     </div>
+  
+    <% for location in @locations %>
+      <div class="data-locations" data-latitude=<%= location.latitude %> data-longitude=<%= location.longitude %> data-username=<%= location.username %> data-title=<%= location.title %> data-description=<%= location.description %> ></div>
+    <% end %>
+
     <div class="featuredcontent">
-		<p> 
+    <p> 
     </div>
     <div class="footer">
     </div>
