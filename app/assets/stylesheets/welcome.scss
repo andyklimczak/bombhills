@@ -12,7 +12,10 @@ html, body {
 
 .greetingbox {
 	height: 450px;
-	background-color: #EA2E49;
+	background-color: #77C4D3;
+	background-attachment: fixed;
+	background-image: url("greetingimg");
+	background-size: cover;
 	display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row; /* works with row or column */
@@ -28,15 +31,21 @@ html, body {
 }
 
 .mapicon {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
+}
+
+.imgcontainer {
+	background-color: rgba(255,255,255,.7);
+	padding: 75px;
+	border-radius: 50%;
 }
 
 .navdiv {
 	background-color: #333745;
 	margin: 0;
 	padding: 0;
-	height: 150px;
+	height: 75px;
 }
 
 .navdivoff {
@@ -66,13 +75,13 @@ html, body {
 
 #maplistitemtwo {
 	position: relative;
-	color: #FFF;
+	color: #333745;
 	display: inline;
 	font-size: 20px;
 	background-color: #DAEDE2;
 	padding: 15px;
-	padding-left: 17%;
-	padding-right: 17%;
+	padding-left: 14%;
+	padding-right: 14%;
 	z-index: 1;
 }
 
@@ -99,14 +108,23 @@ html, body {
 	margin-left: 20%;
 	margin-right: 20%;
 	margin-top: 50px;
-	background-color: #333745;
+	background-color: #F6F792;
 	z-index: 1;
 	opacity: 0.8;
+	box-shadow: 10px 10px 5px #888888;
 }
 
 form {
 	padding: 15px;
-	color: #FFF;
+	color: #333745;
+	font-size: 25px;
+}
+
+input {
+	width: 150px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	margin-right: 13px;
 }
 
 .featuredcontent {
@@ -171,15 +189,14 @@ input {
 }
 
 h1 {
-	font-family: 'Roboto', sans-serif;
-	font-size: 8em;
-	font-weight: 100;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 3em;
+	font-weight: 200;
 	text-align: center;
 	cursor: default;
 	color: #FFF;
 	margin: 0;
-	line-height: 320px;
-	padding: 0;
+	line-height: 75px;
 }
 
 h2 {
@@ -191,7 +208,7 @@ h2 {
 	cursor: default;
 	color: #000;
 	margin: 0;
-	padding-top: 8px;
+	padding-top: 25px;
 }
 
 h3 {
@@ -324,4 +341,24 @@ h3 {
 
 .controlslist img {
   height: 60px;
+}
+
+.socialtext {
+	margin: 0;
+	padding-left: 30px;
+	padding-top: 50px;
+	padding-right: 45px;
+	list-style-type: none;
+	float: left;
+}
+
+.socialtextitem {
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: left;
+	color: #FFF;
+	margin: 0;
+	cursor: pointer;
 }

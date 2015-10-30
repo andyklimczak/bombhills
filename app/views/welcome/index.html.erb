@@ -6,29 +6,32 @@
     <div class="mymapoff" id='myMap'>
       <div class="addformoff">
         <form action="action_page.php">
-            firdcord:<br>
-            <input type="text" name="firdcord" value="firdcord">
+            x coordinate: title: <br>
+            <input type="text" name="firdcord" value="x">
+            <input type="text" name="title" value="title">
             <br>
-            secondcord:<br>
-            <input type="text" name="secondcord" value="secondcord">
+            y coordinate: username: <br>
+            <input type="text" name="secondcord" value="y">
+            <input type="text" name="username" value="your name">
             <br><br>
             <input type="submit" value="Submit">
         </form> 
       </div>
       <ul id="maplist">
         <li id="maplistitemone">add</li>
-        <li id="maplistitemtwo"> </li>
+        <li id="maplistitemtwo"> search.. </li>
         <li id="maplistitemthree"> X </li>
       </ul>
     </div>
 
     <div class="greetingbox">
       <div class="imgcontainer">
-        <%= image_tag "mapicon.png", class: "mapicon", id: "pinimage" %>
+        <%= image_tag "mapicon3.png", class: "mapicon", id: "pinimage" %>
       </div>
     </div>
 
     <div class="navdiv">
+      <h1> bombhills </h1>
     </div>
   
     <% for location in @locations %>
@@ -39,6 +42,13 @@
     <p> 
     </div>
     <div class="footer">
+      <ul class="socialtext">
+          <li class="socialtextitem">instagram</li>
+
+          <li class="socialtextitem">twitter</li>
+
+          <li class="socialtextitem">facebook</li>
+      </ul>
     </div>
     
 </body>
