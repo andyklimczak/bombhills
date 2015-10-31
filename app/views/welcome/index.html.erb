@@ -25,6 +25,7 @@
       </ul>
     </div>
 
+    <div id="titlediv"> <h2> bomb hills </h2> </div>
     <div class="greetingbox">
       <div class="imgcontainer">
         <%= image_tag "mapicon.png", class: "mapicon", id: "pinimage" %>
@@ -32,7 +33,12 @@
     </div>
 
     <div class="navdiv">
-      <h1> title here </h1>
+      <h1> explore more </h1>
+      <ul class="navlist">
+        <li class="navitem" id="trips">trips</li>
+        <li class="navitem" id="reviews">reviews</li>
+        <li class="navitem" id="aboutus">about us</li>
+      </ul> 
     </div>
   
     <% for location in @locations %>
