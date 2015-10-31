@@ -14,7 +14,7 @@ html, body {
 	height: 450px;
 	background-color: #A49A87;
 	background-attachment: fixed;
-	background-image: url('greetingimg.jpg');
+	background-image: url('greetingimg2.jpg');
 	background-size: cover;
 	display: -webkit-flex;
     display: flex;
@@ -38,18 +38,11 @@ html, body {
 .imgcontainer {
 }
 
-.titlediv {
-	background-color: #332532;
-	margin: 0;
-	padding: 0;
-	height: 75px;
-}
-
 .navdiv {
-	background-color: #FF974F;
+	background-color: #192B33;
 	margin: 0;
 	padding: 0;
-	height: 75px;
+	height: 150px;
 }
 
 .navdivoff {
@@ -71,7 +64,7 @@ html, body {
 	color: #FFF;
 	display: inline;
 	font-size: 20px;
-	background-color: #332532;
+	background-color: #192B33;
 	padding: 15px;
 	padding-left: 4%;
 	padding-right: 4%;
@@ -91,12 +84,24 @@ html, body {
 	z-index: 1;
 }
 
+#findmebutton {
+	position: relative;
+	color: #FFF;
+	display: inline;
+	font-size: 20px;
+	background-color: #8FB259;
+	padding: 15px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+
 #maplistitemthree {
 	position: relative;
 	color: #FFF;
 	display: inline;
 	font-size: 20px;
-	background-color: #332532;
+	background-color: #FF1D00;
 	padding: 15px;
 	z-index: 1;
 	cursor: pointer;
@@ -115,7 +120,7 @@ html, body {
 	margin-left: 20%;
 	margin-right: 20%;
 	margin-top: 50px;
-	background-color: #0A0303;
+	background-color: #192B33;
 	z-index: 1;
 	opacity: 0.8;
 }
@@ -295,18 +300,6 @@ h3 {
 	opacity: .5;
 }
 
-#findmebutton {
-	position: relative;
-	color: #FFF;
-	display: inline;
-	font-size: 20px;
-	background-color: #A49A87;
-	padding: 15px;
-	z-index: 1;
-	cursor: pointer;
-}
-
-
 #addspotbutton {
 	cursor: pointer;
 	color: #FFF;
@@ -372,8 +365,8 @@ h3 {
 .socialtextitem {
 	font-family: 'Roboto', sans-serif;
 	font-size: 25px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	text-align: left;
 	color: #FFF;
 	margin: 0;
