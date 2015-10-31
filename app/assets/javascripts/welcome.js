@@ -3,7 +3,7 @@
 var main = function() {
   $('#maplistitemone').click(function() {
     $('.addformoff').addClass("addformon");
-  }); 
+  });
 };
 
 var newPoint = function(name, loc1, loc2, title, description) {
@@ -28,7 +28,7 @@ function GetMap() {
       
             map.setView({
                 mapTypeId: Microsoft.Maps.MapTypeId.road, 
-                zoom: 10,
+                zoom: 12,
                 center: new Microsoft.Maps.Location(37.776586, -122.448811)
             });
 

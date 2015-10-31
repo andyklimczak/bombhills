@@ -6,11 +6,11 @@
     <div class="mymapoff" id='myMap'>
       <div class="addformoff">
         <form action="action_page.php">
-            x coordinate: title: <br>
+            x coordinate:      title: <br>
             <input type="text" name="firdcord" value="x">
             <input type="text" name="title" value="title">
             <br>
-            y coordinate: username: <br>
+            y coordinate:       username: <br>
             <input type="text" name="secondcord" value="y">
             <input type="text" name="username" value="your name">
             <br><br>
@@ -20,18 +20,22 @@
       <ul id="maplist">
         <li id="maplistitemone">add</li>
         <li id="maplistitemtwo"> search.. </li>
+        <li id="findmebutton"> find me </li>
         <li id="maplistitemthree"> X </li>
       </ul>
     </div>
 
     <div class="greetingbox">
       <div class="imgcontainer">
-        <%= image_tag "mapicon3.png", class: "mapicon", id: "pinimage" %>
+        <%= image_tag "mapicon.png", class: "mapicon", id: "pinimage" %>
       </div>
     </div>
 
-    <div class="navdiv">
+    <div class="titlediv">
       <h1> bombhills </h1>
+    </div>
+    <div class="navdiv">
+
     </div>
   
     <% for location in @locations %>
@@ -39,7 +43,7 @@
     <% end %>
 
     <div class="featuredcontent">
-    <p> 
+    
     </div>
     <div class="footer">
       <ul class="socialtext">
