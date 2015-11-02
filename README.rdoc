@@ -1,10 +1,15 @@
 == README
 
 === Vagrant setup
+Alright, so I have it done. I am walking through the steps as I type this so I don't miss anything. If something doesn't seem right, let me know and I can fix it. This is my first time use vagrant too. OS = operating system (windows, linux)
+ 
+I'll explain what you're doing for each step too. You don't need to completely understand. Type the stuff in italics into the command line, then hit enter.
+ 
+(virtual box allows you to install virtual machines, an OS inside an OS basically. vagrant allows you to automate OS installs and have the host and guest OS share space, making the project accessible for both OSs)
 ==== 0. Pre-req:
-Install virtual box
-Install vagrant
-Pull/Sync for latest updates for the project through git (you should see a file called 'Vagrantfile' in the root folder)
+[Install virtual box](https://www.virtualbox.org/)
+[Install vagrant](https://www.vagrantup.com/downloads.html)
+Pull for latest updates for the project through git (you should see a file called 'Vagrantfile' in the root folder)
 Right click project, Open in Git Shell/Terminal
  
 (you will have to restart for vagrant install, there shouldn't be any tricks when installing, nothing to checkmark)
@@ -12,42 +17,42 @@ Right click project, Open in Git Shell/Terminal
 (we will run vagrant, which installs everything you need. this will take awhile, but please watch it for errors. I've sat through this a bunch of times and works for me)
 ==== 1. Install vagrant os:
 (you will be typing this into the black git shell you just opened)
-vagrant up (this installs ruby, rails, postgresql, nodejs to get the complete package. also sets some stuff up)
+_vagrant up_ (this installs ruby, rails, postgresql, nodejs to get the complete package. also sets some stuff up)
 (this will take awhile to be finish. 10+ minutes for me. if you're stuck on 'Building native extensions' forever, it's going right)
  
 (you just installed the vagrant os, but have not connected to it yet)
 ==== 2. Connect to vagrant
-vagrant ssh (connects you to your vagrant os, puts you in magic vagrant linux land)
+_vagrant ssh_ (connects you to your vagrant os, puts you in magic vagrant linux land)
  
 (you will only need to run these commands once ever, unless you delete vagrant and reinstall everything of course)
 ==== 3. One Time Database Setup commands
-sudo su postgres
-createuser vagrant
-y (answer yes to 'shall new user be superuser?')
-exit
+_sudo su postgres_
+_createuser vagrant_
+_y_ (answer yes to 'shall new user be superuser?')
+_exit_
  
 ==== 4. Rails commands
-cd /vagrant (move to project folder)
-ls (lower case letter L, then s. list/shows the stuff in the current folder, you should see app, bin,config, etc like where you have the project in windows. I assume ls stands for 'list stuff')
-bundle install (gets ruby addons called gems)
-rake db:setup (sets up the actual database for use)
-rails server --bind 0.0.0.0 (starts the rails server)
+_cd /vagrant_ (move to project folder)
+_ls_ (lower case letter L, then s. list/shows the stuff in the current folder, you should see app, bin,config, etc like where you have the project in windows. I assume ls stands for 'list stuff')
+_bundle install_ (gets ruby addons called gems)
+_rake db:setup_ (sets up the actual database for use)
+_rails server --bind 0.0.0.0_ (starts the rails server)
  
 You are done setting up here.
-Now if you go into a browser, and go to localhost:3000, you should see bomb-hills in the state that you sent to me in the zip.
+Now if you go into a browser, and go to [localhost:3000](localhost:3000), you should see bomb-hills in the state that you sent to me in the zip.
  
 ==== 5. Exiting and stopping server and vagrant
 Ctrl + C (stops the rails server)
-exit (exit vagrant, you are now in windows land again)
-vagrant halt (stops the vagrant os)
+_exit_ (exit vagrant, you are now in windows land again)
+_vagrant halt_ (stops the vagrant os)
  
 ==== 6. Starting vagrant and rails server when not the first time (you will be doing this whenever you shutdown vagrant, turn off your computer, etc.)
-vagrant up (this starts vagrant linux land. will not take forever if it is not your first. the setup stuff only runs when you first run vagrant up on a fresh install)
-vagrant ssh (puts you in vagrant linux magic land)
-cd /vagrant
-bundle install (if you want, you don't need to every time)
-rake db:setup (you don't need to do this every time either, only when you want a fresh database)
-rails s --bind 0.0.0.0 (this starts the server, you will need to do this every time of course. go to localhost:3000 to see the website)
+_vagrant up_ (this starts vagrant linux land. will not take forever if it is not your first. the setup stuff only runs when you first run vagrant up on a fresh install)
+_vagrant ssh_ (puts you in vagrant linux magic land)
+_cd /vagrant_
+_bundle install_ (if you want, you don't need to every time)
+_rake db:setup_ (you don't need to do this every time either, only when you want a fresh database)
+_rails s --bind 0.0.0.0_ (this starts the server, you will need to do this every time of course. go to [localhost:3000](localhost:3000) to see the website)
  
 ==== 7. Edit a file
 (just to show you how easy it is to make front end changes)
