@@ -1,28 +1,61 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+=== Vagrant setup
+#### 0. Pre-req:
+Install virtual box
+Install vagrant
+Pull/Sync for latest updates for the project through git (you should see a file called 'Vagrantfile' in the root folder)
+Right click project, Open in Git Shell/Terminal
+ 
+(you will have to restart for vagrant install, there shouldn't be any tricks when installing, nothing to checkmark)
+ 
+(we will run vagrant, which installs everything you need. this will take awhile, but please watch it for errors. I've sat through this a bunch of times and works for me)
+== 1. Install vagrant os:
+(you will be typing this into the black git shell you just opened)
+vagrant up (this installs ruby, rails, postgresql, nodejs to get the complete package. also sets some stuff up)
+(this will take awhile to be finish. 10+ minutes for me. if you're stuck on 'Building native extensions' forever, it's going right)
+ 
+(you just installed the vagrant os, but have not connected to it yet)
+#### 2. Connect to vagrant
+vagrant ssh (connects you to your vagrant os, puts you in magic vagrant linux land)
+ 
+(you will only need to run these commands once ever, unless you delete vagrant and reinstall everything of course)
+== 3. One Time Database Setup commands
+sudo su postgres
+createuser vagrant
+y (answer yes to 'shall new user be superuser?')
+exit
+ 
+#### 4. Rails commands
+cd /vagrant (move to project folder)
+ls (lower case letter L, then s. list/shows the stuff in the current folder, you should see app, bin,config, etc like where you have the project in windows. I assume ls stands for 'list stuff')
+bundle install (gets ruby addons called gems)
+rake db:setup (sets up the actual database for use)
+rails server --bind 0.0.0.0 (starts the rails server)
+ 
+You are done setting up here.
+Now if you go into a browser, and go to localhost:3000, you should see bomb-hills in the state that you sent to me in the zip.
+ 
+#### 5. Exiting and stopping server and vagrant
+Ctrl + C (stops the rails server)
+exit (exit vagrant, you are now in windows land again)
+vagrant halt (stops the vagrant os)
+ 
+#### 6. Starting vagrant and rails server when not the first time (you will be doing this whenever you shutdown vagrant, turn off your computer, etc.)
+vagrant up (this starts vagrant linux land. will not take forever if it is not your first. the setup stuff only runs when you first run vagrant up on a fresh install)
+vagrant ssh (puts you in vagrant linux magic land)
+cd /vagrant
+bundle install (if you want, you don't need to every time)
+rake db:setup (you don't need to do this every time either, only when you want a fresh database)
+rails s --bind 0.0.0.0 (this starts the server, you will need to do this every time of course. go to localhost:3000 to see the website)
+ 
+#### 7. Edit a file
+(just to show you how easy it is to make front end changes)
+in windows project folder, open the file app/views/layouts/_navbar.html.erb in whatever text editor you want (sublime text is good)
+type something into the div (big boys)
+save the file
+refresh localhost:3000
+you will see the text (big boys) on the top left, git will say you have 1 change
+ 
+#### X. If you mess up
+Vagrant is a self contained virtual machine, and does not interact with your windows at all. So you could blow up vagrant linux, and windows will not be affected. So if you mess up, press Ctrl+C to stop everything. Then open virtual box (Oracle VM Virtual Box) from start menu. You should see bomb-hills_default_... That is your virtual machine. If it is running, you can stop it with Right Click -> Close -> Power Off. And to restart the process if you messed up, Right Click -> Remove -> Delete All Files for fresh start. Then go back to Step 1.
