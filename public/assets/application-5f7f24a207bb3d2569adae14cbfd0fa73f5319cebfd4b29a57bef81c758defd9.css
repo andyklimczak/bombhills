@@ -1,0 +1,514 @@
+/* line 1, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 46, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  margin: 0;
+  background-color: red;
+  display: table;
+}
+
+/* line 53, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 61, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 72, /home/andy/Dev/bomb-hills/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* CSS Document */
+/* line 8, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.greetingbox {
+  height: 450px;
+  background-color: #A49A87;
+  background-attachment: fixed;
+  background-image: url(/assets/greetingimg3-cf195e06cc4c5bdd5bbc4ebca826a498fb93ce0f2a206047978d9c7736139ee4.jpg);
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 29, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.removegreetingbox {
+  display: none;
+}
+
+/* line 33, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.mapicon {
+  height: 200px;
+  width: 225px;
+}
+
+/* line 41, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.navdiv {
+  background-color: #00454D;
+  margin: 0;
+  padding: 0;
+  height: 125px;
+}
+
+/* line 48, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.navdivoff {
+  display: none;
+}
+
+/* line 52, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#maplist {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0px;
+  margin-top: 412px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+/* line 62, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#maplistitemone {
+  position: relative;
+  color: #FFF;
+  display: inline;
+  font-size: 20px;
+  background-color: #00454D;
+  padding: 17px;
+  padding-left: 5%;
+  padding-right: 5%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* line 75, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#maplistitemtwo {
+  position: relative;
+  color: #333745;
+  display: inline;
+  font-size: 20px;
+  background-color: #DAEDE2;
+  padding: 17px;
+  padding-left: 14%;
+  padding-right: 14%;
+  z-index: 1;
+}
+
+/* line 87, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#findmebutton {
+  position: relative;
+  color: #FFF;
+  display: inline;
+  font-size: 20px;
+  background-color: #B39F94;
+  padding: 17px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* line 99, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#maplistitemthree {
+  position: relative;
+  color: #FFF;
+  display: inline;
+  font-size: 20px;
+  background-color: #E9B2BF;
+  padding: 17px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* line 110, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.addformoff {
+  display: none;
+}
+
+/* line 114, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.addformon {
+  display: inherit;
+  position: absolute;
+  height: 300px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 50px;
+  background-color: #E9B2C0;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* line 127, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+form {
+  padding: 15px;
+  font-size: 25px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* line 133, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+input {
+  width: 150px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-right: 13px;
+}
+
+/* line 140, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.featuredcontent {
+  background-color: #FFF;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 450px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 149, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.footer {
+  height: 200px;
+  background-color: #3E7B87;
+  background-image: url(/assets/greetingimgsix-cbaa85bbef78381cff7a6d26e2cb322f3b09996574fc3f27189915a0bf04d479.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 159, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.mapbox {
+  overflow: hidden;
+}
+
+/* line 163, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.controlsoff {
+  display: none;
+}
+
+/* line 167, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.controlson {
+  display: inherit;
+  position: absolute;
+  float: left;
+  height: 383px;
+  width: 0%;
+  background-color: #FFF;
+  margin: 0;
+  padding: 0;
+  background-image: url(/assets/mantwo-09eea71f1e4b07a0f35e0d1d4a1deeae181f7513c4469b4acf9016ba2a20191b.jpg);
+}
+
+/* line 179, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#myMap {
+  float: left;
+  position: absolute;
+  left: -1000px;
+  height: 450px;
+  width: 100%;
+}
+
+/* line 187, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+input {
+  height: 35px;
+  color: #000;
+  background-color: #FFF;
+  text-align: center;
+}
+
+/* line 194, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.mymapoff {
+  display: none;
+}
+
+/* line 198, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.mymapon {
+  display: inherit;
+}
+
+/* line 202, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.videostop {
+  display: none;
+}
+
+/* line 206, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+h1 {
+  display: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 3em;
+  font-weight: 200;
+  text-align: center;
+  cursor: default;
+  color: #FFF;
+  margin: 0;
+  line-height: 75px;
+}
+
+/* line 219, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#titlediv {
+  padding: 0px;
+}
+
+/* line 223, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+h2 {
+  position: absolute;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  color: #FFF;
+  margin: 0;
+}
+
+/* line 235, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.navlist {
+  display: none;
+  list-style-type: none;
+  text-align: center;
+  padding-right: 39px;
+  cursor: pointer;
+}
+
+/* line 243, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.navitem {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 3em;
+  font-weight: 200;
+  color: #FFF;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 25px;
+}
+
+/* line 255, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.date {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  text-align: left;
+  cursor: default;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 266, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.paragraph {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+  text-align: left;
+  cursor: default;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 277, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.openmap {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  border: thin solid rgba(223, 226, 219, 0.5);
+  margin: 0;
+  padding: 0;
+  margin-left: 43%;
+  margin-right: 43%;
+  margin-bottom: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+/* line 293, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.controlslist {
+  position: relative;
+  top: 44%;
+  transform: translateY(-50%);
+  font-size: 1em;
+  font-family: "Lao UI";
+  color: #000;
+  list-style-type: none;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 70%;
+  margin-left: 11%;
+  -webkit-box-shadow: 1px 1px 1px 1px #303030;
+  -moz-box-shadow: 2px 2px 1px 1px #303030;
+  box-shadow: 1px 1px 1px 1px #303030;
+}
+
+/* line 310, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.activebutton {
+  opacity: .5;
+}
+
+/* line 314, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#addspotbutton {
+  cursor: pointer;
+  color: #FFF;
+  text-align: center;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 323, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#closemapbutton {
+  cursor: pointer;
+  color: #FFF;
+  text-align: center;
+  height: 75px;
+}
+
+/* line 331, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#locateicon {
+  display: block;
+  margin: auto;
+  padding-top: 7px;
+  cursor: pointer;
+}
+
+/* line 338, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#addicon {
+  display: block;
+  margin: auto;
+  padding-top: 7px;
+  cursor: pointer;
+}
+
+/* line 346, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#closeicon {
+  display: block;
+  margin: auto;
+  padding-top: 7px;
+  cursor: pointer;
+}
+
+/* line 353, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+#pinimage {
+  display: block;
+  cursor: pointer;
+}
+
+/* line 358, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.mapbuttonhighlight {
+  color: #000;
+  background-color: #FFF;
+}
+
+/* line 363, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.controlslist img {
+  height: 60px;
+}
+
+/* line 367, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.socialtext {
+  margin: 0;
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-right: 45px;
+  list-style-type: none;
+  float: left;
+}
+
+/* line 376, /home/andy/Dev/bomb-hills/app/assets/stylesheets/welcome.scss */
+.socialtextitem {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: left;
+  color: #FFF;
+  margin: 0;
+  cursor: pointer;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
