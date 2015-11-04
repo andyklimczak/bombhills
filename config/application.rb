@@ -23,6 +23,6 @@ module BombHills
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.paths << Rails.root.join("videos")
-    config.servce_static_assets = true
+    config.service_static_assets = true
   end
 end
