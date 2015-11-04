@@ -14,7 +14,7 @@ html, body {
 	height: 450px;
 	background-color: #A49A87;
 	background-attachment: fixed;
-	background-image: url('greetingimg3.jpg');
+	background-image: image-url('greetingimg3.jpg');
 	background-size: cover;
 	display: -webkit-flex;
     display: flex;
@@ -149,7 +149,7 @@ input {
 .footer {
 	height: 200px;
 	background-color: #3E7B87;
-	background-image: url("greetingimgsix.jpg");
+	background-image: image-url("greetingimgsix.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	margin: 0;
@@ -173,7 +173,7 @@ input {
 	background-color: #FFF;
 	margin: 0;
 	padding:0;
-	background-image: url(mantwo.jpg);
+	background-image: image-url("mantwo.jpg");
 }
 
 #myMap {
