@@ -65,11 +65,9 @@ html, body {
 	display: inline;
 	font-size: 20px;
 	background-color: #00454D;
-	padding: 17px;
-	padding-left: 5%;
-	padding-right: 5%;
 	z-index: 1;
 	cursor: pointer;
+	padding: 17px;
 }
 
 #maplistitemtwo {
@@ -78,10 +76,8 @@ html, body {
 	display: inline;
 	font-size: 20px;
 	background-color: #DAEDE2;
-	padding: 17px;
-	padding-left: 14%;
-	padding-right: 14%;
 	z-index: 1;
+	padding: 17px;
 }
 
 #findmebutton {
@@ -90,9 +86,9 @@ html, body {
 	display: inline;
 	font-size: 20px;
 	background-color: #B39F94;
-	padding: 17px;
 	z-index: 1;
 	cursor: pointer;
+	padding: 17px;
 }
 
 
@@ -101,10 +97,11 @@ html, body {
 	color: #FFF;
 	display: inline;
 	font-size: 20px;
-	background-color: #E9B2BF;
-	padding: 17px;
+	background-color: #FA402B;
 	z-index: 1;
 	cursor: pointer;
+	height: 17px;
+	padding: 17px;
 }
 
 .addformoff {
