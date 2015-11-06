@@ -9,13 +9,39 @@
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
+
 }
 
-/* ----------- iPhone 5 and 5S ----------- */
+/* ----------- mobile view ----------- */
 
-/* Portrait and Landscape */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-device-width: 568px) {
+
+  #title {
+    text-align: center;
+  }
+
+
+  #maplistitemone {
+  padding-left: 7%;
+  padding-right: 7%;
+  }
+
+  #maplistitemtwo {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  #findmebutton {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+
+  #maplistitemthree {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
 
 }
 
@@ -40,15 +66,17 @@
             <input type="submit" value="Submit">
         </form> 
       </div>
-      <ul id="maplist">
-        <li id="maplistitemone">add</li>
-        <li id="maplistitemtwo"> search.. </li>
-        <li id="findmebutton"> find me </li>
-        <li id="maplistitemthree"> X </li>
-      </ul>
+
+        <ul id="maplist">
+          <li id="maplistitemone">add</li>
+          <li id="maplistitemtwo"> search.. </li>
+          <li id="findmebutton"> find me </li>
+          <li id="maplistitemthree"> X </li>
+        </ul>
+
     </div>
 
-    <div id="titlediv"> <h2> bomb hills </h2> </div>
+    <div id="titlediv"> <h2 id="title"> bomb hills </h2> </div>
     <div class="greetingbox">
       <div class="imgcontainer">
         <%= image_tag "mapicon.png", class: "mapicon", id: "pinimage" %>
@@ -68,9 +96,6 @@
       <div class="data-locations" data-latitude=<%= location.latitude %> data-longitude=<%= location.longitude %> data-username=<%= location.username %> data-title=<%= location.title %> data-description=<%= location.description %> ></div>
     <% end %>
 
-    <div class="featuredcontent">
-    
-    </div>
     <div class="footer">
       <ul class="socialtext">
           <li class="socialtextitem">instagram</li>

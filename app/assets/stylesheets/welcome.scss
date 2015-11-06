@@ -12,9 +12,8 @@ html, body {
 
 .greetingbox {
 	height: 450px;
-	background-color: #04BFAD;
+	background-color: #013440;
 	background-attachment: fixed;
-	background-image: image-url('greetingimg3.jpg');
 	background-size: cover;
 	display: -webkit-flex;
     display: flex;
@@ -39,7 +38,7 @@ html, body {
 }
 
 .navdiv {
-	background-color: #00454D;
+	background-color: #002635;
 	margin: 0;
 	padding: 0;
 	height: 125px;
@@ -54,7 +53,7 @@ html, body {
 	padding: 0;
 	text-align: center;
 	font-size: 0px;
-	margin-top: 412px;
+	margin-top: 402px;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
 }
@@ -62,46 +61,57 @@ html, body {
 #maplistitemone {
 	position: relative;
 	color: #FFF;
-	display: inline;
+	display: inline-block;
 	font-size: 20px;
-	background-color: #00454D;
+	background-color: #002635;
 	z-index: 1;
 	cursor: pointer;
-	padding: 17px;
+	padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #maplistitemtwo {
 	position: relative;
 	color: #333745;
-	display: inline;
+	display: inline-block;
 	font-size: 20px;
-	background-color: #DAEDE2;
+	background-color: #EFE7BE;
 	z-index: 1;
-	padding: 17px;
+	padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #findmebutton {
 	position: relative;
 	color: #FFF;
-	display: inline;
+	display: inline-block;
 	font-size: 20px;
-	background-color: #B39F94;
+	background-color: #D97925;
 	z-index: 1;
 	cursor: pointer;
-	padding: 17px;
+	padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
 #maplistitemthree {
 	position: relative;
 	color: #FFF;
-	display: inline;
+	display: inline-block;
 	font-size: 20px;
-	background-color: #FA402B;
+	background-color: #AB1A25;
 	z-index: 1;
 	cursor: pointer;
-	height: 17px;
-	padding: 17px;
+	padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .addformoff {
@@ -116,7 +126,7 @@ html, body {
 	margin-left: 20%;
 	margin-right: 20%;
 	margin-top: 50px;
-	background-color: #E9B2C0;
+	background-color: #013440;
 	z-index: 1;
 	opacity: 0.8;
 }
@@ -124,6 +134,7 @@ html, body {
 form {
 	padding: 15px;
 	font-size: 25px;
+	color: #FFF;
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -134,19 +145,9 @@ input {
 	margin-right: 13px;
 }
 
-.featuredcontent {
-	background-color: #FFF;
-	background-size: cover;
-	background-attachment: fixed;
-	height: 450px;
-	margin: 0;
-	padding: 0;
-}
-
 .footer {
 	height: 200px;
-	background-color: #3E7B87;
-	background-image: image-url("greetingimgsix.jpg");
+	background-color: #D97925;
 	background-size: cover;
 	background-attachment: fixed;
 	margin: 0;
@@ -155,22 +156,6 @@ input {
 
 .mapbox {
 	overflow: hidden;
-}
-
-.controlsoff {
-	display: none;
-}
-
-.controlson {
-	display: inherit;
-	position: absolute;
-	float: left;
-	height: 383px;
-	width: 0%;
-	background-color: #FFF;
-	margin: 0;
-	padding:0;
-	background-image: image-url("mantwo.jpg");
 }
 
 #myMap {
@@ -196,10 +181,6 @@ input {
 	display: inherit;
 }
 
-.videostop {
-	display: none;
-}
-
 h1 {
 	display: none;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -214,11 +195,10 @@ h1 {
 
 
 #titlediv {
-	padding: 0px;
+	height: 0px;
 }
 
-h2 {
-	position: absolute;
+#title {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 2em;
 	font-weight: 400;
@@ -246,29 +226,6 @@ h2 {
 	padding-left: 5px;
 	padding-right: 5px;
 	font-size: 25px;
-}
-
-
-.date {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1em;
-	font-weight: 100;
-	text-align: left;
-	cursor: default;
-	color: #000;
-	margin: 0;
-	padding: 0;
-}
-
-.paragraph {
-	font-family: 'Roboto', sans-serif;
-	font-size: 2em;
-	font-weight: 100;
-	text-align: left;
-	cursor: default;
-	color: #000;
-	margin: 0;
-	padding: 0;
 }
 
 .openmap {
