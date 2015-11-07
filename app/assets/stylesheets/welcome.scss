@@ -35,6 +35,40 @@ html, body {
 }
 
 .imgcontainer {
+
+}
+
+.mapmenudivoff {
+	display: none;
+	background-color: transparent;
+}
+
+.mapmenudivon {
+	display: inherit;
+}
+
+#mapmenu { 
+	position: relative;
+	z-index: 1;
+	margin: 0; 
+	padding: 0; 
+	white-space:nowrap;
+	list-style: none;
+	display: flex;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.mapmenuitem { 
+	margin: 0; 
+	padding: 0;
+	display: inline-block;
+	border-style: thin solid #000;
+	height: 75px;
+	width: 25%;
+	color: #FFF;
+	text-align: center;
+	line-height: 75px;
 }
 
 .navdiv {
@@ -44,74 +78,9 @@ html, body {
 	height: 125px;
 }
 
-.navdivoff {
-	display: none;
-}
-
-#maplist {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	font-size: 0px;
-	margin-top: 402px;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 300;
-}
-
-#maplistitemone {
-	position: relative;
-	color: #FFF;
-	display: inline-block;
-	font-size: 20px;
-	background-color: #002635;
-	z-index: 1;
-	cursor: pointer;
-	padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-#maplistitemtwo {
-	position: relative;
-	color: #333745;
-	display: inline-block;
-	font-size: 20px;
-	background-color: #EFE7BE;
-	z-index: 1;
-	padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
 
 #findmebutton {
-	position: relative;
-	color: #FFF;
-	display: inline-block;
-	font-size: 20px;
-	background-color: #D97925;
-	z-index: 1;
-	cursor: pointer;
-	padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
 
-
-#maplistitemthree {
-	position: relative;
-	color: #FFF;
-	display: inline-block;
-	font-size: 20px;
-	background-color: #AB1A25;
-	z-index: 1;
-	cursor: pointer;
-	padding-left: 7%;
-    padding-right: 7%;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 .addformoff {
@@ -162,8 +131,9 @@ input {
 	float: left;
 	position: absolute;
 	left: -1000px;
-	height: 450px;
+	height: 525px;
 	width: 100%;
+	z-index: 0;
 }
 
 input {
@@ -179,18 +149,7 @@ input {
 
 .mymapon {
 	display: inherit;
-}
-
-h1 {
-	display: none;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 3em;
-	font-weight: 200;
-	text-align: center;
-	cursor: default;
-	color: #FFF;
-	margin: 0;
-	line-height: 75px;
+	z-index: 0;
 }
 
 
@@ -209,24 +168,6 @@ h1 {
 	margin: 0;
 }
 
-.navlist {
-	display: none;
-	list-style-type: none;
-	text-align: center;
-	padding-right: 39px;
-	cursor: pointer;
-}
-
-.navitem {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 3em;
-	font-weight: 200;
-	color: #FFF;
-	display: inline;
-	padding-left: 5px;
-	padding-right: 5px;
-	font-size: 25px;
-}
 
 .openmap {
 	font-family: 'Roboto', sans-serif;
@@ -244,96 +185,9 @@ h1 {
 	padding-bottom: 7px;
 }
 
-.controlslist {
-	position: relative;
-    top: 44%;
-    transform: translateY(-50%);
-	font-size: 1em;
-	font-family: "Lao UI";
-	color: #000;
-	list-style-type: none;
-	padding: 10px;
-	background-color: rgba(255,255,255, .4);
-	width: 70%;
-	margin-left: 11%;
-	-webkit-box-shadow: 1px 1px 1px 1px #303030;
-    -moz-box-shadow:    2px 2px 1px 1px #303030;
-    box-shadow:         1px 1px 1px 1px #303030;
-}
-
-.activebutton {
-	opacity: .5;
-}
-
-#addspotbutton {
-	cursor: pointer;
-	color: #FFF;
-	text-align: center;
-	height: 30px;
-	margin: 0;
-	padding: 0;
-}
-
-#closemapbutton {
-	cursor: pointer;
-	color: #FFF;
-	text-align: center;
-	height: 75px;
-}
-
-
-#locateicon {
-	display: block;
-    margin: auto;
-	padding-top: 7px;
-	cursor: pointer;
-}
-
-#addicon {
-	display: block;
-    margin: auto;
-	padding-top: 7px;
-	cursor: pointer;
-}
-
-
-#closeicon {
-	display: block;
-    margin: auto;
-	padding-top: 7px;
-	cursor: pointer;
-}
-
 #pinimage {
 	display: block;
 	cursor: pointer;
 }
 
-.mapbuttonhighlight {
-	color: #000;
-	background-color: #FFF;
-}
 
-.controlslist img {
-  height: 60px;
-}
-
-.socialtext {
-	margin: 0;
-	padding-left: 30px;
-	padding-top: 50px;
-	padding-right: 45px;
-	list-style-type: none;
-	float: left;
-}
-
-.socialtextitem {
-	font-family: 'Roboto', sans-serif;
-	font-size: 25px;
-	padding-top: 7px;
-	padding-bottom: 7px;
-	text-align: left;
-	color: #FFF;
-	margin: 0;
-	cursor: pointer;
-}

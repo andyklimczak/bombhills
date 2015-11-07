@@ -21,26 +21,32 @@
     text-align: center;
   }
 
-
-  #maplistitemone {
-  padding-left: 7%;
-  padding-right: 7%;
+  .greetingbox {
+    height: 400px;
   }
 
-  #maplistitemtwo {
-    padding-left: 7%;
-    padding-right: 7%;
+  #myMap {
+    height: 400px;
   }
 
-  #findmebutton {
-    padding-left: 7%;
-    padding-right: 7%;
+  #mapmenu { 
+    margin: 0; 
+    padding: 0; 
+    white-space:nowrap;
+    list-style: none;
+    display: flex;
   }
 
-
-  #maplistitemthree {
-    padding-left: 7%;
-    padding-right: 7%;
+  .mapmenuitem { 
+    margin: 0; 
+    padding: 0;
+    display: inline-block;
+    border-style: thin solid #000;
+    height: 75px;
+    width: 25%;
+    color: #FFF;
+    text-align: center;
+    line-height: 75px;
   }
 
 }
@@ -67,13 +73,6 @@
         </form> 
       </div>
 
-        <ul id="maplist">
-          <li id="maplistitemone">add</li>
-          <li id="maplistitemtwo"> search.. </li>
-          <li id="findmebutton"> find me </li>
-          <li id="maplistitemthree"> X </li>
-        </ul>
-
     </div>
 
     <div id="titlediv"> <h2 id="title"> bomb hills </h2> </div>
@@ -83,13 +82,17 @@
       </div>
     </div>
 
+    <div class="mapmenudivoff"> 
+      <ul id="mapmenu">
+        <li class="mapmenuitem" style="background-color: #002635;">trips</li>
+        <li class="mapmenuitem" style="background-color: #013440;">?</li>
+        <li class="mapmenuitem" style="background-color: #D97925;" id="findmebutton">locate</li>
+        <li class="mapmenuitem" style="background-color: #AB1A25;" id="closebutton">close</li>
+      </ul>
+    </div>
+
     <div class="navdiv">
-      <h1> explore more </h1>
-      <ul class="navlist">
-        <li class="navitem" id="trips">trips</li>
-        <li class="navitem" id="reviews">reviews</li>
-        <li class="navitem" id="aboutus">about us</li>
-      </ul> 
+
     </div>
   
     <% for location in @locations %>
@@ -97,13 +100,7 @@
     <% end %>
 
     <div class="footer">
-      <ul class="socialtext">
-          <li class="socialtextitem">instagram</li>
 
-          <li class="socialtextitem">twitter</li>
-
-          <li class="socialtextitem">facebook</li>
-      </ul>
     </div>
     
 </body>

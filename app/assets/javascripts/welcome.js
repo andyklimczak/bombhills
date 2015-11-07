@@ -56,36 +56,31 @@ var setLocation = function() {
 var displayMap = function() {
     $(function() {
         $('#pinimage').click(function() {
-      $('#myMap').animate({
+            $('#myMap').animate({
                 left: '0'
             });
-      $('#myMap').animate({
+            $('#myMap').animate({
                 opacity: '1'
             });
-      $('video').addClass('videostop');
-      $('html').addClass('htmlbodycolor');
-      $('.controlsoff').addClass('controlson');
-      $('.citation').addClass('citationoff');
-       $('.mymapoff').addClass('mymapon');
+            $('.mymapoff').addClass('mymapon');
+            $('.mapmenudivoff').addClass('mapmenudivon');
         });
     });
 }
+
 var closeMap = function() {
-    $('#maplistitemthree').click(function() {
+    $('#closebutton').click(function() {
         $('#myMap').animate({
             opacity: '.3'
         });
-    $('#myMap').animate({
-            left: '-2000px'
+        $('#myMap').animate({
+            left: '-1000px'
         });
-    $('#myMap').animate({
+        $('#myMap').animate({
             opacity: '0'
         });
-    $('video').removeClass('videostop');
-    $('html').removeClass('htmlbodycolor');
-    $('.controlsoff').removeClass('controlson');
-    $('.citation').removeClass('citationoff');
-    $('.mymapoff').removeClass('mymapon');
+        $('.mymapoff').removeClass('mymapon');
+        $('.mapmenudivoff').removeClass('mapmenudivon');
     });
 };
 
