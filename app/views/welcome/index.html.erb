@@ -55,12 +55,22 @@
     margin: 0;
   }
 
+  .formtext {
+    margin: -10px; /*need to fix, not sure where this extra 10px is coming from */
+    padding: 0;
+    margin-left: 10%;
+    font-size: 25px;
+
+  }
+
   input {
-    width: 75%;
+    width: 80%;
     background-color: #013440;
     border-style: none;
     border-bottom-style: solid;
     margin-bottom: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   input[type="text"] {
@@ -89,16 +99,16 @@
     <div class="mymapoff" id='myMap'>
       <div class="addformoff">
         <form action="action_page.php">
-            title: <br>
+            <p class="formtext">title:</p> <br>
             <input type="text" name="title" value=" ">
             <br>
-            difficulty: <br>    
+            <p class="formtext">difficulty:</p> <br>    
             <input type="text" name="difficulty" value=" ">
             <br>
-            description: <br>    
+            <p class="formtext">description:</p> <br>    
             <input type="text" name="description" value=" ">
             <br>
-            <input type="submit" value="Check">
+            <input type="submit" value="next">
         </form> 
       </div>
 
