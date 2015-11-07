@@ -49,6 +49,34 @@
     line-height: 75px;
   }
 
+  .addformon {
+    height: 400px;
+    width: 100%;
+    margin: 0;
+  }
+
+  input {
+    width: 75%;
+    background-color: #013440;
+    border-style: none;
+    border-bottom-style: solid;
+    margin-bottom: 25px;
+  }
+
+  input[type="text"] {
+    color: #FFF;
+  }
+
+  input[type="submit"] {
+    width: 30%;
+    background-color: #FFF;
+  }
+
+  .mapicon {
+    height: 150px;
+    width: 175px;
+}
+
 }
 
 </style>
@@ -61,15 +89,16 @@
     <div class="mymapoff" id='myMap'>
       <div class="addformoff">
         <form action="action_page.php">
-            x coordinate:      title: <br>
-            <input type="text" name="firdcord" value="x">
-            <input type="text" name="title" value="title">
+            title: <br>
+            <input type="text" name="title" value=" ">
             <br>
-            y coordinate:       username: <br>
-            <input type="text" name="secondcord" value="y">
-            <input type="text" name="username" value="your name">
-            <br><br>
-            <input type="submit" value="Submit">
+            difficulty: <br>    
+            <input type="text" name="difficulty" value=" ">
+            <br>
+            description: <br>    
+            <input type="text" name="description" value=" ">
+            <br>
+            <input type="submit" value="Check">
         </form> 
       </div>
 
@@ -84,7 +113,7 @@
 
     <div class="mapmenudivoff"> 
       <ul id="mapmenu">
-        <li class="mapmenuitem" style="background-color: #002635;">trips</li>
+        <li class="mapmenuitem" style="background-color: #002635;" id="tripsbutton">trips</li>
         <li class="mapmenuitem" style="background-color: #013440;">?</li>
         <li class="mapmenuitem" style="background-color: #D97925;" id="findmebutton">locate</li>
         <li class="mapmenuitem" style="background-color: #AB1A25;" id="closebutton">close</li>

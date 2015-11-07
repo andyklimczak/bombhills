@@ -1,7 +1,7 @@
 // JavaScript Document
 
 var main = function() {
-  $('#maplistitemone').click(function() {
+  $('#tripsbutton').click(function() {
     $('.addformoff').addClass("addformon");
   });
 };
