@@ -14,6 +14,7 @@ html, body {
 	height: 450px;
 	background-color: #013440;
 	background-attachment: fixed;
+	background-image: url('greetingimg5.jpg');
 	background-size: cover;
 	display: -webkit-flex;
     display: flex;
@@ -45,6 +46,7 @@ html, body {
 
 .mapmenudivon {
 	display: inherit;
+	margin-top: 375px;
 }
 
 #mapmenu { 
@@ -72,7 +74,7 @@ html, body {
 }
 
 .navdiv {
-	background-color: #002635;
+	background-color: #EFECCA;
 	margin: 0;
 	padding: 0;
 	height: 125px;
@@ -106,7 +108,7 @@ form {
 }
 
 .formtext {
-    margin: -10px; /*need to fix, not sure where this extra 10px is coming from */
+    margin: -15px; /*need to fix, not sure where this extra 10px is coming from */
     padding: 0;
     margin-left: 10%;
     font-size: 25px;
@@ -114,7 +116,7 @@ form {
 
 
 input {
-	width: 80%;
+	width: 40%;
     background-color: #013440;
     border-style: none;
     border-bottom-style: solid;
@@ -129,14 +131,14 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    width: 30%;
+    width: 25%;
     background-color: #FFF;
     float: right;
 }
 
 .footer {
 	height: 200px;
-	background-color: #D97925;
+	background-color: #046380;
 	background-size: cover;
 	background-attachment: fixed;
 	margin: 0;
@@ -151,7 +153,7 @@ input[type="submit"] {
 	float: left;
 	position: absolute;
 	left: -1000px;
-	height: 525px;
+	height: 450px;
 	width: 100%;
 	z-index: 0;
 }
@@ -210,4 +212,7 @@ input {
 	cursor: pointer;
 }
 
-
+p {
+	margin: 0;
+	padding: 0;
+}

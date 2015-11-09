@@ -76,13 +76,20 @@
   .mapicon {
     height: 150px;
     width: 175px;
-}
+  }
 
 }
+
+@media only screen and (min-width: 568px) and (max-width: 850px) {
+  #mapmenu {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}  
 
 </style>
 
-<body onload="GetMap();">
+<body onload="GetMap();" oncontextmenu="return false">
 
   <p id="notice"><%= notice %></p>
   
@@ -102,22 +109,22 @@
             <input type="submit" value="next">
         </form> 
       </div>
+      <div class="mapmenudivoff"> 
+        <ul id="mapmenu">
+          <li class="mapmenuitem" style="background-color: #002F2F; color:#FFF;" id="tripsbutton">trips</li>
+          <li class="mapmenuitem" style="background-color: #046380;">?</li>
+          <li class="mapmenuitem" style="background-color: #A7A37E;" id="findmebutton">locate</li>
+          <li class="mapmenuitem" style="background-color: #AB1A25;" id="closebutton">close</li>
+        </ul>
+      </div>
     </div>
 
     <div id="titlediv"> <h2 id="title"> bomb hills </h2> </div>
     <div class="greetingbox">
       <div class="imgcontainer">
-        <%= image_tag "mapicon.png", class: "mapicon", id: "pinimage" %>
+        <p style="background-color: #FFF; padding: 40px;" id="pinimage">insert map icon click me</p>
+        <! --- <%= image_tag "mapicon.png", class: "mapicon", id: "pinimage" %>
       </div>
-    </div>
-
-    <div class="mapmenudivoff"> 
-      <ul id="mapmenu">
-        <li class="mapmenuitem" style="background-color: #002635;" id="tripsbutton">trips</li>
-        <li class="mapmenuitem" style="background-color: #013440;">?</li>
-        <li class="mapmenuitem" style="background-color: #D97925;" id="findmebutton">locate</li>
-        <li class="mapmenuitem" style="background-color: #AB1A25;" id="closebutton">close</li>
-      </ul>
     </div>
 
     <div class="navdiv">

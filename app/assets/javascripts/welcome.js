@@ -1,9 +1,7 @@
 // JavaScript Document
 
 var main = function() {
-  $('#tripsbutton').click(function() {
-    $('.addformoff').addClass("addformon");
-  });
+
 };
 
 var newPoint = function(name, loc1, loc2, title, description) {
@@ -30,6 +28,13 @@ function GetMap() {
                 mapTypeId: Microsoft.Maps.MapTypeId.road, 
                 zoom: 12,
                 center: new Microsoft.Maps.Location(37.776586, -122.448811)
+            });
+
+            Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
+              if (e.isSecondary)
+                $('.addformoff').addClass("addformon");
+                var latlong = new Microsoft.Maps.Location(e.getY(),e.getX());
+                console.log(latlong);
             });
 
       
