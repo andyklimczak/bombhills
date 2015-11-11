@@ -35,7 +35,6 @@ html, body {
 }
 
 .imgcontainer {
-
 }
 
 .mapmenudivoff {
@@ -81,10 +80,7 @@ html, body {
 	background-color: #FFF;
 	margin: 0;
 	padding: 0;
-	height: 250px;
-	background-attachment: fixed;
-	background-size: cover;
-	background-image: url('greetingimg2.jpg');
+	height: 75px;
 }
 
 
@@ -106,14 +102,14 @@ html, body {
 	margin-top: 40px;
 	background-color: #013440;
 	z-index: 1;
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
 #mobilenavbutton {
 	height: 60px;
 	width: 75px;
 	position: absolute;
-	background-color: #1DBC9D;
+	background-color: #046380;
 	display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row; /* works with row or column */
@@ -129,7 +125,7 @@ html, body {
 #mobilenavdiv {
 	height: 340px;
 	background-color: #046380;
-	width: 70%;
+	width: 50%;
 	margin-right: 30%;
 	position: absolute;
 	margin-top: 60px;
@@ -144,7 +140,7 @@ html, body {
 
 #mobilenavdiv ul li {
 	color: #FFF;
-	font-size: 25px;
+	font-size: 18px;
 	line-height: 50px;
 	cursor: pointer;
 }
@@ -156,17 +152,11 @@ html, body {
 }
 
 form {
-	padding-top: 40px;
 	color: #FFF;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 25px;
 }
-
-.formtext {
-    margin: -15px; /*need to fix, not sure where this extra 10px is coming from */
-    padding: 0;
-    margin-left: 10%;
-    font-size: 25px;
- }
-
 
 input {
 	width: 40%;
@@ -184,9 +174,11 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    width: 25%;
+    width: 18%;
     background-color: #FFF;
     float: right;
+    margin: 0;
+    padding: 0;
 }
 
 .footer {

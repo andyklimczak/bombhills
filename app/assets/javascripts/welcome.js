@@ -1,7 +1,7 @@
 // JavaScript Document
 
 var main = function() {
-    $('#hamburgerimg').click(function() {
+    $('#mobilenavbutton').click(function() {
         $('#mobilenavdiv').animate({
             left: '0'
         });

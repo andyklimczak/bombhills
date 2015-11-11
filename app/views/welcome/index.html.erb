@@ -10,7 +10,7 @@
 @media only screen and (max-width: 568px) {
 
   #title {
-    text-align: center;
+    text-align: right;
   }
 
   .greetingbox {
@@ -21,6 +21,10 @@
     height: 400px;
   }
 
+  .mapmenudivon {
+    display: inherit;
+    margin-top: 325px;
+  }
   #mapmenu { 
     margin: 0; 
     padding: 0; 
@@ -47,21 +51,17 @@
     margin: 0;
   }
 
-  .formtext {
-    margin: -10px; /*need to fix, not sure where this extra 10px is coming from */
-    padding: 0;
-    margin-left: 10%;
-    font-size: 25px;
+  form {
+    font-size: 20px;
   }
 
   input {
-    width: 80%;
+    width: 100%;
+    margin-left: 0%;
     background-color: #013440;
     border-style: none;
     border-bottom-style: solid;
-    margin-bottom: 25px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-bottom: 10px;
   }
 
   input[type="text"] {
@@ -118,14 +118,14 @@
     <div class="mymapoff" id='myMap'>
       <div class="addformoff">
         <form action="action_page.php">
-            <p class="formtext">title:</p> <br>
-            <input type="text" name="title" value=" ">
+            title: <br>
+            <input type="text" name="Title" value="Insert Title Here">
             <br>
-            <p class="formtext">difficulty:</p> <br>    
-            <input type="text" name="difficulty" value=" ">
+            difficulty: <br>    
+            <input type="text" name="Difficulty" value="Intermediate">
             <br>
-            <p class="formtext">description:</p> <br>    
-            <input type="text" name="description" value=" ">
+            description: <br>    
+            <input type="text" name="Description" value="Open Road">
             <br>
             <input type="submit" value="next">
         </form> 
@@ -141,7 +141,7 @@
     </div>
 
     <div id="titlediv"> <h2 id="title"> bomb hills </h2> </div>
-    <div id="mobilenavbutton"> <%= image_tag "hamburger.png", id: "hamburgerimg" %> </div>
+    <div id="mobilenavbutton"> </div>
     <div id="mobilenavdiv">
       <ul>
         <li>about</li>
@@ -152,7 +152,8 @@
     </div>
     <div class="greetingbox">
       <div class="imgcontainer">
-         <%= image_tag "mapicon.jpg", class: "mapicon", id: "pinimage" %>
+        <p style="height: 105px;width: 125px;background-color: #046380;text-align: center;line-height: 105px;cursor: pointer;border-radius: 25%;color: #FFF;" id="pinimage"> map icon </p>
+         <!--<%= image_tag "mapicon.jpg", class: "mapicon", id: "pinimage" %>-->
       </div>
     </div>
 
