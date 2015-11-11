@@ -1,9 +1,17 @@
 // JavaScript Document
 
 var main = function() {
-
+    $('#hamburgerimg').click(function() {
+        $('#mobilenavdiv').animate({
+            left: '0'
+        });
+    });
+    $('#mobilenavclose').click(function() {
+        $('#mobilenavdiv').animate({
+            left: '-100%'
+        });
+    });
 };
-
 var newPoint = function(name, loc1, loc2, title, description) {
     name = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(loc1,loc2), null);
     map.entities.push(name);
@@ -26,15 +34,17 @@ function GetMap() {
       
             map.setView({
                 mapTypeId: Microsoft.Maps.MapTypeId.road, 
-                zoom: 12,
+                zoom: 11.45,
                 center: new Microsoft.Maps.Location(37.776586, -122.448811)
             });
 
             Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
               if (e.isSecondary)
                 $('.addformoff').addClass("addformon");
+                $('#mobilenavbutton').hide();
                 var latlong = new Microsoft.Maps.Location(e.getY(),e.getX());
                 console.log(latlong);
+
             });
 
       
@@ -79,7 +89,7 @@ var closeMap = function() {
             opacity: '.3'
         });
         $('#myMap').animate({
-            left: '-1000px'
+            left: '-100%'
         });
         $('#myMap').animate({
             opacity: '0'
