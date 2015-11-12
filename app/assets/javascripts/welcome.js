@@ -41,7 +41,6 @@ function GetMap() {
             Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
               if (e.isSecondary)
                 $('.addformoff').addClass("addformon");
-                $('#mobilenavbutton').hide();
                 var latlong = new Microsoft.Maps.Location(e.getY(),e.getX());
                 console.log(latlong);
 
@@ -70,7 +69,7 @@ var setLocation = function() {
 
 var displayMap = function() {
     $(function() {
-        $('#pinimage').click(function() {
+        $('.pinimage').click(function() {
             $('#myMap').animate({
                 left: '0'
             });

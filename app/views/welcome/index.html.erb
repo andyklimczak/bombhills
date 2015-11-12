@@ -11,20 +11,37 @@
 
   #title {
     text-align: right;
+    color: #24313A;
   }
 
   .greetingbox {
-    height: 400px;
+    height: 340px;
+  }
+
+  #mapiconmobile {
+    display: inherit;
+    height: 120px;
+    width: 140px;
+    background-color: #046380;
+    text-align: center;
+    line-height: 120px;
+    cursor: pointer;
+    color: #FFF;
+  }
+
+  #mapicondesktop {
+    display: none;
   }
 
   #myMap {
-    height: 400px;
+    height: 410px;
   }
 
   .mapmenudivon {
     display: inherit;
-    margin-top: 325px;
+    margin-top: 335px;
   }
+
   #mapmenu { 
     margin: 0; 
     padding: 0; 
@@ -45,47 +62,23 @@
     line-height: 75px;
   }
 
-  .addformon {
-    height: 400px;
-    width: 100%;
-    margin: 0;
+  #closebutton {
+    width: 25%;
   }
 
-  form {
-    font-size: 20px;
-  }
-
-  input[type="text"] {
-    color: #FFF;
-    width: 100%;
-    margin-left: 0%;
-    border-style: none;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    background-color: #000;
-    height: 40px;
-  }
-
-  input[type="submit"] {
-    width: 30%;
+  #content {
     background-color: #FFF;
   }
 
-  .mapicon {
-    height: 150px;
-    width: 175px;
-  }
-
-  .mapicon {
-    height: 155px;
-    width: 225px;
+  #heading {
+    display: none;
   }
 
 }
 
 @media only screen and (min-width: 568px) and (max-width: 850px) {
   #mapmenu {
-    margin-left: 10%;
+    margin-left: 15%;
     margin-right: 10%;
   }
 }  
@@ -100,10 +93,6 @@
     display: none;
   }
 
-  .mapmenudivon {
-    margin-top: 375px;
-  }
-
 }  
 
 </style>
@@ -114,24 +103,10 @@
   
 
     <div class="mymapoff" id='myMap'>
-      <div class="addformoff">
-        <form action="action_page.php">
-            title: <br>
-            <input type="text" name="Title" value="Insert Title Here">
-            <br>
-            difficulty: <br>    
-            <input type="text" name="Difficulty" value="Intermediate">
-            <br>
-            description: <br>    
-            <input type="text" name="Description" value="Open Road">
-            <br>
-            <input type="submit" value="next">
-        </form> 
-      </div>
       <div class="mapmenudivoff"> 
         <ul id="mapmenu">
-          <li class="mapmenuitem" style="background-color: #002F2F; color:#FFF;" id="tripsbutton">trips</li>
-          <li class="mapmenuitem" style="background-color: #046380;"> </li>
+          <li class="mapmenuitem" style="background-color: #046380; color:#FFF;" id="tripsbutton">trips</li> 
+          <li class="mapmenuitem" style="background-color: #403E30;"> </li>
           <li class="mapmenuitem" style="background-color: #A7A37E;" id="findmebutton">locate</li>
           <li class="mapmenuitem" style="background-color: #AB1A25;" id="closebutton">close</li>
         </ul>
@@ -139,10 +114,10 @@
     </div>
 
     <div id="titlediv"> <h2 id="title"> bomb hills </h2> </div>
-    <div id="mobilenavbutton"> nav </div>
+    <div id="mobilenavbutton"> nav </div> <div id="titledivtwo"></div>
     <div id="mobilenavdiv">
       <ul>
-        <li>about</li>
+        <li>login</li>
         <li>reviews</li>
         <li>contact</li>
         <li id="mobilenavclose">close</li>
@@ -150,7 +125,9 @@
     </div>
     <div class="greetingbox">
       <div class="imgcontainer">
-        <p style="height: 120px;width: 140px;background-color: #046380;text-align: center;line-height: 120px;cursor: pointer;border-radius: 25%;color: #FFF;" id="pinimage"> map button </p>
+        <p  style="text-align: center; color: #FFF; padding: 25px;" id="heading"> motivational text </p>
+        <p id="mapiconmobile" class="pinimage"> map button </p>
+        <p id="mapicondesktop" class="pinimage"> start </p>
          <!--<%= image_tag "mapicon.jpg", class: "mapicon", id: "pinimage" %>-->
       </div>
     </div>
