@@ -11,16 +11,16 @@ html, body {
 }
 
 #heading {
-	font-size: 50px;
-	margin-bottom: 25px;
+	font-size: 45px;
 	float: left;
-	background-color: #000;
+	background-color: rgba(0, 0, 0, .5);
 }
 
 .greetingbox {
 	height: 400px;
-	background-color: #24313A;
+	background-color: #023C4D;
 	background-attachment: fixed;
+	background-image: url('one.jpg');
 	background-size: cover;
 	display: -webkit-flex;
     display: flex;
@@ -42,14 +42,20 @@ html, body {
 
 #mapicondesktop {
 	display: relative;
-    height: 67px;
+    height: 68px;
     width: 100px;
     background-color: #046380;
     text-align: center;
     line-height: 67px;
     cursor: pointer;
     color: #FFF;
+    font-size: 35px;
     float: right;
+}
+
+#mapicondesktop:hover {
+    background-color: #FFF;
+    color: #000;
 }
 
 .imgcontainer {
@@ -72,7 +78,7 @@ html, body {
 	padding: 0; 
 	list-style: none;
 	display: flex;
-	margin-left: 25%;
+	margin-left: 20%;
 	margin-right: 20%;
 }
 
@@ -94,14 +100,23 @@ html, body {
 }
 
 #closebutton {
-	width: 15%;
+	
 }
 
-#content {
-	background-color: #046380;
-	margin: 0;
+#desktopnavdiv ul {
+	list-style: none;
+	color: #000;
+	font-size: 20px;
+	line-height: 85px;
 	padding: 0;
-	height: 75px;
+	margin: 0;
+	margin-left: 50%;
+}
+
+#desktopnavdiv ul li {
+	display: inline;
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 
@@ -158,9 +173,10 @@ html, body {
 
 .footer {
 	height: 200px;
-	background-color: #A7A37E;
+	background-color: #069ECC;
 	background-size: cover;
 	background-attachment: fixed;
+	background-image: url('two.jpg');
 	margin: 0;
 	padding: 0;
 }
@@ -207,8 +223,9 @@ input {
 	padding-top: 25px;
 	text-align: left;
 	cursor: pointer;
-	color: #fff;
+	color: #FFF;
 	margin: 0;
+	background-color: #FFF;
 }
 
 
