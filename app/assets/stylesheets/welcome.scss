@@ -11,6 +11,8 @@ html, body {
 }
 
 #heading {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
 	font-size: 45px;
 	float: left;
 	background-color: rgba(0, 0, 0, .5);
@@ -41,6 +43,8 @@ html, body {
 }
 
 #mapicondesktop {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
 	display: relative;
     height: 68px;
     width: 100px;
@@ -63,7 +67,6 @@ html, body {
 
 .mapmenudivoff {
 	display: none;
-	background-color: transparent;
 }
 
 .mapmenudivon {
@@ -221,7 +224,7 @@ input {
 #title {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 2em;
-	font-weight: 400;
+	font-weight: 200;
 	padding: 20px;
 	padding-top: 25px;
 	text-align: left;
