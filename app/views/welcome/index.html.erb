@@ -14,6 +14,10 @@
     color: #24313A;
   }
 
+  #tripswrapper {
+    display: none;
+  }
+
   .greetingbox {
     height: 340px;
     background-size: cover;
@@ -22,11 +26,11 @@
 
   #mapiconmobile {
     display: inherit;
-    height: 130px;
-    width: 150px;
-    background-color: #4C3636;
+    height: 115px;
+    width: 140px;
+    background-color: #3570A4;
     text-align: center;
-    line-height: 130px;
+    line-height: 115px;
     cursor: pointer;
     color: #FFF;
   }
@@ -113,11 +117,10 @@
   
       <div class="mapmenudivoff"> 
         <ul id="mapmenu">
-          <li class="mapmenuitem" style="background-color: #332424; color:#FFF;" id="tripsbutton">trips</li> 
-          <li class="mapmenuitem" style="background-color: #4C3636;"> ? </li>
-          <li class="mapmenuitem" style="background-color: #4C4C4C;" id="findmebutton">locate</li> 
-          <li class="mapmenuitem" style="background-color: #353636;" id="starbutton">star</li>
-          <li class="mapmenuitem" style="background-color: #243333;" id="helpbutton"> ? </li>
+          <li class="mapmenuitem" style="background-color: #3570A4; color:#FFF;" id="tripsbutton">trips</li> 
+          <li class="mapmenuitem" style="background-color: #4EA4F0;"> ? </li>
+          <li class="mapmenuitem" style="background-color: #7094B3;" id="findmebutton">locate</li> 
+          <li class="mapmenuitem" style="background-color: #254D71;" id="starbutton">fav</li>
           <li class="mapmenuitem" style="background-color: #F53433;" id="closebutton"> x </li>
         </ul>
       </div>
@@ -145,8 +148,12 @@
       <div class="data-locations" data-latitude=<%= location.latitude %> data-longitude=<%= location.longitude %> data-username=<%= location.username %> data-title=<%= location.title %> data-description=<%= location.description %> ></div>
     <% end %>
 
-    <div id="trips">
+    <div id="tripswrapper">
+      <div id="tripsimg">
 
+      </div>
+      <div id="tripstxt">
+      </div>
     </div>
 
     <div id="footer">

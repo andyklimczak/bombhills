@@ -5,12 +5,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-#addform {
-	float: right;
-	position: absolute;
-	z-index: 4;
-}
-
 html, body {
 	margin: 0;
 	padding: 0;
@@ -54,7 +48,7 @@ html, body {
 	display: relative;
     height: 68px;
     width: 100px;
-    background-color: #4C3636;
+    background-color: #3570A4;
     text-align: center;
     line-height: 67px;
     cursor: pointer;
@@ -92,7 +86,7 @@ html, body {
 	margin: 0; 
 	padding: 0;
 	border-style: thin solid #000;
-	height: 66.66px;
+	height: 80px;
 	width: 105px;
 	color: #FFF;
 	text-align: center;
@@ -133,7 +127,7 @@ html, body {
 #mobilenavbutton {
 	height: 70px;
 	width: 85px;
-	background-color: #332424;
+	background-color: #3570A4;
 	display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row; /* works with row or column */
@@ -170,11 +164,20 @@ html, body {
 	cursor: pointer;
 }
 
-#trips {
+#tripsimg {
+	float: left;
+	margin-right: 60%;
+	width: 40%;
 	height: 400px;
 	background-size: cover;
-	background-attachment: fixed;
-	background-image: url('three.jpg');
+	background-image: url('trips.jpg');
+}
+
+#tripstxt {
+	margin-left: 40%;
+	width: 60%;
+	height: 400px;
+	background-color: #FFF;
 }
 
 #footer {
