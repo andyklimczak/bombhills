@@ -34,7 +34,7 @@ function GetMap() {
       
             map.setView({
                 mapTypeId: Microsoft.Maps.MapTypeId.road, 
-                zoom: 11.45,
+                zoom: 12,
                 center: new Microsoft.Maps.Location(37.776586, -122.448811)
             });
 
