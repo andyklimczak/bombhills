@@ -44,7 +44,7 @@ html, body {
 	display: relative;
     height: 68px;
     width: 100px;
-    background-color: #046380;
+    background-color: #4C3636;
     text-align: center;
     line-height: 67px;
     cursor: pointer;
@@ -68,7 +68,7 @@ html, body {
 
 .mapmenudivon {
 	display: inherit;
-	margin-top: 325px;
+	margin-top: 0px;
 }
 
 #mapmenu { 
@@ -77,22 +77,24 @@ html, body {
 	margin: 0; 
 	padding: 0; 
 	list-style: none;
-	display: flex;
-	margin-left: 20%;
-	margin-right: 20%;
 }
 
 .mapmenuitem { 
+	clear: left;
 	float: left;
 	margin: 0; 
 	padding: 0;
 	border-style: thin solid #000;
-	height: 75px;
-	width: 25%;
+	height: 66.66px;
+	width: 105px;
 	color: #FFF;
 	text-align: center;
 	line-height: 75px;
 	cursor: pointer;
+}
+
+#helpbutton {
+	
 }
 
 .mapmenuitem:hover {
@@ -128,7 +130,7 @@ html, body {
 #mobilenavbutton {
 	height: 70px;
 	width: 85px;
-	background-color: #046380;
+	background-color: #332424;
 	display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row; /* works with row or column */
@@ -165,13 +167,14 @@ html, body {
 	cursor: pointer;
 }
 
-#hamburgerimg {
-	height: 100%;
-	width: 100%;
-	cursor: pointer;
+#trips {
+	height: 400px;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url('three.jpg');
 }
 
-.footer {
+#footer {
 	height: 200px;
 	background-color: #069ECC;
 	background-size: cover;
@@ -252,4 +255,9 @@ input {
 p {
 	margin: 0;
 	padding: 0;
+}
+
+
+
+h2 {
 }

@@ -22,11 +22,11 @@
 
   #mapiconmobile {
     display: inherit;
-    height: 120px;
-    width: 140px;
-    background-color: #046380;
+    height: 130px;
+    width: 150px;
+    background-color: #4C3636;
     text-align: center;
-    line-height: 120px;
+    line-height: 130px;
     cursor: pointer;
     color: #FFF;
   }
@@ -73,12 +73,19 @@
     display: none;
   }
 
+  #starbutton {
+    display: none;
+  }
+
+  #helpbutton {
+    display: none;
+  }
+
 }
 
 @media only screen and (min-width: 568px) and (max-width: 850px) {
   #mapmenu {
-    margin-left: 10%;
-    margin-right: 10%;
+
   }
 }  
 
@@ -104,13 +111,12 @@
     <div class="mymapoff" id='myMap'>
       <div class="mapmenudivoff"> 
         <ul id="mapmenu">
-          <li class="mapmenuitem" style="background-color: #046380; color:#FFF;" id="tripsbutton">trips</li> <!--
-          -->
-          <li class="mapmenuitem" style="background-color: #069ECC;"> </li> <!--
-          -->
-          <li class="mapmenuitem" style="background-color: #317E95;" id="findmebutton">locate</li> <!--
-          -->
-          <li class="mapmenuitem" style="background-color: #AB1A25;" id="closebutton">close</li>
+          <li class="mapmenuitem" style="background-color: #332424; color:#FFF;" id="tripsbutton">trips</li> 
+          <li class="mapmenuitem" style="background-color: #4C3636;"> ? </li>
+          <li class="mapmenuitem" style="background-color: #4C4C4C;" id="findmebutton">locate</li> 
+          <li class="mapmenuitem" style="background-color: #353636;" id="starbutton">star</li>
+          <li class="mapmenuitem" style="background-color: #243333;" id="helpbutton"> ? </li>
+          <li class="mapmenuitem" style="background-color: #999999;" id="closebutton">close</li>
         </ul>
       </div>
     </div>
@@ -130,7 +136,6 @@
         <p  style="text-align: center; color: #FFF; padding: 25px;" id="heading"> lets... </p>
         <p id="mapiconmobile" class="pinimage"> map button </p>
         <p id="mapicondesktop" class="pinimage"> ride </p>
-         <!--<%= image_tag "mapicon.jpg", class: "mapicon", id: "pinimage" %>-->
       </div>
     </div>
   
@@ -138,7 +143,11 @@
       <div class="data-locations" data-latitude=<%= location.latitude %> data-longitude=<%= location.longitude %> data-username=<%= location.username %> data-title=<%= location.title %> data-description=<%= location.description %> ></div>
     <% end %>
 
-    <div class="footer">
+    <div id="trips">
+
+    </div>
+
+    <div id="footer">
 
     </div>
     
