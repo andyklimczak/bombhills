@@ -22,7 +22,7 @@ html, body {
 	height: 400px;
 	background-color: #023C4D;
 	background-attachment: fixed;
-	background-image: url('one.jpg');
+	background-image: url('two.jpg');
 	background-size: cover;
 	display: -webkit-flex;
     display: flex;
@@ -166,18 +166,41 @@ html, body {
 
 #tripsimg {
 	float: left;
-	margin-right: 60%;
-	width: 40%;
-	height: 400px;
+	margin-right: 55%;
+	width: 45%;
+	height: 325px;
 	background-size: cover;
 	background-image: url('trips.jpg');
 }
 
 #tripstxt {
-	margin-left: 40%;
-	width: 60%;
-	height: 400px;
+	margin-left: 45%;
+	width: 55%;
+	height: 325px;
 	background-color: #FFF;
+}
+
+#generalinfowrapper {
+	height: 450px;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url('five.jpg');
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row; /* works with row or column */
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+#generalinfodiv {
+	background-color: #3570A4;
+	height: 400px;
+	width: 100%;
+	opacity: .75;
 }
 
 #footer {
@@ -185,7 +208,7 @@ html, body {
 	background-color: #069ECC;
 	background-size: cover;
 	background-attachment: fixed;
-	background-image: url('two.jpg');
+	background-image: url('one.jpg');
 	margin: 0;
 	padding: 0;
 }
@@ -230,9 +253,9 @@ input {
 	font-weight: 200;
 	padding: 20px;
 	padding-top: 25px;
-	text-align: left;
+	text-align: right;
 	cursor: pointer;
-	color: #FFF;
+	color: #000;
 	margin: 0;
 	background-color: #FFF;
 }
