@@ -69,7 +69,7 @@ var setLocation = function() {
 
 var displayMap = function() {
     $(function() {
-        $('.pinimage').click(function() {
+        $('#mapbutton').click(function() {
             $('#myMap').animate({
                 left: '0'
             });

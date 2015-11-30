@@ -1,5 +1,4 @@
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
   
@@ -9,57 +8,13 @@
 
 @media only screen and (max-width: 568px) {
 
-  #title {
-    display: inherit;
-    text-align: right;
-    color: #24313A;
-  }
-
-  #tripswrapper {
-    display: none;
-  }
-
-  #generalinfowrapper {
-    display: none;
-  }
-
-  #generalinfodiv {
-    display: none;
-  }
-
-  .greetingbox {
-    height: 340px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  #mapiconmobile {
-    display: inherit;
-    height: 115px;
-    width: 140px;
-    background-color: #3570A4;
-    text-align: center;
-    line-height: 115px;
-    cursor: pointer;
-    color: #FFF;
-  }
-
-  #mapiconmobile:hover {
-    background-color: #FFF;
-    color: #000;
-  }
-
-  #mapicondesktop {
-    display: none;
-  }
-
   #myMap {
-    height: 410px;
+    height: 520px;
   }
 
   .mapmenudivon {
     display: inherit;
-    margin-top: 335px;
+    margin-top: 450px;
   }
 
   #mapmenu { 
@@ -83,10 +38,6 @@
     line-height: 75px;
   }
 
-  #heading {
-    display: none;
-  }
-
   #starbutton {
     display: none;
   }
@@ -96,12 +47,6 @@
   }
 
 }
-
-@media only screen and (min-width: 568px) and (max-width: 850px) {
-  #mapmenu {
-
-  }
-}  
 
 @media only screen and (min-width: 568px) {
    
@@ -120,58 +65,93 @@
 <body onload="GetMap();" oncontextmenu="return false">
 
   <p id="notice"><%= notice %></p>
-  
 
-    <div class="mymapoff" id='myMap'>
-  
-      <div class="mapmenudivoff"> 
-        <ul id="mapmenu">
-          <li class="mapmenuitem" style="background-color: #3570A4; color:#FFF;" id="tripsbutton">trips</li> 
-          <li class="mapmenuitem" style="background-color: #4EA4F0;"> ? </li>
-          <li class="mapmenuitem" style="background-color: #7094B3;" id="findmebutton">locate</li> 
-          <li class="mapmenuitem" style="background-color: #254D71;" id="starbutton">fav</li>
-          <li class="mapmenuitem" style="background-color: #F53433;" id="closebutton"> x </li>
-        </ul>
-      </div>
-    </div>
+        <div class="mymapoff" id='myMap'>
+      
+          <div class="mapmenudivoff"> 
+            <ul id="mapmenu">
+              <li class="mapmenuitem" style="background-color: #3570A4; color:#FFF;" id="tripsbutton">trips</li> 
+              <li class="mapmenuitem" style="background-color: #4EA4F0;" id="addbutton" data-toggle="modal" data-target="#myModal"> add </li>
+              <li class="mapmenuitem" style="background-color: #7094B3;" id="findmebutton">locate</li> 
+              <li class="mapmenuitem" style="background-color: #254D71;" id="starbutton">fav</li>
+              <li class="mapmenuitem" style="background-color: #F53433;" id="closebutton"> x </li>
+            </ul>
+          </div>
+        </div>
 
-    <div id="titlediv"> <h2 id="title"> bomb hills </h2> </div>
-    <div id="mobilenavbutton"> nav </div> <div id="titledivtwo"></div>
-    <div id="mobilenavdiv">
-      <ul>
-        <li>login</li>
-        <li>reviews</li>
-        <li>contact</li>
-        <li id="mobilenavclose">close</li>
-      </ul>
-    </div>
-    <div class="greetingbox">
-      <div class="imgcontainer">
-        <p  style="text-align: center; color: #FFF; padding: 25px;" id="heading"> lets... </p>
-        <p id="mapiconmobile" class="pinimage"> map button </p>
-        <p id="mapicondesktop" class="pinimage"> start </p>
-      </div>
-    </div>
+        <div id="mobilenavbutton"> nav </div> <div id="titledivtwo"></div>
+        <div id="mobilenavdiv">
+          <ul>
+            <li>login</li>
+            <li>reviews</li>
+            <li>contact</li>
+            <li id="mobilenavclose">close</li>
+          </ul>
+        </div>
+
+        <div style="background-color: #2C3E50; color: #FFF;" class="jumbotron">
+          <h1>Hello, world!</h1>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button" style="color: #FFF;" id="mapbutton">get started</a></p>
+        </div>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">New Location</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Title</label>
+                    <div class="col-sm-10">
+                      <input type="title" class="form-control" id="inputEmail3" placeholder="Title Here">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Difficulty</label>
+                    <div class="col-sm-10">
+                      <select class="form-control" id="difficultydropdown">
+                        <option>Starter</option>
+                        <option>Intermediate</option>
+                        <option>Professional</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Description</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="3" id="descriptionarea"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
   
     <% for location in @locations %>
       <div class="data-locations" data-latitude=<%= location.latitude %> data-longitude=<%= location.longitude %> data-username=<%= location.username %> data-title=<%= location.title %> data-description=<%= location.description %> ></div>
     <% end %>
 
-    <div id="tripswrapper">
-      <div id="tripsimg">
 
-      </div>
-      <div id="tripstxt">
-      </div>
-    </div>
-
-    <div id="generalinfowrapper">
-      <div id="generalinfodiv">
-      </div>
-    </div>
-
-    <div id="footer">
-
-    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
     
 </body>
