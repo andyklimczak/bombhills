@@ -12,6 +12,7 @@ var main = function() {
         });
     });
 };
+
 var newPoint = function(name, loc1, loc2, title, description) {
     name = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(loc1,loc2), null);
     map.entities.push(name);
@@ -57,7 +58,6 @@ function GetMap() {
 
     });
 }
-
 
 var setLocation = function() {
     $('#findmebutton').click(function() {
