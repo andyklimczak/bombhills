@@ -40,7 +40,7 @@ function GetMap() {
 
             Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
               if (e.isSecondary)
-                $('.addformoff').addClass("addformon");
+                $('#myModal').modal('toggle');
                 var latlong = new Microsoft.Maps.Location(e.getY(),e.getX());
                 console.log(latlong);
 
