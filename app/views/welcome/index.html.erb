@@ -5,8 +5,61 @@
 
 /* ----------- mobile view ----------- */
 
+@media only screen and (max-width: 324px) {
+  
+  #myMap {
+    height: 370px;
+  }
 
-@media only screen and (max-width: 568px) {
+  .jumbotron {
+    height: 300px;
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
+
+  #jumbotronparagraph {
+    font-size: 16px;
+  }
+
+  .mapmenudivon {
+    display: inherit;
+    margin-top: 295px;
+  }
+
+  #mapmenu { 
+    position: relative;
+    margin: 0; 
+    padding: 0; 
+    white-space:nowrap;
+    list-style: none;
+  }
+
+  .mapmenuitem { 
+    margin: 0; 
+    padding: 0;
+    float: left;
+    border-style: thin solid #000;
+    height: 75px;
+    width: 25%;
+    color: #FFF;
+    text-align: center;
+    line-height: 75px;
+  }
+
+  #starbutton {
+    display: none;
+  }
+
+  #helpbutton {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 324px) and (max-width: 568px)  {
 
   #myMap {
     height: 420px;
@@ -14,6 +67,7 @@
 
   .jumbotron {
     height: 350px;
+    background-image: url('three.jpg');
   }
 
 
@@ -108,7 +162,7 @@
 
         <div style="background-color: #3E3420; color: #FFF;" class="jumbotron">
           <h1>Hello, world!</h1>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p id="jumbotronparagraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
           <p><a class="btn btn-primary btn-lg" href="#" role="button" style="color: #FFF;" id="mapbutton">get started</a></p>
         </div>
 
