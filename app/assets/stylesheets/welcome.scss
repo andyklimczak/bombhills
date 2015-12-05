@@ -46,6 +46,26 @@ input[type="title"] {
 .mapmenudivon {
 	display: inherit;
 	margin-top: 0px;
+	float: left;
+}
+
+#tripsdiv {
+  position: absolute;
+  float: right;
+  height: 400px;
+  left: -100%;
+  width: 400px;
+  margin-left: 105px;
+  background-color: #4B4442;
+  z-index: 1;
+}
+
+#tripsclosebutton {
+	color: #FFF;
+	font-size: 20px;
+	margin-top: 340px;
+	margin-left: 335px;
+	cursor: pointer;
 }
 
 #mapmenu { 
@@ -118,7 +138,7 @@ input[type="title"] {
 
 #mobilenavdiv {
 	height: 350px;
-	background-color: #046380;
+	background-color: #3E3837;
 	width: 50%;
 	margin-right: 30%;
 	padding-top: 5%;
@@ -176,6 +196,16 @@ input {
 
 @media only screen and (max-width: 324px) {
 
+
+	#tripsdiv {
+	  
+	  display: none;
+	}
+
+	#tripsclosebutton {
+	  display: none;
+	}
+
 	span.glyphicon {
 	    font-size: 1em;
 	}
@@ -187,7 +217,7 @@ input {
 
   #mobilenavdiv {
 	height: 300px;
-}
+  }
 
   .jumbotron {
     height: 300px;
@@ -208,6 +238,7 @@ input {
   .mapmenudivon {
     display: inherit;
     margin-top: 295px;
+    float: none;
   }
 
   #mapmenu { 
@@ -216,6 +247,7 @@ input {
     padding: 0; 
     white-space:nowrap;
     list-style: none;
+    z-index: 2;
   }
 
   .mapmenuitem { 
@@ -241,6 +273,14 @@ input {
 
 @media only screen and (min-width: 324px) and (max-width: 568px)  {
 
+	#tripsdiv {
+	  display: none;
+	}
+
+	#tripsclosebutton {
+	  display: none;
+	}
+
   span.glyphicon {
 	    font-size: 1em;
 	}
@@ -259,6 +299,7 @@ input {
   .mapmenudivon {
     display: inherit;
     margin-top: 345px;
+    float: none;
   }
 
   #mapmenu { 

@@ -11,16 +11,26 @@ var main = function() {
             left: '-100%'
         });
     });
+    $('#tripsbutton').click(function() {
+        $('#tripsdiv').animate({
+            left: '0'
+        });
+    });
+    $('#tripsclosebutton').click(function() {
+        $('#tripsdiv').animate({
+            left: '-100%'
+        });
+    });
 };
 
-var newPoint = function(username, lat, long, title, description, difficulty) {
-    pointName = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(lat,long), null);
-    map.entities.push(pointName);
+var newPoint = function(name, lat, long, title, description) {
+    name = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(lat,long), null);
+    map.entities.push(name);
     map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(
         lat, long), {
         title: title,
-        description: "Description: " + description +"<br/>Created by: " + username + "<br/>Difficulty: " + difficulty,
-        pushpin: pointName
+        description: description,
+        pushpin: name
     }));
 }
 
@@ -54,9 +64,9 @@ function GetMap() {
 
       
           var sanfranlargest = new newPoint("sanfranlargest", 37.800309, -122.418117,
-              "Filbert Street", "high density", "Starter");
+              "Filbert Street", "high density");
           var thevalleyamazingtrail = new newPoint("thevalleyamazingtrail", 41.460184, -81.823116,
-              "Amazing Trail", "watch out for bikers", "Starter");
+              "Amazing Trail", "watch out for bikers");
               
           loadLocations();
         }
@@ -106,7 +116,7 @@ var closeMap = function() {
 function loadLocations() {
   console.log(gon.locations);
   gon.locations.forEach(function(location) {
-    var p = new newPoint(location.username, location.latitude, location.longitude, location.title, location.description, location.difficulty);
+    var p = new newPoint(location.username, location.latitude, location.longitude, location.title, location.description);
   });
 }
 

@@ -3,15 +3,16 @@
   <p id="notice"><%= notice %></p>
 
   <div class="mymapoff" id='myMap'>
+    
     <div class="mapmenudivoff"> 
       <ul id="mapmenu">
         <li class="mapmenuitem" style="background-color: #3E3837; color:#FFF;" id="tripsbutton"> 
           <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
         </li> 
-        <li class="mapmenuitem" style="background-color: #A49292;" id="addbutton" data-toggle="modal" data-target="#myModal">
-          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+        <li class="mapmenuitem" style="background-color: #3E3837;" id="addbutton">
+          <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
         </li>
-        <li class="mapmenuitem" style="background-color: #046380;" id="findmebutton">
+        <li class="mapmenuitem" style="background-color: #332E2D;" id="findmebutton">
           <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
         </li> 
         <li class="mapmenuitem" style="background-color: #CBB32D;" id="starbutton">
@@ -22,6 +23,11 @@
         </li>
       </ul>
     </div>
+
+    <div id="tripsdiv">
+      <p id="tripsclosebutton"> <span class=" glyphicon glyphicon-ok" aria-hidden="true"></span> </p>
+    </div>
+
   </div>
 
   <div id="mobilenavbutton"> 
@@ -38,7 +44,7 @@
   </div>
 
   <div style="background-color: #3129BE; color: #FFF;" class="jumbotron">
-    <h1>bomb hills</h1>
+    <h1>Bomb Hills</h1>
     <p id="jumbotronparagraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     <p><a class="btn btn-primary btn-lg" href="#" role="button" style="color: #FFF;" id="mapbutton">get started</a></p>
   </div>
