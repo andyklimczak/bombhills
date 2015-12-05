@@ -163,3 +163,119 @@ input {
 #mapbutton {
 	cursor: pointer;
 }
+  
+/* ----------- mobile view ----------- */
+
+@media only screen and (max-width: 324px) {
+  
+  #myMap {
+    height: 370px;
+  }
+
+  .jumbotron {
+    height: 300px;
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
+
+  #jumbotronparagraph {
+    font-size: 16px;
+  }
+
+  .mapmenudivon {
+    display: inherit;
+    margin-top: 295px;
+  }
+
+  #mapmenu { 
+    position: relative;
+    margin: 0; 
+    padding: 0; 
+    white-space:nowrap;
+    list-style: none;
+  }
+
+  .mapmenuitem { 
+    margin: 0; 
+    padding: 0;
+    float: left;
+    border-style: thin solid #000;
+    height: 75px;
+    width: 25%;
+    color: #FFF;
+    text-align: center;
+    line-height: 75px;
+  }
+
+  #starbutton {
+    display: none;
+  }
+
+  #helpbutton {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 324px) and (max-width: 568px)  {
+
+  #myMap {
+    height: 420px;
+  }
+
+  .jumbotron {
+    height: 350px;
+    background-image: url('three.jpg');
+  }
+
+
+  .mapmenudivon {
+    display: inherit;
+    margin-top: 345px;
+  }
+
+  #mapmenu { 
+    position: relative;
+    margin: 0; 
+    padding: 0; 
+    white-space:nowrap;
+    list-style: none;
+  }
+
+  .mapmenuitem { 
+    margin: 0; 
+    padding: 0;
+    float: left;
+    border-style: thin solid #000;
+    height: 75px;
+    width: 25%;
+    color: #FFF;
+    text-align: center;
+    line-height: 75px;
+  }
+
+  #starbutton {
+    display: none;
+  }
+
+  #helpbutton {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 568px) {
+   
+  #mobilenavbutton {
+    display: none;
+  }
+
+  #mobilenavdiv {
+    display: none;
+  }
+
+}  
+

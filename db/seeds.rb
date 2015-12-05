@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 10.times do |i|
-  Location.create({address: "test#{i}", title: "test#{i}", username: "test#{i}", description: "test#{i}", latitude: Random.rand(27..49), longitude: Random.rand(-123..-76)})
+  Location.create({address: "test address#{i}", title: "test title#{i}", username: "test user#{i}", description: "test description#{i}", latitude: Random.rand(27..49), longitude: Random.rand(-123..-76)})
 end

@@ -13,11 +13,11 @@ var main = function() {
     });
 };
 
-var newPoint = function(name, loc1, loc2, title, description) {
-    name = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(loc1,loc2), null);
+var newPoint = function(name, lat, long, title, description) {
+    name = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(lat,long), null);
     map.entities.push(name);
     map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(
-        loc1, loc2), {
+        lat, long), {
         title: title,
         description: description,
         pushpin: name
@@ -40,10 +40,15 @@ function GetMap() {
             });
 
             Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
-              if (e.isSecondary)
+              if (e.isSecondary) {
                 $('#myModal').modal('toggle');
-                var latlong = new Microsoft.Maps.Location(e.getY(),e.getX());
-                console.log(latlong);
+                var point = new Microsoft.Maps.Point(e.getY(),e.getX());
+                var pixelLocation = e.target.tryPixelToLocation(point);
+                var computedLocation = new Microsoft.Maps.Location(pixelLocation.latitude, pixelLocation.longitude);
+                console.log(computedLocation);
+                document.getElementById('new-latitude').value = computedLocation.latitude;
+                document.getElementById('new-longitude').value = computedLocation.longitude;
+              }
 
             });
 
@@ -99,16 +104,9 @@ var closeMap = function() {
 };
 
 function loadLocations() {
-  console.log('in load locations');
-  var $locations = $('.data-locations');
-  $locations.each(function(index, item) {
-    var temp = new newPoint(
-      $(item).data('username'),
-      $(item).data('latitude'),
-      $(item).data('longitude'),
-      $(item).data('title'),
-      $(item).data('description')
-    );
+  console.log(gon.locations);
+  gon.locations.forEach((location) => {
+    var p = new newPoint(location.username, location.latitude, location.longitude, location.title, location.description);
   });
 }
 
