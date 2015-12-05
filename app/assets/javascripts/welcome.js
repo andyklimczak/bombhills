@@ -105,7 +105,7 @@ var closeMap = function() {
 
 function loadLocations() {
   console.log(gon.locations);
-  gon.locations.forEach((location) => {
+  gon.locations.forEach(function(location) {
     var p = new newPoint(location.username, location.latitude, location.longitude, location.title, location.description);
   });
 }
