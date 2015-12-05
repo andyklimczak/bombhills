@@ -12,6 +12,10 @@ body {
   overflow-y: auto;
 }
 
+span.glyphicon {
+    font-size: 1.75em;
+}
+
 .jumbotron {
 	height: 400px;
 	padding-left: 60px;
@@ -65,7 +69,7 @@ input[type="title"] {
 }
 
 .mapmenuitem:hover {
-	opacity: .8;
+	background-color: #3E3837 !important;
 }
 
 #closebutton {
@@ -171,6 +175,11 @@ input {
 /* ----------- mobile view ----------- */
 
 @media only screen and (max-width: 324px) {
+
+	span.glyphicon {
+	    font-size: 1em;
+	}
+
   
   #myMap {
     height: 370px;
@@ -231,6 +240,10 @@ input {
 }
 
 @media only screen and (min-width: 324px) and (max-width: 568px)  {
+
+  span.glyphicon {
+	    font-size: 1em;
+	}
 
   #myMap {
     height: 420px;
