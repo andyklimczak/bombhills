@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.label :difficulty%><br>
+    <%= f.select :difficulty, options_for_select(['Beginner', 'Intermediate', 'Professional']), {}, {} %>
   </div>
   <div class="field">
     <%= f.label :latitude %><br>
