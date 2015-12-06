@@ -50,7 +50,7 @@ function GetMap() {
             });
 
             Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
-              if (e.isSecondary) {
+              if (e.isSecondary && gon.user_signed_in) {
                 $('#myModal').modal('toggle');
                 var point = new Microsoft.Maps.Point(e.getY(),e.getX());
                 var pixelLocation = e.target.tryPixelToLocation(point);
@@ -58,6 +58,8 @@ function GetMap() {
                 console.log(computedLocation);
                 document.getElementById('new-latitude').value = computedLocation.latitude;
                 document.getElementById('new-longitude').value = computedLocation.longitude;
+              } else {
+                alert('Must be signed in to create location');
               }
 
             });
