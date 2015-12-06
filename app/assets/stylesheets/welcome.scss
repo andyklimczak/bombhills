@@ -8,6 +8,39 @@
 body {
   padding-right: 0px !important
 }
+
+.dropdown {
+    height: 50px;
+    margin-top: 3px;
+}
+
+.dropdown-menu li {
+    text-align: center;
+    color: #3E3837;
+}
+
+.nav {
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.navoff {
+    display: none;
+}
+
+.nav li {
+    line-height: 50px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 16px;
+}
+
+#homebutton {
+    padding-left: 0px;
+}
+
+
 .modal-open {
   overflow-y: auto;
 }
@@ -20,7 +53,6 @@ span.glyphicon {
 	height: 400px;
 	padding-left: 60px;
 	padding-right: 60px;
-	padding-top: 48px;
 	margin: 0;
 	background-image: url('test.jpg');
 	background-size: cover;
@@ -196,6 +228,10 @@ input {
 
 @media only screen and (max-width: 324px) {
 
+	.nav {
+		display: none;
+	}
+
 
 	#tripsdiv {
 	  
@@ -272,6 +308,10 @@ input {
 }
 
 @media only screen and (min-width: 324px) and (max-width: 568px)  {
+
+	.nav {
+		display: none;
+	}
 
 	#tripsdiv {
 	  display: none;
