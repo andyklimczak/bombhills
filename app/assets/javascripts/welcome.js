@@ -23,14 +23,14 @@ var main = function() {
     });
 };
 
-var newPoint = function(name, lat, long, title, description) {
-    name = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(lat,long), null);
-    map.entities.push(name);
+var newPoint = function(userEmail, lat, long, title, description, difficulty) {
+    pointName = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(lat,long), null);
+    map.entities.push(pointName);
     map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(
         lat, long), {
         title: title,
-        description: description,
-        pushpin: name
+        description: "Description: " + description + "<br/>Created by: " + userEmail + "<br/>Difficulty: " + difficulty,
+        pushpin: pointName
     }));
 }
 
@@ -66,9 +66,9 @@ function GetMap() {
 
       
           var sanfranlargest = new newPoint("sanfranlargest", 37.800309, -122.418117,
-              "Filbert Street", "high density");
+              "Filbert Street", "high density", "Starter");
           var thevalleyamazingtrail = new newPoint("thevalleyamazingtrail", 41.460184, -81.823116,
-              "Amazing Trail", "watch out for bikers");
+              "Amazing Trail", "watch out for bikers", "Starter");
               
           loadLocations();
         }
@@ -118,7 +118,7 @@ var closeMap = function() {
 function loadLocations() {
   console.log(gon.locations);
   gon.locations.forEach(function(location) {
-    var p = new newPoint(location.username, location.latitude, location.longitude, location.title, location.description);
+    var p = new newPoint(location.user.email, location.latitude, location.longitude, location.title, location.description, location.difficulty);
   });
 }
 
