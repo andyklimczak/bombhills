@@ -93,7 +93,6 @@ var displayMap = function() {
             $('#myMap').animate({
                 opacity: '1'
             });
-            $('#nav').hide();
             $('.mymapoff').addClass('mymapon');
             $('.mapmenudivoff').addClass('mapmenudivon');
         });
@@ -111,7 +110,6 @@ var closeMap = function() {
         $('#myMap').animate({
             opacity: '0'
         });
-        $('#nav').show();
         $('.mymapoff').removeClass('mymapon');
         $('.mapmenudivoff').removeClass('mapmenudivon');
     });

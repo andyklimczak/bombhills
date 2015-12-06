@@ -56,7 +56,7 @@ span.glyphicon {
 	margin: 0;
 	background-image: url('test.jpg');
 	background-size: cover;
-	background-attachement: fixed;
+	background-attachment: fixed;
 }
 
 input[type="title"] {
@@ -90,6 +90,9 @@ input[type="title"] {
   margin-left: 105px;
   background-color: #4B4442;
   z-index: 1;
+  background-image: url('testtwo.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #tripsclosebutton {
@@ -201,7 +204,7 @@ input[type="title"] {
 	left: -100%;
 	height: 400px;
 	width: 100%;
-	z-index: 0;
+	z-index: 1;
 }
 
 input {
@@ -243,7 +246,7 @@ input {
 	}
 
 	span.glyphicon {
-	    font-size: 1em;
+	    font-size: 1.2em;
 	}
 
   
@@ -322,7 +325,7 @@ input {
 	}
 
   span.glyphicon {
-	    font-size: 1em;
+	    font-size: 1.2em;
 	}
 
   #myMap {
