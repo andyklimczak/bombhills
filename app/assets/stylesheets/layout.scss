@@ -1,3 +1,6 @@
+
+/* nav */
+
 .nav {
     height: 50px;
     margin: 0;
@@ -9,4 +12,238 @@
     padding-left: 8px;
     padding-right: 8px;
     font-size: 16px;
+}
+
+.dropdown {
+    height: 50px;
+    margin-top: 2px;
+}
+
+.dropdown-menu li {
+    text-align: center;
+    color: #3E3837;
+}
+
+/* mobile nav */
+
+#mobilenavbutton {
+	height: 70px;
+	width: 85px;
+	background-color: #3E3837;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row; /* works with row or column */
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #FFF;
+
+}
+
+#mobilenavdiv {
+	height: 350px;
+	background-color: #3E3837;
+	width: 50%;
+	margin-right: 30%;
+	padding-top: 5%;
+	position: absolute;
+	opacity: .9;
+	left: -100%;
+
+}
+
+#mobilenavdiv ul {
+	list-style-type: none;
+}
+
+#mobilenavdiv ul li {
+	color: #FFF;
+	font-size: 18px;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+/* jumbotron */
+
+.jumbotron {
+	height: 400px;
+	padding-left: 60px;
+	padding-right: 60px;
+	margin: 0;
+	background-image: url('test.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+@media only screen and (max-width: 324px) {
+	.jumbotron {
+		height: 300px;
+	}
+}
+
+.jumbotron li {
+	cursor: pointer;
+}
+
+/*  Media Queries  */
+
+@media only screen and (max-width: 324px) {
+
+	.nav {
+		display: none;
+	}
+
+
+	#tripsdiv {
+	  
+	  display: none;
+	}
+
+	#tripsclosebutton {
+	  display: none;
+	}
+
+	span.glyphicon {
+	    font-size: 1.2em;
+	}
+
+  
+  #myMap {
+    height: 370px;
+  }
+
+  #mobilenavdiv {
+	height: 300px;
+  }
+
+  .jumbotron {
+    height: 300px;
+    padding: 0;
+    padding-left: 5px;
+  }
+
+  .jumbotron p {
+  	font-size: 16px;
+  }
+
+  .jumbotron h1 {
+  	margin: 0;
+    padding: 0;
+    font-size: 24px;
+  }
+
+  .mapmenudivon {
+    display: inherit;
+    margin-top: 295px;
+    float: none;
+  }
+
+  #mapmenu { 
+    position: relative;
+    margin: 0; 
+    padding: 0; 
+    white-space:nowrap;
+    list-style: none;
+    z-index: 2;
+  }
+
+  .mapmenuitem { 
+    margin: 0; 
+    padding: 0;
+    float: left;
+    border-style: thin solid #000;
+    height: 75px;
+    width: 25%;
+    color: #FFF;
+    text-align: center;
+    line-height: 75px;
+  }
+
+  #starbutton {
+    display: none;
+  }
+
+  #helpbutton {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 324px) and (max-width: 568px)  {
+
+	.nav {
+		display: none;
+	}
+
+	#tripsdiv {
+	  display: none;
+	}
+
+	#tripsclosebutton {
+	  display: none;
+	}
+
+  span.glyphicon {
+	    font-size: 1.2em;
+	}
+
+  #myMap {
+    height: 420px;
+  }
+
+  .jumbotron {
+    height: 350px;
+    padding: 0;
+    padding-left: 5px;
+  }
+
+
+  .mapmenudivon {
+    display: inherit;
+    margin-top: 345px;
+    float: none;
+  }
+
+  #mapmenu { 
+    position: relative;
+    margin: 0; 
+    padding: 0; 
+    white-space:nowrap;
+    list-style: none;
+  }
+
+  .mapmenuitem { 
+    margin: 0; 
+    padding: 0;
+    float: left;
+    border-style: thin solid #000;
+    height: 75px;
+    width: 25%;
+    color: #FFF;
+    text-align: center;
+    line-height: 75px;
+  }
+
+  #starbutton {
+    display: none;
+  }
+
+  #helpbutton {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 568px) {
+   
+  #mobilenavbutton {
+    display: none;
+  }
+
+  #mobilenavdiv {
+    display: none;
+  }
+
 }
