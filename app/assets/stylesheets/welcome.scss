@@ -43,7 +43,7 @@ span.glyphicon {
   width: 400px;
   margin-left: 105px;
   z-index: 1;
-  background: #3E3837;
+  background: #474342;
 }
 
 #tripsclosebutton {
@@ -60,6 +60,7 @@ span.glyphicon {
 	margin: 0; 
 	padding: 0; 
 	list-style: none;
+	box-shadow: 5px 0 5px -5px #333;
 }
 
 .mapmenuitem { 
@@ -69,13 +70,22 @@ span.glyphicon {
 	height: 80px;
 	width: 105px;
 	color: #FFF;
-	text-align: center;
-	line-height: 90px;
 	cursor: pointer;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row; /* works with row or column */
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .mapmenuitem:hover {
-	background-color: #3E3837 !important;
+	background-color: #FFF !important;
+	span.glyphicon {
+	    color: #000;
+	}
 }
 
 .mapbox {
@@ -109,6 +119,7 @@ input {
 
 #mapbutton {
 	cursor: pointer;
+	background-color: #FFF;
 }
   
 
