@@ -59,7 +59,7 @@ function GetMap() {
                 document.getElementById('new-latitude').value = computedLocation.latitude;
                 document.getElementById('new-longitude').value = computedLocation.longitude;
               } else {
-                alert('Must be signed in to create location');
+                $('#new-location-error').modal('toggle');
               }
 
             });
