@@ -1,5 +1,3 @@
-// JavaScript Document
-
 var main = function() {
     $('#mobilenavbutton').click(function() {
         $('#mobilenavdiv').animate({
@@ -34,7 +32,7 @@ var newPoint = function(userEmail, lat, long, title, description, difficulty) {
     }));
 }
 
-function GetMap() {
+function getMap() {
     Microsoft.Maps.loadModule('Microsoft.Maps.Themes.BingTheme', {
         callback: function() {
             map = new Microsoft.Maps.Map(document.getElementById(
@@ -61,7 +59,6 @@ function GetMap() {
               } else {
                 $('#new-location-error').modal('toggle');
               }
-
             });
 
       
@@ -115,6 +112,7 @@ var closeMap = function() {
     });
 };
 
+// Load locations from the database to the map
 function loadLocations() {
   console.log(gon.locations);
   gon.locations.forEach(function(location) {
@@ -126,4 +124,4 @@ $(document).ready(displayMap);
 $(document).ready(closeMap);
 $(document).ready(setLocation);
 $(document).ready(main);
-$(document).ready(GetMap); 
+$(document).ready(getMap);
