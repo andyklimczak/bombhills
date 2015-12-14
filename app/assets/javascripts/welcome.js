@@ -50,8 +50,8 @@ function GetMap() {
             });
 
             Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
-              if (e.isSecondary && gon.user_signed_in) {
-                $('#myModal').modal('toggle');
+              if (gon.user_signed_in && e.isSecondary) {
+                $('#new-location-form').modal('toggle');
                 var point = new Microsoft.Maps.Point(e.getY(),e.getX());
                 var pixelLocation = e.target.tryPixelToLocation(point);
                 var computedLocation = new Microsoft.Maps.Location(pixelLocation.latitude, pixelLocation.longitude);
