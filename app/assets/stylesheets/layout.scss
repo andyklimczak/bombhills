@@ -91,6 +91,41 @@
 	cursor: pointer;
 }
 
+/* supporting */
+
+.supporting {
+	text-align: center;
+	color: #FFF;
+	background: #2A83C6;
+	font-family: 'Lora', serif;
+}
+
+.supporting .container div {
+	height: 150px;
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+}
+
+/* user content */
+
+.usercontent h1 {
+	text-align: center;
+	font-family: 'Lora', serif;
+	color: #2A83C6;
+	padding: 10px;
+
+}
+
+.thumbnail {
+	border: 0;
+}
+
+.caption .btn-primary {
+	color: #FFF;
+}
+
 /*  Media Queries  */
 
 @media only screen and (max-width: 324px) {
