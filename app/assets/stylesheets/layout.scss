@@ -73,7 +73,7 @@
 
 /* jumbotron */
 
-.jumbotron {
+.container-fluid .jumbotron {
 	height: 400px;
 	padding-left: 60px;
 	padding-right: 60px;
@@ -81,6 +81,7 @@
 	background-image: url('test.jpg');
 	background-size: cover;
 	background-attachment: fixed;
+  border-radius: 0;
 }
 
 .jumbotron h1 {
