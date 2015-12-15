@@ -35,7 +35,7 @@
 #mobilenavbutton {
 	height: 70px;
 	width: 85px;
-	background-color: #3E3837;
+	background-color: #2A83C6;
 	display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row; /* works with row or column */
@@ -148,7 +148,10 @@
 		display: none;
 	}
 
-
+	.supporting {
+		display: none;
+	}
+	
 	#tripsdiv {
 	  
 	  display: none;
@@ -221,6 +224,10 @@
 @media only screen and (min-width: 324px) and (max-width: 568px)  {
 
 	.nav {
+		display: none;
+	}
+
+	.supporting {
 		display: none;
 	}
 
