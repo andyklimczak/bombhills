@@ -17,11 +17,11 @@
 
 1. _vagrant ssh_
 
-2. _cd /vagrant/
+2. _cd /vagrant/_
 
 3. _guard -p -l 1_
 
-4. Refresh localhost:3000, you will see **INFO - Browser connected. **
+4. Refresh localhost:3000, you will see __INFO - Browser connected.__
 
 5. Make a change to a js, html, css file, and the browser will auto refresh the page.
 
