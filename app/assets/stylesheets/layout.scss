@@ -79,7 +79,7 @@
 /* jumbotron */
 
 .container-fluid .jumbotron {
-	height: 450px;
+	height: 500px;
 	text-align: center;
 	margin: 0;
 	background: url('test.jpg');
@@ -89,7 +89,7 @@
 
 .jumbotron h1 {
 	font-family: 'Sarina', cursive;
-	padding: 40px 0px;
+	padding: 60px 0px;
 	font-size: 120px;
 	color: #FFF;
 }
@@ -216,15 +216,29 @@
   	}
 
   	.supporting .container div {
-		height: 125px;
+		height: 100px;
 	}
 
 	.supporting h2 {
 		margin: 0;
+		font-size: 24px;
 	}
 
   	.supporting p {
   		display: none;
+  	}
+
+
+  	.supporting span.glyphicon {
+  		font-size: 2em;
+  	}
+
+  	.usercontent {
+  		height: 300px;
+  	}
+
+  	.usercontent p {
+  		line-height: 300px;
   	}
 }
 
@@ -241,6 +255,7 @@
 
 	.jumbotron h1 {
 		font-size: 80px;
+		padding: 40px;
 	}
 
 
@@ -301,7 +316,7 @@
 @media only screen and (min-width : 992px) {
 
 	.jumbotron h1 {
-		font-size: 120px;
+		font-size: 130px;
 	}
 }
 
