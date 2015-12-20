@@ -68,24 +68,29 @@
 	font-size: 18px;
 	line-height: 50px;
 	cursor: pointer;
+	color: #FFF;
+}
+
+#mobilenavdiv a {
+	text-decoration: none;
+	color: #FFF;
 }
 
 /* jumbotron */
 
 .container-fluid .jumbotron {
-	height: 400px;
+	height: 450px;
 	text-align: center;
 	margin: 0;
 	background: url('test.jpg');
 	background-size: cover;
-	background-attachment: fixed;
   	border-radius: 0;
 }
 
 .jumbotron h1 {
 	font-family: 'Sarina', cursive;
-	padding: 35px;
-	font-size: 100px;
+	padding: 40px 0px;
+	font-size: 120px;
 	color: #FFF;
 }
 
@@ -132,171 +137,175 @@
 	background-attachment: fixed;
 }
 
+.usercontent p {
+	color: #FFF;
+	text-align: center;
+	font-size: 24px;
+	line-height: 350px;
+}
+
+.usercontent a {
+	color: #2A83C6;
+	text-decoration: none;
+}
+
+/* skateinfo */
+
+.skateinfo {
+	height: 300px;
+	background: #2D2A28;
+}
 
 /*  Media Queries  */
 
-@media only screen and (max-width: 324px) {
+/* Custom, iPhone Retina */ 
 
-	.nav {
-		display: none;
+@media only screen and (max-width : 480px) {
+	.mapmenudivon {
+	    display: inherit;
+	    margin-top: 345px;
+	    float: none;
+  	}
+
+  	#mapmenu { 
+   	 	position: relative;
+   	 	margin: 0; 
+    	padding: 0; 
+    	white-space:nowrap;
+    	list-style: none;
+  	}
+
+  	.mapmenuitem { 
+    	margin: 0; 
+    	padding: 0;
+   		 float: left;
+    	border-style: thin solid #000;
+    	height: 75px;
+  		  width: 25%;
+   	 	color: #FFF;
+    	text-align: center;
+   		 line-height: 75px;
+  	}
+
+  	#tripsdiv {
+  		display: none;
+  	}
+
+  	#starbutton {
+    	display: none;
+ 	 }
+
+  	#helpbutton {
+    	display: none;
+  	}
+
+  	.nav {
+  		display: none;
+  	}
+
+  	.container-fluid .jumbotron {
+		height: 350px;
 	}
 
-	.supporting {
-		display: none;
+  	.jumbotron h1 {
+  		font-size: 50px;
+  	}
+
+  	#myMap {
+  		height: 420px;
+  	}
+
+  	.supporting .container div {
+		height: 125px;
+	}
+
+	.supporting h2 {
+		margin: 0;
+	}
+
+  	.supporting p {
+  		display: none;
+  	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+	.nav {
+	    display: inline-block;
+	    float: none;
+	}
+
+	.container-fluid .jumbotron {
+		height: 400px;
+	}
+
+	.jumbotron h1 {
+		font-size: 80px;
+	}
+
+
+	#myMap {
+		height: 400px;
+	}
+
+	.mapmenuitem { 
+		height: 80px;
+	}
+
+	#mobilenavbutton {
+	   display: none;
+	}
+
+	 #mobilenavdiv {
+	   display: none;
 	}
 
 	#tripsdiv {
-	  
-	  display: none;
+		height: 400px;
 	}
+
+	.supporting .container div {
+		height: 125px;
+	}
+
+	.supporting h2 {
+		margin: 0;
+	}
+
+  	.supporting p {
+  		display: none;
+  	}
 
 	#tripsclosebutton {
-	  display: none;
+		margin-top: 340px;
 	}
-  
-  #myMap {
-    height: 370px;
-  }
 
-  #mobilenavdiv {
-	height: 300px;
-  }
+}	
 
-  .container-fluid .jumbotron {
-    height: 300px;
-    padding: 0;
-    padding-left: 5px;
-  }
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	#mobilenavbutton {
+	   display: none;
+	}
 
-  .jumbotron p {
-  	font-size: 16px;
-  	margin: 0;
-  	padding: 5px;
-  }
+	 #mobilenavdiv {
+	   display: none;
+	}
 
-  .jumbotron h1 {
-  	margin: 0;
-    padding: 45px;
-    font-size: 32px;
-  }
+	.jumbotron h1 {
+		font-size: 100px;
+	}
+}	
 
-  .mapmenudivon {
-    display: inherit;
-    margin-top: 295px;
-    float: none;
-  }
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
 
-  #mapmenu { 
-    position: relative;
-    margin: 0; 
-    padding: 0; 
-    white-space:nowrap;
-    list-style: none;
-    z-index: 2;
-  }
-
-  .mapmenuitem { 
-    margin: 0; 
-    padding: 0;
-    float: left;
-    border-style: thin solid #000;
-    height: 75px;
-    width: 25%;
-    color: #FFF;
-    text-align: center;
-    line-height: 75px;
-  }
-
-  #starbutton {
-    display: none;
-  }
-
-  #helpbutton {
-    display: none;
-  }
+	.jumbotron h1 {
+		font-size: 120px;
+	}
 }
 
-@media only screen and (min-width: 324px) and (max-width: 568px)  {
-
-	.nav {
-		display: none;
-	}
-
-	.supporting {
-		display: none;
-	}
-
-	#tripsdiv {
-	  display: none;
-	}
-
-	#tripsclosebutton {
-	  display: none;
-	}
-
-  #myMap {
-    height: 420px;
-  }
-
-  .container-fluid .jumbotron {
-    height: 300px;
-    padding: 0;
-    padding-left: 5px;
-  }
-
-  .jumbotron h1 {
-  	font-size: 40px;
-  }
-
-  .jumbotron p {
-  	margin: 0;
-  	padding: 5px;
-  }
-
-  .mapmenudivon {
-    display: inherit;
-    margin-top: 345px;
-    float: none;
-  }
-
-  #mapmenu { 
-    position: relative;
-    margin: 0; 
-    padding: 0; 
-    white-space:nowrap;
-    list-style: none;
-  }
-
-  .mapmenuitem { 
-    margin: 0; 
-    padding: 0;
-    float: left;
-    border-style: thin solid #000;
-    height: 75px;
-    width: 25%;
-    color: #FFF;
-    text-align: center;
-    line-height: 75px;
-  }
-
-  #starbutton {
-    display: none;
-  }
-
-  #helpbutton {
-    display: none;
-  }
-
-}
-
-@media only screen and (min-width: 568px) {
-   
-  #mobilenavbutton {
-    display: none;
-  }
-
-  #mobilenavdiv {
-    display: none;
-  }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
 
 }
