@@ -65,7 +65,6 @@
 }
 
 #mobilenavdiv ul li {
-	color: #FFF;
 	font-size: 18px;
 	line-height: 50px;
 	cursor: pointer;
@@ -75,27 +74,23 @@
 
 .container-fluid .jumbotron {
 	height: 400px;
-	padding-left: 60px;
-	padding-right: 60px;
+	text-align: center;
 	margin: 0;
-	background-image: url('test.jpg');
+	background: url('test.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-  border-radius: 0;
+  	border-radius: 0;
 }
 
 .jumbotron h1 {
 	font-family: 'Sarina', cursive;
+	padding: 35px;
+	font-size: 7em;
+	color: #FFF;
 }
 
 .jumbotron p {
-	margin-right: 40%;
-}
-
-@media only screen and (max-width: 324px) {
-	.jumbotron {
-		height: 300px;
-	}
+	color: #FFF;
 }
 
 .jumbotron li {
@@ -112,38 +107,31 @@
 }
 
 .supporting .container div {
-	height: 150px;
+	height: 300px;
 	display: flex;
     justify-content:center;
     align-content:center;
     flex-direction:column;
 }
 
+.supporting h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
+.supporting span.glyphicon {
+	font-size: 3em;
+}
+
 /* user content */
 
-.usercontent h1 {
-	text-align: center;
-	color: #2A83C6;
-	padding: 30px 0px;
-	font-size: 60px;
-	font-family: 'Lora', serif;
-
+.usercontent {
+	height: 350px;
+	background: url('users.jfif');
+	background-size: cover;
+	background-attachment: fixed;
 }
 
-.thumbnail {
-	border: 0;
-}
-
-.caption .btn-primary {
-	color: #FFF;
-}
-
-/*  footer  */
-
-.footer {
-	height: 250px;
-	background: #3E3837;
-}
 
 /*  Media Queries  */
 
@@ -174,7 +162,7 @@
 	height: 300px;
   }
 
-  .jumbotron {
+  .container-fluid .jumbotron {
     height: 300px;
     padding: 0;
     padding-left: 5px;
@@ -183,11 +171,12 @@
   .jumbotron p {
   	font-size: 16px;
   	margin: 0;
+  	padding: 5px;
   }
 
   .jumbotron h1 {
   	margin: 0;
-    padding: 0;
+    padding: 45px;
     font-size: 32px;
   }
 
@@ -249,14 +238,19 @@
     height: 420px;
   }
 
-  .jumbotron {
-    height: 350px;
+  .container-fluid .jumbotron {
+    height: 300px;
     padding: 0;
     padding-left: 5px;
   }
 
+  .jumbotron h1 {
+  	font-size: 40px;
+  }
+
   .jumbotron p {
   	margin: 0;
+  	padding: 5px;
   }
 
   .mapmenudivon {
