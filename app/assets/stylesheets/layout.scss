@@ -134,31 +134,169 @@
 
 
 /*  Media Queries  */
-/* following Bootstrap 3 Mobile First Method */
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-	#mobilenavbutton {
+@media only screen and (max-width: 324px) {
+
+	.nav {
 		display: none;
 	}
 
-	#mobilenavdiv {
+	.supporting {
 		display: none;
 	}
+
+	#tripsdiv {
+	  
+	  display: none;
+	}
+
+	#tripsclosebutton {
+	  display: none;
+	}
+  
+  #myMap {
+    height: 370px;
+  }
+
+  #mobilenavdiv {
+	height: 300px;
+  }
+
+  .container-fluid .jumbotron {
+    height: 300px;
+    padding: 0;
+    padding-left: 5px;
+  }
+
+  .jumbotron p {
+  	font-size: 16px;
+  	margin: 0;
+  	padding: 5px;
+  }
+
+  .jumbotron h1 {
+  	margin: 0;
+    padding: 45px;
+    font-size: 32px;
+  }
+
+  .mapmenudivon {
+    display: inherit;
+    margin-top: 295px;
+    float: none;
+  }
+
+  #mapmenu { 
+    position: relative;
+    margin: 0; 
+    padding: 0; 
+    white-space:nowrap;
+    list-style: none;
+    z-index: 2;
+  }
+
+  .mapmenuitem { 
+    margin: 0; 
+    padding: 0;
+    float: left;
+    border-style: thin solid #000;
+    height: 75px;
+    width: 25%;
+    color: #FFF;
+    text-align: center;
+    line-height: 75px;
+  }
+
+  #starbutton {
+    display: none;
+  }
+
+  #helpbutton {
+    display: none;
+  }
 }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width: 324px) and (max-width: 568px)  {
+
+	.nav {
+		display: none;
+	}
+
+	.supporting {
+		display: none;
+	}
+
+	#tripsdiv {
+	  display: none;
+	}
+
+	#tripsclosebutton {
+	  display: none;
+	}
+
+  #myMap {
+    height: 420px;
+  }
+
+  .container-fluid .jumbotron {
+    height: 300px;
+    padding: 0;
+    padding-left: 5px;
+  }
+
+  .jumbotron h1 {
+  	font-size: 40px;
+  }
+
+  .jumbotron p {
+  	margin: 0;
+  	padding: 5px;
+  }
+
+  .mapmenudivon {
+    display: inherit;
+    margin-top: 345px;
+    float: none;
+  }
+
+  #mapmenu { 
+    position: relative;
+    margin: 0; 
+    padding: 0; 
+    white-space:nowrap;
+    list-style: none;
+  }
+
+  .mapmenuitem { 
+    margin: 0; 
+    padding: 0;
+    float: left;
+    border-style: thin solid #000;
+    height: 75px;
+    width: 25%;
+    color: #FFF;
+    text-align: center;
+    line-height: 75px;
+  }
+
+  #starbutton {
+    display: none;
+  }
+
+  #helpbutton {
+    display: none;
+  }
 
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (min-width: 568px) {
+   
+  #mobilenavbutton {
+    display: none;
+  }
+
+  #mobilenavdiv {
+    display: none;
+  }
 
 }
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
-}
-
