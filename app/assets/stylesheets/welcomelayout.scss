@@ -1,0 +1,322 @@
+
+.row {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* nav */
+
+.nav {
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    line-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+}
+
+.dropdown {
+    height: 50px;
+    margin-top: 3px;
+}
+
+.dropdown-menu li {
+    text-align: center;
+    color: #3E3837;
+}
+
+/* mobile nav */
+
+#mobilenavbutton {
+	height: 70px;
+	width: 85px;
+	background-color: #2A83C6;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row; /* works with row or column */
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #FFF;
+
+}
+
+#mobilenavdiv {
+	height: 350px;
+	background-color: #3E3837;
+	width: 50%;
+	margin-right: 30%;
+	padding-top: 5%;
+	position: absolute;
+	opacity: .9;
+	left: -100%;
+}
+
+#mobilenavdiv ul {
+	list-style-type: none;
+}
+
+#mobilenavdiv ul li {
+	font-size: 18px;
+	line-height: 50px;
+	cursor: pointer;
+	color: #FFF;
+}
+
+#mobilenavdiv a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+/* jumbotron */
+
+.container-fluid .jumbotron {
+	height: 500px;
+	text-align: center;
+	margin: 0;
+	background: url('test.jpg');
+	background-size: cover;
+  	border-radius: 0;
+}
+
+.jumbotron h1 {
+	font-family: 'Sarina', cursive;
+	padding: 60px 0px;
+	font-size: 120px;
+	color: #FFF;
+}
+
+.jumbotron p {
+	color: #FFF;
+}
+
+.jumbotron li {
+	cursor: pointer;
+}
+
+/* supporting */
+
+.supporting {
+	text-align: center;
+	color: #FFF;
+	background: #2A83C6;
+	font-family: 'Lora', serif;
+}
+
+.supporting .container div {
+	height: 300px;
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+}
+
+.supporting h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
+.supporting span.glyphicon {
+	font-size: 3em;
+}
+
+/* user content */
+
+.usercontent {
+	height: 350px;
+	background: url('users.jfif');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.usercontent p {
+	color: #FFF;
+	text-align: center;
+	font-size: 24px;
+	line-height: 350px;
+}
+
+.usercontent a {
+	color: #2A83C6;
+	text-decoration: none;
+}
+
+/*  Media Queries  */
+
+/* Custom, iPhone Retina */ 
+
+@media only screen and (max-width : 480px) {
+	.mapmenudivon {
+	    display: inherit;
+	    margin-top: 345px;
+	    float: none;
+  	}
+
+  	#mapmenu { 
+   	 	position: relative;
+   	 	margin: 0; 
+    	padding: 0; 
+    	white-space:nowrap;
+    	list-style: none;
+  	}
+
+  	.mapmenuitem { 
+    	margin: 0; 
+    	padding: 0;
+   		float: left;
+    	border-style: thin solid #000;
+    	height: 75px;
+  		width: 25%;
+   	 	color: #FFF;
+    	text-align: center;
+   		line-height: 75px;
+  	}
+
+  	#tripsdiv {
+  		display: none;
+  	}
+
+  	#starbutton {
+    	display: none;
+ 	 }
+
+  	#helpbutton {
+    	display: none;
+  	}
+
+  	.nav {
+  		display: none;
+  	}
+
+  	.container-fluid .jumbotron {
+		height: 350px;
+	}
+
+  	.jumbotron h1 {
+  		font-size: 50px;
+  	}
+
+  	#myMap {
+  		height: 420px;
+  	}
+
+  	.supporting .container div {
+		height: 100px;
+	}
+
+	.supporting h2 {
+		margin: 0;
+		font-size: 24px;
+	}
+
+  	.supporting p {
+  		display: none;
+  	}
+
+
+  	.supporting span.glyphicon {
+  		font-size: 2em;
+  	}
+
+  	.usercontent {
+  		height: 300px;
+  	}
+
+  	.usercontent p {
+  		line-height: 300px;
+  	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+	.nav {
+	    display: inline-block;
+	    float: none;
+	}
+
+	.container-fluid .jumbotron {
+		height: 400px;
+	}
+
+	.jumbotron h1 {
+		font-size: 80px;
+		padding: 40px;
+	}
+
+
+	#myMap {
+		height: 400px;
+	}
+
+	.mapmenuitem { 
+		height: 80px;
+	}
+
+	#mobilenavbutton {
+	   display: none;
+	}
+
+	 #mobilenavdiv {
+	   display: none;
+	}
+
+	#tripsdiv {
+		height: 400px;
+	}
+
+	.supporting .container div {
+		height: 125px;
+	}
+
+	.supporting h2 {
+		margin: 0;
+	}
+
+  	.supporting p {
+  		display: none;
+  	}
+
+	#tripsclosebutton {
+		margin-top: 340px;
+	}
+
+}	
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	#mobilenavbutton {
+	   display: none;
+	}
+
+	 #mobilenavdiv {
+	   display: none;
+	}
+
+	.jumbotron h1 {
+		font-size: 100px;
+	}
+}	
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+	.jumbotron h1 {
+		font-size: 130px;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.container-fluid .jumbotron {
+		background-size: 100% 170%;
+	}
+
+}

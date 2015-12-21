@@ -1,0 +1,55 @@
+/* profile layout */
+
+/* sign up */
+
+.signup {
+	text-align: center;
+	color: #FFF;
+	background: #2A83C6;
+	height: 100vh;
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+    background: url('userprofile.jpg');
+    background-size: cover;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
+.signup h2 {
+	margin: 0;
+	padding-bottom: 10px;
+	font-family: 'Sarina', cursive;
+}
+
+.signup a {
+	color: #FFF;
+}
+
+/* log in */
+
+.login {
+	text-align: center;
+	color: #FFF;
+	background: #2A83C6;
+	height: 100vh;
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+    background: url('userprofile2.jpg');
+    background-size: cover;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
+.login h2 {
+	margin: 0;
+	padding-bottom: 10px;
+	font-family: 'Sarina', cursive;
+}
+
+.login a {
+	color: #FFF;
+}
