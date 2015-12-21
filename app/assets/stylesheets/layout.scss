@@ -149,13 +149,6 @@
 	text-decoration: none;
 }
 
-/* skateinfo */
-
-.skateinfo {
-	height: 300px;
-	background: #2D2A28;
-}
-
 /*  Media Queries  */
 
 /* Custom, iPhone Retina */ 
@@ -322,5 +315,8 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+	.container-fluid .jumbotron {
+		background-size: 100% 170%;
+	}
 
 }
