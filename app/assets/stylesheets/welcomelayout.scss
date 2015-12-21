@@ -51,7 +51,7 @@
 
 #mobilenavdiv {
 	height: 350px;
-	background-color: #3E3837;
+	background-color: #2A83C6;
 	width: 50%;
 	margin-right: 30%;
 	padding-top: 5%;
@@ -96,6 +96,8 @@
 
 .jumbotron p {
 	color: #FFF;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
 }
 
 .jumbotron li {
@@ -142,6 +144,8 @@
 	text-align: center;
 	font-size: 24px;
 	line-height: 350px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
 }
 
 .usercontent a {
@@ -153,7 +157,80 @@
 
 /* Custom, iPhone Retina */ 
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 332px) {
+	.mapmenudivon {
+	    display: inherit;
+	    margin-top: 310px;
+	    float: none;
+  	}
+
+  	#mapmenu { 
+   	 	position: relative;
+   	 	margin: 0; 
+    	padding: 0; 
+    	white-space:nowrap;
+    	list-style: none;
+  	}
+
+  	.mapmenuitem { 
+    	margin: 0; 
+    	padding: 0;
+   		float: left;
+    	border-style: thin solid #000;
+    	height: 60px;
+  		width: 25%;
+   	 	color: #FFF;
+    	text-align: center;
+   		line-height: 75px;
+  	}
+
+  	#tripsdiv {
+  		display: none;
+  	}
+
+  	#starbutton {
+    	display: none;
+ 	 }
+
+  	#helpbutton {
+    	display: none;
+  	}
+
+  	.nav {
+  		display: none;
+  	}
+
+  	#mobilenavdiv {
+  		height: 300px;
+  	}
+
+  	.container-fluid .jumbotron {
+		height: 300px;
+	}
+
+  	.jumbotron h1 {
+  		font-size: 35px;
+  		padding: 35px 0px;
+  	}
+
+  	#myMap {
+  		height: 370px;
+  	}
+
+  	.supporting .container div {
+		display: none;
+	}
+
+  	.usercontent {
+  		height: 300px;
+  	}
+
+  	.usercontent p {
+  		line-height: 300px;
+  	}
+}
+
+@media only screen and (min-width : 332px) and (max-width : 480px) {
 	.mapmenudivon {
 	    display: inherit;
 	    margin-top: 345px;
@@ -209,22 +286,8 @@
   	}
 
   	.supporting .container div {
-		height: 100px;
+		display: none;
 	}
-
-	.supporting h2 {
-		margin: 0;
-		font-size: 24px;
-	}
-
-  	.supporting p {
-  		display: none;
-  	}
-
-
-  	.supporting span.glyphicon {
-  		font-size: 2em;
-  	}
 
   	.usercontent {
   		height: 300px;
@@ -273,16 +336,8 @@
 	}
 
 	.supporting .container div {
-		height: 125px;
+		display: none;
 	}
-
-	.supporting h2 {
-		margin: 0;
-	}
-
-  	.supporting p {
-  		display: none;
-  	}
 
 	#tripsclosebutton {
 		margin-top: 340px;
