@@ -10,14 +10,13 @@
 .nav {
     height: 50px;
     margin: 0;
-    padding: 0;
+    padding: 15px;
 }
 
 .nav li {
     line-height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
     font-size: 16px;
+    text-align: right;
 }
 
 .dropdown {
@@ -356,9 +355,6 @@
 	   display: none;
 	}
 
-	.jumbotron h1 {
-		font-size: 100px;
-	}
 }	
 
 /* Medium Devices, Desktops */
