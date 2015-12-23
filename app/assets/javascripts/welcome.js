@@ -19,6 +19,16 @@ var main = function() {
             left: '-100%'
         });
     });
+
+    var header = document.getElementById("jumbotron");
+    var speed = 5.0;
+
+    window.onscroll = function()
+    {
+       var yOffset = window.pageYOffset;
+       header.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
+    }
+
 };
 
 var newPoint = function(userEmail, lat, long, title, description, difficulty) {
