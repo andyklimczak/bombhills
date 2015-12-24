@@ -1,0 +1,50 @@
+Username: <%= @user.username %>
+<br>
+Email: <%= @user.email %>
+<br>
+Last sign in at: <%= @user.last_sign_in_at %>
+<br>
+<% if @user.locations.any? %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Title
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Difficulty
+        </th>
+        <th>
+          Lat
+        </th>
+        <th>
+          Long
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @user.locations.each do |location| %>
+      <tr>
+        <td>
+          <%= location.title %>
+        </td>
+        <td>
+          <%= location.description %>
+        </td>
+        <td>
+          <%= location.difficulty %>
+        </td>
+        <td>
+          <%= location.latitude %>
+        </td>
+        <td>
+          <%= location.longitude %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>

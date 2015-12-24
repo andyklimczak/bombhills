@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'user/:username' => 'users#show', via: :get, as: 'show_user'
   resources :locations
   root 'welcome#index'
   get 'welcome/index'

@@ -1,0 +1,11 @@
+Username: <%= @user.username %>
+<br>
+Email: <%= @user.email %>
+<br>
+Last sign in at: <%= @user.last_sign_in_at %>
+<br>
+<% if @user.locations.any? %>
+  Locations:
+  <% @user.locations do |location| %>
+  <% end %>
+<% end %>
