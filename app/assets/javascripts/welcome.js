@@ -126,7 +126,7 @@ var closeMap = function() {
 function loadLocations() {
   console.log(gon.locations);
   gon.locations.forEach(function(location) {
-    var p = new newPoint(location.user.email, location.latitude, location.longitude, location.title, location.description, location.difficulty);
+    var p = new newPoint(location.user.username, location.latitude, location.longitude, location.title, location.description, location.difficulty);
   });
 }
 
