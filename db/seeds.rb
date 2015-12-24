@@ -6,13 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-user = User.new
-user.email = 'test@bombhills.com'
-user.password = "password123"
-user.password_confirmation = "password123"
-user.save
+User.create!(username: 'testuser', email: 'test@bombhills.com', password: 'password123', password_confirmation: 'password123')
 
 10.times do |i|
-  Location.create({title: "test title#{i}", user: User.first, description: "test description#{i}", latitude: Random.rand(27..49), longitude: Random.rand(-123..-76), difficulty: ['Starter', 'Intermediate', 'Expert'].sample})
+  User.first.locations.create({title: "test title#{i}", user: User.first, description: "test description#{i}", latitude: Random.rand(27..49), longitude: Random.rand(-123..-76), difficulty: ['Starter', 'Intermediate', 'Expert'].sample})
 end
