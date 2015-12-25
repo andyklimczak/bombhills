@@ -126,6 +126,13 @@
 	font-weight: 200;
 }
 
+.supporting p {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
 .supporting span.glyphicon {
 	font-size: 3em;
 }
@@ -163,7 +170,7 @@
 }
 
 .display .container div {
-	height: 600px;
+	height: 700px;
 	display: flex;
     justify-content:center;
     align-content:center;
@@ -175,8 +182,13 @@
 }
 
 .display p {
-	padding-left: 150px;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-left: 150px;
 }
+
 
 /* footer */
 
