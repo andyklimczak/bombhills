@@ -47,16 +47,15 @@
 
 
 <!-- jumbotron & desktop nav -->
-<div style="padding-top: 20px;" class="jumbotron">
+<div style="padding: 0px;" class="jumbotron" id="jumbotron">
   <ul class="nav nav-tabs" style="border-style: none;" id="nav">
-    <li id="homebutton" style="color: #FFF;"> Home </li>
-    <li style="color: #FFF;"> Help </li>
     <li role="presentation" class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: #FFF;">
         Profile <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
         <% if user_signed_in? %>
+          <li><%= link_to ' view profile ', show_user_path(current_user.username), :class => 'navbar-link' %></li>
           <li><%= link_to ' edit profile ', edit_user_registration_path, :class => 'navbar-link' %></li>
           <li><%= link_to " logout ", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
         <% else %>
@@ -68,27 +67,38 @@
     </li>
   </ul>
   <h1>bombhills</h1>
-  <p> ride together </p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button" style="color: #000;" id="mapbutton">start!</a></p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button" id="mapbutton">find</a></p>
 </div>
 
 <!--supporting div-->
 <div class="supporting">
   <div class="container">
     <div class="col-xs-4 col-sm-4 col-md-4">
-      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-      <h2> find </h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+      <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+      <h2 id="test"> find </h2>
+      <p> Using our mobile web app find great spots to cruise nearby  </p>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4">
       <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
       <h2> ride </h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      <p> Using the TRIPS functionality we offer, set meet-ups at specific locations across town</p>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4">
-      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
       <h2> share </h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+      <p> create your own personalized user profile and post pictures or videos of any recent adventures you've taken.  </p>
+    </div>
+  </div>
+</div>
+
+<!-- display -->
+<div class="display">
+  <div class="container">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <%= image_tag 'explore.png',:title => 'show_group'  %>
     </div>
   </div>
 </div>
@@ -98,12 +108,42 @@
   <p> show us your <a href=""> stuff </a> </p>
 </div>
 
+<!-- footer -->
+<div class="footer">
+  <div class="container">
+    <div class="col-sm-4 col-md-4">
+        <h1> social media </h1>
+        <ul>
+          <li>twitter </li>
+          <li>isntagram</li>
+          <li>facebook</li>
+        </ul>
+      </div>
+    <div class="col-sm-4 col-md-4">
+        <h1> contact us </h1>
+        <ul>
+          <li>e-mail</li>
+          <li>carrier pigeon</li>
+          <li>railway</li>
+        </ul>
+      </div>
+    <div class="col-sm-4 col-md-4">
+        <h1> other </h1>
+        <ul>
+          <li>something</li>
+          <li>something</li>
+          <li>something</li>
+        </ul>
+      </div>
+  </div>
+</div>
+
 
 <%# keep for reference %>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
+    Logged in as <strong><%= current_user.email %> | <%= current_user.username %></strong>.
     <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
     <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
   <% else %>

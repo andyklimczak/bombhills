@@ -10,14 +10,13 @@
 .nav {
     height: 50px;
     margin: 0;
-    padding: 0;
+    padding: 15px;
 }
 
 .nav li {
     line-height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
     font-size: 16px;
+    text-align: right;
 }
 
 .dropdown {
@@ -51,7 +50,7 @@
 
 #mobilenavdiv {
 	height: 350px;
-	background-color: #3E3837;
+	background-color: #2A83C6;
 	width: 50%;
 	margin-right: 30%;
 	padding-top: 5%;
@@ -88,7 +87,8 @@
 }
 
 .jumbotron h1 {
-	font-family: 'Sarina', cursive;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
 	padding: 60px 0px;
 	font-size: 120px;
 	color: #FFF;
@@ -96,6 +96,8 @@
 
 .jumbotron p {
 	color: #FFF;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
 }
 
 .jumbotron li {
@@ -124,6 +126,13 @@
 	font-weight: 200;
 }
 
+.supporting p {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
 .supporting span.glyphicon {
 	font-size: 3em;
 }
@@ -142,6 +151,8 @@
 	text-align: center;
 	font-size: 24px;
 	line-height: 350px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
 }
 
 .usercontent a {
@@ -149,11 +160,140 @@
 	text-decoration: none;
 }
 
+/* display */
+
+.display {
+	text-align: center;
+	color: #2A83C6;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
+.display .container div {
+	height: 700px;
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+}
+
+.display img {
+	width: 250px;
+}
+
+.display p {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-left: 150px;
+}
+
+
+/* footer */
+
+.footer {
+  background-color: #2572AC;
+  padding: 20px 0px 80px;
+  color: #FFF;
+  text-align: right;
+}
+
+.footer h1 {
+	font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    font-size: 45px;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer li {
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
 /*  Media Queries  */
 
 /* Custom, iPhone Retina */ 
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 332px) {
+	.mapmenudivon {
+	    display: inherit;
+	    margin-top: 310px;
+	    float: none;
+  	}
+
+  	#mapmenu { 
+   	 	position: relative;
+   	 	margin: 0; 
+    	padding: 0; 
+    	white-space:nowrap;
+    	list-style: none;
+  	}
+
+  	.mapmenuitem { 
+    	margin: 0; 
+    	padding: 0;
+   		float: left;
+    	border-style: thin solid #000;
+    	height: 60px;
+  		width: 25%;
+   	 	color: #FFF;
+    	text-align: center;
+   		line-height: 75px;
+  	}
+
+  	#tripsdiv {
+  		display: none;
+  	}
+
+  	#starbutton {
+    	display: none;
+ 	 }
+
+  	#helpbutton {
+    	display: none;
+  	}
+
+  	.nav {
+  		display: none;
+  	}
+
+  	#mobilenavdiv {
+  		height: 300px;
+  	}
+
+  	.container-fluid .jumbotron {
+		height: 300px;
+	}
+
+  	.jumbotron h1 {
+  		font-size: 35px;
+  		padding: 35px 0px;
+  	}
+
+  	#myMap {
+  		height: 370px;
+  	}
+
+  	.supporting .container div {
+		display: none;
+	}
+
+  	.usercontent {
+  		height: 300px;
+  	}
+
+  	.usercontent p {
+  		line-height: 300px;
+  	}
+}
+
+@media only screen and (min-width : 332px) and (max-width : 480px) {
 	.mapmenudivon {
 	    display: inherit;
 	    margin-top: 345px;
@@ -209,22 +349,8 @@
   	}
 
   	.supporting .container div {
-		height: 100px;
+		display: none;
 	}
-
-	.supporting h2 {
-		margin: 0;
-		font-size: 24px;
-	}
-
-  	.supporting p {
-  		display: none;
-  	}
-
-
-  	.supporting span.glyphicon {
-  		font-size: 2em;
-  	}
 
   	.usercontent {
   		height: 300px;
@@ -273,16 +399,8 @@
 	}
 
 	.supporting .container div {
-		height: 125px;
+		display: none;
 	}
-
-	.supporting h2 {
-		margin: 0;
-	}
-
-  	.supporting p {
-  		display: none;
-  	}
 
 	#tripsclosebutton {
 		margin-top: 340px;
@@ -300,9 +418,6 @@
 	   display: none;
 	}
 
-	.jumbotron h1 {
-		font-size: 100px;
-	}
 }	
 
 /* Medium Devices, Desktops */

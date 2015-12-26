@@ -19,6 +19,16 @@ var main = function() {
             left: '-100%'
         });
     });
+
+    var header = document.getElementById("jumbotron");
+    var speed = 5.0;
+
+    window.onscroll = function()
+    {
+       var yOffset = window.pageYOffset;
+       header.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
+    }
+
 };
 
 var newPoint = function(userEmail, lat, long, title, description, difficulty) {
@@ -116,7 +126,7 @@ var closeMap = function() {
 function loadLocations() {
   console.log(gon.locations);
   gon.locations.forEach(function(location) {
-    var p = new newPoint(location.user.email, location.latitude, location.longitude, location.title, location.description, location.difficulty);
+    var p = new newPoint(location.user.username, location.latitude, location.longitude, location.title, location.description, location.difficulty);
   });
 }
 

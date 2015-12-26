@@ -1,5 +1,6 @@
 /* profile layout */
 
+
 /* sign up */
 
 .signup {
@@ -20,7 +21,8 @@
 .signup h2 {
 	margin: 0;
 	padding-bottom: 10px;
-	font-family: 'Sarina', cursive;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
 }
 
 .signup a {
@@ -47,9 +49,34 @@
 .login h2 {
 	margin: 0;
 	padding-bottom: 10px;
-	font-family: 'Sarina', cursive;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
 }
 
 .login a {
 	color: #FFF;
+}
+
+/* profile */
+
+
+
+/* change password cancel account */
+
+.changepassword {
+	background: #3E3837;
+	color: #FFF;
+	padding: 30px 30px;
+}
+
+.cancelaccount {
+	height: 250px;
+	background: #2A83C6;
+	color: #FFF;
+	padding: 30px 30px;
+}
+
+.cancelaccount a {
+	color: #FFF;
+	text-decoration: none;
 }
