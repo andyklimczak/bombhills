@@ -45,7 +45,6 @@ var newPoint = function(userEmail, lat, long, title, description, difficulty) {
 function getMap() {
     Microsoft.Maps.loadModule('Microsoft.Maps.Themes.BingTheme', {
         callback: function() {
-          console.log('test');
             map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
                 credentials: 'Al9aBb7etkdbFTyp2LNeKvnuZsE7r1-gCm95LmXZru0rbfBTSNaQjRxd2WDatfii',
                 theme: new Microsoft.Maps.Themes.BingTheme(),enableSearchLogo: false, showMapTypeSelector:false,showDashboard: false
