@@ -104,6 +104,28 @@
 	cursor: pointer;
 }
 
+#mapbutton {
+    cursor: pointer;
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 24px;
+	padding: 15px 30px;
+    color: #FFF;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    background: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    text-decoration: none;
+}
+
+#mapbutton:hover {
+    background-color: rgba(62, 56, 55, .8);
+}
+
+
 /* supporting */
 
 .supporting {
