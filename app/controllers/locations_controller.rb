@@ -5,6 +5,8 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     @locations = Location.all
+    gon.jbuilder
+    gon.user_signed_in = user_signed_in?
   end
 
   # GET /locations/1

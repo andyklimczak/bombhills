@@ -1,33 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Locations</h1>
+<h1>Locations</h1>
+<div id='myMap' oncontextmenu="return false">
+</div>
+TODO: bug, reload the page
 
-<table>
-  <thead>
-    <tr>
-      <th>Difficulty</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Description</th>
-      <th>Username</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @locations.each do |location| %>
-      <tr>
-        <td><%= location.difficulty%></td>
-        <td><%= location.latitude %></td>
-        <td><%= location.longitude %></td>
-        <td><%= location.description %></td>
-        <td><%= location.user.email %></td>
-        <% if current_user == location.user %>
-          <td><%= link_to 'Show', location %></td>
-          <td><%= link_to 'Edit', edit_location_path(location) %></td>
-          <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render 'modals/new_location_form' %>
+<%= render 'modals/new_location_error' %>
