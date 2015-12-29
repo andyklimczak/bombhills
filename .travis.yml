@@ -1,7 +1,6 @@
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
-  - bin/rake db:migrate RAILS_ENV=test --trace
 rvm:
   - 2.2.3
 addons:
