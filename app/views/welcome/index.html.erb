@@ -34,14 +34,14 @@
                 <ul>
                   <% if user_signed_in? %>
                     
-                    <li><%= link_to ' find ', map_path, :class => 'btn btn-primary' %></li>
+                    <li><%= link_to ' find ', locations_path, :class => 'btn btn-primary' %></li>
                     <li><%= link_to ' view profile ', show_user_path(current_user.username), :class => 'btn btn-primary' %></li>
                       <li><%= link_to ' edit profile ', edit_user_registration_path, :class => 'btn btn-primary' %></li>
                     <li><%= link_to " logout ", destroy_user_session_path, method: :delete, :class => 'btn btn-primary'  %></li>
                     
                     <% else %>
                     
-                    <li><%= link_to ' find ', map_path, :class => 'btn btn-primary' %></li>
+                    <li><%= link_to ' find ', locations_path, :class => 'btn btn-primary' %></li>
                     <li><%= link_to " register ", new_user_registration_path, :class => 'btn btn-primary'  %></li>
                     <li><%= link_to " login ", new_user_session_path, :class => 'btn btn-primary'  %></li>
                     <% end %>
@@ -114,6 +114,3 @@
     <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
   <% end %>
-
-  <%= render 'modals/new_location_form' %>
-  <%= render 'modals/new_location_error' %>
