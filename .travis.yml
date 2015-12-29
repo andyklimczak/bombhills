@@ -1,0 +1,9 @@
+before_script:
+  - psql -c 'create database bomb-hills_test;' -U postgres
+rvm:
+  - 2.2.3
+services:
+  - postgresql
+script: 
+  - bin/rake db:migrate RAILS_ENV=test
+  - bin/rspec spec
