@@ -8,4 +8,5 @@ addons:
 services:
   - postgresql
 script: 
+  - bin/rake db:migrate RAILS_ENV=test
   - bin/rspec spec
