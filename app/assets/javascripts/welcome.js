@@ -20,7 +20,7 @@ var main = function() {
         });
     });
 
-    var header = document.getElementById("jumbotron");
+    var header = document.getElementById("header");
     var speed = 5.0;
 
     window.onscroll = function()

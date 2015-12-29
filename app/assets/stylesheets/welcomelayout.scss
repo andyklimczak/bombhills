@@ -1,198 +1,87 @@
+/* document */
+
+body {
+  padding-right: 0px !important
+}
+
+.container-fluid {
+  padding: 0;
+}
 
 .row {
 	margin: 0;
 	padding: 0;
 }
 
+/* header */
 
-/* nav */
-
-.nav {
-    height: 50px;
-    margin: 0;
-    padding: 15px;
-}
-
-.nav li {
-    line-height: 50px;
-    font-size: 16px;
-    text-align: right;
-}
-
-.dropdown {
-    height: 50px;
-    margin-top: 3px;
-}
-
-.dropdown-menu li {
-    text-align: center;
-    color: #3E3837;
-}
-
-/* mobile nav */
-
-#mobilenavbutton {
-	height: 70px;
-	width: 85px;
-	background-color: #2A83C6;
-	display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row; /* works with row or column */
-    flex-direction: row;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    cursor: pointer;
+.header {
+    background: url('overview.jpg');
+    background-size: cover;
     color: #FFF;
-
 }
 
-#mobilenavdiv {
-	height: 350px;
-	background-color: #2A83C6;
-	width: 50%;
-	margin-right: 30%;
-	padding-top: 5%;
-	position: absolute;
-	opacity: .9;
-	left: -100%;
+.header .container-fluid div {
+	height: 550px;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+    padding: 0px;
 }
 
-#mobilenavdiv ul {
-	list-style-type: none;
-}
-
-#mobilenavdiv ul li {
-	font-size: 18px;
-	line-height: 50px;
-	cursor: pointer;
-	color: #FFF;
-}
-
-#mobilenavdiv a {
-	text-decoration: none;
-	color: #FFF;
-}
-
-/* jumbotron */
-
-.container-fluid .jumbotron {
-	height: 500px;
-	text-align: center;
-	margin: 0;
-	background: url('test.jpg');
-	background-size: cover;
-  	border-radius: 0;
-}
-
-.jumbotron h1 {
-	font-family: 'Source Sans Pro', sans-serif;
+.header h1 {
+    font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
-	padding: 60px 0px;
-	font-size: 120px;
-	color: #FFF;
+    font-size: 60px;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
 
-.jumbotron p {
-	color: #FFF;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
+.header ul {
+    list-style: none;
+    padding: 0;
 }
 
-.jumbotron li {
-	cursor: pointer;
-}
-
-#mapbutton {
+.header a {
     cursor: pointer;
 	border: none;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
 	font-size: 24px;
 	padding: 15px 30px;
-    color: #FFF;
     letter-spacing: 1px;
     border-radius: 8px;
     background: none;
     border-style: solid;
     border-width: 2px;
-    border-color: white;
+    border-color: #FFF;
     text-decoration: none;
+    margin: 10px 0px;
+    COLOR: #FFF;
 }
 
-#mapbutton:hover {
-    background-color: rgba(62, 56, 55, .8);
+#mainnav {
+    background: rgba(42,131,198, .8);
 }
 
-
-/* supporting */
-
-.supporting {
-	text-align: center;
-	color: #FFF;
-	background: #2A83C6;
-	font-family: 'Lora', serif;
-}
-
-.supporting .container div {
-	height: 300px;
-	display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-}
-
-.supporting h2 {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-}
-
-.supporting p {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-    font-size: 16px;
-    letter-spacing: 2px;
-}
-
-.supporting span.glyphicon {
-	font-size: 3em;
-}
-
-/* user content */
-
-.usercontent {
-	height: 350px;
-	background: url('users.jfif');
-	background-size: cover;
-	background-attachment: fixed;
-}
-
-.usercontent p {
-	color: #FFF;
-	text-align: center;
-	font-size: 24px;
-	line-height: 350px;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-}
-
-.usercontent a {
-	color: #2A83C6;
-	text-decoration: none;
+#headerpicture {
+    margin: 0;
+    padding: 0;
 }
 
 /* display */
 
 .display {
 	text-align: center;
-	color: #2A83C6;
+	color: #243846;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
 }
 
 .display .container div {
-	height: 700px;
+	height: 600px;
 	display: flex;
     justify-content:center;
     align-content:center;
@@ -205,17 +94,39 @@
 
 .display p {
     font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 2px;
-    padding-left: 150px;
+	font-weight: 200;
+    font-size: 32px;
+    padding-left: 25%;
+    line-height: 30px;
 }
 
+/* user content */
+
+.usercontent {
+	height: 350px;
+	background: url('testing.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.usercontent p {
+	color: #FFF;
+	text-align: center;
+	font-size: 54px;
+	line-height: 350px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
+.usercontent a {
+	color: #2A83C6;
+	text-decoration: none;
+}
 
 /* footer */
 
 .footer {
-  background-color: #2572AC;
+  background-color: #1F6193;
   padding: 20px 0px 80px;
   color: #FFF;
   text-align: right;
@@ -240,220 +151,50 @@
 
 /*  Media Queries  */
 
-/* Custom, iPhone Retina */ 
+/* Custom */ 
 
-@media only screen and (max-width : 332px) {
-	.mapmenudivon {
-	    display: inherit;
-	    margin-top: 310px;
-	    float: none;
-  	}
-
-  	#mapmenu { 
-   	 	position: relative;
-   	 	margin: 0; 
-    	padding: 0; 
-    	white-space:nowrap;
-    	list-style: none;
-  	}
-
-  	.mapmenuitem { 
-    	margin: 0; 
-    	padding: 0;
-   		float: left;
-    	border-style: thin solid #000;
-    	height: 60px;
-  		width: 25%;
-   	 	color: #FFF;
-    	text-align: center;
-   		line-height: 75px;
-  	}
-
-  	#tripsdiv {
-  		display: none;
-  	}
-
-  	#starbutton {
-    	display: none;
- 	 }
-
-  	#helpbutton {
-    	display: none;
-  	}
-
-  	.nav {
-  		display: none;
-  	}
-
-  	#mobilenavdiv {
-  		height: 300px;
-  	}
-
-  	.container-fluid .jumbotron {
-		height: 300px;
-	}
-
-  	.jumbotron h1 {
-  		font-size: 35px;
-  		padding: 35px 0px;
-  	}
-
-  	#myMap {
-  		height: 370px;
-  	}
-
-  	.supporting .container div {
-		display: none;
-	}
-
-  	.usercontent {
-  		height: 300px;
-  	}
-
-  	.usercontent p {
-  		line-height: 300px;
-  	}
-}
-
-@media only screen and (min-width : 332px) and (max-width : 480px) {
-	.mapmenudivon {
-	    display: inherit;
-	    margin-top: 345px;
-	    float: none;
-  	}
-
-  	#mapmenu { 
-   	 	position: relative;
-   	 	margin: 0; 
-    	padding: 0; 
-    	white-space:nowrap;
-    	list-style: none;
-  	}
-
-  	.mapmenuitem { 
-    	margin: 0; 
-    	padding: 0;
-   		float: left;
-    	border-style: thin solid #000;
-    	height: 75px;
-  		width: 25%;
-   	 	color: #FFF;
-    	text-align: center;
-   		line-height: 75px;
-  	}
-
-  	#tripsdiv {
-  		display: none;
-  	}
-
-  	#starbutton {
-    	display: none;
- 	 }
-
-  	#helpbutton {
-    	display: none;
-  	}
-
-  	.nav {
-  		display: none;
-  	}
-
-  	.container-fluid .jumbotron {
-		height: 350px;
-	}
-
-  	.jumbotron h1 {
-  		font-size: 50px;
-  	}
-
-  	#myMap {
-  		height: 420px;
-  	}
-
-  	.supporting .container div {
-		display: none;
-	}
-
-  	.usercontent {
-  		height: 300px;
-  	}
-
-  	.usercontent p {
-  		line-height: 300px;
-  	}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 480px) {
+    #mainnav {
+        height: 450px;
+        background: rgba(42,131,198, 1);
+    }
+    #headerpicture {
+        display: none;
+    }
+    .display {
+        display: none;
+    }
 }
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) and (max-width : 768px) {
-	.nav {
-	    display: inline-block;
-	    float: none;
-	}
-
-	.container-fluid .jumbotron {
-		height: 400px;
-	}
-
-	.jumbotron h1 {
-		font-size: 80px;
-		padding: 40px;
-	}
-
-
-	#myMap {
-		height: 400px;
-	}
-
-	.mapmenuitem { 
-		height: 80px;
-	}
-
-	#mobilenavbutton {
-	   display: none;
-	}
-
-	 #mobilenavdiv {
-	   display: none;
-	}
-
-	#tripsdiv {
-		height: 400px;
-	}
-
-	.supporting .container div {
-		display: none;
-	}
-
-	#tripsclosebutton {
-		margin-top: 340px;
-	}
-
+    #mainnav {
+        height: 450px;
+        background: rgba(42,131,198, 1);
+    }
+    #headerpicture {
+        display: none;
+    }
+    .display {
+        display: none;
+    }
 }	
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-	#mobilenavbutton {
-	   display: none;
-	}
-
-	 #mobilenavdiv {
-	   display: none;
-	}
 
 }	
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 
-	.jumbotron h1 {
-		font-size: 130px;
-	}
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-	.container-fluid .jumbotron {
-		background-size: 100% 170%;
+	.header {
+		background-size: 100% 130%;
 	}
 
 }
