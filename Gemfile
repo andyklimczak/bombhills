@@ -44,6 +44,7 @@ group :development, :test do
   gem 'byebug'
   # Testing framework
   gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda'
 end
 
 group :development do
@@ -59,5 +60,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
 
+group :test do
+  gem 'shoulda-matchers', '~> 3.0'
 end

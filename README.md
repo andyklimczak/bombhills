@@ -2,6 +2,11 @@
 
 ## README
 
+### Running tests
+
+* run _bundle exec rspec spec_ (can be shortened to  _rpsec_)
+* to run only a certain test, run *bundle exec rspec spec/models/user_spec.rb*
+
 ### Guard setup
 
 #### In terminal 1

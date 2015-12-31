@@ -11,4 +11,13 @@ RSpec.describe User, :type => :model do
     user2 = build(:user, username: 'email@test.org')
     expect(user2).not_to be_valid
   end
+
+  it 'should test for valid email' do
+    user = build(:user, email: '123asdf')
+    expect(user).not_to be_valid
+  end
+
+  it { should validate_presence_of :username }
+  it { should have_many :locations }
+  it { should validate_uniqueness_of(:username).case_insensitive }
 end
