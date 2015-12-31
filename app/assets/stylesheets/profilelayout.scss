@@ -1,5 +1,84 @@
-/* profile layout */
+/* profile page layout */
 
+.profileheader {
+    background: #2A83C6;
+    text-align: center;
+    color: #FFF;
+}
+
+.profileimg {
+    border-radius: 50%;
+    height: 30%;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(255,255,255, 1);
+}
+
+.profileheader h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+    margin: 10px 0px;
+}
+
+.profileheader h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+    margin: 0;
+    padding: 20px 0px;
+}
+
+.profileheader p {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+    padding-bottom: 30px;
+    margin: 10px 0px;
+}
+
+/* supporting */
+
+.supporting {
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+    color: #6E6B62;
+    padding: 25px 0px;
+}
+
+.supporting ul {
+    text-align: center;
+    padding: 0px;
+}
+
+.supporting li {
+    display: inline;
+    padding: 0px 30px;
+}
+
+.glyphicon {
+    cursor: pointer;
+    color: #2A83C6;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2A83C6;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.glyphicon:hover {
+    cursor: pointer;
+    color: #FFF;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2A83C6;
+    border-radius: 50%;
+    padding: 20px;
+    background: #2A83C6;
+}
 
 /* sign up */
 
@@ -79,4 +158,43 @@
 .cancelaccount a {
 	color: #FFF;
 	text-decoration: none;
+}
+
+/*  Media Queries  */
+
+/* Custom */ 
+
+/* Custom, iPhone Retina */
+
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 768px) {
+    .profileimg {
+        height: 45%;
+        width: 45%;
+    }
+    
+    .supporting li {
+        display: inline;
+        padding: 0px 20px;
+    }
+
+}	
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}	
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .profileimg {
+        height: 20%;
+        width: 20%;
+    }
 }
