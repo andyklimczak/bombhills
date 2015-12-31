@@ -8,8 +8,8 @@
                   <% if user_signed_in? %>
                     
                     <li><%= link_to ' find ', locations_path, :class => 'btn btn-primary' %></li>
-                    <li><%= link_to ' view profile ', show_user_path(current_user.username), :class => 'btn btn-primary' %></li>
-                      <li><%= link_to ' edit profile ', edit_user_registration_path, :class => 'btn btn-primary' %></li>
+                    <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'btn btn-primary' %></li>
+                    <li><%= link_to ' settings ', edit_user_registration_path, :class => 'btn btn-primary' %></li>
                     <li><%= link_to " logout ", destroy_user_session_path, method: :delete, :class => 'btn btn-primary'  %></li>
                     
                     <% else %>
