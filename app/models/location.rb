@@ -2,7 +2,7 @@ class Location < ActiveRecord::Base
   belongs_to :user
   validates :latitude, :longitude, :title, :difficulty, presence: true
 	validates :difficulty,
-			:inclusion  => { :in => ['Starter', 'Intermediate', 'Expert'],
+			:inclusion  => { :in => ['Beginner', 'Intermediate', 'Expert'],
 			:message    => "%{value} is not a valid difficulty" }
 
   def gon_object

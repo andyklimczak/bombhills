@@ -6,7 +6,7 @@ RSpec.describe Location, :type => :model do
     expect(loc.save).to eq(true)
   end
 
-  it { should allow_values('Starter', 'Intermediate', 'Expert').for(:difficulty) }
+  it { should allow_values('Beginner', 'Intermediate', 'Expert').for(:difficulty) }
   it { should_not allow_values('Invalid', 'Hard', 'test').for(:difficulty) }
   it { should belong_to :user }
   it { should validate_presence_of :title }

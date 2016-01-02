@@ -4,7 +4,7 @@ FactoryGirl.define do
     description { "#{title} description" }
     latitude Random.rand 27..49
     longitude Random.rand -123..-76
-    difficulty ['Starter', 'Intermediate', 'Expert'].sample
+    difficulty ['Beginner', 'Intermediate', 'Expert'].sample
     user
   end
 end
