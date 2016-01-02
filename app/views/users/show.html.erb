@@ -1,6 +1,18 @@
+<script type="text/javascript">
+   var header = document.getElementById("header");
+    var speed = 1.0;
+
+    window.onscroll = function() {
+       var yOffset = window.pageYOffset;
+       header.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
+    }
+};
+
+</script>
+
 <!-- header --> 
 
-<div class="profileheader">
+<div class="profileheader" id="header">
     <a href="localhost:3000"> Home </a>
     <h2> Hi! </h2>
     <%= image_tag 'me.jpg',:class => 'profileimg'  %>
@@ -11,7 +23,7 @@
     <ul>
         <li><span class="glyphicon glyphicon-send" aria-hidden="true" style="font-size: 3em;"></span></li>
         <li><span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 3em;"></span></li>
-        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true" style="font-size: 3em;"></span></li>
+        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true" style="font-size: 3em;" data-toggle="modal" data-target="#myModal"></span></li>
     </ul>
 </div>
 <div class="images">
@@ -19,7 +31,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-md-4">
-                <%= image_tag 'one.jpg',:class => 'img-responsive'  %>
+                <div class="imgwrapper">
+                    <%= image_tag 'one.jpg',:class => 'img-responsive'  %>
+                </div>
             </div>
             <div class="col-sm-4 col-md-4">
                 <%= image_tag 'two.jpg',:class => 'img-responsive'  %>
@@ -52,6 +66,24 @@
             </div> 
         </div>
     </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Alec's Spots</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
