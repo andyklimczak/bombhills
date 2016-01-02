@@ -46,7 +46,7 @@
     align-content:center;
     flex-direction:column;
     color: #6E6B62;
-    padding: 25px 0px;
+    padding: 15px 0px;
 }
 
 .supporting ul {
@@ -67,6 +67,21 @@
     border-color: #2A83C6;
     border-radius: 50%;
     padding: 20px;
+}
+
+/* images */
+
+.images h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.images .img-responsive {
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .glyphicon:hover {
@@ -167,16 +182,25 @@
 
 /* Custom, iPhone Retina */
 
+@media only screen and (max-width : 480px) {
+    .profileimg {
+        height: 45%;
+        width: 45%;
+    }
+    .supporting li {
+        padding: 0px 8px;
+    }
+}
+
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 768px) {
+@media only screen and (min-width : 480px) and (max-width : 768px) {
     .profileimg {
         height: 45%;
         width: 45%;
     }
     
     .supporting li {
-        display: inline;
         padding: 0px 20px;
     }
 

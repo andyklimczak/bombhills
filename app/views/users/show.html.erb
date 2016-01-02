@@ -13,12 +13,48 @@
         <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true" style="font-size: 3em;"></span></li>
     </ul>
 </div>
+<div class="images">
+    <h1> Photos </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <%= image_tag 'one.jpg',:class => 'img-responsive'  %>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <%= image_tag 'two.jpg',:class => 'img-responsive'  %>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <%= image_tag 'three.jpg',:class => 'img-responsive'  %>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <%= image_tag 'four.jpg',:class => 'img-responsive'  %>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <%= image_tag 'five.jpg',:class => 'img-responsive'  %>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <%= image_tag 'six.jpg',:class => 'img-responsive'  %>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <%= image_tag 'seven.jpg',:class => 'img-responsive'  %>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <%= image_tag 'person.jpg',:class => 'img-responsive'  %>
+            </div>
+            <div class="col-sm-4 col-md-4">
+            </div> 
+        </div>
+    </div>
+</div>
 
-<!--
 
-<span class="glyphicon glyphicon-send" aria-hidden="true" style="text-align:right;font-size: 3em;color: #6E6B62;"></span>
-<span class="glyphicon glyphicon-user" aria-hidden="true" style="text-align:center;font-size: 3em;color: #6E6B62;"></span>
-<span class="glyphicon glyphicon-map-marker" aria-hidden="true" style="text-align: left;font-size: 3em;color: #6E6B62;"></span> -->
+<!-- keeping for reference 
 
 Username: <%= @user.username %>
 <br>
@@ -70,3 +106,5 @@ Last sign in at: <%= @user.last_sign_in_at %>
     </tbody>
   </table>
 <% end %>
+
+--!>
