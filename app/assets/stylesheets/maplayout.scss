@@ -1,0 +1,53 @@
+/* map */
+
+.dashboard {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    z-index: 1;
+    background-color: #313443;
+    box-shadow: 5px 0 5px -5px #333;
+}
+
+.userinfo {
+    height: 125px;
+    widtH: 100%;
+    background: #2A83C6;
+}
+
+.navtools ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.navtools li {
+    height: 75px;
+    background: #41434C;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+    line-height: 75px;
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+}
+
+.navtools li:hover {
+    background: #292B30;
+}
+
+.navtools li p {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 9px;
+    padding-left: 6px;
+}
+
+#addglyphicon {
+    vertical-align: middle;
+    padding-right: 6px;
+}
+
+#myMap {
+
+}
