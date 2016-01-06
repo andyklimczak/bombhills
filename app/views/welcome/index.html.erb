@@ -1,31 +1,39 @@
 
-<!-- header --> 
-<div class="header" id="header"> 
-    <div class="container-fluid">
-            <div class="col-sm-5 col-md-5" id="mainnav">
-                <h1> Bombhills </h1>
-                <ul>
-                  <% if user_signed_in? %>
+<div class="header" id="header">
+    <div class="navigation">
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Profile <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                
+                <% if user_signed_in? %>  
+                
+                <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'none' %></li>
+                <li><%= link_to ' settings ', edit_user_registration_path, :class => 'none' %></li>
+                <li><%= link_to " logout ", destroy_user_session_path, method: :delete, :class => 'none'  %></li>
+                
+                <% else %>
                     
-                    <li><%= link_to ' find ', locations_path, :class => 'btn btn-primary' %></li>
-                    <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'btn btn-primary' %></li>
-                    <li><%= link_to ' settings ', edit_user_registration_path, :class => 'btn btn-primary' %></li>
-                    <li><%= link_to " logout ", destroy_user_session_path, method: :delete, :class => 'btn btn-primary'  %></li>
-                    
-                    <% else %>
-                    
-                    <li><%= link_to ' find ', locations_path, :class => 'btn btn-primary' %></li>
-                    <li><%= link_to " register ", new_user_registration_path, :class => 'btn btn-primary'  %></li>
-                    <li><%= link_to " login ", new_user_session_path, :class => 'btn btn-primary'  %></li>
-                    <% end %>
-                </ul>
-            </div>
-            <div class="col-md-7" id="headerpicture">
-            </div>
-        </div>
+                <li><%= link_to " register ", new_user_registration_path, :class => 'none'  %></li>
+                <li><%= link_to " login ", new_user_session_path, :class => 'none'  %></li>
+                <% end %>
+            
+            </ul>
+          </li>
+          <li role="presentation"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1> bombhills </h1>
+    </div>
+    <div class="find">
+        <ul>
+            <li><%= link_to ' find ', locations_path, :class => 'btn btn-primary' %></li>
+        </ul>
     </div>
 </div>
-
 
 <!-- display -->
 <div class="display">
