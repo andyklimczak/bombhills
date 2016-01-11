@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   attr_accessor :login
   has_many :locations
+  has_many :posts
 	validates :username,
 		:presence => true,
 		:uniqueness => {

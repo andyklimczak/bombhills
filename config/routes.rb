@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  resources :posts
+  get 'user-content' => 'posts#index', via: :get, as: 'user_content'
+
   devise_for :users
   get 'users/:username' => 'users#show', via: :get, as: 'show_user'
+
   resources :locations
-  root 'welcome#index'
+
   get 'welcome/index'
+  root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
