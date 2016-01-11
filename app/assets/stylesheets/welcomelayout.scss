@@ -19,7 +19,7 @@ body {
 .header {
     height: 550px;
     background: #333333;
-    background: url('testing.jpg');
+    background: url('hilltwo.jpg');
     background-size: cover;
 }
 
@@ -162,34 +162,26 @@ body {
 
 .usercontent {
 	height: 350px;
-	background: url('forest.jpg');
+	background: url('usercontent.jpg');
 	background-size: cover;
 	background-attachment: fixed;
+    text-align: center;
 }
 
 .usercontent p {
+    line-height: 350px;
 	color: #FFF;
-	text-align: center;
 	font-size: 54px;
-	line-height: 350px;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
+    margin: 0px;
 }
 
-.usercontent a {
-    color: #FFF;
-	text-decoration: none;
-    padding: 0px 10px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #FFF;
-    border-radius: 8px;
-}
 
 /* footer */
 
 .footer {
-  background-color: #333333;
+  background-color: #2A83C6;
   padding: 20px 0px 80px;
   color: #FFF;
   text-align: right;
@@ -243,7 +235,7 @@ body {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 	.header {
-		background-size: 100% 130%;
+		background-size: 110% 130%;
 	}
 
 }
