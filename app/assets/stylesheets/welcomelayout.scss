@@ -122,8 +122,9 @@ body {
 	border: 1px solid #FFF;
 	border-radius: 4px;
     border-width: 2px;
-	padding: 10px 20px;
+	padding: 8px 18px;
     margin: 0px 2px;
+    margin-bottom: 3px;
     text-decoration: none;
 }
 
@@ -215,12 +216,65 @@ body {
   font-weight: 200;
 }
 
+
+
+
+
+
+
+
+
+
+
 /*  Media Queries  */
 
 /* Custom */ 
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 565px) {
+@media only screen and (max-width: 360px) {
+    #header {
+        height: 325px;
+    }
+    .navigation ul {
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+    #contact {
+        display: none;
+    }
+    .content {
+        height: 225px;
+    }
+    .content h1 {
+        font-size: 60px;
+        margin-top: 25px;
+    }
+    .find {
+        display: none;
+    }
+    .display .container div {
+        height: 400px;
+    }
+    .display p {
+        font-size: 16px;
+    }
+    #explorecol {
+        display: none;
+    }
+    .usercontent {
+        height: 250px;
+    }
+    .usercontent a {
+        line-height: 250px;
+        padding: 10px 20px;
+        font-size: 32px;
+    }
+    .usercontent p {
+        line-height: 250px;
+        font-size: 42px;
+    }
+}
+    
+@media only screen and (min-width: 360px) and (max-width: 472px) {
     #header {
         height: 350px;
     }
@@ -259,6 +313,55 @@ body {
     .usercontent a {
         line-height: 250px;
         padding: 10px 20px;
+        font-size: 32px;
+    }
+    .usercontent p {
+        line-height: 250px;
+        font-size: 42px;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 472px) and (max-width : 565px) {
+    #header {
+        height: 350px;
+    }
+    .navigation ul {
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+    #contact {
+        display: none;
+    }
+    .content {
+        height: 225px;
+    }
+    .content h1 {
+        font-size: 100px;
+        margin-top: 25px;
+    }
+    .header {
+        height: 440px;
+    }
+    .find {
+        display: none;
+    }
+    .display .container div {
+        height: 300px;
+    }
+    .display p {
+        font-size: 16px;
+    }
+    #explorecol {
+        display: none;
+    }
+    .usercontent {
+        height: 250px;
+    }
+    .usercontent a {
+        line-height: 250px;
+        padding: 10px 20px;
+        font-size: 32px;
     }
     .usercontent p {
         line-height: 250px;
