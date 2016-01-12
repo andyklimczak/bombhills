@@ -121,7 +121,8 @@ body {
     background: transparent none repeat scroll 0% 0%;
 	border: 1px solid #FFF;
 	border-radius: 4px;
-	padding: 8px 20px;
+    border-width: 2px;
+	padding: 10px 20px;
     margin: 0px 2px;
     text-decoration: none;
 }
@@ -151,9 +152,9 @@ body {
 }
 
 .display p {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-    color: #000;
+    font-family: 'Lato', sans-serif;
+	font-weight: 300;
+    color: #333333;
     font-size: 26px;
     line-height: 28px;
 }
@@ -168,13 +169,23 @@ body {
     text-align: center;
 }
 
-.usercontent p {
+.usercontent a {
     line-height: 350px;
 	color: #FFF;
 	font-size: 54px;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
     margin: 0px;
+    text-decoration: none;
+    padding: 20px 40px;
+    border: solid #FFF;
+    border-radius: 4px;
+    border-width: 2px;
+    
+}
+
+.usercontent a:hover {
+    background: none;
 }
 
 
@@ -209,33 +220,100 @@ body {
 /* Custom */ 
 
 /* Custom, iPhone Retina */
-
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 565px) {
+    #header {
+        height: 400px;
+    }
+    .navigation ul {
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .content {
+        height: 250px;
+    }
+    .content h1 {
+        font-size: 80px;
+    }
+    .header {
+        height: 440px;
+    }
+    .find {
+        display: none;
+    }
+    .display .container div {
+        height: 300px;
+    }
+    .display p {
+        font-size: 16px;
+    }
+    #explorecol {
+        display: none;
+    }
     .usercontent {
         height: 250px;
+    }
+    .usercontent a {
+        line-height: 250px;
     }
     .usercontent p {
         line-height: 250px;
         font-size: 42px;
     }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 565px ) and (max-width : 768px) {
+    .header {
+        height: 440px;
+    }
+    .navigation ul {
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+    .content h1 {
+        font-size: 125px;
+    }
+    .find {
+        display: none;
+    }
+    .display .container div {
+        height: 300px;
+    }
+    .display p {
+        font-size: 16px;
+    }
+    #explorecol {
+        display: none;
+    }
+    .usercontent {
+        height: 250px;
+    }
+    .usercontent a {
+        line-height: 250px;
+    }
+    .usercontent p {
+        line-height: 250px;
+        font-size: 42px;
+    }
+    
 }	
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
+@media only screen and (min-width : 768px) and (max-width: 992px) {
+    .display p {
+        font-size: 20px;
+    }
 }	
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
+@media only screen and (min-width : 992px) and (max-width: 1200px) {
+    display p {
+        font-size: 24px;
+    }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-	.header {
-		background-size: 110% 130%;
-	}
+
 
 }
