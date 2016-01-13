@@ -137,7 +137,7 @@ body {
 
 .display {
 	text-align: center;
-    padding: 10px;
+    padding: 15px;
 }
 
 .display .container div {
@@ -231,6 +231,7 @@ body {
 @media only screen and (max-width: 370px) {
     .nav-pills {
         float: left;
+        padding: 15px 10px;
     }
     #header {
         height: 325px;
@@ -274,6 +275,7 @@ body {
 @media only screen and (min-width: 370px) and (max-width: 472px) {
     .nav-pills {
         float: left;
+        padding: 15px 10px;
     }
     #header {
         height: 350px;
@@ -315,12 +317,16 @@ body {
         line-height: 250px;
         font-size: 42px;
     }
+    #contactfooter {
+        display: none;
+    }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 472px) and (max-width : 565px) {
     .nav-pills {
         float: left;
+        padding: 15px 10px;
     }
     #header {
         height: 350px;
@@ -362,6 +368,9 @@ body {
         line-height: 250px;
         font-size: 42px;
     }
+    #contactfooter {
+        display: none;
+    }
 }
 
 /* Extra Small Devices, Phones */ 
@@ -397,6 +406,10 @@ body {
     .usercontent p {
         line-height: 250px;
         font-size: 42px;
+    }
+    
+    #contactfooter {
+        display: none;
     }
     
 }	
