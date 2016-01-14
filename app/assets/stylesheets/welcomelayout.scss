@@ -135,7 +135,7 @@ body {
 /* display */
 
 .display {
-	text-align: center;
+	text-align: right;
     padding: 15px;
 }
 
@@ -233,14 +233,10 @@ body {
 
 @media only screen and (max-width: 370px) {
     .nav-pills {
-        float: left;
         padding: 15px 10px;
     }
     #header {
         height: 325px;
-    }
-    #contact {
-        display: none;
     }
     .content {
         height: 225px;
@@ -251,6 +247,9 @@ body {
     }
     .find {
         display: none;
+    }
+    .display {
+        text-align: left;
     }
     .display .container div {
         height: 350px;
@@ -280,14 +279,10 @@ body {
     
 @media only screen and (min-width: 370px) and (max-width: 472px) {
     .nav-pills {
-        float: left;
         padding: 15px 10px;
     }
     #header {
         height: 350px;
-    }
-    #contact {
-        display: none;
     }
     .content {
         height: 225px;
@@ -301,6 +296,9 @@ body {
     }
     .find {
         display: none;
+    }
+    .display {
+        text-align: left;
     }
     .display .container div {
         height: 300px;
@@ -331,14 +329,10 @@ body {
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 472px) and (max-width : 565px) {
     .nav-pills {
-        float: left;
         padding: 15px 10px;
     }
     #header {
         height: 350px;
-    }
-    #contact {
-        display: none;
     }
     .content {
         height: 225px;
