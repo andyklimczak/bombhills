@@ -1,4 +1,23 @@
+<!-- mobile header -->
+<div class="mobileheader">
+    <h1> BOMB <br> HILLS </h1>
+    <ul>
+        <% if user_signed_in? %>  
+        
+        <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'none' %></li>
+        <li><%= link_to ' settings ', edit_user_registration_path, :class => 'none' %></li>
+        <li><%= link_to " logout ", destroy_user_session_path, method: :delete, :class => 'none'  %></li>
+        
+        <% else %>
+        
+        <li><%= link_to " register ", new_user_registration_path, :class => 'none'  %></li>
+        <li><%= link_to " login ", new_user_session_path, :class => 'none'  %></li>
+        
+        <% end %>
+    </ul>
+</div>
 
+<!-- header -->
 <div class="header" id="header">
     <div class="navigation">
         <ul class="nav nav-pills" style="margin:0px;">
@@ -18,6 +37,7 @@
                     
                 <li><%= link_to " register ", new_user_registration_path, :class => 'none'  %></li>
                 <li><%= link_to " login ", new_user_session_path, :class => 'none'  %></li>
+                
                 <% end %>
             
             </ul>
@@ -37,6 +57,11 @@
           <button type="submit" class="btn btn-default" id="searchbutton">Search</button>
         </form>
     </div>
+</div>
+
+<!-- mobile about -->
+<div class="about">
+    <p>About Us</p>
 </div>
 
 <!-- display -->

@@ -5,14 +5,14 @@
     width: 250px;
     height: 100%;
     z-index: 1;
-    background-color: #41434C;
+    background-color: #EEE;
     box-shadow: 5px 0 5px -5px #333;
 }
 
 .userinfo {
     height: 125px;
     widtH: 100%;
-    background: #2A83C6;
+    background: #EEE;
 }
 
 .navtools ul {
@@ -22,17 +22,18 @@
 
 .navtools li {
     height: 75px;
-    background: #313443;
     cursor: pointer;
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
     line-height: 75px;
-    color: #FFF;
+    color: #292B30;
     font-size: 16px;
-    text-align: center;
+    text-align: left;
+    padding-left: 35px;
 }
 
 .navtools li:hover {
+    color: #FFF;
     background: #292B30;
 }
 
@@ -41,6 +42,21 @@
     vertical-align: middle;
     margin-top: 9px;
     padding-left: 6px;
+    
+}
+
+.input-group {
+    padding-top: 20px;
+    padding-right: 40px;
+}
+
+.form-control {
+    height: 37.2px;
+}
+
+#searchli {
+    padding-left: 23px;
+    background: #2A83C6;
 }
 
 #addglyphicon {
