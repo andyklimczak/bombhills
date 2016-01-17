@@ -1,3 +1,4 @@
+
 var newPoint = function(userEmail, lat, long, title, description, difficulty) {
     pointName = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(lat,long), null);
     map.entities.push(pointName);
@@ -53,9 +54,16 @@ function getMap() {
 
 var setLocation = function() {
     $('#findmebutton').click(function() {
-        var geoLocationProvider = new Microsoft.Maps.GeoLocationProvider(
-            map);
+        var geoLocationProvider = new Microsoft.Maps.GeoLocationProvider(map);
         geoLocationProvider.getCurrentPosition();
+    });
+}
+
+var fulLScreen = function() {
+    $('#fullscreenbutton').click(function() {
+        $('.dashboard').animate({
+            'left': "-100%" 
+        });
     });
 }
 
@@ -68,3 +76,5 @@ function loadLocations() {
 }
 
 $(document).ready(getMap);
+$(document).ready(setLocation);
+$(document).ready(fulLScreen);

@@ -4,6 +4,7 @@
     position: absolute;
     width: 250px;
     height: 100%;
+    left: 0;
     z-index: 1;
     background-color: #EEE;
     box-shadow: 5px 0 5px -5px #333;
@@ -59,7 +60,7 @@
     background: #2A83C6;
 }
 
-#addglyphicon {
+span {
     vertical-align: middle;
     padding-right: 6px;
 }

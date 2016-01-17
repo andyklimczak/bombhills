@@ -69,7 +69,7 @@ body {
 .header {
     height: 550px;
     background: #333333;
-    background: url('longboarder.jpg');
+    background: url('hilltwo.jpg');
     background-size: cover;
 }
 
@@ -116,19 +116,23 @@ body {
     padding: 0px;
     margin-top: 50px;
     margin-bottom: 20px;
-    color: rgba(0,0,0, .8);
+    color: #FFF;
 }
 
 .content a {
     color: #FFF;
-    background: #2A83C6;
+    background: none;
+    border: solid #FFF;
+    border-width: 2px;
+    border-radius: 4px;
     font-size: 16px;
     padding: 12px 22px;
     text-decoration: none;
 }
 
 .content a:hover {
-    background-color: rgba(0,0,0,.9);
+    background-color: #2A83C6;
+    border: solid #2A83C6;
     
 }
 
@@ -185,7 +189,7 @@ body {
 }
 
 .display .container div {
-	height: 550px;
+	height: 600px;
 	display: flex;
     justify-content:center;
     align-content:center;
@@ -235,7 +239,7 @@ body {
 /* footer */
 
 .footer {
-  background-color: #2A83C6;
+  background-color: #1F6193;
   padding: 20px 0px 80px;
   color: #FFF;
   text-align: right;
@@ -454,6 +458,9 @@ body {
     .find {
         display: none;
     }
+    .about {
+        display: none;
+    }
     .display .container div {
         height: 300px;
     }
@@ -485,6 +492,9 @@ body {
     .mobileheader {
         display: none;
     }
+    .about {
+        display: none;
+    }
     .display p {
         font-size: 20px;
     }
@@ -495,10 +505,11 @@ body {
     .mobileheader {
         display: none;
     }
+    .about {
+        display: none;
+    }
     .display p {
         font-size: 24px;
-        line-height: 30px;
-        letter-spacing: 4px;
     }
     .usercontent {
         background-attachment: fixed;
@@ -511,7 +522,7 @@ body {
         display: none;
     }
     .about {
-
+        display: none;
     }
     .usercontent {
         background-attachment: fixed;
