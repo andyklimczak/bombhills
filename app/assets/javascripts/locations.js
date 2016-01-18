@@ -59,7 +59,7 @@ var setLocation = function() {
     });
 }
 
-var fulLScreen = function() {
+var fullScreen = function() {
     $('#fullscreenbutton').click(function() {
         $('.dashboard').animate({
             'left': "-100%" 
@@ -82,4 +82,4 @@ function loadLocations() {
 
 $(document).ready(getMap);
 $(document).ready(setLocation);
-$(document).ready(fulLScreen);
+$(document).ready(fullScreen);
