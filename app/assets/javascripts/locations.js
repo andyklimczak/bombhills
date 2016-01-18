@@ -65,6 +65,11 @@ var fulLScreen = function() {
             'left': "-100%" 
         });
     });
+    $('#hamburgerbutton').click(function() {
+        $('.dashboard').animate({
+            'left': "0" 
+        });
+    });
 }
 
 // Load locations from the database to the map

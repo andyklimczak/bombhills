@@ -5,9 +5,22 @@
     width: 250px;
     height: 100%;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: #EEE;
     box-shadow: 5px 0 5px -5px #333;
+}
+
+.hamburgerbutton {
+    position: absolute;
+    z-index: 1;
+}
+
+#hamburgerbutton {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    cursor: pointer;
+    color: #2A83C6;
 }
 
 .userinfo {
@@ -67,4 +80,23 @@ span {
 
 #myMap {
 
+}
+
+#fullscreenbutton {
+    background: #292B30;
+    color: #FFF;
+}
+
+
+/*  Media Queries  */
+
+/* Custom */ 
+
+@media only screen and (max-width: 540px) {
+    .userinfo {
+        display: none;
+    }
+    .dashboard {
+        left: -100%;
+    }
 }
