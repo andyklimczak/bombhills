@@ -3,6 +3,8 @@
 <div class="wrapper">
     <div class="dashboard">
         <div class="userinfo">
+            <%= image_tag 'user.png',:id => 'none'  %>
+            <p> username </p>
         </div>
         <div class="navtools">
             <ul>
@@ -12,10 +14,10 @@
                       <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon1">
                     </div>
                 </li>
-                <li><span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="font-size: 22px;"></span> <p>Add Something</p> </li>
                 <li id="findmebutton"><span class=" glyphicon glyphicon-globe" aria-hidden="true" style="font-size: 22px;"></span> <p>Find Me</p></li>
                 <li><span class="glyphicon glyphicon-star" aria-hidden="true" style="font-size: 22px;"></span> <p>Favorite</p></li>
-                <li id="fullscreenbutton"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true" style="font-size: 22px;color: #2A83C6"></span> <p>Full Screen Mode</p></li>
+                <li><span class="glyphicon glyphicon-home" aria-hidden="true" style="font-size: 22px;"></span> <%= link_to ' Home ', root_path, :class => 'none' %> </li>
+                <li id="fullscreenbutton"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true" style="font-size: 22px;color: #93924C"></span> <p>Full Screen</p></li>
             </ul>
         </div>
     </div>
