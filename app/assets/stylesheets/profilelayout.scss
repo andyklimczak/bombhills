@@ -158,6 +158,14 @@ class */
 	color: #FFF;
 }
 
+.field_with_errors {
+    margin: 0 auto;
+}
+
+#error_explanation {
+    margin: 0 auto;
+}
+
 /* log in */
 
 .login {
@@ -169,7 +177,7 @@ class */
     justify-content:center;
     align-content:center;
     flex-direction:column;
-    background: url('forest.jpg');
+    background: url('signin.jpg');
     background-size: cover;
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;

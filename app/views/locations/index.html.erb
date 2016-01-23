@@ -12,14 +12,18 @@
                 </li>
                 <li id="findmebutton"><span class=" glyphicon glyphicon-globe" aria-hidden="true" style="font-size: 22px;"></span> <p>Find Me</p></li>
                 <li><span class="glyphicon glyphicon-star" aria-hidden="true" style="font-size: 22px;"></span> <p>Favorite</p></li>
-                <li><span class="glyphicon glyphicon-home" aria-hidden="true" style="font-size: 22px;"></span> <%= link_to ' Home ', root_path, :class => 'none' %> </li>
-                <li id="fullscreenbutton"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true" style="font-size: 22px;color: #93924C"></span> <p>Full Screen</p></li>
+                <li><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true" style="font-size: 22px;"></span> <%= link_to ' Back ', root_path, :class => 'none' %> </li>
+                <li id="fullscreenbutton"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true" style="font-size: 22px;color: #2A83C6"></span> <p>Full Screen</p></li>
             </ul>
         </div>
     </div>
     <div id='myMap' oncontextmenu="return false">
         <div class="hamburgerbutton">
             <span class="glyphicon glyphicon-menu-hamburger" id="hamburgerbutton" aria-hidden="true" style="font-size: 50px;"></span>
+        </div>
+        <div class="alert alert-info">
+          <a href="#" class="close" style="padding-left: 10px" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Hey!</strong> Right-click or hold to add a location.
         </div>
     </div>
 </div>

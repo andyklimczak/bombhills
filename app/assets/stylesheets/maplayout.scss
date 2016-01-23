@@ -55,8 +55,6 @@
 .navtools li {
     height: 75px;
     cursor: pointer;
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
     line-height: 75px;
     color: #FFF;
     font-size: 16px;
@@ -73,9 +71,9 @@
     display: inline-block;
     vertical-align: middle;
     margin-top: 9px;
-    padding-left: 30px;
+    padding-left: 10px;
     font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
+	font-weight: 400;
     font-size: 15px;
     
 }
@@ -84,7 +82,7 @@
     display: inline-block;
     vertical-align: middle;
     margin-top: 1px;
-    padding-left: 30px;
+    padding-left: 10px;
     color: #D6D6D6;
     text-decoration: none;
     font-weight: 200;
@@ -107,7 +105,7 @@
 
 #searchli {
     padding-left: 23px;
-    background: #2A83C6;
+    background: #35353B;
 }
 
 span {
@@ -120,8 +118,15 @@ span {
 }
 
 #fullscreenbutton {
-    border-top: thin solid #656570;
-    border-width: 1px;
+
+}
+
+.alert {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
 

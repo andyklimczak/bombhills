@@ -22,7 +22,7 @@ function getMap() {
             map.setView({
                 mapTypeId: Microsoft.Maps.MapTypeId.road, 
                 zoom: 12,
-                center: new Microsoft.Maps.Location(37.776586, -122.448811)
+                center: new Microsoft.Maps.Location(37.776619,-122.469296)
             });
 
             Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
