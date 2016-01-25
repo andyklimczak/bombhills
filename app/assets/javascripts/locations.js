@@ -62,13 +62,13 @@ var setLocation = function() {
 var fullScreen = function() {
     $('#fullscreenbutton').click(function() {
         $('.dashboard').animate({
-            'left': "-100%" 
-        });
+            left: "-100%" 
+        }, 200);
     });
     $('#hamburgerbutton').click(function() {
         $('.dashboard').animate({
-            'left': "0" 
-        });
+            left: "0" 
+        }, 200);
     });
 }
 
