@@ -1,18 +1,6 @@
-<script type="text/javascript">
-   var header = document.getElementById("header");
-    var speed = 1.0;
-
-    window.onscroll = function() {
-       var yOffset = window.pageYOffset;
-       header.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
-    }
-};
-
-</script>
-
 <!-- header --> 
 <div class="profileheader">
-    <%= link_to ' home ', root_path, :class => 'none' %>
+    <%= link_to ' home ', root_path %>
     <h2> Welcome </h2>
     <%= image_tag 'me.jpg',:class => 'profileimg'  %>
     <h1> Alec Sheridan </h1>
