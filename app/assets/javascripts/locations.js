@@ -59,18 +59,13 @@ var setLocation = function() {
     });
 }
 
-var fullScreen = function() {
-    $('#fullscreenbutton').click(function() {
-        $('.dashboard').animate({
-            left: "-100%" 
-        }, 200);
-    });
-    $('#hamburgerbutton').click(function() {
-        $('.dashboard').animate({
-            left: "0" 
-        }, 200);
-    });
-}
+$(function (){
+      $('#fullscreenbutton, #hamburgerbutton').click(function (){           
+           $('.dashboard').animate({
+                  left: this.id === 'fullscreenbutton' ? "-100%" : "0"
+            }, 200);
+      });
+  });
 
 // Load locations from the database to the map
 function loadLocations() {
