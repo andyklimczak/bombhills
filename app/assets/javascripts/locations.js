@@ -1,5 +1,5 @@
 
-var newPoint = function(userEmail, lat, long, title, description, difficulty) {
+var newPoint = function(userEmail, lat, long, style, title, description, difficulty) {
     pointName = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(lat,long), null);
     map.entities.push(pointName);
     map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(

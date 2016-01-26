@@ -23,7 +23,7 @@
         <ul class="nav nav-pills" style="margin:0px;">
           <li role="presentation" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Profile <span class="caret"></span>
+              User <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" style="margin: 10px 5px;">
                 
@@ -42,7 +42,7 @@
             
             </ul>
           </li>
-          <li role="presentation"><a href="#" id="contact">Contact</a></li>
+          <li role="presentation"><a href="#" id="contact">Write</a></li>
         </ul>
     </div>
     <div class="content">
@@ -64,7 +64,7 @@
 <div class="display">
   <div class="container">
     <div class="col-xs-12 col-sm-8 col-md-8">
-      <p> Find new new places to ride. Share those places with your friends. Create meetups using Trips. Post your pictures and video. Create a user profile to join our online community.  </p>
+      <p> Find new new places to ride. Share those places with your friends! Create and customize your own user profile and join our online community.  </p>
     </div>
     <div class="col-xs-12 col-sm-4 col-md-4" id="explorecol">
         <%= image_tag 'explore.png',:id => 'exploreimg'  %>
@@ -84,19 +84,18 @@
     <div class="col-sm-4 col-md-4">
     </div>
     <div class="col-sm-4 col-md-4" id="contactfooter">
-        <h1> contact us </h1>
+        <h1> Site Blog </h1>
         <ul>
-          <li>e-mail</li>
-          <li>carrier pigeon</li>
-          <li>railway</li>
+          <li>not</li>
+          <li>available</li>
         </ul>
     </div>
     <div class="col-sm-4 col-md-4">
-        <h1> social media </h1>
+        <h1> We're also on </h1>
         <ul>
-          <li>twitter </li>
-          <li>isntagram</li>
-          <li>facebook</li>
+            <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>
+            <li><%= link_to "and Instagram", "https://www.instagram.com/bombhillspics/", :target => "_blank" %></li>
+          <li>either way follow us!</li>
         </ul>
     </div>
   </div>

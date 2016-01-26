@@ -76,6 +76,7 @@ body {
     height: 550px;
     background: #333333;
     background: url('headerdesktop.jpg');
+    background-repeat: no-repeat;
 }
 
 /* nav */
@@ -206,8 +207,8 @@ body {
 }
 
 .display p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
     color: #FFF;
     font-size: 26px;
     line-height: 28px;
@@ -266,6 +267,15 @@ body {
   font-size: 18px;
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
+}
+
+.footer li a {
+    text-decoration: none;
+}
+
+.footer li a:hover {
+    background: none;
+    color: #000;
 }
 
 .reference {
@@ -548,5 +558,12 @@ body {
 @media only screen and (min-width : 1200px) {
     .mobileheader {
         display: none;
+    }
+    .usercontent {
+        height: 500px;
+    }
+
+    .usercontent a {
+        line-height: 500px;
     }
 }

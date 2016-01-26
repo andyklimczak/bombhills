@@ -109,6 +109,13 @@ class */
     color: #FFF;
 }
 
+.modal-body li {
+    display: inline;
+    list-style-type: none;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
 /* images */
 
 .images {
