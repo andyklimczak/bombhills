@@ -10,16 +10,14 @@
     <ul>
         <li><span class="glyphicon glyphicon-send" aria-hidden="true" style="font-size: 3em;" id="one"></span></li>
         <li><span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 3em;" id="two"></span></li>
-        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true" style="font-size: 3em;" data-toggle="modal" data-target="#myModal" id="three"></span></li>
+        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true" style="font-size: 3em;" data-toggle="modal" data-target="#spotModal" id="three"></span></li>
     </ul>
 </div>
 <div class="images">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-md-4">
-                <div class="imgwrapper">
-                    <%= image_tag 'one.jpg',:class => 'img-responsive'  %>
-                </div>
+            <div class="col-sm-4 col-md-4" data-toggle="modal" data-target="#imageModal">
+                <%= image_tag 'add.jpg',:class => 'img-responsive',:id => 'addimg' %>
             </div>
             <div class="col-sm-4 col-md-4">
                 <%= image_tag 'two.jpg',:class => 'img-responsive'  %>
@@ -54,8 +52,8 @@
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- Spots Modal -->
+<div class="modal fade" id="spotModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -69,6 +67,37 @@
             <li>Description</li>
             <li>View</li>
         </ul>
+        <ul>
+            <li>Title Here</li>
+            <li>Difficulty</li>
+            <li>Description</li>
+            <li>View</li>
+        </ul>
+        <ul>
+            <li>Title Here</li>
+            <li>Difficulty</li>
+            <li>Description</li>
+            <li>View</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- add image modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Upload</h4>
+      </div>
+      <div class="modal-body">
+        <label class="control-label">Select File</label>
+        <input id="input-1" type="file" class="file">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
