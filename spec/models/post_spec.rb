@@ -7,5 +7,5 @@ RSpec.describe Post, type: :model do
   end
 
   it { should belong_to :user }
-  it { should have_one :location }
+  it { should have_one :spot }
 end

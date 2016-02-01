@@ -1,4 +1,4 @@
-class Location < ActiveRecord::Base
+class Spot < ActiveRecord::Base
   belongs_to :user
   belongs_to :post
   validates :latitude, :longitude, :title, :difficulty, presence: true

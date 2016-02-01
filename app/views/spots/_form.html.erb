@@ -10,7 +10,7 @@
       
       <div class="modal-body">
 
-        <%= form_for Location.new, html: {class:'form-horizontal'}, url: {controller: "locations", action: "create"} do |f| %>
+        <%= form_for Spot.new, html: {class:'form-horizontal'}, url: {controller: "spots", action: "create"} do |f| %>
           <div class="form-group">
               <%= f.label :title, class: "col-sm-2 control-label" %>
             <div class="col-sm-10">
@@ -29,8 +29,8 @@
               <%= f.text_area :description, class: "form-control" %>
             </div>
           </div>
-          <%= hidden_field_tag('location[latitude]', 0, id: "new-latitude") %>
-          <%= hidden_field_tag('location[longitude]', 0, id: "new-longitude") %>
+          <%= hidden_field_tag('spot[latitude]', 0, id: "new-latitude") %>
+          <%= hidden_field_tag('spot[longitude]', 0, id: "new-longitude") %>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <%= f.submit "Submit", class: "btn btn-default" %>

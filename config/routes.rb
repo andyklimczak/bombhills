@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :spots
   get 'user-content' => 'posts#index', via: :get, as: 'user_content'
 
   devise_for :users
   get 'users/:username' => 'users#show', via: :get, as: 'show_user'
 
-  resources :locations
+  resources :posts
 
   get 'welcome/index'
   root 'welcome#index'

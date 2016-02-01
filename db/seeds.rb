@@ -9,9 +9,9 @@
 User.create!(username: 'testuser', email: 'test@bombhills.com', password: 'password123', password_confirmation: 'password123')
 
 10.times do |i|
-  User.first.locations.create({title: "location title #{i}", description: "location description #{i}", latitude: Random.rand(27..49), longitude: Random.rand(-123..-76), difficulty: ['Beginner', 'Intermediate', 'Expert'].sample})
+  User.first.spots.create({title: "spot title #{i}", description: "spot description #{i}", latitude: Random.rand(27..49), longitude: Random.rand(-123..-76), difficulty: ['Beginner', 'Intermediate', 'Expert'].sample})
 end
 
 10.times do |i|
-  User.first.posts.create({title: "post title #{i}", description: "post description #{i}", image: "http://placeskull.com/400/200/", location: Location.order("RANDOM()").first})
+  User.first.posts.create({title: "post title #{i}", description: "post description #{i}", image: "http://placeskull.com/400/200/", spot: Spot.order("RANDOM()").first})
 end

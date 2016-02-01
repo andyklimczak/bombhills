@@ -69,8 +69,8 @@ $(function (){
 
 // Load locations from the database to the map
 function loadLocations() {
-  console.log(gon.locations);
-  gon.locations.forEach(function(location) {
+  console.log(gon.spots);
+  gon.spots.forEach(function(location) {
     var p = new newPoint(location.user.username, location.latitude, location.longitude, location.title, location.description, location.difficulty);
   });
 }

@@ -4,7 +4,7 @@ FactoryGirl.define do
     image "http://placeskull.com/400/200/"
     description { "Post description #{title}" }
     user
-    location
+    spot
   end
 
 end

@@ -18,6 +18,6 @@ RSpec.describe User, :type => :model do
   end
 
   it { should validate_presence_of :username }
-  it { should have_many :locations }
+  it { should have_many :spots }
   it { should validate_uniqueness_of(:username).case_insensitive }
 end

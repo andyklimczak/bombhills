@@ -61,24 +61,26 @@
         <h4 class="modal-title" id="myModalLabel">Alec's Spots</h4>
       </div>
       <div class="modal-body">
-        <ul>
-            <li>Title Here</li>
-            <li>Difficulty</li>
-            <li>Description</li>
-            <li>View</li>
-        </ul>
-        <ul>
-            <li>Title Here</li>
-            <li>Difficulty</li>
-            <li>Description</li>
-            <li>View</li>
-        </ul>
-        <ul>
-            <li>Title Here</li>
-            <li>Difficulty</li>
-            <li>Description</li>
-            <li>View</li>
-        </ul>
+        <% if @user.spots.any? %>
+          <% @user.spots.each do |spot| %>
+            <ul>
+              <li>
+                <%= spot.title %>
+              </li>
+              <li>
+                <%= spot.difficulty %>
+              </li>
+              <li>
+                <%= spot.description %>
+              </li>
+              <li>
+                View
+              </li>
+            </ul>
+          <% end %>
+          <% else %>
+            No spots for this user
+        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -105,59 +107,3 @@
     </div>
   </div>
 </div>
-
-
-<!-- keeping for reference 
-
-Username: <%= @user.username %>
-<br>
-Email: <%= @user.email %>
-<br>
-Last sign in at: <%= @user.last_sign_in_at %>
-<br>
-<% if @user.locations.any? %>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>
-          Title
-        </th>
-        <th>
-          Description
-        </th>
-        <th>
-          Difficulty
-        </th>
-        <th>
-          Lat
-        </th>
-        <th>
-          Long
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-    <% @user.locations.each do |location| %>
-      <tr>
-        <td>
-          <%= location.title %>
-        </td>
-        <td>
-          <%= location.description %>
-        </td>
-        <td>
-          <%= location.difficulty %>
-        </td>
-        <td>
-          <%= location.latitude %>
-        </td>
-        <td>
-          <%= location.longitude %>
-        </td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-<% end %>
-
---!>

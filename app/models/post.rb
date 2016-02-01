@@ -1,4 +1,4 @@
 class Post < ActiveRecord::Base
   belongs_to :user
-  has_one :location
+  has_one :spot
 end
