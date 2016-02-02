@@ -207,7 +207,7 @@ body {
 .display p {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
-    color: #FFF;
+    color: var(--secondary-color);
     font-size: 26px;
     line-height: 28px;
     text-align: left;
@@ -217,7 +217,7 @@ body {
 
 .usercontent {
 	height: 350px;
-	background: url('usercontentnew.jpg');
+	background: #48B148;
 	background-size: cover;
     text-align: center;
 }
@@ -226,8 +226,8 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
     line-height: 350px;
-	color: var(--main-color);
-    background: rgba(255,255,255,.75);
+	color: #FFF;
+    background: rgba(0,0,0,.75);
 	font-size: 54px;
     margin: 0px;
     text-decoration: none;
@@ -236,8 +236,8 @@ body {
 }
 
 .usercontent a:hover {
-    background: rgba(0,0,0,.75);
-    color: #FFF;
+    background: rgba(255,255,255,.75);
+    color: var(--main-color);
 }
 
 
@@ -246,7 +246,7 @@ body {
 .footer {
   background-color: #FFF;
   padding: 20px 0px 80px;
-  color: var(--main-color);
+  color: var(--secondary-color);
   text-align: right;
 }
 
@@ -300,7 +300,6 @@ body {
     }
     .header {
         height: 300px;
-        background: url('headerone.jpg');
         background-size: cover;
         background-attachment: scroll;
     }
@@ -314,7 +313,6 @@ body {
         font-size: 32px;
         padding: 12px 22px;
         line-height: 300px;
-        background-color: rgba(0,0,0,.4);
     }
     .find {
         display: none;
@@ -329,18 +327,16 @@ body {
     .display p {
         padding-top: 15px;
         font-size: 16px;
-        color: var(--main-color);
     }
     #explorecol {
         display: none;
     }
     .usercontent {
         height: 225px;
-        background: url('usercontentone.jpg');
         background-size: cover;
     }
     .usercontent a {
-        line-height: 275px;
+        line-height: 225px;
         padding: 10px 20px;
         font-size: 32px;
     }
@@ -350,7 +346,6 @@ body {
     }
     .footer {
       background-color: var(--main-bg-color);
-      color: #FFF;
     }
     #contactfooter {
         display: none;
@@ -366,7 +361,6 @@ body {
         background-attachment: scroll;
     }
     .header {
-        background: url('headerone.jpg');
         background-size: cover;
     }
     .content {
@@ -380,7 +374,6 @@ body {
         padding: 12px 22px;
         line-height: 325px;
         border-radius: 0px;
-        background-color: rgba(0,0,0,.4);
     }
     .header {
         height: 440px;
@@ -398,18 +391,16 @@ body {
     .display p {
         padding-top: 15px;
         font-size: 16px;
-        color: var(--main-color);
     }
     #explorecol {
         display: none;
     }
     .usercontent {
         height: 250px;
-        background: url('usercontentone.jpg');
         background-size: cover;
     }
     .usercontent a {
-        line-height: 275px;
+        line-height: 250px;
         padding: 10px 20px;
         font-size: 32px;
     }
@@ -419,7 +410,6 @@ body {
     }
     .footer {
       background-color: var(--main-bg-color);
-      color: #FFF;
     }
     #contactfooter {
         display: none;
@@ -434,7 +424,6 @@ body {
     #header {
         height: 350px;
         background-attachment: scroll;
-        background: url('headertwo.jpg');
         background-size: cover;
     }
     .content {
@@ -445,7 +434,6 @@ body {
         padding: 12px 22px;
         line-height: 350px;
         border-radius: 0px;
-        background-color: rgba(0,0,0,.4);
     }
     .content h1 {
         display: none;
@@ -464,14 +452,12 @@ body {
     }
     .display p {
         font-size: 16px;
-        color: var(--main-color);
     }
     #explorecol {
         display: none;
     }
     .usercontent {
         height: 250px;
-        background: url('usercontenttwo.jpg');
         background-size: cover;
     }
     .usercontent a {
