@@ -6,6 +6,7 @@ class SpotsController < ApplicationController
   def index
     @spots = Spot.all
     gon.search = params[:search].parameterize if params[:search].present?
+    gon.spot = Spot.find(params[:id]) if params[:id].present? and Spot.exists?(params[:id])
     gon.jbuilder
     gon.user_signed_in = user_signed_in?
   end
@@ -31,7 +32,7 @@ class SpotsController < ApplicationController
 
     respond_to do |format|
       if @spot.save
-        format.html { redirect_to :spots, notice: 'Spot was successfully created.' }
+        format.html { redirect_to spots_path(id: @spot.id), notice: 'Spot was successfully created.' }
         format.json { render :show, status: :created, location: @spot }
       else
         format.html { redirect_to :spots, notice: 'Location could not be created.' }

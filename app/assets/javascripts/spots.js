@@ -74,18 +74,27 @@ function loadLocations() {
 }
 
 function searchModuleLoaded() {
-	 var searchManager = new Microsoft.Maps.Search.SearchManager(map);
+  var searchManager = new Microsoft.Maps.Search.SearchManager(map);
 
-   if(gon.search) {
-     var geocodeRequest = {where:gon.search, count:1, callback:geocodeCallback, errorCallback:errCallback};
-     searchManager.geocode(geocodeRequest);
-   } else {
+  //center the map on a specific point if the id query param is present
+  if(gon.spot) {
     map.setView({
-        mapTypeId: Microsoft.Maps.MapTypeId.road, 
-        zoom: 12,
-        center: new Microsoft.Maps.Location(37.776619,-122.469296)
+      mapTypeId: Microsoft.Maps.MapTypeId.road, 
+      zoom: 12,
+      center: new Microsoft.Maps.Location(gon.spot.latitude,gon.spot.longitude)
     });
-   }
+  //center the map on the search result
+  } else if(gon.search) {
+    var geocodeRequest = {where:gon.search, count:1, callback:geocodeCallback, errorCallback:errCallback};
+    searchManager.geocode(geocodeRequest);
+  //default map center
+  } else {
+    map.setView({
+      mapTypeId: Microsoft.Maps.MapTypeId.road, 
+      zoom: 12,
+      center: new Microsoft.Maps.Location(37.776619,-122.469296)
+    });
+  }
 }
 
 function geocodeCallback(geocodeResult, userData) {
