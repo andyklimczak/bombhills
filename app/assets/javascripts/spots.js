@@ -10,6 +10,7 @@ var newPoint = function(userEmail, lat, long, style, title, description, difficu
     }));
 }
 
+var map;
 function getMap() {
   if ( $('#myMap').length ) {
     Microsoft.Maps.loadModule('Microsoft.Maps.Themes.BingTheme', {
@@ -18,12 +19,7 @@ function getMap() {
                 credentials: 'Al9aBb7etkdbFTyp2LNeKvnuZsE7r1-gCm95LmXZru0rbfBTSNaQjRxd2WDatfii',
                 theme: new Microsoft.Maps.Themes.BingTheme(),enableSearchLogo: false, showMapTypeSelector:false,showDashboard: false
             });
-      
-            map.setView({
-                mapTypeId: Microsoft.Maps.MapTypeId.road, 
-                zoom: 12,
-                center: new Microsoft.Maps.Location(37.776619,-122.469296)
-            });
+
 
             Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
               if (gon.user_signed_in && e.isSecondary) {
@@ -49,6 +45,8 @@ function getMap() {
           loadLocations();
         }
     });
+    //find lat and long from ?search query param
+    Microsoft.Maps.loadModule('Microsoft.Maps.Search', { callback: searchModuleLoaded });
   }
 }
 
@@ -75,6 +73,34 @@ function loadLocations() {
   });
 }
 
+function searchModuleLoaded() {
+	 var searchManager = new Microsoft.Maps.Search.SearchManager(map);
+
+   if(gon.search) {
+     var geocodeRequest = {where:gon.search, count:1, callback:geocodeCallback, errorCallback:errCallback};
+     searchManager.geocode(geocodeRequest);
+   } else {
+    map.setView({
+        mapTypeId: Microsoft.Maps.MapTypeId.road, 
+        zoom: 12,
+        center: new Microsoft.Maps.Location(37.776619,-122.469296)
+    });
+   }
+}
+
+function geocodeCallback(geocodeResult, userData) {
+   console.log(geocodeResult.results[0]);
+    map.setView({
+        mapTypeId: Microsoft.Maps.MapTypeId.road, 
+        zoom: 12,
+        center: new Microsoft.Maps.Location(geocodeResult.results[0].locations[0].location.latitude, geocodeResult.results[0].locations[0].location.longitude)
+    });
+}
+
+function errCallback(geocodeRequest) {
+
+	 alert("An error occurred.");
+}
+
 $(document).ready(getMap);
 $(document).ready(setLocation);
-$(document).ready(fullScreen);

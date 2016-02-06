@@ -5,6 +5,7 @@ class SpotsController < ApplicationController
   # GET /spots.json
   def index
     @spots = Spot.all
+    gon.search = params[:search].parameterize if params[:search].present?
     gon.jbuilder
     gon.user_signed_in = user_signed_in?
   end

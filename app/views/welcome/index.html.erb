@@ -50,9 +50,9 @@
         <%= link_to ' Launch ', spots_path %>
     </div>
     <div class="find">
-        <form class="form-inline" id="form">
+      <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
           <div class="form-group">
-            <input id="search" class="form-control" placeholder="or search for a specific location">
+            <%= text_field_tag :search, params[:search], id: "search", class: "form-control", placeholder: "or search for a specific location" %>
           </div>
           <button type="submit" class="btn btn-default" id="searchbutton">Search</button>
         </form>
