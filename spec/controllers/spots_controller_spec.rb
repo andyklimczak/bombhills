@@ -24,11 +24,14 @@ RSpec.describe SpotsController, type: :controller do
   # Spot. As you add validations to Spot, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    attributes_for(:spot)
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      "title" => "",
+      "description" => ""
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -70,32 +73,42 @@ RSpec.describe SpotsController, type: :controller do
   describe "POST #create" do
     context "with valid params" do
       it "creates a new Spot" do
+        user = create(:user)
+        sign_in user
         expect {
           post :create, {:spot => valid_attributes}, valid_session
         }.to change(Spot, :count).by(1)
       end
 
       it "assigns a newly created spot as @spot" do
+        user = create(:user)
+        sign_in user
         post :create, {:spot => valid_attributes}, valid_session
         expect(assigns(:spot)).to be_a(Spot)
         expect(assigns(:spot)).to be_persisted
       end
 
-      it "redirects to the created spot" do
+      it "redirects to the map with the id in the param" do
+        user = create(:user)
+        sign_in user
         post :create, {:spot => valid_attributes}, valid_session
-        expect(response).to redirect_to(Spot.last)
+        expect(response).to redirect_to(spots_path(id: Spot.last.id))
       end
     end
 
     context "with invalid params" do
       it "assigns a newly created but unsaved spot as @spot" do
+        user = create(:user)
+        sign_in user
         post :create, {:spot => invalid_attributes}, valid_session
         expect(assigns(:spot)).to be_a_new(Spot)
       end
 
-      it "re-renders the 'new' template" do
+      it "goes to the map page" do
+        user = create(:user)
+        sign_in user
         post :create, {:spot => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
+        expect(response).to redirect_to(spots_path)
       end
     end
   end
@@ -108,9 +121,9 @@ RSpec.describe SpotsController, type: :controller do
 
       it "updates the requested spot" do
         spot = Spot.create! valid_attributes
-        put :update, {:id => spot.to_param, :spot => new_attributes}, valid_session
+        put :update, {:id => spot.to_param, :spot => {title: "test title"}}, valid_session
         spot.reload
-        skip("Add assertions for updated state")
+        expect(spot.title).to eq("test title")
       end
 
       it "assigns the requested spot as @spot" do
