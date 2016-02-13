@@ -17,6 +17,24 @@ RSpec.describe User, :type => :model do
     expect(user).not_to be_valid
   end
 
+	it "finds user by email" do
+    user = create(:user, email: "foo@bar.com")
+    authenticated = User.find_for_database_authentication({email: "foo@bar.com"})
+		expect(authenticated).to eql user 
+	end
+
+	it "finds user by login given email" do
+    user = create(:user, email: "foo@bar.com")
+    authenticated = User.find_for_database_authentication({login: "foo@bar.com"})
+		expect(authenticated).to eql user 
+	end
+
+	it "finds user by login given username" do
+		user = create(:user, username: "test_username")
+		authenticated = User.find_for_database_authentication({login: "test_username"})
+		expect(authenticated).to eql user 
+	end
+
   it { should validate_presence_of :username }
   it { should have_many :spots }
   it { should have_many :posts }
