@@ -106,6 +106,26 @@
 #searchli {
     padding-left: 23px;
     background: #405F73;
+
+    #form {
+      @include display(flex);
+
+      #map-search-button {
+        width: 30%;
+        border: 0;
+
+        span {
+          font-size: 22px;
+          border: 0;
+        }
+      }
+
+      #search-input {
+        border: 1;
+        border-radius: 0;
+        width: 70%;
+      }
+    }
 }
 
 span {
