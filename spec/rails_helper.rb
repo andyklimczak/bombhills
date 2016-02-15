@@ -55,15 +55,13 @@ RSpec.configure do |config|
 		end
 	end
 
-	RSpec.configure do |config|
-		config.include Warden::Test::Helpers
-		config.before :suite do
-			Warden.test_mode!
-		end
-	end
+  config.include Warden::Test::Helpers
+  config.before :suite do
+    Warden.test_mode!
+  end
 
-	RSpec.configure do |config|
-		config.include Devise::TestHelpers, type: :controller
-		config.include Devise::TestHelpers, type: :view
-	end
+  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::TestHelpers, type: :view
+
+  config.include FactoryGirl::Syntax::Methods
 end
