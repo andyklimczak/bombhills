@@ -7,11 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(username: FFaker::Internet.user_name, email: FFaker::Internet.safe_email, password: FFaker::Internet.password)
+User.create(username: FFaker::Internet.user_name, email: FFaker::Internet.safe_email, password: FFaker::Internet.password)
 
-10.times do |i|
+5.times do |i|
   User.first.spots.create({title: FFaker::Venue.name, description: FFaker::HipsterIpsum.sentence, latitude: FFaker::Geolocation.lat, longitude: FFaker::Geolocation.lng, difficulty: ['Beginner', 'Intermediate', 'Expert'].sample})
+  User.last.spots.create({title: FFaker::Venue.name, description: FFaker::HipsterIpsum.sentence, latitude: FFaker::Geolocation.lat, longitude: FFaker::Geolocation.lng, difficulty: ['Beginner', 'Intermediate', 'Expert'].sample})
 end
 
-10.times do |i|
+5.times do |i|
   User.first.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, image: "http://placeskull.com/400/200/", spot: Spot.order("RANDOM()").first})
+  User.last.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, image: "http://placeskull.com/400/200/", spot: Spot.order("RANDOM()").first})
 end
