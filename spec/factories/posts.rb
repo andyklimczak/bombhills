@@ -1,8 +1,10 @@
+require 'ffaker'
+
 FactoryGirl.define do
   factory :post do
-    title "Post title #{Random.rand 1000}"
+    title { FFaker::Product.product }
     image "http://placeskull.com/400/200/"
-    description { "Post description #{title}" }
+    description { FFaker::HipsterIpsum.paragraph }
     user
     spot
   end

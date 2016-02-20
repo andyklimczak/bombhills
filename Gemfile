@@ -35,6 +35,8 @@ gem 'annotate'
 
 gem 'bourbon'
 
+gem 'ffaker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

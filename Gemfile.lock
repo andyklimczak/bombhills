@@ -90,6 +90,7 @@ GEM
     factory_girl_rails (4.6.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    ffaker (2.2.0)
     ffi (1.9.10)
     formatador (0.2.5)
     globalid (0.3.6)
@@ -278,6 +279,7 @@ DEPENDENCIES
   capybara
   devise
   factory_girl_rails (~> 4.0)
+  ffaker
   gon
   guard-livereload (~> 2.4)
   jbuilder (~> 2.0)

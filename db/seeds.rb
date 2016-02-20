@@ -6,12 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(username: 'testuser', email: 'test@bombhills.com', password: 'password123', password_confirmation: 'password123')
+User.create(username: FFaker::Internet.user_name, email: FFaker::Internet.safe_email, password: FFaker::Internet.password)
 
 10.times do |i|
-  User.first.spots.create({title: "spot title #{i}", description: "spot description #{i}", latitude: Random.rand(27..49), longitude: Random.rand(-123..-76), difficulty: ['Beginner', 'Intermediate', 'Expert'].sample})
+  User.first.spots.create({title: FFaker::Venue.name, description: FFaker::HipsterIpsum.sentence, latitude: FFaker::Geolocation.lat, longitude: FFaker::Geolocation.lng, difficulty: ['Beginner', 'Intermediate', 'Expert'].sample})
 end
 
 10.times do |i|
-  User.first.posts.create({title: "post title #{i}", description: "post description #{i}", image: "http://placeskull.com/400/200/", spot: Spot.order("RANDOM()").first})
+  User.first.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, image: "http://placeskull.com/400/200/", spot: Spot.order("RANDOM()").first})
 end
