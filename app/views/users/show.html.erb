@@ -3,7 +3,7 @@
     <%= link_to ' home ', root_path %>
     <h2> Welcome </h2>
     <%= image_tag 'me.jpg',:class => 'profileimg'  %>
-    <h1> Alec Sheridan </h1>
+    <h1> <%= @user.username %> </h1>
     <p> never stay complacent. </p>
 </div>
 <div class="supporting">
@@ -58,7 +58,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Alec's Spots</h4>
+        <h4 class="modal-title" id="myModalLabel"><%= @user.username %>'s Spots</h4>
       </div>
       <div class="modal-body">
         <% if @user.spots.any? %>
