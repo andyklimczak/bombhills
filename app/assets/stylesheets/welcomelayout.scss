@@ -217,7 +217,7 @@ body {
 
 .usercontent {
 	height: 350px;
-	background: #48B148;
+	background: #405F73;
 	background-size: cover;
     text-align: center;
 }
@@ -261,13 +261,15 @@ body {
 }
 
 .footer li {
-  font-size: 18px;
+    font-size: 18px;
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
+    margin: 10px 0px;
 }
 
 .footer li a {
     text-decoration: none;
+    margin: 10px 0px;
 }
 
 .footer li a:hover {
