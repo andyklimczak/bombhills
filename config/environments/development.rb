@@ -43,4 +43,14 @@ Rails.application.configure do
 
 	# To live reload locahost when saving a file
   config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
+  Paperclip.options[:command_path] = '/usr/local/bin/'
+
+  config.paperclip_defaults = {
+    storage: :fog,
+    fog_credentials: {
+      provider: 'Local',
+      local_root: "~/fog/bombhills"
+    },
+    fog_directory: "images",
+    fog_host: "http://localhost:3000/images"}
 end

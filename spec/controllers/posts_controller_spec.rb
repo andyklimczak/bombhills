@@ -72,32 +72,42 @@ RSpec.describe PostsController, type: :controller do
   describe "POST #create" do
     context "with valid params" do
       it "creates a new Post" do
+        user = create(:user)
+        sign_in user
         expect {
           post :create, {:post => valid_attributes}, valid_session
         }.to change(Post, :count).by(1)
       end
 
       it "assigns a newly created post as @post" do
+        user = create(:user)
+        sign_in user
         post :create, {:post => valid_attributes}, valid_session
         expect(assigns(:post)).to be_a(Post)
         expect(assigns(:post)).to be_persisted
       end
 
-      it "redirects to the created post" do
+      it "redirects to the current user's profile" do
+        user = create(:user)
+        sign_in user
         post :create, {:post => valid_attributes}, valid_session
-        expect(response).to redirect_to(Post.last)
+        expect(response).to redirect_to(show_user_path(user.username))
       end
     end
 
     context "with invalid params" do
       it "assigns a newly created but unsaved post as @post" do
+        user = create(:user)
+        sign_in user
         post :create, {:post => invalid_attributes}, valid_session
         expect(assigns(:post)).to be_a_new(Post)
       end
 
-      it "re-renders the 'new' template" do
+      it "redirects to current user's profile" do
+        user = create(:user)
+        sign_in user
         post :create, {:post => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
+        expect(response).to redirect_to(show_user_path(user.username))
       end
     end
   end

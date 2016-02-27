@@ -129,24 +129,20 @@ class */
 /* images */
 
 .images {
-    margin-top: 20px;
-}
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(flex-start);
+  @include align-content(flex-start);
+  @include align-items(flex-start);
 
-.images h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.images .img-responsive {
-    margin-bottom: 20px;
-    cursor: pointer;
+  img {
+    margin: 20px;
+  }
 }
 
 #addimg {
-
+  height: 300px;
+  width: 350px;
 }
 
 
