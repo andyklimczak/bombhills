@@ -88,5 +88,4 @@ Rails.application.configure do
 			 },
 			 :fog_directory => ENV["S3_BUCKET_NAME"]
 		 }
-	end
 end
