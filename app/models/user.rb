@@ -30,8 +30,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   attr_accessor :login
-  has_many :spots
-  has_many :posts
+  has_many :spots, -> { order 'created_at desc' }
+  has_many :posts, -> { order 'created_at desc' }
 	validates :username,
 		:presence => true,
 		:uniqueness => {

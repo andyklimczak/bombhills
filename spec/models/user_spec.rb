@@ -35,6 +35,24 @@ RSpec.describe User, :type => :model do
 		expect(authenticated).to eql user 
 	end
 
+  it 'should have posts ordered by created_at desc' do
+		user = create(:user, username: "test_username")
+    post1 = create(:post, title: 'post1', user: user)
+    post2 = create(:post, title: 'post2', user: user)
+    post3 = create(:post, title: 'post3', user: user)
+    expect(user.posts.first).to eq(post3)
+    expect(user.posts.last).to eq(post1)
+  end
+
+  it 'should have spots ordered by created_at desc' do
+		user = create(:user, username: "test_username")
+    spot1 = create(:spot, title: 'spot1', user: user)
+    spot2 = create(:spot, title: 'spot2', user: user)
+    spot3 = create(:spot, title: 'spot3', user: user)
+    expect(user.spots.first).to eq(spot3)
+    expect(user.spots.last).to eq(spot1)
+  end
+
   it { should validate_presence_of :username }
   it { should have_many :spots }
   it { should have_many :posts }

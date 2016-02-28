@@ -44,6 +44,13 @@ RSpec.describe PostsController, type: :controller do
       get :index, {}, valid_session
       expect(assigns(:posts)).to eq([post])
     end
+
+    it "should order posts by created_at desc" do
+      post1 = Post.create! valid_attributes
+      post2 = Post.create! valid_attributes
+      get :index, {}, valid_session
+      expect(assigns(:posts)).to eq([post2, post1])
+    end
   end
 
   describe "GET #show" do
