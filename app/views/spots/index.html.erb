@@ -12,7 +12,17 @@
                 </li>
                 <li id="findmebutton"><span class=" glyphicon glyphicon-globe" aria-hidden="true" style="font-size: 22px;"></span> <p>Find Me</p></li>
                 <li><span class="glyphicon glyphicon-home" aria-hidden="true" style="font-size: 22px;"></span> <%= link_to ' Home ', root_path, :class => 'none' %> </li>
+                
+                <% if user_signed_in? %> 
+                
                 <li><span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 22px;"></span> <%= link_to ' Profile ', show_user_path(current_user.username), :class => 'none' %> </li>
+                <% else %>
+                
+                <li><span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 22px;"></span> <%= link_to " Login ", new_user_session_path, :class => 'none'  %> </li>
+                
+                <% end %>
+                
+                
                 <li id="fullscreenbutton"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true" style="font-size: 22px;"></span> <p>Hide</p></li>
                 <li> <p>BOMBHILLS</p></li>
             </ul>
