@@ -107,6 +107,11 @@ body {
     color: #FFF;
 }
 
+#contact {
+    background: #2a83c6;
+    color: #FFF;
+}
+
 /*content*/
 
 .content {
@@ -217,7 +222,7 @@ body {
 
 .usercontent {
 	height: 350px;
-	background: #405F73;
+	background: #2a83c6;
 	background-size: cover;
     text-align: center;
 }
@@ -543,12 +548,5 @@ body {
 @media only screen and (min-width : 1200px) {
     .mobileheader {
         display: none;
-    }
-    .usercontent {
-        height: 500px;
-    }
-
-    .usercontent a {
-        line-height: 500px;
     }
 }

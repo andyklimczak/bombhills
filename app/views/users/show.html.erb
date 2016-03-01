@@ -1,6 +1,6 @@
 <!-- header --> 
 <div class="profileheader">
-    <%= link_to ' Home ', root_path %>
+    <%= link_to ' home ', root_path %>
     <%= image_tag 'me.jpg',:class => 'profileimg'  %>
     <h1> <%= @user.username %> </h1>
     <p> never stay complacent. </p>
@@ -28,7 +28,6 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel"><%= @user.username %>'s Spots</h4>
       </div>
       <div class="modal-body">

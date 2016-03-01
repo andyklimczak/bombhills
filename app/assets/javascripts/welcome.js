@@ -1,5 +1,4 @@
 
-/* 
 function imageScroll() {
     var header = document.getElementById("header");
     var speed = 5.0;
@@ -13,4 +12,4 @@ function imageScroll() {
 };
 
 $(document).ready(imageScroll);
-*/
+

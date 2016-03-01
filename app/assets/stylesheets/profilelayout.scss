@@ -1,7 +1,7 @@
 /* profile page layout */
 
 .profileheader {
-    background: #405F73;
+    background: #2a83c6;
     color: #FFF;
 }
 
@@ -14,7 +14,7 @@
     margin-right: auto;
     border-style: solid;
     border-width: 20px;
-    border-color: rgba(255,255,255, .7);
+    border-color: rgba(255,255,255, .8);
 }
 
 .profileheader h1 {
@@ -82,23 +82,24 @@ class */
 
 #one, #two, #three {
     cursor: pointer;
-    color: #243540;
+    color: #FFF;
     border-style: solid;
     border-width: 2px;
-    border-color: #243540;
+    border-color: #2a83c6;
     border-radius: 50%;
     padding: 20px;
+    background: #2a83c6;
 }
 
 #one:hover, #two:hover, #three:hover {
     cursor: pointer;
-    color: #FFF;
+    color: #2a83c6;
     border-style: solid;
     border-width: 2px;
-    border-color: #243540;
+    border-color: #2a83c6;
     border-radius: 50%;
     padding: 20px;
-    background: #243540;
+    background: #FFF;
 }
 
 
@@ -106,6 +107,10 @@ class */
 .modal-header {
     background: #2A83C6;
     color: #FFF;
+}
+
+.modal-body {
+    color: #2A83C6;
 }
 
 .modal-body li {
@@ -141,8 +146,8 @@ class */
 }
 
 #addimg {
-  height: 300px;
-  width: 350px;
+  height: 170px;
+  width: 250px;
 }
 
 

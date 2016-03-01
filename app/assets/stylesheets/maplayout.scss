@@ -6,7 +6,7 @@
     height: 100%;
     left: 0;
     z-index: 2;
-    background-color: rgba(66, 72, 77, 1);
+    background-color: #2A83C6;
     box-shadow: 5px 0 5px -5px #333;
 }
 
@@ -64,7 +64,7 @@
 
 .navtools li:hover {
     color: #FFF;
-    background: #2A83C6;
+    background: #1C5986;
 }
 
 .navtools li p {
@@ -75,6 +75,7 @@
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
     font-size: 15px;
+    letter-spacing: 1px;
     
 }
 
@@ -83,10 +84,11 @@
     vertical-align: middle;
     margin-top: 1px;
     padding-left: 10px;
-    color: #D6D6D6;
+    color: #FFF;
     text-decoration: none;
     font-weight: 200;
     font-size: 15px;
+    letter-spacing: .5px;
     
 }
 
