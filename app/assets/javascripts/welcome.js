@@ -9,9 +9,6 @@ function imageScroll() {
             header.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
         }
     }
-    else {
-        
-    }
 };
 
 $(document).ready(imageScroll);
