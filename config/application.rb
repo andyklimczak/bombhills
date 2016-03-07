@@ -24,5 +24,6 @@ module BombHills
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.paths << Rails.root.join("videos")
     config.serve_static_files = true
+    config.exceptions_app = self.routes
   end
 end

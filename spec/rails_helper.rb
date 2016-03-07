@@ -64,4 +64,6 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, type: :view
 
   config.include FactoryGirl::Syntax::Methods
+
+  config.include Capybara::DSL
 end
