@@ -5,6 +5,7 @@ FactoryGirl.define do
     username { FFaker::Internet.user_name }
     email { FFaker::Internet.safe_email }
     password { FFaker::Internet.password }
+    motto { FFaker::DizzleIpsum.sentence }
   end
 end
 
