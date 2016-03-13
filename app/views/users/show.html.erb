@@ -3,7 +3,7 @@
     <%= link_to ' home ', root_path %>
     <%= image_tag @user.avatar.url(:large),:class => 'profileimg'  %>
     <h1> <%= @user.username %> </h1>
-    <p> never stay complacent. </p>
+    <p> <%= @user.motto %> </p>
 </div>
 <div class="supporting">
     <ul>
