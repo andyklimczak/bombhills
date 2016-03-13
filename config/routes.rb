@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :posts
 
   get 'welcome/index'
+  get '/.well-known/acme-challenge/:id' => 'welcome#letsencrypt'
   root 'welcome#index'
 
  %w( 404 422 500 ).each do |code|
