@@ -1,3 +1,49 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.userposts {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+    background: #2a83c6;
+    color: #FFF;
+    padding-top: 30px;
+}
+
+#homebutton {
+    text-align: center;
+    margin: 15px;
+    color: #FFF;
+    border: thin solid #FFF;
+    border-radius: 8px;
+    border-width: 2px;
+    font-size: 22px;
+    padding: 10px 20px;
+    
+}
+
+#homebutton:hover {
+    text-decoration: none;
+    background: #FFF;
+    color: #2a83c6;
+}
+
+.userposts h2 {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+.userposts p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.userposts img {
+    margin-bottom: 20px;
+}
+
+#userbutton {
+    color: #FFF;
+    background: #2a83c6;
+}
