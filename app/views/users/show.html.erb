@@ -23,56 +23,5 @@
   <% end %>
 </div>
 
-<!-- Spots Modal -->
-<div class="modal fade" id="spotModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel"><%= @user.username %>'s Spots</h4>
-      </div>
-      <div class="modal-body">
-        <% if @user.spots.any? %>
-          <% @user.spots.each do |spot| %>
-            <ul>
-              <li>
-                <%= spot.title %>
-              </li>
-              <li>
-                <%= spot.difficulty %>
-              </li>
-              <li>
-                <%= link_to 'View', spots_path(id: spot.id) %>
-              </li>
-            </ul>
-          <% end %>
-          <% else %>
-            No spots for this user
-        <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- add image modal -->
-<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Upload</h4>
-      </div>
-      <div class="modal-body">
-        <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
-          <%= f.file_field :image %>
-          <%= f.submit %>
-        <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'users/spots_modal' %>
+<%= render 'users/add_image_modal' %>
