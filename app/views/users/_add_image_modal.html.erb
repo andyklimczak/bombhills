@@ -8,12 +8,27 @@
       </div>
       <div class="modal-body">
         <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
+          
+          <label for="usr">File:</label>
           <%= f.file_field :image %>
+          
+          <label for="usr">Title:</label>
+          <input type="text" class="form-control" id="usr">
+          
+          <label for="comment">Description:</label>
+          <textarea class="form-control" rows="3" id="comment"></textarea>
+          
+          <label for="sel1">Tag a spot</label>
+          <select class="form-control" id="sel1">
+            <option>spot 1</option>
+            <option>spot 2</option>
+            <option>spot 3</option>
+            <option>spot 4</option>
+          </select>
+          
           <%= f.submit %>
+          
         <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

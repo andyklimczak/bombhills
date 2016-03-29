@@ -1,108 +1,78 @@
 /* profile page layout */
 
-.profileheader {
-    background: #2a83c6;
+
+.profileheadercontainer {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
+.profilenav ul {
+    text-align: right;
+    margin-top: 30px;
+    padding: 0px;
+}
+
+.profilenav li {
+    display: inline;
+    list-style-type: none;
+    padding: 0px;
+    margin: 5px;
+}
+
+.profilenav li a {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+
+
+#profileimgdiv {
+    height: 350px;
+}
+
+#profileinfodiv {
+    height: 350px;
+}
+
+.profileimage {
+    height: 300px;
+    width: 350px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#profileinfobox {
+    padding: 0px 10px;
+    background: #EBEBEB;
+    height: 300px;
+    width: 90%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #333333;
+}
+
+#userspotsbutton {
+    height: 20px;
+    width: 20px;
     color: #FFF;
+    padding: 7px;
+    background: #2676B2;
+    cursor: pointer;
 }
 
-.profileimg {
-    border-radius: 50%;
-    height: 30%;
-    width: 30%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-width: 20px;
-    border-color: rgba(255,255,255, .8);
-}
-
-.profileheader h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-    margin: 10px 0px;
-    text-align: center;
-}
-
-.profileheader h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-    margin: 0;
-    padding-top: 0px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-.profileheader p {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-    padding-bottom: 30px;
-    margin: 10px 0px;
-    text-align: center;
-}
-
-.profileheader a {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-    color: #FFF;
-    padding: 0px 30px;
-    font-size: 24px;
-    line-height: 60px;
+#userspotsbutton:hover {
     text-decoration: none;
 }
 
-.profileheader a:hover {
-    background: none;
-}
 
-/* supporting */
-
-.supporting {
-    display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-    padding: 10px 0px;
-}
-
-.supporting ul {
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-}
-
-.supporting li {
-    display: inline;
-    padding: 0px 30px;
-}
-
-/* glyphicons, had to add IDs for each instead of using the class 
-the styling was being added to other pages which called for the glyphicon
-class */
-
-#one, #two, #three {
-    cursor: pointer;
-    color: #FFF;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #2a83c6;
-    border-radius: 50%;
-    padding: 20px;
-    background: #2a83c6;
-}
-
-#one:hover, #two:hover, #three:hover {
-    cursor: pointer;
-    color: #2a83c6;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #2a83c6;
-    border-radius: 50%;
-    padding: 20px;
-    background: #FFF;
-}
-
-
+/* modals */
 
 .modal-header {
     background: #2A83C6;
@@ -146,7 +116,7 @@ class */
 }
 
 #addimg {
-  height: 170px;
+  height: 150px;
   width: 250px;
 }
 
