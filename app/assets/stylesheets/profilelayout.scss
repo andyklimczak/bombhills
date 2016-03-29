@@ -189,7 +189,26 @@
 /* user settings */
 
 .banner {
-    padding: 0px 30px;
+    padding-left: 30px;
+}
+
+.banner ul {
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 30px;
+    padding: 0px;
+}
+
+.banner li {
+    display: inline;
+    list-style-type: none;
+    padding: 0px;
+    margin: 5px;
+}
+
+.banner li a {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
 }
 
 .changepassword {
