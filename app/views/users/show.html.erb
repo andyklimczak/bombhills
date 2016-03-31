@@ -19,9 +19,13 @@
             <div id="profileinfobox">
                 <h2> <%= @user.username %> </h2>
                 <p> motto: <%= @user.motto %> </p>
-                <p style="margin-bottom: 60px"> about me </p>
+                <p> ride style: </p>
+                <p> board:  </p>
+                <p style="margin-bottom: 20px"> about me: </p>
                 <a id="userspotsbutton" data-toggle="modal" data-target="#spotModal"> my spots </a>
-                <a id="useruploadbutton" data-toggle="modal" data-target="#imageModal"> upload photo </a>
+                <% if current_user == @user %>
+                    <a id="useruploadbutton" data-toggle="modal" data-target="#imageModal"> upload photo </a>
+                <% end %>
             </div>
         </div>
     </div>

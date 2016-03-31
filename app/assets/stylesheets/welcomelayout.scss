@@ -194,7 +194,7 @@ body {
 }
 
 .display .container div {
-	height: 600px;
+	height: 400px;
 	display: flex;
     justify-content:center;
     align-content:center;
@@ -225,13 +225,21 @@ body {
     background-size: cover;
 }
 
+.usercontent p {
+    line-height: 350px;
+    font-size: 32px;
+    color: #FFF;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
 .usercontent a {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
-    line-height: 350px;
 	color: #FFF;
-    background: rgba(0,0,0,.75);
-	font-size: 54px;
+    background: #2a83c6;
+	font-size: 32px;
+    border-radius: 6px;
     margin: 0px;
     text-decoration: none;
     padding: 20px 40px;
