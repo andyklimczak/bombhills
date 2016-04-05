@@ -221,7 +221,7 @@ body {
 	background: #2a83c6;
 	background-size: cover;
     text-align: center;
-    background-image: url('usercontentnew.jpg');
+    background-image: url('hilltwo.jpg');
     background-size: cover;
 }
 
@@ -235,9 +235,10 @@ body {
 
 .usercontent a {
     font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
+	font-weight: 400;
 	color: #FFF;
-    background: #2a83c6;
+    border: thin solid #FFF;
+    border-width: 8px;
 	font-size: 32px;
     border-radius: 6px;
     margin: 0px;
@@ -249,6 +250,7 @@ body {
 .usercontent a:hover {
     background: rgba(255,255,255,.75);
     color: var(--main-color);
+    border: thin solid rgba(255,255,255,.75);
 }
 
 /* footer */

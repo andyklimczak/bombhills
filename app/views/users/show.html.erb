@@ -32,40 +32,14 @@
 </div>
 
 <div class="images container">
-      <div class="row">
-        <div class="col-sm-4 col-md-4">
-          <%= image_tag 'four.jpg',:class => 'img-responsive' %>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <%= image_tag 'one.jpg',:class => 'img-responsive' %>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <%= image_tag 'seven.jpg',:class => 'img-responsive' %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4 col-md-4">
-            <%= image_tag 'forest.jpg',:class => 'img-responsive' %>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <%= image_tag 'five.jpg',:class => 'img-responsive' %>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <%= image_tag 'person.jpg',:class => 'img-responsive' %>
-        </div>
-      </div>
-</div>
-
-<!-- reference -->
-
-<div class="images container">
-  <% if current_user == @user %>
-    
-  <% end %>
-  <% @user.posts.each do |post| %>
-      <%= image_tag post.image.url(:medium) %>
-  <% end %>
-</div>
+    <div class="row">
+        <% @user.posts.each do |post| %>
+            <div class="col-sm-4 col-md-4">
+                <%= image_tag post.image.url(:medium),:class => 'img-responsive' %>
+            </div>
+        <% end %>
+    </div>
+</div>    
 
 <%= render 'users/spots_modal' %>
 <%= render 'users/add_image_modal' %>
