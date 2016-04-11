@@ -51,3 +51,5 @@ bower.json
 public/**
 
 coverage
+
+.DS_Store
