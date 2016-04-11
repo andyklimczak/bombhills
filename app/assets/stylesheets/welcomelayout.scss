@@ -39,7 +39,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
     padding-left: 15px;
-    color: var(--main-color);
+    color: #59B171;
 }
 
 .mobileheader h1 {
@@ -62,12 +62,12 @@ body {
 
 .mobileheader a {
     text-decoration: none;
-    color: var(--main-color);
+    color: #59B171;
 }
 
 .mobileheader a:hover {
     background: none;
-    color: var(--main-color);
+    color: #59B171;
 }
 
 /* header */
@@ -94,16 +94,16 @@ body {
 }
 
 .nav-pills > li > a {
-    color: var(--main-color);
+    color: #59B171;
     border: solid;
-    border-color: var(--main-color);
+    border-color: #59B171;
     border-width: 2px;
     margin: 0px 5px;
 }
 
 .nav-pills > li > a:hover {
-    background-color: var(--main-bg-color);
-    border-color: var(--main-color);
+    background-color: #59B171;
+    border-color: #59B171;
     color: #FFF;
 }
 
@@ -122,11 +122,11 @@ body {
     padding: 0px;
     margin-top: 50px;
     margin-bottom: 20px;
-    color: #2676B2;
+    color: #81A18A;
 }
 
 .content a {
-    background-color: #2676B2;
+    background-color: #59B171;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: #FFF;
@@ -172,7 +172,7 @@ body {
 
 #searchbutton {
     color: #FFF;
-    background: #2676B2;
+    background: #81A18A;
 	border-radius: 6px;
     border: none;
     border-radius: 0px;
@@ -190,7 +190,7 @@ body {
 
 .display {
 	text-align: left;
-    background-color: #D1D1D1;
+    background-color: #39473D;
 }
 
 .display .container div {
@@ -208,9 +208,13 @@ body {
 .display p {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
-    color: var(--secondary-color);
+    color: #FFF;
     font-size: 26px;
     line-height: 28px;
+}
+
+.display h2 {
+    color: #59B171;
 }
 
 
@@ -223,6 +227,7 @@ body {
     text-align: center;
     background-image: url('hilltwo.jpg');
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .usercontent p {
@@ -236,9 +241,8 @@ body {
 .usercontent a {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
+    background: #59B171;
 	color: #FFF;
-    border: thin solid #FFF;
-    border-width: 8px;
 	font-size: 32px;
     border-radius: 6px;
     margin: 0px;
@@ -249,16 +253,16 @@ body {
 
 .usercontent a:hover {
     background: rgba(255,255,255,.75);
-    color: var(--main-color);
+    color: #59B171;
     border: thin solid rgba(255,255,255,.75);
 }
 
 /* footer */
 
 .footer {
-  background-color: #FFF;
+  background-color: #59B171;
   padding: 20px 0px 80px;
-  color: var(--secondary-color);
+  color: #FFF;
   text-align: right;
 }
 
@@ -283,6 +287,7 @@ body {
 .footer li a {
     text-decoration: none;
     margin: 10px 0px;
+    color: #FFF;
 }
 
 .footer li a:hover {
@@ -341,6 +346,7 @@ body {
     .display p {
         padding-top: 15px;
         font-size: 16px;
+        color: #000;
     }
     
     .display h2 {
@@ -361,9 +367,6 @@ body {
     .usercontent p {
         line-height: 250px;
         font-size: 42px;
-    }
-    .footer {
-      background-color: var(--main-bg-color);
     }
     #contactfooter {
         display: none;
@@ -409,6 +412,7 @@ body {
     .display p {
         padding-top: 15px;
         font-size: 16px;
+        color: #000;
     }
     .display h2 {
         display: none;
@@ -428,9 +432,6 @@ body {
     .usercontent p {
         line-height: 250px;
         font-size: 42px;
-    }
-    .footer {
-      background-color: var(--main-bg-color);
     }
     #contactfooter {
         display: none;
@@ -473,6 +474,7 @@ body {
     }
     .display p {
         font-size: 16px;
+        color: #000;
     }
     .display h2 {
         display: none;
