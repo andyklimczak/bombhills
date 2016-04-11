@@ -32,6 +32,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  acts_as_messageable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   attr_accessor :login
@@ -61,4 +62,12 @@ class User < ActiveRecord::Base
 			errors.add(:username, :invalid)
 		end
 	end
+
+  def name
+    self.username
+  end
+
+  def mailboxer_email(object)
+    self.email
+  end
 end
