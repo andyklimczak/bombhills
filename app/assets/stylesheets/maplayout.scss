@@ -7,7 +7,6 @@
     left: 0;
     z-index: 2;
     background-color: #2A83C6;
-    box-shadow: 5px 0 5px -5px #333;
 }
 
 .hamburgerbutton {
@@ -21,6 +20,10 @@
     padding: 10px;
     cursor: pointer;
     color: #2A83C6;
+}
+
+#findmebutton {
+    background: #2D8BD3;
 }
 
 .userinfo {
@@ -107,7 +110,7 @@
 
 #searchli {
     padding-left: 23px;
-    background: #2A83C6;
+    background: #2572AC;
 
     #form {
       @include display(flex);

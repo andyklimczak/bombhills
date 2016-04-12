@@ -11,7 +11,9 @@
 }
 
 .thumbnail {
-
+    -webkit-box-shadow: -1px 5px 16px -1px rgba(130,130,130,1);
+    -moz-box-shadow: -1px 5px 16px -1px rgba(130,130,130,1);
+    box-shadow: -1px 5px 16px -1px rgba(130,130,130,1);
 }
 
 .userposts h1 {
@@ -20,7 +22,7 @@
     text-align: center;
     margin-top: 0px;
     padding: 20px 0px;
-    color:#0F2F46;
+    color:#2A83C6;
 }
 
 .userposts p {
@@ -34,7 +36,7 @@
 
 #userbutton {
     color: #FFF;
-    background: #0F2F46;
+    background: #2A83C6;
 }
 
 /*  Media Queries  */
