@@ -1,16 +1,6 @@
 <!-- header --> 
 
 <div class="profileheadercontainer">
-    <div class="profilenav">
-        <div class="row">
-            <div class="col-md-12">
-                <ul>
-                    <li><%= link_to ' home', root_path, id: 'homebutton' %></li>
-                    <li><%= link_to ' map', spots_path, id: 'spotsbutton' %></li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="col-sm-6 col-md-6" id="profileimgdiv">
             <%= image_tag @user.avatar.url(:large),:class => 'profileimage'  %>

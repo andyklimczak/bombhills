@@ -2,75 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+/* navbar */
+
+#navsearchbar {
+    padding: 0px;
+    border-radius: 0px;
+}
+
+#navsearchbutton {
+    border-radius: 0px;
+    padding: 7px 12px;
+}
+
+/* end */
+
 .userposts {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
-    padding-top: 30px;
+    padding-top: 60px;
     padding-bottom: 40px;
 }
 
-.userposts ul {
-    text-align: right;
-    margin-right: 20px;
-    margin-bottom: 30px;
-    padding: 0px;
-}
-
-.userposts li {
-    display: inline;
-    list-style-type: none;
-    padding: 0px;
-    margin: 5px;
-}
-
-.userposts li a {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
-}
-
-#homebutton {
-    color: #FFF;
-    border: thin solid #2a83c6;
-    background: #2a83c6;
-    border-radius: 6px;
-    border-width: 2px;
-    font-size: 18px;
-    padding: 6px 16px;
-    
-}
-
-#spotsbutton {
-    color: #FFF;
-    border: thin solid #2a83c6;
-    background: #2a83c6;
-    border-radius: 6px;
-    border-width: 2px;
-    font-size: 18px;
-    padding: 6px 16px;
-}
-
-#homebutton:hover {
-    text-decoration: none;
-    background: #6AA4CF;
-    border: thin solid #6AA4CF;
-    color: #FFF;
-}
-
-#spotsbutton:hover {
-    text-decoration: none;
-    background: #6AA4CF;
-    border: thin solid #6AA4CF;
-    color: #FFF;
-}
-
 .thumbnail {
-    background: #EDEDED;
+
 }
 
-.userposts h2 {
+.userposts h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
     text-align: center;
     margin-top: 0px;
-    padding-top: 20px;
+    padding: 20px 0px;
+    color:#0F2F46;
 }
 
 .userposts p {
@@ -84,7 +48,7 @@
 
 #userbutton {
     color: #FFF;
-    background: #2a83c6;
+    background: #0F2F46;
 }
 
 /*  Media Queries  */

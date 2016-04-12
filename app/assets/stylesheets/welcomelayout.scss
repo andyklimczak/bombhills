@@ -94,16 +94,16 @@ body {
 }
 
 .nav-pills > li > a {
-    color: #59B171;
+    color: #2A83C6;
     border: solid;
-    border-color: #59B171;
+    border-color: #2A83C6;
     border-width: 2px;
     margin: 0px 5px;
 }
 
 .nav-pills > li > a:hover {
-    background-color: #59B171;
-    border-color: #59B171;
+    background-color: #2A83C6;
+    border-color: #2A83C6;
     color: #FFF;
 }
 
@@ -122,11 +122,11 @@ body {
     padding: 0px;
     margin-top: 50px;
     margin-bottom: 20px;
-    color: #81A18A;
+    color: #6AA4CF;
 }
 
 .content a {
-    background-color: #59B171;
+    background-color: #2A83C6;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: #FFF;
@@ -172,7 +172,7 @@ body {
 
 #searchbutton {
     color: #FFF;
-    background: #81A18A;
+    background: #6AA4CF;
 	border-radius: 6px;
     border: none;
     border-radius: 0px;
@@ -190,7 +190,7 @@ body {
 
 .display {
 	text-align: left;
-    background-color: #39473D;
+    background-color: #1F6193;
 }
 
 .display .container div {
@@ -214,7 +214,7 @@ body {
 }
 
 .display h2 {
-    color: #59B171;
+    color: #83BCE7;
 }
 
 
@@ -222,7 +222,7 @@ body {
 
 .usercontent {
 	height: 350px;
-	background: #2a83c6;
+	background: #1F6193;
 	background-size: cover;
     text-align: center;
     background-image: url('hilltwo.jpg');
@@ -241,7 +241,7 @@ body {
 .usercontent a {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
-    background: #59B171;
+    background: #1F6193;
 	color: #FFF;
 	font-size: 32px;
     border-radius: 6px;
@@ -253,16 +253,14 @@ body {
 
 .usercontent a:hover {
     background: rgba(255,255,255,.75);
-    color: #59B171;
+    color: #1F6193;
     border: thin solid rgba(255,255,255,.75);
 }
 
 /* footer */
 
 .footer {
-  background-color: #59B171;
   padding: 20px 0px 80px;
-  color: #FFF;
   text-align: right;
 }
 
@@ -287,7 +285,6 @@ body {
 .footer li a {
     text-decoration: none;
     margin: 10px 0px;
-    color: #FFF;
 }
 
 .footer li a:hover {
