@@ -36,17 +36,12 @@
 	height: 70px;
 	width: 85px;
 	background-color: #2A83C6;
-	display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row; /* works with row or column */
-    flex-direction: row;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #FFF;
-
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(center);
+  cursor: pointer;
+  color: #FFF;
 }
 
 #mobilenavdiv {

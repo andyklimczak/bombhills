@@ -1,21 +1,10 @@
 /* placeholder css for inline form */
 
-input::-webkit-input-placeholder {
-color: #35353B !important;
+input {
+  @include placeholder {
+    color: #35353B !important;  
+  }
 }
- 
-input:-moz-placeholder { /* Firefox 18- */
-color: #35353B !important;  
-}
- 
-input::-moz-placeholder {  /* Firefox 19+ */
-color: #35353B !important;  
-}
- 
-input:-ms-input-placeholder {  
-color: #35353B !important;  
-}
-
 
 /* document */
 
@@ -195,10 +184,10 @@ body {
 
 .display .container div {
 	height: 400px;
-	display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
+  @include display(flex);
+  @include justify-content(center);
+  @include align-content(center);
+  @include flex-direction(column);
 }
 
 .display img {
