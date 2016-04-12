@@ -1,7 +1,8 @@
 <!-- header --> 
 
 <div class="profileheadercontainer">
-    <div class="row">
+    <%= render 'layouts/navbar' %>
+    <div class="row" id="profileheader">
         <div class="col-sm-6 col-md-6" id="profileimgdiv">
             <%= image_tag @user.avatar.url(:large),:class => 'profileimage'  %>
         </div>
