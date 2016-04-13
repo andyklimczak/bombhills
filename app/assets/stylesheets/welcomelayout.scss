@@ -83,16 +83,16 @@ body {
 }
 
 .nav-pills > li > a {
-    color: #2A83C6;
+    color: #0166FF;
     border: solid;
-    border-color: #2A83C6;
+    border-color: #0166FF;
     border-width: 2px;
     margin: 0px 5px;
 }
 
 .nav-pills > li > a:hover {
-    background-color: #2A83C6;
-    border-color: #2A83C6;
+    background-color: #0166FF;
+    border-color: #0166FF;
     color: #FFF;
 }
 
@@ -111,11 +111,11 @@ body {
     padding: 0px;
     margin-top: 50px;
     margin-bottom: 20px;
-    color: #1C5986;
+    color: #333333;
 }
 
 .content a {
-    background-color: #2A83C6;
+    background-color: #0166FF;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: #FFF;
@@ -161,7 +161,7 @@ body {
 
 #searchbutton {
     color: #FFF;
-    background: #2A83C6;
+    background: #0166FF;
 	border-radius: 6px;
     border: none;
     border-radius: 0px;
@@ -179,7 +179,7 @@ body {
 
 .display {
 	text-align: left;
-    background-color: #E8E8E8;
+    background-color: #333333;
 }
 
 .display .container div {
@@ -197,13 +197,13 @@ body {
 .display p {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
-    color: #333333;
+    color: #FFF;
     font-size: 26px;
     line-height: 28px;
 }
 
 .display h2 {
-    color: #2A83C6;
+    color: #0166FF;
 }
 
 
@@ -229,8 +229,8 @@ body {
 
 .usercontent a {
     font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
-    background: #1F6193;
+	font-weight: 200;
+    background: #0152CC;
 	color: #FFF;
 	font-size: 32px;
     border-radius: 6px;
@@ -249,14 +249,16 @@ body {
 /* footer */
 
 .footer {
-  padding: 20px 0px 80px;
-  text-align: right;
+    padding: 20px 0px 80px;
+    text-align: right;
+    background: #FFF;
 }
 
 .footer h1 {
-    font-size: 45px;
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
+    font-size: 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #0166FF;
 }
 
 .footer ul {
@@ -274,6 +276,7 @@ body {
 .footer li a {
     text-decoration: none;
     margin: 10px 0px;
+    color: #000;
 }
 
 .footer li a:hover {
