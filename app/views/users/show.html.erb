@@ -2,9 +2,9 @@
 
 <%= render 'layouts/navbar' %>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row profile">
-		<div class="col-sm-3 col-md-3">
+		<div class="col-sm-5 col-md-3">
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
 				<div class="profile-userpic">
@@ -45,9 +45,17 @@
 				<!-- END MENU -->
 			</div>
 		</div>
-		<div class="col-sm-9 col-md-9">
+		<div class="col-sm-7 col-md-9">
             <div class="profile-content">
-			   [Pictures to go here... -alec]
+			   <div class="images container">
+                   <div class="row">
+                       <% @user.posts.each do |post| %>
+                           <div class="col-sm-4 col-md-4">
+                               <%= image_tag post.image.url(:medium),:class => 'img-responsive' %>
+                           </div>
+                       <% end %>
+                   </div>
+               </div>
             </div>
 		</div>
 	</div>
