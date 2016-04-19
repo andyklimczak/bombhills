@@ -28,7 +28,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
     padding-left: 15px;
-    color: #2A83C6;
+    color: #0166FF;
 }
 
 .mobileheader h1 {
@@ -51,12 +51,12 @@ body {
 
 .mobileheader a {
     text-decoration: none;
-    color: #2A83C6;
+    color: #0166FF;
 }
 
 .mobileheader a:hover {
     background: none;
-    color: #2A83C6;
+    color: #0166FF;
 }
 
 /* header */
@@ -111,7 +111,7 @@ body {
     padding: 0px;
     margin-top: 50px;
     margin-bottom: 20px;
-    color: #333333;
+    color: #2E3133;
 }
 
 .content a {
@@ -179,7 +179,7 @@ body {
 
 .display {
 	text-align: left;
-    background-color: #333333;
+    background-color: #EDEDED;
 }
 
 .display .container div {
@@ -197,7 +197,6 @@ body {
 .display p {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
-    color: #FFF;
     font-size: 26px;
     line-height: 28px;
 }
@@ -251,7 +250,7 @@ body {
 .footer {
     padding: 20px 0px 80px;
     text-align: right;
-    background: #FFF;
+    background: #EDEDED;
 }
 
 .footer h1 {

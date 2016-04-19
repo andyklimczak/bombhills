@@ -1,36 +1,59 @@
-<!-- header --> 
 
-<div class="profileheadercontainer">
-    <%= render 'layouts/navbar' %>
-    <div class="row" id="profileheader">
-        <div class="col-sm-6 col-md-6" id="profileimgdiv">
-            <%= image_tag @user.avatar.url(:large),:class => 'profileimage'  %>
-        </div>
-        <div class="col-sm-6 col-md-6" id="profileinfodiv">
-            <div id="profileinfobox">
-                <h2> <%= @user.username %> </h2>
-                <p> motto: <%= @user.motto %> </p>
-                <p> ride style: </p>
-                <p> board:  </p>
-                <p style="margin-bottom: 20px"> about me: </p>
-                <a id="userspotsbutton" data-toggle="modal" data-target="#spotModal"> my spots </a>
-                <% if current_user == @user %>
-                    <a id="useruploadbutton" data-toggle="modal" data-target="#imageModal"> upload photo </a>
-                <% end %>
+
+<%= render 'layouts/navbar' %>
+
+<div class="container-fluid">
+    <div class="row profile">
+		<div class="col-sm-3 col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+                    <%= image_tag 'me.jpg',:class => 'img-responsive'  %>
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+                        <%= @user.username %>
+					</div>
+					<div class="profile-usertitle-job">
+						
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#spotModal">Spots</button>
+					<button type="button" class="btn btn-danger btn-sm">Message</button>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Overview </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							Account Settings </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-sm-9 col-md-9">
+            <div class="profile-content">
+			   [Pictures to go here... -alec]
             </div>
-        </div>
-    </div>
+		</div>
+	</div>
 </div>
-
-<div class="images container">
-    <div class="row">
-        <% @user.posts.each do |post| %>
-            <div class="col-sm-4 col-md-4">
-                <%= image_tag post.image.url(:medium),:class => 'img-responsive' %>
-            </div>
-        <% end %>
-    </div>
-</div>    
+<br>
+<br>
 
 <%= render 'users/spots_modal' %>
 <%= render 'users/add_image_modal' %>

@@ -1,72 +1,108 @@
 /* profile page layout */
 
-/* header */
+body {
 
-.profileheadercontainer {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
 }
 
-#profileheader {
-    margin-top: 50px;
+/* Profile container */
+.profile {
+  margin: 75px 0px;
 }
 
-#profileimgdiv {
-    height: 350px;
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #F8F8F8;
 }
 
-#profileinfodiv {
-    height: 350px;
-    padding-left: 0px;
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
 }
 
-.profileimage {
-    height: 300px;
-    width: 350px;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
 }
 
-#profileinfobox {
-    padding: 0px 10px;
-    background: #EBEBEB;
-    height: 300px;
-    width: 350px;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    color: #333333;
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
 }
 
-#userspotsbutton {
-    height: 20px;
-    width: 20px;
-    color: #FFF;
-    padding: 7px;
-    background: #2676B2;
-    cursor: pointer;
-    margin-right: 10px;
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-#userspotsbutton:hover {
-    text-decoration: none;
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
 }
 
-#useruploadbutton {
-    height: 20px;
-    width: 20px;
-    color: #FFF;
-    padding: 7px;
-    background: #2676B2;
-    cursor: pointer;
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
 }
 
-#useruploadbutton:hover {
-    text-decoration: none;
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+  padding: 20px;
+  background: #F8F8F8;
+  min-height: 460px;
 }
 
 
