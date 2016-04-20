@@ -161,14 +161,13 @@ body {
 
 #searchbutton {
     color: #FFF;
-    background: #0166FF;
 	border-radius: 6px;
-    border: none;
-    border-radius: 0px;
+    border-color: #0166FF;
 	padding: 10px 20px;
     margin: 0px 2px;
     margin-bottom: 2px;
     text-decoration: none;
+    background: #0166FF;
 }
 
 #searchbutton:hover {
@@ -229,8 +228,8 @@ body {
 .usercontent a {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
-    background: #0152CC;
-	color: #FFF;
+    background: #EDEDED;
+	color: #0166FF;
 	font-size: 32px;
     border-radius: 6px;
     margin: 0px;
@@ -241,7 +240,6 @@ body {
 
 .usercontent a:hover {
     background: rgba(255,255,255,.75);
-    color: #1F6193;
     border: thin solid rgba(255,255,255,.75);
 }
 
@@ -250,14 +248,14 @@ body {
 .footer {
     padding: 20px 0px 80px;
     text-align: right;
-    background: #EDEDED;
+    background: #0166FF;
+    color: #FFF;
 }
 
 .footer h1 {
     font-size: 35px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    color: #0166FF;
 }
 
 .footer ul {
@@ -275,12 +273,12 @@ body {
 .footer li a {
     text-decoration: none;
     margin: 10px 0px;
-    color: #000;
+    color: #FFF;
 }
 
 .footer li a:hover {
     background: none;
-    color: #000;
+    color: #FFF;
 }
 
 .reference {
@@ -357,6 +355,9 @@ body {
         font-size: 42px;
     }
     #contactfooter {
+        display: none;
+    }
+    #startto {
         display: none;
     }
 }

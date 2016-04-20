@@ -106,7 +106,6 @@ body {
   min-height: 460px;
 }
 
-
 /* modals */
 
 .modal-header {
@@ -226,45 +225,93 @@ label {
 
 /* user settings */
 
-.banner {
-    padding-left: 30px;
+#editprofilecontainer {
+  margin-top: 53.2px;
 }
 
-.banner ul {
-    text-align: right;
-    margin-right: 20px;
-    margin-top: 30px;
-    padding: 0px;
+#editprofiledashboard {
+  padding: 0px;
 }
 
-.banner li {
-    display: inline;
-    list-style-type: none;
-    padding: 0px;
-    margin: 5px;
+#editprofileimage {
+  height: 275px;
+  background: #EDEDED;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-.banner li a {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
+#editprofileimage img {
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+#editprofilemotto {
+  height: 275px;
+  background: #2E3133;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+#editprofilemotto input {
+  margin: 0 auto;
+  border: none;
+  color: #0166FF;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+#editprofileshow {
+  height: 550px;
+  padding-left: 20px;
+  background: #F7F7F7;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#editprofileshow h3 {
+  font-weight: 400;
+  color: #2E3133;
+}
+
+#editprofileshow input {
+  border: none;
+  color: #0166FF;
 }
 
 .changepassword {
-	background: #3E3837;
-	color: #FFF;
-	padding: 30px 30px;
+  background: #3E3837;
+  color: #FFF;
+  padding: 30px 30px;
 }
 
 .cancelaccount {
-	height: 250px;
-	background: #2A83C6;
-	color: #FFF;
-	padding: 30px 30px;
+  height: 250px;
+  background: #2A83C6;
+  color: #FFF;
+  padding: 30px 30px;
 }
 
 .cancelaccount a {
-	color: #FFF;
-	text-decoration: none;
+  color: #FFF;
+  text-decoration: none;
 }
 
 /*  Media Queries  */

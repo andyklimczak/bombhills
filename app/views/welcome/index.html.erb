@@ -22,7 +22,7 @@
     <div class="navigation">
         <ul class="nav nav-pills" style="margin:0px;">
           <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="background:#0166FF; color: #FFF;">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="background:#FFF; color: #0166FF;">
               User <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" style="margin: 10px 5px;">
@@ -47,7 +47,7 @@
         </ul>
     </div>
     <div class="content">
-        <h1>bom<mark style="color:#0166FF;padding: 0px;background: none;">bh</mark>ills </h1>
+        <h1>bom<mark style="color:#0166FF;padding: 0px;background: none;text-shadow:none;">bh</mark>ills </h1>
         <%= link_to ' Launch ', spots_path %>
     </div>
     <div class="find">
@@ -77,7 +77,7 @@
 
 <!-- user content -->
 <div class="usercontent">
-    <p><%= link_to 'discover', user_content_path %> </p>
+    <p> <mark style="background:none;color:#FFF;padding-left: 10px;" id="startto">start to </mark><%= link_to 'discover', user_content_path %> </p>
 </div>
 
 <!-- footer -->
