@@ -12,6 +12,7 @@
 #  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  spot_id            :integer
 #
 # Indexes
 #
@@ -27,6 +28,6 @@ class Post < ActiveRecord::Base
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   belongs_to :user
-  has_one :spot
+  belongs_to :spot
   validates :image, presence: true
 end
