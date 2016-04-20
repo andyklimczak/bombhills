@@ -1,112 +1,30 @@
-
 <div class="userposts">
-    
-    <%= render 'layouts/navbar' %>
 
-    <h1> DISCOVER </h1>
-    
-    <div class="container">
-      <div class="row">
+  <%= render 'layouts/navbar' %>
+
+  <h1> DISCOVER </h1>
+
+  <div class="container">
+    <div class="row">
+
+      <% @posts.each do |post| %>
         <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-                <%= image_tag 'four.jpg',:id => 'none'  %>
-              <div class="caption">
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a href="#" class="btn btn-primary" role="button" id="userbutton">User</a> <a href="#" class="btn btn-default" role="button">Find</a></p>
-              </div>
+          <div class="thumbnail">
+            <%= image_tag post.image.url(:medium) %>
+            <div class="caption">
+              <h3><%= post.title %></h3>
+              <p><%= post.description %></p>
+              <p>
+                <%= link_to 'User', show_user_path(post.user.username), :class => 'btn btn-primary', id: 'userbutton' %>
+                <% if post.spot %>
+                  <%= link_to 'Find', spots_path(id: post.spot.id), class: 'btn btn-default' %>
+                <% end %>
+              </p>
             </div>
+          </div>
         </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-                <%= image_tag 'one.jpg',:id => 'none'  %>
-              <div class="caption">
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-                <p><a href="#" class="btn btn-primary" role="button" id="userbutton">User</a> <a href="#" class="btn btn-default" role="button">Find</a></p>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-                <%= image_tag 'five.jpg',:id => 'none'  %>
-              <div class="caption">
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                <p><a href="#" class="btn btn-primary" role="button" id="userbutton">User</a> <a href="#" class="btn btn-default" role="button">Find</a></p>
-              </div>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-                <%= image_tag 'person.jpg',:id => 'none'  %>
-              <div class="caption">
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-                <p><a href="#" class="btn btn-primary" role="button" id="userbutton">User</a> <a href="#" class="btn btn-default" role="button">Find</a></p>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-                <%= image_tag 'three.jpg',:id => 'none'  %>
-              <div class="caption">
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a href="#" class="btn btn-primary" role="button" id="userbutton">User</a> <a href="#" class="btn btn-default" role="button">Find</a></p>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-                <%= image_tag 'seven.jpg',:id => 'none'  %>
-              <div class="caption">
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                <p><a href="#" class="btn btn-primary" role="button" id="userbutton">User</a> <a href="#" class="btn btn-default" role="button">Find</a></p>
-              </div>
-            </div>
-        </div>
-      </div>
+      <% end %>
 
     </div>
+  </div>
 </div>
-
-
-<p id="notice"><%= notice %></p>
-
-<h1>Latest Posts</h1>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Image</th>
-      <th>Description</th>
-      <th>User</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= image_tag post.image %></td>
-        <td><%= post.description %></td>
-        <td><%= post.user.username %></td>
-        <td><%= post.spot.title unless post.spot.nil? %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
