@@ -59,7 +59,6 @@ GEM
       sass (~> 3.4)
       thor (~> 0.19)
     builder (3.2.2)
-    byebug (8.2.2)
     capybara (2.6.2)
       addressable
       mime-types (>= 1.16)
@@ -446,7 +445,6 @@ DEPENDENCIES
   better_errors
   bootstrap-sass (~> 3.3.5)
   bourbon
-  byebug
   capybara
   chosen-rails
   devise
