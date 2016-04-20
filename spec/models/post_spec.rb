@@ -7,6 +7,6 @@ RSpec.describe Post, type: :model do
   end
 
   it { should belong_to :user }
-  it { should have_one :spot }
+  it { should belong_to :spot }
   it { should validate_presence_of :image }
 end

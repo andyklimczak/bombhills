@@ -9,7 +9,7 @@ RSpec.describe Spot, :type => :model do
   it { should allow_values('Beginner', 'Intermediate', 'Expert').for(:difficulty) }
   it { should_not allow_values('Invalid', 'Hard', 'test').for(:difficulty) }
   it { should belong_to :user }
-  it { should belong_to :post}
+  it { should have_many :posts}
   it { should validate_presence_of :title }
   it { should validate_presence_of :latitude }
   it { should validate_presence_of :longitude }
