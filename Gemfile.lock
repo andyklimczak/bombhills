@@ -319,6 +319,7 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    puma (3.2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -460,6 +461,7 @@ DEPENDENCIES
   paperclip (~> 4.3)
   pg
   pry-rails
+  puma
   quiet_assets
   rack-livereload
   rails (= 4.2.6)
