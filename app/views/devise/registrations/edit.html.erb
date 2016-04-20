@@ -26,7 +26,10 @@
       <%= f.password_field :current_password, autocomplete: "off" %>
       </br>
       </br>
-      <%= f.submit "Update" %>
+      <ul>
+        <li style="margin-left: 0px"><%= f.submit "Update" %></li>
+        <li><%= link_to ' see your profile! ', show_user_path(current_user.username)%></li>
+      </ul>
       <% end %>
     </div>
   </div>
