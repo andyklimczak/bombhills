@@ -11,8 +11,8 @@ body {
 
 /* Profile sidebar */
 .profile-sidebar {
-    padding: 20px 0 10px 0;
-    background: #F8F8F8;
+  padding: 20px 0 10px 0;
+  background: #F8F8F8;
 }
 
 .profile-userpic img {
@@ -20,9 +20,7 @@ body {
   margin: 0 auto;
   width: 50%;
   height: 50%;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  border-radius: 50% !important;
+  border-radius: 50%;
 }
 
 .profile-usertitle {
@@ -61,7 +59,7 @@ body {
 .profile-userbuttons .btn:last-child {
   margin-right: 0px;
 }
-    
+
 .profile-usermenu {
   margin-top: 30px;
 }
@@ -109,47 +107,47 @@ body {
 /* modals */
 
 .modal-header {
-    background: #2A83C6;
-    color: #FFF;
+  background: #2A83C6;
+  color: #FFF;
 }
 
 .modal-body {
-    color: #2A83C6;
+  color: #2A83C6;
 }
 
 .modal-body li {
-    display: inline;
-    list-style-type: none;
-    margin: 10px 10px;
-    cursor: pointer;
+  display: inline;
+  list-style-type: none;
+  margin: 10px 10px;
+  cursor: pointer;
 }
 
 .modal-body li a {
-    background: #2a83c6;
-    color: #FFF;
-    padding: 5px;
-    border-radius: 5px;
+  background: #2a83c6;
+  color: #FFF;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .modal-body li a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .submitimg {
-    margin: 15px;
-    margin-left: 0px;
-    background: #2a83c6;
-    color: #FFF;
+  margin: 15px;
+  margin-left: 0px;
+  background: #2a83c6;
+  color: #FFF;
 }
 
 label {
-    margin: 10px 0px;
+  margin: 10px 0px;
 }
 
 /* images */
 
 .images img {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #addimg {
@@ -161,35 +159,35 @@ label {
 /* sign up */
 
 .signup {
-	text-align: center;
-	color: #FFF;
-	height: 100vh;
-	display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-    background: url('sanfran.jpg');
-    background-size: cover;
-    font-family: 'Open Sans', sans-serif;
-	font-weight: 800;
+  text-align: center;
+  color: #FFF;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+  background: url('sanfran.jpg');
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
 }
 
 .signup h2 {
-	margin: 0;
-    padding-bottom: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    font-size: 36px;
-    color: #FFF;
+  margin: 0;
+  padding-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #FFF;
 }
 
 .signup a {
-	color: #FFF;
+  color: #FFF;
 }
 
 .signup label {
-    font-family: 'Open Sans', sans-serif;
-	font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
 }
 
 .signup input {
@@ -197,44 +195,44 @@ label {
 }
 
 .field_with_errors {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 #error_explanation {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* log in */
 
 .login {
-	text-align: center;
-	color: #fff;
-	height: 100vh;
-	display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-    background: url('sanfran.jpg');
-    background-size: cover;
-    font-family: 'Open Sans', sans-serif;
-	font-weight: 800;
+  text-align: center;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+  background: url('sanfran.jpg');
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
 }
 
 .login h2 {
-	margin: 0;
-	padding-bottom: 10px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 800;
-    font-size: 36px;
+  margin: 0;
+  padding-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
 }
 
 .login a {
-	color: #FFF;
+  color: #FFF;
 }
 
 .login label {
-    font-family: 'Open Sans', sans-serif;
-	font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
 }
 
 .login input {
@@ -254,39 +252,23 @@ label {
 #editprofileimage {
   height: 275px;
   background: #EDEDED;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+  @include display(flex);
+  @include align-items(center);
 }
 
 #editprofileimage img {
   margin: 0 auto;
   width: 50%;
   height: 50%;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  border-radius: 50% !important;
+  border-radius: 50%;
 }
 
 #editprofilemotto {
   height: 275px;
   background: #2E3133;
   text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+  @include display(flex);
+  @include align-items(center);
 }
 
 #editprofilemotto input {
