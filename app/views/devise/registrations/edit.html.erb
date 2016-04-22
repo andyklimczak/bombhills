@@ -10,7 +10,7 @@
         <%= image_tag @user.avatar.url(:large),:class => 'img-responsive'  %>
       </div>
       <div id="editprofilemotto">
-        <%= f.text_field :motto, autofocus: true, placeholder: "motto" %>
+        <%= f.text_field :motto, placeholder: "motto" %>
       </div>
     </div>
     <div class="col-sm-8 col-md-8 col-lg-9" id="editprofileshow">
@@ -27,7 +27,7 @@
       </br>
       </br>
       <ul>
-        <li style="margin-left: 0px"><%= f.submit "Update" %></li>
+        <li style="margin-left: 0px"><%= f.submit "Apply" %></li>
         <li><%= link_to ' see your profile! ', show_user_path(current_user.username)%></li>
       </ul>
       <% end %>

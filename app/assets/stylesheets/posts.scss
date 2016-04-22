@@ -20,7 +20,7 @@
     text-align: center;
     margin-top: 0px;
     padding: 20px 0px;
-    color:#2A83C6;
+    color:#0166FF;
 }
 
 .userposts p {
@@ -50,6 +50,19 @@
         margin-bottom: 20px;
         padding: 0px;
     }
+  #postscontainer {
+    padding: 0px;
+  }
+  
+  .thumbnail {
+    box-shadow: none;
+  }
+  
+  #thumbnailcontainer {
+    padding: 0px;
+    border: none;
+  }
+  
 }
 
 

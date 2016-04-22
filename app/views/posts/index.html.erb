@@ -4,11 +4,11 @@
 
   <h1> DISCOVER </h1>
 
-  <div class="container">
+  <div class="container" id="postscontainer">
     <div class="row">
 
       <% @posts.each do |post| %>
-        <div class="col-sm-4 col-md-4">
+        <div class="col-sm-4 col-md-4" id="thumbnailcontainer">
           <div class="thumbnail">
             <%= image_tag post.image.url(:medium) %>
             <div class="caption">

@@ -25,13 +25,13 @@ body {
 
 .mobileheader {
     height: 150px;
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
     padding-left: 15px;
     color: #0166FF;
 }
 
 .mobileheader h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
     font-size: 40px;
     margin: 0px;
     padding-top: 15px;
@@ -83,9 +83,7 @@ body {
 }
 
 .nav-pills > li > a {
-    color: #0166FF;
     border: solid;
-    border-color: #0166FF;
     border-width: 2px;
     margin: 0px 5px;
 }
@@ -204,6 +202,8 @@ body {
 
 .display h2 {
     color: #0166FF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
 }
 
 
@@ -223,13 +223,13 @@ body {
     line-height: 350px;
     font-size: 32px;
     color: #FFF;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
 }
 
 .usercontent a {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    ont-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
     background: #EDEDED;
 	color: #0166FF;
 	font-size: 32px;
@@ -257,7 +257,7 @@ body {
 .footer h1 {
     font-size: 35px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .footer ul {

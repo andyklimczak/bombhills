@@ -343,14 +343,31 @@ label {
 /* Custom, iPhone Retina */
 
 @media only screen and (max-width : 480px) {
-
+  #editprofilemotto {
+    height: 75px;
+  }
+  #editprofileshow {
+    background: #FFF;
+  }
+  #editprofileshow input {
+    background: #3F82CF;
+    color: #FFF;
+  }
 }
 
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) and (max-width : 768px) {
-
-
+  #editprofilemotto {
+    height: 125px;
+  }
+  #editprofileshow {
+    background: #FFF;
+  }
+  #editprofileshow input {
+    background: #3F82CF;
+    color: #FFF;
+  }
 }	
 
 /* Small Devices, Tablets */
