@@ -265,7 +265,7 @@ label {
 
 #editprofilemotto {
   height: 275px;
-  background: #2E3133;
+  background: #3F82CF;
   text-align: center;
   @include display(flex);
   @include align-items(center);
@@ -282,7 +282,7 @@ label {
 #editprofileshow {
   height: 550px;
   padding-left: 20px;
-  background: #F2F2F2;
+  background: #E5E5E5;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -310,7 +310,7 @@ label {
 #editprofileshow li a {
   color: #FFF;
   background: #0166FF;
-  padding: 7px 10px;
+  padding: 10px 10px;
   cursor: pointer;
 }
 
@@ -326,7 +326,7 @@ label {
 
 .cancelaccount {
   height: 250px;
-  background: #2A83C6;
+  background: #3F82CF;
   color: #FFF;
   padding: 30px 30px;
 }
