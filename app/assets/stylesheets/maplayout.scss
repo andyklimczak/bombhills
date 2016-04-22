@@ -6,7 +6,7 @@
     height: 100%;
     left: 0;
     z-index: 2;
-    background-color: #2A83C6;
+    background-color: #EDEDED;
 }
 
 .hamburgerbutton {
@@ -23,31 +23,12 @@
 }
 
 #findmebutton {
-    background: #2D8BD3;
+    background: #EDEDED;
 }
 
-.userinfo {
-    height: 165px;
-    width: 100%;
-    background: #35353B;
-    padding-top: 15px;
-}
-
-.userinfo img {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    display: block;
-    margin: auto;
-}
-
-.userinfo p {
-    text-align: center;
-    color: #FFF;
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-    font-size: 19px;
-    margin-top: 15px;
+#findmebutton:hover {
+    background: #FFF;
+    color: #2E3133;
 }
 
 .navtools ul {
@@ -56,42 +37,43 @@
 }
 
 .navtools li {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
     height: 75px;
     cursor: pointer;
     line-height: 75px;
-    color: #FFF;
+    color: #2E3133;
     font-size: 16px;
     text-align: left;
     padding-left: 37px;
 }
 
 .navtools li:hover {
-    color: #FFF;
-    background: #1C5986;
+    color: #2E3133;
+    background: #FFF;
 }
 
 .navtools li p {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
     display: inline-block;
     vertical-align: middle;
     margin-top: 9px;
     padding-left: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
     font-size: 15px;
     letter-spacing: 1px;
     
 }
 
 .navtools li a {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
     display: inline-block;
     vertical-align: middle;
     margin-top: 1px;
-    padding-left: 10px;
-    color: #FFF;
+    color: #2E3133;
     text-decoration: none;
-    font-weight: 200;
     font-size: 15px;
-    letter-spacing: .5px;
     
 }
 
@@ -110,7 +92,7 @@
 
 #searchli {
     padding-left: 23px;
-    background: #2572AC;
+    background: #EDEDED;
 
     #form {
       @include display(flex);
@@ -128,7 +110,7 @@
       #search-input {
         border: 1;
         border-radius: 0;
-        width: 70%;
+        width: 100%;
       }
     }
 }

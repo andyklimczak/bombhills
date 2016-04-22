@@ -5,20 +5,19 @@
                 <li id="searchli">
                     <div class="input-group">
                       <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
-                        <button id="map-search-button"><span class="input-group-addon" id="basic-addon1"><span class=" glyphicon glyphicon-search" aria-hidden="true"></span></span></button>
                         <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "Search..." %>
                       </form>
                     </div>
                 </li>
                 <li id="findmebutton"><span class=" glyphicon glyphicon-globe" aria-hidden="true" style="font-size: 22px;"></span> <p>Find Me</p></li>
-                <li><span class="glyphicon glyphicon-home" aria-hidden="true" style="font-size: 22px;"></span> <%= link_to ' Home ', root_path, :class => 'none' %> </li>
+              <li><span class="glyphicon glyphicon-home" aria-hidden="true" style="font-size: 22px;"></span> <p><%= link_to ' Home ', root_path, :class => 'none' %></p> </li>
                 
                 <% if user_signed_in? %> 
                 
-                <li><span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 22px;"></span> <%= link_to ' Profile ', show_user_path(current_user.username), :class => 'none' %> </li>
+              <li><span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 22px;"></span> <p><%= link_to ' Profile ', show_user_path(current_user.username) %></p> </li>
                 <% else %>
                 
-                <li><span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 22px;"></span> <%= link_to " Login ", new_user_session_path, :class => 'none'  %> </li>
+              <li><span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 22px;"></span> <p><%= link_to " Login ", new_user_session_path %></p> </li>
                 
                 <% end %>
                 
