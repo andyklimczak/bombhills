@@ -192,6 +192,8 @@ label {
 
 .signup input {
   border:none;
+  padding: 10px 0px;
+  color: #2E3133;
 }
 
 .field_with_errors {
@@ -237,6 +239,8 @@ label {
 
 .login input {
   border:none;
+  padding: 10px 0px;
+  color: #2E3133;
 }
 
 /* user settings */
@@ -316,6 +320,11 @@ label {
   cursor: pointer;
 }
 
+#editprofileshow li input {
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
 #editprofileshow li a:hover {
   text-decoration: none;
 }
@@ -336,6 +345,11 @@ label {
 .cancelaccount a {
   color: #FFF;
   text-decoration: none;
+}
+
+.cancelaccount input {
+  padding: 10px 10px;
+  color: #2E3133;
 }
 
 /*  Media Queries  */
