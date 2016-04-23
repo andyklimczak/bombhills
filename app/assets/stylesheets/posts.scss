@@ -4,37 +4,37 @@
 
 
 .userposts {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 200;
-    padding-top: 60px;
-    padding-bottom: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .thumbnail {
-    box-shadow: -1px 5px 16px -1px rgba(130,130,130,1);
+  box-shadow: -1px 5px 16px -1px rgba(130,130,130,1);
 }
 
 .userposts h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    text-align: center;
-    margin-top: 0px;
-    padding: 20px 0px;
-    color:#0166FF;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 0px;
+  padding: 20px 0px;
+  color:#0166FF;
 }
 
 .userposts p {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .userposts img {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #userbutton {
-    color: #FFF;
-    background: #2A83C6;
+  color: #FFF;
+  background: #2A83C6;
 }
 
 /*  Media Queries  */
@@ -44,25 +44,25 @@
 /* Custom, iPhone Retina */
 
 @media only screen and (max-width : 480px) {
-    .userposts ul {
-        text-align: right;
-        margin-right: 10px;
-        margin-bottom: 20px;
-        padding: 0px;
-    }
+  .userposts ul {
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 0px;
+  }
   #postscontainer {
     padding: 0px;
   }
-  
+
   .thumbnail {
     box-shadow: none;
   }
-  
+
   #thumbnailcontainer {
     padding: 0px;
     border: none;
   }
-  
+
 }
 
 

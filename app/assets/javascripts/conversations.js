@@ -3,10 +3,10 @@
 var ready;
 
 ready = function(){
-    // enable chosen js
-    $('.chosen-select').attr("data-placeholder", "Select recipients...").chosen({
-        no_results_text: 'No results matched'
-    });
+  // enable chosen js
+  $('.chosen-select').attr("data-placeholder", "Select recipients...").chosen({
+    no_results_text: 'No results matched'
+  });
 }
 
 $(document).ready(ready);

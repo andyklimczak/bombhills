@@ -1,123 +1,123 @@
 /* map */
 
 .dashboard {
-    position: absolute;
-    width: 250px;
-    height: 100%;
-    left: 0;
-    z-index: 2;
-    background-color: #EDEDED;
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  left: 0;
+  z-index: 2;
+  background-color: #EDEDED;
 }
 
 .hamburgerbutton {
-    position: absolute;
-    z-index: 1;
+  position: absolute;
+  z-index: 1;
 }
 
 #hamburgerbutton {
-    height: 50px;
-    width: 50px;
-    padding: 10px;
-    cursor: pointer;
-    color: #2A83C6;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  cursor: pointer;
+  color: #2A83C6;
 }
 
 #findmebutton {
-    background: #EDEDED;
+  background: #EDEDED;
 }
 
 #findmebutton:hover {
-    background: #FFF;
-    color: #2E3133;
+  background: #FFF;
+  color: #2E3133;
 }
 
 .navtools ul {
-    list-style-type: none;
-    padding: 0px;
+  list-style-type: none;
+  padding: 0px;
 }
 
 .navtools li {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
-    height: 75px;
-    cursor: pointer;
-    line-height: 75px;
-    color: #2E3133;
-    font-size: 16px;
-    text-align: left;
-    padding-left: 37px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  height: 75px;
+  cursor: pointer;
+  line-height: 75px;
+  color: #2E3133;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 37px;
 }
 
 .navtools li:hover {
-    color: #2E3133;
-    background: #FFF;
+  color: #2E3133;
+  background: #FFF;
 }
 
 .navtools li p {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 9px;
-    padding-left: 10px;
-    font-size: 15px;
-    letter-spacing: 1px;
-    
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 9px;
+  padding-left: 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+
 }
 
 .navtools li a {
-    font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 1px;
-    color: #2E3133;
-    text-decoration: none;
-    font-size: 15px;
-    
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 1px;
+  color: #2E3133;
+  text-decoration: none;
+  font-size: 15px;
+
 }
 
 .navtools li a:hover {
-    background: none;
+  background: none;
 }
 
 .input-group {
-    padding-top: 20px;
-    padding-right: 40px;
+  padding-top: 20px;
+  padding-right: 40px;
 }
 
 .form-control {
-    height: 37.2px;
+  height: 37.2px;
 }
 
 #searchli {
-    padding-left: 23px;
-    background: #EDEDED;
+  padding-left: 23px;
+  background: #EDEDED;
 
-    #form {
-      @include display(flex);
+  #form {
+    @include display(flex);
 
-      #map-search-button {
-        width: 30%;
+    #map-search-button {
+      width: 30%;
+      border: 0;
+
+      span {
+        font-size: 22px;
         border: 0;
-
-        span {
-          font-size: 22px;
-          border: 0;
-        }
-      }
-
-      #search-input {
-        border: 1;
-        border-radius: 0;
-        width: 100%;
       }
     }
+
+    #search-input {
+      border: 1;
+      border-radius: 0;
+      width: 100%;
+    }
+  }
 }
 
 span {
-    vertical-align: middle;
-    padding-right: 6px;
+  vertical-align: middle;
+  padding-right: 6px;
 }
 
 #myMap {
@@ -129,10 +129,10 @@ span {
 }
 
 .alert {
-    z-index: 1;
-    position: absolute;
-    right: 0;
-    margin: 15px;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  margin: 15px;
 }
 
 
@@ -141,10 +141,10 @@ span {
 /* Custom */ 
 
 @media only screen and (max-width: 540px) {
-    .userinfo {
-        display: none;
-    }
-    .dashboard {
-        left: -100%;
-    }
+  .userinfo {
+    display: none;
+  }
+  .dashboard {
+    left: -100%;
+  }
 }
