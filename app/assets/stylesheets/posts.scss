@@ -56,11 +56,11 @@
 
   .thumbnail {
     box-shadow: none;
+    border: none;
   }
 
   #thumbnailcontainer {
     padding: 0px;
-    border: none;
   }
 
 }
@@ -68,7 +68,28 @@
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) and (max-width : 768px) {
+  .userposts ul {
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 0px;
+  }
+  #postscontainer {
+    padding: 0px;
+  }
 
+  .thumbnail {
+    box-shadow: none;
+    border: none;
+  }
+  
+  .thumbnail h3 {
+    text-align: center;
+  }
+
+  #thumbnailcontainer {
+    padding: 0px;
+  }
 
 }	
 
