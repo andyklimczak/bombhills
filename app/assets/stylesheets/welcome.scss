@@ -6,5 +6,565 @@
 /* CSS Document */
 
 
+input {
+  @include placeholder {
+    color: #35353B !important;  
+  }
+}
+
+/* document */
+
+body {
+  padding-right: 0px !important
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+/* mobile header */
+
+.mobileheader {
+  height: 150px;
+  padding-left: 15px;
+  color: #0166FF;
+}
+
+.mobileheader h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.mobileheader ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.mobileheader li {
+  margin: 5px 5px;
+  list-style-type: none;
+  display: inline;
+}
+
+.mobileheader a {
+  text-decoration: none;
+  color: #0166FF;
+}
+
+.mobileheader a:hover {
+  background: none;
+  color: #0166FF;
+}
+
+/* header */
+
+.header {
+  height: 550px;
+  background: url('headerdesktop.jpg');
+  background-repeat: no-repeat;
+}
+
+/* nav */
+
+.dropdown-menu {
+  text-align: center;
+}
+
+.navigation {
+  height: 100px;
+}
+
+.nav-pills {
+  padding: 20px 15px;
+  float: right;
+}
+
+.nav-pills > li > a {
+  border: solid;
+  border-width: 2px;
+  margin: 0px 5px;
+}
+
+.nav-pills > li > a:hover {
+  background-color: #0166FF;
+  border-color: #0166FF;
+  color: #FFF;
+}
+
+/*content*/
+
+.content {
+  height: 290px;
+  text-align: center;
+}
+
+.content h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 125px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #0166FF;
+}
+
+.content a {
+  background-color: #0166FF;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #FFF;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 12px 22px;
+  text-decoration: none;
+}
+
+.content a:hover {
+  background-color: rgba(0,0,0,.4);
+
+}
+
+/*find */
+
+.find {
+  height: 110px;
+  text-align: center;
+  background: rgba(0,0,0,.0);
+  font-family: 'Open Sans', sans-serif;
+}
+
+#form {
+  padding-bottom: 25px;
+}
+
+#search {
+  background: transparent none repeat scroll 0% 0%;
+  border-width: 0px 0px 1px;
+  border-style: none none solid;
+  border-color: -moz-use-text-color -moz-use-text-color #35353B;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  border-radius: 0px;
+  color: #35353B;
+  font-size: 18px;
+  margin: 0px 2px;
+  width: 325px;
+}
+
+#searchbutton {
+  color: #FFF;
+  border-radius: 6px;
+  border-color: #0166FF;
+  padding: 10px 20px;
+  margin: 0px 2px;
+  margin-bottom: 2px;
+  text-decoration: none;
+  background: #0166FF;
+}
+
+#searchbutton:hover {
+  background-color: rgba(0,0,0,.4);
+  border: none;
+}
+
+/* display */
+
+.display {
+  text-align: left;
+  background-color: #EDEDED;
+}
+
+.display .container div {
+  height: 400px;
+  @include display(flex);
+  @include justify-content(center);
+  @include align-content(center);
+  @include flex-direction(column);
+}
+
+.display img {
+  width: 250px;
+}
+
+.display p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+.display h2 {
+  color: #0166FF;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+
+/* user content */
+
+.usercontent {
+  height: 350px;
+  background: #1F6193;
+  background-size: cover;
+  text-align: center;
+  background-image: url('hilltwo.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.usercontent p {
+  line-height: 350px;
+  font-size: 32px;
+  color: #FFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+.usercontent a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  background: #FFF;
+  color: #0166FF;
+  font-size: 32px;
+  border-radius: 6px;
+  margin: 0px;
+  text-decoration: none;
+  padding: 20px 40px;
+
+}
+
+.usercontent a:hover {
+  background: rgba(255,255,255,.75);
+  border: thin solid rgba(255,255,255,.75);
+}
+
+/* footer */
+
+.footer {
+  padding: 20px 0px 80px;
+  text-align: right;
+  background: #2E3133;
+  color: #FFF;
+}
+
+.footer h1 {
+  font-size: 35px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer li {
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  margin: 10px 0px;
+}
+
+.footer li a {
+  text-decoration: none;
+  margin: 10px 0px;
+  color: #FFF;
+}
+
+.footer li a:hover {
+  background: none;
+  color: #FFF;
+}
+
+.reference {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  Media Queries  */
+
+/* Custom */ 
+
+@media only screen and (max-width: 370px) {
+  .navigation {
+    display: none;
+  }
+  .header {
+    height: 300px;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  .content {
+    height: 225px;
+  }
+  .content h1 {
+    display: none;
+  }
+  .content a {
+    font-size: 32px;
+    padding: 12px 22px;
+    line-height: 300px;
+  }
+  .find {
+    display: none;
+  }
+  .display {
+    text-align: left;
+    background: #FFF;
+  }
+  .display .container div {
+    height: 190px;
+  }
+  .display p {
+    padding-top: 15px;
+    font-size: 16px;
+    color: #000;
+  }
+
+  .display h2 {
+    display: none;
+  }
+  #explorecol {
+    display: none;
+  }
+  .usercontent {
+    height: 225px;
+    background-size: cover;
+  }
+  .usercontent a {
+    padding: 10px 20px;
+    font-size: 32px;
+  }
+  .usercontent p {
+    line-height: 225px;
+    font-size: 42px;
+  }
+  #contactfooter {
+    display: none;
+  }
+  #startto {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 370px) and (max-width: 472px) {
+  .navigation {
+    display: none;
+  }
+  #header {
+    height: 325px;
+    background-attachment: scroll;
+  }
+  .header {
+    background-size: cover;
+  }
+  .content {
+    height: 225px;
+  }
+  .content h1 {
+    display: none;
+  }
+  .content a {
+    font-size: 32px;
+    padding: 12px 22px;
+    line-height: 325px;
+    border-radius: 0px;
+  }
+  .header {
+    height: 440px;
+  }
+  .find {
+    display: none;
+  }
+  .display {
+    text-align: left;
+    background: #FFF;
+  }
+  .display .container div {
+    height: 175px;
+  }
+  .display p {
+    padding-top: 15px;
+    font-size: 16px;
+    color: #000;
+  }
+  .display h2 {
+    display: none;
+  }
+  #explorecol {
+    display: none;
+  }
+  .usercontent {
+    height: 250px;
+    background-size: cover;
+  }
+  .usercontent a {
+    line-height: 250px;
+    padding: 10px 20px;
+    font-size: 32px;
+  }
+  .usercontent p {
+    line-height: 250px;
+    font-size: 42px;
+  }
+  #contactfooter {
+    display: none;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 472px) and (max-width : 565px) {
+  .navigation {
+    display: none;
+  }
+  #header {
+    height: 350px;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .content {
+    height: 225px;
+  }
+  .content a {
+    font-size: 32px;
+    padding: 12px 22px;
+    line-height: 350px;
+    border-radius: 0px;
+  }
+  .content h1 {
+    display: none;
+  }
+  .header {
+    height: 440px;
+  }
+  .find {
+    display: none;
+  }
+  .display {
+    background: #FFF;
+  }
+  .display .container div {
+    height: 300px;
+  }
+  .display p {
+    font-size: 16px;
+    color: #000;
+  }
+  .display h2 {
+    display: none;
+  }
+  #explorecol {
+    display: none;
+  }
+  .usercontent {
+    height: 250px;
+    background-size: cover;
+  }
+  .usercontent a {
+    line-height: 250px;
+    padding: 10px 20px;
+    font-size: 32px;
+  }
+  .usercontent p {
+    line-height: 250px;
+    font-size: 42px;
+  }
+  #contactfooter {
+    display: none;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 565px ) and (max-width : 768px) {
+  .mobileheader {
+    display: none;
+  }
+  .header {
+    height: 440px;
+  }
+  .navigation ul {
+    margin-right: 15px;
+    margin-top: 15px;
+  }
+  .content h1 {
+    font-size: 125px;
+  }
+  .find {
+    display: none;
+  }
+  .display .container div {
+    height: 300px;
+  }
+  .display p {
+    font-size: 16px;
+  }
+  #explorecol {
+    display: none;
+  }
+  .usercontent {
+    height: 250px;
+  }
+  .usercontent a {
+    line-height: 250px;
+  }
+  .usercontent p {
+    line-height: 250px;
+    font-size: 42px;
+  }
+
+  #contactfooter {
+    display: none;
+  }
+
+}	
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width: 992px) {
+  .mobileheader {
+    display: none;
+  }
+  .display p {
+    font-size: 20px;
+  }
+}	
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) and (max-width: 1200px) {
+  .mobileheader {
+    display: none;
+  }
+  .display p {
+    font-size: 24px;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .mobileheader {
+    display: none;
+  }
+}
 
 
