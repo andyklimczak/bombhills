@@ -4,8 +4,6 @@
 
 
 .userposts {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 200;
   padding-top: 60px;
   padding-bottom: 40px;
 }
@@ -13,7 +11,6 @@
 .thumbnail {
   box-shadow: -1px 5px 16px -1px rgba(130,130,130,1);
 }
-
 .userposts h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
@@ -24,6 +21,8 @@
 }
 
 .userposts p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -57,6 +56,10 @@
   .thumbnail {
     box-shadow: none;
     border: none;
+  }
+  
+  .thumbnail h3 {
+    text-align: center;
   }
 
   #thumbnailcontainer {

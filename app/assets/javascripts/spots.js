@@ -5,8 +5,16 @@ var newPoint = function(userEmail, lat, long, style, title, description, difficu
     lat, long), {
       title: title,
       description: "Description: " + description + "<br/>Created by: " + userEmail + "<br/>Difficulty: " + difficulty,
-      pushpin: pointName
+      pushpin: pointName,
+      actions: [
+            {label: 'trips', eventHandler: btn1Handler}, 
+            ]  
     }));
+}
+
+function btn1Handler() 
+{ 
+   //Do your stuff.
 }
 
 var map;
