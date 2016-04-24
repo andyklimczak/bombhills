@@ -21,7 +21,7 @@ function getMap() {
 
 
         Microsoft.Maps.Events.addHandler(map, 'rightclick', function(e) {
-          if (gon.user_signed_in && e.isSecondary) {
+          if (gon.user_signed_in && e.isSecondary && map.getZoom() > 19) {
             $('#new-location-form').modal('toggle');
             var point = new Microsoft.Maps.Point(e.getY(),e.getX());
             var pixelLocation = e.target.tryPixelToLocation(point);
@@ -30,6 +30,7 @@ function getMap() {
             //set data in element to be used when creating a new point
             document.getElementById('new-latitude').value = computedLocation.latitude;
             document.getElementById('new-longitude').value = computedLocation.longitude;
+            console.log(map.getZoom());
           } else {
             $('#new-location-error').modal('toggle');
           }
