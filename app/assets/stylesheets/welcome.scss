@@ -247,8 +247,9 @@ body {
 }
 
 .usercontent a:hover {
-  background: rgba(255,255,255,.75);
-  border: thin solid rgba(255,255,255,.75);
+  background: #0166FF;
+  border: thin solid #0166FF;
+  color: #FFF;
 }
 
 /* footer */
@@ -256,7 +257,7 @@ body {
 .footer {
   padding: 20px 0px 80px;
   text-align: right;
-  background: #2E3133;
+  background: #00337F;
   color: #FFF;
 }
 
