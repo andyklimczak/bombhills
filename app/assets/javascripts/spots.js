@@ -7,22 +7,20 @@ var newPoint = function(userEmail, lat, long, style, title, description, difficu
       description: "Description: " + description + "<br/>Created by: " + userEmail + "<br/>Difficulty: " + difficulty,
       pushpin: pointName,
       actions: [
-            {label: 'meetups', eventHandler: btn1Handler}, 
-            {label: 'delete', eventHandler: btn1Handler2}, 
-            ]  
+        {label: 'meetups', eventHandler: meetupEventHandler}, 
+        {label: 'delete', eventHandler: deleteEventHandler}, 
+      ]  
     }));
 }
 
-function btn1Handler() 
-{           
-    $('.meetups').animate({
-      left: "0"
-    }, 200);
+function meetupEventHandler() {           
+  $('.meetups').animate({
+    left: "0"
+  }, 200);
 }
 
-function btn1Handler2() 
-{ 
-   //Do your stuff.
+function deleteEventHandler() { 
+  //Do your stuff.
 }
 
 var map;
