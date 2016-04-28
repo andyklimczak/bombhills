@@ -5,22 +5,19 @@
       <div class="modal-header">
         <h4 class="modal-title" id="myModalLabel"><%= @user.username %>'s Spots</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="spots-modal-body">
         <% if @user.spots.any? %>
           <% @user.spots.each do |spot| %>
             <ul>
               <li>
                 <%= spot.title %>
               </li>
-              <li>
-                <%= spot.difficulty %>
-              </li>
+              <br>
+              <br>
               <li>
                 <%= link_to 'View', spots_path(id: spot.id) %>
               </li>
-              <li>
-                <a style="padding: 5px; background: #CF3530;color: #FFF;border-radius: 6px;">delete</a>
-              </li>
+              <br>
             </ul>
           <% end %>
           <% else %>

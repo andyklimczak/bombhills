@@ -7,12 +7,20 @@ var newPoint = function(userEmail, lat, long, style, title, description, difficu
       description: "Description: " + description + "<br/>Created by: " + userEmail + "<br/>Difficulty: " + difficulty,
       pushpin: pointName,
       actions: [
-            {label: 'trips', eventHandler: btn1Handler}, 
+            {label: 'meetups', eventHandler: btn1Handler}, 
+            {label: 'delete', eventHandler: btn1Handler2}, 
             ]  
     }));
 }
 
 function btn1Handler() 
+{           
+    $('.meetups').animate({
+      left: "0"
+    }, 200);
+}
+
+function btn1Handler2() 
 { 
    //Do your stuff.
 }
@@ -69,6 +77,18 @@ $(function (){
   $('#fullscreenbutton, #hamburgerbutton').click(function (){           
     $('.dashboard').animate({
       left: this.id === 'fullscreenbutton' ? "-100%" : "0"
+    }, 200);
+    $('.meetups').animate({
+      marginLeft: this.id === 'fullscreenbutton' ? "0" : "250px"
+    }, 200);
+  });
+});
+
+
+$(function (){
+  $('#closemeetupsbutton').click(function (){           
+    $('.meetups').animate({
+      left: this.id === 'closemeetupsbutton' ? "-100%" : "0"
     }, 200);
   });
 });
