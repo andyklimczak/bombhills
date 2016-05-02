@@ -45,13 +45,16 @@
     <li>date</li>
   </ul>
   <h3>attendees</h3>
-  <ul id="meetupsattendees">
-    <li>user one</li>
-    <li>user two</li>
-    <li>user three</li>
-  </ul>
+  <div class="form-group">
+    <select class="form-control" id="sel1" style="width: 200px;margin-left: 20px;">
+      <option>username</option>
+      <option>username</option>
+      <option>username</option>
+      <option>username</option>
+    </select>
+  </div>
   <h3>nothing planned?</h3>
-  <button type="button" class="btn btn-primary btn-lg" style="margin-left: 20px;">Create</button>
+  <button type="button" class="btn btn-primary btn-lg" style="margin-left: 20px;border: none;background: #FFF;color:#000;">Create</button>
 </div>
 
 <%= render 'spots/form' %>
