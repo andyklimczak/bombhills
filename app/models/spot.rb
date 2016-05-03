@@ -24,6 +24,7 @@
 class Spot < ActiveRecord::Base
   belongs_to :user
   has_many :posts
+  has_many :events
   validates :latitude, :longitude, :title, :difficulty, presence: true
 	validates :difficulty,
 			:inclusion  => { :in => ['Beginner', 'Intermediate', 'Expert'],

@@ -40,6 +40,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   has_many :spots, -> { order 'created_at desc' }
   has_many :posts, -> { order 'created_at desc' }
+  has_and_belongs_to_many :events
 	validates :username,
 		:presence => true,
 		:uniqueness => {
