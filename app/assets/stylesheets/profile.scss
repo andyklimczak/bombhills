@@ -179,6 +179,11 @@ label {
   color: #FFF;
 }
 
+.signup a:hover {
+  background: none;
+  text-decoration: none;
+}
+
 .signup label {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
@@ -186,7 +191,7 @@ label {
 
 .signup input {
   border:none;
-  padding: 10px 0px;
+  padding: 10px 10px;
   color: #2E3133;
 }
 
@@ -226,6 +231,11 @@ label {
   color: #FFF;
 }
 
+.login a:hover {
+  background: none;
+  text-decoration: none;
+}
+
 .login label {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
@@ -233,7 +243,7 @@ label {
 
 .login input {
   border:none;
-  padding: 10px 0px;
+  padding: 10px 10px;
   color: #2E3133;
 }
 

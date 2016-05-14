@@ -19,7 +19,7 @@
   margin-left: 250px;
   height: 100%;
   left: -100%;
-  z-index: 1;
+  z-index: 2;
   background-color: #0166FF;
   color: #fff;
 }
@@ -31,7 +31,7 @@
 }
 
 .meetups h1 {
-  margin-top: 70px;
+  margin-top: 10px;
 }
 
 .meetups h3 {
@@ -65,7 +65,7 @@
 
 .hamburgerbutton {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 
 #hamburgerbutton {

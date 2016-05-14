@@ -8,7 +8,8 @@ var newPoint = function(userEmail, lat, long, style, title, description, difficu
       pushpin: pointName,
       actions: [
         {label: 'meetups', eventHandler: meetupEventHandler}, 
-        {label: 'delete', eventHandler: deleteEventHandler}, 
+        {label: 'edit', eventHandler: editEventHandler},
+        {label: 'delete', eventHandler: deleteEventHandler},
       ]  
     }));
 }
@@ -20,6 +21,10 @@ function meetupEventHandler() {
 }
 
 function deleteEventHandler() { 
+  //Do your stuff.
+}
+
+function editEventHandler() { 
   //Do your stuff.
 }
 
