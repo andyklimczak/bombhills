@@ -54,7 +54,7 @@
       <div class="profile-content">
           <div class="row">
             <% @user.posts.each do |post| %>
-              <div class="col-sm-6 col-md-6">
+              <div class="col-sm-6 col-md-6" style="padding: 0px;">
                 <%= image_tag post.image.url(:medium),:class => 'img-responsive' %>
               </div>
             <% end %>
