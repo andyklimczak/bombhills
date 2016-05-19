@@ -32,7 +32,7 @@ body {
 .mobileheader {
   height: 150px;
   padding-left: 15px;
-  color: #0166FF;
+  color: #3B3A3A;
 }
 
 .mobileheader h1 {
@@ -57,7 +57,7 @@ body {
 
 .mobileheader a {
   text-decoration: none;
-  color: #0166FF;
+  color: #3B3A3A;
 }
 
 .mobileheader a:hover {
@@ -95,8 +95,8 @@ body {
 }
 
 .nav-pills > li > a:hover {
-  background-color: #0166FF;
-  border-color: #0166FF;
+  background-color: #066964;
+  border-color: #066964;
   color: #FFF;
 }
 
@@ -115,11 +115,11 @@ body {
   padding: 0px;
   margin-top: 50px;
   margin-bottom: 20px;
-  color: #0166FF;
+  color: #233E47;
 }
 
 .content a {
-  background-color: #0166FF;
+  background-color: #066964;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: #FFF;
@@ -167,12 +167,12 @@ body {
 #searchbutton {
   color: #FFF;
   border-radius: 6px;
-  border-color: #0166FF;
+  border-color: #066964;
   padding: 10px 20px;
   margin: 0px 2px;
   margin-bottom: 2px;
   text-decoration: none;
-  background: #0166FF;
+  background: #066964;
 }
 
 #searchbutton:hover {
@@ -207,7 +207,7 @@ body {
 }
 
 .display h2 {
-  color: #0166FF;
+  color: #233E47;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
 }
@@ -237,7 +237,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   background: #FFF;
-  color: #0166FF;
+  color: #233E47;
   font-size: 32px;
   border-radius: 6px;
   margin: 0px;
@@ -247,9 +247,8 @@ body {
 }
 
 .usercontent a:hover {
-  background: #0166FF;
-  border: thin solid #0166FF;
-  color: #FFF;
+  background: rgba(255,255,255,.5);
+  border: none;
 }
 
 /* footer */
@@ -257,7 +256,7 @@ body {
 .footer {
   padding: 20px 0px 80px;
   text-align: right;
-  background: #0166FF;
+  background: #066964;
   color: #FFF;
 }
 

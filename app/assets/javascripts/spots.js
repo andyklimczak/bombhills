@@ -7,7 +7,6 @@ var newPoint = function(userEmail, lat, long, style, title, description, difficu
       description: "Description: " + description + "<br/>Created by: " + userEmail + "<br/>Difficulty: " + difficulty,
       pushpin: pointName,
       actions: [
-        {label: 'meetups', eventHandler: meetupEventHandler}, 
         {label: 'edit', eventHandler: editEventHandler},
         {label: 'delete', eventHandler: deleteEventHandler},
       ]  
@@ -15,9 +14,7 @@ var newPoint = function(userEmail, lat, long, style, title, description, difficu
 }
 
 function meetupEventHandler() {           
-  $('.meetups').animate({
-    left: "0"
-  }, 200);
+
 }
 
 function deleteEventHandler() { 

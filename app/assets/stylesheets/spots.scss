@@ -20,8 +20,8 @@
   height: 100%;
   left: -100%;
   z-index: 2;
-  background-color: #0166FF;
-  color: #fff;
+  background-color: #3B3A3A;
+  color: #FFF;
 }
 
 .meetups h1, .meetups h2, .meetups  h3 {
@@ -36,6 +36,11 @@
 
 .meetups h3 {
   margin-top: 10px;
+}
+
+.meetups p {
+  margin-left: 20px;
+  margin-top: 5px;
 }
 
 .meetups ul {
@@ -73,7 +78,6 @@
   width: 50px;
   padding: 10px;
   cursor: pointer;
-  color: #00337F;
   margin-left: 7px;
 }
 
