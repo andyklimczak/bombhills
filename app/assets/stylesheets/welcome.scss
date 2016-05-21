@@ -258,7 +258,8 @@ body {
 .footer {
   padding: 20px 0px 80px;
   text-align: right;
-  color: #233E47;
+  color: #FFF;
+  background: #212121;
 }
 
 .footer h1 {
@@ -282,7 +283,7 @@ body {
 .footer li a {
   text-decoration: none;
   margin: 10px 0px;
-  color: #233E47;
+  color: #FFF;
 }
 
 .footer li a:hover {
@@ -365,13 +366,6 @@ body {
     display: none;
   }
   
-  .footer {
-    background: #066964;
-    color: #FFF;
-  }
-  .footer li a {
-    color: #FFF;
-  }
 }
 
 @media only screen and (min-width: 370px) and (max-width: 472px) {
@@ -434,13 +428,6 @@ body {
   }
   #contactfooter {
     display: none;
-  }
-  .footer {
-    background: #066964;
-    color: #FFF;
-  }
-  .footer li a {
-    color: #FFF;
   }
 }
 

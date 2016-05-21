@@ -34,12 +34,12 @@
 .navtools li {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
-  height: 75px;
+  height: 60px;
   cursor: pointer;
-  line-height: 75px;
+  line-height: 60px;
   font-size: 16px;
   text-align: left;
-  padding-left: 37px;
+  padding-left: 28px;
 }
 
 .navtools li:hover {
@@ -51,7 +51,6 @@
   font-weight: 400;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 9px;
   padding-left: 10px;
   font-size: 15px;
   letter-spacing: 1px;
@@ -72,6 +71,14 @@
 .navtools li a:hover {
   background: none;
   color: #FFF;
+}
+
+.navtools li img {
+  width: 45%;
+  height: 85%;
+  border-radius: 50%;
+  margin-left: 65px;
+  margin-top: 8px;
 }
 
 .input-group {
@@ -103,7 +110,6 @@
     #search-input {
       border: 1;
       border-radius: 0;
-      width: 100%;
     }
   }
 }
