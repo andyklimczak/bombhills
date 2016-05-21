@@ -71,6 +71,7 @@ body {
   height: 550px;
   background: url('headerdesktop.jpg');
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* nav */
@@ -221,7 +222,7 @@ body {
   background: #1F6193;
   background-size: cover;
   text-align: center;
-  background-image: url('hilltwo.jpg');
+  background-image: url('road.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -237,8 +238,8 @@ body {
 .usercontent a {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  background: #FFF;
-  color: #233E47;
+  background: #066964;
+  color: #FFF;
   font-size: 32px;
   border-radius: 6px;
   margin: 0px;
@@ -248,7 +249,7 @@ body {
 }
 
 .usercontent a:hover {
-  background: rgba(255,255,255,.5);
+  background: #233E47;
   border: none;
 }
 
@@ -257,8 +258,7 @@ body {
 .footer {
   padding: 20px 0px 80px;
   text-align: right;
-  background: #066964;
-  color: #FFF;
+  color: #233E47;
 }
 
 .footer h1 {
@@ -282,7 +282,7 @@ body {
 .footer li a {
   text-decoration: none;
   margin: 10px 0px;
-  color: #FFF;
+  color: #233E47;
 }
 
 .footer li a:hover {
@@ -365,8 +365,13 @@ body {
   #contactfooter {
     display: none;
   }
-  #startto {
-    display: none;
+  
+  .footer {
+    background: #066964;
+    color: #FFF;
+  }
+  .footer li a {
+    color: #FFF;
   }
 }
 
@@ -432,6 +437,13 @@ body {
   }
   #contactfooter {
     display: none;
+  }
+  .footer {
+    background: #066964;
+    color: #FFF;
+  }
+  .footer li a {
+    color: #FFF;
   }
 }
 

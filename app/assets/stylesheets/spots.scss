@@ -108,9 +108,17 @@
   }
 }
 
-span {
-  vertical-align: middle;
-  padding-right: 6px;
+
+#maperrorloginbutton {
+  background: #FFF;
+  padding: 10px 15px;
+  border-radius: 6px; 
+  font-size: 20px;
+}
+
+#maperrorloginbutton:hover {
+  color: #000;
+  text-decoration: none;
 }
 
 #myMap {
