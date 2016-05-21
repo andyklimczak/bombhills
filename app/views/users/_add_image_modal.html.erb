@@ -1,12 +1,12 @@
 <!-- add image modal -->
 <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
+    <div class="modal-content" style="background:#066964;">
+      <div class="modal-header" style="background:#066964;border: none;color: #FFF;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Upload</h4>
+        <h4 class="modal-title" id="myModalLabel">Add Image Post</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="color: #FFF;">
         <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
 
           <label for="usr">File:</label>
@@ -24,6 +24,22 @@
           <%= f.submit class: 'submitimg' %>
 
         <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- add video modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background:#066964;">
+      <div class="modal-header" style="background:#066964;border: none;color: #FFF;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Video Post</h4>
+      </div>
+      <div class="modal-body" style="color: #FFF;">
+
       </div>
     </div>
   </div>
