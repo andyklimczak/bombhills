@@ -14,6 +14,12 @@
               <%= image_tag current_user.avatar.url(:medium)  %>
             </li>
           
+          <% else %>
+          
+            <li style="padding: 0px;height: 125px;">
+              <%= image_tag "usertwo.png" %>
+            </li>
+          
           <% end %>
           <li id="searchli">
             <div class="input-group" style="padding-right: 0px;padding-top: 10px;">
