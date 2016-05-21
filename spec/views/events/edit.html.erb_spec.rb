@@ -5,7 +5,7 @@ RSpec.describe "events/edit", type: :view do
     @event = assign(:event, Event.create!(
       :title => "MyString",
       :description => "MyString",
-      :time => ""
+      :datetime => ""
     ))
   end
 
@@ -18,7 +18,7 @@ RSpec.describe "events/edit", type: :view do
 
       assert_select "input#event_description[name=?]", "event[description]"
 
-      assert_select "input#event_time[name=?]", "event[time]"
+      assert_select "input#event_datetime[name=?]", "event[datetime]"
     end
   end
 end

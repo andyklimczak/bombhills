@@ -6,12 +6,12 @@ RSpec.describe "events/index", type: :view do
       Event.create!(
         :title => "Title",
         :description => "Description",
-        :time => ""
+        :datetime => ""
       ),
       Event.create!(
         :title => "Title",
         :description => "Description",
-        :time => ""
+        :datetime => ""
       )
     ])
   end
