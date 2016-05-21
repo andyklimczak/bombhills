@@ -1,3 +1,4 @@
+/*
 
 function imageScroll() {
   if(document.getElementById("header")) {
@@ -12,4 +13,6 @@ function imageScroll() {
 };
 
 $(document).ready(imageScroll);
+
+*/
 

@@ -9,8 +9,17 @@
 }
 
 .thumbnail {
-  box-shadow: -1px 5px 16px -1px rgba(130,130,130,1);
+  border: none;
 }
+
+.caption h3 {
+  margin-top: 0px;
+}
+
+.caption p {
+  margin-bottom: 15px;
+}
+
 .userposts h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
@@ -34,6 +43,7 @@
 #userbutton {
   color: #FFF;
   background: #233E47;
+  margin-right: 5px;
 }
 
 /*  Media Queries  */

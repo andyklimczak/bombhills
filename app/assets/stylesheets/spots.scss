@@ -13,61 +13,6 @@
   background-color: #FFF;
 }
 
-.meetups {
-  position: absolute;
-  width: 265px;
-  margin-left: 250px;
-  height: 100%;
-  left: -100%;
-  z-index: 2;
-  background-color: #3B3A3A;
-  color: #FFF;
-}
-
-.meetups h1, .meetups h2, .meetups  h3 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-  margin-left: 20px;
-}
-
-.meetups h1 {
-  margin-top: 10px;
-}
-
-.meetups h3 {
-  margin-top: 10px;
-}
-
-.meetups p {
-  margin-left: 20px;
-  margin-top: 5px;
-}
-
-.meetups ul {
-  list-style-type: none;
-  padding: 0px;
-  margin-left: 20px;
-}
-
-#meetupstime li {
-  display: inline;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-}
-
-#meetupsattendees li {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-}
-
-#closemeetupsbutton {
-  float: right;
-  padding: 15px;
-  cursor: pointer;
-}
-
 .hamburgerbutton {
   position: absolute;
   z-index: 1;
@@ -184,7 +129,6 @@ span {
 }
 
 #new-location-error-modal-button {
-  color: #FFF;
   border: none;
 }
 
@@ -196,10 +140,10 @@ span {
   #spots-modal-body ul {
     padding-left: 0px;
   }
-  .meetups {
-    margin-left: 0px;
-    z-index: 3;
+  .dashboard {
+    left: -100%;
   }
+
 }
 
 @media only screen and (min-width: 370px) and (max-width: 472px) {

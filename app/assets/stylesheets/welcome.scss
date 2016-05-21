@@ -210,6 +210,7 @@ body {
   color: #233E47;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
+  font-size: 38px;
 }
 
 
@@ -564,6 +565,9 @@ body {
 @media only screen and (min-width : 1200px) {
   .mobileheader {
     display: none;
+  }
+  .header {
+    background-position: right;
   }
 }
 
