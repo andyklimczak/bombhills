@@ -34,15 +34,10 @@
                 Overview </a>
             </li>
             <% if current_user == @user %>
-              <li id="useruploadbutton" data-toggle="modal" data-target="#imageModal">
+              <li data-toggle="modal" data-target="#postModal">
                 <a href="#">
                   <i class="glyphicon glyphicon-camera"></i>
-                  Add Image Post </a>
-              </li>
-              <li data-toggle="modal" data-target="#videoModal">
-                <a href="#">
-                  <i class="glyphicon glyphicon-facetime-video"></i>
-                  Add Video Post </a>
+                  Add Post </a>
               </li>
             <% end %>
           </ul>

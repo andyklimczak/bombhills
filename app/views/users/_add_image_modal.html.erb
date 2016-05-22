@@ -1,37 +1,8 @@
-<!-- add image modal -->
-<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content" style="background:#066964;">
-      <div class="modal-header" style="background:#066964;border: none;color: #FFF;">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Add Image Post</h4>
-      </div>
-      <div class="modal-body" style="color: #FFF;">
-        <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
-
-          <label for="usr">File:</label>
-          <%= f.file_field :image %>
-
-          <%= f.label :title, "Title:" %>
-          <%= f.text_field :title, {class: 'form-control', id:'usr'} %>
-
-          <%= f.label :description, "Description:" %>
-          <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'comment'}%>
-
-          <%= f.label :spot_id, "Tag a spot" %>
-          <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'sel1' } %>
-
-          <%= f.submit class: 'submitimg' %>
-
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
 
 
-<!-- add video modal -->
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+<!-- add post modal -->
+<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content" style="background:#066964;">
       <div class="modal-header" style="background:#066964;border: none;color: #FFF;">
@@ -39,8 +10,51 @@
         <h4 class="modal-title" id="myModalLabel">Add Video Post</h4>
       </div>
       <div class="modal-body" style="color: #FFF;">
+        <ul class="nav nav-tabs" style="border: none;" id="tabContent">
+          <li style="margin-left: 0px;"><a href="#Picture" data-toggle="tab" style="background: #233E47;color: #FFF;">Picture</a></li>
+          <li><a href="#Video" data-toggle="tab" style="background: #233E47;color: #FFF;">Video</a></li>
+        </ul>
+  
+        <div class="tab-content">
+          <div class="tab-pane active" id="Picture">    
+            <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
 
-      </div>
+              <label for="usr">File:</label>
+              <%= f.file_field :image %>
+
+              <%= f.label :title, "Title:" %>
+              <%= f.text_field :title, {class: 'form-control', id:'usr'} %>
+
+              <%= f.label :description, "Description:" %>
+              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'comment'}%>
+
+              <%= f.label :spot_id, "Tag a spot" %>
+              <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'sel1' } %>
+
+              <%= f.submit class: 'submitimg' %>
+
+            <% end %>
+          </div>
+          <div class="tab-pane" id="Video">
+            <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
+
+              <label for="usr">Link to embed:</label>
+              <%= f.text_field :title, {class: 'form-control', id:'usr'} %>
+
+              <%= f.label :title, "Title:" %>
+              <%= f.text_field :title, {class: 'form-control', id:'usr'} %>
+
+              <%= f.label :description, "Description:" %>
+              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'comment'}%>
+
+              <%= f.label :spot_id, "Tag a spot" %>
+              <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'sel1' } %>
+
+              <%= f.submit class: 'submitimg' %>
+
+            <% end %>
+          </div> 
+        </div>
     </div>
   </div>
 </div>
