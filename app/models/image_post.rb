@@ -14,6 +14,7 @@
 #  image_updated_at   :datetime
 #  spot_id            :integer
 #  type               :string
+#  video_url          :string
 #
 # Indexes
 #

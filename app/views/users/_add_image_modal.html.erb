@@ -39,8 +39,8 @@
           <div class="tab-pane" id="Video">
             <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
 
-              <label for="usr">Link to embed:</label>
-              <%= f.text_field :title, {class: 'form-control', id:'usr'} %>
+              <%= f.label :video_url, "Video Url:" %>
+              <%= f.text_field :video_url, {class: 'form-control', id:'usr'} %>
 
               <%= f.label :title, "Title:" %>
               <%= f.text_field :title, {class: 'form-control', id:'usr'} %>
@@ -50,6 +50,7 @@
 
               <%= f.label :spot_id, "Tag a spot" %>
               <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'sel1' } %>
+              <%= f.hidden_field :type, value: 'VideoPost' %>
 
               <%= f.submit class: 'submitimg' %>
 
