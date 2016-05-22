@@ -30,6 +30,7 @@
 
               <%= f.label :spot_id, "Tag a spot" %>
               <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'sel1' } %>
+              <%= f.hidden_field :type, value: 'ImagePost' %>
 
               <%= f.submit class: 'submitimg' %>
 
