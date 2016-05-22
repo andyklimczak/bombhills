@@ -22,7 +22,7 @@
           
           <% end %>
           <li id="searchli">
-            <div class="input-group" style="padding-right: 0px;padding-top: 10px;">
+            <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
               <form action="%3C%=%20spots_path%20%%3E" class="form-inline" id=
               "form" method="get" name="form">
                 <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "Search..." %>
@@ -76,5 +76,7 @@
       </div>
     </div>
   </div><%= render 'spots/form' %><%= render 'spots/form_error' %>
+  
+  
 </body>
 </html>

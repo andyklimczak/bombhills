@@ -7,21 +7,17 @@ var newPoint = function(userEmail, lat, long, style, title, description, difficu
       description: "Description: " + description + "<br/>Created by: " + userEmail + "<br/>Difficulty: " + difficulty,
       pushpin: pointName,
       actions: [
-        {label: 'edit', eventHandler: editEventHandler},
+        {label: 'meetup', eventHandler: meetupEventHandler},
         {label: 'delete', eventHandler: deleteEventHandler},
       ]  
     }));
 }
 
 function meetupEventHandler() {           
-
+  window.location.href = "/events";
 }
 
 function deleteEventHandler() { 
-  //Do your stuff.
-}
-
-function editEventHandler() { 
   //Do your stuff.
 }
 
