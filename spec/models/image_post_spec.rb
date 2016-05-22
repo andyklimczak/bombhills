@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
+RSpec.describe ImagePost, type: :model do
   it 'can be created' do
-    post = create(:post)
+    post = create(:image_post)
     expect(post.save).to eq(true)
   end
 

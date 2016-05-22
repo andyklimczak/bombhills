@@ -1,9 +1,9 @@
 require 'ffaker'
 
 FactoryGirl.define do
-  factory :post do
+  factory :video_post do
     title { FFaker::Product.product }
-    image "http://placeskull.com/400/200/"
+    video_url "//www.youtube.com/embed/c7rCyll5AeY"
     description { FFaker::HipsterIpsum.paragraph }
     user
     spot

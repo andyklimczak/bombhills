@@ -37,9 +37,9 @@ RSpec.describe User, :type => :model do
 
   it 'should have posts ordered by created_at desc' do
 		user = create(:user, username: "test_username")
-    post1 = create(:post, title: 'post1', user: user)
-    post2 = create(:post, title: 'post2', user: user)
-    post3 = create(:post, title: 'post3', user: user)
+    post1 = create(:image_post, title: 'post1', user: user)
+    post2 = create(:video_post, title: 'post2', user: user)
+    post3 = create(:image_post, title: 'post3', user: user)
     expect(user.posts.first).to eq(post3)
     expect(user.posts.last).to eq(post1)
   end
