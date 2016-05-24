@@ -10,13 +10,13 @@
         <ul>
           <% if user_signed_in? %>
           
-            <li style="padding: 0px;height: 125px;">
+            <li style="padding: 0px;height: 125px;text-align: center;line-height: 125px;">
               <%= image_tag current_user.avatar.url(:medium)  %>
             </li>
           
           <% else %>
           
-            <li style="padding: 0px;height: 125px;">
+            <li style="padding: 0px;height: 125px;text-align: center;line-height: 125px;">
               <%= image_tag "usertwo.png" %>
             </li>
           
