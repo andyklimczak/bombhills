@@ -19,6 +19,7 @@
 }
 
 #hamburgerbutton {
+  color: #233E47;
   height: 50px;
   width: 50px;
   padding: 10px;
@@ -149,26 +150,66 @@
 /* meetups */
 
 .meetups {
+  background-image: url("hat.jpg");
+  background-size: cover;
+  color: #FFF;
   text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
 }
 
-.meetups h1, h2, h3 {
+.meetupscontent {
+  padding: 30px;
+  width: 300px;
+  background: #233E47;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.meetupscontent h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
 }
 
-.meetups p, a {
+.meetupscontent h1 {
+  margin: 0px;
+  font-size: 46px;
+}
+
+.meetupscontent h3 {
+  margin-top: 15px;
+}
+
+.meetupscontent p, a {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 200;
 }
 
-.meetups ul {
+.meetupscontent ul {
   padding: 0px;
 }
 
-.meetups li {
+.meetupscontent li {
   list-style-type: none;
   display: inline;
+}
+
+.meetupscontent p {
+  margin-top: 10px;
+}
+
+.meetupscontent a {
+  color: #FFF;
+  font-size: 22px;
+}
+
+.meetupscontent a:hover {
+  color: #FFF;
+  background: none;
+  text-decoration: none;
 }
 
 /*  Media Queries  */

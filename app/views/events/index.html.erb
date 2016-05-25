@@ -2,7 +2,8 @@
 
 
 <div class="meetups">
-    <h1> meetups </h1>
+  <div class="meetupscontent">
+    <h1> Meetups </h1>
     <h3> spot name </h3>
     <ul> 
       <li>time</li>
@@ -10,16 +11,25 @@
     </ul>
     <h3> attendees </h3>
      <div class="form-group">
-      <select class="form-control" id="sel1" style="">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
+      <select class="form-control" id="sel1" style="width: 150px;margin: 0 auto;">
+        <option>username</option>
+        <option>username</option>
+        <option>username</option>
+        <option>username</option>
       </select>
     </div>
+    <ul>
+      <li><button type="button" class="btn btn-success" style="border: none;">Showing</button></li>
+      <li><button type="button" class="btn btn-danger" style="border: none;">Leave</button></li>
+    </ul>
+    <h3> nothing planned? </h3>
+    <button type="button" class="btn btn-primary btn-success btn-lg" style="width: 150px;margin: 0 auto;border: none;">Start One</button>
+    <p><%= link_to ' Back ', spots_path %></p>
+  </div>
 </div>
 
 
+<!-- reference
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Events</h1>
@@ -51,4 +61,4 @@
 <br>
 
 <%= link_to 'New Event', new_event_path %>
-
+-->
