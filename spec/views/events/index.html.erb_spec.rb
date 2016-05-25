@@ -1,3 +1,5 @@
+=begin
+
 require 'rails_helper'
 
 RSpec.describe "events/index", type: :view do
@@ -23,3 +25,5 @@ RSpec.describe "events/index", type: :view do
     assert_select "tr>td", :text => "".to_s, :count => 2
   end
 end
+
+=end

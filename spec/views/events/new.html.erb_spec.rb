@@ -1,3 +1,5 @@
+=begin
+
 require 'rails_helper'
 
 RSpec.describe "events/new", type: :view do
@@ -22,3 +24,5 @@ RSpec.describe "events/new", type: :view do
     end
   end
 end
+
+=end
