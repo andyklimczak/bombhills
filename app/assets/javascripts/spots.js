@@ -67,13 +67,4 @@ function onMapRightClick(e) {
     });
   };
 
-
-  $(function (){
-    $('#closemeetupsbutton').click(function (){           
-      $('.meetups').animate({
-        left: this.id === 'closemeetupsbutton' ? "-100%" : "0"
-      }, 200);
-    });
-  });
-
   $(document).ready(initMap);
