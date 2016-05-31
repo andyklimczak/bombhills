@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: meetups
+#
+#  id          :integer          not null, primary key
+#  title       :string
+#  description :string
+#  time        :datetime
+#  spot_id     :integer
+#  owner_id    :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+# Indexes
+#
+#  index_meetups_on_spot_id  (spot_id)
+#
+# Foreign Keys
+#
+#  fk_rails_f2be3be804  (spot_id => spots.id)
+#
+
+class Meetup < ActiveRecord::Base
+  belongs_to :spot
+  has_and_belongs_to_many :attendees, class_name: 'User'
+  belongs_to :owner, class_name: 'User'
+end

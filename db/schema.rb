@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522214248) do
+ActiveRecord::Schema.define(version: 20160531014606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(version: 20160522214248) do
   create_table "attendees_events", id: false, force: :cascade do |t|
     t.integer "attendee_id", null: false
     t.integer "event_id",    null: false
+  end
+
+  create_table "attendees_meetups", id: false, force: :cascade do |t|
+    t.integer "attendee_id", null: false
+    t.integer "meetup_id",   null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -84,6 +89,18 @@ ActiveRecord::Schema.define(version: 20160522214248) do
   add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id", using: :btree
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type", using: :btree
 
+  create_table "meetups", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "time"
+    t.integer  "spot_id"
+    t.integer  "owner_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "meetups", ["spot_id"], name: "index_meetups_on_spot_id", using: :btree
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -142,6 +159,7 @@ ActiveRecord::Schema.define(version: 20160522214248) do
   add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", column: "conversation_id", name: "mb_opt_outs_on_conversations_id"
   add_foreign_key "mailboxer_notifications", "mailboxer_conversations", column: "conversation_id", name: "notifications_on_conversation_id"
   add_foreign_key "mailboxer_receipts", "mailboxer_notifications", column: "notification_id", name: "receipts_on_notification_id"
+  add_foreign_key "meetups", "spots"
   add_foreign_key "posts", "users"
   add_foreign_key "spots", "users"
 end

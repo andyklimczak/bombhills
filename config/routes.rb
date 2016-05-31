@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :meetups
   resources :events
   resources :spots
   get 'user-content' => 'posts#index', via: :get, as: 'user_content'
