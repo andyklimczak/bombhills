@@ -44,9 +44,9 @@ function onMapRightClick(e) {
 }
 
   function loadPoints(e) {
-    gon.spots.forEach(function(location) {
-      L.marker([location.latitude, location.longitude], { clickable: true })
-        .bindPopup("<b>" + location.title + "</b></br>Description: " + location.description + "<br>Created by: " + location.user.username + "<br>Difficulty: " + location.difficulty)
+    gon.spots.forEach(function(spot) {
+      L.marker([spot.latitude, spot.longitude], { clickable: true })
+        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br><a href='/spots/" + spot.id + "'>More Info</a>")
         .addTo(mymap);
     });
   }
