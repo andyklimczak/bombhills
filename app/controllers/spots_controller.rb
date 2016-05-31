@@ -60,7 +60,7 @@ class SpotsController < ApplicationController
   def destroy
     @spot.destroy
     respond_to do |format|
-      format.html { redirect_to spots_url, notice: 'Spot was successfully destroyed.' }
+      format.html { redirect_to show_user_path(current_user.username), notice: 'Spot was successfully destroyed' }
       format.json { head :no_content }
     end
   end

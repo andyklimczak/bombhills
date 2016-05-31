@@ -156,16 +156,20 @@ RSpec.describe SpotsController, type: :controller do
 
   describe "DELETE #destroy" do
     it "destroys the requested spot" do
+      user = create(:user)
+      sign_in user
       spot = Spot.create! valid_attributes
       expect {
         delete :destroy, {:id => spot.to_param}, valid_session
       }.to change(Spot, :count).by(-1)
     end
 
-    it "redirects to the spots list" do
+    it "redirects to the user's profile" do
+      user = create(:user)
+      sign_in user
       spot = Spot.create! valid_attributes
       delete :destroy, {:id => spot.to_param}, valid_session
-      expect(response).to redirect_to(spots_url)
+      expect(response).to redirect_to(show_user_url(user.username))
     end
   end
 
