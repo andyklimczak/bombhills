@@ -2,7 +2,6 @@ var mymap;
 
 function initMap() {
   if ($('#mapid').length) {
-    $('#mapid').height($(window).height()).width($(window).width());
 
     mymap = L.map('mapid', { zoomControl: false });
     L.control.zoom({position: 'bottomright'}).addTo(mymap);
