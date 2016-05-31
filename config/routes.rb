@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :spots
   get 'user-content' => 'posts#index', via: :get, as: 'user_content'
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }
   get 'users/:username' => 'users#show', via: :get, as: 'show_user'
 
   resources :posts
