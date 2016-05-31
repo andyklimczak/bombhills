@@ -22,6 +22,8 @@ gem 'rails_12factor', group: :production
 gem 'factory_girl_rails', '~> 4.0'
 gem 'mailboxer'
 gem 'chosen-rails'
+gem 'leaflet-rails'
+gem 'geocoder'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

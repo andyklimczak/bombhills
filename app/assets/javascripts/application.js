@@ -17,3 +17,4 @@
 //= require_tree .
 //= require welcome
 //= require chosen-jquery
+//= require leaflet

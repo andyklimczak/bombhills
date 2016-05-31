@@ -5,7 +5,7 @@ class SpotsController < ApplicationController
   # GET /spots.json
   def index
     @spots = Spot.all
-    gon.search = params[:search].parameterize if params[:search].present?
+    gon.search = Geocoder.search(params[:search]).first if params[:search].present?
     gon.spot = Spot.find(params[:id]) if params[:id].present? and Spot.exists?(params[:id])
     gon.jbuilder
     gon.user_signed_in = user_signed_in?

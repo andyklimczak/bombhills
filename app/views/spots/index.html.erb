@@ -1,70 +1,63 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="dashboard">
-      <div class="navtools">
-        <ul>
-          <li>bombhills</li>
-          <li id="searchli">
-            <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
-              <form action="%3C%=%20spots_path%20%%3E" class="form-inline" id=
-              "form" method="get" name="form">
-                <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "Search..." %>
-              </form>
-            </div>
-          </li>
-          <li id="findmebutton">
-            <span aria-hidden="true" class=" glyphicon glyphicon-globe" style=
+<div class="wrapper">
+  <div class="dashboard">
+    <div class="navtools">
+      <ul>
+        <li>bombhills</li>
+        <li id="searchli">
+          <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
+            <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
+              <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "Search..." %>
+            </form>
+          </div>
+        </li>
+        <li id="findmebutton">
+          <span aria-hidden="true" class=" glyphicon glyphicon-globe" style=
             "font-size: 18px;"></span>
-            <p>Find Me</p>
-          </li>
-          <li>
-            <span aria-hidden="true" class="glyphicon glyphicon-home" style=
+          <p>Find Me</p>
+        </li>
+        <li>
+          <span aria-hidden="true" class="glyphicon glyphicon-home" style=
             "font-size: 18px;"></span>
-            <p><%= link_to ' Home ', root_path, :class => 'none' %></p>
-          </li><%if user_signed_in? %>
+          <p><%= link_to ' Home ', root_path, :class => 'none' %></p>
+        </li>
+        <%if user_signed_in? %>
           <li>
             <span aria-hidden="true" class="glyphicon glyphicon-user" style=
-            "font-size: 18px;"></span>
+              "font-size: 18px;"></span>
             <p>
-            <%= link_to ' Profile ', show_user_path(current_user.username) %></p>
-          </li><%else %>
+              <%= link_to ' Profile ', show_user_path(current_user.username) %></p>
+          </li>
+        <%else %>
           <li>
             <span aria-hidden="true" class="glyphicon glyphicon-user" style=
-            "font-size: 18px;"></span>
+              "font-size: 18px;"></span>
             <p><%= link_to " Login ", new_user_session_path %></p>
-          </li><%end %>
-          <li>
-            <span aria-hidden="true" class="glyphicon glyphicon-camera" style=
+          </li>
+        <%end %>
+        <li>
+          <span aria-hidden="true" class="glyphicon glyphicon-camera" style=
             "font-size: 18px;"></span>
-            <p><%= link_to 'DISCOVER', user_content_path %></p>
-          </li>
-          <li id="fullscreenbutton">
-            <span aria-hidden="true" class="glyphicon glyphicon-fullscreen"
+          <p><%= link_to 'DISCOVER', user_content_path %></p>
+        </li>
+        <li id="fullscreenbutton">
+          <span aria-hidden="true" class="glyphicon glyphicon-fullscreen"
             style="font-size: 18px;"></span>
-            <p>Hide</p>
-          </li>
-        </ul>
-      </div>
+          <p>Hide</p>
+        </li>
+      </ul>
     </div>
-    <div id='myMap' oncontextmenu="return false">
-      <div class="hamburgerbutton">
-        <span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger" id=
+  </div>
+  <div id='mapid'>
+    <div class="hamburgerbutton">
+      <span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger" id=
         "hamburgerbutton" style="font-size: 50px;"></span>
-      </div>
-      <div class="alert alert-info" style=
-      "background: #066964;color: #FFF;border-color: #066964;">
-        <a aria-label="close" class="close" data-dismiss="alert" href="#"
-        style="padding-left: 10px">&times;</a> <strong>Hey!</strong>
-        Right-click or hold to add a location.
-      </div>
     </div>
-  </div><%= render 'spots/form' %><%= render 'spots/form_error' %>
-  
-  
-</body>
-</html>
+    <div class="alert alert-info" style=
+      "background: #066964;color: #FFF;border-color: #066964;">
+      <a aria-label="close" class="close" data-dismiss="alert" href="#"
+        style="padding-left: 10px">&times;</a> <strong>Hey!</strong>
+      Right-click or hold to add a location.
+    </div>
+  </div>
+</div>
+<%= render 'spots/form' %><%= render 'spots/form_error' %>
