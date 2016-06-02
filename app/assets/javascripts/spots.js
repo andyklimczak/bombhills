@@ -44,10 +44,17 @@ function onMapRightClick(e) {
 }
 
   function loadPoints(e) {
-    gon.spots.forEach(function(spot) {
-      L.marker([spot.latitude, spot.longitude], { clickable: true })
-        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br><a href='/spots/" + spot.id + "'>More Info</a>")
-        .addTo(mymap);
+    $.ajax({
+      url: '/spots.json',
+      method: 'GET'
+    }).done(function(response) {
+      response.spots.forEach(function(spot) {
+        L.marker([spot.latitude, spot.longitude], { clickable: true })
+          .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br><a href='/spots/" + spot.id + "'>More Info</a>")
+          .addTo(mymap);
+      });
+    }).fail(function() {
+      console.log('Error getting points');
     });
   }
 
