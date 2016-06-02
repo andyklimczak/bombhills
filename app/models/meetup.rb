@@ -23,4 +23,6 @@
 class Meetup < ActiveRecord::Base
   belongs_to :spot
   belongs_to :owner, class_name: 'User'
+  has_many :meetup_attendees
+  has_many :attending_users, through: :meetup_attendees, source: 'user'
 end

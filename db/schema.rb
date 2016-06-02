@@ -11,15 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160531015551) do
+ActiveRecord::Schema.define(version: 20160602232835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "attendees_meetups", id: false, force: :cascade do |t|
-    t.integer "attendee_id", null: false
-    t.integer "meetup_id",   null: false
-  end
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
     t.integer "unsubscriber_id"
@@ -73,6 +68,16 @@ ActiveRecord::Schema.define(version: 20160531015551) do
 
   add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id", using: :btree
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type", using: :btree
+
+  create_table "meetup_attendees", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "meetup_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "meetup_attendees", ["meetup_id"], name: "index_meetup_attendees_on_meetup_id", using: :btree
+  add_index "meetup_attendees", ["user_id"], name: "index_meetup_attendees_on_user_id", using: :btree
 
   create_table "meetups", force: :cascade do |t|
     t.string   "title"
@@ -144,6 +149,8 @@ ActiveRecord::Schema.define(version: 20160531015551) do
   add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", column: "conversation_id", name: "mb_opt_outs_on_conversations_id"
   add_foreign_key "mailboxer_notifications", "mailboxer_conversations", column: "conversation_id", name: "notifications_on_conversation_id"
   add_foreign_key "mailboxer_receipts", "mailboxer_notifications", column: "notification_id", name: "receipts_on_notification_id"
+  add_foreign_key "meetup_attendees", "meetups"
+  add_foreign_key "meetup_attendees", "users"
   add_foreign_key "meetups", "spots"
   add_foreign_key "posts", "users"
   add_foreign_key "spots", "users"
