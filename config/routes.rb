@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :meetups
-  resources :spots
+  resources :spots do
+    resources :meetups
+  end
   get 'user-content' => 'posts#index', via: :get, as: 'user_content'
 
   devise_for :users, controllers: { registrations: 'registrations' }
