@@ -1,27 +1,9 @@
 require 'rails_helper'
 
-#RSpec.describe "posts/new", type: :view do
-  #before(:each) do
-    #assign(:post, Post.new(
-      #:title => "MyString",
-      #:image => "MyString",
-      #:description => "MyText",
-      #:user => nil
-    #))
-  #end
+RSpec.describe "posts/new", type: :view do
 
-  #it "renders new post form" do
-    #render
-
-    #assert_select "form[action=?][method=?]", posts_path, "post" do
-
-      #assert_select "input#post_title[name=?]", "post[title]"
-
-      #assert_select "input#post_image[name=?]", "post[image]"
-
-      #assert_select "textarea#post_description[name=?]", "post[description]"
-
-      #assert_select "input#post_user_id[name=?]", "post[user_id]"
-    #end
-  #end
-#end
+  it "renders new post form" do
+    render
+    expect(rendered).to match("Add Post")
+  end
+end

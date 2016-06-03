@@ -1,9 +1,9 @@
 FactoryGirl.define do
-  factory :meetup do
-    title "MyString"
-    description "MyString"
-    time "2016-05-30 21:39:59"
-    spot nil
-    owner nil
+  factory :meetup, aliases: [:attending_meetups] do
+    title { FFaker::Movie.title }
+    description { FFaker::Lorem.sentence }
+    time { FFaker::Time.date }
+    spot
+    owner
   end
 end

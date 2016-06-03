@@ -1,9 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "Meetups", type: :request do
-  describe "GET /meetups" do
-    it "works! (now write some real specs)" do
-      get meetups_path
+  before :each do
+    @spot = create(:spot)
+  end
+
+  describe "GET /spot/:spot_id/meetups" do
+    it "works" do
+      get spot_meetups_path, :spot_id => 1
       expect(response).to have_http_status(200)
     end
   end
