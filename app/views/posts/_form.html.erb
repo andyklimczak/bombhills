@@ -16,16 +16,16 @@
             <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
 
               <label for="usr">File:</label>
-              <%= f.file_field :image %>
+              <%= f.file_field :image, { id: 'image_upload' } %>
 
               <%= f.label :title, "Title:" %>
-              <%= f.text_field :title, {class: 'form-control', id:'usr'} %>
+              <%= f.text_field :title, {class: 'form-control', id:'image_title'} %>
 
               <%= f.label :description, "Description:" %>
-              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'comment'}%>
+              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'image_description'}%>
 
               <%= f.label :spot_id, "Tag a spot" %>
-              <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'sel1' } %>
+              <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'image_tag_spot' } %>
               <%= f.hidden_field :type, value: 'ImagePost' %>
 
               <%= f.submit class: 'submitimg' %>
@@ -36,16 +36,16 @@
             <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
 
               <%= f.label :video_url, "Video Url:" %>
-              <%= f.text_field :video_url, {class: 'form-control', id:'usr'} %>
+              <%= f.text_field :video_url, {class: 'form-control', id:'video_url'} %>
 
               <%= f.label :title, "Title:" %>
-              <%= f.text_field :title, {class: 'form-control', id:'usr'} %>
+              <%= f.text_field :title, {class: 'form-control', id:'video_title'} %>
 
               <%= f.label :description, "Description:" %>
-              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'comment'}%>
+              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'video_description'}%>
 
               <%= f.label :spot_id, "Tag a spot" %>
-              <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'sel1' } %>
+              <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'video_tag_spot' } %>
               <%= f.hidden_field :type, value: 'VideoPost' %>
 
               <%= f.submit class: 'submitimg' %>

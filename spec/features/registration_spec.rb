@@ -10,7 +10,7 @@ RSpec.describe "the registration process", :type => :feature do
       fill_in 'Password', :with => 'password123'
       fill_in 'Password confirmation', :with => 'password123'
     end
-    click_button 'Sign up'
+    expect { click_on 'Sign up'}.to change(User, :count).by(1)
     expect(page).to have_current_path(edit_user_registration_path)
   end
 end

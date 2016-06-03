@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "the signin process", :type => :feature do
   before :each do
-    create(:user,username: 'user123', email: 'user@example.com', password: 'password123')
+    create(:user, username: 'user123', email: 'user@example.com', password: 'password123')
   end
 
   it "signs me in with email and redirects to home page" do

@@ -7,6 +7,7 @@
           <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
             <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
               <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "Search..." %>
+              <button id='map-search-button' hidden>Search</button>
             </form>
           </div>
         </li>
