@@ -52,6 +52,16 @@ RSpec.describe User, :type => :model do
     expect(user.spots.first).to eq(spot3)
     expect(user.spots.last).to eq(spot1)
   end
+  
+  it 'has correct name value' do
+    user = create(:user)
+    expect(user.name).to eq(user.username)
+  end
+
+  it 'has correct mailboxer_email' do
+    user = create(:user)
+    expect(user.email).to eq(user.mailboxer_email(user))
+  end
 
   it { should validate_presence_of :username }
   it { should have_many :spots }
