@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'spot interactions', :type => :feature do
-
   it 'can search from welcome page' do
     visit root_path
     within('#form') do
@@ -87,5 +86,15 @@ RSpec.describe 'spot interactions', :type => :feature do
       fill_in 'spot_description', with: 'Spot Description'
       expect { click_button 'Submit', visible: false }.to change(Spot, :count).by(1)
     end
+  end
+
+  it 'can view a spot on the map from the /spots page' do
+    post = create(:image_post)
+    post_id = post.id
+    visit posts_path
+    within('#thumbnailcontainer') do
+      click_on 'Find'
+    end
+    expect(page).to have_current_path(spots_path(id: post_id))
   end
 end
