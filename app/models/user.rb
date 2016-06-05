@@ -29,6 +29,7 @@
 #  index_users_on_username              (username) UNIQUE
 #
 
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
