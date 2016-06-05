@@ -88,13 +88,20 @@ RSpec.describe 'spot interactions', :type => :feature do
     end
   end
 
-  it 'can view a spot on the map from the /spots page' do
+  it 'can view a spot on the map from the spots page' do
     post = create(:image_post)
-    post_id = post.id
+    visit posts_path
+    click_on 'Find'
+    expect(page).to have_current_path(%r(/spots\?id=\d))
+  end
+
+  it 'can view a user profile from the posts page' do
+    user = create(:user)
+    post = create(:image_post, user: user)
     visit posts_path
     within('#thumbnailcontainer') do
-      click_on 'Find'
+      click_on 'User'
     end
-    expect(page).to have_current_path(spots_path(id: post_id))
+    expect(page).to have_current_path(show_user_path(user.username))
   end
 end
