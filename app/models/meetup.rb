@@ -20,6 +20,7 @@
 #  fk_rails_f2be3be804  (spot_id => spots.id)
 #
 
+
 class Meetup < ActiveRecord::Base
   belongs_to :spot
   belongs_to :owner, class_name: 'User'

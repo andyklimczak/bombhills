@@ -19,6 +19,7 @@
 #  fk_rails_a5e3b49e1f  (user_id => users.id)
 #
 
+
 class MeetupAttendee < ActiveRecord::Base
   belongs_to :user
   belongs_to :meetup
