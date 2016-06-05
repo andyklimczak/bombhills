@@ -5,29 +5,31 @@
   <h1> #DISCOVER </h1>
 
   <div class="container" id="postscontainer">
-    <div class="row">
+    <% @posts.each_slice(3) do |posts| %>
+      <div class="row">
 
-      <% @posts.each do |post| %>
-        <div class="col-sm-4 col-md-4" id="thumbnailcontainer">
-          <div class="thumbnail">
-            <% if post.type == "ImagePost" %>
-              <%= image_tag post.image.url(:medium) %>
-            <% else %>
-              <%= embed post.video_url %>
-            <% end %>
-            <div class="caption">
-              <h3><%= post.title %></h3>
-              <p><%= post.description %></p>
-              <p>
-                <%= link_to 'User', show_user_path(post.user.username), :class => 'btn btn-primary', id: 'userbutton' %>
-                <% if post.spot %>
-                  <%= link_to 'Find', spots_path(id: post.spot.id), class: 'btn btn-default' %>
-                <% end %>
-              </p>
+        <% posts.each do |post| %>
+          <div class="col-sm-4 col-md-4" id="thumbnailcontainer">
+            <div class="thumbnail">
+              <% if post.type == "ImagePost" %>
+                <%= image_tag post.image.url(:medium) %>
+              <% else %>
+                <%= embed post.video_url %>
+              <% end %>
+              <div class="caption">
+                <h3><%= post.title %></h3>
+                <p><%= post.description %></p>
+                <p>
+                  <%= link_to 'User', show_user_path(post.user.username), :class => 'btn btn-primary', id: 'userbutton' %>
+                  <% if post.spot %>
+                    <%= link_to 'Find', spots_path(id: post.spot.id), class: 'btn btn-default' %>
+                  <% end %>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
