@@ -17,6 +17,11 @@ RSpec.describe User, :type => :model do
     expect(user).not_to be_valid
   end
 
+  it 'username cannot include period' do
+    user = build(:user, username: 'user.name')
+    expect(user).not_to be_valid
+  end
+
 	it "finds user by email" do
     user = create(:user, email: "foo@bar.com")
     authenticated = User.find_for_database_authentication({email: "foo@bar.com"})

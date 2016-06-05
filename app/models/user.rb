@@ -66,6 +66,8 @@ class User < ActiveRecord::Base
     def validate_username
       if User.where(email: username).exists?
         errors.add(:username, :invalid)
+      elsif username.present? and username.include? '.'
+        errors.add(:username, :invalid)
       end
     end
 
