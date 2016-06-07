@@ -31,7 +31,7 @@ RSpec.describe 'spot interactions', :type => :feature do
         fill_in 'video_url', :with => 'https://www.youtube.com/watch?v=c7rCyll5AeY'
         fill_in 'video_title', :with => 'Twice Cheerup'
         fill_in 'video_description', with: 'SOTYAY'
-        select(spot.title, from: 'video_tag_spot')
+        chosen_select(spot.title, from: '#video_tag_spot')
         click_button 'Create Post'
       end
     end
@@ -54,7 +54,7 @@ RSpec.describe 'spot interactions', :type => :feature do
         attach_file('image_upload', Rails.root + 'spec/fixtures/pic.jpg')
         fill_in 'image_title', :with => 'Taylor Swift'
         fill_in 'image_description', with: 'Based'
-        select(spot.title, from: 'image_tag_spot')
+        chosen_select(spot.title, from: '#image_tag_spot')
         expect { click_button 'Create Post' }.to change(Post, :count).by(1)
       end
     end

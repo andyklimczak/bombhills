@@ -4,8 +4,9 @@ var ready;
 
 ready = function(){
   // enable chosen js
-  $('.chosen-select').attr("data-placeholder", "Select recipients...").chosen({
-    no_results_text: 'No results matched'
+  $('.chosen-select').attr("data-placeholder", "Select...").chosen({
+    no_results_text: 'No results matched',
+    width: '100%'
   });
 }
 

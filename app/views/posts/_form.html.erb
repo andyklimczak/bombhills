@@ -10,7 +10,7 @@
           <li style="margin-left: 0px;"><a href="#Picture" data-toggle="tab" style="background: #233E47;color: #FFF;">Picture</a></li>
           <li><a href="#Video" data-toggle="tab" style="background: #233E47;color: #FFF;">Video</a></li>
         </ul>
-  
+
         <div class="tab-content">
           <div class="tab-pane active" id="Picture">    
             <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
@@ -25,7 +25,7 @@
               <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'image_description'}%>
 
               <%= f.label :spot_id, "Tag a spot" %>
-              <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'image_tag_spot' } %>
+              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'image_tag_spot', style: 'color: #333;' } %>
               <%= f.hidden_field :type, value: 'ImagePost' %>
 
               <%= f.submit class: 'submitimg' %>
@@ -45,7 +45,7 @@
               <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'video_description'}%>
 
               <%= f.label :spot_id, "Tag a spot" %>
-              <%= f.collection_select :spot_id, Spot.all, :id, :title, { include_blank: true }, { class: 'form-control', id: 'video_tag_spot' } %>
+              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'video_tag_spot', style: 'color: #333;' } %>
               <%= f.hidden_field :type, value: 'VideoPost' %>
 
               <%= f.submit class: 'submitimg' %>
@@ -53,6 +53,6 @@
             <% end %>
           </div> 
         </div>
+      </div>
     </div>
   </div>
-</div>
