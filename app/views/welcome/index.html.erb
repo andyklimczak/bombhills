@@ -1,6 +1,6 @@
 <!-- mobile header -->
 <div class="mobileheader">
-  <h1> BOM<mark style="color:#066964;background: none;padding: 0px;">B</mark> <br> <mark style="color:#066964;background: none;padding: 0px;">H</mark>ILLS </h1>
+  <h1> bom<mark style="color:#066964;background: none;padding: 0px;">b</mark> <br> <mark style="color:#066964;background: none;padding: 0px;">h</mark>ills </h1>
   <ul>
     <% if user_signed_in? %>  
 
@@ -82,29 +82,31 @@
 </div>
 
 
-<!-- user content -->
-<div class="usercontent">
-  <p> <%= link_to 'DISCOVER', posts_path %> </p>
-</div>
+<div class="bottomwrapper">
+  <!-- user content -->
+  <div class="usercontent">
+    <p> <%= link_to 'DISCOVER', posts_path %> </p>
+  </div>
 
-<!-- footer -->
-<div class="footer">
-  <div class="container">
-    <div class="col-sm-4 col-md-4">
-    </div>
-    <div class="col-sm-4 col-md-4" id="contactfooter">
-      <h1> Site Blog </h1>
-      <ul>
-        <li>not</li>
-        <li>available</li>
-      </ul>
-    </div>
-    <div class="col-sm-4 col-md-4">
-      <h1> We're also on </h1>
-      <ul>
-        <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>
-        <li><%= link_to "and Instagram", "https://www.instagram.com/bombhillspics/", :target => "_blank" %></li>
-      </ul>
+  <!-- footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="col-sm-4 col-md-4">
+      </div>
+      <div class="col-sm-4 col-md-4" id="contactfooter">
+        <h1> Site Blog </h1>
+        <ul>
+          <li>not</li>
+          <li>available</li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <h1> We're also on </h1>
+        <ul>
+          <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>
+          <li><%= link_to "and Instagram", "https://www.instagram.com/bombhillspics/", :target => "_blank" %></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
