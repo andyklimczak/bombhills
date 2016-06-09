@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.com/andyklimczak/bombhills.svg?token=Hk7aGaxbxnnHFYhzvcJG&branch=master)](https://travis-ci.com/andyklimczak/bombhills)
 
 ## README
-
 ### Description
 
 Website that helps longboarders find and share media and locations to ride.
