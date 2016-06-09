@@ -80,6 +80,10 @@ body {
   text-align: center;
 }
 
+.dropdown-toggle {
+  color: #066964;
+}
+
 .navigation {
   height: 100px;
 }
@@ -257,7 +261,8 @@ body {
 .footer {
   padding: 20px 0px 80px;
   text-align: right;
-  color: #066964;
+  color: #FFF;
+  background: #233E47;
 }
 
 .footer h1 {
@@ -281,12 +286,12 @@ body {
 .footer li a {
   text-decoration: none;
   margin: 10px 0px;
-  color: #066964;
+  color: #FFF;
 }
 
 .footer li a:hover {
   background: none;
-  color: #066964;
+  color: #FFF;
 }
 
 .reference {
