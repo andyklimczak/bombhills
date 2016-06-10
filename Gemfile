@@ -15,7 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'annotate'
 gem 'bourbon'
-gem 'ffaker'
+gem 'ffaker', git: 'https://github.com/ffaker/ffaker.git'
 gem 'paperclip', '~> 4.3'
 gem 'fog'
 gem 'rails_12factor', group: :production

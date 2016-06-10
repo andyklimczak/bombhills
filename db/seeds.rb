@@ -8,9 +8,9 @@ end
   User.last.spots.create({title: FFaker::Venue.name, description: FFaker::HipsterIpsum.sentence, latitude: FFaker::Geolocation.lat, longitude: FFaker::Geolocation.lng, difficulty: ['Beginner', 'Intermediate', 'Expert'].sample})
 end
 
-2.times do |i|
+3.times do |i|
   User.first.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, image: FFaker::Avatar.image, spot: Spot.order("RANDOM()").first, type: "ImagePost"})
   User.last.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, image: FFaker::Avatar.image, spot: Spot.order("RANDOM()").first, type: "ImagePost"})
   User.last.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, image: FFaker::Avatar.image, type: "ImagePost"})
-  User.first.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, video_url: 'https://www.youtube.com/watch?v=e-ORhEE9VVg', spot: Spot.order("RANDOM()").first, type: "VideoPost"})
+  User.first.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, video_url: FFaker::Youtube.url, spot: Spot.order("RANDOM()").first, type: "VideoPost"})
 end

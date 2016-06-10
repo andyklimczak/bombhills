@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/ffaker/ffaker.git
+  revision: 0021a0a69ce0c30a02409b88bf3c10035f20025e
+  specs:
+    ffaker (2.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -110,7 +116,6 @@ GEM
     factory_girl_rails (4.7.0)
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
-    ffaker (2.2.0)
     ffi (1.9.10)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
@@ -454,7 +459,7 @@ DEPENDENCIES
   chosen-rails
   devise
   factory_girl_rails (~> 4.0)
-  ffaker
+  ffaker!
   fog
   geocoder
   gon
