@@ -39,6 +39,7 @@ group :development do
   gem 'spring'
   gem 'brakeman', require: false
   gem 'bundler-audit'
+  gem 'rubycritic', require: false
 end
 
 group :test do
