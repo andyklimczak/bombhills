@@ -13,8 +13,8 @@
 //
 //= require jquery2
 //= require jquery_ujs
+//= require turbolinks
 //= require bootstrap-sprockets
-//= require_tree .
-//= require welcome
 //= require chosen-jquery
 //= require leaflet
+//= require_tree .

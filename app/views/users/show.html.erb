@@ -37,13 +37,13 @@
         <!-- SIDEBAR MENU -->
         <div class="profile-usermenu">
           <ul class="nav">
-            <li class="active">
+            <li class="active" data-turbolinks="false">
               <a href="#">
                 <i class="glyphicon glyphicon-home"></i>
                 Overview </a>
             </li>
             <% if current_user == @user %>
-              <li data-toggle="modal" data-target="#postModal">
+              <li data-turbolinks="false" data-toggle="modal" data-target="#postModal">
                 <a href="#">
                   <i class="glyphicon glyphicon-camera"></i>
                   Add Post </a>

@@ -73,4 +73,4 @@ function onMapRightClick(e) {
     });
   };
 
-  $(document).ready(initMap);
+  document.addEventListener("turbolinks:load", initMap);

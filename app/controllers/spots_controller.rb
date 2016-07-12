@@ -6,7 +6,7 @@ class SpotsController < ApplicationController
   def index
     @spots = Spot.all
     gon.search = Geocoder.search(params[:search]).first if params[:search].present?
-    gon.spot = Spot.find(sanitize.params[:id]) if params[:id].present? and Spot.exists?(sanitize.params[:id])
+    gon.spot = Spot.find(params[:id]) if params[:id].present? and Spot.exists?(params[:id])
     gon.user_signed_in = user_signed_in?
   end
 

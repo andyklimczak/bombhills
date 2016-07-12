@@ -23,6 +23,7 @@ gem 'mailboxer'
 gem 'chosen-rails'
 gem 'leaflet-rails'
 gem 'geocoder'
+gem 'turbolinks'
 
 group :development, :test do
   gem 'rspec-rails'

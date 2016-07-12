@@ -1,18 +1,2 @@
-/*
-
-function imageScroll() {
-  if(document.getElementById("header")) {
-    var header = document.getElementById("header");
-    var speed = 5.0;
-    var width = window.innerWidth;
-    window.onscroll = function() {
-      var yOffset = window.pageYOffset;
-      header.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
-    }
-  }
-};
-
-$(document).ready(imageScroll);
-
-*/
-
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
