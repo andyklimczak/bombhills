@@ -1,3 +1,40 @@
 // Place all the styles related to the mailbox controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*  Media Queries  */
+
+/* Custom */ 
+@media only screen and (max-width: 370px) {
+
+}
+
+@media only screen and (min-width: 370px) and (max-width: 472px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 472px) and (max-width : 565px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 565px ) and (max-width : 768px) {
+
+}	
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width: 992px) {
+
+}	
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) and (max-width: 1200px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
