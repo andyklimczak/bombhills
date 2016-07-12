@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'rails', '4.2.6'
+gem 'rails', '5.0.0'
 gem 'puma'
 gem 'pg'
 gem 'bootstrap-sass'
@@ -19,7 +19,7 @@ gem 'paperclip'
 gem 'fog'
 gem 'rails_12factor', group: :production
 gem 'factory_girl_rails'
-gem 'mailboxer'
+gem 'mailboxer', git: 'https://github.com/mailboxer/mailboxer.git'
 gem 'chosen-rails'
 gem 'leaflet-rails'
 gem 'geocoder'
@@ -34,7 +34,7 @@ group :development do
   gem 'awesome_print', require:"ap"
   gem 'better_errors'
   gem 'pry-rails'
-  gem 'quiet_assets'
+  #gem 'quiet_assets'
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
   gem 'spring'
@@ -49,4 +49,5 @@ group :test do
   gem 'nyan-cat-formatter'
   gem 'simplecov', require: false
   gem 'capybara'
+  gem 'rails-controller-testing', git: 'https://github.com/rails/rails-controller-testing.git'
 end
