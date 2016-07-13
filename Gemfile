@@ -24,6 +24,7 @@ gem 'chosen-rails'
 gem 'leaflet-rails'
 gem 'geocoder'
 gem 'turbolinks'
+gem 'rack-timeout'
 
 group :development, :test do
   gem 'rspec-rails'
