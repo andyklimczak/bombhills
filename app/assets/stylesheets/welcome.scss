@@ -50,12 +50,15 @@ body {
 }
 
 .mobileheader li {
+  font-size: 16px;
   margin: 5px 5px;
   list-style-type: none;
   display: inline;
 }
 
 .mobileheader a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
   text-decoration: none;
   color: #3B3A3A;
 }
