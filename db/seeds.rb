@@ -14,3 +14,7 @@ end
   User.last.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, image: FFaker::Avatar.image, type: "ImagePost"})
   User.first.posts.create({title: FFaker::Product.product, description: FFaker::HipsterIpsum.paragraph, video_url: FFaker::Youtube.url, spot: Spot.order("RANDOM()").first, type: "VideoPost"})
 end
+
+4.times do |i|
+  Spot.first.meetups.create({title: FFaker::Movie.title, description: FFaker::Lorem.sentence, owner: User.first, time: FFaker::Time.date})
+end
