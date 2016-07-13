@@ -3,9 +3,9 @@
   <div class="media">
     <div class="media-left">
       <!-- user avators can go here -->
-      <a href="#">
-        <img class="media-object" src="http://placehold.it/64x64" alt="...">
-      </a>
+      <%= link_to show_user_path(message.sender.name) do %>
+        <%= image_tag message.sender.avatar.url(:thumb), class: 'media-object message-avatar' %>
+      <% end %>
     </div>
     <div class="media-body">
       <h4 class="media-heading">

@@ -7,30 +7,30 @@
       <div div class="col-sm-4 col-md-4 col-lg-3" id="editprofiledashboard">
         <div id="editprofileimage">
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f| %>
-          <%= devise_error_messages! %>
-          <%= image_tag @user.avatar.url(:large),:class => 'img-responsive'  %>
+            <%= devise_error_messages! %>
+            <%= image_tag @user.avatar.url(:large),:class => 'img-responsive'  %>
+          </div>
+          <div id="editprofilemotto">
+            <%= f.text_field :motto, placeholder: "motto" %>
+          </div>
         </div>
-        <div id="editprofilemotto">
-          <%= f.text_field :motto, placeholder: "motto" %>
-        </div>
-      </div>
-      <div class="col-sm-8 col-md-8 col-lg-9" id="editprofileshow">
-        <h3>Username</h3>
-        <%= f.text_field :username, autofocus: true %>
-        <h3>Upload Profile Picture</h3>
-        <%= f.file_field :avatar %>
-        <h3>Update Password</h3>
-        <%= f.password_field :password, autocomplete: "off" %>
-        <h3>Password Confirmation</h3>
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-        <h3>Current Password</h3>
-        <%= f.password_field :current_password, autocomplete: "off" %>
-        </br>
-        </br>
-        <ul>
-          <li style="margin-left: 0px"><%= f.submit "Apply" %></li>
-          <li><%= link_to ' see your profile! ', show_user_path(current_user.username)%></li>
-        </ul>
+        <div class="col-sm-8 col-md-8 col-lg-9" id="editprofileshow">
+          <h3>Username</h3>
+          <%= f.text_field :username, autofocus: true %>
+          <h3>Upload Profile Picture</h3>
+          <%= f.file_field :avatar %>
+          <h3>Update Password</h3>
+          <%= f.password_field :password, autocomplete: "off" %>
+          <h3>Password Confirmation</h3>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          <h3>Current Password</h3>
+          <%= f.password_field :current_password, autocomplete: "off" %>
+          </br>
+          </br>
+          <ul>
+            <li style="margin-left: 0px"><%= f.submit "Apply" %></li>
+            <li><%= link_to ' see your profile! ', show_user_path(current_user.username)%></li>
+          </ul>
         <% end %>
       </div>
     </div>

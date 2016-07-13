@@ -1,8 +1,8 @@
 <div class="media">
   <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://placehold.it/64x64" alt="...">
-    </a>
+    <%= link_to show_user_path(conversation.messages.last.sender.name) do %>
+      <%= image_tag conversation.messages.last.sender.avatar.url(:thumb), class: 'media-object message-avatar' %>
+    <% end %>
   </div>
   <div class="media-body">
     <h4 class="media-heading">
@@ -11,6 +11,10 @@
       <small><b>Date: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
     </h4>
     <%= truncate conversation.messages.last.body, length: 145 %>
-    <%= link_to "View", conversation_path(conversation)  %>
+    <% if conversation.receipts_for(current_user).any?{|r| r.is_unread? } %>
+      <%= link_to "View Unread", conversation_path(conversation)  %>
+    <% else %>
+      <%= link_to "View", conversation_path(conversation)  %>
+    <% end %>
   </div>
 </div>
