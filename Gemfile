@@ -25,6 +25,7 @@ gem 'leaflet-rails'
 gem 'geocoder'
 gem 'turbolinks'
 gem 'rack-timeout'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'rspec-rails'

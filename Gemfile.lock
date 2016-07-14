@@ -269,6 +269,8 @@ GEM
     fog-xml (0.1.2)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
+    font-awesome-rails (4.6.3.1)
+      railties (>= 3.2, < 5.1)
     foreigner (1.7.4)
       activerecord (>= 3.0.0)
     formatador (0.2.5)
@@ -515,6 +517,7 @@ DEPENDENCIES
   factory_girl_rails
   ffaker!
   fog
+  font-awesome-rails
   geocoder
   gon
   guard-livereload
