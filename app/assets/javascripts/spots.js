@@ -93,6 +93,6 @@ function toggleDashboard() {
       marginLeft: this.id === 'fullscreenbutton' ? "0" : "250px"
     }, 200);
   });
-};
+}
 
 document.addEventListener("turbolinks:load", initMap);
