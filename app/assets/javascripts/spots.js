@@ -1,5 +1,8 @@
 var mymap;
 
+/*
+ * Init the map with the correct layout, points, and listeners
+ */
 function initMap() {
   if ($('#mapid').length) {
 
@@ -23,6 +26,12 @@ function initMap() {
   }
 }
 
+/*
+ * Set the initial view of the map for the user. It can be 1 of 3 ways:
+ * If the user searched for a point, look for the cordinates from the json search object (?q= url query param)
+ * If the user is looking at a specific point, focus on that point
+ * If a specific point or location isn't specified, default to SF lat/long
+ */
 function getInitialView() {
   if(gon.spot) {
     return [gon.spot.latitude, gon.spot.longitude];
@@ -33,6 +42,9 @@ function getInitialView() {
   }
 }
 
+/*
+ * Open the add new location form modal when user right clicks on the map
+ */
 function onMapRightClick(e) {
   if(gon.user_signed_in) {
     $('#new-latitude').val(e.latlng.lat);
@@ -43,34 +55,44 @@ function onMapRightClick(e) {
   }
 }
 
-  function loadPoints(e) {
-    $.ajax({
-      url: '/spots.json',
-      method: 'GET'
-    }).done(function(response) {
-      response.spots.forEach(function(spot) {
-        L.marker([spot.latitude, spot.longitude], { clickable: true })
-          .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br><a href='/spots/" + spot.id + "'>More Info</a>")
-          .addTo(mymap);
-      });
-    }).fail(function() {
-      console.log('Error getting points');
+/*
+ * Function to initially load all of the spots onto the map
+ * Uses ajax to hit the json version of the points, and creates the markers by looping through
+ */
+function loadPoints(e) {
+  $.ajax({
+    url: '/spots.json',
+    method: 'GET'
+  }).done(function(response) {
+    response.spots.forEach(function(spot) {
+      L.marker([spot.latitude, spot.longitude], { clickable: true })
+      .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br><a href='/spots/" + spot.id + "'>More Info</a>")
+      .addTo(mymap);
     });
-  }
+  }).fail(function() {
+    console.log('Error getting points');
+  });
+}
 
-  function locateMe() {
-    mymap.locate({setView: true});
-  }
+/**
+ * Allows user to move the map view to their location based on ip
+ */
+function locateMe() {
+  mymap.locate({setView: true});
+}
 
-  function toggleDashboard() {
-    $('#fullscreenbutton, #hamburgerbutton').click(function (){           
-      $('.dashboard').animate({
-        left: this.id === 'fullscreenbutton' ? "-100%" : "0"
-      }, 200);
-      $('.meetups').animate({
-        marginLeft: this.id === 'fullscreenbutton' ? "0" : "250px"
-      }, 200);
-    });
-  };
+/*
+ * Show or hide the left hand nav dashboard
+ */
+function toggleDashboard() {
+  $('#fullscreenbutton, #hamburgerbutton').click(function () {
+    $('.dashboard').animate({
+      left: this.id === 'fullscreenbutton' ? "-100%" : "0"
+    }, 200);
+    $('.meetups').animate({
+      marginLeft: this.id === 'fullscreenbutton' ? "0" : "250px"
+    }, 200);
+  });
+}
 
-  document.addEventListener("turbolinks:load", initMap);
+document.addEventListener("turbolinks:load", initMap);

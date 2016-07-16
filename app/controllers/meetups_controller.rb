@@ -4,12 +4,14 @@ class MeetupsController < ApplicationController
   # GET /meetups
   # GET /meetups.json
   def index
+    @spot = Spot.find(params[:spot_id])
     @meetups = Meetup.all
   end
 
   # GET /meetups/1
   # GET /meetups/1.json
   def show
+    @spot = Spot.find(params[:spot_id])
   end
 
   # GET /meetups/new
