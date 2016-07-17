@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
   has_many :attending_meetups, through: :meetup_attendees, source: 'meetup'
   has_attached_file :avatar, styles: { large: "800x800#", medium: "300x300>", thumb: "100x100#" }, default_url: ->(attachment) { ActionController::Base.helpers.asset_path('usertwo.png') }
 
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+  validates_attachment :avatar, content_type: { content_type: /\Aimage\/.*\Z/ }, size: { in: 0..5.megabytes }
   validate :validate_username
   validates :username,
     :presence => true,

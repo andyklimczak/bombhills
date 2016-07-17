@@ -27,6 +27,5 @@
 
 class ImagePost < Post
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "https://placehold.it/150x150"
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
-  validates :image, presence: true
+  validates_attachment :image, presence: true, content_type: { content_type: /\Aimage\/.*\Z/ }, size: { in: 0..10.megabytes }
 end
