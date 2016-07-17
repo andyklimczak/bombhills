@@ -48,7 +48,7 @@ RSpec.describe "mailboxer messaging", :type => :feature do
     expect(user2.mailbox.inbox.count).to eq(1)
   end
 
-  it "can delete a message" do
+  it "move message to trash" do
     user = create(:user)
     user2 = create(:user)
     login_as user
@@ -59,5 +59,21 @@ RSpec.describe "mailboxer messaging", :type => :feature do
     click_on 'View'
     click_on 'Move to trash'
     expect(user.mailbox.trash.count).to eq(1)
+  end
+
+  it "untrash a message" do
+    user = create(:user)
+    user2 = create(:user)
+    login_as user
+    user2.send_message(user, 'test body', 'test subject')
+    visit mailbox_inbox_path
+    expect(user.mailbox.inbox.count).to eq(1)
+    expect(user2.mailbox.sentbox.count).to eq(1)
+    click_on 'View'
+    click_on 'Move to trash'
+    click_on 'Trash'
+    click_on 'View'
+    click_on 'Untrash'
+    expect(user.mailbox.inbox.count).to eq(1)
   end
 end
