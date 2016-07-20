@@ -25,6 +25,7 @@
 #  fk_rails_5b5ddfd518  (user_id => users.id)
 #
 
+
 class ImagePost < Post
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "https://placehold.it/150x150"
   validates_attachment :image, presence: true, content_type: { content_type: /\Aimage\/.*\Z/ }, size: { in: 0..10.megabytes }
