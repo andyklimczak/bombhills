@@ -219,11 +219,13 @@ label {
   padding-bottom: 10px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
-  font-size: 36px;
+  font-size: 38px;
 }
 
 .login a {
   color: #FFF;
+  font-size: 20px;
+  padding: 8px 0px;
 }
 
 .login a:hover {
@@ -233,12 +235,13 @@ label {
 
 .login label {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
+  font-weight: 400;
+  font-size: 22px;
 }
 
 .login input {
   border:none;
-  padding: 10px 10px;
+  padding: 12px 12px;
   color: #2E3133;
 }
 

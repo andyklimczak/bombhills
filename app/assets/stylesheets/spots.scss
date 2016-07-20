@@ -142,6 +142,7 @@
   position: absolute;
   right: 0;
   margin: 15px;
+  font-size: 16px;
 }
 
 #new-location-error-modal-button {
@@ -224,12 +225,18 @@
   .dashboard {
     left: -100%;
   }
+  .alert {
+    font-size: 14px;
+  }
 
 }
 
 @media only screen and (min-width: 370px) and (max-width: 472px) {
   #spots-modal-body ul {
     padding-left: 0px;
+  }
+  .alert {
+    font-size: 14px;
   }
 }
 

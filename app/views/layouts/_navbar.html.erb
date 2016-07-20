@@ -31,6 +31,14 @@
 
                 <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'none' %></li>
                 <li><%= link_to ' edit profile ', edit_user_registration_path, :class => 'none' %></li>
+                <li>
+                <%= link_to mailbox_inbox_path do %>
+                  inbox
+                  <% if unread_messages_count > 0 %>
+                    <span class="label label-danger"><%=unread_messages_count%></span>
+                  <% end %>
+                <% end %>
+              </li>
                 <li><%= link_to " logout ", destroy_user_session_path, method: :delete, :class => 'none'  %></li>
 
               <% else %>
