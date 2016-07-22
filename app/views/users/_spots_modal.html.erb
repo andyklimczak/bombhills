@@ -33,6 +33,28 @@
                 <li>view</li>
                 <li>delete</li>
               </ul>
+            <% if @user.spots.any? %>
+              <% @user.spots.each do |spot| %>
+                <ul>
+                  <li>
+                    <%= spot.title %>
+                  </li>
+                  <br>
+                  <br>
+                  <li>
+                    <%= link_to 'View', spots_path(id: spot.id) %>
+                  </li>
+                  <li>
+                    <% if @user == current_user %>
+                      <%= link_to 'Destroy', spot, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <% end %>
+                  </li>
+                  <br>
+                </ul>
+              <% end %>
+            <% else %>
+
+            <% end %>
           </div>
           <div class="usersspotsedit">
           </div>
@@ -42,7 +64,6 @@
   </div>
 </div>
 
-<!-- reference 
         <% if @user.spots.any? %>
           <% @user.spots.each do |spot| %>
             <ul>
@@ -65,5 +86,3 @@
         <% else %>
           No spots for this user
         <% end %>
-
--->
