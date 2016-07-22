@@ -219,9 +219,6 @@
 /* Custom */ 
 
 @media only screen and (max-width: 370px) {
-  #spots-modal-body ul {
-    padding-left: 0px;
-  }
   .dashboard {
     left: -100%;
   }
@@ -232,9 +229,6 @@
 }
 
 @media only screen and (min-width: 370px) and (max-width: 472px) {
-  #spots-modal-body ul {
-    padding-left: 0px;
-  }
   .alert {
     font-size: 14px;
   }
@@ -242,9 +236,7 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 472px) and (max-width : 565px) {
-  #spots-modal-body ul {
-    padding-left: 0px;
-  }
+  
 }
 
 /* Extra Small Devices, Phones */ 

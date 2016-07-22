@@ -8,3 +8,192 @@
 input[type="title"] {
   width: 90%;
 }
+
+.submitimg {
+  margin: 15px;
+  margin-left: 0px;
+  background: #fff;
+  color: #000;
+}
+
+label {
+  margin: 10px 0px;
+}
+
+
+/* MODALS */  
+
+/* spots modal */
+
+#spots-modal-header {
+  background: #233E47;
+  border: none;
+}
+
+#spots-modal-body {
+  padding: 0px;
+}
+
+#spots-modal-body #left {
+  background: #006964;
+  position: absolute;
+  height: 350px;
+  width: 150px;
+}
+
+#spots-modal-body #left ul {
+  list-style-type: none;
+  padding: 0;
+  color: #FFF;
+}
+
+#spots-modal-body #left li {
+  height: 175px;
+  line-height: 210px;
+  text-align: center;
+  cursor: pointer;
+  background: #006964;
+}
+
+#spots-modal-body #left li:last-child {
+  background: #212121;
+}
+
+
+#spots-modal-body #right {
+  margin-left: 150px;
+  background: #212121;
+  height: 350px;
+  padding: 10px 10px;
+}
+
+
+#right .form-control {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 300px;
+  border-radius: 0px;
+  border: none;
+}
+
+.userspots ul {
+  color: #FFF;
+  padding-left: 65px;
+}
+
+.userspots li {
+  display: inline;
+  cursor: pointer;
+}
+
+.userspots li:last-child {
+  margin-left: 10px;
+  
+}
+
+/*  Media Queries  */
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 565px) {
+  #spots-modal-header {
+    background: #006964;
+  }
+  
+  #spots-modal-body #left {
+    position: inherit;
+    width: 100%;
+    height: 200px;
+  }
+  #spots-modal-body #right {
+    margin-left: 0px;
+  }
+  #spots-modal-body #left li {
+    height: 100px;
+    line-height: 135px;
+    text-align: center;
+    cursor: pointer;
+    background: #006964;
+  }
+  #right .form-control {
+    margin-top: 30px;
+    width: 200px;
+  }
+  .userspots ul {
+    padding-left: 0px;
+    text-align: center;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 565px ) and (max-width : 768px) {
+  #spots-modal-header {
+    background: #006964;
+  }
+  
+  #spots-modal-body #left {
+    position: inherit;
+    width: 100%;
+    height: 200px;
+  }
+  #spots-modal-body #right {
+    margin-left: 0px;
+  }
+  #spots-modal-body #left li {
+    height: 100px;
+    line-height: 135px;
+    text-align: center;
+    cursor: pointer;
+    background: #006964;
+  }
+  #right .form-control {
+    margin-top: 30px;
+    width: 200px;
+  }
+  .userspots ul {
+    padding-left: 0px;
+    text-align: center;
+  }
+}	
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width: 992px) {
+  #spots-modal-header {
+    background: #006964;
+  }
+  
+  #spots-modal-body #left {
+    position: inherit;
+    width: 100%;
+    height: 200px;
+  }
+  #spots-modal-body #right {
+    margin-left: 0px;
+  }
+  #spots-modal-body #left li {
+    height: 100px;
+    line-height: 135px;
+    text-align: center;
+    cursor: pointer;
+    background: #006964;
+  }
+  #right .form-control {
+    margin-top: 30px;
+    width: 200px;
+  }
+  .userspots ul {
+    padding-left: 0px;
+    text-align: center;
+  }
+}	
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) and (max-width: 1200px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

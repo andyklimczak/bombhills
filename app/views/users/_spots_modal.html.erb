@@ -1,11 +1,48 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript">
+  function left(userspots) {
+    $("#"+userspots).toggle();
+  }
+</script>
+
 <!-- Spots Modal -->
 <div class="modal fade" id="spotModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel"><%= @user.username %>'s Spots</h4>
-      </div>
       <div class="modal-body" id="spots-modal-body">
+        <div id="left">
+          <ul>
+            <li id="spotsbutton"><span aria-hidden="true" class="glyphicon glyphicon-map-marker" style=
+            "font-size: 50px;"></span></li>
+            <li id="spotseditbutton"><span aria-hidden="true" class="glyphicon glyphicon-edit" style=
+            "font-size: 50px;"></span></li>
+          </ul>
+        </div>
+        <div id="right">
+          <button type="button" class="close" data-dismiss="modal" style="color: #FFF;">&times;</button>
+          <div class="userspots">
+             <div class="form-group">
+                <select class="form-control" id="sel1">
+                  <option>spot one</option>
+                  <option>spot two</option>
+                  <option>spot 3</option>
+                  <option>spot 4</option>
+                </select>
+              </div>
+              <ul>
+                <li>view</li>
+                <li>delete</li>
+              </ul>
+          </div>
+          <div class="usersspotsedit">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- reference 
         <% if @user.spots.any? %>
           <% @user.spots.each do |spot| %>
             <ul>
@@ -28,10 +65,5 @@
         <% else %>
           No spots for this user
         <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+-->

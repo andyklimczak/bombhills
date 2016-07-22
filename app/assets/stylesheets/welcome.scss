@@ -38,7 +38,7 @@ body {
 .mobileheader h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 72px;
   margin: 0px;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -251,7 +251,7 @@ body {
   color: #FFF;
   font-size: 32px;
   border-radius: 6px;
-  background: #233E47;
+  background: #1DB5AE;
   margin: 0px;
   text-decoration: none;
   padding: 20px 40px;
@@ -324,7 +324,7 @@ body {
     display: none;
   }
   .header {
-    height: 300px;
+    height: 250px;
     background-size: cover;
   }
   .content {
@@ -490,6 +490,7 @@ body {
   .mobileheader {
     display: none;
   }
+  
   .header {
     height: 440px;
   }
