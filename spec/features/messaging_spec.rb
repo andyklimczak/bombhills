@@ -48,6 +48,15 @@ RSpec.describe "mailboxer messaging", :type => :feature do
     expect(user2.mailbox.inbox.count).to eq(1)
   end
 
+  it "can have user recipient prefilled from profile page" do
+    user = create(:user)
+    user2 = create(:user)
+    login_as user
+    visit show_user_path(user2.username)
+    click_on 'Message'
+    expect(page).to have_current_path(new_conversation_path(user: user2.username))
+  end
+
   it "move message to trash" do
     user = create(:user)
     user2 = create(:user)
