@@ -23,7 +23,18 @@ function initMap() {
 
     $('#findmebutton').click(locateMe);
     $('#fullscreenbutton, #hamburgerbutton').click(toggleDashboard);
+
+    fadeAlert();
   }
+}
+
+/*
+ * Hides the map alert after 4 seconds
+ */
+function fadeAlert() {
+  $(".map-alert").delay(4000).slideUp(200, function() {
+    $(this).alert('close');
+  });
 }
 
 /*
@@ -66,8 +77,8 @@ function loadPoints(e) {
   }).done(function(response) {
     response.spots.forEach(function(spot) {
       L.marker([spot.latitude, spot.longitude], { clickable: true })
-      .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br><a href='/spots/" + spot.id + "'>Meetup</a>")
-      .addTo(mymap);
+        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br><a href='/spots/" + spot.id + "'>Meetup</a>")
+        .addTo(mymap);
     });
   }).fail(function() {
     console.log('Error getting points');
