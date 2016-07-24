@@ -6,8 +6,7 @@ FactoryGirl.define do
     description { FFaker::HipsterIpsum.sentence }
     latitude { FFaker::Geolocation.lat }
     longitude { FFaker::Geolocation.lng }
-    difficulty ['Beginner', 'Intermediate', 'Expert'].sample
+    difficulty ['Beginner', 'Intermediate', 'Professional'].sample
     user
   end
 end
-

@@ -28,6 +28,6 @@ class Spot < ActiveRecord::Base
   has_many :meetups
   validates :latitude, :longitude, :title, :difficulty, presence: true
 	validates :difficulty,
-			:inclusion  => { :in => ['Beginner', 'Intermediate', 'Expert'],
+			:inclusion  => { :in => ['Beginner', 'Intermediate', 'Professional'],
 			:message    => "%{value} is not a valid difficulty" }
 end

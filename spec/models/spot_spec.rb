@@ -6,7 +6,7 @@ RSpec.describe Spot, :type => :model do
     expect(spot.save).to eq(true)
   end
 
-  it { should allow_values('Beginner', 'Intermediate', 'Expert').for(:difficulty) }
+  it { should allow_values('Beginner', 'Intermediate', 'Professional').for(:difficulty) }
   it { should_not allow_values('Invalid', 'Hard', 'test').for(:difficulty) }
   it { should belong_to :user }
   it { should have_many :posts}

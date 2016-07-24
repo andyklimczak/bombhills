@@ -2,10 +2,12 @@
 // All this logic will automatically be available in application.js.
 function ready(){
   // enable chosen js
-  $('.chosen-select').attr("data-placeholder", "Select...").chosen({
-    no_results_text: 'No results matched',
-    width: '100%'
-  });
+  if($('.chosen-select').length) {
+    $('.chosen-select').attr("data-placeholder", "Select...").chosen({
+      no_results_text: 'No results matched',
+      width: '100%'
+    });
+  }
 }
 
 document.addEventListener("turbolinks:load", ready);
