@@ -93,17 +93,6 @@ function locateMe() {
 }
 
 /*
- * Switch between show & edit in spot modal 
- */
-
-function switchTab() {
-  $('#spotsbutton').click(function() {
-    $('.userspots').hide();
-    $('.usersspotsedit').show();
-  });
-}
-
-/*
  * Show or hide the left hand nav dashboard
  */
 function toggleDashboard() {

@@ -1,2 +1,12 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+/*
+ * Switch between show & edit in spot modal
+ */
+function switchTab() {
+  $('#spotsbutton').click(function() {
+    console.log('test');
+    $('.userspots').hide();
+    $('.usersspotsedit').show();
+  });
+}
+
+document.addEventListener("turbolinks:load", switchTab);
