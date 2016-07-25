@@ -55,14 +55,14 @@ label {
   background: #006964;
 }
 
-#spots-modal-body #left li:last-child {
-  background: #212121;
+#spots-modal-body #left li:hover{
+  background: #888C7E;
 }
 
 
 #spots-modal-body #right {
   margin-left: 150px;
-  background: #212121;
+  background: #233E47;
   height: 350px;
   padding: 10px 10px;
 }
@@ -71,7 +71,7 @@ label {
 #right .form-control {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 125px;
   width: 300px;
   border-radius: 0px;
   border: none;
