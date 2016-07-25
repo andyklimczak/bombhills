@@ -68,11 +68,16 @@ label {
 }
 
 
-#right .form-control {
+.userspots .form-control {
   margin-left: auto;
   margin-right: auto;
   margin-top: 125px;
   width: 300px;
+  border-radius: 0px;
+  border: none;
+}
+
+.usersspotsedit .form-control {
   border-radius: 0px;
   border: none;
 }
@@ -91,7 +96,6 @@ label {
   margin-left: 10px;
   
 }
-
 /*  Media Queries  */
 
 
@@ -116,7 +120,7 @@ label {
     cursor: pointer;
     background: #006964;
   }
-  #right .form-control {
+  .userspots .form-control {
     margin-top: 30px;
     width: 200px;
   }
@@ -147,7 +151,7 @@ label {
     cursor: pointer;
     background: #006964;
   }
-  #right .form-control {
+  .userspots .form-control {
     margin-top: 30px;
     width: 200px;
   }
@@ -178,10 +182,11 @@ label {
     cursor: pointer;
     background: #006964;
   }
-  #right .form-control {
+  .userspots .form-control {
     margin-top: 30px;
     width: 200px;
   }
+
   .userspots ul {
     padding-left: 0px;
     text-align: center;
