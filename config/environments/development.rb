@@ -41,7 +41,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
 
-	# To live reload locahost when saving a file
+  # To live reload locahost when saving a file
   config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
   Paperclip.options[:command_path] = '/usr/local/bin/'
 
@@ -52,5 +52,8 @@ Rails.application.configure do
       local_root: "~/fog/bombhills"
     },
     fog_directory: "images",
-    fog_host: "http://localhost:3000/images"}
+    fog_host: "http://localhost:3000/images"
+  }
+
+  config.assets.quiet = true
 end

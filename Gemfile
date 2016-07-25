@@ -36,7 +36,6 @@ group :development do
   gem 'awesome_print', require:"ap"
   gem 'better_errors'
   gem 'pry-rails'
-  #gem 'quiet_assets'
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
   gem 'spring'
