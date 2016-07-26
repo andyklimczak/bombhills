@@ -33,13 +33,25 @@
   padding: 0px;
 }
 
+#dashtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: #233E47;
+  font-size: 24px;
+}
+
+#dashtitle mark {
+  padding: 0px;
+  color: #006964;
+  background: none;
+}
+
 .navtools li {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   height: 60px;
   cursor: pointer;
   line-height: 70px;
-  font-size: 16px;
   text-align: left;
   padding-left: 28px;
   color: #066964;
@@ -55,7 +67,7 @@
   display: inline-block;
   vertical-align: middle;
   padding-left: 10px;
-  font-size: 15px;
+  font-size: 24px;
   letter-spacing: 1px;
 
 }
@@ -67,7 +79,7 @@
   vertical-align: middle;
   margin-top: 1px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 24px;
   color: #066964;
 
 }
