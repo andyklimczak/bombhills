@@ -280,8 +280,6 @@ body {
 .footer {
   padding: 20px 0px 80px;
   text-align: right;
-  background: #212121;
-  color: #FFF;
 }
 
 .footer h1 {
@@ -305,12 +303,10 @@ body {
 .footer li a {
   text-decoration: none;
   margin: 10px 0px;
-  color: #FFF;
 }
 
 .footer li a:hover {
   background: none;
-  color: #FFF;
 }
 
 .reference {
@@ -381,7 +377,16 @@ body {
   #contactfooter {
     display: none;
   }
-  
+  .footer {
+    background: #000;
+    color: #FFF;
+  }
+  .footer a {
+    color: #FFF;
+  }
+  .carousel-caption a{
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 370px) and (max-width: 472px) {
@@ -440,6 +445,16 @@ body {
   #contactfooter {
     display: none;
   }
+  .footer {
+    background: #000;
+    color: #FFF;
+  }
+  .footer a {
+    color: #FFF;
+  }
+  .carousel-caption a{
+    display: none;
+  }
 }
 
 /* Custom, iPhone Retina */
@@ -493,6 +508,16 @@ body {
     display: none;
   }
   #contactfooter {
+    display: none;
+  }
+  .footer {
+    background: #000;
+    color: #FFF;
+  }
+  .footer a {
+    color: #FFF;
+  }
+  .carousel-caption a{
     display: none;
   }
 }
