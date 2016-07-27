@@ -78,7 +78,7 @@
   <div class="container">
     <div class="col-xs-12 col-sm-8 col-md-8">
       <h2> EXPLORE MORE </h2>
-      <p> Find new new places to ride. Share those places with your friends! Create and customize your own user profile and join our online community.  </p>
+      <p> Find new new places to ride. Share those places with your friends. Set times to meetup at specific locations. Create and customize your own user profile and join our online community.  </p>
     </div>
     <div class="col-xs-12 col-sm-4 col-md-4" id="explorecol">
 
@@ -86,34 +86,67 @@
   </div>
 </div>
 
+<!-- user content -->
+<div class="row">
+  <div class="col-md-12" id="carouselcol">
+  <div id="usercontentcarousel" class="carousel slide" data-ride="carousel">
 
-<div class="bottomwrapper">
-  <!-- user content -->
-  <div class="usercontent">
-    <p> <%= link_to 'DISCOVER', posts_path %> </p>
-  </div>
-
-  <!-- footer -->
-  <div class="footer">
-    <div class="container">
-      <div class="col-sm-4 col-md-4">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag 'one.jpg'  %>
+        <div class="carousel-caption">
+          <%= link_to 'discover', posts_path %>
+          <h3>photo by [username]</h3>
+        </div>
       </div>
-      <div class="col-sm-4 col-md-4" id="contactfooter">
-        <h1> Site Blog </h1>
-        <ul>
-          <li>not</li>
-          <li>available</li>
-        </ul>
+      <div class="item">
+        <%= image_tag 'hat.jpg'  %>
+        <div class="carousel-caption">
+          <%= link_to 'discover', posts_path %>
+          <h3>photo by [username]</h3>
+        </div>
       </div>
-      <div class="col-sm-4 col-md-4">
-        <h1> We're also on </h1>
-        <ul>
-          <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>
-          <li><%= link_to "and Instagram", "https://www.instagram.com/bombhillspics/", :target => "_blank" %></li>
-        </ul>
+      <div class="item">
+        <%= image_tag 'usercontent.jpg'  %>
+        <div class="carousel-caption">
+          <%= link_to 'discover', posts_path %>
+          <h3>photo by [username]</h3>
+        </div>
       </div>
     </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#usercontentcarousel" role="button" data-slide="prev" style="background: none;">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#usercontentcarousel" role="button" data-slide="next" style="background: none;">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div> <!-- Carousel -->
   </div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+  <div class="container">
+     <div class="col-sm-4 col-md-4">
+     </div>
+     <div class="col-sm-4 col-md-4" id="contactfooter">
+       <h1> Site Blog </h1>
+       <ul>
+         <li>not</li>
+         <li>available</li>
+       </ul>
+     </div>
+     <div class="col-sm-4 col-md-4">
+       <h1> We're also on </h1>
+       <ul>
+         <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>
+         <li><%= link_to "and Instagram", "https://www.instagram.com/bombhillspics/", :target => "_blank" %></li>
+       </ul>
+     </div>
+   </div>
 </div>
 
 <div class="reference">
