@@ -553,7 +553,9 @@ body {
   #contactfooter {
     display: none;
   }
-
+  #mobilediscoverlink {
+    display: none;
+  }
 }	
 
 /* Small Devices, Tablets */
@@ -566,6 +568,9 @@ body {
   }
   #usercontentcarousel {
     margin: 25px 25px;
+  }
+  #mobilediscoverlink {
+    display: none;
   }
 }	
 
@@ -592,6 +597,9 @@ body {
   }
   #usercontentcarousel {
     margin: 25px 25px;
+  }
+  #mobilediscoverlink {
+    display: none;
   }
 }
 
