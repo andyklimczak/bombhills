@@ -60,7 +60,7 @@ label {
 }
 
 #spots-modal-body #left li:hover{
-  background: #888C7E;
+  background: #233E47;
 }
 
 
@@ -79,11 +79,17 @@ label {
   width: 300px;
   border-radius: 0px;
   border: none;
+  color: #FFF;
+  border-bottom: thin solid #006964;
+  background: none;
 }
 
 .usersspotsedit .form-control {
+  color: #FFF;
   border-radius: 0px;
   border: none;
+  background: none;
+  border-bottom: thin solid #006964;
 }
 
 .userspots ul {
@@ -100,6 +106,29 @@ label {
   margin-left: 10px;
   
 }
+
+/* report modal */
+
+#reportModal {
+  background: #006964;
+}
+
+#reportModal .modal-header {
+  border: none;
+}
+
+#reportModal .modal-header h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #233E47;
+}
+
+
+#reportModal .modal-footer {
+  border: none;
+}
+
 /*  Media Queries  */
 
 
