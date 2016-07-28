@@ -2,7 +2,7 @@
 <div class="mobileheader">
   <h1> B<mark style="color:#066964;background: none;padding: 0px;">H</mark> <br>  </h1>
   <ul>
-    <% if user_signed_in? %>  
+    <% if user_signed_in? %>
 
       <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'none' %></li>
       <li><%= link_to ' edit profile ', edit_user_registration_path, :class => 'none' %></li>
@@ -23,7 +23,7 @@
     <ul class="nav nav-pills" style="margin:0px;">
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <% if user_signed_in? %>  
+          <% if user_signed_in? %>
             <%= current_user.username %>
           <% else %>
             User
@@ -32,7 +32,7 @@
         </a>
         <ul class="dropdown-menu" style="margin: 10px 5px;">
 
-          <% if user_signed_in? %>  
+          <% if user_signed_in? %>
 
             <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'none' %></li>
             <li>
@@ -89,63 +89,51 @@
 <!-- user content -->
 <div class="row">
   <div class="col-md-12" id="carouselcol">
-  <div id="usercontentcarousel" class="carousel slide" data-ride="carousel">
+    <div id="usercontentcarousel" class="carousel slide" data-ride="carousel">
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <%= image_tag 'one.jpg'  %>
-        <div class="carousel-caption">
-          <%= link_to 'discover', posts_path %>
-          <h3>photo by username</h3>
-        </div>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <% @posts.each do |post| %>
+          <div class="item <% if post == @posts.first %>active<% end %>">
+            <%= image_tag post.image.url(:medium)  %>
+            <div class="carousel-caption">
+              <%= link_to 'discover', posts_path %>
+              <h3>photo by <%= post.user.username %></h3>
+            </div>
+          </div>
+        <% end %>
       </div>
-      <div class="item">
-        <%= image_tag 'hat.jpg'  %>
-        <div class="carousel-caption">
-          <%= link_to 'discover', posts_path %>
-          <h3>photo by username</h3>
-        </div>
-      </div>
-      <div class="item">
-        <%= image_tag 'usercontent.jpg'  %>
-        <div class="carousel-caption">
-          <%= link_to 'discover', posts_path %>
-          <h3>photo by username</h3>
-        </div>
-      </div>
-    </div>
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#usercontentcarousel" role="button" data-slide="prev" style="background: none;">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#usercontentcarousel" role="button" data-slide="next" style="background: none;">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </div> <!-- Carousel -->
+      <!-- Controls -->
+      <a class="left carousel-control" href="#usercontentcarousel" role="button" data-slide="prev" style="background: none;">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#usercontentcarousel" role="button" data-slide="next" style="background: none;">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div> <!-- Carousel -->
   </div>
 </div>
 
 <!-- footer -->
 <div class="footer">
   <div class="container">
-     <div class="col-sm-4 col-md-4">
-     </div>
-     <div class="col-sm-4 col-md-4" id="contactfooter">
+    <div class="col-sm-4 col-md-4">
+    </div>
+    <div class="col-sm-4 col-md-4" id="contactfooter">
 
-     </div>
-     <div class="col-sm-4 col-md-4">
-       <ul id="mobilediscoverlink">
-         <li><%= link_to 'discover more posts', posts_path %></li>
-       </ul>
-       <h1> We're also on </h1>
-       <ul>
-         <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>
-         <li><%= link_to "and Instagram", "https://www.instagram.com/bombhillspics/", :target => "_blank" %></li>
-       </ul>
-     </div>
-   </div>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <ul id="mobilediscoverlink">
+        <li><%= link_to 'discover more posts', posts_path %></li>
+      </ul>
+      <h1> We're also on </h1>
+      <ul>
+        <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>
+        <li><%= link_to "and Instagram", "https://www.instagram.com/bombhillspics/", :target => "_blank" %></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <div class="reference">
