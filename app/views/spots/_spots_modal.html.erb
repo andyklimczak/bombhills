@@ -30,7 +30,7 @@
                 <%= select_tag "difficulty", options_for_select(difficulties, @current_user_spots.first.difficulty), { class: 'form-control', id: 'sel1' } %>
               </div>
               <div class="form-group">
-                <input name="title" type="text" class="form-control" id="usr" value="<%= @current_user_spots.first.title %>">
+                <input name="title" type="text" class="form-control" id="usr" value="<%= @current_user_spots.first.title %>" />
               </div>
               <div class="form-group">
                 <textarea name="description" class="form-control" rows="2" id="comment" placeholder="description"><%= @current_user_spots.first.description %></textarea>
