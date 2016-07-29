@@ -15,12 +15,16 @@
         <div id="right">
           <button type="button" class="close" data-dismiss="modal" style="color: #FFF;margin-bottom: 10px;">&times;</button>
           <div class="userspots">
-            <div class="form-group">
-              <%= select_tag "view_delete_spot", options_for_select(@user.spots.map{ |s| [s.title, s.id ]}), { class: 'form-control', id: 'sel1' } %>
-            </div>
-            <ul>
-              <li id="modal-view-spot">view</li>
-            </ul>
+            <% if @user.spots.any? %>
+              <div class="form-group">
+                <%= select_tag "view_delete_spot", options_for_select(@user.spots.map{ |s| [s.title, s.id ]}), { class: 'form-control', id: 'sel1' } %>
+              </div>
+              <ul>
+                <li id="modal-view-spot">view</li>
+              </ul>
+            <% else %>
+              No spots
+            <% end %>
           </div>
           <% if current_user == @user and @user.spots.any? %>
             <div class="usersspotsedit">
