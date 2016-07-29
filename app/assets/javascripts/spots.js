@@ -106,4 +106,77 @@ function toggleDashboard() {
   });
 }
 
+/*
+* Change the delete url when changing the spots dropdown
+*/
+function viewDeleteSpotSelectChange() {
+  $('select[name=view_delete_spot').on('change', function() {
+    $('#modal-delete-spot').attr('href', '/spots/' + this.value);
+  });
+}
+
+/*
+* Set view to the spot selected in the spots dropdown
+*/
+function viewSpotClick() {
+  $('#modal-view-spot').on('click', function() {
+    var spotId = $('select[name=view_delete_spot]').val();
+    $.ajax({
+      url: '/spots/' + spotId,
+      method: 'GET',
+      dataType: 'json'
+    }).done(function(response) {
+      console.log(response);
+      mymap.setView([response.latitude, response.longitude], 12);
+    }).always(function() {
+      $('#spotModal').modal('toggle');
+    });
+  });
+}
+
+/*
+ * Change the spot modal form information when the selected spot changes
+ */
+function updateSpotSelectChange() {
+  $('select[name="spot_id"]').on('change', function() {
+    var spotId = $('select[name="spot_id"]').val();
+    $.ajax({
+      url: '/spots/' + spotId,
+      method: 'GET',
+      dataType: 'json'
+    }).done(function(response) {
+      console.log(response);
+      $('select[name="difficulty"]').val(response.difficulty);
+      $('input[name="title"]').val(response.title);
+      $('textarea[name="description"]').val(response.description);
+    });
+  });
+}
+
+/*
+ * Update the spot via the modal
+ */
+function updateSpotClick() {
+  $('#modal-update-button').on('click', function() {
+    var data = _.object(_.map($('#users-spots-edit-form').serializeArray(), _.values));
+    $.ajax({
+      type: "PUT",
+      url: "/spots/" + data.spot_id,
+      data: JSON.stringify(data),
+      dataType: 'json',
+      contentType: 'application/json'
+    }).always(function() {
+      $('#spotModal').modal('toggle');
+    });
+  });
+}
+
+function initModalListeners() {
+  viewDeleteSpotSelectChange()
+  viewSpotClick();
+  updateSpotSelectChange();
+  updateSpotClick();
+}
+
+document.addEventListener("turbolinks:load", initModalListeners);
 document.addEventListener("turbolinks:load", initMap);
