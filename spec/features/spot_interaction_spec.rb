@@ -26,12 +26,12 @@ RSpec.describe 'spot interactions', :type => :feature do
     visit show_user_path(user.username)
     click_on 'Spots'
     within('#spotModal') do
-      expect { click_link('Destroy') }.to change(Spot, :count).by(-1)
+      expect { click_button('Delete') }.to change(Spot, :count).by(-1)
     end
   end
 
   it 'can create a spot with Beginner difficulty' do
-    user = create(:user, username: 'test1')
+    user = create(:user)
     login_as user, scope: :user
     visit spots_path
     within('#new-location-form', visible: false) do
@@ -43,7 +43,7 @@ RSpec.describe 'spot interactions', :type => :feature do
   end
 
   it 'can create a spot with Intermediate difficulty' do
-    user = create(:user, username: 'test1')
+    user = create(:user)
     login_as user, scope: :user
     visit spots_path
     within('#new-location-form', visible: false) do
@@ -55,7 +55,7 @@ RSpec.describe 'spot interactions', :type => :feature do
   end
 
   it 'can create a spot with Professional difficulty' do
-    user = create(:user, username: 'test1')
+    user = create(:user)
     login_as user, scope: :user
     visit spots_path
     within('#new-location-form', visible: false) do

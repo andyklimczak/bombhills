@@ -26,6 +26,7 @@ gem 'geocoder'
 gem 'turbolinks'
 gem 'rack-timeout'
 gem 'font-awesome-rails'
+gem 'underscore-rails'
 
 group :development, :test do
   gem 'rspec-rails'

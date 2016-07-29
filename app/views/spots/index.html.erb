@@ -2,7 +2,7 @@
   <div class="dashboard">
     <div class="navtools">
       <ul>
-        <li>bombhills</li>
+        <li id="dashtitle">bom<mark>bh</mark>ills</li>
         <li id="searchli">
           <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
             <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
@@ -14,31 +14,38 @@
         <li id="findmebutton">
           <span aria-hidden="true" class=" glyphicon glyphicon-globe" style=
             "font-size: 18px;"></span>
-          <p>Find Me</p>
+          <p>find me</p>
         </li>
-        <li>
-          <span aria-hidden="true" class="glyphicon glyphicon-home" style=
-            "font-size: 18px;"></span>
-          <p><%= link_to ' Home ', root_path, :class => 'none' %></p>
-        </li>
+        <%if user_signed_in? %>
+          <li data-toggle="modal" data-target="#spotModal">
+            <span aria-hidden="true" class=" glyphicon glyphicon-map-marker" style=
+              "font-size: 18px;"></span>
+            <p>spots</p>
+          </li>
+        <% end %>
         <%if user_signed_in? %>
           <li>
             <span aria-hidden="true" class="glyphicon glyphicon-user" style=
               "font-size: 18px;"></span>
             <p>
-              <%= link_to ' Profile ', show_user_path(current_user.username) %></p>
+              <%= link_to ' profile ', show_user_path(current_user.username) %></p>
           </li>
         <%else %>
           <li>
             <span aria-hidden="true" class="glyphicon glyphicon-user" style=
               "font-size: 18px;"></span>
-            <p><%= link_to " Login ", new_user_session_path %></p>
+            <p><%= link_to " login ", new_user_session_path %></p>
           </li>
         <%end %>
         <li>
+          <span aria-hidden="true" class="glyphicon glyphicon-home" style=
+            "font-size: 18px;"></span>
+          <p><%= link_to ' home ', root_path, :class => 'none' %></p>
+        </li>
+        <li>
           <span aria-hidden="true" class="glyphicon glyphicon-camera" style=
             "font-size: 18px;"></span>
-          <p><%= link_to 'DISCOVER', posts_path %></p>
+          <p><%= link_to 'discover', posts_path %></p>
         </li>
         <li id="fullscreenbutton">
           <span aria-hidden="true" class="glyphicon glyphicon-fullscreen"
@@ -54,10 +61,40 @@
         "hamburgerbutton" style="font-size: 50px;"></span>
     </div>
     <div class="alert alert-info map-alert" style="background: #066964;color: #FFF;border-color: #066964;">
-      <a aria-label="close" class="close" data-dismiss="alert" href="#" style="padding-left: 10px">&times;</a>
+      <a aria-label="close" class="close" data-dismiss="alert" href="#" style="padding-left: 10px;color: #FFF;font-size: 24px;">&times;</a>
       <strong>Hey!</strong>
       Right-click or hold to add a location.
     </div>
   </div>
 </div>
-<%= render 'spots/form' %><%= render 'spots/form_error' %>
+
+<%= render 'spots/form' %>
+<% if user_signed_in? %>
+<% end %>
+<%= render 'spots/form_error' %>
+
+<!-- Modal -->
+<div id="reportModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Report</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="text" class="form-control" id="usr" placeholder="spot name">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="2" id="comment" placeholder="comment"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</div>
