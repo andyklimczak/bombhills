@@ -33,13 +33,25 @@
   padding: 0px;
 }
 
+#dashtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: #233E47;
+  font-size: 24px;
+}
+
+#dashtitle mark {
+  padding: 0px;
+  color: #006964;
+  background: none;
+}
+
 .navtools li {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   height: 60px;
   cursor: pointer;
   line-height: 70px;
-  font-size: 16px;
   text-align: left;
   padding-left: 28px;
   color: #066964;
@@ -50,24 +62,24 @@
 }
 
 .navtools li p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   display: inline-block;
   vertical-align: middle;
   padding-left: 10px;
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 1px;
 
 }
 
 .navtools li a {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   display: inline-block;
   vertical-align: middle;
   margin-top: 1px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 20px;
   color: #066964;
 
 }
@@ -148,6 +160,35 @@
 #new-location-error-modal-button {
   border: none;
 }
+
+.leaflet-popup-content-wrapper {
+  background: #006964;
+  color: #FFF;
+}
+
+.leaflet-popup-content-wrapper b {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.leaflet-popup-content-wrapper a {
+  font-size: 24px;
+  color: #FFF;
+  font-weight: 400;
+}
+
+.leaflet-popup-content-wrapper a:hover {
+  background: none;
+  cursor: pointer;
+  color: #233E47;
+  text-decoration: none;
+}
+
+.leaflet-popup-content-wrapper a:last-child {
+  font-size: 18px;
+}
+
 
 /* meetups */
 

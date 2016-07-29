@@ -5,9 +5,11 @@ class SpotsController < ApplicationController
   # GET /spots.json
   def index
     @spots = Spot.all
+    @current_user_spots = @spots.where(user: current_user)
     gon.search = Geocoder.search(params[:search]).first if params[:search].present?
     gon.spot = Spot.find(params[:id]) if params[:id].present? and Spot.exists?(params[:id])
     gon.user_signed_in = user_signed_in?
+    gon.user_id = current_user.id
   end
 
   # GET /spots/1
@@ -45,7 +47,7 @@ class SpotsController < ApplicationController
   def update
     respond_to do |format|
       if @spot.update(spot_params)
-        format.html { redirect_to @spot, notice: 'Spot was successfully updated.' }
+        format.html { redirect_to spots_path(id: @spot.id), notice: 'Spot was successfully created.' }
         format.json { render :show, status: :ok, location: @spot }
       else
         format.html { render :edit }

@@ -2,7 +2,7 @@
 <div class="mobileheader">
   <h1> B<mark style="color:#066964;background: none;padding: 0px;">H</mark> <br>  </h1>
   <ul>
-    <% if user_signed_in? %>  
+    <% if user_signed_in? %>
 
       <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'none' %></li>
       <li><%= link_to ' edit profile ', edit_user_registration_path, :class => 'none' %></li>
@@ -23,7 +23,7 @@
     <ul class="nav nav-pills" style="margin:0px;">
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <% if user_signed_in? %>  
+          <% if user_signed_in? %>
             <%= current_user.username %>
           <% else %>
             User
@@ -32,7 +32,7 @@
         </a>
         <ul class="dropdown-menu" style="margin: 10px 5px;">
 
-          <% if user_signed_in? %>  
+          <% if user_signed_in? %>
 
             <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'none' %></li>
             <li>
@@ -77,8 +77,8 @@
 <div class="display">
   <div class="container">
     <div class="col-xs-12 col-sm-8 col-md-8">
-      <h2> EXPLORE MORE </h2>
-      <p> Find new new places to ride. Share those places with your friends! Create and customize your own user profile and join our online community.  </p>
+      <h2> Explore More </h2>
+      <p> Find new new places to ride. Share those places with your friends. Set times to meetup at specific locations. Create and customize your own user profile and join our online community.  </p>
     </div>
     <div class="col-xs-12 col-sm-4 col-md-4" id="explorecol">
 
@@ -86,32 +86,52 @@
   </div>
 </div>
 
+<!-- user content -->
+<div class="row">
+  <div class="col-md-12" id="carouselcol">
+    <div id="usercontentcarousel" class="carousel slide" data-ride="carousel">
 
-<div class="bottomwrapper">
-  <!-- user content -->
-  <div class="usercontent">
-    <p> <%= link_to 'DISCOVER', posts_path %> </p>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <% @posts.each do |post| %>
+          <div class="item <% if post == @posts.first %>active<% end %>">
+            <%= image_tag post.image.url(:medium)  %>
+            <div class="carousel-caption">
+              <%= link_to 'discover', posts_path %>
+              <h3>photo by <%= post.user.username %></h3>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#usercontentcarousel" role="button" data-slide="prev" style="background: none;">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#usercontentcarousel" role="button" data-slide="next" style="background: none;">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div> <!-- Carousel -->
   </div>
+</div>
 
-  <!-- footer -->
-  <div class="footer">
-    <div class="container">
-      <div class="col-sm-4 col-md-4">
-      </div>
-      <div class="col-sm-4 col-md-4" id="contactfooter">
-        <h1> Site Blog </h1>
-        <ul>
-          <li>not</li>
-          <li>available</li>
-        </ul>
-      </div>
-      <div class="col-sm-4 col-md-4">
-        <h1> We're also on </h1>
-        <ul>
-          <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>
-          <li><%= link_to "and Instagram", "https://www.instagram.com/bombhillspics/", :target => "_blank" %></li>
-        </ul>
-      </div>
+<!-- footer -->
+<div class="footer">
+  <div class="container">
+    <div class="col-sm-4 col-md-4">
+    </div>
+    <div class="col-sm-4 col-md-4" id="contactfooter">
+
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <ul id="mobilediscoverlink">
+        <li><%= link_to 'discover more posts', posts_path %></li>
+      </ul>
+      <h1> We're also on </h1>
+      <ul>
+        <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>
+        <li><%= link_to "and Instagram", "https://www.instagram.com/bombhillspics/", :target => "_blank" %></li>
+      </ul>
     </div>
   </div>
 </div>

@@ -14,6 +14,7 @@
 //= require jquery3
 //= require jquery_ujs
 //= require turbolinks
+//= require underscore
 //= require bootstrap-sprockets
 //= require chosen-jquery
 //= require leaflet

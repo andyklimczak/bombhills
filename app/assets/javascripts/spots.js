@@ -77,7 +77,7 @@ function loadPoints(e) {
   }).done(function(response) {
     response.spots.forEach(function(spot) {
       L.marker([spot.latitude, spot.longitude], { clickable: true })
-        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br><a href='/spots/" + spot.id + "'>Meetup</a>")
+        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br><a href='/spots/" + spot.id + "'>meetup</a>" +"<br><a data-toggle='modal' data-target='#reportModal'>report</a>")
         .addTo(mymap);
     });
   }).fail(function() {
@@ -106,4 +106,84 @@ function toggleDashboard() {
   });
 }
 
+/*
+ * Change the delete url when changing the spots dropdown
+ */
+function viewDeleteSpotSelectChange() {
+  $('select[name=view_delete_spot').on('change', function() {
+    $('#modal-delete-spot').attr('href', '/spots/' + this.value);
+  });
+}
+
+/*
+ * View the spot when view is clicked
+ * If user is on the map page, set the view
+ * If user is on the profile page, go to the map page
+ */
+function viewSpotClick() {
+  $('#modal-view-spot').on('click', function() {
+    var spotId = $('select[name=view_delete_spot]').val();
+    if($('#mapid').length) {
+      $.ajax({
+        url: '/spots/' + spotId,
+        method: 'GET',
+        dataType: 'json'
+      }).done(function(response) {
+        mymap.setView([response.latitude, response.longitude], 12);
+      }).always(function() {
+        $('#spotModal').modal('toggle');
+      });
+    } else {
+      window.location = '/spots?id=' + spotId;
+    }
+  });
+}
+
+/*
+ * Change the spot modal form information when the selected spot changes
+ */
+function updateSpotSelectChange() {
+  $('select[name="spot_id"]').on('change', function() {
+    var spotId = $('select[name="spot_id"]').val();
+    $.ajax({
+      url: '/spots/' + spotId,
+      method: 'GET',
+      dataType: 'json'
+    }).done(function(response) {
+      $('select[name="difficulty"]').val(response.difficulty);
+      $('input[name="title"]').val(response.title);
+      $('textarea[name="description"]').val(response.description);
+    });
+  });
+}
+
+/*
+ * Update the spot via the modal
+ */
+function updateSpotClick() {
+  $('#modal-update-button').on('click', function() {
+    var data = _.object(_.map($('#users-spots-edit-form').serializeArray(), _.values));
+    $.ajax({
+      type: "PUT",
+      url: "/spots/" + data.spot_id,
+      data: JSON.stringify(data),
+      dataType: 'json',
+      contentType: 'application/json'
+    }).always(function() {
+      $('#spotModal').modal('toggle');
+    });
+  });
+}
+
+/*
+ * Init listeners for spot modal
+ */
+function initModalListeners() {
+  viewDeleteSpotSelectChange()
+  viewSpotClick();
+  updateSpotSelectChange();
+  updateSpotClick();
+}
+
+document.addEventListener("turbolinks:load", initModalListeners);
 document.addEventListener("turbolinks:load", initMap);
