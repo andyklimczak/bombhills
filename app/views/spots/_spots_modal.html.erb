@@ -1,4 +1,3 @@
-
 <!-- Spots Modal -->
 <div class="modal fade" id="spotModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document" id="userspotsmodal-dialog">
@@ -38,7 +37,7 @@
               </div>
               <div class="text-center">
                 <button type="button" class="btn btn-default" id="modal-update-button">Update</button>
-              <%= button_to 'Delete', @current_user_spots.first, method: :delete, date: { confirm: 'Are you sure?' }, id: 'modal-delete-spot', class: 'btn btn-default' %>
+                <%= button_to 'Delete', @current_user_spots.first, method: :delete, date: { confirm: 'Are you sure?' }, id: 'modal-delete-spot', class: 'btn btn-default' %>
               </div>
             </form>
           </div>
