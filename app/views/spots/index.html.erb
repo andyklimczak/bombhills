@@ -16,11 +16,13 @@
             "font-size: 18px;"></span>
           <p>find me</p>
         </li>
-        <li data-toggle="modal" data-target="#spotModal">
-          <span aria-hidden="true" class=" glyphicon glyphicon-map-marker" style=
-            "font-size: 18px;"></span>
-          <p>spots</p>
-        </li>
+        <%if user_signed_in? %>
+          <li data-toggle="modal" data-target="#spotModal">
+            <span aria-hidden="true" class=" glyphicon glyphicon-map-marker" style=
+              "font-size: 18px;"></span>
+            <p>spots</p>
+          </li>
+        <% end %>
         <%if user_signed_in? %>
           <li>
             <span aria-hidden="true" class="glyphicon glyphicon-user" style=
@@ -66,8 +68,11 @@
   </div>
 </div>
 
-<%= render 'spots/spots_modal' %>
-<%= render 'spots/form' %><%= render 'spots/form_error' %>
+<%= render 'spots/form' %>
+<% if user_signed_in? %>
+  <%= render 'spots/spots_modal' %>
+<% end %>
+<%= render 'spots/form_error' %>
 
 <!-- Modal -->
 <div id="reportModal" class="modal fade" role="dialog">
