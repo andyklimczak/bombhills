@@ -20,7 +20,6 @@
             </div>
             <ul>
               <li id="modal-view-spot">view</li>
-              <li><%= link_to 'delete', @current_user_spots.first, method: :delete, date: { confirm: 'Are you sure?' }, id: 'modal-delete-spot' %></li>
             </ul>
           </div>
           <div class="usersspotsedit">
@@ -39,6 +38,7 @@
               </div>
               <div class="text-center">
                 <button type="button" class="btn btn-default" id="modal-update-button">Update</button>
+              <%= button_to 'Delete', @current_user_spots.first, method: :delete, date: { confirm: 'Are you sure?' }, id: 'modal-delete-spot', class: 'btn btn-default' %>
               </div>
             </form>
           </div>
@@ -47,7 +47,3 @@
     </div>
   </div>
 </div>
-
-
-
-
