@@ -7,7 +7,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">New Location</h4>
       </div>
-      
+
       <div class="modal-body">
 
         <%= form_for Spot.new, html: {class:'form-horizontal'}, url: {controller: "spots", action: "create"} do |f| %>
