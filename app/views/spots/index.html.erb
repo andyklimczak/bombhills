@@ -70,7 +70,7 @@
 
 <%= render 'spots/form' %>
 <% if user_signed_in? %>
-  <%= render 'spots/spots_modal' %>
+  <%= render partial: 'layouts/spots_modal', locals: { user: current_user } %>
 <% end %>
 <%= render 'spots/form_error' %>
 
