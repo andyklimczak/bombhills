@@ -95,7 +95,7 @@
       <div class="carousel-inner">
         <% @posts.each do |post| %>
           <div class="item <% if post == @posts.first %>active<% end %>">
-            <%= image_tag post.image.url  %>
+            <%= image_tag post.image.url %>
             <div class="carousel-caption">
               <%= link_to 'discover', posts_path %>
               <h3>photo by <%= post.user.username %></h3>
