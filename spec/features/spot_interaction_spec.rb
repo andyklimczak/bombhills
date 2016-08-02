@@ -19,7 +19,7 @@ RSpec.describe 'spot interactions', :type => :feature do
     expect(page).to have_current_path(spots_path(search: 'Amherst'))
   end
 
-  it 'can delete a spot from the user spots modal' do
+  it 'can delete the first spot from the user spots modal on user profile' do
     user = create(:user, username: 'test1')
     spot = create(:spot, user: user)
     login_as user, scope: :user
@@ -27,6 +27,45 @@ RSpec.describe 'spot interactions', :type => :feature do
     click_on 'Spots'
     within('#spotModal') do
       expect { click_button('Delete') }.to change(Spot, :count).by(-1)
+    end
+  end
+
+  it 'can delete the non first spot from the user spots modal on user profile page' do
+    user = create(:user, username: 'test1')
+    spot = create(:spot, user: user)
+    spot = create(:spot, title: 'Spot 2', user: user)
+    login_as user, scope: :user
+    visit show_user_path(user.username)
+    click_on 'Spots'
+    within('#spotModal') do
+      select 'Spot 2', from: find('select[name$="spot_id"]')[:name]
+      expect { click_button('Delete') }.to change(Spot, :count).by(-1)
+      expect(user.spots.last.title).not_to eq('Spot 2')
+    end
+  end
+
+  it 'can delete the first spot from the user spots modal on map page' do
+    user = create(:user, username: 'test1')
+    spot = create(:spot, user: user)
+    login_as user, scope: :user
+    visit spots_path
+    find(:css, '#spotsModalLink').click
+    within('#spotModal') do
+      expect { click_button('Delete') }.to change(Spot, :count).by(-1)
+    end
+  end
+
+  it 'can delete the non first spot from the user spots modal on map page' do
+    user = create(:user, username: 'test1')
+    spot = create(:spot, user: user)
+    spot = create(:spot, title: 'Spot 2', user: user)
+    login_as user, scope: :user
+    visit spots_path
+    find(:css, '#spotsModalLink').click
+    within('#spotModal') do
+      select 'Spot 2', from: find('select[name$="spot_id"]')[:name]
+      expect { click_button('Delete') }.to change(Spot, :count).by(-1)
+      expect(user.spots.last.title).not_to eq('Spot 2')
     end
   end
 
@@ -66,7 +105,7 @@ RSpec.describe 'spot interactions', :type => :feature do
     end
   end
 
-  it 'can view a spot on the map from the spots page' do
+  it 'can view a spot on the map from the posts page' do
     post = create(:image_post)
     visit posts_path
     click_on 'Find'

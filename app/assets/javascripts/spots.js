@@ -134,7 +134,7 @@ function viewSpotClick() {
         $('#spotModal').modal('toggle');
       });
     } else {
-      window.location = '/spots?id=' + spotId;
+      Turbolinks.visit('/spots?id=' + spotId, { action: 'replace' })
     }
   });
 }
@@ -169,6 +169,8 @@ function updateSpotClick() {
       data: JSON.stringify(data),
       dataType: 'json',
       contentType: 'application/json'
+    }).done(function(response) {
+      Turbolinks.visit('/spots?id=' + response.id, { action: 'replace' })
     }).always(function() {
       $('#spotModal').modal('toggle');
     });
