@@ -57,6 +57,8 @@ RSpec.describe SpotsController, type: :controller do
 
   describe "GET #new" do
     it "assigns a new spot as @spot" do
+      user = create(:user)
+      sign_in user
       get :new, {}, valid_session
       expect(assigns(:spot)).to be_a_new(Spot)
     end
@@ -120,10 +122,12 @@ RSpec.describe SpotsController, type: :controller do
       }
 
       it "updates the requested spot" do
-        spot = Spot.create! valid_attributes
-        put :update, {:id => spot.to_param, :spot => {title: "test title"}}, valid_session
-        spot.reload
-        expect(spot.title).to eq("test title")
+        user = create(:user)
+        sign_in user
+        user.spots.create! valid_attributes
+        put :update, {:id => user.spots.last.to_param, :spot => {title: "test title"}}, valid_session
+        user.spots.last.reload
+        expect(user.spots.last.title).to eq("test title")
       end
 
       it "assigns the requested spot as @spot" do
@@ -133,9 +137,11 @@ RSpec.describe SpotsController, type: :controller do
       end
 
       it "redirects to the spot" do
-        spot = Spot.create! valid_attributes
-        put :update, {:id => spot.to_param, :spot => valid_attributes}, valid_session
-        expect(response).to redirect_to(spot)
+        user = create(:user)
+        sign_in user
+        user.spots.create! valid_attributes
+        put :update, {:id => user.spots.last.to_param, :spot => valid_attributes}, valid_session
+        expect(response).to redirect_to(user.spots.last)
       end
     end
 
@@ -147,9 +153,11 @@ RSpec.describe SpotsController, type: :controller do
       end
 
       it "re-renders the 'edit' template" do
+        user = create(:user)
+        sign_in user
         spot = Spot.create! valid_attributes
         put :update, {:id => spot.to_param, :spot => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
+        expect(response).to render_template()
       end
     end
   end
