@@ -21,7 +21,7 @@ RSpec.describe "edit user", :type => :feature do
   it "change motto" do
     visit '/users/edit'
     within('#edit-profile-form') do
-      fill_in 'Motto', with: 'New Motto'
+      fill_in 'user_motto', with: 'New Motto'
       fill_in 'Current password', with: 'password123'
       click_button 'Update'
     end
@@ -66,5 +66,11 @@ RSpec.describe "edit user", :type => :feature do
     @user.reload
     expect(page).to have_current_path(show_user_path(@user.username))
     expect(@user.avatar_file_name).to eq('pic.jpg')
+  end
+
+  it "go to profile page" do
+    visit '/users/edit'
+    click_link 'see your profile!'
+    expect(page).to have_current_path(show_user_path(@user.username))
   end
 end
