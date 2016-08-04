@@ -51,5 +51,4 @@ group :test do
   gem 'nyan-cat-formatter'
   gem 'simplecov', require: false
   gem 'capybara'
-  gem 'rails-controller-testing', git: 'https://github.com/rails/rails-controller-testing.git'
 end

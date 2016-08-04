@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
+  before_action :require_permission, except: [:show, :index, :create]
 
   # GET /posts
   # GET /posts.json
@@ -71,5 +72,9 @@ class PostsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
     params.require(:post).permit(:title, :image, :description, :user_id, :spot_id, :type, :video_url)
+  end
+
+  def require_permission
+    super(@post)
   end
 end
