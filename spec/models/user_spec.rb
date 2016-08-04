@@ -25,19 +25,19 @@ RSpec.describe User, :type => :model do
 	it "finds user by email" do
     user = create(:user, email: "foo@bar.com")
     authenticated = User.find_for_database_authentication({email: "foo@bar.com"})
-		expect(authenticated).to eql user 
+		expect(authenticated).to eql user
 	end
 
 	it "finds user by login given email" do
     user = create(:user, email: "foo@bar.com")
     authenticated = User.find_for_database_authentication({login: "foo@bar.com"})
-		expect(authenticated).to eql user 
+		expect(authenticated).to eql user
 	end
 
 	it "finds user by login given username" do
 		user = create(:user, username: "test_username")
 		authenticated = User.find_for_database_authentication({login: "test_username"})
-		expect(authenticated).to eql user 
+		expect(authenticated).to eql user
 	end
 
   it 'should have posts ordered by created_at desc' do
@@ -57,7 +57,7 @@ RSpec.describe User, :type => :model do
     expect(user.spots.first).to eq(spot3)
     expect(user.spots.last).to eq(spot1)
   end
-  
+
   it 'has correct name value' do
     user = create(:user)
     expect(user.name).to eq(user.username)
@@ -72,4 +72,7 @@ RSpec.describe User, :type => :model do
   it { should have_many :spots }
   it { should have_many :posts }
   it { should validate_uniqueness_of(:username).case_insensitive }
+  it { should have_attached_file(:avatar) }
+  it { should validate_attachment_content_type(:avatar).allowing('image/png', 'image/gif', 'image/jpg', 'image/jpeg').rejecting('text/plain', 'text/xml') }
+  it { should validate_attachment_size(:avatar).less_than(5.megabytes) }
 end
