@@ -110,6 +110,7 @@ GEM
       sass-rails (>= 3.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
+    cliver (0.3.2)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
     codeclimate-engine-rb (0.3.1)
@@ -126,6 +127,7 @@ GEM
     coffee-script-source (1.10.0)
     colorize (0.8.1)
     concurrent-ruby (1.0.2)
+    database_cleaner (1.5.3)
     debug_inspector (0.0.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
@@ -365,6 +367,11 @@ GEM
     path_expander (1.0.0)
     pg (0.18.4)
     pkg-config (1.1.7)
+    poltergeist (1.9.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      multi_json (~> 1.0)
+      websocket-driver (>= 0.2.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -525,6 +532,7 @@ DEPENDENCIES
   bundler-audit
   capybara
   chosen-rails
+  database_cleaner
   devise
   factory_girl_rails
   ffaker!
@@ -540,6 +548,7 @@ DEPENDENCIES
   nyan-cat-formatter
   paperclip
   pg
+  poltergeist
   pry-rails
   puma
   rack-livereload

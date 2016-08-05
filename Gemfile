@@ -27,6 +27,7 @@ gem 'turbolinks'
 gem 'rack-timeout'
 gem 'font-awesome-rails'
 gem 'underscore-rails'
+gem 'poltergeist'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -51,4 +52,5 @@ group :test do
   gem 'nyan-cat-formatter'
   gem 'simplecov', require: false
   gem 'capybara'
+  gem 'database_cleaner'
 end
