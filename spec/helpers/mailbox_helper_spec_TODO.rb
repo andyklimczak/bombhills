@@ -1,15 +1,11 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the MailboxHelper. For example:
-#
-# describe MailboxHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe MailboxHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "#unread_message_count" do
+    it "returns 0 unread messages" do
+      user = create(:user)
+      allow(controller).to receive(:current_user).and_return(user)
+      expect(helper.unread_messages_count).to eql(0)
+    end
+  end
 end

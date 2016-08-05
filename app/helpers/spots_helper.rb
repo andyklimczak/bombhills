@@ -1,5 +1,5 @@
 module SpotsHelper
   def difficulties
-    [['Beginner', 'Beginner'], ['Intermediate', 'Intermediate'], ['Professional', 'Professional']]
+    ['Beginner', 'Intermediate', 'Professional'].map { |x| [x, x] }
   end
 end
