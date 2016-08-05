@@ -35,7 +35,6 @@ Capybara.register_driver :poltergeist do |app|
 	Capybara::Poltergeist::Driver.new(app, :window_size => [1920, 1080], :phantomjs_logger => 'log/poltergeist.log', js_errors: false)
 end
 Capybara.javascript_driver = :poltergeist
-Capybara.server_port = 3000
 
 RSpec.configure do |config|
 	# Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
