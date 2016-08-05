@@ -178,6 +178,23 @@ function updateSpotClick() {
 }
 
 /*
+ * Delete the spot via the modal
+ */
+function deleteSpotClick() {
+  $('#modal-delete-button').on('click', function() {
+    var spotId = $('select[name="spot_id"]').val();
+    $.ajax({
+      type: "DELETE",
+      url: "/spots/" + spotId,
+      dataType: 'json',
+      contentType: 'application/json'
+    }).always(function() {
+      $('#spotModal').modal('toggle');
+    });
+  });
+}
+
+/*
  * Init listeners for spot modal
  */
 function initModalListeners() {
@@ -185,6 +202,7 @@ function initModalListeners() {
   viewSpotClick();
   updateSpotSelectChange();
   updateSpotClick();
+  deleteSpotClick();
 }
 
 document.addEventListener("turbolinks:load", initModalListeners);
