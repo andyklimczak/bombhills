@@ -1,34 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <div class="meetup">
-  <p>
-    <strong>Difficulty:</strong>
-    <%= @spot.difficulty%>
-  </p>
 
-  <p>
-    <strong>Latitude:</strong>
-    <%= @spot.latitude %>
-  </p>
+<%= link_to 'x', spots_path %>
 
-  <p>
-    <strong>Longitude:</strong>
-    <%= @spot.longitude %>
-  </p>
+  <div class="meetupcontent">
+    <p>
+      <strong>Difficulty</strong>
+      <%= @spot.difficulty%>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @spot.description %>
-  </p>
+    <p>
+      <strong>Description</strong>
+      <%= @spot.description %>
+    </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= @spot.user.email %>
-  </p>
-  
-  
-<%= link_to 'Edit', edit_spot_path(@spot) %>
-<%= link_to 'Back', spots_path %>
-  
+    <p>
+      <strong>Created by</strong>
+      <%= @spot.user.username %>
+    </p>
+
+
+  <%= link_to 'Edit', edit_spot_path(@spot) %>
+
+  </div>
+
 </div>
 
