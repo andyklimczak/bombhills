@@ -2,7 +2,7 @@
   <div class="dashboard">
     <div class="navtools">
       <ul>
-        <li id="dashtitle">bom<mark>bh</mark>ills</li>
+        <li id="dashtitle"><%= link_to ' bombhills ', root_path, :class => 'none' %></li>
         <li id="searchli">
           <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
             <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
@@ -38,11 +38,6 @@
           </li>
         <%end %>
         <li>
-          <span aria-hidden="true" class="glyphicon glyphicon-home" style=
-            "font-size: 18px;"></span>
-          <p><%= link_to ' home ', root_path, :class => 'none' %></p>
-        </li>
-        <li>
           <span aria-hidden="true" class="glyphicon glyphicon-camera" style=
             "font-size: 18px;"></span>
           <p><%= link_to 'discover', posts_path %></p>
@@ -62,7 +57,6 @@
     </div>
     <div class="alert alert-info map-alert" style="background: #066964;color: #FFF;border-color: #066964;">
       <a aria-label="close" class="close" data-dismiss="alert" href="" style="padding-left: 10px;color: #FFF;font-size: 24px;">&times;</a>
-      <strong>Hey!</strong>
       Right-click or hold to add a location.
     </div>
   </div>
