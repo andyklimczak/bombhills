@@ -32,7 +32,7 @@ Shoulda::Matchers.configure do |config|
 end
 
 Capybara.register_driver :poltergeist do |app|
-	Capybara::Poltergeist::Driver.new(app, :window_size => [1920, 1080], :phantomjs_logger => 'log/poltergeist.log', js_errors: false)
+  Capybara::Poltergeist::Driver.new(app, :window_size => [1920, 1080], :phantomjs_logger => File.open("#{Rails.root}/log/test_phantomjs.log", 'a'), js_errors: false, timeout: 1.minute)
 end
 Capybara.javascript_driver = :poltergeist
 
@@ -93,4 +93,5 @@ RSpec.configure do |config|
 	config.include Capybara::DSL
 
 	config.include Paperclip::Shoulda::Matchers
+
 end

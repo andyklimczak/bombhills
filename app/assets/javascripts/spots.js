@@ -189,7 +189,7 @@ function deleteSpotClick() {
       dataType: 'json',
       contentType: 'application/json'
     }).always(function() {
-      $('#spotModal').modal('toggle');
+      Turbolinks.visit('/spots')
     });
   });
 }
