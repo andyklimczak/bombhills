@@ -198,19 +198,90 @@ box-shadow: 1px 17px 31px -9px rgba(0,0,0,0.75);
 
 /* meetups */
 
-.meetup a {
-  text-align: right;
+.meetup {
+  background: #1F8A70;
 }
 
 .meetupcontent {
-  background: #066580;
-  color: #FFF;
-  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  background: #004358;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFE11A;
+  text-align: left;
   height: 100vh;
   display: flex;
   justify-content:center;
   align-content:center;
   flex-direction:column;
+  -webkit-box-shadow: 0px 19px 100px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 19px 100px -21px rgba(0,0,0,0.75);
+box-shadow: 0px 19px 100px -21px rgba(0,0,0,0.75);
+}
+
+.meetupcontent h1 {
+  font-weight: 800;
+  font-size: 48px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+.meetupcontent p {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+  padding-left: 10px;
+  line-height: 27px;
+}
+
+.meetupcontent .datetime li {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.meetupcontent .editback  {
+  margin-top: 15px;
+}
+
+.meetupcontent ul {
+  padding-left: 0px;
+  padding-left: 10px;
+}
+
+.meetupcontent a {
+  color: #FFE11A;
+}
+
+.meetupcontent li {
+  font-weight: 400;
+  display: inline;
+  list-style-type: none;
+}
+
+.meetupcontent a:hover {
+  background: none;
+  text-decoration: none;
+  color: #000;
+}
+
+.meetupcontent label {
+  font-weight: 400;
+  padding-left: 10px;
+  margin-top: 0px;
+}
+
+.meetupcontent .form-group {
+  margin-bottom: 0px;
+}
+
+.meetupcontent .form-control {
+  border-radius: 0px;
+}
+
+.meetupcontent button {
+  border-radius: 0px;
 }
 
 /*  Media Queries  */
