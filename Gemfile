@@ -31,6 +31,7 @@ gem 'poltergeist'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'parallel_tests'
 end
 
 group :development do

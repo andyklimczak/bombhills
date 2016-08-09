@@ -362,6 +362,9 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    parallel (1.9.0)
+    parallel_tests (2.7.1)
+      parallel
     parser (2.3.1.2)
       ast (~> 2.2)
     path_expander (1.0.0)
@@ -547,6 +550,7 @@ DEPENDENCIES
   mailboxer!
   nyan-cat-formatter
   paperclip
+  parallel_tests
   pg
   poltergeist
   pry-rails
@@ -566,6 +570,9 @@ DEPENDENCIES
   uglifier
   underscore-rails
   web-console
+
+RUBY VERSION
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.12.5

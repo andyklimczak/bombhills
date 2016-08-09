@@ -27,7 +27,7 @@ development:
 
 test:
   <<: *default
-  database: bomb-hills_test
+  database: bomb-hills_test<%= ENV['TEST_ENV_NUMBER'] %>
 
 production:
   <<: *default
