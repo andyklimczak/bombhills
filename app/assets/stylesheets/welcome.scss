@@ -8,7 +8,7 @@
 
 input {
   @include placeholder {
-    color: #35353B !important;  
+    color: #35353B !important;
   }
 }
 
@@ -159,7 +159,7 @@ body {
   background: transparent none repeat scroll 0% 0%;
   border-width: 0px 0px 1px;
   border-style: none none solid;
-  @include border-color(none none #35353B none);
+  @include border-color(null null #35353B null);
   border-image: none;
   border-radius: 0px;
   color: #35353B;
@@ -250,7 +250,7 @@ body {
   background: #006964;
   border-radius: 6px;
   color: #FFF;
-  
+
 }
 
 .carousel-caption a:hover{
@@ -322,7 +322,7 @@ body {
 
 /*  Media Queries  */
 
-/* Custom */ 
+/* Custom */
 
 @media only screen and (max-width: 370px) {
   .navigation {
@@ -519,12 +519,12 @@ body {
   }
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
   .mobileheader {
     display: none;
   }
-  
+
   .header {
     height: 440px;
   }
@@ -553,7 +553,7 @@ body {
   #mobilediscoverlink {
     display: none;
   }
-}	
+}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
@@ -569,7 +569,7 @@ body {
   #mobilediscoverlink {
     display: none;
   }
-}	
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1200px) {
