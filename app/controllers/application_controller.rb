@@ -28,6 +28,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_permission(resource)
-    resource.user == current_user
+    raise "Unauthorized" unless resource.user == current_user
   end
 end
