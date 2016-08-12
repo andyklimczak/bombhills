@@ -8,6 +8,14 @@ RSpec.describe "Spots", type: :request do
     end
   end
 
+  describe "GET /spots/:id" do
+    it "works! (now write some real specs)" do
+      spot = create(:spot)
+      get spots_path(spot)
+      expect(response).to have_http_status(200)
+    end
+  end
+
   describe "POST /spots", type: :request do
     it "creates spot" do
       sign_in create(:user)
