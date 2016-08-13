@@ -32,7 +32,7 @@ body {
 .mobileheader {
   height: 150px;
   padding-left: 15px;
-  color: #3B3A3A;
+  color: #004358;
 }
 
 .mobileheader h1 {
@@ -57,7 +57,7 @@ body {
 }
 
 .mobileheader a {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Kanit', sans-serif;
   font-weight: 400;
   text-decoration: none;
   color: #3B3A3A;
@@ -84,7 +84,7 @@ body {
 }
 
 .dropdown-toggle {
-  color: #066964;
+  color: #1F8A70;
 }
 
 .navigation {
@@ -103,8 +103,8 @@ body {
 }
 
 .nav-pills > li > a:hover {
-  background-color: #066964;
-  border-color: #066964;
+  background-color: #1F8A70;
+  border-color: #1F8A70;
   color: #FFF;
 }
 
@@ -123,22 +123,25 @@ body {
   padding: 0px;
   margin-top: 50px;
   margin-bottom: 20px;
-  color: #233E47;
+  color: #004358;
 }
 
 .content a {
-  background-color: #066964;
-  font-family: 'Open Sans', sans-serif;
+  background-color: none;
+  font-family: 'Kanit', sans-serif;
   font-weight: 300;
-  color: #FFF;
+  color: #004358;
+  border: thin solid #004358;
   border-radius: 6px;
+  border-width: 2px;
   font-size: 16px;
   padding: 12px 22px;
   text-decoration: none;
 }
 
 .content a:hover {
-  background-color: #233E47;
+  background-color: #004358;
+  color: #FFF;
 
 }
 
@@ -148,7 +151,7 @@ body {
   height: 110px;
   text-align: center;
   background: rgba(0,0,0,.0);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Kanit', sans-serif;
 }
 
 #form {
@@ -161,7 +164,6 @@ body {
   border-style: none none solid;
   @include border-color(null null #35353B null);
   border-image: none;
-  border-radius: 0px;
   color: #35353B;
   font-size: 18px;
   margin: 0px 2px;
@@ -171,12 +173,12 @@ body {
 #searchbutton {
   color: #FFF;
   border-radius: 6px;
-  border-color: #066964;
+  border-color: #1F8A70;
   padding: 10px 20px;
   margin: 0px 2px;
   margin-bottom: 2px;
   text-decoration: none;
-  background: #066964;
+  background: #1F8A70;
 }
 
 #searchbutton:hover {
@@ -188,7 +190,7 @@ body {
 
 .display {
   text-align: left;
-  background-color: #006964;
+  background-color: #E5E5E5;
 }
 
 .display .container div {
@@ -204,16 +206,15 @@ body {
 }
 
 .display p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Kanit', sans-serif;
   font-weight: 200;
   font-size: 26px;
   line-height: 28px;
-  color: #FFF;
 }
 
 .display h2 {
-  color: #FFF;
-  font-family: 'Open Sans', sans-serif;
+  color: #004358;
+  font-family: 'Kanit', sans-serif;
   font-weight: 800;
   font-size: 38px;
 }
@@ -223,6 +224,30 @@ body {
 .bottomwrapper {
   background: url('hillthree.jpg');
   background-size: cover;
+}
+
+/* supprting */
+
+.supporting .col-md-4 {
+  padding-top: 50px;
+  text-align: center;
+  height: 300px;
+}
+.supporting img {
+  height: 150px;
+  width: 150px;
+  line-height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.supporting p {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  color: #1F8A70;
+  
 }
 
 
@@ -281,7 +306,7 @@ body {
 
 .footer h1 {
   font-size: 35px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Kanit', sans-serif;
   font-weight: 800;
 }
 
@@ -292,7 +317,7 @@ body {
 
 .footer li {
   font-size: 18px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Kanit', sans-serif;
   font-weight: 200;
   margin: 10px 0px;
 }
@@ -342,12 +367,14 @@ body {
     font-size: 32px;
     padding: 12px 22px;
     line-height: 300px;
+    background: #004358;
+    color: #FFF;
   }
   .find {
     display: none;
   }
   .display {
-    text-align: left;
+    text-align: center;
     background: #FFF;
   }
   .display .container div {
@@ -357,6 +384,7 @@ body {
     padding-top: 15px;
     font-size: 16px;
     color: #000;
+    text-align: center;
   }
 
   .display h2 {
@@ -407,7 +435,8 @@ body {
     font-size: 32px;
     padding: 12px 22px;
     line-height: 325px;
-    border-radius: 0px;
+    background: #004358;
+    color: #FFF;
   }
   .header {
     height: 440px;
@@ -425,6 +454,7 @@ body {
   .display p {
     padding-top: 15px;
     font-size: 16px;
+    text-align: center;
     color: #000;
   }
   .display h2 {
@@ -471,7 +501,6 @@ body {
     font-size: 32px;
     padding: 12px 22px;
     line-height: 350px;
-    border-radius: 0px;
   }
   .content h1 {
     display: none;

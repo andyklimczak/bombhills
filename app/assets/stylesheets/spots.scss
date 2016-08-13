@@ -10,7 +10,10 @@
   height: 100%;
   left: 0;
   z-index: 3;
-  background-color: #FFF;
+  background-color: #fff;
+  -webkit-box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
+  box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
 }
 
 .hamburgerbutton {
@@ -41,19 +44,19 @@
 #dashtitle a {
   font-family: 'Kanit', sans-serif;
   font-weight: 900;
-  color: #233E47;
+  color: #004358;
   font-size: 24px;
 }
 
 .navtools li {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Kanit', sans-serif;
   font-weight: 400;
   height: 60px;
   cursor: pointer;
   line-height: 70px;
   text-align: left;
   padding-left: 28px;
-  color: #066964;
+  color: #004358;
 }
 
 .navtools li:hover {
@@ -61,7 +64,7 @@
 }
 
 .navtools li p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Kanit', sans-serif;
   font-weight: 400;
   display: inline-block;
   vertical-align: middle;
@@ -72,20 +75,20 @@
 }
 
 .navtools li a {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Kanit', sans-serif;
   font-weight: 400;
   display: inline-block;
   vertical-align: middle;
   margin-top: 1px;
   text-decoration: none;
   font-size: 20px;
-  color: #066964;
+  color: #004358;
 
 }
 
 .navtools li a:hover {
   background: none;
-  color: #066964;
+  color: #1F8A70;
 }
 
 .navtools li img {
@@ -105,7 +108,7 @@
 
 #searchli {
   padding-left: 23px;
-  background: #FFF;
+  background: #fff;
 
   #form {
     @include display(flex);
@@ -148,7 +151,7 @@
 }
 
 #fullscreenbutton {
-  background: #E5E5E5;
+  background: #FFF;
 }
 
 .alert {
@@ -164,12 +167,12 @@
 }
 
 .leaflet-popup-content-wrapper {
-  background: #195D9C;
-  color: #FFF;
+  background: #004358;
+  color: #FFE11A;
 }
 
 .leaflet-popup-content-wrapper b {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Kanit', sans-serif;
   font-weight: 800;
   font-size: 32px;
 }
