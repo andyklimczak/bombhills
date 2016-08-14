@@ -137,6 +137,9 @@ body {
   font-size: 16px;
   padding: 12px 22px;
   text-decoration: none;
+  -webkit-box-shadow: 5px 8px 29px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 8px 29px -5px rgba(0,0,0,0.75);
+  box-shadow: 5px 8px 29px -5px rgba(0,0,0,0.75);
 }
 
 .content a:hover {
@@ -233,6 +236,8 @@ body {
   text-align: center;
   height: 300px;
 }
+
+
 .supporting img {
   height: 150px;
   width: 150px;
@@ -245,9 +250,9 @@ body {
 
 .supporting p {
   font-family: 'Kanit', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 24px;
   color: #1F8A70;
-  
 }
 
 
@@ -390,6 +395,11 @@ body {
   .display h2 {
     display: none;
   }
+  .supporting .col-md-4 {
+    padding-top: 25px;
+    height: 225px;
+
+  }
   #usercontentcarousel {
     height: auto;
   }
@@ -459,6 +469,10 @@ body {
   }
   .display h2 {
     display: none;
+  }
+  .supporting .col-md-4 {
+    padding-top: 25px;
+
   }
   #usercontentcarousel {
     height: auto;

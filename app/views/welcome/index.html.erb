@@ -1,6 +1,6 @@
 <!-- mobile header -->
 <div class="mobileheader">
-  <h1> bomb<br><mark style="color:#1F8A70;background: none;padding: 0px;">hills</mark> <br>  </h1>
+  <h1> bomb<mark style="color:#1F8A70;background: none;padding: 0px;">hills</mark> <br>  </h1>
   <ul>
     <% if user_signed_in? %>
 
@@ -60,7 +60,7 @@
   </div>
   <div class="content">
     <h1>bom<mark style="color:#1F8A70;padding: 0px;background: none;text-shadow:none;">bh</mark>ills </h1>
-    <%= link_to ' Find ', spots_path %>
+    <%= link_to ' Launch ', spots_path %>
   </div>
   <div class="find">
     <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
@@ -90,7 +90,7 @@
   <div class="supporting">
     <div class="container">
       <div class="col-md-4">
-        <%= image_tag("hilltwo.jpg") %>
+        <%= image_tag("hilltwo.jpg")%>
         <p>find</p>
       </div>
       <div class="col-md-4">
