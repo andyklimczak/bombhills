@@ -1,6 +1,30 @@
-<h1>Editing Spt</h1>
+
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @spot%> |
-<%= link_to 'Back', spots_path %>
+<p id="notice"><%= notice %></p>
+
+<div class="meetup">
+
+  <div class="meetupcontent">
+    <h1> create <br> meetup </h1>
+    <p>
+      <%= @spot.description %>
+    </p>
+    
+     <div class="form-group">
+      <label for="sel1">date and time</label>
+      <input type="text" class="form-control" id="usr">
+      <input type="text" class="form-control" id="usr">
+    </div>
+    
+    <button type="button" class="btn btn-default">Create</button>
+    
+    <ul class="editback">
+      <li><%= link_to 'Back', spots_path %></li>
+    </ul>
+
+  </div>
+
+</div>
+
