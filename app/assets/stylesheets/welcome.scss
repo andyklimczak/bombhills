@@ -234,7 +234,7 @@ body {
 .supporting .col-sm-4 {
   padding-top: 50px;
   text-align: center;
-  height: 300px;
+  height: 275px;
 }
 
 
@@ -267,7 +267,9 @@ body {
   font-weight: 800;
   margin-top: 0px;
   font-size: 60px;
+  color: #1F8A70;
 }
+
 
 #usercontentcarousel {
   height: 400px;
@@ -414,6 +416,10 @@ body {
     height: 225px;
 
   }
+  
+  #usercontent h1 {
+    font-size: 48px;
+  }
   #usercontentcarousel {
     height: auto;
     margin-top: 25px;
@@ -488,6 +494,9 @@ body {
   .supporting .col-sm-4 {
     padding-top: 25px;
 
+  }
+  #usercontent h1 {
+    font-size: 48px;
   }
   #usercontentcarousel {
     height: auto;
@@ -622,7 +631,7 @@ body {
     font-size: 20px;
   }
   #usercontentcarousel {
-    margin: 25px 25px;
+    margin: 100px 100px;
   }
   #mobilediscoverlink {
     display: none;
@@ -638,7 +647,7 @@ body {
     font-size: 24px;
   }
   #usercontentcarousel {
-    margin: 25px 25px;
+    margin: 100px 100px;
   }
   #mobilediscoverlink {
     display: none;
@@ -654,7 +663,7 @@ body {
     background-position: right;
   }
   #usercontentcarousel {
-    margin: 25px 25px;
+    margin: 100px 100px;
   }
   #mobilediscoverlink {
     display: none;
