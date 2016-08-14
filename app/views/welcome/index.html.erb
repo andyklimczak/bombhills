@@ -105,7 +105,8 @@
   </div>
 
 <!-- user content -->
-<div class="row">
+<div class="row" id="usercontent">
+  <h1> DISCOVER </h1>
   <div class="col-md-12" id="carouselcol">
     <div id="usercontentcarousel" class="carousel slide" data-ride="carousel">
 
@@ -115,7 +116,7 @@
           <div class="item <% if post == @posts.first %>active<% end %>">
             <%= image_tag post.image.url %>
             <div class="carousel-caption">
-              <%= link_to 'discover', posts_path %>
+              <%= link_to 'see more', posts_path %>
             </div>
           </div>
         <% end %>

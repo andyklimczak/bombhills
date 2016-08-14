@@ -258,6 +258,17 @@ body {
 
 /* user content */
 
+#usercontent {
+  font-family: 'Kanit', sans-serif;
+}
+
+#usercontent h1 {
+  text-align: center;
+  font-weight: 800;
+  margin-top: 0px;
+  font-size: 60px;
+}
+
 #usercontentcarousel {
   height: 400px;
 }
@@ -280,6 +291,9 @@ body {
   background: #006964;
   border-radius: 6px;
   color: #FFF;
+  -webkit-box-shadow: -3px 3px 29px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: -3px 3px 29px -5px rgba(0,0,0,0.75);
+  box-shadow: -3px 3px 29px -5px rgba(0,0,0,0.75);
 
 }
 
@@ -395,7 +409,7 @@ body {
   .display h2 {
     display: none;
   }
-  .supporting .col-md-4 {
+  .supporting .col-sm-4 {
     padding-top: 25px;
     height: 225px;
 
@@ -471,7 +485,7 @@ body {
   .display h2 {
     display: none;
   }
-  .supporting .col-md-4 {
+  .supporting .col-sm-4 {
     padding-top: 25px;
 
   }
