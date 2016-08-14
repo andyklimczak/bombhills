@@ -89,15 +89,15 @@
 <!-- supporting -->
   <div class="supporting">
     <div class="container">
-      <div class="col-md-4">
+      <div class="col-sm-4">
         <%= image_tag("hilltwo.jpg")%>
         <p>find</p>
       </div>
-      <div class="col-md-4">
+      <div class="col-sm-4">
         <%= image_tag("usercontent.jpg") %>
         <p>ride</p>
       </div>
-      <div class="col-md-4">
+      <div class="col-sm-4">
         <%= image_tag("usercontentnew.jpg") %>
         <p>share</p>
       </div>
@@ -114,6 +114,9 @@
         <% @posts.each do |post| %>
           <div class="item <% if post == @posts.first %>active<% end %>">
             <%= image_tag post.image.url %>
+            <div class="carousel-caption">
+              <%= link_to 'discover', posts_path %>
+            </div>
           </div>
         <% end %>
       </div>
