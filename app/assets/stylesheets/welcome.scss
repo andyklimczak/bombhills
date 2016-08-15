@@ -194,10 +194,11 @@ body {
 .display {
   text-align: left;
   background-color: #E5E5E5;
+  
 }
 
 .display .container div {
-  height: 400px;
+  height: 600px;
   @include display(flex);
   @include justify-content(center);
   @include align-content(center);
@@ -205,7 +206,8 @@ body {
 }
 
 .display img {
-  width: 250px;
+  width: 200px;
+  height: 400px;
 }
 
 .display p {
@@ -216,10 +218,10 @@ body {
 }
 
 .display h2 {
-  color: #004358;
+  color: #1F8A70;
   font-family: 'Kanit', sans-serif;
-  font-weight: 800;
-  font-size: 38px;
+  font-weight: 900;
+  font-size: 56px;
 }
 
 /* bottomwrapper */
