@@ -78,7 +78,7 @@ Vagrant.configure(2) do |config|
     export LANG="en_US.UTF-8"
     export LC_ALL="en_US.UTF-8"
     locale-gen en_US.UTF-8
-    sudo apt-get install -y postgresql libpq-dev
+    sudo apt-get install -y postgresql libpq-dev phantomjs
     sudo service postgresql start
     #sudo su postgres
     #createuser vagrant
