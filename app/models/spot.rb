@@ -11,6 +11,7 @@
 #  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  traffic     :string
 #
 # Indexes
 #
@@ -25,7 +26,7 @@ class Spot < ActiveRecord::Base
   belongs_to :user
   has_many :posts
   has_many :meetups
-  validates :latitude, :longitude, :title, :difficulty, presence: true
+  validates :latitude, :longitude, :title, :difficulty, :traffic, presence: true
   validates :difficulty,
     :inclusion  => { :in => ['Beginner', 'Intermediate', 'Professional'],
                      :message    => "%{value} is not a valid difficulty" }

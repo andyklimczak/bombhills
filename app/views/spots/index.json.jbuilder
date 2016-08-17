@@ -1,1 +1,1 @@
-json.spots @spots, :id, :title, :description, :user, :difficulty, :latitude, :longitude
+json.spots @spots, :id, :title, :description, :user, :difficulty, :latitude, :longitude, :traffic

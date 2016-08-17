@@ -27,6 +27,7 @@ RSpec.describe 'spot interactions', :type => :feature do
       fill_in 'spot_title', with: 'Spot Title'
       select 'Beginner', from: 'spot_difficulty'
       fill_in 'spot_description', with: 'Spot Description'
+      fill_in 'spot_traffic', with: 'Spot Traffic'
       expect { click_button 'Submit', visible: false }.to change(Spot, :count).by(1)
     end
   end
@@ -39,6 +40,7 @@ RSpec.describe 'spot interactions', :type => :feature do
       fill_in 'spot_title', with: 'Spot Title'
       select 'Intermediate', from: 'spot_difficulty'
       fill_in 'spot_description', with: 'Spot Description'
+      fill_in 'spot_traffic', with: 'Spot Traffic'
       expect { click_button 'Submit', visible: false }.to change(Spot, :count).by(1)
     end
   end
@@ -51,6 +53,7 @@ RSpec.describe 'spot interactions', :type => :feature do
       fill_in 'spot_title', with: 'Spot Title'
       select 'Professional', from: 'spot_difficulty'
       fill_in 'spot_description', with: 'Spot Description'
+      fill_in 'spot_traffic', with: 'Spot Traffic'
       expect { click_button 'Submit', visible: false }.to change(Spot, :count).by(1)
     end
   end
