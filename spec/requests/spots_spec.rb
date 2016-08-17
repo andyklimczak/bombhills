@@ -26,6 +26,15 @@ RSpec.describe "Spots", type: :request do
       expect(Spot.last.difficulty).to eq('Beginner')
       expect(Spot.last.description).to eq('Test description')
     end
+
+    it "cannot create more than 3 spots in a day" do
+      sign_in create(:user)
+      post "/spots", spot: { title: 'Test title1', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321 }
+      post "/spots", spot: { title: 'Test title2', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321 }
+      post "/spots", spot: { title: 'Test title3', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321 }
+      post "/spots", spot: { title: 'Test title4', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321 }
+      expect(Spot.count).to eq(3)
+    end
   end
 
   describe "DELETE /spots", type: :request do
