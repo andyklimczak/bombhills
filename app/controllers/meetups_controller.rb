@@ -1,7 +1,7 @@
 class MeetupsController < ApplicationController
   before_action :set_meetup, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :require_permission, except: [:show, :index, :create]
+  before_action :require_permission, except: [:show, :index, :new, :create]
 
   # GET /meetups
   # GET /meetups.json
@@ -18,7 +18,8 @@ class MeetupsController < ApplicationController
 
   # GET /meetups/new
   def new
-    @meetup = Meetup.new
+    @spot = Spot.find(params[:spot_id])
+    @meetup = Meetup.new(spot: @spot)
   end
 
   # GET /meetups/1/edit
@@ -28,7 +29,8 @@ class MeetupsController < ApplicationController
   # POST /meetups
   # POST /meetups.json
   def create
-    @meetup = Meetup.new(meetup_params)
+    @spot = Spot.find(params[:spot_id])
+    @meetup = Meetup.new(meetup_params, spot: @spot)
 
     respond_to do |format|
       if @meetup.save
@@ -76,7 +78,7 @@ class MeetupsController < ApplicationController
       params.require(:meetup).permit(:title, :description, :time, :spot_id, :owner_id)
     end
 
-    def require_permission
-      super(@meetup)
-    end
+    #def require_permission
+      #super(@meetup)
+    #end
 end

@@ -1,7 +1,7 @@
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :require_permission, except: [:show, :index, :create]
+  before_action :require_permission, except: [:show, :index, :create, :new]
 
   # GET /spots
   # GET /spots.json
