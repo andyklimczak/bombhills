@@ -19,7 +19,7 @@
 .hamburgerbutton {
   position: absolute;
   z-index: 1;
-  background: #1F8A70;
+  background: var(--main-color);
   margin: 10px;
   padding: 2px;
   padding-bottom: 0px;
@@ -44,7 +44,7 @@
 #dashtitle a {
   font-family: 'Kanit', sans-serif;
   font-weight: 900;
-  color: #004358;
+  color: var(--secondary-color);
   font-size: 24px;
 }
 
@@ -79,13 +79,12 @@
   margin-top: 1px;
   text-decoration: none;
   font-size: 20px;
-  color: #004358;
+  color: var(--secondary-color);
 
 }
 
 .navtools li a:hover {
   background: none;
-  color: #1F8A70;
 }
 
 .navtools li img {
@@ -165,8 +164,8 @@
 }
 
 .leaflet-popup-content-wrapper {
-  background: #004358;
-  color: #FFE11A;
+  background: var(--main-color);
+  color: #FFF;
 }
 
 .leaflet-popup-content-wrapper b {

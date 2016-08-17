@@ -22,6 +22,7 @@
 #  fk_rails_f05e659f8c  (user_id => users.id)
 #
 
+
 class Spot < ActiveRecord::Base
   belongs_to :user
   has_many :posts
