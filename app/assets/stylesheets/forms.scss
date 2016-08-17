@@ -1,12 +1,18 @@
 
-/* NA */
+label {
+  margin: 10px 0px;
+}
 
-.modal-open {
-  overflow-y: auto;
+input {
+  text-align: center;
 }
 
 input[type="title"] {
   width: 90%;
+}
+
+.modal-open {
+  overflow-y: auto;
 }
 
 .submitimg {
@@ -16,16 +22,11 @@ input[type="title"] {
   color: #000;
 }
 
-label {
-  margin: 10px 0px;
-}
-
 .close {
   font-size: 45px;
 }
 
-
-/* MODALS */  
+/* modals */
 
 /* spots modal */
 
