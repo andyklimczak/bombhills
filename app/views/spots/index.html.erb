@@ -12,39 +12,27 @@
           </div>
         </li>
         <li id="findmebutton">
-          <span aria-hidden="true" class=" glyphicon glyphicon-globe" style=
-            "font-size: 18px;"></span>
           <p>find me</p>
         </li>
         <%if user_signed_in? %>
           <li data-toggle="modal" data-target="#spotModal" id="spotsModalLink">
-            <span aria-hidden="true" class=" glyphicon glyphicon-map-marker" style=
-              "font-size: 18px;"></span>
             <p>spots</p>
           </li>
         <% end %>
         <%if user_signed_in? %>
           <li>
-            <span aria-hidden="true" class="glyphicon glyphicon-user" style=
-              "font-size: 18px;"></span>
             <p>
               <%= link_to ' profile ', show_user_path(current_user.username) %></p>
           </li>
         <%else %>
           <li>
-            <span aria-hidden="true" class="glyphicon glyphicon-user" style=
-              "font-size: 18px;"></span>
             <p><%= link_to " login ", new_user_session_path %></p>
           </li>
         <%end %>
         <li>
-          <span aria-hidden="true" class="glyphicon glyphicon-camera" style=
-            "font-size: 18px;"></span>
           <p><%= link_to 'discover', posts_path %></p>
         </li>
         <li id="fullscreenbutton">
-          <span aria-hidden="true" class="glyphicon glyphicon-fullscreen"
-            style="font-size: 18px;"></span>
           <p>Hide</p>
         </li>
       </ul>
@@ -55,7 +43,7 @@
       <span aria-hidden="true" class="glyphicon glyphicon-align-left" id=
         "hamburgerbutton" style="font-size: 40px;"></span>
     </div>
-    <div class="alert alert-info map-alert" style="background: #066964;color: #FFF;border-color: #066964;">
+    <div class="alert alert-info map-alert" style="background: #142CA4;color: #FFF;border-color: #142CA4;">
       <a aria-label="close" class="close" data-dismiss="alert" href="" style="padding-left: 10px;color: #FFF;font-size: 24px;">&times;</a>
       Right-click or hold to add a location.
     </div>

@@ -88,50 +88,22 @@
   </div>
 </div>
 
-<!-- supporting -->
-  <div class="supporting">
-    <div class="container">
-      <div class="col-sm-4">
-        <%= image_tag("hilltwo.jpg")%>
-        <p>find</p>
-      </div>
-      <div class="col-sm-4">
-        <%= image_tag("usercontent.jpg") %>
-        <p>ride</p>
-      </div>
-      <div class="col-sm-4">
-        <%= image_tag("usercontentnew.jpg") %>
-        <p>share</p>
-      </div>
+<!-- user content -->
+<div class="usercontent">
+  <h1>DISCOVER</h1>
+  <p style="padding-bottom: 10px;">See what the community has been up to.</p>
+  <div class="container" id="usercontentglyphicons">
+    <div class="col-sm-4">
+      <span aria-hidden="true" class=" glyphicon glyphicon-map-marker"></span>
+    </div>
+    <div class="col-sm-4">
+      <span aria-hidden="true" class=" glyphicon glyphicon-picture"></span>
+    </div>
+    <div class="col-sm-4">
+      <span aria-hidden="true" class=" glyphicon glyphicon-user"></span>
     </div>
   </div>
-
-<!-- user content -->
-<div class="row" id="usercontent">
-  <div class="col-md-12" id="carouselcol">
-    <div id="usercontentcarousel" class="carousel slide" data-ride="carousel">
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <% @posts.each do |post| %>
-          <div class="item <% if post == @posts.first %>active<% end %>">
-            <%= image_tag post.image.url %>
-            <div class="carousel-caption">
-              <%= link_to 'see more', posts_path %>
-            </div>
-          </div>
-        <% end %>
-      </div>
-
-      <!-- Controls -->
-      <a class="left carousel-control" href="#usercontentcarousel" role="button" data-slide="prev" style="background: none;">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#usercontentcarousel" role="button" data-slide="next" style="background: none;">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
-    </div> <!-- Carousel -->
-  </div>
+  <p id="usercontentbutton"><%= link_to 'find', posts_path %></p>
 </div>
 
 <!-- footer -->
@@ -139,13 +111,10 @@
   <div class="container">
     <div class="col-sm-4 col-md-4">
     </div>
-    <div class="col-sm-4 col-md-4" id="contactfooter">
+    <div class="col-sm-4 col-md-4">
 
     </div>
     <div class="col-sm-4 col-md-4">
-      <ul id="mobilediscoverlink">
-        <li><%= link_to 'discover more posts', posts_path %></li>
-      </ul>
       <h1> We're also on </h1>
       <ul>
         <li><%= link_to "Twitter", "https://twitter.com/Bombhillstweets", :target => "_blank" %></li>

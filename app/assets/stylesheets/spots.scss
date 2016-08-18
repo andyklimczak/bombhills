@@ -10,7 +10,7 @@
   height: 100%;
   left: 0;
   z-index: 3;
-  background-color: #fff;
+  background-color: #333333;
   -webkit-box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
   -moz-box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
   box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
@@ -19,7 +19,7 @@
 .hamburgerbutton {
   position: absolute;
   z-index: 1;
-  background: var(--main-color);
+  background: #142CA4;
   margin: 10px;
   padding: 2px;
   padding-bottom: 0px;
@@ -43,43 +43,43 @@
 
 #dashtitle a {
   font-family: 'Kanit', sans-serif;
-  font-weight: 900;
-  color: var(--secondary-color);
+  font-weight: 200;
+  color: #FFF;
   font-size: 24px;
 }
 
 .navtools li {
-  ont-family: 'Kanit', sans-serif;
   height: 60px;
   cursor: pointer;
   line-height: 70px;
   text-align: left;
   padding-left: 28px;
-  color: #004358;
+  color: #FFF;
 }
 
 .navtools li:hover {
-  background: #E5E5E5;
+  background: #142CA4;
 }
 
 .navtools li p {
+  font-family: 'Kanit', sans-serif;
   font-weight: 200;
   display: inline-block;
   vertical-align: middle;
-  padding-left: 10px;
   font-size: 20px;
   letter-spacing: 1px;
 
 }
 
 .navtools li a {
+  font-family: 'Kanit', sans-serif;
   font-weight: 200;
   display: inline-block;
   vertical-align: middle;
   margin-top: 1px;
   text-decoration: none;
   font-size: 20px;
-  color: var(--secondary-color);
+  color: #FFF;
 
 }
 
@@ -104,7 +104,7 @@
 
 #searchli {
   padding-left: 23px;
-  background: #fff;
+  background: #333333;
 
   #form {
     @include display(flex);
@@ -122,6 +122,7 @@
     #search-input {
       border: 1;
       border-radius: 0;
+      color: #333333;
     }
   }
 }
@@ -147,7 +148,7 @@
 }
 
 #fullscreenbutton {
-  background: #FFF;
+  background: #333333;
 }
 
 .alert {
