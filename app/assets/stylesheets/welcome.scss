@@ -222,7 +222,7 @@ body {
 
 .display p {
   font-family: 'Kanit', sans-serif;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 26px;
   line-height: 26px;
 }
@@ -379,6 +379,9 @@ body {
     color: #000;
     background: #FFF;
   }
+  .display .container div {
+    height: 500px;
+  }
   .usercontent h1 {
     font-size: 48px;
     margin-top: 20px;
@@ -425,6 +428,9 @@ body {
   .display {
     color: #000;
     background: #FFF;
+  }
+  .display .container div {
+    height: 500px;
   }
   #usercontentglyphicons {
     display: none;
@@ -492,10 +498,6 @@ body {
 @media only screen and (min-width : 768px) and (max-width: 992px) {
   .mobileheader {
     display: none;
-  }
-  .usercontentcarousel {
-    margin: 100px;
-    margin-top: 50px;
   }
 }
 
