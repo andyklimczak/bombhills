@@ -1,6 +1,6 @@
 <!-- mobile header -->
 <div class="mobileheader">
-  <h1> bomb<br><mark style="color:#1F8A70;background: none;padding: 0px;">hills</mark> <br>  </h1>
+  <h1> bomb<br><mark style="color:#FFF;background: none;padding: 0px;">hills</mark> <br>  </h1>
   <ul>
     <% if user_signed_in? %>
 
@@ -18,57 +18,59 @@
 </div>
 
 <!-- header -->
-<div class="header" id="header">
-  <div class="navigation">
-    <ul class="nav nav-pills" style="margin:0px;">
-      <li role="presentation" class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <% if user_signed_in? %>
-            <%= current_user.username %>
-          <% else %>
-            User
-          <% end %>
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu" style="margin: 10px 5px;">
+<div class="headerwrapper">
+  <div class="header" id="header">
+    <div class="navigation">
+      <ul class="nav nav-pills" style="margin:0px;">
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <% if user_signed_in? %>
+              <%= current_user.username %>
+            <% else %>
+              User
+            <% end %>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" style="margin: 10px 5px;">
 
-          <% if user_signed_in? %>
+            <% if user_signed_in? %>
 
-            <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'none' %></li>
-            <li>
-              <%= link_to mailbox_inbox_path do %>
-                inbox
-                <% if unread_messages_count > 0 %>
-                  <span class="label label-danger"><%=unread_messages_count%></span>
+              <li><%= link_to ' profile ', show_user_path(current_user.username), :class => 'none' %></li>
+              <li>
+                <%= link_to mailbox_inbox_path do %>
+                  inbox
+                  <% if unread_messages_count > 0 %>
+                    <span class="label label-danger"><%=unread_messages_count%></span>
+                  <% end %>
                 <% end %>
-              <% end %>
-            </li>
-            <li><%= link_to ' edit profile ', edit_user_registration_path, :class => 'none' %></li>
-            <li><%= link_to " logout ", destroy_user_session_path, method: :delete, :class => 'none'  %></li>
+              </li>
+              <li><%= link_to ' edit profile ', edit_user_registration_path, :class => 'none' %></li>
+              <li><%= link_to " logout ", destroy_user_session_path, method: :delete, :class => 'none'  %></li>
 
-          <% else %>
+            <% else %>
 
-            <li><%= link_to " register ", new_user_registration_path, :class => 'none'  %></li>
-            <li><%= link_to " login ", new_user_session_path, :class => 'none'  %></li>
+              <li><%= link_to " register ", new_user_registration_path, :class => 'none'  %></li>
+              <li><%= link_to " login ", new_user_session_path, :class => 'none'  %></li>
 
-          <% end %>
+            <% end %>
 
-        </ul>
-      </li>
-      <li role="presentation"><a href="#" id="contact">Contact</a></li>
-    </ul>
-  </div>
-  <div class="content">
-    <h1>bom<mark style="color:#1F8A70;padding: 0px;background: none;text-shadow:none;">bh</mark>ills </h1>
-    <%= link_to ' Launch ', spots_path %>
-  </div>
-  <div class="find">
-    <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
-      <div class="form-group">
-        <%= text_field_tag :search, params[:search], id: "search", class: "form-control", placeholder: "or search for a specific location" %>
-      </div>
-      <button type="submit" class="btn btn-default" id="searchbutton" >Search</button>
-    </form>
+          </ul>
+        </li>
+        <li role="presentation"><a href="#" id="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>bom<mark style="color: var(--main-color);;padding: 0px;background: none;text-shadow:none;">bh</mark>ills </h1>
+      <%= link_to ' Launch ', spots_path %>
+    </div>
+    <div class="find">
+      <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
+        <div class="form-group">
+          <%= text_field_tag :search, params[:search], id: "search", class: "form-control", placeholder: "or search for a specific location" %>
+        </div>
+        <button type="submit" class="btn btn-default" id="searchbutton" >Search</button>
+      </form>
+    </div>
   </div>
 </div>
 

@@ -4,6 +4,11 @@ html, body, .container-fluid, .wrapper, #mapid { height: 100%; }
 // variables //
 
 :root {
-  --main-color: #1F8A70;
-  --secondary-color: #004358;
+  --main-color: #142CA4;
+  --secondary-color: #0D58BB;
+  --background-color: rgba(0, 0, 0, .8);
+}
+
+#bluecolor {
+  color: #142CA4;
 }

@@ -8,7 +8,7 @@
 
 input {
   @include placeholder {
-    color: #35353B !important;
+    color: #FFF !important;
   }
 }
 
@@ -32,12 +32,13 @@ body {
 .mobileheader {
   height: 150px;
   padding-left: 15px;
-  color: #004358;
+  color: #FFF;
+  background: var(--background-color);
 }
 
 .mobileheader h1 {
   font-family: 'Kanit', sans-serif;
-  font-weight: 900;
+  font-weight: 200;
   font-size: 48px;
   margin: 0px;
   padding-top: 15px;
@@ -60,18 +61,23 @@ body {
   font-family: 'Kanit', sans-serif;
   font-weight: 400;
   text-decoration: none;
+  color: #FFF;
 }
 
 .mobileheader a:hover {
   background: none;
-  color: #000;
+  color: #FFF;
 }
 
 /* header */
 
+.headerwrapper {
+  background: url('headerdesktop.jpg');
+}
+
 .header {
   height: 550px;
-  background: url('headerdesktop.jpg');
+  background: var(--background-color);
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
@@ -83,7 +89,8 @@ body {
 }
 
 .dropdown-toggle {
-  color: var(--main-color);
+  color: #FFF;
+  background: var(--main-color);
 }
 
 .navigation {
@@ -99,12 +106,16 @@ body {
   border: solid;
   border-width: 2px;
   margin: 0px 5px;
+  color: #fff;
+  border-color: var(--main-color);
+  background: var(--main-color);
+  -webkit-box-shadow: 5px 8px 31px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 8px 31px -8px rgba(0,0,0,0.75);
+  box-shadow: 5px 8px 31px -8px rgba(0,0,0,0.75);
 }
 
 .nav-pills > li > a:hover {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-  color: #FFF;
+  
 }
 
 /*content*/
@@ -116,20 +127,20 @@ body {
 
 .content h1 {
   font-family: 'Kanit', sans-serif;
-  font-weight: 900;
+  font-weight: 200;
   font-size: 125px;
   margin: 0px;
   padding: 0px;
   margin-top: 50px;
   margin-bottom: 20px;
-  color: var(--secondary-color);
+  color: #fff;
 }
 
 .content a {
-  background-color: none;
+  background-color: var(--main-color);
   font-family: 'Kanit', sans-serif;
   font-weight: 300;
-  color: #004358;
+  color: #FFF;
   border: thin solid var(--main-color);
   border-radius: 6px;
   border-width: 2px;
@@ -174,12 +185,12 @@ body {
 #searchbutton {
   color: #FFF;
   border-radius: 6px;
-  border-color: var(--secondary-color);
+  border-color: var(--main-color);
   padding: 10px 20px;
   margin: 0px 2px;
   margin-bottom: 2px;
   text-decoration: none;
-  background: var(--secondary-color);
+  background: var(--main-color);
 }
 
 #searchbutton:hover {
@@ -191,12 +202,12 @@ body {
 
 .display {
   text-align: left;
-  background-color: #E5E5E5;
+  background-color: var(--background-color);
   
 }
 
 .display .container div {
-  height: 600px;
+  height: 500px;
   @include display(flex);
   @include justify-content(center);
   @include align-content(center);
@@ -206,19 +217,22 @@ body {
 .display img {
   width: 200px;
   height: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .display p {
   font-family: 'Kanit', sans-serif;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 26px;
   line-height: 28px;
+  color: #FFF;
 }
 
 .display h2 {
-  color: #1F8A70;
+  color: #FFF;
   font-family: 'Kanit', sans-serif;
-  font-weight: 900;
+  font-weight: 200;
   font-size: 56px;
 }
 
@@ -231,10 +245,14 @@ body {
 
 /* supprting */
 
+.supporting {
+  background: var(--background-color);
+}
+
 .supporting .col-sm-4 {
   padding-top: 50px;
   text-align: center;
-  height: 275px;
+  height: 300px;
 }
 
 
@@ -250,9 +268,9 @@ body {
 
 .supporting p {
   font-family: 'Kanit', sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 24px;
-  color: #1F8A70;
+  color: #FFF;
 }
 
 
@@ -260,6 +278,8 @@ body {
 
 #usercontent {
   font-family: 'Kanit', sans-serif;
+  background: var(--background-color);
+  color: #FFF;
 }
 
 #usercontent h1 {
@@ -290,7 +310,7 @@ body {
   font-weight: 800;
   font-size: 24px;
   padding: 10px 10px;
-  background: var(--secondary-color);
+  background: var(--main-color);
   border-radius: 6px;
   color: #FFF;
   -webkit-box-shadow: -3px 3px 29px -5px rgba(0,0,0,0.75);
@@ -305,7 +325,7 @@ body {
 }
 
 .carousel-control .glyphicon {
-  color: var(--secondary-color);
+  color: var(--main-color);
 }
 
 
@@ -323,6 +343,8 @@ body {
 .footer {
   padding: 20px 0px 80px;
   text-align: right;
+  background: var(--background-color);
+  color: #FFF;
 }
 
 .footer h1 {
@@ -346,10 +368,12 @@ body {
 .footer li a {
   text-decoration: none;
   margin: 10px 0px;
+  color: #FFF;
 }
 
 .footer li a:hover {
   background: none;
+  color: #FFF;
 }
 
 .reference {
@@ -374,9 +398,11 @@ body {
   .navigation {
     display: none;
   }
+  .headerwrapper {
+    background-size: cover;
+  }
   .header {
     height: 250px;
-    background-size: cover;
   }
   .content {
     height: 225px;
@@ -392,28 +418,6 @@ body {
   .find {
     display: none;
   }
-  .display {
-    text-align: center;
-    background: #FFF;
-  }
-  .display .container div {
-    height: 190px;
-  }
-  .display p {
-    padding-top: 15px;
-    font-size: 16px;
-    color: #000;
-    text-align: center;
-  }
-
-  .display h2 {
-    display: none;
-  }
-  .supporting .col-sm-4 {
-    padding-top: 25px;
-    height: 225px;
-
-  }
   
   #usercontent h1 {
     font-size: 48px;
@@ -426,19 +430,6 @@ body {
   .carousel-inner .item {
     height: auto;
   }
-  #explorecol {
-    display: none;
-  }
-  #contactfooter {
-    display: none;
-  }
-  .footer {
-    background: #004358;
-    color: #FFF;
-  }
-  .footer a {
-    color: #FFF;
-  }
   .carousel-caption a{
     display: none;
   }
@@ -448,9 +439,11 @@ body {
   .navigation {
     display: none;
   }
+  .headerwrapper {
+    background-size: cover;
+  }
   #header {
     height: 325px;
-    background-attachment: scroll;
   }
   .header {
     background-size: cover;
@@ -472,26 +465,6 @@ body {
   .find {
     display: none;
   }
-  .display {
-    text-align: left;
-    background: #FFF;
-  }
-  .display .container div {
-    height: 175px;
-  }
-  .display p {
-    padding-top: 15px;
-    font-size: 16px;
-    text-align: center;
-    color: #000;
-  }
-  .display h2 {
-    display: none;
-  }
-  .supporting .col-sm-4 {
-    padding-top: 25px;
-
-  }
   #usercontent h1 {
     font-size: 48px;
     margin-top: 20px;
@@ -501,19 +474,6 @@ body {
   }
   .carousel-inner .item {
     height: auto;
-  }
-  #explorecol {
-    display: none;
-  }
-  #contactfooter {
-    display: none;
-  }
-  .footer {
-    background: #004358;
-    color: #FFF;
-  }
-  .footer a {
-    color: #FFF;
   }
   .carousel-caption a{
     display: none;
@@ -547,37 +507,11 @@ body {
   .find {
     display: none;
   }
-  .display {
-    background: #FFF;
-  }
-  .display .container div {
-    height: 300px;
-  }
-  .display p {
-    font-size: 16px;
-    color: #000;
-  }
-  .display h2 {
-    display: none;
-  }
   #usercontentcarousel {
     height: auto;
   }
   .carousel-inner .item {
     height: auto;
-  }
-  #explorecol {
-    display: none;
-  }
-  #contactfooter {
-    display: none;
-  }
-  .footer {
-    background: #000;
-    color: #FFF;
-  }
-  .footer a {
-    color: #FFF;
   }
   .carousel-caption a{
     display: none;
@@ -603,18 +537,6 @@ body {
   .find {
     display: none;
   }
-  .display .container div {
-    height: 300px;
-  }
-  .display p {
-    font-size: 16px;
-  }
-  #explorecol {
-    display: none;
-  }
-  #contactfooter {
-    display: none;
-  }
   #mobilediscoverlink {
     display: none;
   }
@@ -624,9 +546,6 @@ body {
 @media only screen and (min-width : 768px) and (max-width: 992px) {
   .mobileheader {
     display: none;
-  }
-  .display p {
-    font-size: 20px;
   }
   #usercontentcarousel {
     margin: 100px;
@@ -642,9 +561,6 @@ body {
   .mobileheader {
     display: none;
   }
-  .display p {
-    font-size: 24px;
-  }
   #usercontentcarousel {
     margin: 100px;
     margin-top: 50px;
@@ -659,7 +575,7 @@ body {
   .mobileheader {
     display: none;
   }
-  .header {
+  .headerwrapper {
     background-position: right;
   }
   #usercontentcarousel {
