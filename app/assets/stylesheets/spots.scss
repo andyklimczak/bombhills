@@ -10,7 +10,7 @@
   height: 100%;
   left: 0;
   z-index: 3;
-  background-color: #333333;
+  background-color: #FFF;
   -webkit-box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
   -moz-box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
   box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
@@ -44,7 +44,6 @@
 #dashtitle a {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
-  color: #FFF;
   font-size: 24px;
 }
 
@@ -54,11 +53,6 @@
   line-height: 70px;
   text-align: left;
   padding-left: 28px;
-  color: #FFF;
-}
-
-.navtools li:hover {
-  background: #142CA4;
 }
 
 .navtools li p {
@@ -79,7 +73,7 @@
   margin-top: 1px;
   text-decoration: none;
   font-size: 20px;
-  color: #FFF;
+  color: #000;
 
 }
 
@@ -104,7 +98,7 @@
 
 #searchli {
   padding-left: 23px;
-  background: #333333;
+  background: #FFF;
 
   #form {
     @include display(flex);
@@ -120,9 +114,22 @@
     }
 
     #search-input {
-      border: 1;
-      border-radius: 0;
-      color: #333333;
+      border-bottom: thin solid #142CA4;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-width: 2px;
+      width: 175px;
+      font-size: 20px;
+      color: #142CA4;
+      background: #FFF;
+      text-align: left;
+      font-family: 'Kanit', sans-serif;
+      font-weight: 200;
+      
+    }
+    #search-input.form-control {
+      padding-left: 4px;
     }
   }
 }
@@ -148,7 +155,7 @@
 }
 
 #fullscreenbutton {
-  background: #333333;
+  background: #FFF;
 }
 
 .alert {

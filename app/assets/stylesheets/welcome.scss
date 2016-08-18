@@ -6,7 +6,7 @@
 /* CSS Document */
 
 
-input {
+.header input {
   @include placeholder {
     color: #FFF !important;
   }
@@ -32,8 +32,7 @@ body {
 .mobileheader {
   height: 150px;
   padding-left: 15px;
-  color: #FFF;
-  background: rgba(0, 0, 0, .8);
+  background: none;
 }
 
 .mobileheader h1 {
@@ -61,12 +60,11 @@ body {
   font-family: 'Kanit', sans-serif;
   font-weight: 400;
   text-decoration: none;
-  color: #FFF;
 }
 
 .mobileheader a:hover {
   background: none;
-  color: #FFF;
+  color: #000;
 }
 
 /* header */
@@ -133,7 +131,7 @@ body {
   padding: 0px;
   margin-top: 50px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #FFF;
 }
 
 .content a {
@@ -204,7 +202,7 @@ body {
 .display {
   text-align: left;
   background-color: rgba(0, 0, 0, .8);
-  
+  color: #fff;
 }
 
 .display .container div {
@@ -224,14 +222,12 @@ body {
 
 .display p {
   font-family: 'Kanit', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 26px;
-  line-height: 28px;
-  color: #FFF;
+  line-height: 26px;
 }
 
 .display h2 {
-  color: #FFF;
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   font-size: 56px;
@@ -292,7 +288,8 @@ body {
 
 .usercontent a:hover {
   text-decoration: none;
-  background: rgba(0, 0, 0, .8);
+  background: none;
+  color: #FFF;
 }
 
 
@@ -332,7 +329,7 @@ body {
 
 .footer li a:hover {
   background: none;
-  color: #FFF;
+  color: #fff;
 }
 
 .reference {
@@ -362,6 +359,7 @@ body {
   }
   .header {
     height: 250px;
+    background: none;
   }
   .content {
     height: 225px;
@@ -376,6 +374,10 @@ body {
   }
   .find {
     display: none;
+  }
+  .display {
+    color: #000;
+    background: #FFF;
   }
   .usercontent h1 {
     font-size: 48px;
@@ -398,6 +400,8 @@ body {
   }
   .header {
     background-size: cover;
+    background: none;
+    height: 440px;
   }
   .content {
     height: 225px;
@@ -410,15 +414,17 @@ body {
     padding: 12px 22px;
     line-height: 325px;
   }
-  .header {
-    height: 440px;
-  }
   .usercontent h1 {
     font-size: 48px;
     margin-top: 20px;
   }
   .find {
     display: none;
+  }
+  
+  .display {
+    color: #000;
+    background: #FFF;
   }
   #usercontentglyphicons {
     display: none;
@@ -448,6 +454,7 @@ body {
   }
   .header {
     height: 440px;
+    background: none;
   }
   .find {
     display: none;
