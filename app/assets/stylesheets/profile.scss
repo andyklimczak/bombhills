@@ -25,18 +25,20 @@
 }
 
 .profile-usertitle-name {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 32px;
   margin-bottom: 7px;
-  color: #066964;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+  color: var(--secondary-color);
 }
 
 .profile-usertitle-motto {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 18px;
   margin-bottom: 15px;
   padding: 0px 10px;
-  color: var(--main-color);
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+  color: var(--secondary-color);
 }
 
 .profile-userbuttons {

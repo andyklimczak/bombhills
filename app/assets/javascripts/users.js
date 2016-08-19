@@ -6,14 +6,14 @@ function switchTab() {
   $('#spotsbutton').click(function() {
     $('.userspots').show();
     $('.usersspotsedit').hide();
-    $(this).css('background-color', '#233E47');
-    $('#spotseditbutton').css('background-color', '#006964');
+    $(this).css('background-color', '#251950');
+    $('#spotseditbutton').css('background-color', 'var(--main-color)');
   });
   $('#spotseditbutton').click(function() {
     $('.userspots').hide();
     $('.usersspotsedit').show();
-    $(this).css('background-color', '#233E47');
-    $('#spotsbutton').css('background-color', '#006964');
+    $(this).css('background-color', '#251950');
+    $('#spotsbutton').css('background-color', 'var(--main-color)');
   });
 }
 
