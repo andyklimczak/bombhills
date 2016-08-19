@@ -31,7 +31,7 @@ input[type="title"] {
 /* spots modal */
 
 #spots-modal-header {
-  background: #233E47;
+  background: var(--background-color);
   border: none;
 }
 
@@ -40,7 +40,7 @@ input[type="title"] {
 }
 
 #spots-modal-body #left {
-  background: #006964;
+  background: var(--main-color);
   position: absolute;
   height: 350px;
   width: 150px;
@@ -57,17 +57,17 @@ input[type="title"] {
   line-height: 210px;
   text-align: center;
   cursor: pointer;
-  background: #006964;
+  background: var(--main-color);
 }
 
 #spots-modal-body #left li:hover{
-  background: #233E47;
+  background: var(--main-color);
 }
 
 
 #spots-modal-body #right {
   margin-left: 150px;
-  background: #233E47;
+  background: var(--background-color);
   height: 350px;
   padding: 10px 10px;
 }
@@ -81,7 +81,7 @@ input[type="title"] {
   border-radius: 0px;
   border: none;
   color: #FFF;
-  border-bottom: thin solid #006964;
+  border-bottom: thin solid var(--main-color);
   background: none;
 }
 
@@ -90,7 +90,7 @@ input[type="title"] {
   border-radius: 0px;
   border: none;
   background: none;
-  border-bottom: thin solid #006964;
+  border-bottom: thin solid var(--main-color);
 }
 
 .userspots ul {
@@ -136,7 +136,7 @@ input[type="title"] {
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 565px) {
   #spots-modal-header {
-    background: #006964;
+    background: var(--main-color);
   }
   
   #spots-modal-body #left {
@@ -152,7 +152,7 @@ input[type="title"] {
     line-height: 135px;
     text-align: center;
     cursor: pointer;
-    background: #006964;
+    background: var(--main-color);
   }
   .userspots .form-control {
     margin-top: 30px;
@@ -167,7 +167,7 @@ input[type="title"] {
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
   #spots-modal-header {
-    background: #006964;
+    background: var(--main-color);
   }
   
   #spots-modal-body #left {
@@ -183,7 +183,7 @@ input[type="title"] {
     line-height: 135px;
     text-align: center;
     cursor: pointer;
-    background: #006964;
+    background: var(--main-color);
   }
   .userspots .form-control {
     margin-top: 30px;
@@ -198,7 +198,7 @@ input[type="title"] {
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
   #spots-modal-header {
-    background: #006964;
+    background: var(--main-color);
   }
   
   #spots-modal-body #left {
@@ -214,7 +214,7 @@ input[type="title"] {
     line-height: 135px;
     text-align: center;
     cursor: pointer;
-    background: #006964;
+    background: var(--main-color);
   }
   .userspots .form-control {
     margin-top: 30px;

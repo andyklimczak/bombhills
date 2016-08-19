@@ -42,7 +42,7 @@ body {
   margin: 0px;
   padding-top: 15px;
   padding-bottom: 10px;
-  color: var(--main-color);
+  color: #FFF;
 }
 
 .mobileheader ul {
@@ -61,12 +61,12 @@ body {
   font-family: 'Kanit', sans-serif;
   font-weight: 400;
   text-decoration: none;
-  color: var(--main-color);
+  color: #FFF;
 }
 
 .mobileheader a:hover {
   background: none;
-  color: #000;
+  color: #FFF;
 }
 
 /* header */
@@ -89,7 +89,17 @@ body {
   margin: 10px 5px;
 }
 
-.dropdown-toggle {
+.header .dropdown-toggle {
+  color: var(--background-color);
+  background: var(--main-color);
+}
+
+.header .dropdown-toggle:hover {
+  color: var(--background-color);
+  background: var(--main-color);
+}
+
+.header .nav-pills a:hover {
   color: var(--background-color);
   background: var(--main-color);
 }

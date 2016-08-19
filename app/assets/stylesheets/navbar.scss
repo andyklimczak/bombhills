@@ -11,11 +11,13 @@
 }
 
 .navbar-brand {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
 }
 
 .nav li a {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Kanit', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  color: var(--background-color);
 }

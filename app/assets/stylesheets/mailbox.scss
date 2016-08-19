@@ -11,12 +11,13 @@
 }
 
 .message-nav-pills .btn-success {
-  background: #004358;
+  background: var(--main-color);
   color: #FFF;
 }
 
 .message-nav-pills .btn-success:hover {
-  background: #1F8A70;
+  background: var(--main-color);
+  border-color: var(--main-color);
 }
 
 .message-avatar {
@@ -25,12 +26,13 @@
 }
 
 #sendmessagebtn {
-  background: #004358;
+  background: var(--main-color);
   color: #FFF;
 }
 
 #sendmessagebtn:hover {
-  background: #1F8A70;
+  background: var(--main-color);
+  border-color: var(--main-color);
 }
 
 /*  Media Queries  */
