@@ -29,7 +29,7 @@
   margin-bottom: 7px;
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
-  color: var(--secondary-color);
+  color: #0B4CD6;
 }
 
 .profile-usertitle-motto {
@@ -38,7 +38,7 @@
   padding: 0px 10px;
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
-  color: var(--secondary-color);
+  color: #0B4CD6;
 }
 
 .profile-userbuttons {
@@ -116,7 +116,7 @@
   text-align: center;
   height: 100vh;
   display: flex;
-  background: var(--main-color);
+  background: #fb4148;
   justify-content:center;
   align-content:center;
   flex-direction:column;
@@ -129,17 +129,17 @@
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   font-size: 43px;
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
 }
 
 .signup mark {
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
   padding: 0px;
   background: none;
 }
 
 .signup a {
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
 }
 
 .signup a:hover {
@@ -152,17 +152,17 @@
   font-weight: 400;
   font-size: 22px;
   margin-bottom: 15px;
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
 }
 
 .signup input {
   padding: 12px 12px;
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
   background: none;
   border-left: none;
   border-top: none;
   border-right: none;
-  border-bottom: thin solid var(--background-color);
+  border-bottom: thin solid rgba(13, 0, 61, .9);
 }
 
 .field_with_errors {
@@ -192,11 +192,11 @@
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   font-size: 43px;
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
 }
 
 .login mark {
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
   padding: 0px;
   background: none;
 }
@@ -205,11 +205,11 @@
   font-size: 20px;
   font-weight: 400;
   padding: 6px 0px;
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
 }
 
 .login a:hover {
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
   background: none;
   text-decoration: none;
 }
@@ -219,17 +219,17 @@
   font-weight: 300;
   font-size: 22px;
   margin-bottom: 15px;
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
 }
 
 .login input {
   padding: 12px 12px;
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
   background: none;
   border-left: none;
   border-top: none;
   border-right: none;
-  border-bottom: thin solid var(--background-color);
+  border-bottom: thin solid rgba(13, 0, 61, .9);
 }
 
 #remembermefield label {
@@ -239,7 +239,7 @@
 /* user settings */
 
 .editprofilewrapper {
-  background: var(--main-color);
+  background: #fb4148;
 }
 
 #editprofilecontainer {
@@ -265,7 +265,7 @@
 
 #editprofilemotto {
   height: 275px;
-  background: var(--main-color);
+  background: #fb4148;
   text-align: center;
   @include display(flex);
   @include align-items(center);
@@ -274,7 +274,7 @@
 #editprofilemotto input {
   margin: 0 auto;
   border: none;
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
   font-family: 'Kanit', sans-serif;
   font-weight: 600;
   padding: 25px 25px;
@@ -294,7 +294,7 @@
 
 #editprofileshow input {
   border: none;
-  color: var(--background-color);
+  color: rgba(13, 0, 61, .9);
   padding: 5px 0px;
 }
 
@@ -311,7 +311,7 @@
 
 #editprofileshow li a {
   color: #FFF;
-  background: var(--main-color);
+  background: #fb4148;
   padding: 10px 10px;
   cursor: pointer;
 }
@@ -333,7 +333,7 @@
 
 .cancelaccount {
   height: 250px;
-  background: var(--main-color);
+  background: #fb4148;
   color: #FFF;
   padding: 30px 30px;
 }
@@ -362,7 +362,7 @@
     background: #FFF;
   }
   #editprofileshow input {
-    background: var(--background-color);
+    background: rgba(13, 0, 61, .9);
     color: #FFF;
   }
 }
@@ -377,7 +377,7 @@
     background: #FFF;
   }
   #editprofileshow input {
-    background: var(--background-color);
+    background: rgba(13, 0, 61, .9);
     color: #FFF;
   }
 }	

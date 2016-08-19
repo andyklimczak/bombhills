@@ -1,5 +1,4 @@
 <div class="meetup">
-  <div class="meetupcontent">
 
     <%= form_for([@spot, @meetup]) do |f| %>
       <% if @meetup.errors.any? %>
@@ -38,6 +37,5 @@
         <%= f.submit %>
       </div>
     <% end %>
-    
-  </div>
+  
 </div>
