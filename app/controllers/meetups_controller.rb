@@ -1,24 +1,22 @@
 class MeetupsController < ApplicationController
   before_action :set_meetup, only: [:show, :edit, :update, :destroy]
+  before_action :set_spot
   before_action :authenticate_user!, except: [:show, :index]
   before_action :require_permission, except: [:show, :index, :new, :create]
 
   # GET /meetups
   # GET /meetups.json
   def index
-    @spot = Spot.find(params[:spot_id])
     @meetups = Meetup.all
   end
 
   # GET /meetups/1
   # GET /meetups/1.json
   def show
-    @spot = Spot.find(params[:spot_id])
   end
 
   # GET /meetups/new
   def new
-    @spot = Spot.find(params[:spot_id])
     @meetup = Meetup.new(spot: @spot)
   end
 
@@ -29,7 +27,8 @@ class MeetupsController < ApplicationController
   # POST /meetups
   # POST /meetups.json
   def create
-    @spot = Spot.find(params[:spot_id])
+    p '*' * 50
+    p meetup_params
     @meetup = Meetup.new(meetup_params, spot: @spot)
 
     respond_to do |format|
@@ -73,12 +72,16 @@ class MeetupsController < ApplicationController
       @meetup = Meetup.find(params[:id])
     end
 
+    def set_spot
+      @spot = Spot.find(params[:spot_id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def meetup_params
       params.require(:meetup).permit(:title, :description, :time, :spot_id, :owner_id)
     end
 
     #def require_permission
-      #super(@meetup)
+      #super(@kmeetup)
     #end
 end
