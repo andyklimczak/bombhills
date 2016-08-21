@@ -73,4 +73,13 @@ RSpec.describe "edit user", :type => :feature do
     click_link 'see your profile!'
     expect(page).to have_current_path(show_user_path(@user.username))
   end
+
+  it "delete account", :js => true do
+    visit '/users/edit'
+    page.accept_alert 'Are you sure?' do
+      click_button 'Cancel my account'
+    end
+    expect{@user.reload}.to raise_error(ActiveRecord::RecordNotFound)
+    expect(page).to have_current_path(root_path)
+  end
 end
