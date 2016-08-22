@@ -20,7 +20,7 @@
 #
 
 
-class MeetupAttendee < ActiveRecord::Base
+class MeetupAttendee < ApplicationRecord
   belongs_to :user
   belongs_to :meetup
 end

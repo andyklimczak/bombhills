@@ -21,7 +21,7 @@
 #
 
 
-class Meetup < ActiveRecord::Base
+class Meetup < ApplicationRecord
   belongs_to :spot
   belongs_to :owner, class_name: 'User'
   has_many :meetup_attendees

@@ -33,7 +33,7 @@ RSpec.describe "Spots", type: :request do
   describe "POST /spots", type: :request do
     it "creates spot" do
       sign_in create(:user)
-      post "/spots", spot: { title: 'Test title', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' }
+      post "/spots", params: { spot: { title: 'Test title', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
       expect(Spot.count).to eq(1)
       expect(response).to redirect_to(spots_path(id: Spot.last.id))
       expect(Spot.last.title).to eq('Test title')
@@ -43,10 +43,10 @@ RSpec.describe "Spots", type: :request do
 
     it "cannot create more than 3 spots in a day" do
       sign_in create(:user)
-      post "/spots", spot: { title: 'Test title1', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' }
-      post "/spots", spot: { title: 'Test title2', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' }
-      post "/spots", spot: { title: 'Test title3', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' }
-      post "/spots", spot: { title: 'Test title4', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' }
+      post "/spots", params: { spot: { title: 'Test title1', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
+      post "/spots", params: { spot: { title: 'Test title2', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
+      post "/spots", params: { spot: { title: 'Test title3', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
+      post "/spots", params: { spot: { title: 'Test title4', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
       expect(Spot.count).to eq(3)
     end
   end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resource :messages, only: [:create]
+
   resources :spots do
     resources :meetups
   end

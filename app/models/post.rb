@@ -26,7 +26,7 @@
 #
 
 
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
   belongs_to :user
   belongs_to :spot
   default_scope { order(created_at: :desc) }

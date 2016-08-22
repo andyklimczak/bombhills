@@ -1,0 +1,30 @@
+<%= form_for Message.new, url: { controller: 'messages', action: 'create' } do |f| %>
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title"><%= subject %></h4>
+    </div>
+    <div class="modal-body">
+      <%= f.text_field :subject, value: subject, hidden: true %>
+
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :content, 'Message'  %>
+        <%= f.text_area :content %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit 'Send', class: 'button' %>
+      </div>
+    </div>
+  </div>
+<% end %>

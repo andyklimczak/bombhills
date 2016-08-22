@@ -50,7 +50,7 @@ RSpec.describe "Posts", type: :request do
     it "creates a video post" do
       user = create(:user)
       sign_in user
-      post "/posts", post: { title: "Test post", description: "Test post description", video_url: "https://www.youtube.com/watch?v=c7rCyll5AeY", type: "VideoPost" }
+      post "/posts", params: { post: { title: "Test post", description: "Test post description", video_url: "https://www.youtube.com/watch?v=c7rCyll5AeY", type: "VideoPost" } }
       expect(Post.count).to eq(1)
       expect(response).to redirect_to(show_user_path(user.username))
       expect(Post.last.title).to eq("Test post")
@@ -62,7 +62,7 @@ RSpec.describe "Posts", type: :request do
     it "creates a video post" do
       user = create(:user)
       sign_in user
-      post "/posts", post: { title: "Test post", description: "Test post description", video_url: "https://www.youtube.com/watch?v=c7rCyll5AeY", type: "VideoPost" }
+      post "/posts", params: { post: { title: "Test post", description: "Test post description", video_url: "https://www.youtube.com/watch?v=c7rCyll5AeY", type: "VideoPost" } }
       expect(Post.count).to eq(1)
       expect(response).to redirect_to(show_user_path(user.username))
       expect(Post.last.title).to eq("Test post")
@@ -74,7 +74,7 @@ RSpec.describe "Posts", type: :request do
     it "does not create video post without video_url" do
       user = create(:user)
       sign_in user
-      post "/posts", post: { title: "Test post", description: "Test post description", type: "VideoPost" }
+      post "/posts", params: { post: { title: "Test post", description: "Test post description", type: "VideoPost" } }
       expect(Post.count).to eq(0)
       expect(response).to redirect_to(show_user_path(user.username))
     end
