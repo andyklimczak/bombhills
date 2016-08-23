@@ -27,8 +27,6 @@ class MeetupsController < ApplicationController
   # POST /meetups
   # POST /meetups.json
   def create
-    p '*' * 50
-    p meetup_params
     @meetup = Meetup.new(meetup_params, spot: @spot)
 
     respond_to do |format|

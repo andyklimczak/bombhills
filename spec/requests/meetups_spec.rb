@@ -21,7 +21,8 @@ RSpec.describe "Meetups", type: :request do
 
   describe "GET /spots/:spot_id/meetups/new" do
     it "works" do
-      get spot_meetups_path([@spot])
+      sign_in create(:user)
+      get new_spot_meetup_path([@spot])
       expect(response).to have_http_status(200)
     end
   end
