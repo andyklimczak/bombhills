@@ -31,12 +31,12 @@ class Spot < ApplicationRecord
   validates :difficulty,
     :inclusion  => { :in => ['Beginner', 'Intermediate', 'Professional'],
                      :message    => "%{value} is not a valid difficulty" }
-    validate :daily_quota, on: :create
+  validate :daily_quota, on: :create
 
-    private
-    def daily_quota
-      if user.spots.where(created_at: (Time.zone.now.beginning_of_day..Time.zone.now)).count > 2
-        errors.add(:spot, "Exceeded spot limit (3) for day.")
-      end
+  private
+  def daily_quota
+    if user.spots.where(created_at: (Time.zone.now.beginning_of_day..Time.zone.now)).count > 2
+      errors.add(:spot, "Exceeded spot limit (3) for day.")
     end
+  end
 end

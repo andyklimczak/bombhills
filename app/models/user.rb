@@ -53,36 +53,36 @@ class User < ApplicationRecord
   validates :username,
     :presence => true,
     :uniqueness => {
-      :case_sensitive => false
-    }
+    :case_sensitive => false
+  }
 
-    def self.find_for_database_authentication(warden_conditions)
-      conditions = warden_conditions.dup
-      if login = conditions.delete(:login)
-        where(conditions.to_hash).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
-      else
-        conditions[:email].downcase! if conditions[:email]
-        where(conditions.to_hash).first
-      end
+  def self.find_for_database_authentication(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      where(conditions.to_hash).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+    else
+      conditions[:email].downcase! if conditions[:email]
+      where(conditions.to_hash).first
     end
+  end
 
-    def validate_username
-      if User.where(email: username).exists?
-        errors.add(:username, :invalid)
-      elsif username.present? and username.include? '.'
-        errors.add(:username, :invalid)
-      end
+  def validate_username
+    if User.where(email: username).exists?
+      errors.add(:username, :invalid)
+    elsif username.present? and username.include? '.'
+      errors.add(:username, :invalid)
     end
+  end
 
-    def name
-      self.username
-    end
+  def name
+    self.username
+  end
 
-    def mailboxer_email(object)
-      self.email
-    end
+  def mailboxer_email(object)
+    self.email
+  end
 
-    def signup_notification
-      SignupMailer.signup_notification(self).deliver
-    end
+  def signup_notification
+    SignupMailer.signup_notification(self).deliver
+  end
 end
