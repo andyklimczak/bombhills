@@ -79,7 +79,7 @@ class MeetupsController < ApplicationController
       params.require(:meetup).permit(:title, :description, :time, :spot_id, :owner_id)
     end
 
-    #def require_permission
-      #super(@kmeetup)
-    #end
+    def require_permission
+      super(@meetup)
+    end
 end

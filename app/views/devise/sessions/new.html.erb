@@ -1,5 +1,5 @@
 <div class="login">
-  
+
   <h2>bom<mark>bh</mark>ills</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -21,7 +21,7 @@
     <% end -%>
 
     <div class="actions">
-      <%= f.submit "Log in" %>
+      <%= f.submit "Log in", data: { disable_with: 'Logging in...' } %>
     </div>
   <% end %>
 
