@@ -96,8 +96,21 @@ body {
   background: #fb4148;
 }
 
+.header ul .dropdown-menu a {
+  color: #000;
+}
+
+.header ul .dropdown-menu a:hover {
+  background: none;
+  color: #000;
+}
+
+.header .nav-pills a {
+  color: #FFF;
+}
+
 .header .nav-pills a:hover {
-  color: rgba(13, 0, 61, .9);
+  color: #FFF;
   background: #fb4148;
 }
 
@@ -252,7 +265,7 @@ body {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   font-size: 56px;
-  color: #0B4CD6;
+  color: #FFF;
 }
 
 /* user content */
@@ -276,7 +289,7 @@ body {
 .usercontent p {
   margin-top: 16px;
   text-align: center;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 18px;
   color: rgba(13, 0, 61, .9);
   margin: 0px 20px;

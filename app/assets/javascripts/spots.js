@@ -57,6 +57,8 @@ function getInitialView() {
  * Open the add new location form modal when user right clicks on the map
  */
 function onMapRightClick(e) {
+  console.log(e.latlng.lat);
+  console.log(e.latlng.lng);
   if(gon.user_signed_in) {
     $('#new-latitude').val(e.latlng.lat);
     $('#new-longitude').val(e.latlng.lng);
