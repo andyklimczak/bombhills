@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 def page!
-  save_and_open_page
 end
 
 # Saves page to place specfied at in configuration.
@@ -12,4 +11,3 @@ def render_page(name, force = false)
     page.driver.render(path)
   end
 end
-

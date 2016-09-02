@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe "edit user", :type => :feature do
+RSpec.describe 'edit user', type: :feature do
   before :each do
     @user = create(:user, username: 'user123', email: 'user@example.com', password: 'password123')
     login_as @user, scope: :user
   end
 
-  it "change username" do
+  it 'change username' do
     visit '/users/edit'
     within('#edit-profile-form') do
       fill_in 'Username', with: 'NewUsername'
@@ -19,7 +19,7 @@ RSpec.describe "edit user", :type => :feature do
     expect(@user.username).to eq('NewUsername')
   end
 
-  it "change motto" do
+  it 'change motto' do
     visit '/users/edit'
     within('#edit-profile-form') do
       fill_in 'user_motto', with: 'New Motto'
@@ -31,7 +31,7 @@ RSpec.describe "edit user", :type => :feature do
     expect(@user.motto).to eq('New Motto')
   end
 
-  it "change email" do
+  it 'change email' do
     visit '/users/edit'
     within('#edit-profile-form') do
       fill_in 'Email', with: 'new@email.com'
@@ -43,7 +43,7 @@ RSpec.describe "edit user", :type => :feature do
     expect(@user.email).to eq('new@email.com')
   end
 
-  it "change password" do
+  it 'change password' do
     old_password_hash = @user.encrypted_password
     visit '/users/edit'
     within('#edit-profile-form') do
@@ -57,7 +57,7 @@ RSpec.describe "edit user", :type => :feature do
     expect(@user.encrypted_password).not_to eq(old_password_hash)
   end
 
-  it "change avatar" do
+  it 'change avatar' do
     visit '/users/edit'
     within('#edit-profile-form') do
       attach_file('Avatar', Rails.root + 'spec/fixtures/pic.jpg')
@@ -69,18 +69,18 @@ RSpec.describe "edit user", :type => :feature do
     expect(@user.avatar_file_name).to eq('pic.jpg')
   end
 
-  it "go to profile page" do
+  it 'go to profile page' do
     visit '/users/edit'
     click_link 'see your profile!'
     expect(page).to have_current_path(show_user_path(@user.username))
   end
 
-  it "delete account", :js => true do
+  it 'delete account', js: true do
     visit '/users/edit'
     page.accept_alert 'Are you sure?' do
       click_button 'Cancel my account'
     end
-    expect{@user.reload}.to raise_error(ActiveRecord::RecordNotFound)
+    expect { @user.reload }.to raise_error(ActiveRecord::RecordNotFound)
     expect(page).to have_current_path(root_path)
   end
 end

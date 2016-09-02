@@ -20,7 +20,6 @@
 #  fk_rails_a5e3b49e1f  (user_id => users.id)
 #
 
-
 class MeetupAttendee < ApplicationRecord
   belongs_to :user
   belongs_to :meetup

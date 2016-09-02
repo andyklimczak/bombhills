@@ -11,4 +11,3 @@ FactoryGirl.define do
     avatar { FFaker::Avatar.image }
   end
 end
-

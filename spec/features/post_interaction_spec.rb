@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe 'post interactions', :type => :feature do
+RSpec.describe 'post interactions', type: :feature do
   it 'add a video post' do
     user = create(:user, username: 'test1')
     spot = create(:spot, user: user)
@@ -11,8 +11,8 @@ RSpec.describe 'post interactions', :type => :feature do
     within('#postModal') do
       click_on 'Video'
       within('#Video') do
-        fill_in 'video_url', :with => 'https://www.youtube.com/watch?v=c7rCyll5AeY'
-        fill_in 'video_title', :with => 'Twice Cheerup'
+        fill_in 'video_url', with: 'https://www.youtube.com/watch?v=c7rCyll5AeY'
+        fill_in 'video_title', with: 'Twice Cheerup'
         fill_in 'video_description', with: 'SOTYAY'
         chosen_select(spot.title, from: '#video_tag_spot')
         click_button 'Create Post'
@@ -35,7 +35,7 @@ RSpec.describe 'post interactions', :type => :feature do
       click_on 'Picture'
       within('#Picture') do
         attach_file('image_upload', Rails.root + 'spec/fixtures/pic.jpg')
-        fill_in 'image_title', :with => 'Taylor Swift'
+        fill_in 'image_title', with: 'Taylor Swift'
         fill_in 'image_description', with: 'Based'
         chosen_select(spot.title, from: '#image_tag_spot')
         expect { click_button 'Create Post' }.to change(Post, :count).by(1)

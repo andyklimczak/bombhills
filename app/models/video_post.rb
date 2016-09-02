@@ -26,7 +26,6 @@
 #  fk_rails_5b5ddfd518  (user_id => users.id)
 #
 
-
 class VideoPost < Post
   validates :video_url, presence: true
   default_scope { order(created_at: :desc) }

@@ -30,14 +30,12 @@
 #  index_users_on_username              (username) UNIQUE
 #
 
-
-
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   acts_as_messageable
   devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable
   attr_accessor :login
 
   has_many :spots, -> { order 'created_at desc' }
@@ -45,22 +43,22 @@ class User < ApplicationRecord
   has_many :meetups, source: :owner
   has_many :meetup_attendees
   has_many :attending_meetups, through: :meetup_attendees, source: 'meetup'
-  has_attached_file :avatar, styles: { large: "800x800#", medium: "300x300>", thumb: "100x100#" }, default_url: ->(attachment) { ActionController::Base.helpers.asset_path('usertwo.png') }
+  has_attached_file :avatar, styles: { large: '800x800#', medium: '300x300>', thumb: '100x100#' }, default_url: ->(_attachment) { ActionController::Base.helpers.asset_path('usertwo.png') }
 
   after_create :signup_notification
 
   validates_attachment :avatar, content_type: { content_type: /\Aimage\/.*\Z/ }, size: { in: 0..5.megabytes }
   validate :validate_username
   validates :username,
-    :presence => true,
-    :uniqueness => {
-    :case_sensitive => false
-  }
+            presence: true,
+            uniqueness: {
+              case_sensitive: false
+            }
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
-      where(conditions.to_hash).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+      where(conditions.to_hash).where(['lower(username) = :value OR lower(email) = :value', { value: login.downcase }]).first
     else
       email = conditions[:email].dup
       conditions[:email] = email.downcase if conditions[:email]
@@ -77,11 +75,11 @@ class User < ApplicationRecord
   end
 
   def name
-    self.username
+    username
   end
 
-  def mailboxer_email(object)
-    self.email
+  def mailboxer_email(_object)
+    email
   end
 
   def signup_notification
