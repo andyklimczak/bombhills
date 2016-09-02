@@ -8,18 +8,18 @@ class MessagesController < ApplicationController
         MessageMailer.message_me(@message).deliver
         format.html do
           begin
-                        redirect_to request.referrer
-                      rescue
-                        redirect_to root_path, notice: 'Successful message'
-                      end
+            redirect_to request.referrer
+          rescue
+            redirect_to root_path, notice: 'Successful message'
+          end
         end
       else
         format.html do
           begin
-                        redirect_to request.referrer
-                      rescue
-                        redirect_to root_path, notice: 'Unsuccessful message'
-                      end
+            redirect_to request.referrer
+          rescue
+            redirect_to root_path, notice: 'Unsuccessful message'
+          end
         end
       end
     end
