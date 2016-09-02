@@ -10,7 +10,7 @@ class SpotsController < ApplicationController
     @spots = Spot.all
     @current_user_spots = @spots.where(user: current_user) if user_signed_in?
     gon.search = Geocoder.search(params[:search]).first if params[:search].present?
-    gon.spot = Spot.find(params[:id]) if params[:id].present? && Spot.exists?(params[:id])
+    gon.spot = Spot.find(params[:id]) if params[:id].present? and Spot.exists?(params[:id])
     gon.user_signed_in = user_signed_in?
     gon.user_id = current_user.id if user_signed_in?
   end
@@ -70,7 +70,6 @@ class SpotsController < ApplicationController
   end
 
   private
-
   # Use callbacks to share common setup or constraints between actions.
   def set_spot
     @spot = Spot.find(params[:id])

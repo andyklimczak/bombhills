@@ -1,40 +1,40 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe 'Spots', type: :request do
-  describe 'GET /spots' do
-    it 'works!' do
+RSpec.describe "Spots", type: :request do
+  describe "GET /spots" do
+    it "works!" do
       get spots_path
       expect(response).to have_http_status(200)
     end
   end
 
-  describe 'GET /spots/:id', type: :request do
-    it 'works!' do
+  describe "GET /spots/:id", type: :request do
+    it "works!" do
       spot = create(:spot)
       get spots_path(spot)
       expect(response).to have_http_status(200)
     end
   end
 
-  describe 'GET /spots/new', type: :request do
-    it 'works!' do
+  describe "GET /spots/new", type: :request do
+    it "works!" do
       user = create(:user)
       sign_in user
       get new_spot_path
       expect(response).to have_http_status(200)
     end
 
-    it 'redirects if not signed in' do
+    it "redirects if not signed in" do
       get new_spot_path
       expect(response).to have_http_status(302)
     end
   end
 
-  describe 'POST /spots', type: :request do
-    it 'creates spot' do
+  describe "POST /spots", type: :request do
+    it "creates spot" do
       sign_in create(:user)
-      post '/spots', params: { spot: { title: 'Test title', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
+      post "/spots", params: { spot: { title: 'Test title', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
       expect(Spot.count).to eq(1)
       expect(response).to redirect_to(spots_path(id: Spot.last.id))
       expect(Spot.last.title).to eq('Test title')
@@ -42,18 +42,18 @@ RSpec.describe 'Spots', type: :request do
       expect(Spot.last.description).to eq('Test description')
     end
 
-    it 'cannot create more than 3 spots in a day' do
+    it "cannot create more than 3 spots in a day" do
       sign_in create(:user)
-      post '/spots', params: { spot: { title: 'Test title1', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
-      post '/spots', params: { spot: { title: 'Test title2', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
-      post '/spots', params: { spot: { title: 'Test title3', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
-      post '/spots', params: { spot: { title: 'Test title4', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
+      post "/spots", params: { spot: { title: 'Test title1', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
+      post "/spots", params: { spot: { title: 'Test title2', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
+      post "/spots", params: { spot: { title: 'Test title3', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
+      post "/spots", params: { spot: { title: 'Test title4', difficulty: 'Beginner', description: 'Test description', latitude: 123.123, longitude: 321.321, traffic: 'Test traffic' } }
       expect(Spot.count).to eq(3)
     end
   end
 
-  describe 'DELETE /spots', type: :request do
-    it 'deletes spot' do
+  describe "DELETE /spots", type: :request do
+    it "deletes spot" do
       user = create(:user)
       sign_in user
       spot = create(:spot, user: user)
@@ -62,10 +62,10 @@ RSpec.describe 'Spots', type: :request do
       expect(user.spots.count).to eq(0)
     end
 
-    it 'deletes spot json' do
+    it "deletes spot json" do
       headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json'
+        "ACCEPT" => "application/json",
+        "HTTP_ACCEPT" => "application/json"
       }
       user = create(:user)
       sign_in user
@@ -75,7 +75,7 @@ RSpec.describe 'Spots', type: :request do
       expect(user.spots.count).to eq(0)
     end
 
-    it 'cannot be deleted by other user' do
+    it "cannot be deleted by other user" do
       user1 = create(:user)
       user2 = create(:user)
       sign_in user2
@@ -86,8 +86,8 @@ RSpec.describe 'Spots', type: :request do
     end
   end
 
-  describe 'PUT /spots', type: :request do
-    xit 'updates spot' do
+  describe "PUT /spots", type: :request do
+    xit "updates spot" do
       user = create(:user)
       sign_in user
       spot = create(:spot, user: user, title: 'Spot Title 1')
@@ -97,10 +97,10 @@ RSpec.describe 'Spots', type: :request do
       expect(spot.title).to eq('New Spot Title')
     end
 
-    xit 'updates spot json' do
+    xit "updates spot json" do
       headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json'
+        "ACCEPT" => "application/json",
+        "HTTP_ACCEPT" => "application/json"
       }
       user = create(:user)
       sign_in user
@@ -112,7 +112,7 @@ RSpec.describe 'Spots', type: :request do
       expect(user.spots.last.title).to eq('New Spot Title')
     end
 
-    xit 'cannot be updated by other user' do
+    xit "cannot be updated by other user" do
       user1 = create(:user)
       user2 = create(:user)
       sign_in user2

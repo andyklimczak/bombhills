@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe 'spot modal interactions', type: :feature, js: true do
+RSpec.describe 'spot modal interactions', :type => :feature, :js => true do
   xit 'can delete a spot (first) on spots page' do
     user = create(:user)
     spot = create(:spot, user: user)
@@ -43,7 +43,7 @@ RSpec.describe 'spot modal interactions', type: :feature, js: true do
     click_link 'Spots'
     find('#spotseditbutton').trigger('click')
     within('#users-spots-edit-form') do
-      fill_in 'spot_title', with: 'test title'
+      fill_in "spot_title", with: 'test title'
       find('#modal-update-button').trigger('click')
     end
     page!

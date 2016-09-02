@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe 'spot interactions', type: :feature do
+RSpec.describe 'spot interactions', :type => :feature do
   it 'can search from welcome page' do
     visit root_path
     within('#form') do
-      fill_in 'search', with: 'Amherst'
+      fill_in 'search', :with => 'Amherst'
     end
     click_button 'Search'
     expect(page).to have_current_path(spots_path(search: 'Amherst'))
@@ -14,7 +14,7 @@ RSpec.describe 'spot interactions', type: :feature do
   it 'can search from map page' do
     visit spots_path
     within('#form') do
-      fill_in 'search-input', with: 'Amherst'
+      fill_in 'search-input', :with => 'Amherst'
     end
     click_button 'Search', visible: false
     expect(page).to have_current_path(spots_path(search: 'Amherst'))
@@ -63,7 +63,7 @@ RSpec.describe 'spot interactions', type: :feature do
     post = create(:image_post)
     visit posts_path
     click_on 'Find'
-    expect(page).to have_current_path(%r{/spots\?id=\d})
+    expect(page).to have_current_path(%r(/spots\?id=\d))
   end
 
   it 'can view a user profile from the posts page' do

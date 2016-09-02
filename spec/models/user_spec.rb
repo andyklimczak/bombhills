@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe User, :type => :model do
   it 'can be created' do
     user = create(:user)
     expect(user.save).to eq(true)
@@ -23,26 +23,26 @@ RSpec.describe User, type: :model do
     expect(user).not_to be_valid
   end
 
-  it 'finds user by email' do
-    user = create(:user, email: 'foo@bar.com')
-    authenticated = User.find_for_database_authentication(email: 'foo@bar.com')
+  it "finds user by email" do
+    user = create(:user, email: "foo@bar.com")
+    authenticated = User.find_for_database_authentication({email: "foo@bar.com"})
     expect(authenticated).to eql user
   end
 
-  it 'finds user by login given email' do
-    user = create(:user, email: 'foo@bar.com')
-    authenticated = User.find_for_database_authentication(login: 'foo@bar.com')
+  it "finds user by login given email" do
+    user = create(:user, email: "foo@bar.com")
+    authenticated = User.find_for_database_authentication({login: "foo@bar.com"})
     expect(authenticated).to eql user
   end
 
-  it 'finds user by login given username' do
-    user = create(:user, username: 'test_username')
-    authenticated = User.find_for_database_authentication(login: 'test_username')
+  it "finds user by login given username" do
+    user = create(:user, username: "test_username")
+    authenticated = User.find_for_database_authentication({login: "test_username"})
     expect(authenticated).to eql user
   end
 
   it 'should have posts ordered by created_at desc' do
-    user = create(:user, username: 'test_username')
+    user = create(:user, username: "test_username")
     post1 = create(:image_post, title: 'post1', user: user)
     post2 = create(:video_post, title: 'post2', user: user)
     post3 = create(:image_post, title: 'post3', user: user)
@@ -51,7 +51,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'should have spots ordered by created_at desc' do
-    user = create(:user, username: 'test_username')
+    user = create(:user, username: "test_username")
     spot1 = create(:spot, title: 'spot1', user: user)
     spot2 = create(:spot, title: 'spot2', user: user)
     spot3 = create(:spot, title: 'spot3', user: user)

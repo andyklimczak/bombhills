@@ -1,23 +1,24 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe 'mailboxer messaging', type: :feature do
-  it 'can send a message' do
+RSpec.describe "mailboxer messaging", :type => :feature do
+
+  it "can send a message" do
     user = create(:user)
     user2 = create(:user)
     login_as user
     visit new_conversation_path
 
     chosen_select(user2.username, from: :conversation_recipients)
-    fill_in 'Subject', with: 'Message Subject'
-    fill_in :conversation_body, with: 'Message body to user2'
+    fill_in 'Subject', :with => 'Message Subject'
+    fill_in :conversation_body, :with => 'Message body to user2'
     click_on 'Send Message'
 
     expect(user.mailbox.sentbox.count).to eq(1)
     expect(user2.mailbox.inbox.count).to eq(1)
   end
 
-  it 'can send a message to multiple recipients' do
+  it "can send a message to multiple recipients" do
     user = create(:user)
     user2 = create(:user)
     user3 = create(:user)
@@ -25,8 +26,8 @@ RSpec.describe 'mailboxer messaging', type: :feature do
     visit new_conversation_path
 
     chosen_select(user2.username, user3.username, from: :conversation_recipients)
-    fill_in 'Subject', with: 'Message Subject'
-    fill_in :conversation_body, with: 'Message body to user2'
+    fill_in 'Subject', :with => 'Message Subject'
+    fill_in :conversation_body, :with => 'Message body to user2'
     click_on 'Send Message'
 
     expect(user.mailbox.sentbox.count).to eq(1)
@@ -34,7 +35,7 @@ RSpec.describe 'mailboxer messaging', type: :feature do
     expect(user3.mailbox.inbox.count).to eq(1)
   end
 
-  it 'can reply to a message' do
+  it "can reply to a message" do
     user = create(:user)
     user2 = create(:user)
     login_as user
@@ -48,7 +49,7 @@ RSpec.describe 'mailboxer messaging', type: :feature do
     expect(user2.mailbox.inbox.count).to eq(1)
   end
 
-  it 'can have user recipient prefilled from profile page' do
+  it "can have user recipient prefilled from profile page" do
     user = create(:user)
     user2 = create(:user)
     login_as user
@@ -57,7 +58,7 @@ RSpec.describe 'mailboxer messaging', type: :feature do
     expect(page).to have_current_path(new_conversation_path(user: user2.username))
   end
 
-  it 'move message to trash' do
+  it "move message to trash" do
     user = create(:user)
     user2 = create(:user)
     login_as user
@@ -70,7 +71,7 @@ RSpec.describe 'mailboxer messaging', type: :feature do
     expect(user.mailbox.trash.count).to eq(1)
   end
 
-  it 'untrash a message' do
+  it "untrash a message" do
     user = create(:user)
     user2 = create(:user)
     login_as user
