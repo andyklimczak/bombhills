@@ -17,12 +17,12 @@
 
 <p>
   <strong>Spot:</strong>
-  <%= @meetup.spot %>
+  <%= @meetup.spot.title %>
 </p>
 
 <p>
   <strong>Owner:</strong>
-  <%= @meetup.owner %>
+  <%= @meetup.owner.username %>
 </p>
 
 <%= link_to 'Back', spot_meetups_path %>

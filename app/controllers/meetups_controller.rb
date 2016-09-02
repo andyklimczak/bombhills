@@ -28,11 +28,11 @@ class MeetupsController < ApplicationController
   # POST /meetups
   # POST /meetups.json
   def create
-    @meetup = Meetup.new(meetup_params, spot: @spot)
+    @meetup = Meetup.new(meetup_params)
 
     respond_to do |format|
       if @meetup.save
-        format.html { redirect_to @meetup, notice: 'Meetup was successfully created.' }
+        format.html { redirect_to spot_meetup_path(@spot, @meetup), notice: 'Meetup was successfully created.' }
         format.json { render :show, status: :created, location: @meetup }
       else
         format.html { render :new }
@@ -78,7 +78,7 @@ class MeetupsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def meetup_params
-    params.require(:meetup).permit(:title, :description, :time, :spot_id, :owner_id)
+    params.require(:meetup).permit(:title, :description, :time).merge(owner_id: current_user.id, spot_id: @spot.id)
   end
 
   def require_permission

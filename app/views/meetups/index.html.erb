@@ -20,8 +20,8 @@
         <td><%= meetup.title %></td>
         <td><%= meetup.description %></td>
         <td><%= meetup.time %></td>
-        <td><%= meetup.spot %></td>
-        <td><%= meetup.owner %></td>
+        <td><%= meetup.spot.title %></td>
+        <td><%= meetup.owner.username %></td>
         <td><%= link_to 'Show', spot_meetup_path(@spot, meetup) %></td>
       </tr>
     <% end %>
