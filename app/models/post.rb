@@ -26,7 +26,6 @@
 #  fk_rails_5b5ddfd518  (user_id => users.id)
 #
 
-
 class Post < ApplicationRecord
   belongs_to :user
   belongs_to :spot

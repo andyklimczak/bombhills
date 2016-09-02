@@ -9,5 +9,4 @@ FactoryGirl.define do
     user
     spot
   end
-
 end
