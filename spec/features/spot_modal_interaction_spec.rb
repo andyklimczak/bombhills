@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.describe 'spot modal interactions', type: :feature, js: true do
   xit 'can delete a spot (first) on spots page' do
     user = create(:user)
-    spot = create(:spot, user: user)
+    create(:spot, user: user)
     login_as user, scope: :user
     expect(user.spots.count).to eq(1)
     visit spots_path

@@ -20,3 +20,6 @@ Style/Documentation:
 
 Style/AndOr:
   Enabled: false
+
+Metrics/AbcSize:
+  Max: 30

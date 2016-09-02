@@ -30,7 +30,7 @@ RSpec.describe 'Meetups', type: :request do
 
   describe 'POST /spots/:spot_id/meetups' do
     xit 'works' do
-      post "/spots/#{@spot.id}/meetups", meetup: { owner: create(:user), title: 'Test meetup title', description: 'Test meetup description', time: DateTime.now }
+      post "/spots/#{@spot.id}/meetups", meetup: { owner: create(:user), title: 'Test meetup title', description: 'Test meetup description', time: DateTime.utc.now }
       expect(Meetup.count).to eq(1)
       expect(response).to have_http_status(200)
       expect(Meetup.last.title).to eq('Test meetup title')

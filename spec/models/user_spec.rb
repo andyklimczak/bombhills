@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'cannot have the same username as another users email' do
-    user1 = create(:user, email: 'email@test.org')
+    create(:user, email: 'email@test.org')
     user2 = build(:user, username: 'email@test.org')
     expect(user2).not_to be_valid
   end
@@ -44,7 +44,7 @@ RSpec.describe User, type: :model do
   it 'should have posts ordered by created_at desc' do
     user = create(:user, username: 'test_username')
     post1 = create(:image_post, title: 'post1', user: user)
-    post2 = create(:video_post, title: 'post2', user: user)
+    create(:video_post, title: 'post2', user: user)
     post3 = create(:image_post, title: 'post3', user: user)
     expect(user.posts.first).to eq(post3)
     expect(user.posts.last).to eq(post1)
@@ -53,7 +53,7 @@ RSpec.describe User, type: :model do
   it 'should have spots ordered by created_at desc' do
     user = create(:user, username: 'test_username')
     spot1 = create(:spot, title: 'spot1', user: user)
-    spot2 = create(:spot, title: 'spot2', user: user)
+    create(:spot, title: 'spot2', user: user)
     spot3 = create(:spot, title: 'spot3', user: user)
     expect(user.spots.first).to eq(spot3)
     expect(user.spots.last).to eq(spot1)

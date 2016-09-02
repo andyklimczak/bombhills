@@ -6,21 +6,9 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.valid?
         MessageMailer.message_me(@message).deliver
-        format.html do
-          begin
-            redirect_to request.referer
-          rescue
-            redirect_to root_path, notice: 'Successful message'
-          end
-        end
+        format.html { redirect_to request.referer rescue redirect_to root_path, notice: 'Successful message' }
       else
-        format.html do
-          begin
-            redirect_to request.referer
-          rescue
-            redirect_to root_path, notice: 'Unsuccessful message'
-          end
-        end
+        format.html { redirect_to request.referer rescue redirect_to root_path, notice: 'Unsuccessful message' }
       end
     end
   end

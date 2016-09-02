@@ -47,7 +47,7 @@ class User < ApplicationRecord
 
   after_create :signup_notification
 
-  validates_attachment :avatar, content_type: { content_type: /\Aimage\/.*\Z/ }, size: { in: 0..5.megabytes }
+  validates_attachment :avatar, content_type: { content_type: %r{\Aimage\/.*\Z} }, size: { in: 0..5.megabytes }
   validate :validate_username
   validates :username,
             presence: true,
