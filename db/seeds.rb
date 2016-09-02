@@ -1,9 +1,3 @@
-
-
-admin = User.create(username: 'admin', email: bombhillscommunity@gmail.com, password: bombhills, motto: bomb ass hills)
-
-admin.spots.create({title: 'test', description: 'test', latitude: 37.779127216982424, longitude: -122.46700286865234, difficulty: ['Beginner', 'Intermediate', 'Expert'].sample, traffic: 'test'})
-
 until User.count > 2 do
   User.create(username: FFaker::Internet.user_name, email: FFaker::Internet.safe_email, password: FFaker::Internet.password, motto: FFaker::DizzleIpsum.sentence)
   User.create(username: FFaker::Internet.user_name, email: FFaker::Internet.safe_email, password: FFaker::Internet.password, motto: FFaker::DizzleIpsum.sentence)
@@ -24,3 +18,6 @@ end
 4.times do |i|
   Spot.first.meetups.create({title: FFaker::Movie.title, description: FFaker::Lorem.sentence, owner: User.first, time: FFaker::Time.date})
 end
+
+admin = User.create(username: 'admin', email: 'bombhillscommunity@gmail.com', password: 'bombhills', motto: 'bomb ass hills')
+admin.spots.create({title: 'test', description: 'test', latitude: 37.779127216982424, longitude: -122.46700286865234, difficulty: ['Beginner', 'Intermediate', 'Expert'].sample, traffic: 'test'})
