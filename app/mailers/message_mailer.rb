@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class MessageMailer < ApplicationMailer
   default to: "bombhillscommunity@gmail.com"
   def message_me(msg)

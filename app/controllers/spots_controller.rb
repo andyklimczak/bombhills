@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]

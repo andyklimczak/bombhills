@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 FactoryGirl.define do
   factory :meetup, aliases: [:attending_meetups] do
     title { FFaker::Movie.title }

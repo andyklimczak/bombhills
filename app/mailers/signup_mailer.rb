@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class SignupMailer < ApplicationMailer
   default from: 'notifications@bombhills.com'
 
