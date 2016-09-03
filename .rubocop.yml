@@ -18,8 +18,5 @@ Metrics/LineLength:
 Style/Documentation:
   Enabled: false
 
-Style/AndOr:
-  Enabled: false
-
 Metrics/AbcSize:
   Max: 30
