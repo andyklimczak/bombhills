@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = current_user.posts.new(post_params)
+    @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
@@ -73,7 +73,7 @@ class PostsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.require(:post).permit(:title, :image, :description, :user_id, :spot_id, :type, :video_url)
+    params.require(:post).permit(:title, :image, :description, :spot_id, :type, :video_url).merge(user_id: current_user.id)
   end
 
   def require_permission

@@ -32,7 +32,7 @@ class SpotsController < ApplicationController
   # POST /spots
   # POST /spots.json
   def create
-    @spot = current_user.spots.new(spot_params)
+    @spot = Spot.new(spot_params)
 
     respond_to do |format|
       if @spot.save
@@ -78,7 +78,7 @@ class SpotsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def spot_params
-    params.require(:spot).permit(:latitude, :longitude, :description, :title, :difficulty, :user_id, :post_id, :traffic)
+    params.require(:spot).permit(:latitude, :longitude, :description, :title, :difficulty, :post_id, :traffic).merge(user_id: current_user.id)
   end
 
   def require_permission
