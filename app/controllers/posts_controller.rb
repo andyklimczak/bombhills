@@ -32,7 +32,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html { redirect_to show_user_path(current_user.username), notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
+        format.json { render :show, status: :created, post: @post }
       else
         format.html { redirect_to show_user_path(current_user.username) }
         format.json { render json: @post.errors, status: :unprocessable_entity }
@@ -45,10 +45,10 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @post }
+        format.html { redirect_to post_path(@post), notice: 'Post was successfully updated.' }
+        format.json { render :show, status: :ok, post: @post }
       else
-        format.html { render :edit }
+        format.html { redirect_to post_path(@post) }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end

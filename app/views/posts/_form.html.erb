@@ -12,7 +12,7 @@
         </ul>
 
         <div class="tab-content">
-          <div class="tab-pane active" id="Picture">    
+          <div class="tab-pane active" id="Picture">
             <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
 
               <label for="usr">File:</label>
@@ -51,8 +51,9 @@
               <%= f.submit class: 'submitimg' %>
 
             <% end %>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>

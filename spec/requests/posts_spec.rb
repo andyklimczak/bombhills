@@ -36,22 +36,22 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'POST /posts', type: :request do
-    xit 'creates an image post' do
+    it 'creates an image post' do
       user = create(:user)
       sign_in user
-      post '/posts', post: { title: 'Test post', description: 'Test post description', image: Rails.root.join('app', 'assets', 'images', 'usercontentnew.jpg'), type: 'ImagePost' }
+      post('/posts', params: { post: { title: 'Test post', description: 'Test post description', image: fixture_file_upload("#{Rails.root}/spec/fixtures/pic.jpg", 'image/jpg'), type: 'ImagePost' } })
       expect(Post.count).to eq(1)
       expect(response).to redirect_to(show_user_path(user.username))
       expect(Post.last.title).to eq('Test post')
       expect(Post.last.description).to eq('Test post description')
-      expect(Post.last.image).not.to eq(nil)
+      expect(Post.last.image).not_to eq(nil)
       expect(Post.last.type).to eq('ImagePost')
     end
 
     it 'creates a video post' do
       user = create(:user)
       sign_in user
-      post '/posts', params: { post: { title: 'Test post', description: 'Test post description', video_url: 'https://www.youtube.com/watch?v=c7rCyll5AeY', type: 'VideoPost' } }
+      post('/posts', params: { post: { title: 'Test post', description: 'Test post description', video_url: 'https://www.youtube.com/watch?v=c7rCyll5AeY', type: 'VideoPost' } })
       expect(Post.count).to eq(1)
       expect(response).to redirect_to(show_user_path(user.username))
       expect(Post.last.title).to eq('Test post')
@@ -63,7 +63,7 @@ RSpec.describe 'Posts', type: :request do
     it 'creates a video post' do
       user = create(:user)
       sign_in user
-      post '/posts', params: { post: { title: 'Test post', description: 'Test post description', video_url: 'https://www.youtube.com/watch?v=c7rCyll5AeY', type: 'VideoPost' } }
+      post('/posts', params: { post: { title: 'Test post', description: 'Test post description', video_url: 'https://www.youtube.com/watch?v=c7rCyll5AeY', type: 'VideoPost' } })
       expect(Post.count).to eq(1)
       expect(response).to redirect_to(show_user_path(user.username))
       expect(Post.last.title).to eq('Test post')
@@ -75,7 +75,7 @@ RSpec.describe 'Posts', type: :request do
     it 'does not create video post without video_url' do
       user = create(:user)
       sign_in user
-      post '/posts', params: { post: { title: 'Test post', description: 'Test post description', type: 'VideoPost' } }
+      post('/posts', params: { post: { title: 'Test post', description: 'Test post description', type: 'VideoPost' } })
       expect(Post.count).to eq(0)
       expect(response).to redirect_to(show_user_path(user.username))
     end
@@ -87,14 +87,15 @@ RSpec.describe 'Posts', type: :request do
       sign_in user
       post = create(:image_post, user: user)
       expect(user.posts.count).to eq(1)
-      delete "/posts/#{post.id}"
+      delete("/posts/#{post.id}")
       expect(user.posts.count).to eq(0)
     end
 
     it 'deletes post json' do
       headers = {
         'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json'
+        'HTTP_ACCEPT' => 'application/json',
+        'CONTENT_TYPE' => 'application/json'
       }
       user = create(:user)
       sign_in user
@@ -110,49 +111,77 @@ RSpec.describe 'Posts', type: :request do
       sign_in user2
       post = create(:image_post, user: user1)
       expect(user1.posts.count).to eq(1)
-      delete "/posts/#{post.id}"
+      delete("/posts/#{post.id}")
       expect(user1.posts.count).to eq(1)
     end
   end
 
   describe 'PUT /posts', type: :request do
-    xit 'updates post' do
+    it 'updates post' do
       user = create(:user)
       sign_in user
       post = create(:image_post, user: user, title: 'Post Title 1')
       expect(user.posts.count).to eq(1)
       expect(user.posts.last.title).to eq('Post Title 1')
-      put "/posts/#{post.id}", post: { title: 'New post Title' }
+      put("/posts/#{post.id}", params: { post: { title: 'New post Title' } })
       expect(user.posts.last.title).to eq('New post Title')
     end
 
-    xit 'updates post json' do
+    it 'does not update with invalid params' do
+      user = create(:user)
+      sign_in user
+      post = create(:image_post, user: user, title: 'Post Title 1')
+      expect(user.posts.count).to eq(1)
+      expect(user.posts.last.title).to eq('Post Title 1')
+      put("/posts/#{post.id}", params: { post: { title: nil } })
+      expect(user.posts.last.title).to eq('Post Title 1')
+    end
+
+    it 'updates post json' do
       headers = {
         'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json'
+        'HTTP_ACCEPT' => 'application/json',
+        'CONTENT_TYPE' => 'application/json'
       }
       user = create(:user)
       sign_in user
       post = create(:image_post, user: user, title: 'Post Title 1')
       expect(user.posts.count).to eq(1)
       expect(user.posts.last.title).to eq('Post Title 1')
-      put "/posts/#{post.id}", { post: { title: 'New post Title' } }, headers
-      # expect(response.status).to eq(200)
-      p '*' * 50
-      p post
+      params = { title: 'New Post Title' }
+      put("/posts/#{post.id}", params.to_json, headers)
+      expect(response.status).to eq(200)
       post.reload
-      expect(post.title).to eq('New post Title')
+      expect(post.title).to eq('New Post Title')
     end
 
-    xit 'cannot be updated by other user' do
+    it 'does not update with invalid params' do
+      headers = {
+        'ACCEPT' => 'application/json',
+        'HTTP_ACCEPT' => 'application/json',
+        'CONTENT_TYPE' => 'application/json'
+      }
+      user = create(:user)
+      sign_in user
+      post = create(:image_post, user: user, title: 'Post Title 1')
+      expect(user.posts.count).to eq(1)
+      expect(user.posts.last.title).to eq('Post Title 1')
+      params = { title: nil }
+      put("/posts/#{post.id}", params.to_json, headers)
+      post.reload
+      expect(post.title).to eq('Post Title 1')
+    end
+
+    it 'cannot be updated by other user' do
       user1 = create(:user)
+      post = create(:image_post, user: user1, title: 'Post Title 1')
       user2 = create(:user)
       sign_in user2
-      post = create(:image_post, user: user1, title: 'Post Title 1')
       expect(user1.posts.count).to eq(1)
       expect(user1.posts.last.title).to eq('Post Title 1')
-      put "/posts/#{post.id}", post: { title: 'New post Title' }
-      expect(user1.posts.last.title).to eq('post Title 1')
+      params = { title: 'New Post Title' }
+      put("/posts/#{post.id}", params)
+      expect(user1.posts.last.title).to eq('Post Title 1')
     end
   end
 end
