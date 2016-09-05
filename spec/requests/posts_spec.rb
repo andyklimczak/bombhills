@@ -169,6 +169,7 @@ RSpec.describe 'Posts', type: :request do
       params = { title: nil }
       put("/posts/#{post.id}", params.to_json, headers)
       post.reload
+      expect(response.status).to eq(422)
       expect(post.title).to eq('Post Title 1')
     end
 

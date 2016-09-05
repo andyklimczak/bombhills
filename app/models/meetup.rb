@@ -26,4 +26,5 @@ class Meetup < ApplicationRecord
   belongs_to :owner, class_name: 'User'
   has_many :meetup_attendees
   has_many :attending_users, through: :meetup_attendees, source: 'user'
+  validates :title, :description, :time, presence: true
 end

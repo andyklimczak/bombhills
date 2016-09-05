@@ -11,4 +11,7 @@ RSpec.describe Meetup, type: :model do
   it { should belong_to :owner }
   it { should have_many :meetup_attendees }
   it { should have_many :attending_users }
+  it { should validate_presence_of :title }
+  it { should validate_presence_of :description }
+  it { should validate_presence_of :time }
 end

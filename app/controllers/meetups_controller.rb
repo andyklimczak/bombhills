@@ -33,7 +33,7 @@ class MeetupsController < ApplicationController
     respond_to do |format|
       if @meetup.save
         format.html { redirect_to spot_meetup_path(@spot, @meetup), notice: 'Meetup was successfully created.' }
-        format.json { render :show, status: :created, location: @meetup }
+        format.json { render :show, status: :created, meetup: @meetup }
       else
         format.html { render :new }
         format.json { render json: @meetup.errors, status: :unprocessable_entity }
@@ -46,8 +46,8 @@ class MeetupsController < ApplicationController
   def update
     respond_to do |format|
       if @meetup.update(meetup_params)
-        format.html { redirect_to @meetup, notice: 'Meetup was successfully updated.' }
-        format.json { render :show, status: :ok, location: @meetup }
+        format.html { redirect_to spot_meetup_path(@spot, @meetup), notice: 'Meetup was successfully updated.' }
+        format.json { render :show, status: :ok, meetup: @meetup }
       else
         format.html { render :edit }
         format.json { render json: @meetup.errors, status: :unprocessable_entity }
@@ -82,6 +82,6 @@ class MeetupsController < ApplicationController
   end
 
   def require_permission
-    super(@meetup)
+    raise 'Unauthorized' unless @meetup.owner == current_user
   end
 end

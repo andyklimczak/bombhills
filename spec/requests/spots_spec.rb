@@ -87,17 +87,29 @@ RSpec.describe 'Spots', type: :request do
   end
 
   describe 'PUT /spots', type: :request do
-    xit 'updates spot' do
+    it 'updates spot' do
       user = create(:user)
       sign_in user
       spot = create(:spot, user: user, title: 'Spot Title 1')
       expect(user.spots.count).to eq(1)
       expect(user.spots.last.title).to eq('Spot Title 1')
       put "/spots/#{spot.id}", spot: { title: 'New Spot Title' }
+      spot.reload
       expect(spot.title).to eq('New Spot Title')
     end
 
-    xit 'updates spot json' do
+    it 'does not update with invalid params' do
+      user = create(:user)
+      sign_in user
+      spot = create(:spot, user: user, title: 'Spot Title 1')
+      expect(user.spots.count).to eq(1)
+      expect(user.spots.last.title).to eq('Spot Title 1')
+      put "/spots/#{spot.id}", spot: { title: nil }
+      spot.reload
+      expect(spot.title).to eq('Spot Title 1')
+    end
+
+    it 'updates spot json' do
       headers = {
         'ACCEPT' => 'application/json',
         'HTTP_ACCEPT' => 'application/json'
@@ -109,10 +121,27 @@ RSpec.describe 'Spots', type: :request do
       expect(user.spots.last.title).to eq('Spot Title 1')
       put "/spots/#{spot.id}", { spot: { title: 'New Spot Title' } }, headers
       expect(response.status).to eq(200)
+      spot.reload
       expect(user.spots.last.title).to eq('New Spot Title')
     end
 
-    xit 'cannot be updated by other user' do
+    it 'does not update with invalid params json' do
+      headers = {
+        'ACCEPT' => 'application/json',
+        'HTTP_ACCEPT' => 'application/json'
+      }
+      user = create(:user)
+      sign_in user
+      spot = create(:spot, user: user, title: 'Spot Title 1')
+      expect(user.spots.count).to eq(1)
+      expect(user.spots.last.title).to eq('Spot Title 1')
+      put "/spots/#{spot.id}", { spot: { title: nil } }, headers
+      spot.reload
+      expect(response.status).to eq(422)
+      expect(user.spots.last.title).to eq('Spot Title 1')
+    end
+
+    it 'cannot be updated by other user' do
       user1 = create(:user)
       user2 = create(:user)
       sign_in user2
