@@ -10,9 +10,9 @@ addons:
 services:
   - postgresql
 script:
-  - rubocop
-  - brakeman
-  - bundler-audit
+  - bundle exec rubocop
+  - bundle exec brakeman
+  - bundle exec bundler-audit
   - bundle exec rake db:migrate RAILS_ENV=test --trace
   - bundle exec rspec spec
 notifications:
