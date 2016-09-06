@@ -45,7 +45,7 @@ group :development do
   gem 'brakeman', require: false
   gem 'bundler-audit'
   gem 'rubycritic', require: false
-  gem 'rubycop', require: false
+  gem 'rubocop', require: false
 end
 
 group :test do
