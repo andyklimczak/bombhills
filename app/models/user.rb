@@ -61,9 +61,9 @@ class User < ApplicationRecord
     if login.nil?
       email = conditions[:email].dup
       conditions[:email] = email.downcase if conditions[:email]
-      where(conditions.to_hash).first
+      find_by(conditions.to_hash)
     else
-      where(conditions.to_hash).where(['lower(username) = :value OR lower(email) = :value', { value: login }]).first
+      find_by(['lower(username) = :value OR lower(email) = :value', { value: login }])
     end
   end
 

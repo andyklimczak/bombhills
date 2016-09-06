@@ -1,15 +1,20 @@
+sudo: false
+cache: bundler
 before_script:
-- cp config/database.yml.travis config/database.yml
-- psql -c 'create database travis_ci_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database travis_ci_test;' -U postgres
 rvm:
-- 2.3.1
+  - 2.3.1
 addons:
   postgresql: '9.4'
 services:
-- postgresql
+  - postgresql
 script:
-- bundle exec rake db:migrate RAILS_ENV=test --trace
-- bundle exec rspec spec
+  - rubocop
+  - brakeman
+  - bundler-audit
+  - bundle exec rake db:migrate RAILS_ENV=test --trace
+  - bundle exec rspec spec
 notifications:
   email: false
   slack:
