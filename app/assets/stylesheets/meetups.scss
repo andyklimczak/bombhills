@@ -5,3 +5,39 @@
 
 /* meetups */
 
+.meetups {
+  background: #0B4CD6;
+  color: #FFF;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+  background-size: cover;
+}
+
+.meetups h1 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+}
+
+.meetups h2 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+}
+
+.meetupsbutton {
+  color: #0D003D;
+  background: #FFF;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.meetupsbutton:hover {
+  text-decoration: none;
+}

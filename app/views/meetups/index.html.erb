@@ -1,33 +1,23 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Meetups</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Time</th>
-      <th>Spot</th>
-      <th>Owner</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="meetups">
+  <%= render 'layouts/navbar' %>
+  
+  <p id="notice"><%= notice %></p>
 
-  <tbody>
-    <% @meetups.each do |meetup| %>
-      <tr>
-        <td><%= meetup.title %></td>
-        <td><%= meetup.description %></td>
-        <td><%= meetup.time %></td>
-        <td><%= meetup.spot.title %></td>
-        <td><%= meetup.owner.username %></td>
-        <td><%= link_to 'Show', spot_meetup_path(@spot, meetup) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <h1>Spot Name</h1>
 
-<br>
+  <% @meetups.each do |meetup| %>
+      <%= meetup.title %>
+      <%= meetup.description %>
+      <%= meetup.time %>
+      <%= meetup.spot.title %>
+      <%= meetup.owner.username %>
+  <%= link_to 'Show', spot_meetup_path(@spot, meetup), class: 'meetupsbutton' %>
+  <% end %>
 
-<%= link_to 'New Meetup', new_spot_meetup_path %>
+  <br>
+
+  <%= link_to 'New Meetup', new_spot_meetup_path, class: 'meetupsbutton' %>
+  
+</div>
