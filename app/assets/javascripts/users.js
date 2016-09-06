@@ -1,4 +1,4 @@
-/*
+/**
  * Switch between show & edit in spot modal
  */
 function switchTab() {

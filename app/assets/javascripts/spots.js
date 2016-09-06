@@ -1,6 +1,6 @@
 var mymap;
 
-/*
+/**
  * Init the map with the correct layout, points, and listeners
  */
 function initMap() {
@@ -28,7 +28,7 @@ function initMap() {
   }
 }
 
-/*
+/**
  * Hides the map alert after 4 seconds
  */
 function fadeAlert() {
@@ -37,7 +37,7 @@ function fadeAlert() {
   });
 }
 
-/*
+/**
  * Set the initial view of the map for the user. It can be 1 of 3 ways:
  * If the user searched for a point, look for the cordinates from the json search object (?q= url query param)
  * If the user is looking at a specific point, focus on that point
@@ -53,12 +53,10 @@ function getInitialView() {
   }
 }
 
-/*
+/**
  * Open the add new location form modal when user right clicks on the map
  */
 function onMapRightClick(e) {
-  console.log(e.latlng.lat);
-  console.log(e.latlng.lng);
   if(gon.user_signed_in) {
     $('#new-latitude').val(e.latlng.lat);
     $('#new-longitude').val(e.latlng.lng);
@@ -68,11 +66,11 @@ function onMapRightClick(e) {
   }
 }
 
-/*
+/**
  * Function to initially load all of the spots onto the map
  * Uses ajax to hit the json version of the points, and creates the markers by looping through
  */
-function loadPoints(e) {
+function loadPoints() {
   $.ajax({
     url: '/spots.json',
     method: 'GET'
@@ -94,7 +92,7 @@ function locateMe() {
   mymap.locate({setView: true});
 }
 
-/*
+/**
  * Show or hide the left hand nav dashboard
  */
 function toggleDashboard() {
@@ -108,7 +106,7 @@ function toggleDashboard() {
   });
 }
 
-/*
+/**
  * Change the delete url when changing the spots dropdown
  */
 function viewDeleteSpotSelectChange() {
@@ -117,7 +115,7 @@ function viewDeleteSpotSelectChange() {
   });
 }
 
-/*
+/**
  * View the spot when view is clicked
  * If user is on the map page, set the view
  * If user is on the profile page, go to the map page
@@ -141,7 +139,7 @@ function viewSpotClick() {
   });
 }
 
-/*
+/**
  * Change the spot modal form information when the selected spot changes
  */
 function updateSpotSelectChange() {
@@ -159,7 +157,7 @@ function updateSpotSelectChange() {
   });
 }
 
-/*
+/**
  * Update the spot via the modal
  */
 function updateSpotClick() {
@@ -179,7 +177,7 @@ function updateSpotClick() {
   });
 }
 
-/*
+/**
  * Delete the spot via the modal
  */
 function deleteSpotClick() {
@@ -196,7 +194,7 @@ function deleteSpotClick() {
   });
 }
 
-/*
+/**
  * Init listeners for spot modal
  */
 function initModalListeners() {

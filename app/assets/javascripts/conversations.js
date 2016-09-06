@@ -1,7 +1,7 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+/*
+ * Set chosenjs settings on new message page
+ */
 function ready(){
-  // enable chosen js
   if($('.chosen-select').length) {
     $('.chosen-select').attr("data-placeholder", "Select...").chosen({
       no_results_text: 'No results matched',
