@@ -5,10 +5,10 @@
         <li id="dashtitle"><%= link_to ' bombhills ', root_path, :class => 'none' %></li>
         <li id="searchli">
           <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
-            <form class="form-inline" id="form" action="<%= spots_path %>" method="get">
-              <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "search" %>
-              <button id='map-search-button' hidden>Search</button>
-            </form>
+            <%= form_tag(spots_path, method: "get", id: "form", class: "form-inline") do %>
+              <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "or search for a specific location" %>
+              <%= submit_tag "Search", name: nil, id: "map-search-button", class: "btn btn-default", style: "display: none;" %>
+            <% end %>
           </div>
         </li>
         <li id="findmebutton">

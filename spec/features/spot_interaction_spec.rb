@@ -8,7 +8,7 @@ RSpec.describe 'spot interactions', type: :feature do
       fill_in 'search', with: 'Amherst'
     end
     click_button 'Search'
-    expect(page).to have_current_path(spots_path(search: 'Amherst'))
+    expect(page).to have_current_path(/search=Amherst/)
   end
 
   it 'can search from map page' do
@@ -17,7 +17,7 @@ RSpec.describe 'spot interactions', type: :feature do
       fill_in 'search-input', with: 'Amherst'
     end
     click_button 'Search', visible: false
-    expect(page).to have_current_path(spots_path(search: 'Amherst'))
+    expect(page).to have_current_path(/search=Amherst/)
   end
 
   it 'can create a spot with Beginner difficulty' do
