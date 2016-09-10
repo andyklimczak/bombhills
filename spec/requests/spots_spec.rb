@@ -15,6 +15,18 @@ RSpec.describe 'Spots', type: :request do
       get spots_path(spot)
       expect(response).to have_http_status(200)
     end
+
+    it 'works with valid id query param' do
+      spot = create(:spot)
+      get spots_path(spot, id: 1)
+      expect(response).to have_http_status(200)
+    end
+
+    it 'works with invalid id query param' do
+      spot = create(:spot)
+      get spots_path(spot, id: 999)
+      expect(response).to have_http_status(200)
+    end
   end
 
   describe 'GET /spots/new', type: :request do

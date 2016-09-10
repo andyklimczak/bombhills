@@ -3,7 +3,7 @@ class ConversationsController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @param_user_id = User.find_by('username': params[:user]).id if params.key?(:user)
+    @param_user_id = User.find_by('username': params[:user]).id if params.key?(:user) && User.exists?(username: params[:user])
   end
 
   def create
