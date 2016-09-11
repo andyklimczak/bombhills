@@ -2,22 +2,28 @@
 
 <div class="meetups">
   <%= render 'layouts/navbar' %>
-  
+
   <p id="notice"><%= notice %></p>
 
-  <h1>Spot Name</h1>
+  <h1><%= @spot.title %>'s Meetups</h1>
 
-  <% @meetups.each do |meetup| %>
-      <%= meetup.title %>
-      <%= meetup.description %>
-      <%= meetup.time %>
-      <%= meetup.spot.title %>
-      <%= meetup.owner.username %>
-  <%= link_to 'Show', spot_meetup_path(@spot, meetup), class: 'meetupsbutton' %>
+  <% if @meetups.any? %>
+    <% @meetups.each do |meetup| %>
+        <%= meetup.title %>
+        <%= meetup.description %>
+        <%= meetup.time %>
+        <%= meetup.spot.title %>
+        <%= meetup.owner.username %>
+    <%= link_to 'Show', spot_meetup_path(@spot, meetup), class: 'meetupsbutton' %>
+    <% end %>
+  <% else %>
+    <p>
+      No meetups for this spot, why not create one?
+    <p>
   <% end %>
 
   <br>
 
   <%= link_to 'New Meetup', new_spot_meetup_path, class: 'meetupsbutton' %>
-  
+
 </div>
