@@ -6,7 +6,7 @@
         <li id="searchli">
           <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
             <%= form_tag(spots_path, method: "get", id: "form", class: "form-inline") do %>
-              <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "or search for a specific location" %>
+              <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "search" %>
               <%= submit_tag "Search", name: nil, id: "map-search-button", class: "btn btn-default", style: "display: none;" %>
             <% end %>
           </div>

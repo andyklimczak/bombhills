@@ -1,4 +1,4 @@
-<div class="meetup">
+<div class="meetups">
 
     <%= form_for([@spot, @meetup]) do |f| %>
       <% if @meetup.errors.any? %>
@@ -23,9 +23,9 @@
       </div>
       <div class="field">
         <%= f.label :time %><br>
-        <%= f.datetime_select :time %>
+        <%= f.datetime_select :time  %>
       </div>
-      <div class="actions">
+      <div class="actions" id="newmeetupformsubmit">
         <%= f.submit %>
       </div>
     <% end %>

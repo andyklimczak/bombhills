@@ -27,6 +27,14 @@
   font-weight: 200;
 }
 
+.meetups input {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  background: none;
+  border-bottom: thin solid #FFF;
+}
+
 .meetupsbutton {
   color: #0D003D;
   background: #FFF;
@@ -40,4 +48,21 @@
 
 .meetupsbutton:hover {
   text-decoration: none;
+}
+
+.meetups #meetup_time_1i, #meetup_time_2i, #meetup_time_3i, #meetup_time_4i, #meetup_time_5i {
+  color: #FFF;
+  background: none;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  background: none;
+  border-bottom: thin solid #FFF;
+  
+}
+
+#newmeetupformsubmit input {
+  color: #FFF;
+  padding: 7px 12px;
+  border-radius: 6px;
 }
