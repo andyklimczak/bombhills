@@ -24,7 +24,7 @@ RSpec.describe 'spot interactions', type: :feature do
     user = create(:user)
     login_as user, scope: :user
     visit spots_path
-    within('#new-location-form', visible: false) do
+    within('#new-spot-form', visible: false) do
       fill_in 'spot_title', with: 'Spot Title'
       select 'Beginner', from: 'spot_difficulty'
       fill_in 'spot_description', with: 'Spot Description'
@@ -37,7 +37,7 @@ RSpec.describe 'spot interactions', type: :feature do
     user = create(:user)
     login_as user, scope: :user
     visit spots_path
-    within('#new-location-form', visible: false) do
+    within('#new-spot-form', visible: false) do
       fill_in 'spot_title', with: 'Spot Title'
       select 'Intermediate', from: 'spot_difficulty'
       fill_in 'spot_description', with: 'Spot Description'
@@ -50,7 +50,7 @@ RSpec.describe 'spot interactions', type: :feature do
     user = create(:user)
     login_as user, scope: :user
     visit spots_path
-    within('#new-location-form', visible: false) do
+    within('#new-spot-form', visible: false) do
       fill_in 'spot_title', with: 'Spot Title'
       select 'Professional', from: 'spot_difficulty'
       fill_in 'spot_description', with: 'Spot Description'
@@ -70,7 +70,7 @@ RSpec.describe 'spot interactions', type: :feature do
     user = create(:user)
     create(:image_post, user: user)
     visit posts_path
-    within('#thumbnailcontainer') do
+    within('#thumbnail-container') do
       click_on 'User'
     end
     expect(page).to have_current_path(show_user_path(user.username))

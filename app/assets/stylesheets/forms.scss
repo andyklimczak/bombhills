@@ -15,7 +15,7 @@ input[type="title"] {
   overflow-y: auto;
 }
 
-.submitimg {
+.submit-post {
   margin: 15px;
   margin-left: 0px;
   background: #fff;
@@ -72,7 +72,7 @@ input[type="title"] {
   padding: 10px 10px;
 }
 
-.userspots .form-control {
+.user-spots .form-control {
   margin-left: auto;
   margin-right: auto;
   margin-top: 125px;
@@ -84,7 +84,7 @@ input[type="title"] {
   background: none;
 }
 
-.usersspotsedit .form-control {
+.user-spots-edit .form-control {
   color: #FFF;
   border-radius: 0px;
   border: none;
@@ -92,17 +92,17 @@ input[type="title"] {
   border-bottom: thin solid #fb4148;
 }
 
-.userspots ul {
+.user-spots ul {
   color: #FFF;
   padding-left: 65px;
 }
 
-.userspots li {
+.user-spots li {
   display: inline;
   cursor: pointer;
 }
 
-.userspots li:last-child {
+.user-spots li:last-child {
   margin-left: 10px;
   
 }
@@ -111,12 +111,12 @@ input[type="title"] {
 
 /* contact modal */
 
-#contactModal .modal-body {
+#contact-modal .modal-body {
   text-align: center;
 }
 
 
-#contactModal .modal-body input {
+#contact-modal .modal-body input {
   padding: 5px 10px;
   border-top: none;
   border-left: none;
@@ -129,15 +129,15 @@ input[type="title"] {
 
 /* report modal */
 
-#reportModal {
+#report-modal {
   background: #0B4CD6;
 }
 
-#reportModal .modal-header {
+#report-modal .modal-header {
   border: none;
 }
 
-#reportModal .modal-header h4 {
+#report-modal .modal-header h4 {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   font-size: 36px;
@@ -145,7 +145,7 @@ input[type="title"] {
 }
 
 
-#reportModal .modal-footer {
+#report-modal .modal-footer {
   border: none;
 }
 
@@ -173,11 +173,11 @@ input[type="title"] {
     cursor: pointer;
     background: #fb4148;
   }
-  .userspots .form-control {
+  .user-spots .form-control {
     margin-top: 30px;
     width: 200px;
   }
-  .userspots ul {
+  .user-spots ul {
     padding-left: 0px;
     text-align: center;
   }
@@ -204,11 +204,11 @@ input[type="title"] {
     cursor: pointer;
     background: #fb4148;
   }
-  .userspots .form-control {
+  .user-spots .form-control {
     margin-top: 30px;
     width: 200px;
   }
-  .userspots ul {
+  .user-spots ul {
     padding-left: 0px;
     text-align: center;
   }
@@ -235,12 +235,12 @@ input[type="title"] {
     cursor: pointer;
     background: #fb4148;
   }
-  .userspots .form-control {
+  .user-spots .form-control {
     margin-top: 30px;
     width: 200px;
   }
 
-  .userspots ul {
+  .user-spots ul {
     padding-left: 0px;
     text-align: center;
   }

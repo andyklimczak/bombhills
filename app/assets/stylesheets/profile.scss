@@ -19,12 +19,12 @@
   border-radius: 50%;
 }
 
-.profile-usertitle {
+.profile-user-title {
   text-align: center;
   margin-top: 20px;
 }
 
-.profile-usertitle-name {
+.profile-user-title-name {
   font-size: 32px;
   margin-bottom: 7px;
   font-family: 'Kanit', sans-serif;
@@ -32,7 +32,7 @@
   color: #0B4CD6;
 }
 
-.profile-usertitle-motto {
+.profile-user-title-motto {
   font-size: 18px;
   margin-bottom: 15px;
   padding: 0px 10px;
@@ -41,12 +41,12 @@
   color: #0B4CD6;
 }
 
-.profile-userbuttons {
+.profile-user-btns {
   text-align: center;
   margin-top: 10px;
 }
 
-.profile-userbuttons .btn {
+.profile-user-btns .btn {
   font-family: 'Kanit', sans-serif;
   color: white;
   text-transform: uppercase;
@@ -55,38 +55,38 @@
   margin-right: 0px;
 }
 
-.profile-usermenu {
+.profile-user-menu {
   margin-top: 30px;
 }
 
-.profile-usermenu ul li {
+.profile-user-menu ul li {
   border-bottom: 1px solid #f0f4f7;
 }
 
-.profile-usermenu ul li:last-child {
+.profile-user-menu ul li:last-child {
   border-bottom: none;
 }
 
-.profile-usermenu ul li a {
+.profile-user-menu ul li a {
   font-size: 14px;
   font-weight: 400;
 }
 
-.profile-usermenu ul li a i {
+.profile-user-menu ul li a i {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.profile-usermenu ul li a:hover {
+.profile-user-menu ul li a:hover {
   background-color: #fafcfd;
   color: #000;
 }
 
-.profile-usermenu ul li.active {
+.profile-user-menu ul li.active {
   border-bottom: none;
 }
 
-.profile-usermenu ul li.active a {
+.profile-user-menu ul li.active a {
   background-color: #f6f9fb;
   border-left: 2px solid #5b9bd1;
   margin-left: -2px;
@@ -104,7 +104,7 @@
   margin-bottom: 20px;
 }
 
-#addimg {
+#add-img {
   height: 150px;
   width: 250px;
 }
@@ -232,38 +232,38 @@
   border-bottom: thin solid rgba(13, 0, 61, .9);
 }
 
-#remembermefield label {
+#remember-me-field label {
   margin-left: 10px;
 }
 
 /* user settings */
 
-.editprofilewrapper {
+.edit-profile-wrapper {
   background: #fb4148;
 }
 
-#editprofilecontainer {
+#edit-profile-container {
   margin-top: 53.2px;
 }
 
-#editprofiledashboard {
+#edit-profile-dashboard {
   padding: 0px;
 }
 
-#editprofileimage {
+#edit-profile-image {
   height: 275px;
   background: #EDEDED;
   @include display(flex);
   @include align-items(center);
 }
 
-#editprofileimage img {
+#edit-profile-image img {
   margin: 0 auto;
   height: 50%;
   border-radius: 50%;
 }
 
-#editprofilemotto {
+#edit-profile-motto {
   height: 275px;
   background: #fb4148;
   text-align: center;
@@ -271,7 +271,7 @@
   @include align-items(center);
 }
 
-#editprofilemotto input {
+#edit-profile-motto input {
   margin: 0 auto;
   border: none;
   color: rgba(13, 0, 61, .9);
@@ -280,48 +280,48 @@
   padding: 25px 25px;
 }
 
-#editprofileshow {
+#edit-profile-show {
   height: 550px;
   padding-left: 20px;
   background: #E5E5E5;
   font-family: 'Kanit', sans-serif;
 }
 
-#editprofileshow h3 {
+#edit-profile-show h3 {
   font-weight: 400;
   color: #2E3133;
 }
 
-#editprofileshow input {
+#edit-profile-show input {
   border: none;
   color: rgba(13, 0, 61, .9);
   padding: 5px 0px;
 }
 
-#editprofileshow ul {
+#edit-profile-show ul {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
-#editprofileshow li {
+#edit-profile-show li {
   display: inline;
   margin: 0px 10px;
 }
 
-#editprofileshow li a {
+#edit-profile-show li a {
   color: #FFF;
   background: #fb4148;
   padding: 10px 10px;
   cursor: pointer;
 }
 
-#editprofileshow li input {
+#edit-profile-show li input {
   padding: 10px 10px;
   cursor: pointer;
 }
 
-#editprofileshow li a:hover {
+#edit-profile-show li a:hover {
   text-decoration: none;
 }
 
@@ -331,19 +331,19 @@
   padding: 30px 30px;
 }
 
-.cancelaccount {
+.cancel-account {
   height: 250px;
   background: #fb4148;
   color: #FFF;
   padding: 30px 30px;
 }
 
-.cancelaccount a {
+.cancel-account a {
   color: #FFF;
   text-decoration: none;
 }
 
-.cancelaccount input {
+.cancel-account input {
   padding: 10px 10px;
   color: #2E3133;
 }
@@ -355,13 +355,13 @@
 /* Custom, iPhone Retina */
 
 @media only screen and (max-width : 480px) {
-  #editprofilemotto {
+  #edit-profile-motto {
     height: 75px;
   }
-  #editprofileshow {
+  #edit-profile-show {
     background: #FFF;
   }
-  #editprofileshow input {
+  #edit-profile-show input {
     background: rgba(13, 0, 61, .9);
     color: #FFF;
   }
@@ -370,13 +370,13 @@
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) and (max-width : 768px) {
-  #editprofilemotto {
+  #edit-profile-motto {
     height: 125px;
   }
-  #editprofileshow {
+  #edit-profile-show {
     background: #FFF;
   }
-  #editprofileshow input {
+  #edit-profile-show input {
     background: rgba(13, 0, 61, .9);
     color: #FFF;
   }

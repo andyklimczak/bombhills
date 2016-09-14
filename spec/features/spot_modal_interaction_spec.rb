@@ -8,9 +8,9 @@ RSpec.describe 'spot modal interactions', type: :feature, js: true do
     login_as user, scope: :user
     expect(user.spots.count).to eq(1)
     visit spots_path
-    page.execute_script("$('#spotsModalLink').click()")
-    page.execute_script("$('#spotseditbutton').click()")
-    page.execute_script("$('#modal-delete-button').click()")
+    page.execute_script("$('#spots-modal-link').click()")
+    page.execute_script("$('#spots-edit-btn').click()")
+    page.execute_script("$('#modal-delete-btn').click()")
     wait_for_ajax
     user.reload
     sleep(4)
@@ -23,10 +23,10 @@ RSpec.describe 'spot modal interactions', type: :feature, js: true do
     login_as user, scope: :user
     expect(user.spots.count).to eq(1)
     visit spots_path
-    find('#spotsModalLink').trigger('click')
-    find('#spotseditbutton').trigger('click')
+    find('#spots-modal-link').trigger('click')
+    find('#spots-edit-btn').trigger('click')
     find("input[name='title']").set 'test title'
-    find('#modal-update-button').trigger('click')
+    find('#modal-update-btn').trigger('click')
     wait_for_ajax
     user.reload
     spot.reload
@@ -41,10 +41,10 @@ RSpec.describe 'spot modal interactions', type: :feature, js: true do
     expect(user.spots.count).to eq(1)
     visit show_user_path(user.username)
     click_link 'Spots'
-    find('#spotseditbutton').trigger('click')
+    find('#spots-edit-btn').trigger('click')
     within('#users-spots-edit-form') do
       fill_in 'spot_title', with: 'test title'
-      find('#modal-update-button').trigger('click')
+      find('#modal-update-btn').trigger('click')
     end
     page!
     sleep(4)

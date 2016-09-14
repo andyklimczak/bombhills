@@ -4,9 +4,9 @@ var mymap;
  * Init the map with the correct layout, points, and listeners
  */
 function initMap() {
-  if ($('#mapid').length) {
+  if ($('#map-id').length) {
 
-    mymap = L.map('mapid', { zoomControl: false });
+    mymap = L.map('map-id', { zoomControl: false });
     L.control.zoom({position: 'bottomright'}).addTo(mymap);
 
 
@@ -21,8 +21,8 @@ function initMap() {
     mymap.setView(getInitialView(), 12);
     mymap.on('contextmenu', onMapRightClick);
 
-    $('#findmebutton').click(locateMe);
-    $('#fullscreenbutton, #hamburgerbutton').click(toggleDashboard);
+    $('#find-me-btn').click(locateMe);
+    $('#fullscreen-btn, #hamburger-btn').click(toggleDashboard);
 
     fadeAlert();
   }
@@ -60,7 +60,7 @@ function onMapRightClick(e) {
   if(gon.user_signed_in) {
     $('#new-latitude').val(e.latlng.lat);
     $('#new-longitude').val(e.latlng.lng);
-    $('#new-location-form').modal('toggle');
+    $('#new-spot-form').modal('toggle');
   } else {
     $('#new-location-error').modal('toggle');
   }
@@ -77,7 +77,7 @@ function loadPoints() {
   }).done(function(response) {
     response.spots.forEach(function(spot) {
       L.marker([spot.latitude, spot.longitude], { clickable: true })
-        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br>Traffic: " + spot.traffic + "<br><a href='/spots/" + spot.id + "/meetups'>meetup</a>" +"<br><a data-toggle='modal' data-target='#reportModal'>report</a>")
+        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br>Traffic: " + spot.traffic + "<br><a href='/spots/" + spot.id + "/meetups'>meetup</a>" +"<br><a data-toggle='modal' data-target='#report-modal'>report</a>")
         .addTo(mymap);
     });
   }).fail(function() {
@@ -96,12 +96,12 @@ function locateMe() {
  * Show or hide the left hand nav dashboard
  */
 function toggleDashboard() {
-  $('#fullscreenbutton, #hamburgerbutton').click(function () {
+  $('#fullscreen-btn, #hamburger-btn').click(function () {
     $('.dashboard').animate({
-      left: this.id === 'fullscreenbutton' ? "-100%" : "0"
+      left: this.id === 'fullscreen-btn' ? "-100%" : "0"
     }, 200);
     $('.meetups').animate({
-      marginLeft: this.id === 'fullscreenbutton' ? "0" : "250px"
+      marginLeft: this.id === 'fullscreen-btn' ? "0" : "250px"
     }, 200);
   });
 }
@@ -123,7 +123,7 @@ function viewDeleteSpotSelectChange() {
 function viewSpotClick() {
   $('#modal-view-spot').on('click', function() {
     var spotId = $('select[name=view_delete_spot]').val();
-    if($('#mapid').length) {
+    if($('#map-id').length) {
       $.ajax({
         url: '/spots/' + spotId,
         method: 'GET',
@@ -131,7 +131,7 @@ function viewSpotClick() {
       }).done(function(response) {
         mymap.setView([response.latitude, response.longitude], 12);
       }).always(function() {
-        $('#spotModal').modal('toggle');
+        $('#spot-modal').modal('toggle');
       });
     } else {
       Turbolinks.visit('/spots?id=' + spotId, { action: 'replace' })
@@ -161,7 +161,7 @@ function updateSpotSelectChange() {
  * Update the spot via the modal
  */
 function updateSpotClick() {
-  $('#modal-update-button').on('click', function() {
+  $('#modal-update-btn').on('click', function() {
     var data = _.object(_.map($('#users-spots-edit-form').serializeArray(), _.values));
     $.ajax({
       type: "PUT",
@@ -172,7 +172,7 @@ function updateSpotClick() {
     }).done(function(response) {
       Turbolinks.visit('/spots?id=' + response.id, { action: 'replace' })
     }).always(function() {
-      $('#spotModal').modal('toggle');
+      $('#spot-modal').modal('toggle');
     });
   });
 }
@@ -181,7 +181,7 @@ function updateSpotClick() {
  * Delete the spot via the modal
  */
 function deleteSpotClick() {
-  $('#modal-delete-button').on('click', function() {
+  $('#modal-delete-btn').on('click', function() {
     var spotId = $('select[name="spot_id"]').val();
     $.ajax({
       type: "DELETE",

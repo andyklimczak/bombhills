@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.userposts {
+.user-posts {
   padding-top: 60px;
   padding-bottom: 40px;
 }
@@ -22,7 +22,7 @@
   color: rgba(13, 0, 61, .9);
 }
 
-.userposts h1 {
+.user-posts h1 {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   text-align: center;
@@ -31,7 +31,7 @@
   color:rgba(13, 0, 61, .9);
 }
 
-.userposts p {
+.user-posts p {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   text-align: center;
@@ -39,11 +39,11 @@
   font-size: 17px;
 }
 
-.userposts img {
+.user-posts img {
   margin-bottom: 20px;
 }
 
-#userbutton {
+#user-btn {
   color: #FFF;
   background: #0B4CD6;
   margin-right: 5px;
@@ -61,13 +61,13 @@
 /* Custom, iPhone Retina */
 
 @media only screen and (max-width : 480px) {
-  .userposts ul {
+  .user-posts ul {
     text-align: right;
     margin-right: 10px;
     margin-bottom: 20px;
     padding: 0px;
   }
-  #postscontainer {
+  #posts-container {
     padding: 0px;
   }
 
@@ -80,7 +80,7 @@
     text-align: center;
   }
 
-  #thumbnailcontainer {
+  #thumbnail-container {
     padding: 0px;
   }
 
@@ -89,13 +89,13 @@
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) and (max-width : 768px) {
-  .userposts ul {
+  .user-posts ul {
     text-align: right;
     margin-right: 10px;
     margin-bottom: 20px;
     padding: 0px;
   }
-  #postscontainer {
+  #posts-container {
     padding: 0px;
   }
 
@@ -108,7 +108,7 @@
     text-align: center;
   }
 
-  #thumbnailcontainer {
+  #thumbnail-container {
     padding: 0px;
   }
 

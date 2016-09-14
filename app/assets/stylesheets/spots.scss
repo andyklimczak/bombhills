@@ -11,12 +11,10 @@
   left: 0;
   z-index: 3;
   background-color: #FFF;
-  -webkit-box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
-  -moz-box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
   box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
 }
 
-.hamburgerbutton {
+.hamburger-btn {
   position: absolute;
   z-index: 1;
   background: #0B4CD6;
@@ -27,7 +25,7 @@
   box-shadow: -1px 6px 17px -8px rgba(0,0,0,0.75);
 }
 
-#hamburgerbutton {
+#hamburger-btn {
   color: #FFF;
   padding-top: 2px;
   padding-left: 2px;
@@ -36,18 +34,18 @@
   cursor: pointer;
 }
 
-.navtools ul {
+.nav-tools ul {
   list-style-type: none;
   padding: 0px;
 }
 
-#dashtitle a {
+#dash-title a {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   font-size: 24px;
 }
 
-.navtools li {
+.nav-tools li {
   height: 60px;
   cursor: pointer;
   line-height: 70px;
@@ -55,7 +53,7 @@
   padding-left: 28px;
 }
 
-.navtools li p {
+.nav-tools li p {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   display: inline-block;
@@ -65,7 +63,7 @@
 
 }
 
-.navtools li a {
+.nav-tools li a {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
   display: inline-block;
@@ -77,11 +75,11 @@
 
 }
 
-.navtools li a:hover {
+.nav-tools li a:hover {
   background: none;
 }
 
-.navtools li img {
+.nav-tools li img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -96,14 +94,14 @@
   height: 37.2px;
 }
 
-#searchli {
+#search-li {
   padding-left: 23px;
   background: #FFF;
 
   #form {
     @include display(flex);
 
-    #map-search-button {
+    #map-search-btn {
       width: 30%;
       border: 0;
 
@@ -126,7 +124,7 @@
       text-align: left;
       font-family: 'Kanit', sans-serif;
       font-weight: 200;
-      
+
     }
     #search-input.form-control {
       padding-left: 4px;
@@ -135,17 +133,17 @@
 }
 
 
-#maperrorloginbutton {
+#map-error-login-btn {
   background: #FFF;
   padding: 7px 14px;
-  border-radius: 6px; 
+  border-radius: 6px;
   font-size: 20px;
   font-weight: 400;
   color: #000;
   box-shadow: 1px 17px 31px -9px rgba(0,0,0,0.75);
 }
 
-#maperrorloginbutton:hover {
+#map-error-login-btn:hover {
   color: #000;
   text-decoration: none;
 }
@@ -154,7 +152,7 @@
 
 }
 
-#fullscreenbutton {
+#fullscreen-btn {
   background: #FFF;
 }
 
@@ -203,7 +201,7 @@
 
 /*  Media Queries  */
 
-/* Custom */ 
+/* Custom */
 
 @media only screen and (max-width: 370px) {
   .dashboard {
@@ -223,19 +221,19 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 472px) and (max-width : 565px) {
-  
+
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
 
 
-}	
+}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
 
-}	
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1200px) {

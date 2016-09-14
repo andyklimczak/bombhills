@@ -8,13 +8,13 @@ RSpec.describe 'post interactions', type: :feature do
     login_as user, scope: :user
     visit show_user_path(user.username)
     click_on 'Add Post'
-    within('#postModal') do
+    within('#post-modal') do
       click_on 'Video'
       within('#Video') do
-        fill_in 'video_url', with: 'https://www.youtube.com/watch?v=c7rCyll5AeY'
-        fill_in 'video_title', with: 'Twice Cheerup'
-        fill_in 'video_description', with: 'SOTYAY'
-        chosen_select(spot.title, from: '#video_tag_spot')
+        fill_in 'video-url', with: 'https://www.youtube.com/watch?v=c7rCyll5AeY'
+        fill_in 'video-title', with: 'Twice Cheerup'
+        fill_in 'video-description', with: 'SOTYAY'
+        chosen_select(spot.title, from: '#video-tag-spot')
         click_button 'Create Post'
       end
     end
@@ -31,13 +31,13 @@ RSpec.describe 'post interactions', type: :feature do
     login_as user, scope: :user
     visit show_user_path(user.username)
     click_on 'Add Post'
-    within('#postModal') do
+    within('#post-modal') do
       click_on 'Picture'
       within('#Picture') do
-        attach_file('image_upload', Rails.root + 'spec/fixtures/pic.jpg')
-        fill_in 'image_title', with: 'Taylor Swift'
-        fill_in 'image_description', with: 'Based'
-        chosen_select(spot.title, from: '#image_tag_spot')
+        attach_file('image-upload', Rails.root + 'spec/fixtures/pic.jpg')
+        fill_in 'image-title', with: 'Taylor Swift'
+        fill_in 'image-description', with: 'Based'
+        chosen_select(spot.title, from: '#image-tag-spot')
         expect { click_button 'Create Post' }.to change(Post, :count).by(1)
       end
     end

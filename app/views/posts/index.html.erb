@@ -1,15 +1,15 @@
-<div class="userposts">
+<div class="user-posts">
 
   <%= render 'layouts/navbar' %>
 
   <h1> DISCOVER </h1>
 
-  <div class="container" id="postscontainer">
+  <div class="container" id="posts-container">
     <% @posts.each_slice(3) do |posts| %>
       <div class="row">
 
         <% posts.each do |post| %>
-          <div class="col-sm-4 col-md-4" id="thumbnailcontainer">
+          <div class="col-sm-4 col-md-4" id="thumbnail-container">
             <div class="thumbnail">
               <% if post.type == "ImagePost" %>
                 <%= image_tag post.image.url(:medium) %>
@@ -20,7 +20,7 @@
                 <h3><%= post.title %></h3>
                 <p><%= post.description %></p>
                 <p>
-                  <%= link_to 'User', show_user_path(post.user.username), :class => 'btn btn-primary', id: 'userbutton' %>
+                  <%= link_to 'User', show_user_path(post.user.username), :class => 'btn btn-primary', id: 'user-btn' %>
                   <% if post.spot %>
                     <%= link_to 'Find', spots_path(id: post.spot.id), class: 'btn btn-default' %>
                   <% end %>

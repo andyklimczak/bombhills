@@ -1,21 +1,21 @@
 <div class="wrapper">
   <div class="dashboard">
-    <div class="navtools">
+    <div class="nav-tools">
       <ul>
-        <li id="dashtitle"><%= link_to ' bombhills ', root_path, :class => 'none' %></li>
-        <li id="searchli">
+        <li id="dash-title"><%= link_to ' bombhills ', root_path, :class => 'none' %></li>
+        <li id="search-li">
           <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
             <%= form_tag(spots_path, method: "get", id: "form", class: "form-inline") do %>
               <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "search" %>
-              <%= submit_tag "Search", name: nil, id: "map-search-button", class: "btn btn-default", style: "display: none;" %>
+              <%= submit_tag "Search", name: nil, id: "map-search-btn", class: "btn btn-default", style: "display: none;" %>
             <% end %>
           </div>
         </li>
-        <li id="findmebutton">
+        <li id="find-me-btn">
           <p>find me</p>
         </li>
         <%if user_signed_in? %>
-          <li data-toggle="modal" data-target="#spotModal" id="spotsModalLink">
+          <li data-toggle="modal" data-target="#spot-modal" id="spots-modal-link">
             <p>spots</p>
           </li>
         <% end %>
@@ -32,16 +32,16 @@
         <li>
           <p><%= link_to 'discover', posts_path %></p>
         </li>
-        <li id="fullscreenbutton">
+        <li id="fullscreen-btn">
           <p>Hide</p>
         </li>
       </ul>
     </div>
   </div>
-  <div id='mapid'>
-    <div class="hamburgerbutton">
+  <div id='map-id'>
+    <div class="hamburger-btn">
       <span aria-hidden="true" class="glyphicon glyphicon-align-left" id=
-        "hamburgerbutton" style="font-size: 40px;"></span>
+        "hamburger-btn" style="font-size: 40px;"></span>
     </div>
     <div class="alert alert-info map-alert" style="background: #0B4CD6;color: #FFF;border-color: #0B4CD6;">
       <a aria-label="close" class="close" data-dismiss="alert" href="" style="padding-left: 10px;color: #FFF;font-size: 24px;">&times;</a>
@@ -57,7 +57,7 @@
 <%= render 'spots/form_error' %>
 
 <!-- Modal -->
-<div id="reportModal" class="modal fade" role="dialog">
+<div id="report-modal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-md">
     <%= render template: 'messages/new', locals: { subject: 'Spot Report' } %>
   </div>

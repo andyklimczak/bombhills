@@ -10,17 +10,17 @@
         </div>
         <!-- END SIDEBAR USERPIC -->
         <!-- SIDEBAR USER TITLE -->
-        <div class="profile-usertitle">
-          <div class="profile-usertitle-name">
+        <div class="profile-user-title">
+          <div class="profile-user-title-name">
             <%= @user.username %>
           </div>
-          <div class="profile-usertitle-motto">
+          <div class="profile-user-title-motto">
             <%= @user.motto %>
           </div>
         </div>
         <!-- END SIDEBAR USER TITLE -->
         <!-- SIDEBAR BUTTONS -->
-        <div class="profile-userbuttons">
+        <div class="profile-user-btns">
           <% if @user == current_user %>
             <%= link_to mailbox_inbox_path, method: 'get', class: 'btn btn-danger btn-sm', style: 'background: var(--secondary-color);border: none;' do %>
             inbox
@@ -35,7 +35,7 @@
         </div>
         <!-- END SIDEBAR BUTTONS -->
         <!-- SIDEBAR MENU -->
-        <div class="profile-usermenu">
+        <div class="profile-user-menu">
           <ul class="nav">
             <li class="active" data-turbolinks="false">
               <a href="#">
@@ -43,13 +43,13 @@
                 Overview </a>
             </li>
             <% if current_user == @user %>
-              <li data-turbolinks="false" data-toggle="modal" data-target="#postModal">
+              <li data-turbolinks="false" data-toggle="modal" data-target="#post-modal">
                 <a href="#">
                   <i class="glyphicon glyphicon-camera"></i>
                   Add Post </a>
               </li>
             <% end %>
-            <li data-turbolinks="false" data-toggle="modal" data-target="#spotModal">
+            <li data-turbolinks="false" data-toggle="modal" data-target="#spot-modal">
                 <a href="#">
                   <i class="glyphicon glyphicon-map-marker"></i>
                   Spots </a>

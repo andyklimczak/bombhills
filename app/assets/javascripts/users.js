@@ -2,18 +2,18 @@
  * Switch between show & edit in spot modal
  */
 function switchTab() {
-  $('.usersspotsedit').hide();
-  $('#spotsbutton').click(function() {
-    $('.userspots').show();
-    $('.usersspotsedit').hide();
+  $('.user-spots-edit').hide();
+  $('#spots-btn').click(function() {
+    $('.user-spots').show();
+    $('.user-spots-edit').hide();
     $(this).css('background-color', '#251950');
-    $('#spotseditbutton').css('background-color', 'var(--main-color)');
+    $('#spots-edit-btn').css('background-color', 'var(--main-color)');
   });
-  $('#spotseditbutton').click(function() {
-    $('.userspots').hide();
-    $('.usersspotsedit').show();
+  $('#spots-edit-btn').click(function() {
+    $('.user-spots').hide();
+    $('.user-spots-edit').show();
     $(this).css('background-color', '#251950');
-    $('#spotsbutton').css('background-color', 'var(--main-color)');
+    $('#spots-btn').css('background-color', 'var(--main-color)');
   });
 }
 

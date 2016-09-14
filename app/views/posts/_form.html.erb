@@ -1,12 +1,12 @@
-<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="post-modal" tabindex="-1" role="dialog" aria-labelledby="my-modal-label">
   <div class="modal-dialog" role="document">
     <div class="modal-content" style="background:#066964;">
       <div class="modal-header" style="background:#066964;border: none;color: #FFF;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Add Post</h4>
+        <h4 class="modal-title" id="my-modal-label">Add Post</h4>
       </div>
       <div class="modal-body" style="color: #FFF;">
-        <ul class="nav nav-tabs" style="border: none;" id="tabContent">
+        <ul class="nav nav-tabs" style="border: none;" id="tab-content">
           <li style="margin-left: 0px;"><a href="#Picture" data-toggle="tab" style="background: #233E47;color: #FFF;">Picture</a></li>
           <li><a href="#Video" data-toggle="tab" style="background: #233E47;color: #FFF;">Video</a></li>
         </ul>
@@ -16,19 +16,19 @@
             <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
 
               <label for="usr">File:</label>
-              <%= f.file_field :image, { id: 'image_upload' } %>
+              <%= f.file_field :image, { id: 'image-upload' } %>
 
               <%= f.label :title, "Title:" %>
-              <%= f.text_field :title, {class: 'form-control', id:'image_title'} %>
+              <%= f.text_field :title, {class: 'form-control', id:'image-title'} %>
 
               <%= f.label :description, "Description:" %>
-              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'image_description'}%>
+              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'image-description'}%>
 
               <%= f.label :spot_id, "Tag a spot" %>
-              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'image_tag_spot', style: 'color: #333;' } %>
+              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'image-tag-spot', style: 'color: #333;' } %>
               <%= f.hidden_field :type, value: 'ImagePost' %>
 
-              <%= f.submit class: 'submitimg' %>
+              <%= f.submit class: 'submit-post' %>
 
             <% end %>
           </div>
@@ -36,19 +36,19 @@
             <%= form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
 
               <%= f.label :video_url, "Video Url:" %>
-              <%= f.text_field :video_url, {class: 'form-control', id:'video_url'} %>
+              <%= f.text_field :video_url, {class: 'form-control', id:'video-url'} %>
 
               <%= f.label :title, "Title:" %>
-              <%= f.text_field :title, {class: 'form-control', id:'video_title'} %>
+              <%= f.text_field :title, {class: 'form-control', id:'video-title'} %>
 
               <%= f.label :description, "Description:" %>
-              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'video_description'}%>
+              <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'video-description'}%>
 
               <%= f.label :spot_id, "Tag a spot" %>
-              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'video_tag_spot', style: 'color: #333;' } %>
+              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'video-tag-spot', style: 'color: #333;' } %>
               <%= f.hidden_field :type, value: 'VideoPost' %>
 
-              <%= f.submit class: 'submitimg' %>
+              <%= f.submit class: 'submit-post' %>
 
             <% end %>
           </div>
