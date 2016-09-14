@@ -7,13 +7,13 @@
     <p>
       <%= @spot.description %>
     </p>
-    
+
     <ul class="datetime">
       <li>date</li>
       <li>time</li>
     </ul>
-    
-     <div class="form-group">
+
+    <div class="form-group">
       <label for="sel1">attendees</label>
       <select class="form-control" id="sel1">
         <option>username</option>
@@ -22,7 +22,7 @@
         <option>username</option>
       </select>
     </div>
-    
+
     <!-- if a meetup has been created -->
     <button type="button" class="btn btn-default">Join</button>
     <button type="button" class="btn btn-default">Leave</button>
@@ -30,7 +30,7 @@
     <button type="button" class="btn btn-default">Create</button>
     <!-- if user created meetup -->
     <button type="button" class="btn btn-default">Delete</button>
-    
+
     <ul class="edit-back">
       <li><%= link_to 'Back', spots_path %></li>
       <li><%= link_to 'Edit', edit_spot_path(@spot) %></li>

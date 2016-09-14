@@ -1,33 +1,33 @@
 <div class="meetups">
 
-    <%= form_for([@spot, @meetup]) do |f| %>
-      <% if @meetup.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@meetup.errors.count, "error") %> prohibited this meetup from being saved:</h2>
+  <%= form_for([@spot, @meetup]) do |f| %>
+    <% if @meetup.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@meetup.errors.count, "error") %> prohibited this meetup from being saved:</h2>
 
-          <ul>
+        <ul>
           <% @meetup.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-      <div class="field">
-        <%= f.label :title %><br>
-        <%= f.text_field :title %>
-      </div>
-      <div class="field">
-        <%= f.label :description %><br>
-        <%= f.text_field :description %>
-      </div>
-      <div class="field">
-        <%= f.label :time %><br>
-        <%= f.datetime_select :time  %>
-      </div>
-      <div class="actions" id="new-meetup-submit">
-        <%= f.submit %>
+        </ul>
       </div>
     <% end %>
+
+    <div class="field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_field :description %>
+    </div>
+    <div class="field">
+      <%= f.label :time %><br>
+      <%= f.datetime_select :time  %>
+    </div>
+    <div class="actions" id="new-meetup-submit">
+      <%= f.submit %>
+    </div>
+  <% end %>
 
 </div>
