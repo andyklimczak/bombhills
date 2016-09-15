@@ -84,6 +84,14 @@ input[type="title"] {
   background: none;
 }
 
+#spots-edit-btn, #spots-btn {
+  background-color: var(--main-color);
+}
+
+.user-spots-edit, .spots-edit-btn  {
+  background-color: #251950
+}
+
 .user-spots-edit .form-control {
   color: #FFF;
   border-radius: 0px;
@@ -104,7 +112,7 @@ input[type="title"] {
 
 .user-spots li:last-child {
   margin-left: 10px;
-  
+
 }
 
 /* end */
@@ -125,7 +133,7 @@ input[type="title"] {
   margin-top: 10px;
 }
 
-/* end */ 
+/* end */
 
 /* report modal */
 
@@ -157,7 +165,7 @@ input[type="title"] {
   #spots-modal-header {
     background: #fb4148;
   }
-  
+
   #spots-modal-body #left {
     position: inherit;
     width: 100%;
@@ -183,12 +191,12 @@ input[type="title"] {
   }
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
   #spots-modal-header {
     background: #fb4148;
   }
-  
+
   #spots-modal-body #left {
     position: inherit;
     width: 100%;
@@ -212,14 +220,14 @@ input[type="title"] {
     padding-left: 0px;
     text-align: center;
   }
-}	
+}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
   #spots-modal-header {
     background: #fb4148;
   }
-  
+
   #spots-modal-body #left {
     position: inherit;
     width: 100%;
@@ -244,7 +252,7 @@ input[type="title"] {
     padding-left: 0px;
     text-align: center;
   }
-}	
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1200px) {
