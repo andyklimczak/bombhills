@@ -1,22 +1,10 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-@charset "utf-8";
-/* CSS Document */
-
-
 .header input {
   @include placeholder {
-    color: $white !important;
+    color: $white;
   }
 }
 
 /* document */
-
-body {
-  padding-right: 0 !important
-}
 
 .container-fluid {
   padding: 0;
