@@ -10,14 +10,14 @@
   height: 100%;
   left: 0;
   z-index: 3;
-  background-color: #FFF;
+  background-color: $white;
   box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
 }
 
 .hamburger-btn {
   position: absolute;
   z-index: 1;
-  background: #0B4CD6;
+  background: $secondary-color;
   margin: 10px;
   padding: 2px;
   padding-bottom: 0px;
@@ -26,7 +26,7 @@
 }
 
 #hamburger-btn {
-  color: #FFF;
+  color: $white;
   padding-top: 2px;
   padding-left: 2px;
   height: 50px;
@@ -40,7 +40,7 @@
 }
 
 #dash-title a {
-  font-family: 'Kanit', sans-serif;
+  font-family: $font-stack;
   font-weight: 200;
   font-size: 24px;
 }
@@ -54,7 +54,7 @@
 }
 
 .nav-tools li p {
-  font-family: 'Kanit', sans-serif;
+  font-family: $font-stack;
   font-weight: 200;
   display: inline-block;
   vertical-align: middle;
@@ -64,14 +64,14 @@
 }
 
 .nav-tools li a {
-  font-family: 'Kanit', sans-serif;
+  font-family: $font-stack;
   font-weight: 200;
   display: inline-block;
   vertical-align: middle;
   margin-top: 1px;
   text-decoration: none;
   font-size: 20px;
-  color: #000;
+  color: $black;
 
 }
 
@@ -96,7 +96,7 @@
 
 #search-li {
   padding-left: 23px;
-  background: #FFF;
+  background: $white;
 
   #form {
     @include display(flex);
@@ -112,7 +112,7 @@
     }
 
     #search-input {
-      border-bottom: thin solid #fb4148;
+      border-bottom: thin solid $primary-color;
       border-left: none;
       border-right: none;
       border-top: none;
@@ -120,9 +120,9 @@
       width: 175px;
       font-size: 20px;
       color: #142CA4;
-      background: #FFF;
+      background: $white;
       text-align: left;
-      font-family: 'Kanit', sans-serif;
+      font-family: $font-stack;
       font-weight: 200;
 
     }
@@ -134,17 +134,17 @@
 
 
 #map-error-login-btn {
-  background: #FFF;
+  background: $white;
   padding: 7px 14px;
   border-radius: 6px;
   font-size: 20px;
   font-weight: 400;
-  color: #000;
+  color: $black;
   box-shadow: 1px 17px 31px -9px rgba(0,0,0,0.75);
 }
 
 #map-error-login-btn:hover {
-  color: #000;
+  color: $black;
   text-decoration: none;
 }
 
@@ -153,7 +153,7 @@
 }
 
 #fullscreen-btn {
-  background: #FFF;
+  background: $white;
 }
 
 .alert {
@@ -172,19 +172,19 @@
 }
 
 .leaflet-popup-content-wrapper {
-  background: #0B4CD6;
-  color: #FFF;
+  background: $secondary-color;
+  color: $white;
 }
 
 .leaflet-popup-content-wrapper b {
-  font-family: 'Kanit', sans-serif;
+  font-family: $font-stack;
   font-weight: 200;
   font-size: 32px;
 }
 
 .leaflet-popup-content-wrapper a {
   font-size: 24px;
-  color: #FFF;
+  color: $white;
   font-weight: 200;
 }
 
@@ -204,7 +204,7 @@
 }
 
 #right > button {
-  color: #fff;
+  color: $white;
   margin-bottom: 10px;
 }
 
@@ -217,11 +217,11 @@
   .modal-header {
     background: #CF3530;
     border: none;
-    color: #FFF;
+    color: $white;
   }
 
   .modal-body {
-    color: #FFF;
+    color: $white;
     background: #CF3530;
 
     p {
@@ -230,7 +230,7 @@
   }
 
   .modal-footer {
-    color: #FFF;
+    color: $white;
     background: #CF3530;
     border:none;
   }
@@ -252,13 +252,13 @@
     }
 
     .alert {
-      background: #0B4CD6;
-      color: #FFF;
-      border-color: #0B4CD6;
+      background: $secondary-color;
+      color: $white;
+      border-color: $secondary-color;
 
       a {
         padding-left: 10px;
-        color: #FFF;
+        color: $white;
         font-size: 24px;
       }
     }

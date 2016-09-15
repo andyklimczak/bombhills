@@ -15,13 +15,13 @@
 }
 
 .message-nav-pills .btn-success {
-  background: var(--main-color);
-  color: #FFF;
+  background: $primary-color;
+  color: $white;
 }
 
 .message-nav-pills .btn-success:hover {
-  background: var(--main-color);
-  border-color: var(--main-color);
+  background: $primary-color;
+  border-color: $primary-color;
 }
 
 .message-avatar {
@@ -30,13 +30,13 @@
 }
 
 #send-message-btn {
-  background: var(--main-color);
-  color: #FFF;
+  background: $primary-color;
+  color: $white;
 }
 
 #send-message-btn:hover {
-  background: var(--main-color);
-  border-color: var(--main-color);
+  background: $primary-color;
+  border-color: $primary-color;
 }
 
 /*  Media Queries  */

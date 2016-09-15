@@ -6,8 +6,8 @@
 /* meetups */
 
 .meetups {
-  background: #0B4CD6;
-  color: #FFF;
+  background: $secondary-color;
+  color: $white;
   text-align: center;
   height: 100vh;
   display: flex;
@@ -18,12 +18,12 @@
 }
 
 .meetups h1 {
-  font-family: 'Kanit', sans-serif;
+  font-family: $font-stack;
   font-weight: 200;
 }
 
 .meetups h2 {
-  font-family: 'Kanit', sans-serif;
+  font-family: $font-stack;
   font-weight: 200;
 }
 
@@ -32,12 +32,12 @@
   border-top: none;
   border-right: none;
   background: none;
-  border-bottom: thin solid #FFF;
+  border-bottom: thin solid $white;
 }
 
 .meetups-btn {
   color: #0D003D;
-  background: #FFF;
+  background: $white;
   padding: 5px 10px;
   border-radius: 6px;
   margin-left: auto;
@@ -51,18 +51,18 @@
 }
 
 .meetups #meetup_time_1i, #meetup_time_2i, #meetup_time_3i, #meetup_time_4i, #meetup_time_5i {
-  color: #FFF;
+  color: $white;
   background: none;
   border-left: none;
   border-top: none;
   border-right: none;
   background: none;
-  border-bottom: thin solid #FFF;
+  border-bottom: thin solid $white;
   
 }
 
 #new-meetup-submit input {
-  color: #FFF;
+  color: $white;
   padding: 7px 12px;
   border-radius: 6px;
 }

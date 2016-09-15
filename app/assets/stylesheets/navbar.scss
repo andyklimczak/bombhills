@@ -11,13 +11,13 @@
 }
 
 .navbar-brand {
-  font-family: 'Kanit', sans-serif;
+  font-family: $font-stack;
   font-weight: 400;
 }
 
 .nav li a {
-  font-family: 'Kanit', sans-serif;
+  font-family: $font-stack;
   font-weight: 400;
   font-size: 16px;
-  color: var(--background-color);
+  color: $background-color;
 }
