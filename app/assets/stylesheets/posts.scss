@@ -54,9 +54,41 @@
   width: 100%;
 }
 
+.post-form-modal  {
+  .modal-content {
+    background:#066964;
+  }
+
+  .modal-header {
+    background:#066964;
+    border: none;
+    color: #FFF;
+  }
+
+  .modal-body {
+    color: #FFF;
+  }
+
+  .nav-tabs {
+    border: none;
+
+    &:first-child {
+      margin-left: 0px;
+
+      a {
+        background: #233E47;color: #FFF;
+      }
+    }
+  }
+
+  .chosen-select {
+    color: #333;
+  }
+}
+
 /*  Media Queries  */
 
-/* Custom */ 
+/* Custom */
 
 /* Custom, iPhone Retina */
 
@@ -75,7 +107,7 @@
     box-shadow: none;
     border: none;
   }
-  
+
   .thumbnail h3 {
     text-align: center;
   }
@@ -87,7 +119,7 @@
 }
 
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) and (max-width : 768px) {
   .user-posts ul {
     text-align: right;
@@ -103,7 +135,7 @@
     box-shadow: none;
     border: none;
   }
-  
+
   .thumbnail h3 {
     text-align: center;
   }
@@ -112,12 +144,12 @@
     padding: 0px;
   }
 
-}	
+}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
-}	
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {

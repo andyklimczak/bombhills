@@ -1,14 +1,14 @@
-<div class="modal fade" id="post-modal" tabindex="-1" role="dialog" aria-labelledby="my-modal-label">
+<div class="modal fade post-form-modal" id="post-modal" tabindex="-1" role="dialog" aria-labelledby="my-modal-label">
   <div class="modal-dialog" role="document">
-    <div class="modal-content" style="background:#066964;">
-      <div class="modal-header" style="background:#066964;border: none;color: #FFF;">
+    <div class="modal-content">
+      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="my-modal-label">Add Post</h4>
       </div>
-      <div class="modal-body" style="color: #FFF;">
-        <ul class="nav nav-tabs" style="border: none;" id="tab-content">
-          <li style="margin-left: 0px;"><a href="#Picture" data-toggle="tab" style="background: #233E47;color: #FFF;">Picture</a></li>
-          <li><a href="#Video" data-toggle="tab" style="background: #233E47;color: #FFF;">Video</a></li>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="tab-content">
+          <li><a href="#Picture" data-toggle="tab">Picture</a></li>
+          <li><a href="#Video" data-toggle="tab">Video</a></li>
         </ul>
 
         <div class="tab-content">
@@ -25,7 +25,7 @@
               <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'image-description'}%>
 
               <%= f.label :spot_id, "Tag a spot" %>
-              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'image-tag-spot', style: 'color: #333;' } %>
+              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'image-tag-spot' } %>
               <%= f.hidden_field :type, value: 'ImagePost' %>
 
               <%= f.submit class: 'submit-post' %>
@@ -45,7 +45,7 @@
               <%= f.text_area :description, {class: 'form-control', rows: '3', id: 'video-description'}%>
 
               <%= f.label :spot_id, "Tag a spot" %>
-              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'video-tag-spot', style: 'color: #333;' } %>
+              <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'video-tag-spot' } %>
               <%= f.hidden_field :type, value: 'VideoPost' %>
 
               <%= f.submit class: 'submit-post' %>

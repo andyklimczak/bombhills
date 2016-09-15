@@ -1,13 +1,13 @@
-<div class="wrapper">
+<div class="wrapper spots-index">
   <div class="dashboard">
     <div class="nav-tools">
       <ul>
         <li id="dash-title"><%= link_to ' bombhills ', root_path, :class => 'none' %></li>
         <li id="search-li">
-          <div class="input-group" style="padding-right: 0px;padding-top: 15px;">
+          <div class="input-group">
             <%= form_tag(spots_path, method: "get", id: "form", class: "form-inline") do %>
               <%= text_field_tag :search, params[:search], id: "search-input", class: "form-control", placeholder: "search" %>
-              <%= submit_tag "Search", name: nil, id: "map-search-btn", class: "btn btn-default", style: "display: none;" %>
+              <%= submit_tag "Search", name: nil, id: "map-search-btn", class: "btn btn-default" %>
             <% end %>
           </div>
         </li>
@@ -38,13 +38,12 @@
       </ul>
     </div>
   </div>
-  <div id='map-id'>
+  <div id="map-id">
     <div class="hamburger-btn">
-      <span aria-hidden="true" class="glyphicon glyphicon-align-left" id=
-        "hamburger-btn" style="font-size: 40px;"></span>
+      <span aria-hidden="true" class="glyphicon glyphicon-align-left" id="hamburger-btn"></span>
     </div>
-    <div class="alert alert-info map-alert" style="background: #0B4CD6;color: #FFF;border-color: #0B4CD6;">
-      <a aria-label="close" class="close" data-dismiss="alert" href="" style="padding-left: 10px;color: #FFF;font-size: 24px;">&times;</a>
+    <div class="alert alert-info map-alert">
+      <a aria-label="close" class="close" data-dismiss="alert" href="">&times;</a>
       Right-click or hold to add a location.
     </div>
   </div>

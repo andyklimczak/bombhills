@@ -5,16 +5,14 @@
       <div class="modal-body" id="spots-modal-body">
         <div id="left">
           <ul>
-            <li id="spots-btn"><span aria-hidden="true" class="glyphicon glyphicon-map-marker" style=
-                "font-size: 50px;"></span></li>
+            <li id="spots-btn"><span aria-hidden="true" class="glyphicon glyphicon-map-marker"></span></li>
             <% if user == current_user %>
-              <li id="spots-edit-btn"><span aria-hidden="true" class="glyphicon glyphicon-edit" style=
-                  "font-size: 50px;"></span></li>
+              <li id="spots-edit-btn"><span aria-hidden="true" class="glyphicon glyphicon-edit"></span></li>
             <% end %>
           </ul>
         </div>
         <div id="right">
-          <button type="button" class="close" data-dismiss="modal" style="color: #FFF;margin-bottom: 10px;">&times;</button>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
           <div class="user-spots">
             <% if user.spots.any? %>
               <div class="form-group">

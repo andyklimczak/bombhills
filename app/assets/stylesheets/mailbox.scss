@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.conversations-container {
+  margin-top: 95px;
+}
+
 .spacer {
   margin-top: 20px;
 }
@@ -37,7 +41,7 @@
 
 /*  Media Queries  */
 
-/* Custom */ 
+/* Custom */
 @media only screen and (max-width: 370px) {
 
 }
@@ -51,15 +55,15 @@
 
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
 
-}	
+}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
 
-}	
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1200px) {

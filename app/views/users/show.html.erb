@@ -22,7 +22,7 @@
         <!-- SIDEBAR BUTTONS -->
         <div class="profile-user-btns">
           <% if @user == current_user %>
-            <%= link_to mailbox_inbox_path, method: 'get', class: 'btn btn-danger btn-sm', style: 'background: var(--secondary-color);border: none;' do %>
+            <%= link_to mailbox_inbox_path, method: 'get', class: 'btn btn-danger btn-sm inbox-btn' do %>
             inbox
             <% if unread_messages_count > 0 %>
               <span class="label label-danger"><%=unread_messages_count%></span>
@@ -30,7 +30,7 @@
           <% end %>
 
           <% else %>
-            <%= link_to "Message", new_conversation_path(user: @user.username), method: :get, class: 'btn btn-danger btn-sm', style: 'background: #233E47;border: none;' %>
+            <%= link_to "Message", new_conversation_path(user: @user.username), method: :get, class: 'btn btn-danger btn-sm message-btn' %>
           <% end %>
         </div>
         <!-- END SIDEBAR BUTTONS -->
@@ -63,7 +63,7 @@
       <div class="profile-content">
         <div class="row">
           <% @user.posts.each do |post| %>
-            <div class="col-sm-6 col-md-6" style="padding: 0px;margin-top: 10px;">
+            <div class="col-sm-6 col-md-6 user-post">
               <% if post.type == 'ImagePost' %>
                 <%= image_tag post.image.url(:medium),:class => 'img-responsive' %>
               <% else %>
