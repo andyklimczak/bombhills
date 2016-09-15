@@ -3,7 +3,7 @@
 /* Profile container */
 
 .profile {
-  margin: 75px 0px;
+  margin: 75px 0;
 }
 
 /* Profile sidebar */
@@ -35,7 +35,7 @@
 .profile-user-title-motto {
   font-size: 18px;
   margin-bottom: 15px;
-  padding: 0px 10px;
+  padding: 0 10px;
   font-family: $font-stack;
   font-weight: 200;
   color: $secondary-color;
@@ -57,7 +57,7 @@
 .inbox-btn {
   background: $secondary-color;
   border: none;
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .message-btn {
@@ -144,7 +144,7 @@
 
 .signup mark {
   color: $background-color;
-  padding: 0px;
+  padding: 0;
   background: none;
 }
 
@@ -207,14 +207,14 @@
 
 .login mark {
   color: $background-color;
-  padding: 0px;
+  padding: 0;
   background: none;
 }
 
 .login a {
   font-size: 20px;
   font-weight: 400;
-  padding: 6px 0px;
+  padding: 6px 0;
   color: $background-color;
 }
 
@@ -257,7 +257,7 @@
 }
 
 #edit-profile-dashboard {
-  padding: 0px;
+  padding: 0;
 }
 
 #edit-profile-image {
@@ -305,18 +305,18 @@
 #edit-profile-show input {
   border: none;
   color: $background-color;
-  padding: 5px 0px;
+  padding: 5px 0;
 }
 
 #edit-profile-show ul {
   list-style-type: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 #edit-profile-show li {
   display: inline;
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 
 #edit-profile-show li a {
@@ -359,7 +359,7 @@
 }
 
 .user-post {
-  padding: 0px;
+  padding: 0;
   margin-top: 10px;
 }
 

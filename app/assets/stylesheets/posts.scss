@@ -13,7 +13,7 @@
 }
 
 .caption h3 {
-  margin-top: 0px;
+  margin-top: 0;
   color: $background-color;
 }
 
@@ -26,8 +26,8 @@
   font-family: $font-stack;
   font-weight: 200;
   text-align: center;
-  margin-top: 0px;
-  padding: 20px 0px;
+  margin-top: 0;
+  padding: 20px 0;
   color:$background-color;
 }
 
@@ -73,7 +73,7 @@
     border: none;
 
     &:first-child {
-      margin-left: 0px;
+      margin-left: 0;
 
       a {
         background: #233E47;color: $white;
@@ -97,10 +97,10 @@
     text-align: right;
     margin-right: 10px;
     margin-bottom: 20px;
-    padding: 0px;
+    padding: 0;
   }
   #posts-container {
-    padding: 0px;
+    padding: 0;
   }
 
   .thumbnail {
@@ -113,7 +113,7 @@
   }
 
   #thumbnail-container {
-    padding: 0px;
+    padding: 0;
   }
 
 }
@@ -125,10 +125,10 @@
     text-align: right;
     margin-right: 10px;
     margin-bottom: 20px;
-    padding: 0px;
+    padding: 0;
   }
   #posts-container {
-    padding: 0px;
+    padding: 0;
   }
 
   .thumbnail {
@@ -141,7 +141,7 @@
   }
 
   #thumbnail-container {
-    padding: 0px;
+    padding: 0;
   }
 
 }

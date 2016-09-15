@@ -15,7 +15,7 @@
 /* document */
 
 body {
-  padding-right: 0px !important
+  padding-right: 0 !important
 }
 
 .container-fluid {
@@ -38,14 +38,14 @@ body {
   font-family: $font-stack;
   font-weight: 200;
   font-size: 48px;
-  margin: 0px;
+  margin: 0;
   padding-top: 15px;
   padding-bottom: 10px;
 }
 
 .mobile-header ul {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .mobile-header li {
@@ -124,7 +124,7 @@ body {
 .nav-pills > li > a {
   border: solid;
   border-width: 2px;
-  margin: 0px 5px;
+  margin: 0 5px;
   color: $white;
   border-color: $primary-color;
   background: $primary-color;
@@ -148,7 +148,7 @@ body {
 
 #title-mark {
   color: $primary-color;
-  padding: 0px;
+  padding: 0;
   background: none;
   text-shadow:none;
 }
@@ -157,8 +157,8 @@ body {
   font-family: $font-stack;
   font-weight: 200;
   font-size: 125px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   margin-top: 50px;
   margin-bottom: 20px;
   color: $white;
@@ -199,12 +199,12 @@ body {
 
 #search {
   background: transparent none repeat scroll 0% 0%;
-  border-width: 0px 0px 1px;
+  border-width: 0 0 1px;
   border-style: none none solid;
   @include border-color(null null #35353B null);
   border-image: none;
   font-size: 18px;
-  margin: 0px 2px;
+  margin: 0 2px;
   width: 325px;
 }
 
@@ -213,7 +213,7 @@ body {
   border-radius: 6px;
   border-color: $primary-color;
   padding: 10px 20px;
-  margin: 0px 2px;
+  margin: 0 2px;
   margin-bottom: 2px;
   text-decoration: none;
   background: $primary-color;
@@ -275,7 +275,7 @@ body {
 .user-content h1 {
   text-align: center;
   font-weight: 200;
-  margin-top: 0px;
+  margin-top: 0;
   font-size: 60px;
   color: $background-color;
 }
@@ -286,7 +286,7 @@ body {
   font-weight: 200;
   font-size: 18px;
   color: $background-color;
-  margin: 0px 20px;
+  margin: 0 20px;
 }
 
 .user-content .col-sm-4 {
@@ -323,7 +323,7 @@ body {
 /* footer */
 
 .footer {
-  padding: 20px 0px 80px;
+  padding: 20px 0 80px;
   text-align: right;
   background: $background-color;
   color: $white;
@@ -344,13 +344,13 @@ body {
   font-size: 18px;
   font-family: $font-stack;
   font-weight: 200;
-  margin: 10px 0px;
+  margin: 10px 0;
 }
 
 .footer li a {
   font-family: $font-stack;
   text-decoration: none;
-  margin: 10px 0px;
+  margin: 10px 0;
   color: $white;
 }
 
@@ -398,7 +398,7 @@ body {
   }
   .display .container div {
     height: 450px;
-    padding-left: 0px;
+    padding-left: 0;
   }
   .user-content h1 {
     font-size: 48px;
