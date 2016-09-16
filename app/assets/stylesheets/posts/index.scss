@@ -48,39 +48,6 @@
   height: 100%;
   width: 100%;
 }
-
-.post-form-modal  {
-  .modal-content {
-    background:#066964;
-  }
-
-  .modal-header {
-    background:#066964;
-    border: none;
-    color: $white;
-  }
-
-  .modal-body {
-    color: $white;
-  }
-
-  .nav-tabs {
-    border: none;
-
-    &:first-child {
-      margin-left: 0;
-
-      a {
-        background: #233E47;color: $white;
-      }
-    }
-  }
-
-  .chosen-select {
-    color: #333;
-  }
-}
-
 /*  Media Queries  */
 
 /* Custom */
