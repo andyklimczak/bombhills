@@ -21,26 +21,11 @@
 
 // load global to set variables
 @import "global";
-
-@import "welcome/index";
-
-@import "meetups/index";
-@import "meetups/form";
-
-@import "devise/edit-profile";
-@import "devise/login";
-@import "devise/signup";
-
-@import "users/show";
-
-@import "posts/index";
-@import "posts/form";
-
-@import "layouts/spots-modal";
-@import "layouts/navbar";
-
-@import "spots/form";
-@import "spots/index";
-@import "spots/show";
-
-@import "mailbox/index";
+@import "welcome/*";
+@import "meetups/*";
+@import "devise/*";
+@import "users/*";
+@import "posts/*";
+@import "layouts/*";
+@import "spots/*";
+@import "mailbox/*";
