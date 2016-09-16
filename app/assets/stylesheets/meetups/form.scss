@@ -1,0 +1,16 @@
+.meetups #meetup_time_1i, #meetup_time_2i, #meetup_time_3i, #meetup_time_4i, #meetup_time_5i {
+  color: $white;
+  background: none;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  background: none;
+  border-bottom: thin solid $white;
+
+}
+
+#new-meetup-submit input {
+  color: $white;
+  padding: 7px 12px;
+  border-radius: 6px;
+}

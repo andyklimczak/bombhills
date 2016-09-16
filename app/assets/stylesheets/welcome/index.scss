@@ -347,6 +347,24 @@
   color: $white;
 }
 
+/* contact modal */
+
+#contact-modal .modal-body {
+  text-align: center;
+}
+
+
+#contact-modal .modal-body input {
+  padding: 5px 10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: thin solid $primary-color;
+  margin-top: 10px;
+}
+
+/* end */
+
 /*  Media Queries  */
 
 /* Custom */
@@ -524,5 +542,3 @@
     background-repeat: no-repeat;
   }
 }
-
-

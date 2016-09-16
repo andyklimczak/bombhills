@@ -1,0 +1,26 @@
+label {
+  margin: 10px 0;
+}
+
+input {
+  text-align: center;
+}
+
+input[type="title"] {
+  width: 90%;
+}
+
+.modal-open {
+  overflow-y: auto;
+}
+
+.submit-post {
+  margin: 15px;
+  margin-left: 0;
+  background: $white;
+  color: $black;
+}
+
+.close {
+  font-size: 45px;
+}

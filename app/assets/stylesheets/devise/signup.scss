@@ -1,0 +1,61 @@
+.signup {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  background: $primary-color;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+  background-size: cover;
+}
+
+.signup h2 {
+  margin: 0;
+  padding-bottom: 10px;
+  font-family: $font-stack;
+  font-weight: 200;
+  font-size: 43px;
+  color: $background-color;
+}
+
+.signup mark {
+  color: $background-color;
+  padding: 0;
+  background: none;
+}
+
+.signup a {
+  color: $background-color;
+}
+
+.signup a:hover {
+  background: none;
+  text-decoration: none;
+}
+
+.signup label {
+  font-family: $font-stack;
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: $background-color;
+}
+
+.signup input {
+  padding: 12px 12px;
+  color: $background-color;
+  background: none;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: thin solid $background-color;
+}
+
+.field_with_errors {
+  margin: 0 auto;
+}
+
+#error_explanation {
+  margin: 0 auto;
+}
+

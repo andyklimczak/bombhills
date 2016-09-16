@@ -10,19 +10,37 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  */
+
+// load dependency/gem css files
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bourbon";
 @import "leaflet";
 @import "chosen";
 @import "font-awesome";
+
+// load global to set variables
 @import "global";
-@import "scaffolds";
-@import "welcome";
-@import "meetups";
-@import "forms";
-@import "profile";
-@import "posts";
-@import "navbar";
-@import "spots";
-@import "mailbox";
+
+@import "welcome/index";
+
+@import "meetups/index";
+@import "meetups/form";
+
+@import "devise/edit-profile";
+@import "devise/login";
+@import "devise/signup";
+
+@import "users/show";
+
+@import "posts/index";
+@import "posts/form";
+
+@import "layouts/spots-modal";
+@import "layouts/navbar";
+
+@import "spots/form";
+@import "spots/index";
+@import "spots/show";
+
+@import "mailbox/index";

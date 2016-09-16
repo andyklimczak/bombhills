@@ -1,0 +1,61 @@
+.login {
+  text-align: center;
+  background: $primary-color;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+  background-size: cover;
+}
+
+.login h2 {
+  margin: 0;
+  padding-bottom: 10px;
+  font-family: $font-stack;
+  font-weight: 200;
+  font-size: 43px;
+  color: $background-color;
+}
+
+.login mark {
+  color: $background-color;
+  padding: 0;
+  background: none;
+}
+
+.login a {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 6px 0;
+  color: $background-color;
+}
+
+.login a:hover {
+  color: $background-color;
+  background: none;
+  text-decoration: none;
+}
+
+.login label {
+  font-family: $font-stack;
+  font-weight: 300;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: $background-color;
+}
+
+.login input {
+  padding: 12px 12px;
+  color: $background-color;
+  background: none;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: thin solid $background-color;
+}
+
+#remember-me-field label {
+  margin-left: 10px;
+}
+

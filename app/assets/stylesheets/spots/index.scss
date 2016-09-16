@@ -306,3 +306,25 @@
 @media only screen and (min-width : 1200px) {
 
 }
+
+/* report modal */
+
+#report-modal {
+  background: $secondary-color;
+}
+
+#report-modal .modal-header {
+  border: none;
+}
+
+#report-modal .modal-header h4 {
+  font-family: $font-stack;
+  font-weight: 200;
+  font-size: 36px;
+  color: $secondary-color;
+}
+
+
+#report-modal .modal-footer {
+  border: none;
+}
