@@ -11,7 +11,7 @@ services:
   - postgresql
 script:
   - bundle exec rubocop
-  - bundle exec brakeman
+  - bundle exec brakeman -z
   - bundle exec bundle-audit
   - bundle exec rake db:migrate RAILS_ENV=test --trace
   - bundle exec rspec spec
