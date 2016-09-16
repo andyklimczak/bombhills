@@ -1,3 +1,43 @@
+#notice {
+  color: green;
+  margin: 0;
+  padding: 0;
+}
+
+.field_with_errors {
+  padding: 2px;
+  margin: 0;
+  background-color: red;
+  display: table;
+}
+
+#error-explanation {
+  margin: 0 auto;
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: $white;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+
+}
+
 .meetups #meetup_time_1i, #meetup_time_2i, #meetup_time_3i, #meetup_time_4i, #meetup_time_5i {
   color: $white;
   background: none;
