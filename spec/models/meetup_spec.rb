@@ -8,7 +8,7 @@ RSpec.describe Meetup, type: :model do
   end
 
   it { should belong_to :spot }
-  it { should belong_to :owner }
+  it { should belong_to :user }
   it { should have_many :meetup_attendees }
   it { should have_many :attending_users }
   it { should validate_presence_of :title }

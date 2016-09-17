@@ -78,7 +78,7 @@ RSpec.describe 'Meetups', type: :request do
     it 'works' do
       user = create(:user)
       sign_in(user)
-      meetup = create(:meetup, title: 'Meetup Title 1', owner: user)
+      meetup = create(:meetup, title: 'Meetup Title 1', user: user)
       put("/spots/#{@spot.id}/meetups/#{meetup.id}", params: { meetup: { title: 'New Meetup Title' } })
       expect(response).to have_http_status(302)
       expect(Meetup.last.title).to eq('New Meetup Title')
@@ -92,7 +92,7 @@ RSpec.describe 'Meetups', type: :request do
       }
       user = create(:user)
       sign_in(user)
-      meetup = create(:meetup, title: 'Meetup Title 1', owner: user)
+      meetup = create(:meetup, title: 'Meetup Title 1', user: user)
       params = { title: 'New Meetup Title' }
       put("/spots/#{@spot.id}/meetups/#{meetup.id}", params.to_json, headers)
       expect(response).to have_http_status(200)
@@ -102,7 +102,7 @@ RSpec.describe 'Meetups', type: :request do
     it 'does not update with invalid params' do
       user = create(:user)
       sign_in(user)
-      meetup = create(:meetup, title: 'Meetup Title 1', owner: user)
+      meetup = create(:meetup, title: 'Meetup Title 1', user: user)
       put("/spots/#{@spot.id}/meetups/#{meetup.id}", params: { meetup: { title: nil } })
       expect(response).to have_http_status(200)
       expect(Meetup.last.title).to eq('Meetup Title 1')
@@ -116,7 +116,7 @@ RSpec.describe 'Meetups', type: :request do
       }
       user = create(:user)
       sign_in(user)
-      meetup = create(:meetup, title: 'Meetup Title 1', owner: user)
+      meetup = create(:meetup, title: 'Meetup Title 1', user: user)
       params = { title: nil }
       put("/spots/#{@spot.id}/meetups/#{meetup.id}", params.to_json, headers)
       expect(response).to have_http_status(422)
@@ -128,7 +128,7 @@ RSpec.describe 'Meetups', type: :request do
     it 'works' do
       user = create(:user)
       sign_in user
-      meetup = create(:meetup, owner: user)
+      meetup = create(:meetup, user: user)
       expect(Meetup.count).to eq(1)
       delete("/spots/#{@spot.id}/meetups/#{meetup.id}")
       expect(Meetup.count).to eq(0)
@@ -142,7 +142,7 @@ RSpec.describe 'Meetups', type: :request do
       }
       user = create(:user)
       sign_in user
-      meetup = create(:meetup, owner: user)
+      meetup = create(:meetup, user: user)
       expect(Meetup.count).to eq(1)
       delete("/spots/#{@spot.id}/meetups/#{meetup.id}", headers)
       expect(Meetup.count).to eq(0)

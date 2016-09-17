@@ -8,7 +8,7 @@
 #  description :string
 #  time        :datetime
 #  spot_id     :integer
-#  owner_id    :integer
+#  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
@@ -23,7 +23,7 @@
 
 class Meetup < ApplicationRecord
   belongs_to :spot
-  belongs_to :owner, class_name: 'User'
+  belongs_to :user
   has_many :meetup_attendees
   has_many :attending_users, through: :meetup_attendees, source: 'user'
   validates :title, :description, :time, presence: true

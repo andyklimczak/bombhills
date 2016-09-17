@@ -17,7 +17,7 @@ RSpec.describe 'meetup interactions', type: :feature do
       select '20', from: 'meetup_time_5i'
       click_button 'Create Meetup'
     end
-    expect(Meetup.first.owner).to eq(user)
+    expect(Meetup.first.user).to eq(user)
     expect(Meetup.first.spot).to eq(spot)
     expect(Meetup.first.title).to eq('Test Meetup Title')
     expect(Meetup.first.description).to eq('Test Meetup Description')

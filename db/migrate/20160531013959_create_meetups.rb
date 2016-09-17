@@ -5,7 +5,7 @@ class CreateMeetups < ActiveRecord::Migration
       t.string :description
       t.datetime :time
       t.references :spot, index: true, foreign_key: true
-      t.references :owner
+      t.references :user
 
       t.timestamps null: false
     end

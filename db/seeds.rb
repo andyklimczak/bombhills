@@ -16,7 +16,7 @@ end
 end
 
 4.times do |i|
-  Spot.first.meetups.create({title: FFaker::Movie.title, description: FFaker::Lorem.sentence, owner: User.first, time: FFaker::Time.date})
+  Spot.first.meetups.create({title: FFaker::Movie.title, description: FFaker::Lorem.sentence, user: User.first, time: FFaker::Time.date})
 end
 
 admin = User.create(username: 'admin', email: 'bombhillscommunity@gmail.com', password: 'bombhills', motto: 'bomb ass hills')
@@ -36,5 +36,3 @@ admin.spots.create({title: 'ZooBomb', description: 'this is one of the best/gnar
 admin.spots.create({title: '12th street', description: 'there is a bit of a trick to this one. The idea is to time all the lights from the top of 12th street all the way down to burnside. The best way to do this is buy hikeing up to the top of 12th, you know your at the right spot when you can see PSU dorms on the left and I405 cars driveing under you. Once your at the top of the overpass look down the hill at the first stop light, closest to the botem of the hill. Wait for it to turn red, then start counting down from 13 "you might wana time the light a few times just to get it right.", then start skating down twords the light. If you do this right the light will turn green just as you get up to it. If you can keep up your speed you will make it all the way down to burnside with out ever haveing to stop! Its way sick the first time you do it. I helps if you got some one waiting down at burnside to give you a ride back up. ', latitude: 45.51114387792089, longitude: -122.68921852111815, difficulty: ['Beginner', 'Intermediate', 'Expert'].sample, traffic: 'na'})
 
 admin.spots.create({title: 'Kaiser Bomb', description: 'this is a fun, short hill to get a fews runs on. want to leave the top right as the Max (train) is leaving. that way you can time the traffic lights and get a green. you stop at the Max station at the bottom and take the train back to the top.', latitude: 45.5481225064744, longitude: -122.68082857131957, difficulty: ['Beginner', 'Intermediate', 'Expert'].sample, traffic: 'na'})
-
-

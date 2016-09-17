@@ -78,10 +78,10 @@ class MeetupsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def meetup_params
-    params.require(:meetup).permit(:title, :description, :time).merge(owner_id: current_user.id, spot_id: @spot.id)
+    params.require(:meetup).permit(:title, :description, :time).merge(user_id: current_user.id, spot_id: @spot.id)
   end
 
   def require_permission
-    raise 'Unauthorized' unless @meetup.owner == current_user
+    raise 'Unauthorized' unless @meetup.user == current_user
   end
 end

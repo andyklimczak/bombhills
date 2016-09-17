@@ -5,6 +5,6 @@ FactoryGirl.define do
     description { FFaker::Lorem.sentence }
     time { FFaker::Time.date }
     spot
-    owner
+    user
   end
 end

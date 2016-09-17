@@ -11,7 +11,7 @@
       <%= meetup.description %>
       <%= meetup.time %>
       <%= meetup.spot.title %>
-      <%= meetup.owner.username %>
+      <%= meetup.user.username %>
       <%= link_to 'Show', spot_meetup_path(@spot, meetup), class: 'meetups-btn' %>
     <% end %>
   <% else %>

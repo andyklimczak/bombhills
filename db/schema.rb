@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20160817022008) do
   enable_extension "plpgsql"
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
-    t.integer "unsubscriber_id"
     t.string  "unsubscriber_type"
+    t.integer "unsubscriber_id"
     t.integer "conversation_id"
     t.index ["conversation_id"], name: "index_mailboxer_conversation_opt_outs_on_conversation_id", using: :btree
     t.index ["unsubscriber_id", "unsubscriber_type"], name: "index_mailboxer_conversation_opt_outs_on_unsubscriber_id_type", using: :btree
@@ -33,13 +33,13 @@ ActiveRecord::Schema.define(version: 20160817022008) do
     t.string   "type"
     t.text     "body"
     t.string   "subject",              default: ""
-    t.integer  "sender_id"
     t.string   "sender_type"
+    t.integer  "sender_id"
     t.integer  "conversation_id"
     t.boolean  "draft",                default: false
     t.string   "notification_code"
-    t.integer  "notified_object_id"
     t.string   "notified_object_type"
+    t.integer  "notified_object_id"
     t.string   "attachment"
     t.datetime "updated_at",                           null: false
     t.datetime "created_at",                           null: false
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 20160817022008) do
   end
 
   create_table "mailboxer_receipts", force: :cascade do |t|
-    t.integer  "receiver_id"
     t.string   "receiver_type"
+    t.integer  "receiver_id"
     t.integer  "notification_id",                            null: false
     t.boolean  "is_read",                    default: false
     t.boolean  "trashed",                    default: false
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20160817022008) do
     t.string   "description"
     t.datetime "time"
     t.integer  "spot_id"
-    t.integer  "owner_id"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["spot_id"], name: "index_meetups_on_spot_id", using: :btree
