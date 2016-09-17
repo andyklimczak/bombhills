@@ -6,7 +6,7 @@ RSpec.describe 'Messages', type: :request do
     it 'works!' do
       post '/messages', params: { message: { name: 'Test name', subject: 'Test subject', content: 'Test content', email: 'test@email.com' } }
       expect(response).to have_http_status(302)
-      expect(ActionMailer::Base.deliveries.count).to eq(1)
+      expect(ActionMailer::Base.deliveries.count).to eq(2)
     end
 
     it "doesn't works!" do
