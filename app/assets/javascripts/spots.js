@@ -58,10 +58,14 @@ function getInitialView() {
  */
 function onMapRightClick(e) {
   if(gon.user_signed_in) {
+    console.log(e.latlng.lat);
+    console.log(e.latlng.lng);
     $('#new-latitude').val(e.latlng.lat);
     $('#new-longitude').val(e.latlng.lng);
     $('#new-spot-form').modal('toggle');
   } else {
+    console.log(e.latlng.lat);
+    console.log(e.latlng.lng);
     $('#new-location-error').modal('toggle');
   }
 }
