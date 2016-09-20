@@ -62,14 +62,18 @@
     <div class="col-md-9">
       <div class="profile-content">
         <div class="row">
-          <% @user.posts.each do |post| %>
-            <div class="col-sm-6 col-md-6 user-post">
-              <% if post.type == 'ImagePost' %>
-                <%= image_tag post.image.url(:medium),:class => 'img-responsive' %>
-              <% else %>
-                <%= embed post.video_url %>
-              <% end %>
-            </div>
+          <% if @user.posts.any? %>
+            <% @user.posts.each do |post| %>
+              <div class="col-sm-6 col-md-6 user-post">
+                <% if post.type == 'ImagePost' %>
+                  <%= image_tag post.image.url(:medium),:class => 'img-responsive' %>
+                <% else %>
+                  <%= embed post.video_url %>
+                <% end %>
+              </div>
+            <% end %>
+          <% else %>
+            No posts !
           <% end %>
         </div>
       </div>
