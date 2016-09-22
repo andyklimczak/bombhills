@@ -82,6 +82,6 @@ class MeetupsController < ApplicationController
   end
 
   def require_permission
-    super(@spot)
+    raise 'Unauthorized' unless @meetup.user == current_user
   end
 end
