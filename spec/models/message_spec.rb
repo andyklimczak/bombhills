@@ -7,8 +7,8 @@ RSpec.describe Message, type: :model do
     expect(message).to be_valid
   end
 
-  it { should validate_presence_of :name }
-  it { should validate_presence_of :email }
-  it { should validate_presence_of :content }
-  it { should validate_presence_of :subject }
+  it { is_expected.to validate_presence_of :name }
+  it { is_expected.to validate_presence_of :email }
+  it { is_expected.to validate_presence_of :content }
+  it { is_expected.to validate_presence_of :subject }
 end

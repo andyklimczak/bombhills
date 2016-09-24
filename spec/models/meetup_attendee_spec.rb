@@ -7,6 +7,6 @@ RSpec.describe MeetupAttendee, type: :model do
     expect(meetup_attendee.save).to eq(true)
   end
 
-  it { should belong_to :user }
-  it { should belong_to :meetup }
+  it { is_expected.to belong_to :user }
+  it { is_expected.to belong_to :meetup }
 end

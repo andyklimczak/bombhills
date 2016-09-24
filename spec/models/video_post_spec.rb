@@ -7,10 +7,10 @@ RSpec.describe VideoPost, type: :model do
     expect(post.save).to eq(true)
   end
 
-  it { should belong_to :user }
-  it { should belong_to :spot }
-  it { should validate_presence_of :video_url }
-  it { should validate_presence_of :title }
-  it { should validate_presence_of :description }
-  it { should validate_presence_of :type }
+  it { is_expected.to belong_to :user }
+  it { is_expected.to belong_to :spot }
+  it { is_expected.to validate_presence_of :video_url }
+  it { is_expected.to validate_presence_of :title }
+  it { is_expected.to validate_presence_of :description }
+  it { is_expected.to validate_presence_of :type }
 end

@@ -77,12 +77,12 @@ RSpec.describe User, type: :model do
   context 'validations' do
     subject { create(:user) }
 
-    it { should validate_presence_of :username }
-    it { should have_many :spots }
-    it { should have_many :posts }
-    it { should validate_uniqueness_of(:username).case_insensitive }
-    it { should have_attached_file(:avatar) }
-    it { should validate_attachment_content_type(:avatar).allowing('image/png', 'image/gif', 'image/jpg', 'image/jpeg').rejecting('text/plain', 'text/xml') }
-    it { should validate_attachment_size(:avatar).less_than(5.megabytes) }
+    it { is_expected.to validate_presence_of :username }
+    it { is_expected.to have_many :spots }
+    it { is_expected.to have_many :posts }
+    it { is_expected.to validate_uniqueness_of(:username).case_insensitive }
+    it { is_expected.to have_attached_file(:avatar) }
+    it { is_expected.to validate_attachment_content_type(:avatar).allowing('image/png', 'image/gif', 'image/jpg', 'image/jpeg').rejecting('text/plain', 'text/xml') }
+    it { is_expected.to validate_attachment_size(:avatar).less_than(5.megabytes) }
   end
 end

@@ -7,11 +7,11 @@ RSpec.describe Meetup, type: :model do
     expect(meetup.save).to eq(true)
   end
 
-  it { should belong_to :spot }
-  it { should belong_to :user }
-  it { should have_many :meetup_attendees }
-  it { should have_many :attending_users }
-  it { should validate_presence_of :title }
-  it { should validate_presence_of :description }
-  it { should validate_presence_of :time }
+  it { is_expected.to belong_to :spot }
+  it { is_expected.to belong_to :user }
+  it { is_expected.to have_many :meetup_attendees }
+  it { is_expected.to have_many :attending_users }
+  it { is_expected.to validate_presence_of :title }
+  it { is_expected.to validate_presence_of :description }
+  it { is_expected.to validate_presence_of :time }
 end
