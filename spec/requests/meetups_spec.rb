@@ -31,7 +31,7 @@ RSpec.describe 'Meetups', type: :request do
   describe 'POST /spots/:spot_id/meetups' do
     it 'works' do
       sign_in(create(:user))
-      post "/spots/#{@spot.id}/meetups", params: {meetup: { title: 'Test meetup title', description: 'Test meetup description', time: DateTime.current }}
+      post "/spots/#{@spot.id}/meetups", params: { meetup: { title: 'Test meetup title', description: 'Test meetup description', time: DateTime.current } }
       expect(response).to have_http_status(302)
       expect(Meetup.count).to eq(1)
       expect(Meetup.last.title).to eq('Test meetup title')
@@ -55,7 +55,7 @@ RSpec.describe 'Meetups', type: :request do
 
     it 'does not create with invalid params' do
       sign_in(create(:user))
-      post "/spots/#{@spot.id}/meetups", params: {meetup: { title: nil, description: 'Test meetup description', time: DateTime.current }}
+      post "/spots/#{@spot.id}/meetups", params: { meetup: { title: nil, description: 'Test meetup description', time: DateTime.current } }
       expect(response).to have_http_status(200)
       expect(Meetup.count).to eq(0)
     end

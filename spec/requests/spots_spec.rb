@@ -105,7 +105,7 @@ RSpec.describe 'Spots', type: :request do
       spot = create(:spot, user: user, title: 'Spot Title 1')
       expect(user.spots.count).to eq(1)
       expect(user.spots.last.title).to eq('Spot Title 1')
-      put "/spots/#{spot.id}", params: {spot: { title: 'New Spot Title' }}
+      put "/spots/#{spot.id}", params: { spot: { title: 'New Spot Title' } }
       spot.reload
       expect(spot.title).to eq('New Spot Title')
     end
@@ -116,7 +116,7 @@ RSpec.describe 'Spots', type: :request do
       spot = create(:spot, user: user, title: 'Spot Title 1')
       expect(user.spots.count).to eq(1)
       expect(user.spots.last.title).to eq('Spot Title 1')
-      put "/spots/#{spot.id}", params: {spot: { title: nil }}
+      put "/spots/#{spot.id}", params: { spot: { title: nil } }
       spot.reload
       expect(spot.title).to eq('Spot Title 1')
     end
@@ -131,7 +131,7 @@ RSpec.describe 'Spots', type: :request do
       spot = create(:spot, user: user, title: 'Spot Title 1')
       expect(user.spots.count).to eq(1)
       expect(user.spots.last.title).to eq('Spot Title 1')
-      put "/spots/#{spot.id}", params: {spot: { title: 'New Spot Title' }}, headers: headers
+      put "/spots/#{spot.id}", params: { spot: { title: 'New Spot Title' } }, headers: headers
       expect(response.status).to eq(200)
       spot.reload
       expect(user.spots.last.title).to eq('New Spot Title')
@@ -147,7 +147,7 @@ RSpec.describe 'Spots', type: :request do
       spot = create(:spot, user: user, title: 'Spot Title 1')
       expect(user.spots.count).to eq(1)
       expect(user.spots.last.title).to eq('Spot Title 1')
-      put "/spots/#{spot.id}", params: {spot: { title: nil }}, headers: headers
+      put "/spots/#{spot.id}", params: { spot: { title: nil } }, headers: headers
       spot.reload
       expect(response.status).to eq(422)
       expect(user.spots.last.title).to eq('Spot Title 1')
@@ -160,7 +160,7 @@ RSpec.describe 'Spots', type: :request do
       spot = create(:spot, user: user1, title: 'Spot Title 1')
       expect(user1.spots.count).to eq(1)
       expect(user1.spots.last.title).to eq('Spot Title 1')
-      put "/spots/#{spot.id}", params: {spot: { title: 'New Spot Title' }}
+      put "/spots/#{spot.id}", params: { spot: { title: 'New Spot Title' } }
       expect(user1.spots.last.title).to eq('Spot Title 1')
     end
   end
