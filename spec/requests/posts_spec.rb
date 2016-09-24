@@ -101,7 +101,7 @@ RSpec.describe 'Posts', type: :request do
       sign_in user
       post = create(:image_post, user: user)
       expect(user.posts.count).to eq(1)
-      delete "/posts/#{post.id}", headers
+      delete "/posts/#{post.id}", params: headers
       expect(user.posts.count).to eq(0)
     end
 
@@ -149,7 +149,7 @@ RSpec.describe 'Posts', type: :request do
       expect(user.posts.count).to eq(1)
       expect(user.posts.last.title).to eq('Post Title 1')
       params = { title: 'New Post Title' }
-      put("/posts/#{post.id}", params.to_json, headers)
+      put("/posts/#{post.id}", params: params.to_json, headers: headers)
       expect(response.status).to eq(200)
       post.reload
       expect(post.title).to eq('New Post Title')
@@ -167,7 +167,7 @@ RSpec.describe 'Posts', type: :request do
       expect(user.posts.count).to eq(1)
       expect(user.posts.last.title).to eq('Post Title 1')
       params = { title: nil }
-      put("/posts/#{post.id}", params.to_json, headers)
+      put("/posts/#{post.id}", params: params.to_json, headers: headers)
       post.reload
       expect(response.status).to eq(422)
       expect(post.title).to eq('Post Title 1')
@@ -181,7 +181,7 @@ RSpec.describe 'Posts', type: :request do
       expect(user1.posts.count).to eq(1)
       expect(user1.posts.last.title).to eq('Post Title 1')
       params = { title: 'New Post Title' }
-      put("/posts/#{post.id}", params)
+      put("/posts/#{post.id}", params: params)
       expect(user1.posts.last.title).to eq('Post Title 1')
     end
   end
