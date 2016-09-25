@@ -1,37 +1,36 @@
-<div class="navdiv">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to ' bombhills', root_path, :class => 'navbar-brand' %>
-      </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to ' bombhills', root_path, :class => 'navbar-brand' %>
+    </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <%= form_tag(spots_path, method: "get", class: "navbar-form navbar-left") do %>
-          <div class="form-group">
-            <%= text_field_tag :search, params[:search], id: "navbar-search", class: "form-control", placeholder: "Search..." %>
-          </div>
-          <%= submit_tag "Go", name: nil, id: "navbar-search-btn", class: "btn btn-default" %>
-        <% end %>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'Discover', posts_path %></li>
-          <li><%= link_to ' Map ', spots_path %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
-            <ul class="dropdown-menu">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <%= form_tag(spots_path, method: "get", class: "navbar-form navbar-left") do %>
+        <div class="form-group">
+          <%= text_field_tag :search, params[:search], id: "navbar-search", class: "form-control", placeholder: "Search..." %>
+        </div>
+        <%= submit_tag "Go", name: nil, id: "navbar-search-btn", class: "btn btn-default" %>
+      <% end %>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Discover', posts_path %></li>
+        <li><%= link_to ' Map ', spots_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+          <ul class="dropdown-menu">
 
-              <% if user_signed_in? %>
+            <% if user_signed_in? %>
 
-                <li><%= link_to ' profile ', show_user_path(current_user.username) %></li>
-                <li><%= link_to ' edit profile ', edit_user_registration_path %></li>
-                <li>
+              <li><%= link_to ' profile ', show_user_path(current_user.username) %></li>
+              <li><%= link_to ' edit profile ', edit_user_registration_path %></li>
+              <li>
                 <%= link_to mailbox_inbox_path do %>
                   inbox
                   <% if unread_messages_count > 0 %>
@@ -39,19 +38,18 @@
                   <% end %>
                 <% end %>
               </li>
-                <li><%= link_to " logout ", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to " logout ", destroy_user_session_path, method: :delete %></li>
 
-              <% else %>
+            <% else %>
 
-                <li><%= link_to " register ", new_user_registration_path %></li>
-                <li><%= link_to " login ", new_user_session_path %></li>
+              <li><%= link_to " register ", new_user_registration_path %></li>
+              <li><%= link_to " login ", new_user_session_path %></li>
 
-              <% end %>
+            <% end %>
 
-            </ul>
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-</div>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
