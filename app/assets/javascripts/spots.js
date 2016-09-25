@@ -81,7 +81,7 @@ function loadPoints() {
   }).done(function(response) {
     response.spots.forEach(function(spot) {
       L.marker([spot.latitude, spot.longitude], { clickable: true })
-        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br>Traffic: " + spot.traffic + "<br><a href='/spots/" + spot.id + "/meetups'>meetup</a>" +"<br><a data-toggle='modal' data-target='#report-modal'>report</a>")
+        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br>Traffic: " + spot.traffic + "<br><a href='/spots/" + spot.id + "'>more info</a>" +"<br><a data-toggle='modal' data-target='#report-modal'>report</a>")
         .addTo(mymap);
     });
   }).fail(function() {

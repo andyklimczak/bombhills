@@ -1,41 +1,102 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/navbar' %>
 
-<div class="meetup">
+<div class="show-spot-container">
+  <div class="side-image-container hidden-xs hidden-sm">
+  </div>
 
-  <div class="meetup-content">
-    <h1> Spot <br> Title </h1>
-    <p>
-      <%= @spot.description %>
-    </p>
+  <div class="menu-container">
+    <div class="menu-child spot-info active">
+      <span class="glyphicon glyphicon-info-sign"></span>
+      Details
+    </div>
+    <div class="menu-child spot-meetups">
+      <span class="glyphicon glyphicon-tree-conifer"></span>
+      Meetups
+    </div>
+    <div class="menu-child spot-posts">
+      <span class="glyphicon glyphicon-camera"></span>
+      Posts
+    </div>
+    <div class="menu-child spot-other">
+      <span class="glyphicon glyphicon-map-marker"></span>
+      Map
+    </div>
+  </div>
 
-    <ul class="datetime">
-      <li>date</li>
-      <li>time</li>
-    </ul>
+  <div class="spot-info-container">
+    <div class="spot-info-content show-spot-content">
+      <h4>
+        <%= @spot.title %>
+      </h4>
+      <h6>
+        <%= @spot.difficulty %>
+      </h6>
 
-    <div class="form-group">
-      <label for="sel1">attendees</label>
-      <select class="form-control" id="sel1">
-        <option>username</option>
-        <option>username</option>
-        <option>username</option>
-        <option>username</option>
-      </select>
+      <p>
+        <%= @spot.description %>
+      </p>
+      <p>
+        <%= @spot.traffic%>
+      </p>
     </div>
 
-    <!-- if a meetup has been created -->
-    <button type="button" class="btn btn-default">Join</button>
-    <button type="button" class="btn btn-default">Leave</button>
-    <!-- if no meetup has been created -->
-    <button type="button" class="btn btn-default">Create</button>
-    <!-- if user created meetup -->
-    <button type="button" class="btn btn-default">Delete</button>
+    <div class="spot-meetups-content show-spot-content" style="display:none;">
+      <% if @spot.meetups.any? %>
+        <% @spot.meetups.each do |meetup| %>
+          <h4>
+            <%= link_to meetup.title, spot_meetup_path(meetup) %>
+          </h4>
+          <p>
+            <%= meetup.description %>
+          </p>
+          <p>
+            <%= meetup.attending_users.count %> users coming
+          </p>
+          <p>
+            <%= meetup.time %>
+          </p>
+        <% end %>
+      <% else %>
+        No meetups
+      <% end %>
+    </div>
 
-    <ul class="edit-back">
-      <li><%= link_to 'Back', spots_path %></li>
-      <li><%= link_to 'Edit', edit_spot_path(@spot) %></li>
-    </ul>
+    <div class="spot-posts-content show-spot-content" style="display:none;">
+      <% if @spot.posts.any? %>
+        <% @spot.posts.each_slice(2) do |posts| %>
+          <div class="row">
 
+            <% posts.each do |post| %>
+              <div class="col-sm-4 col-md-4" id="thumbnail-container">
+                <div class="thumbnail">
+                  <% if post.type == "ImagePost" %>
+                    <%= image_tag post.image.url(:medium) %>
+                  <% else %>
+                    <%= embed post.video_url %>
+                  <% end %>
+                  <div class="caption">
+                    <h3><%= post.title %></h3>
+                    <p><%= post.description %></p>
+                    <p>
+                      <%= link_to 'User', show_user_path(post.user.username), :class => 'btn btn-primary', id: 'user-btn' %>
+                      <% if post.spot %>
+                        <%= link_to 'Find', spots_path(id: post.spot.id), class: 'btn btn-default' %>
+                      <% end %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      <% else %>
+        No posts
+      <% end %>
+    </div>
+
+    <div class="spot-other-content show-spot-content" style="display:none;">
+      spot other content
+    </div>
   </div>
 
 </div>

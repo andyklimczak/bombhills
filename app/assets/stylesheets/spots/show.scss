@@ -1,0 +1,63 @@
+.show-spot-container {
+  height: inherit;
+  margin-top: 55px;
+  @include display(flex);
+
+  .side-image-container {
+    height: inherit;
+    background: url('hillthree.jpg');
+    background-size: cover;
+    @include flex-grow(10);
+    @include flex-basis(0);
+  }
+
+  .menu-container {
+    height: inherit;
+    background: $third-color;
+    @include flex-grow(1);
+    @include flex-basis(0);
+
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-content(center);
+    @include align-items(center);
+
+    .menu-child {
+      cursor: pointer;
+      width: 100%;
+      color: $white;
+      @include flex-grow(1);
+      @include display(flex);
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-content(center);
+      @include align-items(center);
+
+      &.active {
+        background: $secondary-color;
+      }
+
+      &:hover:not(.active) {
+        border-right: thick solid $primary-color;
+      }
+    }
+  }
+
+  .spot-info-container {
+    height: inherit;
+    @include flex-grow(10);
+    @include flex-basis(0);
+    @include display(flex);
+    @include justify-content(center);
+    @include align-content(center);
+    @include align-items(center);
+
+    .show-spot-content {
+      height: inherit;
+      margin: 2em 2em;
+
+    }
+  }
+
+}
