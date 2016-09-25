@@ -45,6 +45,7 @@
   }
 
   .spot-info-container {
+    padding: 20px 0;
     height: inherit;
     @include flex-grow(10);
     @include flex-basis(0);
@@ -55,8 +56,7 @@
 
     .show-spot-content {
       height: inherit;
-      margin: 2em 2em;
-
+      margin: 2em;
     }
   }
 
