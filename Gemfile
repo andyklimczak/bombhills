@@ -28,6 +28,7 @@ gem 'rack-timeout'
 gem 'font-awesome-rails'
 gem 'underscore-rails'
 gem 'poltergeist'
+gem 'fetch-rails'
 
 group :development, :test do
   gem 'rspec-rails'

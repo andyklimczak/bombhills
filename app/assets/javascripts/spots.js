@@ -5,10 +5,8 @@ var mymap;
  */
 function initMap() {
   if ($('#map-id').length) {
-
     mymap = L.map('map-id', { zoomControl: false });
     L.control.zoom({position: 'bottomright'}).addTo(mymap);
-
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
       attribution: 'Bombhills 2016',
@@ -58,14 +56,10 @@ function getInitialView() {
  */
 function onMapRightClick(e) {
   if(gon.user_signed_in) {
-    console.log(e.latlng.lat);
-    console.log(e.latlng.lng);
     $('#new-latitude').val(e.latlng.lat);
     $('#new-longitude').val(e.latlng.lng);
     $('#new-spot-form').modal('toggle');
   } else {
-    console.log(e.latlng.lat);
-    console.log(e.latlng.lng);
     $('#new-location-error').modal('toggle');
   }
 }
@@ -75,17 +69,24 @@ function onMapRightClick(e) {
  * Uses ajax to hit the json version of the points, and creates the markers by looping through
  */
 function loadPoints() {
-  $.ajax({
-    url: '/spots.json',
-    method: 'GET'
-  }).done(function(response) {
-    response.spots.forEach(function(spot) {
+  fetch('/spots.json')
+  .then(status)
+  .then(json)
+  .then(function(json) {
+    json.spots.forEach(function(spot) {
       L.marker([spot.latitude, spot.longitude], { clickable: true })
-        .bindPopup("<b>" + spot.title + "</b></br>Description: " + spot.description + "<br>Created by: " + spot.user.username + "<br>Difficulty: " + spot.difficulty + "<br>Traffic: " + spot.traffic + "<br><a href='/spots/" + spot.id + "'>more info</a>" +"<br><a data-toggle='modal' data-target='#report-modal'>report</a>")
+        .bindPopup(
+          "<b>" + spot.title + "</b></br> \
+          Description: " + spot.description + "<br> \
+          Created by: " + spot.user.username + "<br> \
+          Difficulty: " + spot.difficulty + "<br> \
+          Traffic: " + spot.traffic + "<br> \
+          <a href='/spots/" + spot.id + "'>more info</a>" +"<br> \
+          <a data-toggle='modal' data-target='#report-modal'>report</a>")
         .addTo(mymap);
     });
-  }).fail(function() {
-    console.log('Error getting points');
+  }).catch(function(err) {
+    console.log('Error loading points: ', err);
   });
 }
 
@@ -128,13 +129,14 @@ function viewSpotClick() {
   $('#modal-view-spot').on('click', function() {
     var spotId = $('select[name=view_delete_spot]').val();
     if($('#map-id').length) {
-      $.ajax({
-        url: '/spots/' + spotId,
-        method: 'GET',
-        dataType: 'json'
-      }).done(function(response) {
+      fetch('/spots/' + spotId + '.json')
+      .then(status)
+      .then(json)
+      .then(function(response) {
         mymap.setView([response.latitude, response.longitude], 12);
-      }).always(function() {
+        $('#spot-modal').modal('toggle');
+      })
+      .catch(function() {
         $('#spot-modal').modal('toggle');
       });
     } else {
@@ -149,11 +151,10 @@ function viewSpotClick() {
 function updateSpotSelectChange() {
   $('select[name="spot_id"]').on('change', function() {
     var spotId = $('select[name="spot_id"]').val();
-    $.ajax({
-      url: '/spots/' + spotId,
-      method: 'GET',
-      dataType: 'json'
-    }).done(function(response) {
+    fetch('/spots/' + spotId + '.json')
+    .then(status)
+    .then(json)
+    .then(function(response) {
       $('select[name="difficulty"]').val(response.difficulty);
       $('input[name="title"]').val(response.title);
       $('textarea[name="description"]').val(response.description);
@@ -167,10 +168,12 @@ function updateSpotSelectChange() {
 function updateSpotClick() {
   $('#modal-update-btn').on('click', function() {
     var data = _.object(_.map($('#users-spots-edit-form').serializeArray(), _.values));
+    var jsonData = JSON.stringify(data);
+
     $.ajax({
       type: "PUT",
       url: "/spots/" + data.spot_id,
-      data: JSON.stringify(data),
+      data: jsonData,
       dataType: 'json',
       contentType: 'application/json'
     }).done(function(response) {

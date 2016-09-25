@@ -18,4 +18,5 @@
 //= require bootstrap-sprockets
 //= require chosen-jquery
 //= require leaflet
+//= require fetch
 //= require_tree .
