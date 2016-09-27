@@ -16,6 +16,7 @@ gem 'annotate'
 gem 'bourbon'
 gem 'ffaker', git: 'https://github.com/ffaker/ffaker.git'
 gem 'paperclip'
+gem 'fog-local'
 gem 'fog-aws'
 gem 'rails_12factor', group: :production
 gem 'factory_girl_rails'
