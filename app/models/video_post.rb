@@ -27,6 +27,7 @@
 #
 
 class VideoPost < Post
-  validates :video_url, presence: true
   default_scope { order(created_at: :desc) }
+  validates :video_url, presence: true
+  validates :video_url, format: { with: %r{(?:https?:\/\/)?(?:www\.)?youtu(?:\.be|be\.com)\/(?:watch\?v=)?([\w-]{10,})} }
 end

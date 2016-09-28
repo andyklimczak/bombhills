@@ -7,6 +7,11 @@ RSpec.describe VideoPost, type: :model do
     expect(post.save).to eq(true)
   end
 
+  it 'cannot be created with invalid video url ' do
+    post = build(:video_post, video_url: 'www.google.com/123')
+    expect(post.save).to eq(false)
+  end
+
   it { is_expected.to belong_to :user }
   it { is_expected.to belong_to :spot }
   it { is_expected.to validate_presence_of :video_url }
