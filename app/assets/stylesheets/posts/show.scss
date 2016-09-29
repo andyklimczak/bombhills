@@ -1,0 +1,9 @@
+.post-container {
+  font-family: $font-stack;
+
+  .image {
+    padding-bottom: 30px;
+    @include display(flex);
+    @include justify-content(center);
+  }
+}

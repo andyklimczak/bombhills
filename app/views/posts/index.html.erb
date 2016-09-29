@@ -1,13 +1,9 @@
+<%= render 'layouts/navbar' %>
 <div class="user-posts">
-
-  <%= render 'layouts/navbar' %>
-
   <h1> DISCOVER </h1>
-
   <div class="container" id="posts-container">
     <% @posts.each_slice(3) do |posts| %>
       <div class="row">
-
         <% posts.each do |post| %>
           <div class="col-sm-4 col-md-4" id="thumbnail-container">
             <div class="thumbnail">
