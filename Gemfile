@@ -45,6 +45,7 @@ group :development do
   gem 'rack-livereload'
   gem 'spring'
   gem 'spring-watcher-listen'
+  gem 'spring-commands-rspec'
   gem 'brakeman', require: false
   gem 'bundler-audit'
   gem 'rubycritic', require: false
