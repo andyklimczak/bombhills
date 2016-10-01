@@ -13,7 +13,7 @@
 
   .menu-container {
     height: inherit;
-    background: $tertiary-color;
+    background: $grey;
     @include flex-grow(1);
     @include flex-basis(0);
 
@@ -22,11 +22,17 @@
     @include justify-content(center);
     @include align-content(center);
     @include align-items(center);
+    
+    .glyphicon {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
 
     .menu-child {
       cursor: pointer;
-      width: 100%;
-      color: $white;
+      width: 100px;
+      color: $black;
+      letter-spacing: 1px;
       @include flex-grow(1);
       @include display(flex);
       @include flex-direction(column);
@@ -53,6 +59,9 @@
     @include justify-content(center);
     @include align-content(center);
     @include align-items(center);
+    -webkit-box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.45);
+    box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.45);
 
     .show-spot-content {
       height: inherit;
