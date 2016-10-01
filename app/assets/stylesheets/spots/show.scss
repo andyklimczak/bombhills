@@ -78,10 +78,12 @@
     @include justify-content(center);
     @include align-content(center);
     @include align-items(center);
-    -webkit-box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.45);
-    -moz-box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.45);
     box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.45);
 
+    .spot-info-content h1 {
+      font-weight: 800;
+    }
+    
     .show-spot-content {
       height: inherit;
       margin: 2em;
