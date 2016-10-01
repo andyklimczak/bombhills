@@ -3,10 +3,29 @@
   padding-top: 54px;
   @include display(flex);
 
+  .random-image-1 {
+    background: url('hill.jpg');
+  }
+
+  .random-image-2 {
+    background: url('hilltwo.jpg');
+  }
+
+  .random-image-3 {
+    background: url('hillthree.jpg');
+  }
+
+  .random-image-4 {
+    background: url('six.jpg');
+  }
+
+  .random-image-5 {
+    background: url('five.jpg');
+  }
+
   .side-image-container {
     height: inherit;
-    background: url('hillthree.jpg');
-    background-size: cover;
+    background-size: 100% 100%;
     @include flex-grow(10);
     @include flex-basis(0);
   }
