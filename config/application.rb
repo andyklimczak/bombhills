@@ -24,5 +24,6 @@ module BombHills
     config.assets.paths << Rails.root.join("videos")
     config.public_file_server.enabled = true
     config.exceptions_app = self.routes
+    config.react.addons = true
   end
 end

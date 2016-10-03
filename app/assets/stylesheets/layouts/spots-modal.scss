@@ -1,199 +1,54 @@
-/* modals */
-
-/* spots modal */
-
-#spots-modal-header {
-  background: $background-color;
-  border: none;
-}
-
-#spots-modal-body {
-  padding: 0;
-}
-
-#spots-modal-body #left {
-  background: $secondary-color;
-  position: absolute;
-  height: 350px;
-  width: 150px;
-}
-
-#spots-modal-body #left ul {
-  list-style-type: none;
-  padding: 0;
-  color: $white;
-}
-
-#spots-modal-body #left li {
-  height: 175px;
-  line-height: 175px;
-  text-align: center;
-  cursor: pointer;
-  background: $secondary-color;
-}
-
-#spots-modal-body #left li:hover{
-  background: $secondary-color;
-}
-
-
-#spots-modal-body #right {
-  margin-left: 150px;
+#user-spots-modal-dialog .modal-content {
   background: $tertiary-color;
-  height: 350px;
-  padding: 10px 10px;
-}
-
-.user-spots .form-control {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 125px;
-  width: 300px;
-  border-radius: 0;
-  border: none;
   color: $white;
-  border-bottom: thin solid $primary-color;
-  background: none;
-}
 
-#spots-edit-btn, #spots-btn {
-  background-color: $primary-color;
-  font-size: 32px;
-}
+  .modal-header {
+    border: none;
+  }
 
-#users-spots-edit-form {
-  background: $tertiary-color;
-}
+  .spot-select {
+    margin-bottom: 2em;
+  }
 
-.user-spots-edit .form-control {
-  background: $secondary-color;
-  color: $white;
-  border-radius: 0;
-  border: none;
-  background: none;
-  border-bottom: thin solid $primary-color;
-}
+  .spots-table table {
+    tr th {
+      border-bottom: 2px solid #fb4148;
+    }
 
-.user-spots ul {
-  color: $white;
-  padding-left: 65px;
-}
+    tr th {
+      padding-right: 50px;
+    }
 
-.user-spots li {
-  display: inline;
-  cursor: pointer;
-}
+    .btn-view, .btn-edit {
+      color: $white;
+    }
 
-.user-spots li:last-child {
-  margin-left: 10px;
+    .btn-edit {
+      background-color: $tertiary-color;
+    }
 
-}
+    .btn-delete {
+      background-color: $primary-color;
+    }
 
-/* end */
-
-/*  Media Queries  */
-
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 565px) {
-  #spots-modal-header {
+  }
+  .form-control {
     background: $secondary-color;
+    color: $white;
+    border-radius: 0;
+    border: none;
+    background: none;
+    border-bottom: thin solid $primary-color;
   }
 
-  #spots-modal-body #left {
-    position: inherit;
-    width: 100%;
-    height: 200px;
-  }
-  #spots-modal-body #right {
-    margin-left: 0;
-  }
-  #spots-modal-body #left li {
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    cursor: pointer;
-    background: $secondary-color;
-  }
-  .user-spots .form-control {
-    margin-top: 30px;
-    width: 200px;
-  }
-  .user-spots ul {
-    padding-left: 0;
-    text-align: center;
+  input, textarea, select, option {
+    background: $tertiary-color;
+    color: $white;
   }
 }
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 565px ) and (max-width : 768px) {
-  #spots-modal-header {
-    background: $secondary-color;
+@media (min-width: 1200px) {
+  #user-spots-modal-dialog {
+    width: 900px;
   }
-
-  #spots-modal-body #left {
-    position: inherit;
-    width: 100%;
-    height: 200px;
-  }
-  #spots-modal-body #right {
-    margin-left: 0;
-  }
-  #spots-modal-body #left li {
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    cursor: pointer;
-    background: $secondary-color;
-  }
-  .user-spots .form-control {
-    margin-top: 30px;
-    width: 200px;
-  }
-  .user-spots ul {
-    padding-left: 0;
-    text-align: center;
-  }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) and (max-width: 992px) {
-  #spots-modal-header {
-    background: $secondary-color;
-  }
-
-  #spots-modal-body #left {
-    position: inherit;
-    width: 100%;
-    height: 200px;
-  }
-  #spots-modal-body #right {
-    margin-left: 0;
-  }
-  #spots-modal-body #left li {
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    cursor: pointer;
-    background: $secondary-color;
-  }
-  .user-spots .form-control {
-    margin-top: 30px;
-    width: 200px;
-  }
-
-  .user-spots ul {
-    padding-left: 0;
-    text-align: center;
-  }
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) and (max-width: 1200px) {
-
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
 }
