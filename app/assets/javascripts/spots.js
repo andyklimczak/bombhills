@@ -111,4 +111,106 @@ function toggleDashboard() {
   });
 }
 
+/**
+ * Change the delete url when changing the spots dropdown
+ */
+function viewDeleteSpotSelectChange() {
+  $('select[name=view_delete_spot').on('change', function() {
+    $('#modal-delete-spot').attr('href', '/spots/' + this.value);
+  });
+}
+
+/**
+ * View the spot when view is clicked
+ * If user is on the map page, set the view
+ * If user is on the profile page, go to the map page
+ */
+function viewSpotClick() {
+  $('#modal-view-spot').on('click', function() {
+    var spotId = $('select[name=view_delete_spot]').val();
+    if($('#map-id').length) {
+      fetch('/spots/' + spotId + '.json')
+      .then(status)
+      .then(json)
+      .then(function(response) {
+        mymap.setView([response.latitude, response.longitude], 12);
+        $('#spot-modal').modal('toggle');
+      })
+      .catch(function() {
+        $('#spot-modal').modal('toggle');
+      });
+    } else {
+      Turbolinks.visit('/spots?id=' + spotId, { action: 'replace' })
+    }
+  });
+}
+
+/**
+ * Change the spot modal form information when the selected spot changes
+ */
+function updateSpotSelectChange() {
+  $('select[name="spot_id"]').on('change', function() {
+    var spotId = $('select[name="spot_id"]').val();
+    fetch('/spots/' + spotId + '.json')
+    .then(status)
+    .then(json)
+    .then(function(response) {
+      $('select[name="difficulty"]').val(response.difficulty);
+      $('input[name="title"]').val(response.title);
+      $('textarea[name="description"]').val(response.description);
+    });
+  });
+}
+
+/**
+ * Update the spot via the modal
+ */
+function updateSpotClick() {
+  $('#modal-update-btn').on('click', function() {
+    var data = _.object(_.map($('#users-spots-edit-form').serializeArray(), _.values));
+    var jsonData = JSON.stringify(data);
+
+    $.ajax({
+      type: "PUT",
+      url: "/spots/" + data.spot_id,
+      data: jsonData,
+      dataType: 'json',
+      contentType: 'application/json'
+    }).done(function(response) {
+      Turbolinks.visit('/spots?id=' + response.id, { action: 'replace' })
+    }).always(function() {
+      $('#spot-modal').modal('toggle');
+    });
+  });
+}
+
+/**
+ * Delete the spot via the modal
+ */
+function deleteSpotClick() {
+  $('#modal-delete-btn').on('click', function() {
+    var spotId = $('select[name="spot_id"]').val();
+    $.ajax({
+      type: "DELETE",
+      url: "/spots/" + spotId,
+      dataType: 'json',
+      contentType: 'application/json'
+    }).always(function() {
+      Turbolinks.visit('/spots')
+    });
+  });
+}
+
+/**
+ * Init listeners for spot modal
+ */
+function initModalListeners() {
+  viewDeleteSpotSelectChange()
+  viewSpotClick();
+  updateSpotSelectChange();
+  updateSpotClick();
+  deleteSpotClick();
+}
+
+document.addEventListener("turbolinks:load", initModalListeners);
 document.addEventListener("turbolinks:load", initMap);

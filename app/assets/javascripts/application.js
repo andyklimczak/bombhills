@@ -19,7 +19,4 @@
 //= require chosen-jquery
 //= require leaflet
 //= require fetch
-//= require react
-//= require react_ujs
-//= require components
 //= require_tree .
