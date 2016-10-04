@@ -81,7 +81,7 @@ function loadPoints() {
           Created by: " + spot.user.username + "<br> \
           Difficulty: " + spot.difficulty + "<br> \
           Traffic: " + spot.traffic + "<br> \
-          <a href='/spots/" + spot.id + "'>more info</a>" +"<br> \
+          <a href='/spots/" + spot.id + "'>meetup</a>" +"<br> \
           <a data-toggle='modal' data-target='#report-modal'>report</a>")
         .addTo(mymap);
     });

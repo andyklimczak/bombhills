@@ -48,6 +48,7 @@
     .glyphicon {
       margin-bottom: 15px;
       font-size: 20px;
+      color: $primary-color;
     }
 
     .menu-child {
@@ -65,6 +66,10 @@
       &.active {
         background: $secondary-color;
       }
+      
+      &.active .glyphicon {
+        color: $black;
+      }
 
       &:hover:not(.active) {
         border-right: thick solid $secondary-color;
@@ -77,19 +82,16 @@
     height: inherit;
     @include flex-grow(10);
     @include flex-basis(0);
-    @include display(flex);
-    @include justify-content(left);
-    @include align-content(left);
-    @include align-items(left);
     box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.30);
-
+    
     .spot-info-content h1 {
       font-family: 'Kanit', sans-serif;
       color: $secondary-color;
-      font-weight: 300;
-      font-size: 80px;
+      font-weight: 200;
+      font-size: 64px;
       letter-spacing: 1px;
       line-height: 75px;
+      max-width: 50px;
     }
     
     .spot-info-content h6 {
@@ -110,6 +112,104 @@
       height: inherit;
       margin: 2em;
     }
+    
+    /* spot meetups content */
+    
+    .spot-meetups-content {
+      text-align: center;
+    }
+    
+    .spot-meetups-content p {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 200;
+      line-height: 22px;
+      font-size: 22px;
+    }
+    
+    .spot-meetups-content a {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 200;
+      font-size: 26px;
+      color: $white;
+      padding: 5px 10px;
+      border-radius: 2px;
+      background: $black;
+      cursor: pointer;
+    }
+    
+    .spot-meetups-content a:hover {
+      text-decoration: none;
+    }
+    
+    /* comment box css */
+    
+    .detailBox {
+    width:320px;
+    border:1px solid #bbb;
+    margin:50px;
+    }
+    .titleBox {
+        background-color:#fdfdfd;
+        padding:10px;
+    }
+    .titleBox label{
+      color:#444;
+      margin:0;
+      display:inline-block;
+    }
+
+    .commentBox {
+        padding:10px;
+        border-top:1px dotted #bbb;
+    }
+    .commentBox .form-group:first-child, .actionBox .form-group:first-child {
+        width:80%;
+    }
+    .commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+        width:18%;
+    }
+    .actionBox .form-group * {
+        width:100%;
+    }
+    .taskDescription {
+        margin-top:10px 0;
+    }
+    .commentList {
+        padding:0;
+        list-style:none;
+        max-height:200px;
+        overflow:auto;
+    }
+    .commentList li {
+        margin:0;
+        margin-top:10px;
+    }
+    .commentList li > div {
+        display:table-cell;
+    }
+    .commenterImage {
+        width:30px;
+        margin-right:5px;
+        height:100%;
+        float:left;
+    }
+    .commenterImage img {
+        width:100%;
+        border-radius:50%;
+    }
+    .commentText p {
+        margin:0;
+    }
+    .sub-text {
+        color:#aaa;
+        font-family:verdana;
+        font-size:11px;
+    }
+    .actionBox {
+        border-top:1px dotted #bbb;
+        padding:10px;
+    }
+    
   }
 
 }
@@ -122,11 +222,19 @@
   .show-spot-container .menu-container .menu-child {
     width: 75px;
   }
+  .show-spot-container .spot-info-container .spot-meetups-content a {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
 }
 
 @media only screen and (min-width: 370px) and (max-width: 472px) {
   .show-spot-container .menu-container .menu-child {
     width: 75px;
+  }
+  .show-spot-container .spot-info-container .spot-meetups-content a {
+    font-size: 16px;
+    padding: 4px 8px;
   }
 }
 

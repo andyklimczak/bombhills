@@ -6,11 +6,11 @@
 
   <div class="menu-container">
     <div class="menu-child spot-info">
-      <span class="glyphicon glyphicon-info-sign"></span>
+      <span class="glyphicon glyphicon-pushpin"></span>
       <p>DETAILS</p>
     </div>
     <div class="menu-child spot-meetups active">
-      <span class="glyphicon glyphicon-tree-conifer"></span>
+      <span class="glyphicon glyphicon-user"></span>
       <p>MEETUPS</p>
     </div>
     <div class="menu-child spot-posts">
@@ -18,8 +18,8 @@
       <p>POSTS</p>
     </div>
     <div class="menu-child spot-other">
-      <span class="glyphicon glyphicon-map-marker"></span>
-      <p>MAP</p>
+      <span class="glyphicon glyphicon-comment"></span>
+      <p>COMMENT</p>
     </div>
   </div>
 
@@ -33,7 +33,6 @@
       </h6>
 
       <p>
-        <strong>Description :</strong>
         <%= @spot.description %>
       </p>
       <p>
@@ -59,8 +58,9 @@
           </p>
         <% end %>
       <% else %>
-        No meetups
+        <p>No meetups are currently setup for this spot, why not make one?</p> </br>
       <% end %>
+      <a>create meetup</a>
     </div>
 
     <div class="spot-posts-content show-spot-content" style="display:none;">
@@ -97,7 +97,55 @@
     </div>
 
     <div class="spot-other-content show-spot-content" style="display:none;">
-      spot other content
+      <div class="detailBox">
+        <div class="titleBox">
+          <label>Comment Box</label>
+            <button type="button" class="close" aria-hidden="true">&times;</button>
+        </div>
+        <div class="commentBox">
+
+            <p class="taskDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="actionBox">
+            <ul class="commentList">
+                <li>
+                    <div class="commenterImage">
+                      <img src="http://placekitten.com/50/50" />
+                    </div>
+                    <div class="commentText">
+                        <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="commenterImage">
+                      <img src="http://placekitten.com/45/45" />
+                    </div>
+                    <div class="commentText">
+                        <p class="">Hello this is a test comment and this comment is particularly very long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="commenterImage">
+                      <img src="http://placekitten.com/40/40" />
+                    </div>
+                    <div class="commentText">
+                        <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Your comments" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-default">Add</button>
+                </div>
+            </form>
+        </div>
+      </div>
     </div>
   </div>
 
