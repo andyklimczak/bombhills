@@ -33,7 +33,7 @@
 }
 
 #spots-modal-body #left li:hover{
-  background: $secondary-color;
+  background: #042E89;
 }
 
 
@@ -42,6 +42,15 @@
   background: $tertiary-color;
   height: 350px;
   padding: 10px 10px;
+}
+
+.user-spots p {
+  text-align: center; 
+  line-height: 350px;
+  color: $white;
+  font-size: 24px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 100;
 }
 
 .user-spots .form-control {

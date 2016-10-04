@@ -1,3 +1,5 @@
+
+
 .show-spot-container {
   height: inherit;
   padding-top: 54px;
@@ -79,7 +81,7 @@
     @include justify-content(left);
     @include align-content(left);
     @include align-items(left);
-    box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.45);
+    box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.30);
 
     .spot-info-content h1 {
       font-family: 'Kanit', sans-serif;
@@ -109,5 +111,46 @@
       margin: 2em;
     }
   }
+
+}
+
+/*  Media Queries  */
+
+/* Custom */
+
+@media only screen and (max-width: 370px) {
+  .show-spot-container .menu-container .menu-child {
+    width: 75px;
+  }
+}
+
+@media only screen and (min-width: 370px) and (max-width: 472px) {
+  .show-spot-container .menu-container .menu-child {
+    width: 75px;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 472px) and (max-width : 565px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 565px ) and (max-width : 768px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width: 992px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) and (max-width: 1200px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
 
 }
