@@ -112,15 +112,6 @@ function toggleDashboard() {
 }
 
 /**
- * Change the delete url when changing the spots dropdown
- */
-function viewDeleteSpotSelectChange() {
-  $('select[name=view_delete_spot').on('change', function() {
-    $('#modal-delete-spot').attr('href', '/spots/' + this.value);
-  });
-}
-
-/**
  * Change the spot modal form information when the selected spot changes
  */
 function updateSpotSelectChange() {
