@@ -15,12 +15,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <div class="user-spots">
             <% if user.spots.any? %>
-              <div class="form-group">
-                <%= select_tag "view_delete_spot", options_for_select(user.spots.map{ |s| [s.title, s.id ]}), { class: 'form-control', id: 'sel1' } %>
-              </div>
-              <ul>
-                <li id="modal-view-spot">view</li>
-              </ul>
+              <%= react_component 'SpotModalView', { spots: user.spots } %>
             <% else %>
             <p>No spots to view</p>
             <% end %>

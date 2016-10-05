@@ -121,31 +121,6 @@ function viewDeleteSpotSelectChange() {
 }
 
 /**
- * View the spot when view is clicked
- * If user is on the map page, set the view
- * If user is on the profile page, go to the map page
- */
-function viewSpotClick() {
-  $('#modal-view-spot').on('click', function() {
-    var spotId = $('select[name=view_delete_spot]').val();
-    if($('#map-id').length) {
-      fetch('/spots/' + spotId + '.json')
-      .then(status)
-      .then(json)
-      .then(function(response) {
-        mymap.setView([response.latitude, response.longitude], 12);
-        $('#spot-modal').modal('toggle');
-      })
-      .catch(function() {
-        $('#spot-modal').modal('toggle');
-      });
-    } else {
-      Turbolinks.visit('/spots?id=' + spotId, { action: 'replace' })
-    }
-  });
-}
-
-/**
  * Change the spot modal form information when the selected spot changes
  */
 function updateSpotSelectChange() {
@@ -206,7 +181,6 @@ function deleteSpotClick() {
  */
 function initModalListeners() {
   viewDeleteSpotSelectChange()
-  viewSpotClick();
   updateSpotSelectChange();
   updateSpotClick();
   deleteSpotClick();
