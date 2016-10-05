@@ -20,6 +20,7 @@
 .mobile-header {
   height: 150px;
   padding-left: 15px;
+  margin-bottom: 25px;
 }
 
 .mobile-header h1 {
@@ -57,12 +58,14 @@
 /* header */
 
 .header-wrapper {
-  background: url('headerdesktop.jpg');
+  background: url('green.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .header {
-  height: 550px;
-  background: $background-color;
+  height: 600px;
+  background: none;
 }
 
 /* nav */
@@ -149,17 +152,15 @@
   padding: 0;
   margin-top: 50px;
   margin-bottom: 20px;
-  color: $white;
+  color: $black;
 }
 
 .content a {
-  background-color: $primary-color;
+  background-color: rgba(255,255,255,.3);
   font-family: $font-stack;
   font-weight: 300;
-  color: $white;
-  border: thin solid $primary-color;
+  color: $black;
   border-radius: 6px;
-  border-width: 2px;
   font-size: 22px;
   padding: 14px 26px;
   text-decoration: none;
@@ -216,8 +217,6 @@
 
 .display {
   text-align: left;
-  background-color: $background-color;
-  color: $white;
 }
 
 .display .container div {
@@ -240,14 +239,12 @@
   font-weight: 200;
   font-size: 26px;
   line-height: 26px;
-  color: $white;
 }
 
 .display h2 {
   font-family: $font-stack;
   font-weight: 200;
   font-size: 56px;
-  color: $white;
 }
 
 /* user content */
@@ -256,7 +253,7 @@
   padding-top: 20px;
   padding-bottom: 60px;
   font-family: $font-stack;
-  background: $black;
+  background: $primary-color;
   color: $white;
 }
 
@@ -285,7 +282,7 @@
 .user-content .glyphicon {
   font-size: 90px;
   line-height: 150px;
-  color: $white;
+  color: $background-color;
 }
 
 #user-content-btn {
@@ -400,11 +397,16 @@
   }
   .display h2 {
     color: $black;
-    font-size: 48px;
+    font-size: 42px;
+    margin-top: 0px;
   }
   .display .container div {
-    height: 450px;
+    height: 375px;
     padding-left: 0;
+  }
+  .display img {
+    width: 150px;
+    height: 300px;
   }
   .user-content h1 {
     font-size: 48px;
@@ -452,7 +454,11 @@
     color: $black;
   }
   .display .container div {
-    height: 500px;
+    height: 350px;
+  }
+  .display img {
+    width: 150px;
+    height: 300px;
   }
   #user-content-glyphicons {
     display: none;
@@ -538,7 +544,6 @@
     display: none;
   }
   .header-wrapper {
-    background-position: right;
-    background-repeat: no-repeat;
+
   }
 }

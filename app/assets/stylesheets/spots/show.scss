@@ -65,10 +65,11 @@
 
       &.active {
         background: $secondary-color;
+        color: $white;
       }
       
       &.active .glyphicon {
-        color: $black;
+        color: $white;
       }
 
       &:hover:not(.active) {
@@ -90,8 +91,6 @@
       font-weight: 200;
       font-size: 64px;
       letter-spacing: 1px;
-      line-height: 75px;
-      max-width: 50px;
     }
     
     .spot-info-content h6 {
@@ -106,6 +105,11 @@
       font-weight: 100;
       font-size: 22px;
       color: $black;
+    }
+    
+    .spot-info-content mark {
+      color: $secondary-color;
+      padding: 0px;
     }
     
     .show-spot-content {
@@ -226,6 +230,9 @@
     font-size: 16px;
     padding: 4px 8px;
   }
+  .show-spot-container .spot-info-container .spot-info-content h1 {
+    font-size: 32px;
+  }
 }
 
 @media only screen and (min-width: 370px) and (max-width: 472px) {
@@ -235,6 +242,10 @@
   .show-spot-container .spot-info-container .spot-meetups-content a {
     font-size: 16px;
     padding: 4px 8px;
+  }
+  
+  .show-spot-container .spot-info-container .spot-info-content h1 {
+    font-size: 32px;
   }
 }
 
