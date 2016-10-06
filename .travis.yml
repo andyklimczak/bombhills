@@ -2,13 +2,11 @@ sudo: false
 cache: bundler
 before_install:
   - wget http://downloads.webmproject.org/releases/webp/libwebp-0.4.3.tar.gz
-  - tar xvzf libwebp-0.4.3.tar.gz
-  - cd libwebp-0.4.3
-  - ./configure --prefix=$HOME/opt
-  - make && make install
-  - export LD_FLAGS=-L$HOME/opt/lib
-  - export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:$HOME/opt/lib
-- export CPATH=$CPATH:$HOME/opt/include
+  - tar -xzvf libwebp-0.4.3.tar.gz
+  - cd libwebp-0.4.3 && ./configure --prefix=$HOME/libwebp && make && make install && cd ..
+  - export LD_FLAGS=-L$HOME/libwebp/lib
+  - export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:$HOME/libwebp/lib
+  - export CPATH=$CPATH:$HOME/libwebp/include
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
