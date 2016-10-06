@@ -14,7 +14,7 @@
 #spots-modal-body #left {
   background: $secondary-color;
   position: absolute;
-  height: 350px;
+  height: 400px;
   width: 150px;
 }
 
@@ -25,38 +25,37 @@
 }
 
 #spots-modal-body #left li {
-  height: 175px;
-  line-height: 175px;
+  height: 200px;
+  line-height: 200px;
   text-align: center;
   cursor: pointer;
   background: $secondary-color;
 }
 
 #spots-modal-body #left li:hover{
-  background: #042E89;
+  background: $black;
 }
 
 
 #spots-modal-body #right {
   margin-left: 150px;
   background: $tertiary-color;
-  height: 350px;
+  height: 400px;
   padding: 10px 10px;
 }
 
 .user-spots p {
   text-align: center; 
-  line-height: 350px;
   color: $white;
   font-size: 24px;
   font-family: 'Kanit', sans-serif;
-  font-weight: 100;
+  font-weight: $thin;
 }
 
 .user-spots .form-control {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 125px;
+  margin-top: 175px;
   width: 300px;
   border-radius: 0;
   border: none;
@@ -67,7 +66,7 @@
 
 #spots-edit-btn, #spots-btn {
   background-color: $primary-color;
-  font-size: 32px;
+  font-size: 42px;
 }
 
 #users-spots-edit-form {
