@@ -38,7 +38,7 @@
 
 #dash-title a {
   font-family: $font-stack;
-  font-weight: 200;
+  font-weight: $thin;
   font-size: 24px;
 }
 
@@ -52,7 +52,7 @@
 
 .nav-tools li p {
   font-family: $font-stack;
-  font-weight: 200;
+  font-weight: $thin;
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
@@ -62,7 +62,7 @@
 
 .nav-tools li a {
   font-family: $font-stack;
-  font-weight: 200;
+  font-weight: $thin;
   display: inline-block;
   vertical-align: middle;
   margin-top: 1px;
@@ -120,7 +120,7 @@
       background: $white;
       text-align: left;
       font-family: $font-stack;
-      font-weight: 200;
+      font-weight: $thin;
 
     }
     #search-input.form-control {
@@ -135,7 +135,6 @@
   padding: 7px 14px;
   border-radius: 6px;
   font-size: 20px;
-  font-weight: 400;
   color: $black;
   box-shadow: 1px 17px 31px -9px rgba(0,0,0,0.75);
 }
@@ -175,14 +174,14 @@
 
 .leaflet-popup-content-wrapper b {
   font-family: $font-stack;
-  font-weight: 200;
+  font-weight: $thin;
   font-size: 32px;
 }
 
 .leaflet-popup-content-wrapper a {
   font-size: 24px;
   color: $white;
-  font-weight: 200;
+  font-weight: $thin;
 }
 
 .leaflet-popup-content-wrapper a:hover {
@@ -320,7 +319,7 @@
 
 #report-modal .modal-header h4 {
   font-family: $font-stack;
-  font-weight: 200;
+  font-weight: $thin;
   font-size: 36px;
   color: $secondary-color;
 }

@@ -9,7 +9,10 @@
 
 .caption h3 {
   margin-top: 0;
-  color: $background-color;
+  color: $white;
+  background-color: $black;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .caption p {
@@ -19,7 +22,7 @@
 
 .user-posts h1 {
   font-family: $font-stack;
-  font-weight: 200;
+  font-weight: $thin;
   text-align: center;
   margin-top: 0;
   padding: 20px 0;
@@ -28,8 +31,8 @@
 
 .user-posts p {
   font-family: $font-stack;
-  font-weight: 200;
-  text-align: center;
+  font-weight: $thin;
+  text-align: left;
   margin-bottom: 30px;
   font-size: 17px;
 }
@@ -40,7 +43,7 @@
 
 #user-btn {
   color: $white;
-  background: $secondary-color;
+  background: $black;
   margin-right: 5px;
 }
 
