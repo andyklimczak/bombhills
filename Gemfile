@@ -31,7 +31,6 @@ gem 'underscore-rails'
 gem 'poltergeist'
 gem 'fetch-rails'
 gem 'react-rails'
-gem 'sprockets-webp'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -61,4 +60,8 @@ group :test do
   gem 'simplecov', require: false
   gem 'capybara'
   gem 'database_cleaner'
+end
+
+group :production do
+  gem 'sprockets-webp'
 end
