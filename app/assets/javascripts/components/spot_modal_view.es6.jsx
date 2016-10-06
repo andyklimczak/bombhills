@@ -7,10 +7,7 @@ class SpotModalView extends React.Component {
     this.handleSpotSelect = this.handleSpotSelect.bind(this);
     this.viewSpotClick = this.viewSpotClick.bind(this);
   }
-  handleSpotSelect(e) {
-    const newSpot = this.props.spots.filter((spot) => {
-      return spot.id == e.target.value;
-    }).shift();
+  handleSpotSelect(newSpot) {
     this.setState({selectedSpot: newSpot});
   }
   viewSpotClick() {
@@ -24,27 +21,14 @@ class SpotModalView extends React.Component {
   spotsView() {
     return (
       <div className="user-spots-select-container">
-        <div className="form-group">
-          <select className="form-control" onChange={this.handleSpotSelect} value=''>
-            <option value=''>Select a spot</option>
-            {this.props.spots.map((spot) => {
-              return <option value={spot.id} key={spot.id}>{spot.title}</option>
-            })}
-          </select>
-        </div>
+        <SpotModalSelect spots={this.props.spots} handleSpotSelect={this.handleSpotSelect} />
       </div>
     );
   }
   spotsSelectedView() {
     return (
       <div className="user-spots-select-container">
-        <div className="form-group">
-          <select className="form-control" onChange={this.handleSpotSelect}>
-            {this.props.spots.map((spot) => {
-              return <option value={spot.id} key={spot.id}>{spot.title}</option>
-            })}
-          </select>
-        </div>
+        <SpotModalSelect spots={this.props.spots} handleSpotSelect={this.handleSpotSelect} />
         <ul>
           <li id="modal-view-spot" onClick={this.viewSpotClick}>view</li>
         </ul>
@@ -55,7 +39,7 @@ class SpotModalView extends React.Component {
     if(this.state.selectedSpot) {
       return this.spotsSelectedView();
     } else {
-      return this.spotsView()
+      return this.spotsView();
     }
   }
 }

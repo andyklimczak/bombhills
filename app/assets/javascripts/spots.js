@@ -171,7 +171,6 @@ function deleteSpotClick() {
  * Init listeners for spot modal
  */
 function initModalListeners() {
-  viewDeleteSpotSelectChange()
   updateSpotSelectChange();
   updateSpotClick();
   deleteSpotClick();
