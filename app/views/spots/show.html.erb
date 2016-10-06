@@ -69,7 +69,7 @@
           <div class="row">
 
             <% posts.each do |post| %>
-              <div class="col-sm-4 col-md-4" id="thumbnail-container">
+              <div class="col-sm-12 col-md-12" id="thumbnail-container">
                 <div class="thumbnail">
                   <% if post.type == "ImagePost" %>
                     <%= image_tag post.image.url(:medium) %>
