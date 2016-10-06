@@ -31,7 +31,6 @@ gem 'underscore-rails'
 gem 'poltergeist'
 gem 'fetch-rails'
 gem 'react-rails'
-gem 'sprockets-webp'
 
 group :development, :test do
   gem 'rspec-rails'
