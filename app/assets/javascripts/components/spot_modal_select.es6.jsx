@@ -45,6 +45,6 @@ class SpotModalSelect extends React.Component {
   }
 }
 
-SpotModalView.propTypes = {
+SpotModalSelect.propTypes = {
   spots: React.PropTypes.array
 };
