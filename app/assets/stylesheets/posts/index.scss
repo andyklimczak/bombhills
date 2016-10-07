@@ -15,6 +15,14 @@
   cursor: pointer;
 }
 
+.caption h3:hover {
+  background-color: $primary-color;
+}
+
+.caption a:hover {
+  text-decoration: none;
+}
+
 .caption p {
   margin-bottom: 15px;
   color: $background-color;
@@ -26,7 +34,6 @@
   text-align: center;
   margin-top: 0;
   padding: 20px 0;
-  color:$background-color;
 }
 
 .user-posts p {

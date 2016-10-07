@@ -15,17 +15,17 @@
   font-family: $font-stack;
   font-weight: $thin;
   font-size: 43px;
-  color: $background-color;
+  color: $white;
 }
 
 .signup mark {
-  color: $background-color;
+  color: $white;
   padding: 0;
   background: none;
 }
 
 .signup a {
-  color: $background-color;
+  color: $white;
 }
 
 .signup a:hover {
@@ -38,17 +38,17 @@
   font-weight: 400;
   font-size: 22px;
   margin: 5px 0px;
-  color: $background-color;
+  color: $white;
 }
 
 .signup input {
   padding: 12px 12px;
-  color: $background-color;
+  color: $white;
   background: none;
   border-left: none;
   border-top: none;
   border-right: none;
-  border-bottom: thin solid $background-color;
+  border-bottom: thin solid $white;
 }
 
 .field_with_errors {

@@ -13,7 +13,7 @@
 .hamburger-btn {
   position: absolute;
   z-index: 1;
-  background: $secondary-color;
+  background: $primary-color;
   margin: 10px;
   padding: 2px;
   padding-bottom: 0;
@@ -168,7 +168,7 @@
 }
 
 .leaflet-popup-content-wrapper {
-  background: $secondary-color;
+  background: $primary-color;
   color: $white;
 }
 
@@ -248,9 +248,9 @@
     }
 
     .alert {
-      background: $secondary-color;
+      background: $primary-color;
       color: $white;
-      border-color: $secondary-color;
+      border-color: $primary-color;
 
       a {
         padding-left: 10px;
@@ -310,7 +310,7 @@
 /* report modal */
 
 #report-modal {
-  background: $secondary-color;
+  background: $primary-color;
 }
 
 #report-modal .modal-header {
@@ -321,7 +321,7 @@
   font-family: $font-stack;
   font-weight: $thin;
   font-size: 36px;
-  color: $secondary-color;
+  color: $primary-color;
 }
 
 

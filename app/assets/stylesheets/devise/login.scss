@@ -15,11 +15,11 @@
   font-family: $font-stack;
   font-weight: $thin;
   font-size: 43px;
-  color: $background-color;
+  color: $white;
 }
 
 .login mark {
-  color: $background-color;
+  color: $white;
   padding: 0;
   background: none;
 }
@@ -28,11 +28,11 @@
   font-size: 20px;
   font-weight: 400;
   padding: 6px 0;
-  color: $background-color;
+  color: $white;
 }
 
 .login a:hover {
-  color: $background-color;
+  color: $white;
   background: none;
   text-decoration: none;
 }
@@ -42,17 +42,17 @@
   font-weight: 300;
   font-size: 22px;
   margin: 5px 0px;
-  color: $background-color;
+  color: $white;
 }
 
 .login input {
   padding: 12px 12px;
-  color: $background-color;
+  color: $white;
   background: none;
   border-left: none;
   border-top: none;
   border-right: none;
-  border-bottom: thin solid $background-color;
+  border-bottom: thin solid $white;
 }
 
 #remember-me-field label {
