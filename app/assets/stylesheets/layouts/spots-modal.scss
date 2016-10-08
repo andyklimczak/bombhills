@@ -12,7 +12,7 @@
 }
 
 #spots-modal-body #left {
-  background: $secondary-color;
+  background: $primary-color;
   position: absolute;
   height: 400px;
   width: 150px;
@@ -29,7 +29,7 @@
   line-height: 200px;
   text-align: center;
   cursor: pointer;
-  background: $secondary-color;
+  background: $primary-color;
 }
 
 #spots-modal-body #left li:hover{
@@ -74,7 +74,7 @@
 }
 
 .user-spots-edit .form-control {
-  background: $secondary-color;
+  background: $primary-color;
   color: $white;
   border-radius: 0;
   border: none;
@@ -105,7 +105,7 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 565px) {
   #spots-modal-header {
-    background: $secondary-color;
+    background: $primary-color;
   }
 
   #spots-modal-body #left {
@@ -121,7 +121,7 @@
     line-height: 100px;
     text-align: center;
     cursor: pointer;
-    background: $secondary-color;
+    background: $primary-color;
   }
   .user-spots .form-control {
     margin-top: 30px;
@@ -136,7 +136,7 @@
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
   #spots-modal-header {
-    background: $secondary-color;
+    background: $primary-color;
   }
 
   #spots-modal-body #left {
@@ -152,7 +152,7 @@
     line-height: 100px;
     text-align: center;
     cursor: pointer;
-    background: $secondary-color;
+    background: $primary-color;
   }
   .user-spots .form-control {
     margin-top: 30px;
@@ -167,7 +167,7 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
   #spots-modal-header {
-    background: $secondary-color;
+    background: $primary-color;
   }
 
   #spots-modal-body #left {
@@ -183,7 +183,7 @@
     line-height: 100px;
     text-align: center;
     cursor: pointer;
-    background: $secondary-color;
+    background: $primary-color;
   }
   .user-spots .form-control {
     margin-top: 30px;

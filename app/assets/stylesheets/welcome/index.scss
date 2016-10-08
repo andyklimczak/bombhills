@@ -292,8 +292,8 @@
 .user-content a {
   color: $primary-color;
   background: $white;
-  font-size: 48px;
-  padding: 10px 15px;
+  font-size: 32px;
+  padding: 5px 10px;
   border-radius: 6px;
   box-shadow: 5px 8px 31px -8px rgba(0,0,0,0.75);
 }
@@ -411,6 +411,9 @@
   .user-content h1 {
     font-size: 48px;
     margin-top: 20px;
+  }
+  .user-content a {
+    font-size: 16px;
   }
   #user-content-glyphicons {
     display: none;

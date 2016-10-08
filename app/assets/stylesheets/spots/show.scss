@@ -48,7 +48,7 @@
     .glyphicon {
       margin-bottom: 15px;
       font-size: 20px;
-      color: $primary-color;
+      color: $black;
     }
 
     .menu-child {
@@ -64,7 +64,7 @@
       @include align-items(center);
 
       &.active {
-        background: $secondary-color;
+        background: $primary-color;
         color: $white;
       }
       
@@ -73,7 +73,7 @@
       }
 
       &:hover:not(.active) {
-        border-right: thick solid $secondary-color;
+        border-right: thick solid $primary-color;
       }
     }
   }
@@ -87,7 +87,7 @@
     
     .spot-info-content h1 {
       font-family: 'Kanit', sans-serif;
-      color: $secondary-color;
+      color: $primary-color;
       font-weight: $thin;
       font-size: 64px;
       letter-spacing: 1px;
@@ -97,7 +97,7 @@
       font-family: 'Kanit', sans-serif;
       font-weight: 100;
       font-size: 26px;
-      color: $secondary-color;
+      color: $primary-color;
     }
     
     .spot-info-content p {
@@ -108,13 +108,13 @@
     }
     
     .spot-info-content mark {
-      color: $secondary-color;
+      color: $primary-color;
       padding: 0px;
     }
     
     .show-spot-content {
       height: inherit;
-      margin: 2em;
+      padding: 2em;
     }
     
     /* spot meetups content */
