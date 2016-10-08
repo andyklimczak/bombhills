@@ -59,6 +59,7 @@
 .header-wrapper {
   background: url('green.jpg');
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
 }
 
@@ -157,8 +158,7 @@
 .content a {
   background-color: rgba(255,255,255,.3);
   font-family: $font-stack;
-  font-weight: $thin;
-  color: $black;
+  color: $primary-color;
   border-radius: 6px;
   font-size: 22px;
   padding: 14px 26px;
@@ -168,6 +168,7 @@
 
 .content a:hover {
   background-color: $primary-color;
+  color: $white;
 
 }
 
@@ -289,8 +290,8 @@
 }
 
 .user-content a {
-  color: $primary-color;
-  background: $white;
+  color: $white;
+  background: $grey;
   font-size: 48px;
   padding: 10px 15px;
   border-radius: 6px;
@@ -299,8 +300,6 @@
 
 .user-content a:hover {
   text-decoration: none;
-  background: none;
-  color: $white;
 }
 
 
