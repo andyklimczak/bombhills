@@ -247,6 +247,11 @@
   font-size: 56px;
 }
 
+#explore-col {
+  background: #E3E3E3;
+  margin-right: 0px;
+}
+
 /* user content */
 
 .user-content {
@@ -302,6 +307,7 @@
   text-decoration: none;
   background: none;
   color: $white;
+  background: $black;
 }
 
 
