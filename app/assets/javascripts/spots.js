@@ -16,7 +16,7 @@ function initMap() {
     }).addTo(mymap);
 
     mymap.on('load', loadPoints);
-    mymap.setView(getInitialView(), 12);
+    mymap.setView(getInitialView(), 13);
     mymap.on('contextmenu', onMapRightClick);
 
     $('#find-me-btn').click(locateMe);
