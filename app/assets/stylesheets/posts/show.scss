@@ -2,7 +2,6 @@
   font-family: $font-stack;
 
   .image {
-    width: 80%;
     margin-top: 70px;
     @include display(flex);
     @include justify-content(center);
