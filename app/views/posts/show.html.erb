@@ -4,9 +4,9 @@
     <%= image_tag @post.image %>
   </div>
 
-  <p>
+  <h1>
     <%= @post.title %>
-  </p>
+  </h1>
 
 
   <p>
@@ -14,19 +14,19 @@
   </p>
 
   <p>
-    <strong>Uploaded By:</strong>
+    <mark>Uploaded By:</mark>
     <%= link_to @post.user.username, show_user_path(@post.user.username) %>
   </p>
 
   <% unless @post.spot.nil? %>
     <p>
-      <strong>Location:</strong>
+      <mark>Location:</mark>
       <%= link_to @post.spot.title, spot_path(@post.spot) %>
     </p>
   <% end %>
 
   <p>
-    <strong>Uploaded:</strong>
+    <mark>Uploaded:</mark>
     <%= @post.created_at.strftime("%B %d, %Y") %>
   </p>
 

@@ -5,5 +5,28 @@
     padding-bottom: 30px;
     @include display(flex);
     @include justify-content(center);
+    max-width: 300px;
+    margin-top: 50px;
   }
+  
+  mark {
+    color: $primary-color;
+  }
+  
+  h1 {
+    color: $primary-color;
+  }
+  
+  a {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    color: $white;
+    background: $primary-color;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
 }
