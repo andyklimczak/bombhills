@@ -7,7 +7,7 @@
     </div>
 
     <h1>
-      <%= @post.title %>
+      <%= @post.title.upcase %>
     </h1>
 
 
@@ -37,7 +37,7 @@
     <% if @post.user == current_user %>
       <%= link_to 'Edit', edit_post_path(@post) %>
     <% end %>
-    <%= link_to 'Back', posts_path %>
+    <mark><%= link_to 'Back', posts_path %></mark>
   </div>
   <div class="col-sm-2 col-xs-0 col-md-2"></div>
 </div>
