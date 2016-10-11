@@ -44,7 +44,7 @@
     @include justify-content(center);
     @include align-content(center);
     @include align-items(center);
-    
+
     .glyphicon {
       margin: 15px 0px;
       font-size: 20px;
@@ -67,7 +67,7 @@
         background: $primary-color;
         color: $white;
       }
-      
+
       &.active .glyphicon {
         color: $white;
       }
@@ -84,7 +84,7 @@
     @include flex-grow(10);
     @include flex-basis(0);
     box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.30);
-    
+
     .spot-info-content h1 {
       font-family: 'Kanit', sans-serif;
       color: $primary-color;
@@ -92,74 +92,75 @@
       font-size: 64px;
       letter-spacing: 1px;
     }
-    
+
     .spot-info-content h6 {
       font-family: 'Kanit', sans-serif;
       font-weight: 100;
       font-size: 26px;
       color: $primary-color;
     }
-    
+
     .spot-info-content p {
       font-family: 'Kanit', sans-serif;
       font-weight: 100;
       font-size: 22px;
       color: $black;
     }
-    
+
     .spot-info-content mark {
       color: $primary-color;
       padding: 0px;
       background: none;
     }
-    
+
     .show-spot-content {
       height: inherit;
       padding: 2em;
     }
-    
+
     /* spot meetups content */
-    
+
     .spot-meetups-content {
       text-align: left;
     }
-    
-    .spot-meetups-content p {
+
+    .spot-meetups-content {
       font-family: 'Kanit', sans-serif;
       font-weight: $thin;
-      line-height: 22px;
-      font-size: 22px;
+
+      p {
+        line-height: 22px;
+        font-size: 22px;
+      }
+
+      a {
+        font-size: 26px;
+        color: $white;
+        padding: 5px 10px;
+        border-radius: 2px;
+        background: $black;
+        cursor: pointer;
+      }
     }
-    
-    .spot-meetups-content a {
-      font-family: 'Kanit', sans-serif;
-      font-weight: $thin;
-      font-size: 26px;
-      color: $white;
-      padding: 5px 10px;
-      border-radius: 2px;
-      background: $black;
-      cursor: pointer;
-    }
-    
+
     .spot-meetups-content a:hover {
       text-decoration: none;
     }
-    
+
     .create-meetup-btn {
       margin-bottom: 25px;
     }
-    
+
     /* comment box css */
-    
+
     .detailBox {
-    width:320px;
-    border:1px solid #bbb;
-    margin:50px;
+      width:320px;
+      border:1px solid #bbb;
+      margin:50px;
     }
     .titleBox {
-        background-color:#fdfdfd;
-        padding:10px;
+      background-color:#fdfdfd;
+      padding:10px;
     }
     .titleBox label{
       color:#444;
@@ -168,57 +169,57 @@
     }
 
     .commentBox {
-        padding:10px;
-        border-top:1px dotted #bbb;
+      padding:10px;
+      border-top:1px dotted #bbb;
     }
     .commentBox .form-group:first-child, .actionBox .form-group:first-child {
-        width:80%;
+      width:80%;
     }
     .commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
-        width:18%;
+      width:18%;
     }
     .actionBox .form-group * {
-        width:100%;
+      width:100%;
     }
     .taskDescription {
-        margin-top:10px 0;
+      margin-top:10px 0;
     }
     .commentList {
-        padding:0;
-        list-style:none;
-        max-height:200px;
-        overflow:auto;
+      padding:0;
+      list-style:none;
+      max-height:200px;
+      overflow:auto;
     }
     .commentList li {
-        margin:0;
-        margin-top:10px;
+      margin:0;
+      margin-top:10px;
     }
     .commentList li > div {
-        display:table-cell;
+      display:table-cell;
     }
     .commenterImage {
-        width:30px;
-        margin-right:5px;
-        height:100%;
-        float:left;
+      width:30px;
+      margin-right:5px;
+      height:100%;
+      float:left;
     }
     .commenterImage img {
-        width:100%;
-        border-radius:50%;
+      width:100%;
+      border-radius:50%;
     }
     .commentText p {
-        margin:0;
+      margin:0;
     }
     .sub-text {
-        color:#aaa;
-        font-family:verdana;
-        font-size:11px;
+      color:#aaa;
+      font-family:verdana;
+      font-size:11px;
     }
     .actionBox {
-        border-top:1px dotted #bbb;
-        padding:10px;
+      border-top:1px dotted #bbb;
+      padding:10px;
     }
-    
+
   }
 
 }
@@ -238,7 +239,7 @@
   .show-spot-container .spot-info-container .spot-info-content h1 {
     font-size: 32px;
   }
-  
+
   .show-spot-container .menu-container .menu-child p {
     display: none;
   }
@@ -252,7 +253,7 @@
     font-size: 16px;
     padding: 4px 8px;
   }
-  
+
   .show-spot-container .spot-info-container .spot-info-content h1 {
     font-size: 32px;
   }
