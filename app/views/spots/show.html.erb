@@ -42,6 +42,10 @@
     </div>
 
     <div class="spot-meetups-content show-spot-content" style="display:none;">
+      <%= link_to 'Create Meetup', new_spot_meetup_path(@spot), class: 'create-meetup-btn' %>
+      
+      <h3>Whats Planned</h3>
+      
       <% if @spot.meetups.any? %>
         <% @spot.meetups.each do |meetup| %>
           <h4>
@@ -58,9 +62,7 @@
           </p>
         <% end %>
       <% else %>
-        <p>No meetups are currently setup for this spot, why not make one?</p> </br>
       <% end %>
-      <a>create meetup</a>
     </div>
 
     <div class="spot-posts-content show-spot-content" style="display:none;">

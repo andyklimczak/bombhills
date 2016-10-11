@@ -46,7 +46,7 @@
     @include align-items(center);
     
     .glyphicon {
-      margin-bottom: 15px;
+      margin: 15px 0px;
       font-size: 20px;
       color: $black;
     }
@@ -110,6 +110,7 @@
     .spot-info-content mark {
       color: $primary-color;
       padding: 0px;
+      background: none;
     }
     
     .show-spot-content {
@@ -120,7 +121,7 @@
     /* spot meetups content */
     
     .spot-meetups-content {
-      text-align: center;
+      text-align: left;
     }
     
     .spot-meetups-content p {
@@ -143,6 +144,10 @@
     
     .spot-meetups-content a:hover {
       text-decoration: none;
+    }
+    
+    .create-meetup-btn {
+      margin-bottom: 25px;
     }
     
     /* comment box css */
@@ -232,6 +237,10 @@
   }
   .show-spot-container .spot-info-container .spot-info-content h1 {
     font-size: 32px;
+  }
+  
+  .show-spot-container .menu-container .menu-child p {
+    display: none;
   }
 }
 
