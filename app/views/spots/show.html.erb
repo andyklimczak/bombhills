@@ -5,11 +5,11 @@
   </div>
 
   <div class="menu-container">
-    <div class="menu-child spot-info">
+    <div class="menu-child spot-info active">
       <span class="glyphicon glyphicon-pushpin"></span>
       <p>DETAILS</p>
     </div>
-    <div class="menu-child spot-meetups active">
+    <div class="menu-child spot-meetups">
       <span class="glyphicon glyphicon-user"></span>
       <p>MEETUPS</p>
     </div>
@@ -43,9 +43,9 @@
 
     <div class="spot-meetups-content show-spot-content" style="display:none;">
       <%= link_to 'Create Meetup', new_spot_meetup_path(@spot), class: 'create-meetup-btn' %>
-      
+
       <h3>Whats Planned</h3>
-      
+
       <% if @spot.meetups.any? %>
         <% @spot.meetups.each do |meetup| %>
           <h4>
@@ -104,4 +104,3 @@
   </div>
 
 </div>
-

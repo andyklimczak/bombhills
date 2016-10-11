@@ -1,7 +1,6 @@
 <%= render 'layouts/navbar' %>
 <div class="container post-container">
-  <div class="col-sm-2 col-xs-0 col-md-2"></div>
-  <div class="col-xs-12 col-sm-8 col-md-8">
+  <div class="post-info col-xs-12 col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2">
     <div class="image">
       <%= image_tag @post.image %>
     </div>
@@ -10,39 +9,32 @@
       <%= @post.title.upcase %>
     </h1>
 
-
     <p>
       <%= @post.description %>
     </p>
-    </br>
 
-    <p>
-      <mark>Uploaded By:</mark>
-      <%= link_to @post.user.username, show_user_path(@post.user.username) %>
-    </p>
-
-    <% unless @post.spot.nil? %>
+    <div class="extra-info">
       <p>
-        <mark>Location:</mark>
-        <%= link_to @post.spot.title, spot_path(@post.spot) %>
+        <mark>Uploaded By:</mark>
+        <%= link_to image_tag(@post.user.avatar.url(:thumb), class: 'message-avatar'), show_user_path(@post.user.username), class: 'user-avatar' %>
       </p>
-    <% end %>
 
-    <p>
-      <mark>Uploaded:</mark>
-      <%= @post.created_at.strftime("%B %d, %Y") %>
-    </p>
-    </br>
+      <% unless @post.spot.nil? %>
+        <p>
+          <mark>Location:</mark>
+          <%= link_to @post.spot.title, spot_path(@post.spot) %>
+        </p>
+      <% end %>
+
+      <p>
+        <mark>Uploaded:</mark>
+        <%= @post.created_at.strftime("%B %d, %Y") %>
+      </p>
+    </div>
 
     <% if @post.user == current_user %>
       <%= link_to 'Edit', edit_post_path(@post) %>
     <% end %>
     <%= link_to 'Back', posts_path %>
-    </br>
-    </br>
-    </br>
-    </br>
-
   </div>
-  <div class="col-sm-2 col-xs-0 col-md-2"></div>
 </div>

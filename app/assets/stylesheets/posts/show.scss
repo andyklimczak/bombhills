@@ -1,31 +1,46 @@
 .post-container {
   font-family: $font-stack;
 
-  .image {
-    margin-top: 70px;
-    @include display(flex);
-    @include justify-content(center);
+  .post-info {
+    margin-bottom: 3em;
+
+    .extra-info {
+      margin: 2em 0;
+    }
+
+    .image {
+      margin-top: 70px;
+      @include display(flex);
+      @include justify-content(center);
+    }
+
+    mark {
+      color: $primary-color;
+    }
+
+    h1 {
+      font-weight: $thin;
+    }
+
+    a {
+      font-size: 16px;
+      padding: 5px 10px;
+      border-radius: 2px;
+      color: $white;
+      background: $primary-color;
+
+      &:hover {
+        text-decoration: none;
+        background: #1E3056;
+      }
+    }
+
+    .user-avatar {
+      background: none;
+
+      &:hover {
+        background: none;
+      }
+    }
   }
-  
-  mark {
-    color: $primary-color;
-  }
-  
-  h1 {
-    font-weight: $thin;
-  }
-  
-  a {
-    font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 2px;
-    color: $white;
-    background: $primary-color;
-  }
-  
-  a:hover {
-    text-decoration: none;
-    background: #1E3056;
-  }
-  
 }
