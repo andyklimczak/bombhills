@@ -1,20 +1,20 @@
 #notice {
-  color: green;
+  color: #008000;
   margin: 0;
   padding: 0;
 }
 
-.field_with_errors {
+.field-with-errors {
   padding: 2px;
   margin: 0;
-  background-color: red;
+  background-color: #ff0;
   display: table;
 }
 
 #error-explanation {
   margin: 0 auto;
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid #ff0;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
@@ -38,13 +38,12 @@
 
 }
 
-.meetups #meetup_time_1i, #meetup_time_2i, #meetup_time_3i, #meetup_time_4i, #meetup_time_5i {
+.meetups {
   color: $white;
-  background: none;
-  border-left: none;
-  border-top: none;
-  border-right: none;
-  background: none;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  background: 0;
   border-bottom: thin solid $white;
 
 }
