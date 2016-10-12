@@ -1,6 +1,4 @@
-/* modals */
-
-/* spots modal */
+// spots modal
 
 #spots-modal-header {
   background: $background-color;
@@ -9,43 +7,43 @@
 
 #spots-modal-body {
   padding: 0;
-}
 
-#spots-modal-body #left {
-  background: $primary-color;
-  position: absolute;
-  height: 400px;
-  width: 150px;
-}
+  #left {
+    background: $primary-color;
+    position: absolute;
+    height: 400px;
+    width: 150px;
 
-#spots-modal-body #left ul {
-  list-style-type: none;
-  padding: 0;
-  color: $white;
-}
+    ul {
+      list-style-type: none;
+      padding: 0;
+      color: $white;
+    }
 
-#spots-modal-body #left li {
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  cursor: pointer;
-  background: $primary-color;
-}
+    li {
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      cursor: pointer;
+      background: $primary-color;
 
-#spots-modal-body #left li:hover{
-  background: $black;
-}
+      &:hover {
+        background: $black;
+      }
+    }
+  }
 
 
-#spots-modal-body #right {
-  margin-left: 150px;
-  background: $tertiary-color;
-  height: 400px;
-  padding: 10px 10px;
+  #right {
+    margin-left: 150px;
+    background: $tertiary-color;
+    height: 400px;
+    padding: 10px;
+  }
 }
 
 .user-spots p {
-  text-align: center; 
+  text-align: center;
   color: $white;
   font-size: 24px;
   font-family: 'Kanit', sans-serif;
@@ -74,7 +72,6 @@
 }
 
 .user-spots-edit .form-control {
-  background: $primary-color;
   color: $white;
   border-radius: 0;
   border: 0;
@@ -97,12 +94,6 @@
 
 }
 
-/* end */
-
-/*  Media Queries  */
-
-
-/* Custom, iPhone Retina */
 @media only screen and (max-width : 565px) {
   #spots-modal-header {
     background: $primary-color;
@@ -113,9 +104,11 @@
     width: 100%;
     height: 200px;
   }
+
   #spots-modal-body #right {
     margin-left: 0;
   }
+
   #spots-modal-body #left li {
     height: 100px;
     line-height: 100px;
@@ -123,17 +116,18 @@
     cursor: pointer;
     background: $primary-color;
   }
+
   .user-spots .form-control {
     margin-top: 30px;
     width: 200px;
   }
+
   .user-spots ul {
     padding-left: 0;
     text-align: center;
   }
 }
 
-/* Extra Small Devices, Phones */
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
   #spots-modal-header {
     background: $primary-color;
@@ -144,9 +138,11 @@
     width: 100%;
     height: 200px;
   }
+
   #spots-modal-body #right {
     margin-left: 0;
   }
+
   #spots-modal-body #left li {
     height: 100px;
     line-height: 100px;
@@ -154,17 +150,18 @@
     cursor: pointer;
     background: $primary-color;
   }
+
   .user-spots .form-control {
     margin-top: 30px;
     width: 200px;
   }
+
   .user-spots ul {
     padding-left: 0;
     text-align: center;
   }
 }
 
-/* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
   #spots-modal-header {
     background: $primary-color;
@@ -175,9 +172,11 @@
     width: 100%;
     height: 200px;
   }
+
   #spots-modal-body #right {
     margin-left: 0;
   }
+
   #spots-modal-body #left li {
     height: 100px;
     line-height: 100px;
@@ -185,6 +184,7 @@
     cursor: pointer;
     background: $primary-color;
   }
+
   .user-spots .form-control {
     margin-top: 30px;
     width: 200px;
@@ -196,12 +196,10 @@
   }
 }
 
-/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1200px) {
 
 }
 
-/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
 }
