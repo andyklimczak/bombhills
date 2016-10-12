@@ -11,21 +11,20 @@
 
 
 // load dependency/gem css files
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "bourbon";
-@import "leaflet";
-@import "chosen";
-@import "font-awesome";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'bourbon';
+@import 'leaflet';
+@import 'chosen';
+@import 'font-awesome';
 
 // load global to set variables
-@import "global";
-@import "welcome/*";
-@import "meetups/*";
-@import "devise/*";
-@import "users/*";
-@import "posts/*";
-@import "layouts/*";
-@import "spots/*";
-@import "mailbox/*";
-
+@import 'global';
+@import 'welcome/*';
+@import 'meetups/*';
+@import 'devise/*';
+@import 'users/*';
+@import 'posts/*';
+@import 'layouts/*';
+@import 'spots/*';
+@import 'mailbox/*';
