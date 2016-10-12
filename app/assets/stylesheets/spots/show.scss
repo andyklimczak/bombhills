@@ -1,9 +1,7 @@
-
-
 .show-spot-container {
+  @include display(flex);
   height: inherit;
   padding-top: 54px;
-  @include display(flex);
 
   .random-image-1 {
     background: url('pier.jpg');
@@ -26,16 +24,14 @@
   }
 
   .side-image-container {
-    height: inherit;
-    background-size: cover;
-    background-position: center;
     @include flex-grow(10);
     @include flex-basis(0);
+    background-position: center;
+    background-size: cover;
+    height: inherit;
   }
 
   .menu-container {
-    height: inherit;
-    background: $grey;
     @include flex-grow(1);
     @include flex-basis(0);
 
@@ -44,33 +40,36 @@
     @include justify-content(center);
     @include align-content(center);
     @include align-items(center);
+    background: $grey;
+    height: inherit;
 
     .glyphicon {
-      margin: 15px 0px;
-      font-size: 20px;
       color: $black;
+      font-size: 20px;
+      margin: 15px 0;
     }
 
     .menu-child {
-      cursor: pointer;
-      width: 100px;
-      color: $black;
-      letter-spacing: 1px;
       @include flex-grow(1);
       @include display(flex);
       @include flex-direction(column);
       @include justify-content(center);
       @include align-content(center);
       @include align-items(center);
+      cursor: pointer;
+      width: 100px;
+      color: $black;
+      letter-spacing: 1px;
 
       &.active {
         background: $primary-color;
         color: $white;
+
+        .glyphicon {
+          color: $white;
+        }
       }
 
-      &.active .glyphicon {
-        color: $white;
-      }
 
       &:hover:not(.active) {
         border-right: thick solid $primary-color;
@@ -79,38 +78,38 @@
   }
 
   .spot-info-container {
-    padding: 20px 0;
-    height: inherit;
     @include flex-grow(10);
     @include flex-basis(0);
-    box-shadow: -5px 3px 18px -3px rgba(0,0,0,0.30);
+    box-shadow: -5px 3px 18px -3px rgba(0, 0, 0, .30);
+    height: inherit;
+    padding: 20px 0;
 
     .spot-info-content h1 {
-      font-family: 'Kanit', sans-serif;
       color: $primary-color;
+      font-family: 'Kanit', sans-serif;
       font-weight: $thin;
       font-size: 64px;
       letter-spacing: 1px;
     }
 
     .spot-info-content h6 {
+      color: $primary-color;
       font-family: 'Kanit', sans-serif;
       font-weight: 100;
       font-size: 26px;
-      color: $primary-color;
     }
 
     .spot-info-content p {
-      font-family: 'Kanit', sans-serif;
-      font-weight: 100;
-      font-size: 22px;
       color: $black;
+      font-family: 'Kanit', sans-serif;
+      font-size: 22px;
+      font-weight: 100;
     }
 
     .spot-info-content mark {
       color: $primary-color;
-      padding: 0px;
-      background: none;
+      background: 0;
+      padding: 0;
     }
 
     .show-spot-content {
@@ -118,124 +117,48 @@
       padding: 2em;
     }
 
-    /* spot meetups content */
-
-    .spot-meetups-content {
-      text-align: left;
-    }
+    // spot meetups content
 
     .spot-meetups-content {
       font-family: 'Kanit', sans-serif;
       font-weight: $thin;
+      text-align: left;
 
       p {
-        line-height: 22px;
         font-size: 22px;
+        line-height: 22px;
       }
 
       a {
-        font-size: 26px;
-        color: $white;
-        padding: 5px 10px;
-        border-radius: 2px;
         background: $black;
+        border-radius: 2px;
+        color: $white;
         cursor: pointer;
+        font-size: 26px;
+        padding: 5px 10px;
       }
-    }
 
-    .spot-meetups-content a:hover {
-      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     .create-meetup-btn {
       margin-bottom: 25px;
     }
-
-    /* comment box css */
-
-    .detailBox {
-      width:320px;
-      border:1px solid #bbb;
-      margin:50px;
-    }
-    .titleBox {
-      background-color:#fdfdfd;
-      padding:10px;
-    }
-    .titleBox label{
-      color:#444;
-      margin:0;
-      display:inline-block;
-    }
-
-    .commentBox {
-      padding:10px;
-      border-top:1px dotted #bbb;
-    }
-    .commentBox .form-group:first-child, .actionBox .form-group:first-child {
-      width:80%;
-    }
-    .commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
-      width:18%;
-    }
-    .actionBox .form-group * {
-      width:100%;
-    }
-    .taskDescription {
-      margin-top:10px 0;
-    }
-    .commentList {
-      padding:0;
-      list-style:none;
-      max-height:200px;
-      overflow:auto;
-    }
-    .commentList li {
-      margin:0;
-      margin-top:10px;
-    }
-    .commentList li > div {
-      display:table-cell;
-    }
-    .commenterImage {
-      width:30px;
-      margin-right:5px;
-      height:100%;
-      float:left;
-    }
-    .commenterImage img {
-      width:100%;
-      border-radius:50%;
-    }
-    .commentText p {
-      margin:0;
-    }
-    .sub-text {
-      color:#aaa;
-      font-family:verdana;
-      font-size:11px;
-    }
-    .actionBox {
-      border-top:1px dotted #bbb;
-      padding:10px;
-    }
-
   }
-
 }
-
-/*  Media Queries  */
-
-/* Custom */
 
 @media only screen and (max-width: 370px) {
   .show-spot-container .menu-container .menu-child {
     width: 75px;
   }
+
   .show-spot-container .spot-info-container .spot-meetups-content a {
     font-size: 16px;
     padding: 4px 8px;
   }
+
   .show-spot-container .spot-info-container .spot-info-content h1 {
     font-size: 32px;
   }
@@ -249,6 +172,7 @@
   .show-spot-container .menu-container .menu-child {
     width: 75px;
   }
+
   .show-spot-container .spot-info-container .spot-meetups-content a {
     font-size: 16px;
     padding: 4px 8px;
@@ -259,27 +183,22 @@
   }
 }
 
-/* Custom, iPhone Retina */
 @media only screen and (min-width: 472px) and (max-width : 565px) {
 
 }
 
-/* Extra Small Devices, Phones */
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
 
 }
 
-/* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
 
 }
 
-/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1200px) {
 
 }
 
-/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
 }

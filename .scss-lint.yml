@@ -13,3 +13,5 @@ linters:
     enabled: false
   QualifyingElement:
     enabled: false
+  PropertySortOrder:
+    enabled: false
