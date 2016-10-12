@@ -1,4 +1,3 @@
-
 .post-container {
   font-family: $font-stack;
 
@@ -7,16 +6,17 @@
 
     .extra-info {
       margin: 2em 0;
-      
+
       ul {
         list-style-type: none;
-        padding: 0px;
-        margin: 0px;
+        padding: 0;
+        margin: 0;
         overflow: auto;
-        
+
         li:first-child {
           float: left;
         }
+
         li:last-child {
           float: right;
         }
@@ -24,15 +24,15 @@
     }
 
     .image {
-      margin-top: 70px;
       @include display(flex);
       @include justify-content(center);
+      margin-top: 70px;
     }
 
     mark {
       color: $primary-color;
-      padding: 0px;
-      margin: 0px;
+      padding: 0;
+      margin: 0;
       background: none;
     }
 
@@ -49,7 +49,7 @@
 
       &:hover {
         text-decoration: none;
-        background: #1E3056;
+        background: #1e3056;
       }
     }
 
@@ -60,18 +60,8 @@
         background: none;
       }
     }
-    
-    .profile-back-btn {
-     
-    }
   }
 }
-
-/*  Media Queries  */
-
-/* Custom */
-
-/* Custom, iPhone Retina */
 
 @media only screen and (max-width : 480px) {
   .post-container .post-info .extra-info ul li:last-child {
@@ -79,23 +69,18 @@
   }
 }
 
-
-/* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) and (max-width : 768px) {
 
 }
 
-/* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
 }
 
-/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 
 }
 
-/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
 }
