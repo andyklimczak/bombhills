@@ -3,56 +3,56 @@
   background: $primary-color;
   height: 100vh;
   display: flex;
-  justify-content:center;
-  align-content:center;
-  flex-direction:column;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   background-size: cover;
-}
 
-.login h2 {
-  margin: 0;
-  padding-bottom: 10px;
-  font-family: $font-stack;
-  font-weight: $thin;
-  font-size: 43px;
-  color: $white;
-}
+  h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-family: $font-stack;
+    font-weight: $thin;
+    font-size: 43px;
+    color: $white;
+  }
 
-.login mark {
-  color: $white;
-  padding: 0;
-  background: none;
-}
+  mark {
+    color: $white;
+    padding: 0;
+    background: none;
+  }
 
-.login a {
-  font-size: 20px;
-  font-weight: 400;
-  padding: 6px 0;
-  color: $white;
-}
+  a {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 6px 0;
+    color: $white;
 
-.login a:hover {
-  color: $white;
-  background: none;
-  text-decoration: none;
-}
+    &:hover {
+      color: $white;
+      background: none;
+      text-decoration: none;
+    }
+  }
 
-.login label {
-  font-family: $font-stack;
-  font-weight: 300;
-  font-size: 22px;
-  margin: 5px 0px;
-  color: $white;
-}
+  label {
+    font-family: $font-stack;
+    font-weight: 300;
+    font-size: 22px;
+    margin: 5px 0;
+    color: $white;
+  }
 
-.login input {
-  padding: 12px 12px;
-  color: $white;
-  background: none;
-  border-left: none;
-  border-top: none;
-  border-right: none;
-  border-bottom: thin solid $white;
+  input {
+    padding: 12px;
+    color: $white;
+    background: none;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: thin solid $white;
+  }
 }
 
 #remember-me-field label {
