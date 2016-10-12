@@ -17,16 +17,16 @@
       <ul>
         <li>
           <p>
-            <mark>Uploaded By:</mark>
-            </br>
-            </br>
-            <%= link_to image_tag(@post.user.avatar.url(:thumb), class: 'message-avatar'), show_user_path(@post.user.username), class: 'user-avatar' %>
+            <mark>Uploaded:</mark>
+            <%= @post.created_at.strftime("%B %d, %Y") %>
           </p>
         </li>
         <li>
           <p>
-            <mark>Uploaded:</mark>
-            <%= @post.created_at.strftime("%B %d, %Y") %>
+            <mark>Uploaded By:</mark>
+            </br>
+            </br>
+            <%= link_to image_tag(@post.user.avatar.url(:thumb), class: 'message-avatar'), show_user_path(@post.user.username), class: 'user-avatar' %>
           </p>
         </li>
       </ul>
@@ -36,7 +36,7 @@
           <mark>Location:</mark>
           </br>
           </br>
-          <%= link_to @post.spot.title, spot_path(@post.spot) %>
+          <%= link_to 'Spot', spot_path(@post.spot) %>
         </p>
       <% end %>
 

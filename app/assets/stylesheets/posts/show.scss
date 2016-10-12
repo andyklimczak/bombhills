@@ -1,3 +1,4 @@
+
 .post-container {
   font-family: $font-stack;
 
@@ -30,6 +31,9 @@
 
     mark {
       color: $primary-color;
+      padding: 0px;
+      margin: 0px;
+      background: none;
     }
 
     h1 {
@@ -61,4 +65,37 @@
      
     }
   }
+}
+
+/*  Media Queries  */
+
+/* Custom */
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width : 480px) {
+  .post-container .post-info .extra-info ul li:last-child {
+    float: left;
+  }
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
 }
