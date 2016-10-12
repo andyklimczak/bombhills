@@ -1,35 +1,35 @@
 .meetups {
+  @include display(flex);
   background: $primary-color;
   color: $white;
   text-align: center;
   height: 100vh;
-  display: flex;
-  justify-content:center;
-  align-content:center;
-  flex-direction:column;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   background-size: cover;
-}
 
-.meetups h1 {
-  font-family: $font-stack;
-  font-weight: $thin;
-}
+  h1 {
+    font-family: $font-stack;
+    font-weight: $thin;
+  }
 
-.meetups h2 {
-  font-family: $font-stack;
-  font-weight: $thin;
-}
+  h2 {
+    font-family: $font-stack;
+    font-weight: $thin;
+  }
 
-.meetups input {
-  border-left: none;
-  border-top: none;
-  border-right: none;
-  background: none;
-  border-bottom: thin solid $white;
+  input {
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    background: none;
+    border-bottom: thin solid $white;
+  }
 }
 
 .meetups-btn {
-  color: #0D003D;
+  color: #0d003d;
   background: $white;
   padding: 5px 10px;
   border-radius: 6px;
@@ -37,9 +37,8 @@
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-}
 
-.meetups-btn:hover {
-  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
-
