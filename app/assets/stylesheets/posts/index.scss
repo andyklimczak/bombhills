@@ -8,6 +8,7 @@
 }
 
 .caption h3 {
+  font-weight: $bold;
   margin-top: 0;
   color: $white;
   background-color: $primary-color;
@@ -30,7 +31,7 @@
 
 .user-posts h1 {
   font-family: $font-stack;
-  font-weight: $thin;
+  font-weight: $bold;
   text-align: center;
   margin-top: 0;
   padding: 20px 0;

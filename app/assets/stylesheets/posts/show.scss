@@ -6,6 +6,20 @@
 
     .extra-info {
       margin: 2em 0;
+      
+      ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        overflow: auto;
+        
+        li:first-child {
+          float: left;
+        }
+        li:last-child {
+          float: right;
+        }
+      }
     }
 
     .image {
@@ -19,7 +33,7 @@
     }
 
     h1 {
-      font-weight: $thin;
+      font-weight: $bold;
     }
 
     a {
@@ -41,6 +55,10 @@
       &:hover {
         background: none;
       }
+    }
+    
+    .profile-back-btn {
+     
     }
   }
 }
