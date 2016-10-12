@@ -1,26 +1,26 @@
 .signup {
-  text-align: center;
-  height: 100vh;
-  display: flex;
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-content(center);
   background: $primary-color;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
   background-size: cover;
+  height: 100vh;
+  text-align: center;
 
   h2 {
+    color: $white;
+    font-family: $font-stack;
+    font-size: 43px;
+    font-weight: $thin;
     margin: 0;
     padding-bottom: 10px;
-    font-family: $font-stack;
-    font-weight: $thin;
-    font-size: 43px;
-    color: $white;
   }
 
   mark {
+    background: none;
     color: $white;
     padding: 0;
-    background: none;
   }
 
   a {
@@ -33,21 +33,21 @@
   }
 
   label {
-    font-family: $font-stack;
-    font-weight: 400;
-    font-size: 22px;
-    margin: 5px 0;
     color: $white;
+    font-family: $font-stack;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 5px 0;
   }
 
   input {
-    padding: 12px;
-    color: $white;
     background: 0;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
     border-bottom: thin solid $white;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    color: $white;
+    padding: 12px;
   }
 }
 

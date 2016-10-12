@@ -56,10 +56,10 @@
       @include justify-content(center);
       @include align-content(center);
       @include align-items(center);
-      cursor: pointer;
-      width: 100px;
       color: $black;
+      cursor: pointer;
       letter-spacing: 1px;
+      width: 100px;
 
       &.active {
         background: $primary-color;
@@ -87,16 +87,16 @@
     .spot-info-content h1 {
       color: $primary-color;
       font-family: 'Kanit', sans-serif;
-      font-weight: $thin;
       font-size: 64px;
+      font-weight: $thin;
       letter-spacing: 1px;
     }
 
     .spot-info-content h6 {
       color: $primary-color;
       font-family: 'Kanit', sans-serif;
-      font-weight: 100;
       font-size: 26px;
+      font-weight: 100;
     }
 
     .spot-info-content p {
@@ -107,8 +107,8 @@
     }
 
     .spot-info-content mark {
-      color: $primary-color;
       background: 0;
+      color: $primary-color;
       padding: 0;
     }
 

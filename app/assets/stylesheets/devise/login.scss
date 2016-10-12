@@ -1,57 +1,57 @@
 .login {
-  text-align: center;
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-content(center);
   background: $primary-color;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
   background-size: cover;
+  height: 100vh;
+  text-align: center;
 
   h2 {
+    color: $white;
+    font-family: $font-stack;
+    font-size: 43px;
+    font-weight: $thin;
     margin: 0;
     padding-bottom: 10px;
-    font-family: $font-stack;
-    font-weight: $thin;
-    font-size: 43px;
-    color: $white;
   }
 
   mark {
+    background: none;
     color: $white;
     padding: 0;
-    background: none;
   }
 
   a {
+    color: $white;
     font-size: 20px;
     font-weight: 400;
     padding: 6px 0;
-    color: $white;
 
     &:hover {
-      color: $white;
       background: none;
+      color: $white;
       text-decoration: none;
     }
   }
 
   label {
-    font-family: $font-stack;
-    font-weight: 300;
-    font-size: 22px;
-    margin: 5px 0;
     color: $white;
+    font-family: $font-stack;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 5px 0;
   }
 
   input {
-    padding: 12px;
-    color: $white;
     background: none;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
     border-bottom: thin solid $white;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    color: $white;
+    padding: 12px;
   }
 }
 

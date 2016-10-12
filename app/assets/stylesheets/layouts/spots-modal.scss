@@ -10,22 +10,22 @@
 
   #left {
     background: $primary-color;
-    position: absolute;
     height: 400px;
+    position: absolute;
     width: 150px;
 
     ul {
+      color: $white;
       list-style-type: none;
       padding: 0;
-      color: $white;
     }
 
     li {
+      background: $primary-color;
+      cursor: pointer;
       height: 200px;
       line-height: 200px;
       text-align: center;
-      cursor: pointer;
-      background: $primary-color;
 
       &:hover {
         background: $black;
@@ -35,31 +35,31 @@
 
 
   #right {
-    margin-left: 150px;
     background: $tertiary-color;
     height: 400px;
+    margin-left: 150px;
     padding: 10px;
   }
 }
 
 .user-spots p {
-  text-align: center;
   color: $white;
-  font-size: 24px;
   font-family: 'Kanit', sans-serif;
+  font-size: 24px;
   font-weight: $thin;
+  text-align: center;
 }
 
 .user-spots .form-control {
+  background: none;
+  border: 0;
+  border-bottom: thin solid $primary-color;
+  border-radius: 0;
+  color: $white;
   margin-left: auto;
   margin-right: auto;
   margin-top: 175px;
   width: 300px;
-  border-radius: 0;
-  border: 0;
-  color: $white;
-  border-bottom: thin solid $primary-color;
-  background: none;
 }
 
 #spots-edit-btn, #spots-btn {
@@ -72,11 +72,11 @@
 }
 
 .user-spots-edit .form-control {
-  color: $white;
-  border-radius: 0;
-  border: 0;
   background: none;
+  border: 0;
   border-bottom: thin solid $primary-color;
+  border-radius: 0;
+  color: $white;
 }
 
 .user-spots ul {
@@ -85,8 +85,8 @@
 }
 
 .user-spots li {
-  display: inline;
   cursor: pointer;
+  display: inline;
 }
 
 .user-spots li:last-child {
@@ -100,9 +100,9 @@
   }
 
   #spots-modal-body #left {
+    height: 200px;
     position: inherit;
     width: 100%;
-    height: 200px;
   }
 
   #spots-modal-body #right {
@@ -110,11 +110,11 @@
   }
 
   #spots-modal-body #left li {
+    background: $primary-color;
+    cursor: pointer;
     height: 100px;
     line-height: 100px;
     text-align: center;
-    cursor: pointer;
-    background: $primary-color;
   }
 
   .user-spots .form-control {
@@ -134,9 +134,9 @@
   }
 
   #spots-modal-body #left {
+    height: 200px;
     position: inherit;
     width: 100%;
-    height: 200px;
   }
 
   #spots-modal-body #right {
@@ -144,11 +144,11 @@
   }
 
   #spots-modal-body #left li {
+    background: $primary-color;
+    cursor: pointer;
     height: 100px;
     line-height: 100px;
     text-align: center;
-    cursor: pointer;
-    background: $primary-color;
   }
 
   .user-spots .form-control {
@@ -168,9 +168,9 @@
   }
 
   #spots-modal-body #left {
+    height: 200px;
     position: inherit;
     width: 100%;
-    height: 200px;
   }
 
   #spots-modal-body #right {
@@ -178,11 +178,11 @@
   }
 
   #spots-modal-body #left li {
+    background: $primary-color;
+    cursor: pointer;
     height: 100px;
     line-height: 100px;
     text-align: center;
-    cursor: pointer;
-    background: $primary-color;
   }
 
   .user-spots .form-control {

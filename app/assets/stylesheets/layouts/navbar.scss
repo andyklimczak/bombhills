@@ -1,6 +1,6 @@
 #nav-search-bar {
-  padding: 0;
   border-radius: 0;
+  padding: 0;
 }
 
 #navbar-search-btn {
@@ -14,8 +14,8 @@
 }
 
 .nav li a {
-  font-family: $font-stack;
-  font-weight: 400;
-  font-size: 16px;
   color: $background-color;
+  font-family: $font-stack;
+  font-size: 16px;
+  font-weight: 400;
 }

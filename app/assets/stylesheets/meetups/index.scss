@@ -1,13 +1,13 @@
 .meetups {
   @include display(flex);
-  background: $primary-color;
-  color: $white;
-  text-align: center;
-  height: 100vh;
-  justify-content: center;
+  @include flex-direction(column);
+  @include justify-content(center);
   align-content: center;
-  flex-direction: column;
+  background: $primary-color;
   background-size: cover;
+  color: $white;
+  height: 100vh;
+  text-align: center;
 
   h1 {
     font-family: $font-stack;
@@ -20,23 +20,23 @@
   }
 
   input {
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
     background: none;
     border-bottom: thin solid $white;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
   }
 }
 
 .meetups-btn {
-  color: #0d003d;
   background: $white;
-  padding: 5px 10px;
   border-radius: 6px;
+  color: #0d003d;
+  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 5px 10px;
 
   &:hover {
     text-decoration: none;

@@ -13,42 +13,42 @@
 #edit-profile-image {
   @include display(flex);
   @include align-items(center);
-  height: 275px;
   background: #ededed;
+  height: 275px;
 
   img {
-    margin: 0 auto;
-    height: 50%;
     border-radius: 50%;
+    height: 50%;
+    margin: 0 auto;
   }
 }
 
 #edit-profile-motto {
   @include display(flex);
   @include align-items(center);
-  height: 275px;
   background: $primary-color;
+  height: 275px;
   text-align: center;
 
   input {
-    margin: 0 auto;
     border: 0;
     color: $background-color;
     font-family: $font-stack;
     font-weight: 600;
+    margin: 0 auto;
     padding: 25px;
   }
 }
 
 #edit-profile-show {
-  height: 550px;
-  padding-left: 20px;
   background: #e5e5e5;
   font-family: $font-stack;
+  height: 550px;
+  padding-left: 20px;
 
   h3 {
-    font-weight: 400;
     color: #2e3133;
+    font-weight: 400;
   }
 
   input {
@@ -59,8 +59,8 @@
 
   ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   li {
@@ -68,10 +68,10 @@
     margin: 0 10px;
 
     a {
-      color: $white;
       background: $primary-color;
-      padding: 10px;
+      color: $white;
       cursor: pointer;
+      padding: 10px;
 
       &:hover {
         text-decoration: none;
@@ -79,8 +79,8 @@
     }
 
     input {
-      padding: 10px;
       cursor: pointer;
+      padding: 10px;
     }
   }
 }
@@ -92,9 +92,9 @@
 }
 
 .cancel-account {
-  height: 250px;
   background: $primary-color;
   color: $white;
+  height: 250px;
   padding: 30px;
 
   a {
@@ -103,14 +103,14 @@
   }
 
   input {
-    padding: 10px;
     color: #2e3133;
+    padding: 10px;
   }
 }
 
 .user-post {
-  padding: 0;
   margin-top: 10px;
+  padding: 0;
 }
 
 @media only screen and (max-width : 480px) {
