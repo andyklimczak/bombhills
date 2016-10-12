@@ -11,101 +11,101 @@
 }
 
 #edit-profile-image {
-  height: 275px;
-  background: #EDEDED;
   @include display(flex);
   @include align-items(center);
-}
+  height: 275px;
+  background: #ededed;
 
-#edit-profile-image img {
-  margin: 0 auto;
-  height: 50%;
-  border-radius: 50%;
+  img {
+    margin: 0 auto;
+    height: 50%;
+    border-radius: 50%;
+  }
 }
 
 #edit-profile-motto {
+  @include display(flex);
+  @include align-items(center);
   height: 275px;
   background: $primary-color;
   text-align: center;
-  @include display(flex);
-  @include align-items(center);
-}
 
-#edit-profile-motto input {
-  margin: 0 auto;
-  border: 0;
-  color: $background-color;
-  font-family: $font-stack;
-  font-weight: 600;
-  padding: 25px 25px;
+  input {
+    margin: 0 auto;
+    border: 0;
+    color: $background-color;
+    font-family: $font-stack;
+    font-weight: 600;
+    padding: 25px;
+  }
 }
 
 #edit-profile-show {
   height: 550px;
   padding-left: 20px;
-  background: #E5E5E5;
+  background: #e5e5e5;
   font-family: $font-stack;
-}
 
-#edit-profile-show h3 {
-  font-weight: 400;
-  color: #2E3133;
-}
+  h3 {
+    font-weight: 400;
+    color: #2e3133;
+  }
 
-#edit-profile-show input {
-  border: 0;
-  color: $background-color;
-  padding: 5px 0;
-}
+  input {
+    border: 0;
+    color: $background-color;
+    padding: 5px 0;
+  }
 
-#edit-profile-show ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 
-#edit-profile-show li {
-  display: inline;
-  margin: 0 10px;
-}
+  li {
+    display: inline;
+    margin: 0 10px;
 
-#edit-profile-show li a {
-  color: $white;
-  background: $primary-color;
-  padding: 10px 10px;
-  cursor: pointer;
-}
+    a {
+      color: $white;
+      background: $primary-color;
+      padding: 10px;
+      cursor: pointer;
 
-#edit-profile-show li input {
-  padding: 10px 10px;
-  cursor: pointer;
-}
+      &:hover {
+        text-decoration: none;
+      }
+    }
 
-#edit-profile-show li a:hover {
-  text-decoration: none;
+    input {
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
 }
 
 .changepassword {
-  background: #3E3837;
+  background: #3e3837;
   color: $white;
-  padding: 30px 30px;
+  padding: 30px;
 }
 
 .cancel-account {
   height: 250px;
   background: $primary-color;
   color: $white;
-  padding: 30px 30px;
-}
+  padding: 30px;
 
-.cancel-account a {
-  color: $white;
-  text-decoration: none;
-}
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 
-.cancel-account input {
-  padding: 10px 10px;
-  color: #2E3133;
+  input {
+    padding: 10px;
+    color: #2e3133;
+  }
 }
 
 .user-post {
@@ -113,51 +113,44 @@
   margin-top: 10px;
 }
 
-/*  Media Queries  */
-
-/* Custom */
-
-/* Custom, iPhone Retina */
-
 @media only screen and (max-width : 480px) {
   #edit-profile-motto {
     height: 75px;
   }
+
   #edit-profile-show {
     background: $white;
   }
+
   #edit-profile-show input {
     background: $background-color;
     color: $white;
   }
 }
 
-
-/* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) and (max-width : 768px) {
   #edit-profile-motto {
     height: 125px;
   }
+
   #edit-profile-show {
     background: $white;
   }
+
   #edit-profile-show input {
     background: $background-color;
     color: $white;
   }
 }
 
-/* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
 }
 
-/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 
 }
 
-/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
 }
