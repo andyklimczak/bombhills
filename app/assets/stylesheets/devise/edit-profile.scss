@@ -33,7 +33,7 @@
 
 #edit-profile-motto input {
   margin: 0 auto;
-  border: none;
+  border: 0;
   color: $background-color;
   font-family: $font-stack;
   font-weight: 600;
@@ -53,7 +53,7 @@
 }
 
 #edit-profile-show input {
-  border: none;
+  border: 0;
   color: $background-color;
   padding: 5px 0;
 }

@@ -1,4 +1,4 @@
-/* map */
+// map
 
 .dashboard {
   position: absolute;
@@ -7,7 +7,7 @@
   left: 0;
   z-index: 3;
   background-color: $white;
-  box-shadow: 6px 2px 40px -14px rgba(0,0,0,0.75);
+  box-shadow: 6px 2px 40px -14px rgba(0, 0, 0, .75);
 }
 
 .hamburger-btn {
@@ -18,7 +18,7 @@
   padding: 2px;
   padding-bottom: 0;
   border-radius: 6px;
-  box-shadow: -1px 6px 17px -8px rgba(0,0,0,0.75);
+  box-shadow: -1px 6px 17px -8px rgba(0, 0, 0, .75);
 }
 
 #hamburger-btn {
@@ -31,55 +31,55 @@
   cursor: pointer;
 }
 
-.nav-tools ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 #dash-title a {
   font-family: $font-stack;
   font-weight: $thin;
   font-size: 24px;
 }
 
-.nav-tools li {
-  height: 60px;
-  cursor: pointer;
-  line-height: 70px;
-  text-align: left;
-  padding-left: 28px;
-}
+.nav-tools {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-.nav-tools li p {
-  font-family: $font-stack;
-  font-weight: $thin;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 20px;
-  letter-spacing: 1px;
+  li {
+    height: 60px;
+    cursor: pointer;
+    line-height: 70px;
+    text-align: left;
+    padding-left: 28px;
 
-}
+    p {
+      font-family: $font-stack;
+      font-weight: $thin;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
 
-.nav-tools li a {
-  font-family: $font-stack;
-  font-weight: $thin;
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 1px;
-  text-decoration: none;
-  font-size: 20px;
-  color: $black;
+    a {
+      font-family: $font-stack;
+      font-weight: $thin;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 1px;
+      text-decoration: none;
+      font-size: 20px;
+      color: $black;
 
-}
+      &:hover {
+        background: none;
+      }
+    }
 
-.nav-tools li a:hover {
-  background: none;
-}
-
-.nav-tools li img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
 }
 
 .input-group {
@@ -110,21 +110,21 @@
 
     #search-input {
       border-bottom: thin solid $primary-color;
-      border-left: none;
-      border-right: none;
-      border-top: none;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
       border-width: 2px;
       width: 175px;
       font-size: 20px;
-      color: #142CA4;
+      color: #142ca4;
       background: $white;
       text-align: left;
       font-family: $font-stack;
       font-weight: $thin;
 
-    }
-    #search-input.form-control {
-      padding-left: 4px;
+      .form-control {
+        padding-left: 4px;
+      }
     }
   }
 }
@@ -136,16 +136,12 @@
   border-radius: 6px;
   font-size: 20px;
   color: $black;
-  box-shadow: 1px 17px 31px -9px rgba(0,0,0,0.75);
+  box-shadow: 1px 17px 31px -9px rgba(0, 0, 0, .75);
 }
 
 #map-error-login-btn:hover {
   color: $black;
   text-decoration: none;
-}
-
-#myMap {
-
 }
 
 #fullscreen-btn {
@@ -160,40 +156,42 @@
   margin-right: 15px;
   font-size: 16px;
   height: 52px;
-  box-shadow: 1px 17px 31px -9px rgba(0,0,0,0.75);
+  box-shadow: 1px 17px 31px -9px rgba(0, 0, 0, .75);
 }
 
 #new-location-error-modal-button {
-  border: none;
+  border: 0;
 }
 
 .leaflet-popup-content-wrapper {
   background: $primary-color;
   color: $white;
+
+  b {
+    font-family: $font-stack;
+    font-weight: $thin;
+    font-size: 32px;
+  }
+
+  a {
+    font-size: 24px;
+    color: $white;
+    font-weight: $thin;
+
+    &:hover {
+      background: none;
+      cursor: pointer;
+      color: #233e47;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      font-size: 18px;
+    }
+  }
+
 }
 
-.leaflet-popup-content-wrapper b {
-  font-family: $font-stack;
-  font-weight: $thin;
-  font-size: 32px;
-}
-
-.leaflet-popup-content-wrapper a {
-  font-size: 24px;
-  color: $white;
-  font-weight: $thin;
-}
-
-.leaflet-popup-content-wrapper a:hover {
-  background: none;
-  cursor: pointer;
-  color: #233E47;
-  text-decoration: none;
-}
-
-.leaflet-popup-content-wrapper a:last-child {
-  font-size: 18px;
-}
 
 .spots-btn, .spots-edit-btn {
   font-size: 50px;
@@ -205,20 +203,21 @@
 }
 
 #new-location-error {
+
   .modal-content {
-    background: #CF3530;
+    background: #cf3530;
     padding-bottom: 10px;
   }
 
   .modal-header {
-    background: #CF3530;
-    border: none;
+    background: #cf3530;
+    border: 0;
     color: $white;
   }
 
   .modal-body {
     color: $white;
-    background: #CF3530;
+    background: #cf3530;
 
     p {
       margin-bottom: 30px;
@@ -227,12 +226,13 @@
 
   .modal-footer {
     color: $white;
-    background: #CF3530;
-    border:none;
+    background: #cf3530;
+    border: 0;
   }
 }
 
 .spots-index {
+
   .input-group {
     padding-right: 0;
     padding-top: 15px;
@@ -243,6 +243,7 @@
   }
 
   #map-id {
+
     #hamburger-btn span {
       font-size: 40px;
     }
@@ -261,14 +262,11 @@
   }
 }
 
-/*  Media Queries  */
-
-/* Custom */
-
 @media only screen and (max-width: 370px) {
   .dashboard {
     left: -100%;
   }
+
   .alert {
     font-size: 14px;
   }
@@ -281,50 +279,45 @@
   }
 }
 
-/* Custom, iPhone Retina */
 @media only screen and (min-width: 472px) and (max-width : 565px) {
 
 }
 
-/* Extra Small Devices, Phones */
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
 
 
 }
 
-/* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
 
 }
 
-/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1200px) {
 
 }
 
-/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
 }
 
-/* report modal */
+// report modal
 
 #report-modal {
   background: $primary-color;
-}
 
-#report-modal .modal-header {
-  border: none;
-}
+  .modal-header {
+    border: 0;
 
-#report-modal .modal-header h4 {
-  font-family: $font-stack;
-  font-weight: $thin;
-  font-size: 36px;
-  color: $primary-color;
-}
+    h4 {
+      font-family: $font-stack;
+      font-weight: $thin;
+      font-size: 36px;
+      color: $primary-color;
+    }
+  }
 
 
-#report-modal .modal-footer {
-  border: none;
+  .modal-footer {
+    border: 0;
+  }
 }

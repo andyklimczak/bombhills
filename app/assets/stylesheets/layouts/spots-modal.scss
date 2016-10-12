@@ -4,7 +4,7 @@
 
 #spots-modal-header {
   background: $background-color;
-  border: none;
+  border: 0;
 }
 
 #spots-modal-body {
@@ -58,7 +58,7 @@
   margin-top: 175px;
   width: 300px;
   border-radius: 0;
-  border: none;
+  border: 0;
   color: $white;
   border-bottom: thin solid $primary-color;
   background: none;
@@ -77,7 +77,7 @@
   background: $primary-color;
   color: $white;
   border-radius: 0;
-  border: none;
+  border: 0;
   background: none;
   border-bottom: thin solid $primary-color;
 }

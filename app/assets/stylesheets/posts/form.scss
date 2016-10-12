@@ -5,7 +5,7 @@
 
   .modal-header {
     background:#066964;
-    border: none;
+    border: 0;
     color: $white;
   }
 
@@ -14,7 +14,7 @@
   }
 
   .nav-tabs {
-    border: none;
+    border: 0;
 
     &:first-child {
       margin-left: 0;
