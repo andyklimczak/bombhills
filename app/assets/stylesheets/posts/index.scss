@@ -1,52 +1,61 @@
+.thumbnail {
+  border: 0;
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.caption {
+  h3 {
+    font-weight: $bold;
+    margin-top: 0;
+    color: $white;
+    background-color: $primary-color;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin-bottom: 15px;
+    color: $background-color;
+  }
+}
+
 .user-posts {
   padding-top: 60px;
   padding-bottom: 40px;
-}
 
-.thumbnail {
-  border: 0;
-}
+  h1 {
+    font-family: $font-stack;
+    font-weight: $bold;
+    text-align: center;
+    margin-top: 0;
+    padding: 20px 0;
+  }
 
-.caption h3 {
-  font-weight: $bold;
-  margin-top: 0;
-  color: $white;
-  background-color: $primary-color;
-  padding: 5px;
-  cursor: pointer;
-}
+  p {
+    font-family: $font-stack;
+    font-weight: $thin;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 17px;
+  }
 
-.caption h3:hover {
-  background-color: $black;
-}
-
-.caption a:hover {
-  text-decoration: none;
-}
-
-.caption p {
-  margin-bottom: 15px;
-  color: $background-color;
-}
-
-.user-posts h1 {
-  font-family: $font-stack;
-  font-weight: $bold;
-  text-align: center;
-  margin-top: 0;
-  padding: 20px 0;
-}
-
-.user-posts p {
-  font-family: $font-stack;
-  font-weight: $thin;
-  text-align: left;
-  margin-bottom: 30px;
-  font-size: 17px;
-}
-
-.user-posts img {
-  margin-bottom: 20px;
+  img {
+    margin-bottom: 20px;
+  }
 }
 
 #user-btn {
@@ -55,16 +64,6 @@
   margin-right: 5px;
 }
 
-.thumbnail iframe {
-  height: 100%;
-  width: 100%;
-}
-/*  Media Queries  */
-
-/* Custom */
-
-/* Custom, iPhone Retina */
-
 @media only screen and (max-width : 480px) {
   .user-posts ul {
     text-align: right;
@@ -72,6 +71,7 @@
     margin-bottom: 20px;
     padding: 0;
   }
+
   #posts-container {
     padding: 0;
   }
@@ -92,7 +92,6 @@
 }
 
 
-/* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) and (max-width : 768px) {
   .user-posts ul {
     text-align: right;
@@ -100,6 +99,7 @@
     margin-bottom: 20px;
     padding: 0;
   }
+
   #posts-container {
     padding: 0;
   }
@@ -119,17 +119,14 @@
 
 }
 
-/* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
 }
 
-/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 
 }
 
-/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
 }
