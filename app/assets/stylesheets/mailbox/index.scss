@@ -8,16 +8,16 @@
 
 .message-nav-pills {
   float: inherit;
-}
 
-.message-nav-pills .btn-success {
-  background: $primary-color;
-  color: $white;
-}
+  .btn-success {
+    background: $primary-color;
+    color: $white;
 
-.message-nav-pills .btn-success:hover {
-  background: $primary-color;
-  border-color: $primary-color;
+    &:hover {
+      background: $primary-color;
+      border-color: $primary-color;
+    }
+  }
 }
 
 .message-avatar {
@@ -28,16 +28,13 @@
 #send-message-btn {
   background: $primary-color;
   color: $white;
+
+  &:hover {
+    background: $primary-color;
+    border-color: $primary-color;
+  }
 }
 
-#send-message-btn:hover {
-  background: $primary-color;
-  border-color: $primary-color;
-}
-
-/*  Media Queries  */
-
-/* Custom */
 @media only screen and (max-width: 370px) {
 
 }
@@ -46,27 +43,22 @@
 
 }
 
-/* Custom, iPhone Retina */
 @media only screen and (min-width: 472px) and (max-width : 565px) {
 
 }
 
-/* Extra Small Devices, Phones */
 @media only screen and (min-width : 565px ) and (max-width : 768px) {
 
 }
 
-/* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 992px) {
 
 }
 
-/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1200px) {
 
 }
 
-/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
 }
