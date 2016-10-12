@@ -3,60 +3,60 @@
   height: 100vh;
   display: flex;
   background: $primary-color;
-  justify-content:center;
-  align-content:center;
-  flex-direction:column;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   background-size: cover;
+
+  h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-family: $font-stack;
+    font-weight: $thin;
+    font-size: 43px;
+    color: $white;
+  }
+
+  mark {
+    color: $white;
+    padding: 0;
+    background: none;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      background: none;
+      text-decoration: none;
+    }
+  }
+
+  label {
+    font-family: $font-stack;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 5px 0;
+    color: $white;
+  }
+
+  input {
+    padding: 12px;
+    color: $white;
+    background: 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: thin solid $white;
+  }
 }
 
-.signup h2 {
-  margin: 0;
-  padding-bottom: 10px;
-  font-family: $font-stack;
-  font-weight: $thin;
-  font-size: 43px;
-  color: $white;
-}
-
-.signup mark {
-  color: $white;
-  padding: 0;
-  background: none;
-}
-
-.signup a {
-  color: $white;
-}
-
-.signup a:hover {
-  background: none;
-  text-decoration: none;
-}
-
-.signup label {
-  font-family: $font-stack;
-  font-weight: 400;
-  font-size: 22px;
-  margin: 5px 0px;
-  color: $white;
-}
-
-.signup input {
-  padding: 12px 12px;
-  color: $white;
-  background: none;
-  border-left: none;
-  border-top: none;
-  border-right: none;
-  border-bottom: thin solid $white;
-}
-
-.field_with_errors {
+.field-with-errors {
   margin: 0 auto;
 }
 
 #register-col-one {
-  background: #042E89;
+  background: #042e89;
   padding: 10px;
 }
 
