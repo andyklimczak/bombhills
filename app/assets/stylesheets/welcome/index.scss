@@ -395,7 +395,8 @@
     display: none;
   }
 
-  .display, .display p {
+  .display,
+  .display p {
     background: $white;
     color: $black;
   }
@@ -471,7 +472,9 @@
     display: none;
   }
 
-  .display, .display p, .display h2 {
+  .display,
+  .display p,
+  .display h2 {
     background: $white;
     color: $black;
   }

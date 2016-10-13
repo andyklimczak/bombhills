@@ -9,7 +9,11 @@ $font-stack: 'Kanit', sans-serif;
 $thin: 200;
 $bold: 800;
 
-html, body, .container-fluid, .wrapper, #map-id { height: 100%; }
+html,
+body,
+.container-fluid,
+.wrapper,
+#map-id { height: 100%; }
 
 body {
   background-color: $white;
@@ -18,7 +22,10 @@ body {
   line-height: 18px;
 }
 
-p, ol, ul, td {
+p,
+ol,
+ul,
+td {
   font-family: $font-stack;
   font-size: 13px;
   line-height: 18px;
@@ -44,7 +51,8 @@ a {
 }
 
 div {
-  &.field, &.actions {
+  &.field,
+  &.actions {
     margin-bottom: 10px;
   }
 }

@@ -8,7 +8,5 @@ linters:
     enabled: false
   NestingDepth:
     enabled: false
-  SingleLinePerSelector:
-    enabled: false
   SelectorDepth:
     enabled: false
