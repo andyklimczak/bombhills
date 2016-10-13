@@ -10,3 +10,5 @@ linters:
     enabled: false
   SelectorDepth:
     enabled: false
+  SelectorFormat:
+    ignored_names: ['field_with_errors']

@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-.field-with-errors {
+.field_with_errors {
   background-color: #ff0;
   display: table;
   margin: 0;
@@ -38,14 +38,13 @@
 
 }
 
-.meetups {
+.meetups select {
   background: 0;
   border-bottom: thin solid $white;
   border-left: 0;
   border-right: 0;
   border-top: 0;
   color: $white;
-
 }
 
 #new-meetup-submit input {
