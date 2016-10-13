@@ -12,5 +12,3 @@ linters:
     enabled: false
   SelectorDepth:
     enabled: false
-  QualifyingElement:
-    enabled: false
