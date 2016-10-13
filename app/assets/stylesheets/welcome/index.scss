@@ -112,7 +112,7 @@
   float: right;
   padding: 20px 15px;
 
-  li > a {
+  > li > a {
     background: $primary-color;
     border: solid;
     border-color: $primary-color;
@@ -122,6 +122,7 @@
     margin: 0 5px;
   }
 }
+
 
 #contact-btn {
   cursor: pointer;
