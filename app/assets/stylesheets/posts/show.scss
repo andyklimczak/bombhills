@@ -5,7 +5,7 @@
     margin-bottom: 3em;
 
     .extra-info {
-      margin: 2em 0;
+      padding: 0 0 3em;
 
       ul {
         list-style-type: none;
@@ -20,6 +20,10 @@
         li:last-child {
           float: right;
         }
+      }
+
+      .label-space {
+        padding-bottom: 1.5em;
       }
     }
 

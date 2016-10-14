@@ -17,11 +17,9 @@
   <% else %>
     <p>
       No meetups for this spot, why not create one?
-      <p>
-      <% end %>
+    </p>
+  <% end %>
 
-      <br>
+  <%= link_to 'New Meetup', new_spot_meetup_path, class: 'meetups-btn' %>
 
-      <%= link_to 'New Meetup', new_spot_meetup_path, class: 'meetups-btn' %>
-
-    </div>
+</div>

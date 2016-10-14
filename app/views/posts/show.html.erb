@@ -23,9 +23,9 @@
         </li>
         <li>
           <p>
-            <mark>Uploaded By:</mark>
-            </br>
-            </br>
+            <div class="label-space">
+              <mark>Uploaded By:</mark>
+            </div>
             <%= link_to image_tag(@post.user.avatar.url(:thumb), class: 'message-avatar'), show_user_path(@post.user.username), class: 'user-avatar' %>
           </p>
         </li>
@@ -33,9 +33,9 @@
 
       <% unless @post.spot.nil? %>
         <p>
-          <mark>Location:</mark>
-          </br>
-          </br>
+          <div class="label-space">
+            <mark>Location:</mark>
+          </div>
           <%= link_to 'Spot', spot_path(@post.spot) %>
         </p>
       <% end %>
