@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 class CommentsController < ApplicationController
-
   # POST /comments
   # POST /comments.json
   def create
@@ -29,5 +28,4 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:post_id, :body)
   end
-
 end
