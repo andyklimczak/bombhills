@@ -1,9 +1,15 @@
 <%= render 'layouts/navbar' %>
 <div class="container post-container">
   <div class="post-info col-xs-12 col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2">
+    <% if @post.type == 'ImagePost' %>
     <div class="image">
       <%= image_tag @post.image, class: 'img-responsive' %>
     </div>
+    <% else %>
+      <div class="video">
+        <%= embed @post.video_url %>
+      </div>
+    <% end %>
 
     <h1>
       <%= @post.title.upcase %>
@@ -39,7 +45,11 @@
           <%= link_to 'Spot', spot_path(@post.spot) %>
         </p>
       <% end %>
+    </div>
 
+    <div class="comments-container">
+      <h3>Comments</h3>
+      <%= react_component('PostComments', { post: JSON.parse(render(template: 'posts/show.json.jbuilder')), currentUser: current_user }) %>
     </div>
 
     <% if @post.user == current_user %>

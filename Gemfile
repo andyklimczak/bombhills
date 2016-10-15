@@ -31,6 +31,7 @@ gem 'underscore-rails'
 gem 'poltergeist'
 gem 'fetch-rails'
 gem 'react-rails'
+gem 'acts_as_commentable_with_threading'
 
 group :development, :test do
   gem 'rspec-rails'
