@@ -11,7 +11,7 @@ class PostCommentBox extends React.Component {
     this.setState({body: e.target.value});
   }
   handleSubmit(e) {
-    const data = { comment: { post_id: this.props.postId, body: this.state.body } }
+    const data = { comment: { commentable_id: this.props.commentableId, body: this.state.body, commentable_type: this.props.commentableType } }
     $.ajax({
       method: 'POST',
       url: '/comments',

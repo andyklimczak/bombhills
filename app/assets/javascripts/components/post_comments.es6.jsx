@@ -2,7 +2,7 @@ class PostComments extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: this.props.post.comments.reverse()
+      comments: this.props.resource.comments.reverse()
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
@@ -19,7 +19,7 @@ class PostComments extends React.Component {
   }
   renderCommentBox() {
     if(this.props.currentUser) {
-      return <PostCommentBox postId={this.props.post.id} handleSubmit={this.handleSubmit} />
+      return <PostCommentBox commentableId={this.props.resource.id} commentableType={this.props.commentableType} handleSubmit={this.handleSubmit} />
     }
   }
   renderComments() {

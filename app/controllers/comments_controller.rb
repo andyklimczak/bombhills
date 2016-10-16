@@ -3,10 +3,16 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    post = Post.find(comment_params['post_id'])
+    resource = nil
+    if(comment_params['commentable_type'] == 'post')
+      resource = Post.find(comment_params['commentable_id'])
+    elsif(comment_params['commentable_type'] == 'spot')
+      resource = Spot.find(comment_params['commentable_id'])
+    end
+
     body = comment_params['body']
 
-    @comment = Comment.build_from(post, current_user.id, body)
+    @comment = Comment.build_from(resource, current_user.id, body)
 
     if @comment.save
       render json: @comment, include: :user
@@ -26,6 +32,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:post_id, :body)
+    params.require(:comment).permit(:commentable_id, :commentable_type, :body)
   end
 end
