@@ -1,4 +1,4 @@
-class PostComment extends React.Component {
+class Comment extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
@@ -57,7 +57,7 @@ class PostComment extends React.Component {
   }
 }
 
-PostComment.propTypes = {
+Comment.propTypes = {
   body: React.PropTypes.string,
   user: React.PropTypes.object,
   createdAt: React.PropTypes.string,

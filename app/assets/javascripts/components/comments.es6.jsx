@@ -1,4 +1,4 @@
-class PostComments extends React.Component {
+class Comments extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,13 +19,13 @@ class PostComments extends React.Component {
   }
   renderCommentBox() {
     if(this.props.currentUser) {
-      return <PostCommentBox commentableId={this.props.resource.id} commentableType={this.props.commentableType} handleSubmit={this.handleSubmit} />
+      return <CommentBox commentableId={this.props.resource.id} commentableType={this.props.commentableType} handleSubmit={this.handleSubmit} />
     }
   }
   renderComments() {
     if(this.state.comments.length) {
       return this.state.comments.map((comment) => {
-        return <PostComment key={comment.id} commentId={comment.id} body={comment.body} user={comment.user} createdAt={comment.created_at} currentUser={this.props.currentUser} handleDelete={this.handleDelete} />
+        return <Comment key={comment.id} commentId={comment.id} body={comment.body} user={comment.user} createdAt={comment.created_at} currentUser={this.props.currentUser} handleDelete={this.handleDelete} />
       });
     } else {
       return <h4>No comments</h4>
@@ -41,7 +41,7 @@ class PostComments extends React.Component {
   }
 }
 
-PostComments.propTypes = {
+Comments.propTypes = {
   comments: React.PropTypes.array,
   currentUser: React.PropTypes.object
 };

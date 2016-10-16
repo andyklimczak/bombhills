@@ -1,4 +1,4 @@
-class PostCommentBox extends React.Component {
+class CommentBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,3 +37,7 @@ class PostCommentBox extends React.Component {
   }
 }
 
+CommentBox.propTypes = {
+  commentableId: React.PropTypes.number,
+  commentableType: React.PropTypes.string
+};
