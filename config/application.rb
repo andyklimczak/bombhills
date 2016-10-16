@@ -25,5 +25,7 @@ module BombHills
     config.public_file_server.enabled = true
     config.exceptions_app = self.routes
     config.react.addons = true
+    config.time_zone ='Eastern Time (US & Canada)'
+    config.active_record.default_timezone = :local
   end
 end

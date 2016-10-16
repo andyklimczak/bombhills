@@ -58,7 +58,7 @@
             <%= meetup.attending_users.count %> users coming
           </p>
           <p>
-            <%= meetup.time %>
+            <%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %>
           </p>
         <% end %>
       <% else %>
