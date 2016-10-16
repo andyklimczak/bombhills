@@ -24,6 +24,7 @@
 #
 
 class Spot < ApplicationRecord
+  acts_as_commentable
   belongs_to :user
   has_many :posts
   has_many :meetups

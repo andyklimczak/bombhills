@@ -3,17 +3,9 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    resource = nil
-    if(comment_params['commentable_type'] == 'post')
-      resource = Post.find(comment_params['commentable_id'])
-    elsif(comment_params['commentable_type'] == 'spot')
-      resource = Spot.find(comment_params['commentable_id'])
-    end
-
+    resource = find_commentable_resource
     body = comment_params['body']
-
     @comment = Comment.build_from(resource, current_user.id, body)
-
     if @comment.save
       render json: @comment, include: :user
     else
@@ -30,6 +22,14 @@ class CommentsController < ApplicationController
   end
 
   private
+
+  def find_commentable_resource
+    if comment_params['commentable_type'] == 'post'
+      Post.find(comment_params['commentable_id'])
+    elsif comment_params['commentable_type'] == 'spot'
+      Spot.find(comment_params['commentable_id'])
+    end
+  end
 
   def comment_params
     params.require(:comment).permit(:commentable_id, :commentable_type, :body)

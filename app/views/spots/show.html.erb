@@ -19,7 +19,7 @@
     </div>
     <div class="menu-child spot-other">
       <span class="glyphicon glyphicon-comment"></span>
-      <p>COMMENT</p>
+      <p>COMMENTS</p>
     </div>
   </div>
 
@@ -101,7 +101,9 @@
     </div>
 
     <div class="spot-other-content show-spot-content" style="display:none;">
-
+      <div class="comments-container">
+        <%= react_component('Comments', { resource: JSON.parse(render(template: 'spots/show.json.jbuilder')), commentableType: 'spot', currentUser: current_user }) %>
+      </div>
     </div>
   </div>
 
