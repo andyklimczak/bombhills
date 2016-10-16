@@ -18,8 +18,8 @@ class PostComment extends React.Component {
   renderDelete() {
     if(this.props.currentUser && this.props.currentUser.id === this.props.user.id) {
       return (
-        <div className="delete">
-          <a className="btn btn-danger btn-delete" onClick={this.handleDelete}>
+        <div className="comment-delete">
+          <a className="btn btn-danger btn-delete pull-right" onClick={this.handleDelete}>
             <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
           </a>
         </div>
@@ -28,27 +28,30 @@ class PostComment extends React.Component {
   }
   render() {
     const href = `/users/${this.props.user.username}`;
+    const relativeDate = moment(this.props.createdAt).fromNow();
     return (
       <div className="comment-panel">
         <div className="comment-user-avatar">
 
         </div>
         <div className="comment">
-          <div className="coment-header">
+          <div className="comment-header">
             <div className="comment-username">
               <a href={href}>
-                {this.props.user.username}
+                { this.props.user.username }
               </a>
             </div>
-            <div className="comment-date">
-              {this.props.createdAt}
+            <div className="comment-date" title={ this.props.createdAt }>
+              { relativeDate }
             </div>
           </div>
           <div className="comment-body">
-            {this.props.body}
+            <div className="comment-body-text">
+              { this.props.body }
+            </div>
+            { this.renderDelete() }
           </div>
         </div>
-        { this.renderDelete() }
       </div>
     );
   }

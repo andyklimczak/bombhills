@@ -239,6 +239,8 @@ GEM
     mimemagic (0.3.2)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    momentjs-rails (2.15.1)
+      railties (>= 3.1)
     multi_json (1.12.1)
     nenv (0.3.0)
     nio4r (1.2.1)
@@ -464,6 +466,7 @@ DEPENDENCIES
   jquery-rails
   leaflet-rails
   mailboxer!
+  momentjs-rails
   nyan-cat-formatter
   paperclip
   parallel_tests

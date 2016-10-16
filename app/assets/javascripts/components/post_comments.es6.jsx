@@ -2,7 +2,7 @@ class PostComments extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: this.props.post.comments
+      comments: this.props.post.comments.reverse()
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);

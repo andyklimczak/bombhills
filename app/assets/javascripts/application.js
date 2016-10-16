@@ -18,6 +18,7 @@
 //= require bootstrap-sprockets
 //= require chosen-jquery
 //= require leaflet
+//= require moment
 //= require fetch
 //= require react
 //= require react_ujs

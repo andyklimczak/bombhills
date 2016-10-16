@@ -27,9 +27,11 @@ class PostCommentBox extends React.Component {
     return (
       <div className="comment-box">
         <textarea rows="5" cols="50" type="text" ref="body" value={this.state.body} onChange={this.handleChange} />
-        <a className="btn btn-primary btn-submit" onClick={this.handleSubmit}>
-          Submit
-        </a>
+        <div className="btn-submit-container">
+          <a className="btn btn-primary btn-submit" onClick={this.handleSubmit}>
+            Submit
+          </a>
+        </div>
       </div>
     );
   }

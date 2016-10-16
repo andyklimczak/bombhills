@@ -67,6 +67,51 @@
 
     .comments-container {
       margin-bottom: 3em;
+
+      .comment-box {
+        padding-bottom: 2rem;
+
+        .btn-submit-container {
+          padding-top: 1rem;
+        }
+      }
+
+      .comment-panel {
+
+        .comment {
+          @include display(flex);
+          @include flex-direction(column);
+          border: 1px solid $primary-color;
+
+          .comment-header {
+            @include display(flex);
+            @include align-content(space-between);
+            @include justify-content(space-between);
+            background: $primary-color;
+            color: $white;
+            padding: .5rem;
+
+            a {
+              background: none;
+              padding: 0;
+            }
+          }
+
+          .comment-body {
+            @include display(flex);
+            @include align-content(space-between);
+
+            .comment-body-text {
+              @include flex-grow(50);
+            }
+
+            .comment-delete {
+              @include flex-basis(50px);
+              @include flex-grow(1);
+            }
+          }
+        }
+      }
     }
   }
 }
