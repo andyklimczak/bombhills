@@ -21,6 +21,6 @@ RSpec.describe 'meetup interactions', type: :feature do
     expect(Meetup.first.spot).to eq(spot)
     expect(Meetup.first.title).to eq('Test Meetup Title')
     expect(Meetup.first.description).to eq('Test Meetup Description')
-    expect(Meetup.first.time).to eq(DateTime.new(2017, 7, 4, 16, 20).utc)
+    expect(Meetup.first.time).to eq(Time.zone.local(2017, 7, 4, 16, 20))
   end
 end
