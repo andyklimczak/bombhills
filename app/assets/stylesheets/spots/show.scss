@@ -83,6 +83,7 @@
     box-shadow: -5px 3px 18px -3px rgba(0, 0, 0, .30);
     height: inherit;
     padding: 20px 0;
+    text-align: center;
 
     .spot-info-content h1 {
       color: $primary-color;
@@ -122,7 +123,6 @@
     .spot-meetups-content {
       font-family: 'Kanit', sans-serif;
       font-weight: $thin;
-      text-align: left;
 
       p {
         font-size: 22px;
