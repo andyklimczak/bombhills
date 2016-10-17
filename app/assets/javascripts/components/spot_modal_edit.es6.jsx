@@ -6,16 +6,10 @@ class SpotModalEdit extends React.Component {
       selectedSpot: null
     }
     this.handleSpotSelect = this.handleSpotSelect.bind(this);
-    this.handleUpdate = this.handleUpdate.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
   handleSpotSelect(newSpot) {
     this.setState({selectedSpot: newSpot});
-  }
-  handleUpdate(spot, data) {
-    const index = this.state.spots.indexOf(spot);
-    const newSpots = React.addons.update(this.state.spots, { $splice: [[index, 1, data]] })
-    this.setState({spots: newSpots, selectedSpot: newSpots[index]});
   }
   handleDelete(oldSpotId) {
     const spots = this.state.spots.filter((spot) => {
@@ -33,7 +27,7 @@ class SpotModalEdit extends React.Component {
           <div className="form-group">
             <SpotModalSelect spots={this.state.spots} selectedSpot={this.state.selectedSpot} handleSpotSelect={this.handleSpotSelect} />
           </div>
-          <SpotModalEditForm spot={this.state.selectedSpot} handleUpdate={this.handleUpdate} handleDelete={this.handleDelete} />
+          <SpotModalEditForm spot={this.state.selectedSpot} handleDelete={this.handleDelete} />
         </form>
       );
     } else {
