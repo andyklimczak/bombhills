@@ -74,16 +74,19 @@ function loadPoints() {
   .then(json)
   .then(function(json) {
     json.spots.forEach(function(spot) {
-      L.marker([spot.latitude, spot.longitude], { clickable: true })
+      var marker = L.marker([spot.latitude, spot.longitude], { clickable: true, title: spot.title })
         .bindPopup(
           "<b>" + spot.title + "</b><br> \
           Description: " + spot.description + "<br> \
           Created by: " + spot.user.username + "<br> \
           Difficulty: " + spot.difficulty + "<br> \
           Traffic: " + spot.traffic + "<br> \
-          <a href='/spots/" + spot.id + "'>meetup</a>" +"<br> \
+          <a href='/spots/" + spot.id + "'>more info</a>" +"<br> \
           <a data-toggle='modal' data-target='#report-modal'>report</a>")
         .addTo(mymap);
+      if(gon.spot && spot.id === gon.spot.id) {
+        marker.openPopup();
+      }
     });
   }).catch(function(err) {
     console.log('Error loading points: ', err);
