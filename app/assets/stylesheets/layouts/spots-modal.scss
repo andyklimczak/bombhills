@@ -92,7 +92,11 @@
 
 .user-spots li:last-child {
   margin-left: 10px;
+}
 
+.edit-buttons {
+  @include display(flex);
+  @include justify-content(space-between);
 }
 
 @media only screen and (max-width : 565px) {

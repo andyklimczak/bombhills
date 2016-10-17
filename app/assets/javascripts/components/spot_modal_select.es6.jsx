@@ -2,9 +2,16 @@ class SpotModalSelect extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedSpot: null
+      selectedSpot: null,
+      spots: this.props.spots
     };
     this.handleSpotSelect = this.handleSpotSelect.bind(this);
+  }
+  componentWillReceiveProps(newProps) {
+    this.setState({
+      selectedSpot: newProps.selectedSpot,
+      spots: newProps.spots
+    });
   }
   handleSpotSelect(e) {
     const newSpot = this.props.spots.filter((spot) => {
@@ -18,7 +25,7 @@ class SpotModalSelect extends React.Component {
       <div className="form-group">
         <select className="form-control" onChange={this.handleSpotSelect} value=''>
           <option value=''>Select a spot</option>
-          {this.props.spots.map((spot) => {
+          {this.state.spots.map((spot) => {
             return <option value={spot.id} key={spot.id}>{spot.title}</option>
           })}
         </select>
@@ -29,7 +36,7 @@ class SpotModalSelect extends React.Component {
     return (
       <div className="form-group">
         <select className="form-control" onChange={this.handleSpotSelect}>
-          {this.props.spots.map((spot) => {
+          {this.state.spots.map((spot) => {
             return <option value={spot.id} key={spot.id}>{spot.title}</option>
           })}
         </select>
@@ -46,5 +53,6 @@ class SpotModalSelect extends React.Component {
 }
 
 SpotModalSelect.propTypes = {
-  spots: React.PropTypes.array
+  spots: React.PropTypes.array,
+  selectedSpot: React.PropTypes.object
 };

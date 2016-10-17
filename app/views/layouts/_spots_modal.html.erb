@@ -22,27 +22,7 @@
           </div>
           <div class="user-spots-edit">
             <% if current_user == user and user.spots.any? %>
-              <form id="users-spots-edit-form">
-                <div class="form-group">
-                  <%= select_tag "spot_id", options_for_select(user.spots.map{ |s| [s.title, s.id ]}), { class: 'form-control'} %>
-                </div>
-                <div class="form-group">
-                  <%= select_tag "difficulty", options_for_select(difficulties, user.spots.first.difficulty), { class: 'form-control'} %>
-                </div>
-                <div class="form-group">
-                  <input name="title" type="text" class="form-control" id="usr" value="<%= user.spots.first.title %>">
-                </div>
-                <div class="form-group">
-                  <textarea name="description" class="form-control" rows="1" id="comment" placeholder="description"><%= user.spots.first.description %></textarea>
-                </div>
-                <div class="form-group">
-                  <input name="traffic" type="text" class="form-control" id="usr" value="<%= user.spots.first.traffic %>">
-                </div>
-                <div class="text-center">
-                  <button type="button" class="btn btn-default" id="modal-update-btn">Update</button>
-                  <button type="button" class="btn btn-default" id="modal-delete-btn">Delete</button>
-                </div>
-              </form>
+              <%= react_component 'SpotModalEdit', { spots: user.spots } %>
             <% else %>
               No spots to edit
             <% end %>
