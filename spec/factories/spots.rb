@@ -2,7 +2,7 @@
 require 'ffaker'
 
 FactoryGirl.define do
-  factory :spot do
+  factory :spot, aliases: [:commentable] do
     title { FFaker::Venue.name }
     traffic { FFaker::HipsterIpsum.phrase }
     description { FFaker::HipsterIpsum.sentence }

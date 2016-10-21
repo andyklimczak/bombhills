@@ -43,8 +43,8 @@ class Comment < ActiveRecord::Base
   def self.build_from(obj, user_id, comment)
     new \
       commentable: obj,
-      body: comment,
-      user_id: user_id
+      user_id: user_id,
+      body: comment
   end
 
   # helper method to check if a comment has children
