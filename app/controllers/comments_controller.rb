@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    resource = find_commentable_resource
+    resource = Comment.find_commentable(comment_params['commentable_type'], comment_params['commentable_id'])
     body = comment_params['body']
     @comment = Comment.build_from(resource, current_user.id, body)
     if @comment.save
@@ -28,14 +28,6 @@ class CommentsController < ApplicationController
 
   def set_comment
     @comment = Comment.find(params[:id])
-  end
-
-  def find_commentable_resource
-    if comment_params['commentable_type'] == 'Post'
-      Post.find(comment_params['commentable_id'])
-    elsif comment_params['commentable_type'] == 'Spot'
-      Spot.find(comment_params['commentable_id'])
-    end
   end
 
   def comment_params
