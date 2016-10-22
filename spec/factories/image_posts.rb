@@ -4,7 +4,7 @@ require 'ffaker'
 FactoryGirl.define do
   factory :image_post do
     title { FFaker::Product.product }
-    image { FFaker::Avatar.image }
+    image { fixture_file_upload 'spec/fixtures/pic.jpg', 'image/jpeg' }
     description { FFaker::HipsterIpsum.paragraph }
     user
     spot
