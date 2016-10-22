@@ -8,6 +8,6 @@ FactoryGirl.define do
     password { FFaker::Internet.password }
     password_confirmation { password }
     motto { FFaker::DizzleIpsum.sentence }
-    avatar { FFaker::Avatar.image }
+    avatar { fixture_file_upload 'spec/fixtures/pic.jpg', 'image/jpeg' }
   end
 end

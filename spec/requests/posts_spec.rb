@@ -39,7 +39,7 @@ RSpec.describe 'Posts', type: :request do
     it 'creates an image post' do
       user = create(:user)
       sign_in user
-      post('/posts', params: { post: { title: 'Test post', description: 'Test post description', image: fixture_file_upload("#{Rails.root}/spec/fixtures/pic.jpg", 'image/jpg'), type: 'ImagePost' } })
+      post('/posts', params: { post: { title: 'Test post', description: 'Test post description', image: fixture_file_upload('pic.jpg', 'image/jpg'), type: 'ImagePost' } })
       expect(Post.count).to eq(1)
       expect(response).to redirect_to(show_user_path(user.username))
       expect(Post.last.title).to eq('Test post')
