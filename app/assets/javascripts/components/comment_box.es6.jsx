@@ -29,7 +29,7 @@ class CommentBox extends React.Component {
         <textarea rows="5" cols="50" type="text" ref="body" value={this.state.body} onChange={this.handleChange} />
         <div className="btn-submit-container">
           <a className="btn btn-primary btn-submit" onClick={this.handleSubmit}>
-            Submit
+            Comment
           </a>
         </div>
       </div>
