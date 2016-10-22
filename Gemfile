@@ -33,6 +33,7 @@ gem 'fetch-rails'
 gem 'react-rails'
 gem 'acts_as_commentable_with_threading'
 gem 'momentjs-rails'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'rspec-rails'

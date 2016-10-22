@@ -96,7 +96,7 @@
   padding-left: 23px;
 
   #form {
-    @include display(flex);
+    display: flex;
 
     #map-search-btn {
       border: 0;

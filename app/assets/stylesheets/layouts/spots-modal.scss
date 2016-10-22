@@ -95,8 +95,8 @@
 }
 
 .edit-buttons {
-  @include display(flex);
-  @include justify-content(space-between);
+  display: flex;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width : 565px) {

@@ -12,16 +12,16 @@
   .comment-panel {
 
     .comment {
-      @include display(flex);
-      @include flex-direction(column);
       border: 1px solid $primary-color;
+      display: flex;
+      flex-direction: column;
 
       .comment-header {
-        @include display(flex);
-        @include align-content(space-between);
-        @include justify-content(space-between);
+        align-content: space-between;
         background: $primary-color;
         color: $white;
+        display: flex;
+        justify-content: space-between;
         padding: .5rem;
 
         a {
@@ -32,16 +32,16 @@
       }
 
       .comment-body {
-        @include display(flex);
-        @include align-content(space-between);
+        align-content: space-between;
+        display: flex;
 
         .comment-body-text {
-          @include flex-grow(50);
+          flex-grow: 50;
         }
 
         .comment-delete {
-          @include flex-basis(50px);
-          @include flex-grow(1);
+          flex-basis: 50px;
+          flex-grow: 1;
         }
       }
     }

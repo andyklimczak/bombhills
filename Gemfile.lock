@@ -441,6 +441,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_commentable_with_threading
   annotate
+  autoprefixer-rails
   awesome_print
   better_errors
   bootstrap-sass

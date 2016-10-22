@@ -11,9 +11,9 @@
 }
 
 #edit-profile-image {
-  @include display(flex);
-  @include align-items(center);
+  align-items: center;
   background: #ededed;
+  display: flex;
   height: 275px;
 
   img {
@@ -24,9 +24,9 @@
 }
 
 #edit-profile-motto {
-  @include display(flex);
-  @include align-items(center);
+  align-items: center;
   background: $primary-color;
+  display: flex;
   height: 275px;
   text-align: center;
 

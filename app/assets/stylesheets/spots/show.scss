@@ -1,5 +1,5 @@
 .show-spot-container {
-  @include display(flex);
+  display: flex;
   height: inherit;
   padding-top: 54px;
 
@@ -24,24 +24,23 @@
   }
 
   .side-image-container {
-    @include flex-grow(10);
-    @include flex-basis(0);
     background-position: center;
     background-size: cover;
+    flex-basis: 0;
+    flex-grow: 10;
     height: inherit;
   }
 
   .menu-container {
-    @include flex-grow(1);
-    @include flex-basis(0);
-
-    @include display(flex);
-    @include flex-direction(column);
-    @include justify-content(center);
-    @include align-content(center);
-    @include align-items(center);
+    align-content: center;
+    align-items: center;
     background: $grey;
+    display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+    flex-grow: 1;
     height: inherit;
+    justify-content: center;
 
     .glyphicon {
       color: $black;
@@ -50,14 +49,14 @@
     }
 
     .menu-child {
-      @include flex-grow(1);
-      @include display(flex);
-      @include flex-direction(column);
-      @include justify-content(center);
-      @include align-content(center);
-      @include align-items(center);
+      align-content: center;
+      align-items: center;
       color: $black;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
       letter-spacing: 1px;
       width: 100px;
 
@@ -78,9 +77,9 @@
   }
 
   .spot-info-container {
-    @include flex-grow(10);
-    @include flex-basis(0);
     box-shadow: -5px 3px 18px -3px rgba(0, 0, 0, .30);
+    flex-basis: 0;
+    flex-grow: 10;
     height: inherit;
     padding: 20px 0;
     text-align: center;
