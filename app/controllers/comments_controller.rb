@@ -31,9 +31,9 @@ class CommentsController < ApplicationController
   end
 
   def find_commentable_resource
-    if comment_params['commentable_type'] == 'post'
+    if comment_params['commentable_type'] == 'Post'
       Post.find(comment_params['commentable_id'])
-    elsif comment_params['commentable_type'] == 'spot'
+    elsif comment_params['commentable_type'] == 'Spot'
       Spot.find(comment_params['commentable_id'])
     end
   end
@@ -43,6 +43,6 @@ class CommentsController < ApplicationController
   end
 
   def require_permission
-    super(@spot)
+    super(@comment)
   end
 end
