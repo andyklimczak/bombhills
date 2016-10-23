@@ -47,4 +47,69 @@ RSpec.describe 'post interactions', type: :feature do
     expect(user.posts.first.image_file_name).to eq('pic.jpg')
     expect(user.posts.first.description).to eq('Based')
   end
+
+  describe 'edit a post' do
+    before(:each) do
+      @user = create(:user, username: 'test1')
+      @spot = create(:spot)
+      login_as @user, scope: :user
+    end
+
+    it 'image post' do
+      post = create(:image_post, user: @user)
+      visit edit_post_path(post)
+      within('.edit_post') do
+        fill_in 'Title', with: 'New Post Title'
+        fill_in 'Description', with: 'New Description'
+        chosen_select(@spot.title, from: '#tag-spot')
+        click_button 'Save'
+      end
+      post.reload
+      expect(post.title).to eq('New Post Title')
+      expect(post.description).to eq('New Description')
+      expect(post.spot).to eq(@spot)
+    end
+
+    it 'video post' do
+      post = create(:video_post, user: @user)
+      visit edit_post_path(post)
+      within('.edit_post') do
+        fill_in 'Title', with: 'New Post Title'
+        fill_in 'Description', with: 'New Description'
+        chosen_select(@spot.title, from: '#tag-spot')
+        click_button 'Save'
+      end
+      post.reload
+      expect(post.title).to eq('New Post Title')
+      expect(post.description).to eq('New Description')
+      expect(post.spot).to eq(@spot)
+    end
+  end
+
+  describe 'delete post' do
+    before(:each) do
+      @user = create(:user, username: 'test1')
+      login_as @user, scope: :user
+    end
+
+    it 'image post', js: true do
+      post = create(:image_post, user: @user)
+      visit edit_post_path(post)
+      expect(@user.posts.size).to eq(1)
+      page.accept_alert 'Are you sure?' do
+        click_button 'Delete'
+      end
+      expect(@user.posts.size).to eq(0)
+    end
+
+    it 'video post', js: true do
+      post = create(:video_post, user: @user)
+      visit edit_post_path(post)
+      expect(@user.posts.size).to eq(1)
+      page.accept_alert 'Are you sure?' do
+        click_button 'Delete'
+      end
+      expect(@user.posts.size).to eq(0)
+    end
+  end
 end

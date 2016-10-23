@@ -15,16 +15,16 @@
       <% end %>
 
       <div class="field">
-        <%= f.label :title %><br>
+        <%= f.label :title %>
         <%= f.text_field :title, class: 'form-control' %>
       </div>
       <div class="field">
-        <%= f.label :description %><br>
+        <%= f.label :description %>
         <%= f.text_area :description, class: 'form-control' %>
       </div>
       <div class="field">
         <%= f.label :spot_id, "Tag a spot" %>
-        <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'image-tag-spot' } %>
+        <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'tag-spot' } %>
       </div>
       <div class="actions">
         <%= f.submit "Save", data: { disable_with: 'Saving...' } %>
