@@ -1,5 +1,3 @@
-<div class="meetups">
-
   <%= form_for([@spot, @meetup]) do |f| %>
     <% if @meetup.errors.any? %>
       <div id="error-explanation">
@@ -29,5 +27,3 @@
       <%= f.submit %>
     </div>
   <% end %>
-
-</div>

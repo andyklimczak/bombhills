@@ -23,4 +23,36 @@ RSpec.describe 'meetup interactions', type: :feature do
     expect(Meetup.first.description).to eq('Test Meetup Description')
     expect(Meetup.first.time).to eq(Time.zone.local(2017, 7, 4, 16, 20))
   end
+
+  it 'edit a meetup' do
+    user = create(:user)
+    spot = create(:spot)
+    login_as user, scope: :user
+    meetup = create(:meetup, user: user, spot: spot)
+    visit edit_spot_meetup_path(spot, meetup)
+    within('.edit_meetup') do
+      fill_in 'Title', with: 'New Title'
+      fill_in 'Description', with: 'New Description'
+      select '2017', from: 'meetup_time_1i'
+      select 'July', from: 'meetup_time_2i'
+      select '4', from: 'meetup_time_3i'
+      select '16', from: 'meetup_time_4i'
+      select '20', from: 'meetup_time_5i'
+      click_button 'Update Meetup'
+    end
+    meetup.reload
+    expect(meetup.title).to eq('New Title')
+    expect(meetup.description).to eq('New Description')
+    expect(meetup.time).to eq(Time.zone.local(2017, 7, 4, 16, 20))
+  end
+
+  it 'delete a meetup' do
+    user = create(:user)
+    spot = create(:spot)
+    login_as user, scope: :user
+    meetup = create(:meetup, user: user, spot: spot)
+    visit edit_spot_meetup_path(spot, meetup)
+    click_button 'Delete'
+    expect { meetup.reload }.to raise_error(ActiveRecord::RecordNotFound)
+  end
 end

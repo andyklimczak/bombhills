@@ -1,6 +1,9 @@
-<h1>Editing Meetup</h1>
+<div class="meetups">
+  <h1>Editing Meetup</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
+  <p><%= button_to "Delete", spot_meetup_path(@spot, @meetup), data: { confirm: "Are you sure?", disable_with: 'Deleting' }, method: :delete %></p>
 
-<%= link_to 'Show', spot_meetup_path(@spot, @meetup) %> |
-<%= link_to 'Back', spot_meetups_path(@spot) %>
+  <%= link_to 'Show', spot_meetup_path(@spot, @meetup) %>
+  <%= link_to 'Back', spot_meetups_path(@spot) %>
+</div>
