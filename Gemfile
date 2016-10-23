@@ -34,6 +34,7 @@ gem 'react-rails'
 gem 'acts_as_commentable_with_threading'
 gem 'momentjs-rails'
 gem 'autoprefixer-rails'
+gem 'binding_of_caller'
 
 group :development, :test do
   gem 'rspec-rails'
