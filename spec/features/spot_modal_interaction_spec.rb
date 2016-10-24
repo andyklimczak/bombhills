@@ -2,55 +2,52 @@
 require 'rails_helper'
 
 RSpec.describe 'spot modal interactions', type: :feature, js: true do
-  xit 'can delete a spot (first) on spots page' do
-    user = create(:user)
-    create(:spot, user: user)
-    login_as user, scope: :user
-    expect(user.spots.count).to eq(1)
-    visit spots_path
-    page.execute_script("$('#spots-modal-link').click()")
-    page.execute_script("$('#spots-edit-btn').click()")
-    page.execute_script("$('#modal-delete-btn').click()")
-    wait_for_ajax
-    user.reload
-    sleep(4)
-    expect(user.spots.count).to eq(0)
-  end
-
-  xit 'can edit a spot (first) on spots page' do
-    user = create(:user)
-    spot = create(:spot, user: user)
-    login_as user, scope: :user
-    expect(user.spots.count).to eq(1)
-    visit spots_path
-    find('#spots-modal-link').trigger('click')
-    find('#spots-edit-btn').trigger('click')
-    find("input[name='title']").set 'test title'
-    find('#modal-update-btn').trigger('click')
-    wait_for_ajax
-    user.reload
-    spot.reload
-    sleep(4)
-    expect(spot.title).to eq('test title')
-  end
-
-  xit 'can edit a spot (first) on profile page' do
-    user = create(:user)
-    spot = create(:spot, user: user)
-    login_as user, scope: :user
-    expect(user.spots.count).to eq(1)
-    visit show_user_path(user.username)
-    click_link 'Spots'
-    find('#spots-edit-btn').trigger('click')
-    within('#users-spots-edit-form') do
-      fill_in 'spot_title', with: 'test title'
-      find('#modal-update-btn').trigger('click')
+  describe 'spot modal on spots page' do
+    before(:each) do
+      user = create(:user)
+      @spot = create(:spot, user: user)
+      login_as user, scope: :user
+      visit spots_path
+      expect(user.spots.size).to eq(1)
+      find('#spots-modal-link').click
     end
-    page!
-    sleep(4)
-    wait_for_ajax
-    user.reload
-    spot.reload
-    expect(spot.title).to eq('test title')
+
+    context 'edit view' do
+      before(:each) do
+        find('#spots-edit-btn').click
+      end
+
+      it 'can delete a spot on spots page' do
+        within('#users-spots-edit-form') do
+          select @spot.title, from: 'spot_select'
+        end
+        find('#modal-delete-btn').click
+        wait_for_ajax
+        expect { @spot.reload }.to raise_error(ActiveRecord::RecordNotFound)
+      end
+
+      it 'can edit a spot (first) on spots page' do
+        within('#users-spots-edit-form') do
+          select @spot.title, from: 'spot_select'
+          fill_in 'title', with: 'Edit Spot Title'
+          select 'Intermediate', from: 'difficulty'
+          fill_in 'description', with: 'Edit Spot Description'
+          fill_in 'traffic', with: 'Edit Spot Traffic'
+        end
+        find('#modal-update-btn').click
+        wait_for_ajax
+        @spot.reload
+        expect(@spot.title).to eq('Edit Spot Title')
+        expect(@spot.description).to eq('Edit Spot Description')
+        expect(@spot.difficulty).to eq('Intermediate')
+        expect(@spot.traffic).to eq('Edit Spot Traffic')
+      end
+    end
+
+    it 'view spot from modal on spot page' do
+      select @spot.title, from: 'spot_select'
+      find('#modal-view-spot').click
+      expect(page).to have_current_path(spots_path)
+    end
   end
 end

@@ -23,7 +23,7 @@ class SpotModalSelect extends React.Component {
   spotsView() {
     return (
       <div className="form-group">
-        <select className="form-control" onChange={this.handleSpotSelect} value=''>
+        <select className="form-control" name="spot_select" onChange={this.handleSpotSelect} value=''>
           <option value=''>Select a spot</option>
           {this.state.spots.map((spot) => {
             return <option value={spot.id} key={spot.id}>{spot.title}</option>
@@ -35,7 +35,7 @@ class SpotModalSelect extends React.Component {
   spotsSelectedView() {
     return (
       <div className="form-group">
-        <select className="form-control" onChange={this.handleSpotSelect}>
+        <select className="form-control spot-select" onChange={this.handleSpotSelect}>
           {this.state.spots.map((spot) => {
             return <option value={spot.id} key={spot.id}>{spot.title}</option>
           })}
