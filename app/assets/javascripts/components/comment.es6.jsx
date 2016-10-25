@@ -32,7 +32,9 @@ class Comment extends React.Component {
     return (
       <div className="comment-panel">
         <div className="comment-user-avatar">
-
+          <a className="user-avatar" href={href}>
+            <img src={ this.props.user.avatar_url } className="message-avatar" />
+          </a>
         </div>
         <div className="comment">
           <div className="comment-header">

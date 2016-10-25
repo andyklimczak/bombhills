@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     body = comment_params['body']
     @comment = Comment.build_from(resource, current_user.id, body)
     if @comment.save
-      render json: @comment, include: :user
+      render json: @comment, include: { user: { methods: :avatar_url } }
     else
       render json: @comment.errors, status: :unprocessable_entity
     end

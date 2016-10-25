@@ -86,4 +86,8 @@ class User < ApplicationRecord
   def signup_notification
     SignupMailer.signup_notification(self).deliver
   end
+
+  def avatar_url
+    avatar.url(:thumb)
+  end
 end

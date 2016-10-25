@@ -74,6 +74,11 @@ RSpec.describe User, type: :model do
     expect { user.signup_notification }.to change { ActionMailer::Base.deliveries.count }.by(1)
   end
 
+  it 'has avatar url with no image' do
+    user = create(:user)
+    expect(user.avatar_url).to match(%r{/pic.jpg})
+  end
+
   context 'validations' do
     subject { create(:user) }
 

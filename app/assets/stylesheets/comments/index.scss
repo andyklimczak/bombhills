@@ -10,11 +10,23 @@
   }
 
   .comment-panel {
+    display: flex;
+
+    .comment-user-avatar {
+      .user-avatar {
+        padding: 0 1rem;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
 
     .comment {
       border: 1px solid $primary-color;
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
 
       .comment-header {
         align-content: space-between;
