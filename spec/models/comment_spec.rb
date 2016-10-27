@@ -17,7 +17,7 @@ RSpec.describe Comment, type: :model do
     spot = create(:spot)
     comment1 = create(:comment, commentable: spot)
     comment2 = create(:comment, commentable: spot)
-    expect(Comment.find_comments_for_commentable('Spot', spot.id)).to eq([comment2, comment1])
+    expect(Comment.find_comments_for_commentable('Spot', spot.id)).to eq([comment1, comment2])
   end
 
   it 'find comments by user' do
@@ -25,7 +25,7 @@ RSpec.describe Comment, type: :model do
     c1 = create(:comment, user: user)
     c2 = create(:comment, user: user)
     c3 = create(:comment, user: user)
-    expect(Comment.find_comments_by_user(user)).to eq([c3, c2, c1])
+    expect(Comment.find_comments_by_user(user)).to eq([c1, c2, c3])
   end
 
   it 'children any? true' do
