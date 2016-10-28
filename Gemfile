@@ -61,7 +61,6 @@ end
 group :test do
   gem 'shoulda'
   gem 'shoulda-matchers', '~> 3.1'
-  gem 'nyan-cat-formatter'
   gem 'simplecov', require: false
   gem 'capybara'
   gem 'database_cleaner'
