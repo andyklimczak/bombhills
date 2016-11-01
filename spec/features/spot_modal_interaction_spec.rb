@@ -2,11 +2,14 @@
 require 'rails_helper'
 
 RSpec.describe 'spot modal interactions', type: :feature, js: true do
+  before do
+    @user = create(:user)
+    @spot = create(:spot, user: @user)
+    login_as @user, scope: :user
+  end
+
   describe 'spot modal on spots page' do
     before do
-      user = create(:user)
-      @spot = create(:spot, user: user)
-      login_as user, scope: :user
       visit spots_path
       find('#spots-modal-link').click
     end
@@ -52,10 +55,7 @@ RSpec.describe 'spot modal interactions', type: :feature, js: true do
 
   describe 'spot modal on profile page' do
     before do
-      user = create(:user)
-      @spot = create(:spot, user: user)
-      login_as user, scope: :user
-      visit show_user_path(user.username)
+      visit show_user_path(@user.username)
       find('.glyphicon-map-marker').click
     end
 
