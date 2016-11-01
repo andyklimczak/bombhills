@@ -2,7 +2,7 @@ class SpotModalSelect extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedSpot: null,
+      selectedSpot: this.props.selectedSpot,
       spots: this.props.spots
     };
     this.handleSpotSelect = this.handleSpotSelect.bind(this);

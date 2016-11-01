@@ -21,14 +21,14 @@ class SpotModalView extends React.Component {
   spotsView() {
     return (
       <div className="user-spots-select-container">
-        <SpotModalSelect spots={this.props.spots} handleSpotSelect={this.handleSpotSelect} />
+        <SpotModalSelect spots={this.props.spots} selectedSpot={this.state.selectedSpot} handleSpotSelect={this.handleSpotSelect} />
       </div>
     );
   }
   spotsSelectedView() {
     return (
       <div className="user-spots-select-container">
-        <SpotModalSelect spots={this.props.spots} handleSpotSelect={this.handleSpotSelect} />
+        <SpotModalSelect spots={this.props.spots} selectedSpot={this.state.selectedSpot} handleSpotSelect={this.handleSpotSelect} />
         <ul>
           <li id="modal-view-spot" onClick={this.viewSpotClick}>view</li>
         </ul>
