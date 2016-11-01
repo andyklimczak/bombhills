@@ -21,7 +21,7 @@ Style/Documentation:
   Enabled: false
 
 Metrics/AbcSize:
-  Max: 35
+  Max: 20
 
 RSpec/MultipleExpectations:
   Enabled: false

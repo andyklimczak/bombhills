@@ -8,11 +8,9 @@ class SpotsController < ApplicationController
   # GET /spots.json
   def index
     @spots = Spot.all
-    @current_user_spots = @spots.where(user: current_user) if user_signed_in?
-    gon.search = Geocoder.search(params[:search]).first if params[:search].present?
-    gon.spot = Spot.find(params[:id]) if params.key?(:id) && Spot.where(id: params[:id]).exists?
+    gon.search = search_param_spot
+    gon.spot = id_param_spot
     gon.user_signed_in = user_signed_in?
-    gon.user_id = current_user.id if user_signed_in?
   end
 
   # GET /spots/1
@@ -79,6 +77,14 @@ class SpotsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def spot_params
     params.require(:spot).permit(:latitude, :longitude, :description, :title, :difficulty, :post_id, :traffic).merge(user_id: current_user.id)
+  end
+
+  def search_param_spot
+    Geocoder.search(params[:search]).first if params[:search].present?
+  end
+
+  def id_param_spot
+    Spot.find(params[:id]) if params.key?(:id) && Spot.where(id: params[:id]).exists?
   end
 
   def require_permission
