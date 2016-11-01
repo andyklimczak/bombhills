@@ -49,7 +49,7 @@ RSpec.describe 'post interactions', type: :feature do
   end
 
   describe 'edit a post' do
-    before(:each) do
+    before do
       @user = create(:user, username: 'test1')
       @spot = create(:spot)
       login_as @user, scope: :user
@@ -87,7 +87,7 @@ RSpec.describe 'post interactions', type: :feature do
   end
 
   describe 'delete post' do
-    before(:each) do
+    before do
       @user = create(:user, username: 'test1')
       login_as @user, scope: :user
     end

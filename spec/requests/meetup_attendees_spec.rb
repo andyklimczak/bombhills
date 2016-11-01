@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Meetup Attendee', type: :request do
-  before :each do
+  before do
     @user = create(:user)
     sign_in @user
     @meetup = create(:meetup)

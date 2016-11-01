@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Meetups', type: :request do
-  before :each do
+  before do
     @spot = create(:spot)
   end
 

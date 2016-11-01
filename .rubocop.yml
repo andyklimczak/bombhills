@@ -1,3 +1,4 @@
+require: rubocop-rspec
 AllCops:
   Include:
     - 'app/**'
@@ -21,3 +22,12 @@ Style/Documentation:
 
 Metrics/AbcSize:
   Max: 35
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/InstanceVariable:
+  Enabled: false

@@ -55,6 +55,7 @@ group :development do
   gem 'bundler-audit'
   gem 'rubycritic', require: false
   gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
   gem 'scss_lint', require: false
 end
 

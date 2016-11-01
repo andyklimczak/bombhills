@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe 'edit user', type: :feature do
-  before :each do
+  before do
     @user = create(:user, username: 'user123', email: 'user@example.com', password: 'password123')
     login_as @user, scope: :user
   end

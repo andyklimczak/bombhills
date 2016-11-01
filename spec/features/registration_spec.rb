@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe 'the registration process', type: :feature do
-  before(:each) do
+  before do
     visit '/users/sign_up'
     within('#new_user') do
       fill_in 'Username', with: 'user123'

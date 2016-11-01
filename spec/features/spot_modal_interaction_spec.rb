@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe 'spot modal interactions', type: :feature, js: true do
   describe 'spot modal on spots page' do
-    before(:each) do
+    before do
       user = create(:user)
       @spot = create(:spot, user: user)
       login_as user, scope: :user
@@ -12,7 +12,7 @@ RSpec.describe 'spot modal interactions', type: :feature, js: true do
     end
 
     context 'edit view' do
-      before(:each) do
+      before do
         find('#spots-edit-btn').click
       end
 
@@ -51,7 +51,7 @@ RSpec.describe 'spot modal interactions', type: :feature, js: true do
   end
 
   describe 'spot modal on profile page' do
-    before(:each) do
+    before do
       user = create(:user)
       @spot = create(:spot, user: user)
       login_as user, scope: :user
@@ -60,7 +60,7 @@ RSpec.describe 'spot modal interactions', type: :feature, js: true do
     end
 
     context 'edit view' do
-      before(:each) do
+      before do
         find('#spots-edit-btn').click
       end
 

@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
     expect(user2).not_to be_valid
   end
 
-  it 'should test for valid email' do
+  it 'tests for valid email' do
     user = build(:user, email: '123asdf')
     expect(user).not_to be_valid
   end
@@ -41,7 +41,7 @@ RSpec.describe User, type: :model do
     expect(authenticated).to eql user
   end
 
-  it 'should have posts ordered by created_at desc' do
+  it 'has posts ordered by created_at desc' do
     user = create(:user, username: 'test_username')
     post1 = create(:image_post, title: 'post1', user: user)
     create(:video_post, title: 'post2', user: user)
@@ -50,7 +50,7 @@ RSpec.describe User, type: :model do
     expect(user.posts.last).to eq(post1)
   end
 
-  it 'should have spots ordered by created_at desc' do
+  it 'has spots ordered by created_at desc' do
     user = create(:user, username: 'test_username')
     spot1 = create(:spot, title: 'spot1', user: user)
     create(:spot, title: 'spot2', user: user)
