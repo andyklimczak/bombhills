@@ -21,6 +21,7 @@
 #  fk_rails_f2be3be804  (spot_id => spots.id)
 #
 
+
 class Meetup < ApplicationRecord
   belongs_to :spot
   belongs_to :user

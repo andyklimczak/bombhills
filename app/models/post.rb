@@ -26,6 +26,7 @@
 #  fk_rails_5b5ddfd518  (user_id => users.id)
 #
 
+
 class Post < ApplicationRecord
   acts_as_commentable
   belongs_to :user

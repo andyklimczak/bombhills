@@ -23,6 +23,7 @@
 #  fk_rails_f05e659f8c  (user_id => users.id)
 #
 
+
 class Spot < ApplicationRecord
   acts_as_commentable
   belongs_to :user
