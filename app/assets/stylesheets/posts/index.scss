@@ -9,10 +9,16 @@
 
 .caption {
   h3 {
+    background-color: $primary-color;
+    color: $white;
     cursor: pointer;
     font-weight: $bold;
     margin-top: 0;
     padding: 5px;
+
+    &:hover {
+      background-color: $black;
+    }
   }
 
   a {
@@ -53,8 +59,8 @@
 }
 
 #user-btn {
-  background: none;
-  color: $primary-color;
+  background: $black;
+  color: $white;
   margin-right: 5px;
 }
 

@@ -13,6 +13,13 @@
         overflow: auto;
         padding: 0;
 
+        li:first-child {
+          float: left;
+        }
+
+        li:last-child {
+          float: right;
+        }
       }
 
       .label-space {
@@ -34,7 +41,7 @@
     }
 
     h1 {
-      font-weight: $thin;
+      font-weight: $bold;
     }
 
     a {
@@ -49,10 +56,6 @@
         text-decoration: none;
       }
     }
-    
-    p {
-
-    }
 
     .user-avatar {
       background: none;
@@ -62,45 +65,12 @@
       }
     }
   }
-  
-  .comment-panel {
-    margin: 10px 0px;
-    
-    .comment-user-avatar {
-      
-    }
-    
-    .comment {
-      
-      .comment-header {
-        
-        .comment-username {
-          
-        }
-        .comment-date {
-          
-        }
-      }
-      .comment-body {
-        padding: 5px 5px;
-        
-        .comment-body-text {
-          
-        }
-        .comment-delete {
-          a {
-            border: none;
-            background-color: $red;
-          }
-        }
-      }
-    }
-  }
 }
 
-
 @media only screen and (max-width : 480px) {
-
+  .post-container .post-info .extra-info ul li:last-child {
+    float: left;
+  }
 }
 
 @media only screen and (min-width : 480px) and (max-width : 768px) {
