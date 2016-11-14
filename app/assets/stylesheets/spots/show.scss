@@ -82,12 +82,11 @@
     flex-grow: 10;
     height: inherit;
     padding: 20px 0;
-    text-align: center;
 
     .spot-info-content h1 {
       color: $primary-color;
       font-family: 'Kanit', sans-serif;
-      font-size: 64px;
+      font-size: 32px;
       font-weight: $thin;
       letter-spacing: 1px;
     }
@@ -121,20 +120,26 @@
 
     .spot-meetups-content {
       font-family: 'Kanit', sans-serif;
-      font-weight: $thin;
+      text-align: center;
 
       p {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 22px;
       }
 
       a {
         background: $black;
-        border-radius: 2px;
+        border-radius: 6px;
+        font-weight: $thin;
         color: $white;
         cursor: pointer;
         font-size: 26px;
         padding: 5px 10px;
+        box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.75);
+      }
+      
+      a:hover {
+        text-decoration: none;
       }
 
       &:hover {
@@ -195,9 +200,13 @@
 }
 
 @media only screen and (min-width : 992px) and (max-width: 1200px) {
-
+  .show-spot-container .spot-info-container .spot-meetups-content p {
+    font-size: 28px;
+  }
 }
 
 @media only screen and (min-width : 1200px) {
-
+  .show-spot-container .spot-info-container .spot-meetups-content p {
+    font-size: 28px;
+  }
 }

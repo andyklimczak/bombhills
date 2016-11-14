@@ -42,27 +42,11 @@
     </div>
 
     <div class="spot-meetups-content show-spot-content" style="display:none;">
-      <%= link_to 'Create Meetup', new_spot_meetup_path(@spot), class: 'create-meetup-btn' %>
-
-      <h3>Whats Planned</h3>
-
-      <% if @spot.meetups.any? %>
-        <% @spot.meetups.each do |meetup| %>
-          <h4>
-            <%= link_to meetup.title, spot_meetup_path(meetup) %>
-          </h4>
-          <p>
-            <%= meetup.description %>
-          </p>
-          <p>
-            <%= meetup.attending_users.count %> users coming
-          </p>
-          <p>
-            <%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %>
-          </p>
-        <% end %>
-      <% else %>
-      <% end %>
+      <p> 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      </p>
+      </br>
+      <%= link_to 'meetup', spot_meetups_path(@spot) %>
     </div>
 
     <div class="spot-posts-content show-spot-content" style="display:none;">
