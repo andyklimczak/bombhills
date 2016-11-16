@@ -12,7 +12,7 @@ addons:
 services:
   - postgresql
 script:
-  - bundle exec rubocop && bundle exec scss-lint && bundle exec brakeman -z && bundle exec bundle-audit && bundle exec rake db:migrate RAILS_ENV=test --trace && bundle exec rspec spec
+  - bundle exec scss-lint && bundle exec rubocop && bundle exec brakeman -z && bundle exec bundle-audit && bundle exec rake db:migrate RAILS_ENV=test --trace && bundle exec rspec spec
 notifications:
   email: false
   slack:
