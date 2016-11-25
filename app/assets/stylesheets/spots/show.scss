@@ -130,14 +130,14 @@
       a {
         background: $black;
         border-radius: 6px;
-        font-weight: $thin;
+        box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, .75);
         color: $white;
         cursor: pointer;
         font-size: 26px;
+        font-weight: $thin;
         padding: 5px 10px;
-        box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.75);
       }
-      
+
       a:hover {
         text-decoration: none;
       }

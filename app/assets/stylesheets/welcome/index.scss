@@ -52,7 +52,7 @@
 // header
 
 .header-wrapper {
-  background: url('green.jpg');
+  background: url('greentwo.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -135,10 +135,10 @@
   text-align: center;
 
   h1 {
-    color: $black;
+    color: $white;
     font-family: $font-stack;
     font-size: 125px;
-    font-weight: $thin;
+    font-weight: $bold;
     margin: 0;
     margin-bottom: 20px;
     margin-top: 50px;
