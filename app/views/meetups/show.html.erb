@@ -27,6 +27,14 @@
     <%= @meetup.user.username %>
   </p>
 
+  <p>
+    <strong>Number of meetup attendees:</strong>
+    <%= @meetup.meetup_attendees.count %>
+    <% if user_signed_in? %>
+      <%= react_component('AttendMeetup', meetup: @meetup, attending: user_attending_meetup?(@meetup, current_user)) %>
+    <% end %>
+  </p>
+
     <% if @meetup.user == current_user %>
       <%= link_to 'Edit', edit_spot_meetup_path(@meetup) %>
     <% end %>
