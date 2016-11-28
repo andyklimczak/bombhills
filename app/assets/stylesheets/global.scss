@@ -5,8 +5,8 @@ $tertiary-color: #1e3056;
 $white: #fff;
 $black: #121212;
 $grey: #f8f8f8;
-$font-stack: 'Kanit', sans-serif;
-$font-brand: 'Lobster', cursive;
+$font-sans: 'Kanit', sans-serif;
+$font-cursive: 'Lobster', cursive;
 $thin: 200;
 $bold: 800;
 
@@ -27,7 +27,7 @@ p,
 ol,
 ul,
 td {
-  font-family: $font-stack;
+  font-family: $font-sans;
   font-size: 13px;
   line-height: 18px;
 }

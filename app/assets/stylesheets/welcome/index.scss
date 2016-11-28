@@ -17,7 +17,7 @@
   padding-left: 15px;
 
   h1 {
-    font-family: $font-brand;
+    font-family: $font-cursive;
     font-size: 48px;
     font-weight: $thin;
     margin: 0;
@@ -38,7 +38,7 @@
   }
 
   a {
-    font-family: $font-stack;
+    font-family: $font-sans;
     text-decoration: none;
 
     &:hover {
@@ -136,7 +136,7 @@
 
   h1 {
     color: $primary-color;
-    font-family: $font-brand;
+    font-family: $font-cursive;
     font-size: 125px;
     font-weight: $bold;
     margin: 0;
@@ -149,7 +149,7 @@
     background-color: rgba(255, 255, 255, .75);
     border-radius: 6px;
     box-shadow: 5px 8px 29px -5px rgba(0, 0, 0, .75);
-    font-family: $font-stack;
+    font-family: $font-sans;
     font-size: 22px;
     padding: 14px 26px;
     text-decoration: none;
@@ -173,7 +173,7 @@
 .find {
   background: rgba(0, 0, 0, .0);
   color: $white;
-  font-family: $font-stack;
+  font-family: $font-sans;
   height: 110px;
   text-align: center;
 }
@@ -230,14 +230,14 @@
   }
 
   p {
-    font-family: $font-stack;
+    font-family: $font-sans;
     font-size: 26px;
     font-weight: $thin;
     line-height: 26px;
   }
 
   h2 {
-    font-family: $font-stack;
+    font-family: $font-cursive;
     font-size: 56px;
     font-weight: $thin;
   }
@@ -254,12 +254,13 @@
 .user-content {
   background: $primary-color;
   color: $white;
-  font-family: $font-stack;
+  font-family: $font-sans;
   padding-bottom: 60px;
   padding-top: 20px;
 
   h1 {
     color: $white;
+    font-family: $font-cursive;
     font-size: 60px;
     font-weight: $thin;
     margin-top: 0;
@@ -316,7 +317,7 @@
   text-align: right;
 
   h1 {
-    font-family: $font-stack;
+    font-family: $font-sans;
     font-size: 35px;
     font-weight: $thin;
   }
@@ -327,14 +328,14 @@
   }
 
   li {
-    font-family: $font-stack;
+    font-family: $font-sans;
     font-size: 18px;
     font-weight: $thin;
     margin: 10px 0;
 
     a {
       color: $white;
-      font-family: $font-stack;
+      font-family: $font-sans;
       margin: 10px 0;
       text-decoration: none;
 
@@ -399,11 +400,12 @@
   .display p {
     background: $white;
     color: $black;
+    font-size: 22px;
   }
 
   .display h2 {
     color: $black;
-    font-size: 42px;
+    font-size: 32px;
     margin-top: 0;
   }
 
