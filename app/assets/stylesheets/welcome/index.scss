@@ -234,6 +234,7 @@
     font-size: 26px;
     font-weight: $thin;
     line-height: 26px;
+    padding-right: 100px;
   }
 
   h2 {
@@ -401,6 +402,7 @@
     background: $white;
     color: $black;
     font-size: 22px;
+    padding-right: 0;
   }
 
   .display h2 {
@@ -479,6 +481,7 @@
   .display h2 {
     background: $white;
     color: $black;
+    padding-right: 0;
   }
 
   .display .container div {
