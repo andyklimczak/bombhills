@@ -260,7 +260,7 @@
   padding-top: 20px;
 
   h1 {
-    color: $white;
+    color: #1d3148;
     font-family: $font-cursive;
     font-size: 60px;
     font-weight: $thin;
@@ -269,9 +269,8 @@
   }
 
   p {
-    color: $white;
+    color: #1d3148;
     font-size: 18px;
-    font-weight: $thin;
     margin: 0 20px;
     margin-top: 16px;
     text-align: center;
@@ -283,7 +282,7 @@
   }
 
   .glyphicon {
-    color: $white;
+    color: #1d3148;
     font-size: 90px;
     line-height: 150px;
   }
@@ -312,7 +311,7 @@
 // footer
 
 .footer {
-  background: $black;
+  background: #333;
   color: $white;
   padding: 20px 0 80px;
   text-align: right;
