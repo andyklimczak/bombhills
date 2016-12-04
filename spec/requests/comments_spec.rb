@@ -2,10 +2,12 @@
 require 'rails_helper'
 
 RSpec.describe 'Comments', type: :request do
-  let(:headers) { {
-    'ACCEPT' => 'application/json',
-    'HTTP_ACCEPT' => 'application/json'
-  } }
+  let(:headers) do
+    {
+      'ACCEPT' => 'application/json',
+      'HTTP_ACCEPT' => 'application/json'
+    }
+  end
   let(:spot) { create(:spot) }
   let(:user) { create(:user) }
 
@@ -46,7 +48,6 @@ RSpec.describe 'Comments', type: :request do
   end
 
   describe 'DELETE /comments', type: :request do
-
     describe 'deletes comment' do
       let(:comment) { create(:comment, commentable: spot, user: user) }
 

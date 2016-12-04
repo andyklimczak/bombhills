@@ -27,7 +27,6 @@ RSpec.describe MeetupsHelper, type: :helper do
     end
 
     describe 'when user is not attending meetup' do
-
       it 'returns false' do
         expect(helper.user_attending_meetup?(meetup, user)).to eq(false)
       end

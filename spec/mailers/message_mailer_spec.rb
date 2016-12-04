@@ -2,9 +2,9 @@
 require 'rails_helper'
 
 RSpec.describe MessageMailer, type: :mailer do
-    let(:msg) { Message.new(name: 'Test Name', subject: 'Test Subject', content: 'Test Content', email: 'test@email.com') }
-    let(:email) { MessageMailer.message_me(msg).deliver_now }
-    let(:confirmation_email) { MessageMailer.message_me_confirmation(msg).deliver_now }
+  let(:msg) { Message.new(name: 'Test Name', subject: 'Test Subject', content: 'Test Content', email: 'test@email.com') }
+  let(:email) { MessageMailer.message_me(msg).deliver_now }
+  let(:confirmation_email) { MessageMailer.message_me_confirmation(msg).deliver_now }
 
   describe 'message mailer' do
     it 'renders the subject' do
