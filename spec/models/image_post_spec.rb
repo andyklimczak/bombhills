@@ -3,8 +3,7 @@ require 'rails_helper'
 
 RSpec.describe ImagePost, type: :model do
   it 'can be created' do
-    post = create(:image_post)
-    expect(post.save).to eq(true)
+    expect(create(:image_post).save).to eq(true)
   end
 
   it { is_expected.to belong_to :user }
