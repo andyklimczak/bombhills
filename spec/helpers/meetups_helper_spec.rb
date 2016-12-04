@@ -12,18 +12,25 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe MeetupsHelper, type: :helper do
-  describe 'is user attending meetup helper' do
-    before do
-      @user = create(:user)
-      @meetup = create(:meetup)
-    end
-    it 'returns true when user is attending meetup' do
-      create(:meetup_attendee, user: @user, meetup: @meetup)
-      expect(helper.user_attending_meetup?(@meetup, @user)).to eq(true)
+  describe 'user attending meetup helper' do
+    let(:user) { create(:user) }
+    let(:meetup) { create(:meetup) }
+
+    describe 'when user is attending meetup' do
+      before do
+        create(:meetup_attendee, user: user, meetup: meetup)
+      end
+
+      it 'returns true' do
+        expect(helper.user_attending_meetup?(meetup, user)).to eq(true)
+      end
     end
 
-    it 'returns false when user is not attending meetup' do
-      expect(helper.user_attending_meetup?(@meetup, @user)).to eq(false)
+    describe 'when user is not attending meetup' do
+
+      it 'returns false' do
+        expect(helper.user_attending_meetup?(meetup, user)).to eq(false)
+      end
     end
   end
 end
