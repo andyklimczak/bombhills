@@ -10,18 +10,14 @@ RSpec.describe 'meetup interactions', type: :feature do
     within('#new_meetup') do
       fill_in 'Title', with: 'Test Meetup Title'
       fill_in 'Description', with: 'Test Meetup Description'
-      select '2017', from: 'meetup_time_1i'
-      select 'July', from: 'meetup_time_2i'
-      select '4', from: 'meetup_time_3i'
-      select '16', from: 'meetup_time_4i'
-      select '20', from: 'meetup_time_5i'
+      fill_in 'Time', with: '04/12/2020 12:01 PM'
       click_button 'Create Meetup'
     end
     expect(Meetup.first.user).to eq(user)
     expect(Meetup.first.spot).to eq(spot)
     expect(Meetup.first.title).to eq('Test Meetup Title')
     expect(Meetup.first.description).to eq('Test Meetup Description')
-    expect(Meetup.first.time).to eq(Time.zone.local(2017, 7, 4, 16, 20))
+    expect(Meetup.first.time).to eq(Time.zone.local(2020, 12, 4, 12, 1))
   end
 
   it 'edit a meetup' do
@@ -33,17 +29,13 @@ RSpec.describe 'meetup interactions', type: :feature do
     within('.edit_meetup') do
       fill_in 'Title', with: 'New Title'
       fill_in 'Description', with: 'New Description'
-      select '2017', from: 'meetup_time_1i'
-      select 'July', from: 'meetup_time_2i'
-      select '4', from: 'meetup_time_3i'
-      select '16', from: 'meetup_time_4i'
-      select '20', from: 'meetup_time_5i'
+      fill_in 'Time', with: '04/12/2020 12:05 PM'
       click_button 'Update Meetup'
     end
     meetup.reload
     expect(meetup.title).to eq('New Title')
     expect(meetup.description).to eq('New Description')
-    expect(meetup.time).to eq(Time.zone.local(2017, 7, 4, 16, 20))
+    expect(Meetup.first.time).to eq(Time.zone.local(2020, 12, 4, 12, 5))
   end
 
   it 'delete a meetup' do

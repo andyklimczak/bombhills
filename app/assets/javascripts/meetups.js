@@ -1,2 +1,11 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+function initDateTimePicker() {
+  console.log('init');
+  if($('#meetup-datetime-picker').length) {
+    $('#meetup-datetime-picker').datetimepicker({
+      minDate: moment().add(1, 'day'),
+      sideBySide: true
+    });
+  }
+}
+
+document.addEventListener("turbolinks:load", initDateTimePicker);
