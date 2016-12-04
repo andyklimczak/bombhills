@@ -2,9 +2,12 @@
 require 'rails_helper'
 
 RSpec.describe 'Mailbox page', type: :request do
+  before do
+    sign_in create(:user)
+  end
+
   describe 'GET inbox' do
     it 'works!' do
-      sign_in create(:user)
       get mailbox_inbox_path
       expect(response).to have_http_status(200)
     end
@@ -12,7 +15,6 @@ RSpec.describe 'Mailbox page', type: :request do
 
   describe 'GET sent' do
     it 'works!' do
-      sign_in create(:user)
       get mailbox_sent_path
       expect(response).to have_http_status(200)
     end
@@ -20,7 +22,6 @@ RSpec.describe 'Mailbox page', type: :request do
 
   describe 'GET trash' do
     it 'works!' do
-      sign_in create(:user)
       get mailbox_trash_path
       expect(response).to have_http_status(200)
     end
