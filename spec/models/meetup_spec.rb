@@ -3,8 +3,7 @@ require 'rails_helper'
 
 RSpec.describe Meetup, type: :model do
   it 'can be created' do
-    meetup = create(:meetup)
-    expect(meetup.save).to eq(true)
+    expect(create(:meetup).save).to eq(true)
   end
 
   it { is_expected.to belong_to :spot }
