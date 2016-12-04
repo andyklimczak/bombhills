@@ -35,7 +35,6 @@ gem 'acts_as_commentable_with_threading'
 gem 'momentjs-rails'
 gem 'autoprefixer-rails'
 gem 'binding_of_caller'
-gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
 
 group :development, :test do
