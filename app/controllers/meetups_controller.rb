@@ -13,8 +13,7 @@ class MeetupsController < ApplicationController
 
   # GET /meetups/1
   # GET /meetups/1.json
-  def show
-  end
+  def show; end
 
   # GET /meetups/new
   def new
@@ -22,8 +21,7 @@ class MeetupsController < ApplicationController
   end
 
   # GET /meetups/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /meetups
   # POST /meetups.json
