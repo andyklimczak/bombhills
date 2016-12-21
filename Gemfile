@@ -1,70 +1,69 @@
 source 'https://rubygems.org'
+ruby File.open('.ruby-version', 'rb') { |f| f.read.chomp }
 
-ruby '2.3.1'
-
-gem 'rails', '5.0.0.1'
-gem 'puma'
-gem 'pg'
-gem 'bootstrap-sass'
-gem 'sass-rails'
-gem 'uglifier'
-gem 'jquery-rails'
-gem 'gon'
-gem 'jbuilder'
-gem 'devise'
-gem 'annotate'
-gem 'bourbon'
-gem 'ffaker'
-gem 'paperclip'
-gem 'fog-local'
-gem 'fog-aws'
-gem 'rails_12factor', group: :production
-gem 'factory_girl_rails'
-gem 'mailboxer', git: 'https://github.com/mailboxer/mailboxer.git'
-gem 'chosen-rails'
-gem 'leaflet-rails'
-gem 'geocoder'
-gem 'turbolinks'
-gem 'rack-timeout'
-gem 'font-awesome-rails'
-gem 'underscore-rails'
-gem 'poltergeist'
-gem 'fetch-rails'
-gem 'react-rails'
 gem 'acts_as_commentable_with_threading'
-gem 'momentjs-rails'
+gem 'annotate'
 gem 'autoprefixer-rails'
 gem 'binding_of_caller'
+gem 'bootstrap-sass'
 gem 'bootstrap3-datetimepicker-rails'
+gem 'bourbon'
+gem 'chosen-rails'
+gem 'devise'
+gem 'factory_girl_rails'
+gem 'fetch-rails'
+gem 'ffaker'
+gem 'fog-aws'
+gem 'fog-local'
+gem 'font-awesome-rails'
+gem 'geocoder'
+gem 'gon'
+gem 'jbuilder'
+gem 'jquery-rails'
+gem 'leaflet-rails'
+gem 'mailboxer', git: 'https://github.com/mailboxer/mailboxer.git'
+gem 'momentjs-rails'
+gem 'paperclip'
+gem 'pg'
+gem 'poltergeist'
+gem 'puma'
+gem 'rack-timeout'
+gem 'rails'
+gem 'rails_12factor', group: :production
+gem 'react-rails'
+gem 'sass-rails'
+gem 'turbolinks'
+gem 'uglifier'
+gem 'underscore-rails'
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'parallel_tests'
+  gem 'rspec-rails'
 end
 
 group :development do
-  gem 'web-console'
-  gem 'awesome_print', require:"ap"
+  gem 'awesome_print', require:'ap'
   gem 'better_errors'
-  gem 'pry-rails'
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload'
-  gem 'spring'
-  gem 'spring-watcher-listen'
-  gem 'spring-commands-rspec'
   gem 'brakeman', require: false
   gem 'bundler-audit'
-  gem 'rubycritic', require: false
+  gem 'guard-livereload', require: false
+  gem 'pry-rails'
+  gem 'rack-livereload'
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
+  gem 'rubycritic', require: false
   gem 'scss_lint', require: false
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-watcher-listen'
+  gem 'web-console'
 end
 
 group :test do
-  gem 'shoulda'
-  gem 'shoulda-matchers', '~> 3.1'
-  gem 'simplecov', require: false
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rspec-retry'
+  gem 'shoulda'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'simplecov', require: false
 end
