@@ -221,7 +221,7 @@ GEM
     json (2.0.2)
     launchy (2.4.3)
       addressable (~> 2.3)
-    leaflet-rails (1.0.2)
+    leaflet-rails (0.7.7)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -463,7 +463,7 @@ DEPENDENCIES
   guard-livereload
   jbuilder
   jquery-rails
-  leaflet-rails
+  leaflet-rails (~> 0.7.7)
   mailboxer!
   momentjs-rails
   paperclip
