@@ -38,9 +38,9 @@
     <% end %>
   </p>
 
-    <% if @meetup.user == current_user %>
-      <%= link_to 'Edit', edit_spot_meetup_path(@meetup) %>
-    <% end %>
+  <% if @meetup.user == current_user %>
+    <%= link_to 'Edit', edit_spot_meetup_path(@meetup) %>
+  <% end %>
   <%= link_to 'Back', spot_meetups_path %>
 
 </div>
