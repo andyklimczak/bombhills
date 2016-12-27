@@ -38,17 +38,28 @@
 
 }
 
-.meetups select {
-  background: 0;
-  border-bottom: thin solid $white;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  color: $white;
+.meetups {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+
+  input {
+    background: 0;
+    border-bottom: thin solid $white;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    color: $white;
+  }
 }
 
 #new-meetup-submit input {
   border-radius: 6px;
   color: $white;
   padding: 7px 12px;
+}
+
+.bootstrap-datetimepicker-widget {
+  color: #656565;
 }

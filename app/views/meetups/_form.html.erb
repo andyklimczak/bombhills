@@ -21,11 +21,13 @@
   </div>
   <div class="field">
     <%= f.label :time, 'Date & Time' %><br>
-    <div class='input-group date' id="meetup-datetime-picker">
-      <input type='text' id="meetup_time" class="form-control" name="meetup[time]" />
-      <span class="input-group-addon">
-        <span class="glyphicon glyphicon-calendar"></span>
-      </span>
+    <div class="form-group">
+      <div class="input-group date" id="meetup-datetime-picker">
+        <input type="text" id="meetup_time" class="form-control" name="meetup[time]" />
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
     </div>
   </div>
   <div class="actions" id="new-meetup-submit">
