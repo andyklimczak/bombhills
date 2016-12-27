@@ -74,7 +74,9 @@ class SpotModalEditForm extends React.Component {
           <input className="form-control" type="text" value={this.state.traffic} ref="traffic" name="traffic" onChange={this.handleChange} />
         </div>
         <div className="edit-buttons">
-          <button type="button" className="btn btn-success" id="modal-update-btn" onClick={this.handleUpdate}>Update</button>
+          <button type="button" className="btn btn-success" id="modal-update-btn" onClick={this.handleUpdate} disabled={!(this.state.title.length > 0 && this.state.description.length > 0 && this.state.difficulty.length > 0 && this.state.traffic.length > 0)}>
+            Update
+          </button>
           <button type="button" className="btn btn-warning" id="modal-delete-btn" onClick={this.handleDelete}>Delete</button>
         </div>
       </div>
