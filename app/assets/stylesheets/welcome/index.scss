@@ -291,7 +291,7 @@
     background: $white;
     border-radius: 6px;
     box-shadow: 5px 8px 31px -8px rgba(0, 0, 0, .75);
-    color: $primary-color;
+    color: $secondary-color;
     font-size: 32px;
     padding: 5px 10px;
 
@@ -311,7 +311,7 @@
 // footer
 
 .footer {
-  background: #333;
+  background: $black;
   color: $white;
   padding: 20px 0 80px;
   text-align: right;

@@ -16,7 +16,7 @@ function initMap() {
     }).addTo(mymap);
 
     mymap.on('load', loadPoints);
-    mymap.setView(getInitialView(), 13);
+    mymap.setView(getInitialView(), 12);
     mymap.on('contextmenu', onMapRightClick);
 
     $('#find-me-btn').click(locateMe);
@@ -81,7 +81,7 @@ function loadPoints() {
           Created by: " + spot.user.username + "<br> \
           Difficulty: " + spot.difficulty + "<br> \
           Traffic: " + spot.traffic + "<br> \
-          <a href='/spots/" + spot.id + "'>more info</a>" +"<br> \
+          <a href='/spots/" + spot.id + "'>meetup</a>" +"<br> \
           <a data-toggle='modal' data-target='#report-modal'>report</a>")
         .addTo(mymap);
       if(gon.spot && spot.id === gon.spot.id) {

@@ -85,9 +85,10 @@
 
     .spot-info-content h1 {
       color: $primary-color;
+      padding-bottom: 15px;
+      border-bottom: solid $primary-color;
       font-family: 'Kanit', sans-serif;
       font-size: 32px;
-      font-weight: $thin;
       letter-spacing: 1px;
     }
 
@@ -95,14 +96,12 @@
       color: $primary-color;
       font-family: 'Kanit', sans-serif;
       font-size: 26px;
-      font-weight: 100;
     }
 
     .spot-info-content p {
       color: $black;
       font-family: 'Kanit', sans-serif;
-      font-size: 22px;
-      font-weight: 100;
+      font-size: 18px;
     }
 
     .spot-info-content mark {
@@ -128,7 +127,7 @@
       }
 
       a {
-        background: $black;
+        background: $primary-color;
         border-radius: 6px;
         box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, .75);
         color: $white;
