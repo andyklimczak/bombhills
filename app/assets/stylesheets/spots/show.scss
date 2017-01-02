@@ -84,12 +84,12 @@
     padding: 20px 0;
 
     .spot-info-content h1 {
-      color: $primary-color;
-      padding-bottom: 15px;
       border-bottom: solid $primary-color;
+      color: $primary-color;
       font-family: 'Kanit', sans-serif;
       font-size: 32px;
       letter-spacing: 1px;
+      padding-bottom: 15px;
     }
 
     .spot-info-content h6 {
