@@ -58,21 +58,4 @@ RSpec.describe 'spot interactions', type: :feature do
       expect { click_button 'Submit', visible: false }.to change(Spot, :count).by(1)
     end
   end
-
-  it 'can view a spot on the map from the posts page' do
-    create(:image_post)
-    visit posts_path
-    click_on 'Find'
-    expect(page).to have_current_path(%r{/spots\?id=\d})
-  end
-
-  it 'can view a user profile from the posts page' do
-    user = create(:user)
-    create(:image_post, user: user)
-    visit posts_path
-    within('#thumbnail-container') do
-      click_on 'User'
-    end
-    expect(page).to have_current_path(show_user_path(user.username))
-  end
 end
