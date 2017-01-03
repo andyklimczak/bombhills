@@ -20,7 +20,7 @@
                 <p>
                   <%= link_to 'User', show_user_path(post.user.username), :class => 'btn btn-primary', id: 'user-btn' %>
                   <% if post.spot %>
-                    <%= link_to 'Find', spots_path(id: post.spot.id), class: 'btn btn-default' %>
+                  <%= link_to 'Locate', spots_path(id: post.spot.id), class: 'btn btn-default' %>
                   <% end %>
                 </p>
               </div>
