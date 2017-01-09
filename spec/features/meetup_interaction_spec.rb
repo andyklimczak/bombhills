@@ -77,4 +77,17 @@ RSpec.describe 'meetup interactions', type: :feature do
       expect { meetup.reload }.to raise_error(ActiveRecord::RecordNotFound)
     end
   end
+
+  context 'attendee dropdown', js: true do
+    before do
+      create(:meetup_attendee, user: user, meetup: meetup)
+      visit spot_meetup_path(spot, meetup)
+      select user.username, from: 'attendees-dropdown'
+      wait_for_ajax
+    end
+
+    it 'redirects to user page' do
+      expect(page).to have_current_path(show_user_path(user.username))
+    end
+  end
 end

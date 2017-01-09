@@ -37,16 +37,10 @@
       <%= react_component('AttendMeetup', meetup: @meetup, attending: user_attending_meetup?(@meetup, current_user)) %>
     <% end %>
   </p>
-  
-   <div class="form-group">
-      <label for="sel1">attendees</label>
-      <select class="form-control" id="sel1">
-        <option>usernameone</option>
-        <option>usernametwo</option>
-        <option>usernamethree</option>
-        <option>usernamefour</option>
-      </select>
-    </div>
+
+  <% if @meetup.meetup_attendees.any? %>
+    <%= react_component('MeetupAttendeesDropdown', attendees: @meetup.meetup_attendees.map{|ma| ma.user.username}) %>
+  <% end %>
 
   <% if @meetup.user == current_user %>
     <%= link_to 'Edit', edit_spot_meetup_path(@meetup) %>
