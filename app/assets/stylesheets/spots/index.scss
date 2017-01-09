@@ -166,17 +166,18 @@
 .leaflet-popup-content-wrapper {
   background: $primary-color;
   color: $white;
+  font-size: 16px;
 
   b {
-    font-family: $font-sans;
+    font-family: $font-cursive;
     font-size: 32px;
     font-weight: $thin;
   }
+  
 
   a {
     color: $white;
     font-size: 24px;
-    font-weight: $thin;
 
     &:hover {
       background: none;

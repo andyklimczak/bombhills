@@ -28,22 +28,21 @@
       <h1>
         <%= @spot.title %>
       </h1>
-      <h6>
-        <%= @spot.difficulty %>
-      </h6>
-
       <p>
         <%= @spot.description %>
       </p>
       <p>
-        <mark>Traffic :</mark>
+        <%= @spot.difficulty %>
+      </p>
+      <p>
+        <mark>traffic </mark>
         <%= @spot.traffic%>
       </p>
     </div>
 
     <div class="spot-meetups-content show-spot-content" style="display:none;">
       <p>
-        Set a time to meetup here for a group session. 
+        Set a time to meetup here for a group
       </p>
       </br>
       <%= link_to 'meetup', spot_meetups_path(@spot) %>
