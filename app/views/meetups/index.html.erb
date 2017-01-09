@@ -9,7 +9,7 @@
     <% @meetups.each do |meetup| %>
       <%= meetup.title %> </br>
       <%= meetup.description %> </br>
-      <%= meetup.time %> </br>
+			<%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %><br/>
       <%= meetup.spot.title %> </br>
       <%= meetup.user.username %>
   <%= link_to 'More Info', spot_meetup_path(@spot, meetup), class: 'meetups-btn' %>
