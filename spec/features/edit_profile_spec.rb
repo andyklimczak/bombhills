@@ -50,8 +50,8 @@ RSpec.describe 'edit user', type: :feature do
       fill_in 'Password', with: 'newPassword123'
       fill_in 'Password confirmation', with: 'newPassword123'
       fill_in 'Current password', with: 'password123'
-      click_button 'Update'
     end
+    expect { click_on 'Update' }.to change(ActionMailer::Base.deliveries, :count).by(1)
     @user.reload
     expect(page).to have_current_path(show_user_path(@user.username))
     expect(@user.encrypted_password).not_to eq(old_password_hash)
