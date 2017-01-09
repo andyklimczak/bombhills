@@ -8,7 +8,7 @@ class MeetupsController < ApplicationController
   # GET /meetups
   # GET /meetups.json
   def index
-    @meetups = @spot.meetups
+    @meetups = @spot.meetups.where("time > ?", DateTime.now)
   end
 
   # GET /meetups/1
