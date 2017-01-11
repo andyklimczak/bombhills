@@ -24,5 +24,6 @@
 //= require react_ujs
 //= require moment
 //= require bootstrap-datetimepicker
+//= require bootstrap-table
 //= require components
 //= require_tree .

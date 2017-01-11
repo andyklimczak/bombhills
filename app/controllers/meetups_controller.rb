@@ -14,7 +14,7 @@ class MeetupsController < ApplicationController
   # GET /meetups
   # GET /meetups.json
   def index_all
-    @meetups = Meetup.all
+    @meetups = Meetup.where('time > ?', DateTime.now.getlocal).order(time: :asc)
   end
 
   # GET /spots/1/meetups/1

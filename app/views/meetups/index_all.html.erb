@@ -1,21 +1,43 @@
-<div class="meetups-all">
+<div class="meetups">
   <%= render 'layouts/navbar' %>
 
   <p id="notice"><%= notice %></p>
 
   <% if @meetups.any? %>
-    <% @meetups.each do |meetup| %>
-      <%= meetup.title %> </br>
-      <%= meetup.description %> </br>
-			<%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %><br/>
-      <%= meetup.spot.title %> </br>
-      <%= meetup.user.username %>
-    <% end %>
+    <table data-toggle="table">
+      <thead>
+        <tr>
+          <th data-sortable="true">
+            Title
+          </th>
+          <th data-sortable="true">
+            Meetup Attendees
+          </th>
+          <th>
+            Date & Time
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @meetups.each do |meetup| %>
+          <tr>
+            <td>
+              <%= meetup.title %>
+            </td>
+            <td>
+              <%= meetup.meetup_attendees.count %>
+            </td>
+            <td>
+              <%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %><br/>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   <% else %>
     <p>
       No meetups
     </p>
   <% end %>
-
 
 </div>
