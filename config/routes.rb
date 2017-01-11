@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :spots do
     resources :meetups
   end
+  get 'meetups' => 'meetups#index_all', as: :meetups
 
   resource :meetup_attendees, only: [:create, :destroy]
 

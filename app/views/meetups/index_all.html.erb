@@ -1,0 +1,21 @@
+<div class="meetups-all">
+  <%= render 'layouts/navbar' %>
+
+  <p id="notice"><%= notice %></p>
+
+  <% if @meetups.any? %>
+    <% @meetups.each do |meetup| %>
+      <%= meetup.title %> </br>
+      <%= meetup.description %> </br>
+			<%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %><br/>
+      <%= meetup.spot.title %> </br>
+      <%= meetup.user.username %>
+    <% end %>
+  <% else %>
+    <p>
+      No meetups
+    </p>
+  <% end %>
+
+
+</div>

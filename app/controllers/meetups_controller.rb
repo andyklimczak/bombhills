@@ -1,30 +1,36 @@
 # frozen_string_literal: true
 class MeetupsController < ApplicationController
   before_action :set_meetup, only: [:show, :edit, :update, :destroy]
-  before_action :set_spot
-  before_action :authenticate_user!, except: [:show, :index]
-  before_action :require_permission, except: [:show, :index, :new, :create]
+  before_action :set_spot, except: [:index_all]
+  before_action :authenticate_user!, except: [:show, :index, :index_all]
+  before_action :require_permission, except: [:show, :index, :index_all, :new, :create]
 
-  # GET /meetups
-  # GET /meetups.json
+  # GET /spots/1/meetups
+  # GET /spots/1/meetups.json
   def index
     @meetups = @spot.meetups.where('time > ?', DateTime.now.getlocal)
   end
 
-  # GET /meetups/1
-  # GET /meetups/1.json
+  # GET /meetups
+  # GET /meetups.json
+  def index_all
+    @meetups = Meetup.all
+  end
+
+  # GET /spots/1/meetups/1
+  # GET /spots/1/meetups/1.json
   def show; end
 
-  # GET /meetups/new
+  # GET /spots/1/meetups/new
   def new
     @meetup = Meetup.new(spot: @spot)
   end
 
-  # GET /meetups/1/edit
+  # GET /spots/1/meetups/1/edit
   def edit; end
 
-  # POST /meetups
-  # POST /meetups.json
+  # POST /spots/1/meetups
+  # POST /spots/1/meetups.json
   def create
     @meetup = Meetup.new(meetup_params)
 
@@ -39,8 +45,8 @@ class MeetupsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /meetups/1
-  # PATCH/PUT /meetups/1.json
+  # PATCH/PUT /spots/1/meetups/1
+  # PATCH/PUT /spots/1/meetups/1.json
   def update
     respond_to do |format|
       if @meetup.update(meetup_params)
@@ -53,8 +59,8 @@ class MeetupsController < ApplicationController
     end
   end
 
-  # DELETE /meetups/1
-  # DELETE /meetups/1.json
+  # DELETE /spots/1/meetups/1
+  # DELETE /spots/1/meetups/1.json
   def destroy
     @meetup.destroy
     respond_to do |format|
