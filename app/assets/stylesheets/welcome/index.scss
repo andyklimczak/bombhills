@@ -243,6 +243,23 @@
     font-weight: $thin;
   }
 
+  a {
+    background: $primary-color;
+    border-radius: 6px;
+    box-shadow: 5px 8px 29px -5px rgba(0, 0, 0, .5);
+    color: $white;
+    cursor: pointer;
+    font-size: 26px;
+    margin-right: auto;
+    padding: 15px;
+  }
+
+  a:hover {
+    background: none;
+    color: $black;
+    text-decoration: none;
+  }
+
 }
 
 #explore-col {

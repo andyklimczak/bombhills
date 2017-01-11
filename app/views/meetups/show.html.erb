@@ -5,19 +5,16 @@
 
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Title:</strong>
+  <h1>
     <%= @meetup.title %>
-  </p>
+  </h1>
 
   <p>
-    <strong>Description:</strong>
-    <%= @meetup.description %>
-  </p>
-
-  <p>
-    <strong>Time:</strong>
     <%= @meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %>
+  </p>
+  
+  <p>
+    <%= @meetup.description %>
   </p>
 
   <p>
@@ -27,11 +24,12 @@
 
   <p>
     <strong>Owner:</strong>
-    <%= @meetup.user.username %>
+    <%= link_to @meetup.user.username, show_user_path(@meetup.user.username) %>
+
   </p>
 
   <p>
-    <strong>Number of meetup attendees:</strong>
+    <strong>Attendees:</strong>
     <%= @meetup.meetup_attendees.count %>
     <% if user_signed_in? %>
       <%= react_component('AttendMeetup', meetup: @meetup, attending: user_attending_meetup?(@meetup, current_user)) %>
