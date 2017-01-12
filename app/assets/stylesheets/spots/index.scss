@@ -165,7 +165,7 @@
 
 .leaflet-popup-content-wrapper {
   background: $primary-color;
-  color: $white;
+  color: $black;
   font-size: 16px;
 
   b {
@@ -175,12 +175,12 @@
   }
 
   a {
-    color: $white;
+    color: $black;
     font-size: 24px;
 
     &:hover {
       background: none;
-      color: #233e47;
+      color: $black;
       cursor: pointer;
       text-decoration: none;
     }

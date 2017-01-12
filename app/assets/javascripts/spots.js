@@ -79,9 +79,9 @@ function loadPoints() {
           "<b>" + spot.title + "</b><br> \
            " + spot.description + "<br> \
            " + spot.difficulty + "<br> \
-          Traffic is.. " + spot.traffic + "<br> \
-          Created by: " + spot.user.username + "<br> \
-          <a href='/spots/" + spot.id + "'>MEETUP</a>" +"<br> \
+          <strong>Traffic is..</strong> " + spot.traffic + "<br> \
+          Created by.. " + spot.user.username + "<br> \
+          <a href='/spots/" + spot.id + "'>meetup</a>" +"<br> \
           <a data-toggle='modal' data-target='#report-modal'>report</a>")
         .addTo(mymap);
       if(gon.spot && spot.id === gon.spot.id) {
