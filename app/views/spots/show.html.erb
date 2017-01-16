@@ -45,6 +45,8 @@
     </div>
 
     <div class="spot-meetups-content show-spot-content" style="display:none;">
+      <div class="title-container">
+      </div>
       <p>
         Set a time to meetup here for a group
       </p>
@@ -53,6 +55,8 @@
     </div>
 
     <div class="spot-posts-content show-spot-content" style="display:none;">
+      <div class="title-container">
+      </div>
       <% if @spot.posts.any? %>
         <% @spot.posts.each_slice(2) do |posts| %>
           <div class="row">
@@ -88,6 +92,8 @@
     </div>
 
     <div class="spot-other-content show-spot-content" style="display:none;">
+      <div class="title-container">
+      </div>
       <div class="comments-container">
         <%= react_component('Comments', { resource: JSON.parse(render(template: 'spots/show.json.jbuilder')), commentableType: 'Spot', currentUser: current_user }) %>
       </div>

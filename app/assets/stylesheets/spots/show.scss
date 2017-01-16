@@ -127,6 +127,7 @@
 
     .spot-meetups-content {
       font-family: 'Kanit', sans-serif;
+      padding: 0;
       text-align: right;
 
       p {
@@ -153,6 +154,19 @@
       &:hover {
         text-decoration: none;
       }
+    }
+
+    //spots posts content
+
+    .spot-posts-content {
+      padding: 0;
+
+    }
+
+    //spots other content
+
+    .spot-other-content {
+      padding: 0;
     }
 
     .create-meetup-btn {
