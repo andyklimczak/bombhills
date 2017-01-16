@@ -7,8 +7,23 @@ RSpec.describe 'Meetups', type: :request do
   end
 
   describe 'GET /spots/:spot_id/meetups' do
+    before do
+      create(:meetup)
+    end
+
     it 'works' do
       get spot_meetups_path([@spot])
+      expect(response).to have_http_status(200)
+    end
+  end
+
+  describe 'GET /meetups' do
+    before do
+      create(:meetup)
+    end
+
+    it 'works' do
+      get meetups_path
       expect(response).to have_http_status(200)
     end
   end
