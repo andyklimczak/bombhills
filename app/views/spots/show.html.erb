@@ -24,20 +24,24 @@
   </div>
 
   <div class="spot-info-container">
-    <div class="spot-info-content show-spot-content">
-      <h1>
+    <div class="spot-info-content show-spot-content" id="spot-info-content">
+      <div class="title-container">
+      </div>
+      <div class="content-container">
+        <h1>
         <%= @spot.title %>
-      </h1>
-      <p>
-        <%= @spot.description %>
-      </p>
-      <p>
-        <%= @spot.difficulty %>
-      </p>
-      <p>
-        <mark>traffic </mark>
-        <%= @spot.traffic%>
-      </p>
+        </h1>
+        <p>
+          <%= @spot.description %>
+        </p>
+        <p>
+          <%= @spot.difficulty %>
+        </p>
+        <p>
+          <mark>traffic </mark>
+          <%= @spot.traffic%>
+        </p>
+      </div>
     </div>
 
     <div class="spot-meetups-content show-spot-content" style="display:none;">

@@ -77,28 +77,43 @@
   }
 
   .spot-info-container {
+    background: $primary-color;
     box-shadow: -5px 3px 18px -3px rgba(0, 0, 0, .30);
     flex-basis: 0;
     flex-grow: 10;
     height: inherit;
-    padding: 20px 0;
+    text-align: right;
+    
+    .title-container{
+      height: 175px;
+      background: url(spotinfopic.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    
+    #spot-info-content {
+      padding: 0px;
+    }
 
-    .spot-info-content h1 {
-      color: $primary-color;
-      font-family: $font-cursive;
-      font-size: 32px;
+    .show-spot-content h1 {
+      color: $white;
+      font-family: $font-sans;
+      font-weight: $thin;
+      font-size: 64px;
       letter-spacing: 1px;
+      margin-top: 0;
     }
 
     .spot-info-content p {
-      color: $black;
+      color: $white;
       font-family: $font-sans;
       font-size: 18px;
     }
 
     .spot-info-content mark {
       background: 0;
-      color: $primary-color;
+      color: $white;
+      letter-spacing: 1px;
       padding: 0;
     }
 
@@ -111,7 +126,7 @@
 
     .spot-meetups-content {
       font-family: 'Kanit', sans-serif;
-      text-align: center;
+      text-align: right;
 
       p {
         font-size: 18px;
@@ -119,7 +134,7 @@
       }
 
       a {
-        background: $primary-color;
+        background: #074B94;
         border-radius: 6px;
         box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, .75);
         color: $white;
@@ -130,6 +145,7 @@
       }
 
       a:hover {
+        background: #022347;
         text-decoration: none;
       }
 

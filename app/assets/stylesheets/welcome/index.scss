@@ -305,16 +305,16 @@
   }
 
   a {
-    background: $white;
+    background: $black;
     border-radius: 6px;
     box-shadow: 5px 8px 31px -8px rgba(0, 0, 0, .75);
-    color: $secondary-color;
+    color: $white;
     font-size: 32px;
     padding: 5px 10px;
 
     &:hover {
-      background: $black;
-      color: $white;
+      background: $white;
+      color: $black;
       text-decoration: none;
     }
   }
