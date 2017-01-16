@@ -83,43 +83,44 @@
     flex-grow: 10;
     height: inherit;
     text-align: right;
-    
-    .title-container{
-      height: 175px;
-      background: url(spotinfopic.jpg);
-      background-size: cover;
+
+    .title-container {
+      background: url('spotinfopic.jpg');
       background-position: center;
+      background-size: cover;
+      height: 175px;
     }
-    
+
     #spot-info-content {
-      padding: 0px;
-    }
-
-    .show-spot-content h1 {
-      color: $white;
-      font-family: $font-sans;
-      font-weight: $thin;
-      font-size: 64px;
-      letter-spacing: 1px;
-      margin-top: 0;
-    }
-
-    .spot-info-content p {
-      color: $white;
-      font-family: $font-sans;
-      font-size: 18px;
-    }
-
-    .spot-info-content mark {
-      background: 0;
-      color: $white;
-      letter-spacing: 1px;
       padding: 0;
     }
 
     .show-spot-content {
       height: inherit;
       padding: 2em;
+
+      h1 {
+        color: $white;
+        font-family: $font-sans;
+        font-size: 64px;
+        font-weight: $thin;
+        letter-spacing: 1px;
+        margin-top: 0;
+      }
+
+      p {
+        color: $white;
+        font-family: $font-sans;
+        font-size: 18px;
+      }
+
+      mark {
+        background: 0;
+        color: $white;
+        letter-spacing: 1px;
+        padding: 0;
+      }
+
     }
 
     // spot meetups content
@@ -134,7 +135,7 @@
       }
 
       a {
-        background: #074B94;
+        background: #074b94;
         border-radius: 6px;
         box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, .75);
         color: $white;
