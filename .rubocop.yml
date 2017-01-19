@@ -23,6 +23,11 @@ Style/Documentation:
 Metrics/AbcSize:
   Max: 20
 
+Metrics/BlockLength:
+  Exclude:
+    - '**/*_spec.rb'
+    - '**/*_helper.rb'
+
 RSpec/MultipleExpectations:
   Enabled: false
 

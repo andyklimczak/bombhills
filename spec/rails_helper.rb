@@ -20,7 +20,7 @@ include ActionDispatch::TestProcess
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
 
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
@@ -34,7 +34,7 @@ Shoulda::Matchers.configure do |config|
 end
 
 Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, window_size: [1920, 1080], phantomjs_logger: File.open("#{Rails.root}/log/test_phantomjs.log", 'a'), js_errors: false, timeout: 1.minute)
+  Capybara::Poltergeist::Driver.new(app, window_size: [1920, 1080], phantomjs_logger: File.open(Rails.root.join('log', 'test_phantomjs.log'), 'a'), js_errors: false, timeout: 1.minute)
 end
 Capybara.javascript_driver = :poltergeist
 
