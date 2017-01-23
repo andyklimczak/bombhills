@@ -33,6 +33,8 @@ class Spot < ApplicationRecord
             inclusion: { in: %w(Beginner Intermediate Professional),
                          message: '%{value} is not a valid difficulty' }
   validate :daily_quota, on: :create
+  reverse_geocoded_by :latitude, :longitude
+  after_validation :geocode
 
   private
 
