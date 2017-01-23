@@ -22,14 +22,14 @@ RSpec.describe Spot, type: :model do
   end
 
   context 'location aware database queries' do
-      before do
-        create(:spot, latitude: 37.7449, longitude: -122.4194) #SF
-        create(:spot, latitude: 37.7449, longitude: -122.4194) #SF
-        create(:spot, latitude: 40.7128, longitude: -75.0059) #NY
-      end
+    before do
+      create(:spot, latitude: 37.7449, longitude: -122.4194) # SF
+      create(:spot, latitude: 37.7449, longitude: -122.4194) # SF
+      create(:spot, latitude: 40.7128, longitude: -75.0059) # NY
+    end
 
     it 'can find spots near given location' do
-      expect(Spot.near('San Francisco, CA, US', 20).size).to eq(2);
+      expect(Spot.near('San Francisco, CA, US', 20).size).to eq(2)
     end
   end
 end
