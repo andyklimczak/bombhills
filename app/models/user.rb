@@ -68,11 +68,7 @@ class User < ApplicationRecord
   end
 
   def validate_username
-    if User.where(email: username).exists?
-      errors.add(:username, :invalid)
-    elsif username.present? && username.include?('.')
-      errors.add(:username, :invalid)
-    end
+    errors.add(:username, :invalid) if User.where(email: username).exists? || (username.present? && username.include?('.'))
   end
 
   def name
