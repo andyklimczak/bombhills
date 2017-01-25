@@ -15,6 +15,7 @@ class MeetupsController < ApplicationController
   # GET /meetups.json
   def index_all
     @meetups = Meetup.where('time > ?', DateTime.now.getlocal).order(time: :asc)
+    @meetups = @meetups.includes(:spot).references(:spots).merge(Spot.near(params[:meetup_search], 100)) unless params[:meetup_search].blank?
   end
 
   # GET /spots/1/meetups/1

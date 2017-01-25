@@ -2,43 +2,47 @@
 
 <div class="meetups">
 
-  <p id="notice"><%= notice %></p>
+	<p id="notice"><%= notice %></p>
+	<%= form_tag(meetups_path, method: "get", id: "form", class: "form-inline") do %>
+		<%= text_field_tag :meetup_search, params[:meetup_search], id: "meetup-search-input", class: "form-control", placeholder: "search" %>
+		<%= submit_tag "Search", name: nil, id: "meetup-search-btn", class: "btn btn-default" %>
+	<% end %>
 
-  <% if @meetups.any? %>
-    <table data-toggle="table">
-      <thead>
-        <tr>
-          <th data-sortable="true">
-            Title
-          </th>
-          <th data-sortable="true">
-            Meetup Attendees
-          </th>
-          <th>
-            Date & Time
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @meetups.each do |meetup| %>
-          <tr>
-            <td>
-              <%= meetup.title %>
-            </td>
-            <td>
-              <%= meetup.meetup_attendees.count %>
-            </td>
-            <td>
-              <%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %><br/>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  <% else %>
-    <p>
-      No meetups
-    </p>
-  <% end %>
+	<% if @meetups.any? %>
+		<table data-toggle="table">
+			<thead>
+				<tr>
+					<th data-sortable="true">
+						Title
+					</th>
+					<th data-sortable="true">
+						Meetup Attendees
+					</th>
+					<th>
+						Date & Time
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @meetups.each do |meetup| %>
+					<tr class="meetup-row">
+						<td>
+							<%= meetup.title %>
+						</td>
+						<td>
+							<%= meetup.meetup_attendees.count %>
+						</td>
+						<td>
+							<%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %><br/>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	<% else %>
+		<p>
+			No meetups
+		</p>
+	<% end %>
 
 </div>

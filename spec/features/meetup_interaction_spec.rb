@@ -90,4 +90,23 @@ RSpec.describe 'meetup interactions', type: :feature do
       expect(page).to have_current_path(show_user_path(user.username))
     end
   end
+
+  context 'meetup_search', js: true do
+    before do
+      spot1 = create(:spot, latitude: 37.762844, longitude: -122.430267) # SF
+      spot2 = create(:spot, latitude: 37.762844, longitude: -122.430268) # SF
+      spot3 = create(:spot, latitude: 40.7128, longitude: -74.0059) # NY
+      create(:meetup, spot: spot1)
+      create(:meetup, spot: spot2)
+      create(:meetup, spot: spot3)
+    end
+
+    it 'finds nearby spots' do
+      visit meetups_path
+      fill_in 'meetup_search', with: 'San Francisco CA'
+      click_button 'Search'
+      expect(page).to have_current_path(/meetup_search=San\+Francisco\+CA/)
+      expect(page).to have_selector('.meetup-row', count: 2)
+    end
+  end
 end

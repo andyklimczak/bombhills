@@ -3,7 +3,7 @@ FactoryGirl.define do
   factory :meetup, aliases: [:attending_meetups] do
     title { FFaker::Movie.title }
     description { FFaker::Lorem.sentence }
-    time { FFaker::Time.date }
+    time { Time.zone.now.next_week }
     spot
     user
   end

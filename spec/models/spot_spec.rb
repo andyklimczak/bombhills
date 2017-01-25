@@ -25,11 +25,15 @@ RSpec.describe Spot, type: :model do
     before do
       create(:spot, latitude: 37.7449, longitude: -122.4194) # SF
       create(:spot, latitude: 37.7449, longitude: -122.4194) # SF
-      create(:spot, latitude: 40.7128, longitude: -75.0059) # NY
+      create(:spot, latitude: 40.7128, longitude: -74.0059) # NY
     end
 
-    it 'can find spots near given location' do
+    it 'can find spots near SF' do
       expect(Spot.near('San Francisco, CA, US', 20).size).to eq(2)
+    end
+
+    it 'can find spot near NY' do
+      expect(Spot.near('NY, NY', 20).size).to eq(1)
     end
   end
 end
