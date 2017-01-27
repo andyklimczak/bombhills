@@ -4,11 +4,13 @@
   <head>
 
     <!-- Required meta tags should always come first -->
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="Viewport" content="width=device-width, initial-scale=1">
+    <%= display_meta_tags site: 'Bombhills' %>
+    <%= display_meta_tags description: 'Share long board spots to ride!' %>
+    <%= display_meta_tags keywords: %w[longboard longboards skateboard skateboards] %>
+    <%= display_meta_tags charset: 'utf-8' %>
 
-    <title>Bombhills</title>
     <%= favicon_link_tag 'favicon.ico' %>
 
     <!-- HTML 5 shim and Respond.js for IE support of HTML5 elements and media queries -->
@@ -26,10 +28,10 @@
 
     <!-- Kanit -->
     <link href='https://fonts.googleapis.com/css?family=Kanit:400,300,200,800' rel='stylesheet' type='text/css'>
-    
+
     <!-- Lobster / Brand Font -->
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
 
     <%= Gon::Base::render_data({}) %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>

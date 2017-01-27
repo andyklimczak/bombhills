@@ -1,3 +1,4 @@
+<% title @meetup.title %>
 <%= render 'layouts/navbar' %>
 
 <div class="meetups">
@@ -12,7 +13,7 @@
   <p>
     <%= @meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %>
   </p>
-  
+
   <p>
     <%= @meetup.description %>
   </p>
