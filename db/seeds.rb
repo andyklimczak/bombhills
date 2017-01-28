@@ -1,6 +1,6 @@
 until User.count > 2 do
-  User.create!(username: FFaker::Internet.user_name, email: FFaker::Internet.safe_email, password: FFaker::Internet.password, motto: FFaker::DizzleIpsum.sentence)
-  User.create!(username: FFaker::Internet.user_name, email: FFaker::Internet.safe_email, password: FFaker::Internet.password, motto: FFaker::DizzleIpsum.sentence)
+  User.create!(username: FFaker::Name.first_name, email: FFaker::Internet.safe_email, password: FFaker::Internet.password, motto: FFaker::DizzleIpsum.sentence)
+  User.create!(username: FFaker::Name.first_name, email: FFaker::Internet.safe_email, password: FFaker::Internet.password, motto: FFaker::DizzleIpsum.sentence)
 end
 
 3.times do |i|

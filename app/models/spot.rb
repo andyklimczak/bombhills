@@ -8,11 +8,11 @@
 #  longitude   :decimal(30, 25)
 #  description :string
 #  title       :string
-#  difficulty  :string
 #  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  traffic     :string
+#  difficulty  :integer
 #
 # Indexes
 #
@@ -29,9 +29,7 @@ class Spot < ApplicationRecord
   has_many :posts
   has_many :meetups
   validates :latitude, :longitude, :title, :difficulty, :traffic, presence: true
-  validates :difficulty,
-            inclusion: { in: %w(Beginner Intermediate Professional),
-                         message: '%{value} is not a valid difficulty' }
+  enum difficulty: [:Beginner, :Intermediate, :Professional]
   validate :daily_quota, on: :create
   reverse_geocoded_by :latitude, :longitude
   after_validation :geocode
