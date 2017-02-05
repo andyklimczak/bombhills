@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Rails.application.routes.draw do
   resource :messages, only: [:create]
 
@@ -16,15 +17,15 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
 
- %w( 404 422 500 ).each do |code|
-		get code, :to => "errors#show", :code => code
-	end
+  %w(404 422 500).each do |code|
+    get code, to: 'errors#show', code: code
+  end
 
-  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
-  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
-  get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
+  get 'mailbox/inbox' => 'mailbox#inbox', as: :mailbox_inbox
+  get 'mailbox/sent' => 'mailbox#sent', as: :mailbox_sent
+  get 'mailbox/trash' => 'mailbox#trash', as: :mailbox_trash
 
-	resources :conversations do
+  resources :conversations do
     member do
       post :reply
       post :trash
@@ -33,6 +34,8 @@ Rails.application.routes.draw do
   end
 
   resources :comments, only: [:create, :destroy]
+
+  get 'robots.:format' => 'robots#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
