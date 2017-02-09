@@ -27,4 +27,10 @@ class Meetup < ApplicationRecord
   has_many :meetup_attendees
   has_many :attending_users, through: :meetup_attendees, source: 'user'
   validates :title, :description, :time, presence: true
+  validate :valid_time, on: :create
+
+  def valid_time
+    return unless time < Time.zone.now
+    errors.add(:meetup, 'Cannot create meetup starting in the past')
+  end
 end
