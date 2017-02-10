@@ -46,7 +46,7 @@ RSpec.describe 'Meetups', type: :request do
   describe 'POST /spots/:spot_id/meetups' do
     it 'works' do
       sign_in(create(:user))
-      post "/spots/#{@spot.id}/meetups", params: { meetup: { title: 'Test meetup title', description: 'Test meetup description', time: DateTime.current } }
+      post "/spots/#{@spot.id}/meetups", params: { meetup: { title: 'Test meetup title', description: 'Test meetup description', time: Time.zone.tomorrow } }
       expect(response).to have_http_status(302)
       expect(Meetup.count).to eq(1)
       expect(Meetup.last.title).to eq('Test meetup title')
@@ -60,7 +60,7 @@ RSpec.describe 'Meetups', type: :request do
         'CONTENT_TYPE' => 'application/json'
       }
       sign_in(create(:user))
-      params = { title: 'Test meetup title', description: 'Test meetup description', time: DateTime.current }
+      params = { title: 'Test meetup title', description: 'Test meetup description', time: Time.zone.tomorrow }
       post("/spots/#{@spot.id}/meetups", params: params.to_json, headers: headers)
       expect(response).to have_http_status(201)
       expect(Meetup.count).to eq(1)
