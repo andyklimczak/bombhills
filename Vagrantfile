@@ -118,7 +118,7 @@ Vagrant.configure(2) do |config|
     echo "-----------------------------vagrant ssh"
     echo "-----------------------------START SERVER WITH"
     echo "-----------------------------cd /vagrant"
-    echo "-----------------------------rails s --bind 0.0.0.0"
+    echo "-----------------------------rails s"
     echo "-----------------------------and visit localhost:3000 in browser"
   SHELL
 end
