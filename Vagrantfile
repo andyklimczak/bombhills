@@ -25,6 +25,8 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 3000, host: 3000
   config.vm.network "forwarded_port", guest: 35729, host: 35729
 
+  config.ssh.username = "vagrant"
+
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
@@ -44,11 +46,11 @@ Vagrant.configure(2) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-   config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
-  #
-  #   # Customize the amount of memory on the VM:
+  config.vm.provider "virtualbox" do |vb|
+    #   # Display the VirtualBox GUI when booting the machine
+    #   vb.gui = true
+    #
+    #   # Customize the amount of memory on the VM:
     vb.memory = "2048"
   end
   #
@@ -65,29 +67,58 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-   config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get update
-    sudo apt-get install -y git
-    sudo apt-get install -y curl
-    sudo apt-get install imagemagick -y
-    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-    curl -sSL https://get.rvm.io | bash -s head --rails
-    source $HOME/.rvm/scripts/rvm
-    echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' >> .bashrc
+  config.vm.provision "shell", inline: <<-SHELL, privileged: false
+    echo "-----------------------------STARTING BOMBHILLS VAGRANT"
+    sed -i '1iforce_color_prompt=yes' ~/.bashrc
+    echo 'gem: --no-rdoc --no-ri' >> ~/.gemrc
+
+    echo "-----------------------------INSTALLING ESSENTIALS"
     export LANGUAGE="en_US.UTF-8"
     export LANG="en_US.UTF-8"
     export LC_ALL="en_US.UTF-8"
+    localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
     locale-gen en_US.UTF-8
+    sudo apt-get update
+    sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev libcurl4-openssl-dev curl wget
+    sudo apt-get install -y git nodejs
+    sudo apt-get install imagemagick -y
     sudo apt-get install -y postgresql libpq-dev phantomjs
+
+
+    echo "-----------------------------INSTALLING RUBY"
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    curl -sSL https://get.rvm.io | bash
+    source /usr/local/rvm/scripts/rvm
+    source $HOME/.rvm/scripts/rvm || source /etc/profile.d/rvm.sh
+    echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' >> .bashrc
+    sudo usermod -a -G rvm vagrant
+    rvm get stable
+    rvm install "$(< /vagrant/.ruby-version)"
+    rvm use "$(< /vagrant/.ruby-version)"
+
+    echo "-----------------------------SETTING UP DATABASE"
+    sudo sudo -u postgres psql -1 -c "CREATE USER vagrant WITH PASSWORD 'secret';"
+    sudo sudo -u postgres psql -1 -c "ALTER USER vagrant WITH SUPERUSER;"
     sudo service postgresql start
-    #sudo su postgres
-    #createuser vagrant
-    #y
-    #exit
-    sudo apt-get install -y nodejs
-    #cd /vagrant
-    #bundle install
-    #rake db:setup
-    #rails s --bind 0.0.0.0
-   SHELL
+
+
+    echo "-----------------------------SETTING UP PROJECT"
+    mkdir -p ~/fog/bombhills/images
+    mkdir /vagrant/public
+    ln -s ~/fog/bombhills/images /vagrant/public
+    gem install bundler
+    gem update --system
+    cd /vagrant
+    bundle install
+    rails db:setup
+
+
+    echo "-----------------------------SETUP COMPLETE"
+    echo "-----------------------------ENTER VIRTUAL MACHINE WITH"
+    echo "-----------------------------vagrant ssh"
+    echo "-----------------------------START SERVER WITH"
+    echo "-----------------------------cd /vagrant"
+    echo "-----------------------------rails s --bind 0.0.0.0"
+    echo "-----------------------------and visit localhost:3000 in browser"
+  SHELL
 end
