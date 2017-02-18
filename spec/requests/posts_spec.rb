@@ -7,6 +7,11 @@ RSpec.describe 'Posts', type: :request do
       get posts_path
       expect(response).to have_http_status(200)
     end
+
+    it 'works! json' do
+      get posts_path, format: :json
+      expect(response).to have_http_status(200)
+    end
   end
 
   describe 'GET /posts/:id' do
@@ -15,8 +20,18 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to have_http_status(200)
     end
 
+    it 'works for image post json' do
+      get posts_path(create(:image_post)), format: :json
+      expect(response).to have_http_status(200)
+    end
+
     it 'works for video post' do
       get posts_path(create(:video_post))
+      expect(response).to have_http_status(200)
+    end
+
+    it 'works for video post json' do
+      get posts_path(create(:video_post)), format: :json
       expect(response).to have_http_status(200)
     end
   end

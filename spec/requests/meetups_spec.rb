@@ -15,6 +15,11 @@ RSpec.describe 'Meetups', type: :request do
       get spot_meetups_path([@spot])
       expect(response).to have_http_status(200)
     end
+
+    it 'works json' do
+      get spot_meetups_path([@spot]), format: :json
+      expect(response).to have_http_status(200)
+    end
   end
 
   describe 'GET /meetups' do

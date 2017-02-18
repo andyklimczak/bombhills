@@ -7,12 +7,23 @@ RSpec.describe 'Spots', type: :request do
       get spots_path
       expect(response).to have_http_status(200)
     end
+
+    it 'works! json' do
+      get spots_path, format: :json
+      expect(response).to have_http_status(200)
+    end
   end
 
   describe 'GET /spots/:id', type: :request do
     it 'works!' do
       spot = create(:spot)
       get spots_path(spot)
+      expect(response).to have_http_status(200)
+    end
+
+    it 'works! json' do
+      spot = create(:spot)
+      get spots_path(spot), format: :json
       expect(response).to have_http_status(200)
     end
 
