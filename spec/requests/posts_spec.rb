@@ -9,7 +9,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'works! json' do
-      get posts_path, format: :json
+      get posts_path, headers: { format: :json }
       expect(response).to have_http_status(200)
     end
   end
@@ -21,7 +21,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'works for image post json' do
-      get posts_path(create(:image_post)), format: :json
+      get posts_path(create(:image_post)), headers: { format: :json }
       expect(response).to have_http_status(200)
     end
 
@@ -31,7 +31,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'works for video post json' do
-      get posts_path(create(:video_post)), format: :json
+      get posts_path(create(:video_post)), headers: { format: :json }
       expect(response).to have_http_status(200)
     end
   end

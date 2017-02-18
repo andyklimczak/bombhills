@@ -9,7 +9,7 @@ RSpec.describe 'Spots', type: :request do
     end
 
     it 'works! json' do
-      get spots_path, format: :json
+      get spots_path, headers: { format: :json }
       expect(response).to have_http_status(200)
     end
   end
@@ -23,7 +23,7 @@ RSpec.describe 'Spots', type: :request do
 
     it 'works! json' do
       spot = create(:spot)
-      get spots_path(spot), format: :json
+      get spots_path(spot), headers: { format: :json }
       expect(response).to have_http_status(200)
     end
 

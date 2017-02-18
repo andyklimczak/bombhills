@@ -17,7 +17,7 @@ RSpec.describe 'Meetups', type: :request do
     end
 
     it 'works json' do
-      get spot_meetups_path([@spot]), format: :json
+      get spot_meetups_path([@spot]), headers: { format: :json }
       expect(response).to have_http_status(200)
     end
   end
@@ -33,7 +33,7 @@ RSpec.describe 'Meetups', type: :request do
     end
 
     it 'works json' do
-      get meetups_path, format: :json
+      get meetups_path, headers: { format: :json }
       expect(response).to have_http_status(200)
     end
   end
