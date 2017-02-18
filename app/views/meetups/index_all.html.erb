@@ -3,7 +3,6 @@
 
 <div class="meetups">
 
-	<p id="notice"><%= notice %></p>
 	<%= form_tag(meetups_path, method: "get", id: "form", class: "form-inline") do %>
 		<%= text_field_tag :meetup_search, params[:meetup_search], id: "meetup-search-input", class: "form-control", placeholder: "search" %>
 		<%= submit_tag "Search", name: nil, id: "meetup-search-btn", class: "btn btn-default" %>
