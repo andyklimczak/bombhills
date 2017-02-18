@@ -53,7 +53,7 @@
       <%= react_component('Comments', { resource: JSON.parse(render(template: 'posts/show.json.jbuilder')), commentableType: 'Post', currentUser: current_user }) %>
     </div>
 
-    <% if @post.user == current_user %>
+    <% if can_edit(current_user, @post) %>
       <%= link_to 'Edit', edit_post_path(@post) %>
     <% end %>
     <%= link_to 'Back', posts_path, class: 'profile-back-btn' %>

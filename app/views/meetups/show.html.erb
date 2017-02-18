@@ -39,7 +39,7 @@
     <%= react_component('MeetupAttendeesDropdown', attendees: @meetup.meetup_attendees.map{|ma| ma.user.username}) %>
   <% end %>
 
-  <% if @meetup.user == current_user %>
+  <% if can_edit(current_user, @meetup) %>
     <%= link_to 'Edit', edit_spot_meetup_path(@meetup) %>
   <% end %>
   <%= link_to 'Back', spot_meetups_path %>
