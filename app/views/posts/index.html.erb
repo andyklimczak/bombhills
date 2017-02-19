@@ -10,7 +10,7 @@
             <div class="thumbnail">
               <%= link_to post_path(post) do %>
                 <% if post.type == "ImagePost" %>
-                  <%= image_tag post.image.url(:medium) %>
+                  <%= image_tag post.image, class: 'img-responsive' %>
                 <% else %>
                   <%= preview post.video_url %>
                 <% end %>

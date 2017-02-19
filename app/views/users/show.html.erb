@@ -62,23 +62,25 @@
     </div>
     <div class="col-sm-9 col-md-9">
       <div class="profile-content">
-        <div class="row">
-          <% if @user.posts.any? %>
-            <% @user.posts.each do |post| %>
-              <div class="col-sm-6 col-md-6 user-post">
-                <%= link_to post_path(post) do %>
-                  <% if post.type == 'ImagePost' %>
-                    <%= image_tag post.image.url(:medium), class: 'img-responsive' %>
-                  <% else %>
-                    <%= preview post.video_url %>
+        <% if @user.posts.any? %>
+          <% @user.posts.each_slice(2) do |posts| %>
+            <div class="row">
+              <% posts.each do |post| %>
+                <div class="col-sm-6 col-md-6 user-post">
+                  <%= link_to post_path(post) do %>
+                    <% if post.type == 'ImagePost' %>
+                      <%= image_tag post.image, class: 'img-responsive' %>
+                    <% else %>
+                      <%= preview post.video_url %>
+                    <% end %>
                   <% end %>
-                <% end %>
-              </div>
-            <% end %>
-          <% else %>
-            <p>Currently have no photos or videos to show.</p>
+                </div>
+              <% end %>
+            </div>
           <% end %>
-        </div>
+        <% else %>
+          <p>Currently have no photos or videos to show.</p>
+        <% end %>
       </div>
     </div>
   </div>
