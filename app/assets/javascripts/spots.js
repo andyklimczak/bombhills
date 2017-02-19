@@ -70,27 +70,28 @@ function onMapRightClick(e) {
  */
 function loadPoints() {
   fetch('/spots.json')
-  .then(status)
-  .then(json)
-  .then(function(json) {
-    json.spots.forEach(function(spot) {
-      var marker = L.marker([spot.latitude, spot.longitude], { clickable: true, title: spot.title })
-        .bindPopup(
-          "<b>" + spot.title + "</b><br> \
+    .then(status)
+    .then(json)
+    .then(function(json) {
+      json.spots.forEach(function(spot) {
+        var marker = L.marker([spot.latitude, spot.longitude], { clickable: true, title: spot.title })
+          .bindPopup(
+            "<b>" + spot.title + "</b><br> \
            " + spot.description + "<br> \
            " + spot.difficulty + "<br> \
           <strong>Traffic is..</strong> " + spot.traffic + "<br> \
           Created by.. " + spot.user.username + "<br> \
-          <a href='/spots/" + spot.id + "'>meetup</a>" +"<br> \
+          <a href='/spots/" + spot.id + "'>more info</a>" +"<br> \
           <a data-toggle='modal' data-target='#report-modal'>report</a>")
-        .addTo(mymap);
-      if(gon.spot && spot.id === gon.spot.id) {
-        marker.openPopup();
-      }
+          .addTo(mymap);
+
+        if(gon.spot && spot.id === gon.spot.id) {
+          marker.openPopup();
+        }
+      });
+    }).catch(function(err) {
+      console.log('Error loading points: ', err);
     });
-  }).catch(function(err) {
-    console.log('Error loading points: ', err);
-  });
 }
 
 /**
