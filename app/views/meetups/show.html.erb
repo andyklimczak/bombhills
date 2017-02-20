@@ -1,28 +1,31 @@
 <% title @meetup.title %>
 <%= render 'layouts/navbar' %>
 
-<div class="meetups">
+<div class="meetup-show-container container">
 
 
   <h1>
     <%= @meetup.title %>
   </h1>
 
-  <p>
-    <%= @meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %>
-  </p>
+  <hr>
 
-  <p>
+  <p class="description">
     <%= @meetup.description %>
   </p>
 
   <p>
-    <strong>Spot:</strong>
-    <%= @meetup.spot.title %>
+    <strong>When:</strong>
+    <%= @meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %>
   </p>
 
   <p>
-    <strong>Owner:</strong>
+    <strong>Spot:</strong>
+    <%= link_to @meetup.spot.title, spot_path(@meetup.spot) %>
+  </p>
+
+  <p>
+    <strong>Meetup creator:</strong>
     <%= link_to @meetup.user.username, show_user_path(@meetup.user.username) %>
 
   </p>
@@ -39,9 +42,9 @@
     <%= react_component('MeetupAttendeesDropdown', attendees: @meetup.meetup_attendees.map{|ma| ma.user.username}) %>
   <% end %>
 
-  <% if can_edit(current_user, @meetup) %>
-    <%= link_to 'Edit', edit_spot_meetup_path(@meetup) %>
-  <% end %>
   <%= link_to 'Back', spot_meetups_path %>
+  <% if can_edit(current_user, @meetup) %>
+    <%= link_to 'Edit Meetup', edit_spot_meetup_path(@meetup) %>
+  <% end %>
 
 </div>

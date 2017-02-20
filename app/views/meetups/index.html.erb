@@ -1,9 +1,9 @@
-<% title "#{@spot.title}'s Meetups" %>
+<% title "#{@spot.title} Meetups" %>
 <%= render 'layouts/navbar' %>
 
 <div class="meetups-index container">
 
-  <h1><%= @spot.title %>'s Meetups</h1>
+  <h1>Meetups at <%= @spot.title %></h1>
 
   <% if @meetups.any? %>
     <div class="meetups-list">
