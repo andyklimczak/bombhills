@@ -1,25 +1,42 @@
 <% title "#{@spot.title}'s Meetups" %>
 <%= render 'layouts/navbar' %>
 
-<div class="meetups">
+<div class="meetups-index container">
 
   <h1><%= @spot.title %>'s Meetups</h1>
 
   <% if @meetups.any? %>
-    <% @meetups.each do |meetup| %>
-      <%= meetup.title %> </br>
-      <%= meetup.description %> </br>
-      <%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %><br/>
-      <%= meetup.spot.title %> </br>
-      <%= meetup.user.username %>
-      <%= link_to 'More Info', spot_meetup_path(@spot, meetup), class: 'meetups-btn' %>
-    <% end %>
+    <div class="meetups-list">
+      <% @meetups.each do |meetup| %>
+        <div class="meetups-list-item">
+          <h2>
+            <%= link_to spot_meetup_path(@spot, meetup) do %>
+              <%= meetup.title %>
+            <% end %>
+          </h2>
+          <p class="time">
+            <%= distance_of_time_in_words_to_now(meetup.time) %> on <%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z") %>
+          </p>
+          <p class="description">
+            <%= meetup.description %>
+          </p>
+          <% if meetup.meetup_attendees.size > 0 %>
+            <p class="count">
+              <%= meetup.meetup_attendees.size %> attendees
+            </p>
+          <% end %>
+          <% unless meetup == @meetups.last %>
+            <hr>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   <% else %>
     <p>
       No meetups for this spot, why not create one?
     </p>
   <% end %>
 
-  <%= link_to 'New Meetup', new_spot_meetup_path, class: 'meetups-btn' %>
+  <%= link_to 'Create New Meetup', new_spot_meetup_path, class: 'btn btn-primary btn-create-meetup' %>
 
 </div>
