@@ -32,7 +32,7 @@
         <li>
           <p>
             <div class="label-space">
-              <mark>Uploaded By:</mark>
+              <mark>Uploaded By:</mark> <%= @post.user.username %>
             </div>
             <%= link_to image_tag(@post.user.avatar.url(:thumb), class: 'message-avatar'), show_user_path(@post.user.username), class: 'user-avatar' %>
           </p>

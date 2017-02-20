@@ -14,10 +14,17 @@
 
     .comment-user-avatar {
       .user-avatar {
+        background: none;
         padding: 0 1rem;
+
+        &:hover {
+          background: none;
+        }
 
         img {
           border-radius: 50%;
+          height: 50px;
+          width: 50px;
         }
       }
     }
