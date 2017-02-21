@@ -16,14 +16,16 @@
 #  spot_id            :integer
 #  type               :string
 #  video_url          :string
+#  slug               :string
 #
 # Indexes
 #
+#  index_posts_on_slug     (slug) UNIQUE
 #  index_posts_on_user_id  (user_id)
 #
 # Foreign Keys
 #
-#  fk_rails_5b5ddfd518  (user_id => users.id)
+#  fk_rails_...  (user_id => users.id)
 #
 
 class ImagePost < Post

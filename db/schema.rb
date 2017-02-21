@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170128225201) do
+ActiveRecord::Schema.define(version: 20170221062602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,18 @@ ActiveRecord::Schema.define(version: 20170128225201) do
     t.datetime "updated_at"
     t.index ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
@@ -98,6 +110,8 @@ ActiveRecord::Schema.define(version: 20170128225201) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "slug"
+    t.index ["slug"], name: "index_meetups_on_slug", unique: true, using: :btree
     t.index ["spot_id"], name: "index_meetups_on_spot_id", using: :btree
   end
 
@@ -114,6 +128,8 @@ ActiveRecord::Schema.define(version: 20170128225201) do
     t.integer  "spot_id"
     t.string   "type"
     t.string   "video_url"
+    t.string   "slug"
+    t.index ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
@@ -127,6 +143,8 @@ ActiveRecord::Schema.define(version: 20170128225201) do
     t.datetime "updated_at",                            null: false
     t.string   "traffic"
     t.integer  "difficulty"
+    t.string   "slug"
+    t.index ["slug"], name: "index_spots_on_slug", unique: true, using: :btree
     t.index ["user_id"], name: "index_spots_on_user_id", using: :btree
   end
 

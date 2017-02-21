@@ -13,17 +13,21 @@
 #  updated_at  :datetime         not null
 #  traffic     :string
 #  difficulty  :integer
+#  slug        :string
 #
 # Indexes
 #
+#  index_spots_on_slug     (slug) UNIQUE
 #  index_spots_on_user_id  (user_id)
 #
 # Foreign Keys
 #
-#  fk_rails_f05e659f8c  (user_id => users.id)
+#  fk_rails_...  (user_id => users.id)
 #
 
 class Spot < ApplicationRecord
+  include FriendlyId
+  friendly_id :slug_candidates, use: [:slugged, :finders]
   acts_as_commentable
   belongs_to :user
   has_many :posts
@@ -39,5 +43,16 @@ class Spot < ApplicationRecord
   def daily_quota
     return unless user.username != 'admin' && user.spots.where(created_at: (Time.zone.now.beginning_of_day..Time.zone.now)).count > 2
     errors.add(:spot, 'Exceeded spot limit (3) for day.')
+  end
+
+  def should_generate_new_friendly_id?
+    title_changed?
+  end
+
+  def slug_candidates
+    [
+      :title,
+      [:title, :latitude, :longitude]
+    ]
   end
 end

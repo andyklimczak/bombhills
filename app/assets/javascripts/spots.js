@@ -81,7 +81,7 @@ function loadPoints() {
            " + spot.difficulty + "<br> \
           <strong>Traffic is..</strong> " + spot.traffic + "<br> \
           Created by.. " + spot.user.username + "<br> \
-          <a href='/spots/" + spot.id + "'>more info</a>" +"<br> \
+          <a href='/spots/" + spot.slug + "'>more info</a>" +"<br> \
           <a data-toggle='modal' data-target='#report-modal'>report</a>")
           .addTo(mymap);
 

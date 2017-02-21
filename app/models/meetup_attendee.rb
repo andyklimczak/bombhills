@@ -16,8 +16,8 @@
 #
 # Foreign Keys
 #
-#  fk_rails_86f8f8934e  (meetup_id => meetups.id)
-#  fk_rails_a5e3b49e1f  (user_id => users.id)
+#  fk_rails_...  (meetup_id => meetups.id)
+#  fk_rails_...  (user_id => users.id)
 #
 
 class MeetupAttendee < ApplicationRecord

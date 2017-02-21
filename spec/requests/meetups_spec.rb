@@ -40,7 +40,7 @@ RSpec.describe 'Meetups', type: :request do
 
   describe 'GET /spots/:spot_id/meetups/:meetup_id' do
     it 'works' do
-      get spot_meetups_path([@spot, create(:meetup)])
+      get spot_meetup_path(@spot, create(:meetup))
       expect(response).to have_http_status(200)
     end
   end
