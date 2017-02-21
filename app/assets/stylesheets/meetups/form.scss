@@ -38,26 +38,12 @@
 
 }
 
-.meetups {
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: nowrap;
+.meetup-form-container {
+  padding-top: 54px;
 
-  input {
-    background: 0;
-    border-bottom: thin solid $white;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    color: $white;
+  .field input {
+    color: $black;
   }
-}
-
-#new-meetup-submit input {
-  border-radius: 6px;
-  color: $white;
-  padding: 7px 12px;
 }
 
 .bootstrap-datetimepicker-widget {
