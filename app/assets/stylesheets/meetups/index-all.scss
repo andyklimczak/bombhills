@@ -1,0 +1,26 @@
+.meetups-index-container {
+  background: $white;
+  background-size: cover;
+  color: $primary-color;
+  font-size: large;
+  padding-top: 54px;
+
+  h1 {
+    font-family: $font-cursive;
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: $black;
+
+    &:hover {
+      background: none;
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  .description {
+    font-size: larger;
+  }
+}

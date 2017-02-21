@@ -3,7 +3,7 @@
 
 <div class="meetups-index container">
 
-  <h1>Meetups at <%= @spot.title %></h1>
+  <h1>Upcoming Meetups at <%= link_to @spot.title, spot_path(@spot) %></h1>
 
   <% if @meetups.any? %>
     <div class="meetups-list">
@@ -37,6 +37,6 @@
     </p>
   <% end %>
 
-  <%= link_to 'Create New Meetup', new_spot_meetup_path, class: 'btn btn-primary btn-create-meetup' %>
+  <%= button_to 'Create new spot meetup', new_spot_meetup_path, class: 'btn btn-primary btn-create-meetup' %>
 
 </div>

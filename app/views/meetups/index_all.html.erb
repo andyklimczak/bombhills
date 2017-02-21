@@ -1,48 +1,56 @@
-<% title 'Meetups' %>
+<% title 'Upcoming Meetups' %>
 <%= render 'layouts/navbar' %>
 
-<div class="meetups">
+<div class="meetups-index-container container">
 
-	<%= form_tag(meetups_path, method: "get", id: "form", class: "form-inline") do %>
-		<%= text_field_tag :meetup_search, params[:meetup_search], id: "meetup-search-input", class: "form-control", placeholder: "search" %>
-		<%= submit_tag "Search", name: nil, id: "meetup-search-btn", class: "btn btn-default" %>
-	<% end %>
+  <h1>Upcoming Meetups</h1>
 
-	<% if @meetups.any? %>
-		<table id="meetups-table" data-toggle="table">
-			<thead>
-				<tr>
-					<th data-sortable="true">
-						Title
-					</th>
-					<th data-sortable="true">
-						Meetup Attendees
-					</th>
-					<th>
-						Date & Time
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<% @meetups.each do |meetup| %>
-					<tr class="meetup-row">
-						<td>
-							<%= meetup.title %>
-						</td>
-						<td>
-							<%= meetup.meetup_attendees.count %>
-						</td>
-						<td>
-							<%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z")  %><br/>
-						</td>
-					</tr>
-				<% end %>
-			</tbody>
-		</table>
-	<% else %>
-		<p>
-			No meetups
-		</p>
-	<% end %>
+  <%= form_tag(meetups_path, method: "get", id: "form", class: "form-inline") do %>
+    <%= text_field_tag :meetup_search, params[:meetup_search], id: "meetup-search-input", class: "form-control", placeholder: "Search for nearby meetups" %>
+    <%= submit_tag "Search", name: nil, id: "meetup-search-btn", class: "btn btn-default" %>
+  <% end %>
+
+  <% if @meetups.any? %>
+    <table id="meetups-table" data-toggle="table">
+      <thead>
+        <tr>
+          <th data-sortable="true">
+            Meetup Title
+          </th>
+          <th data-sortable="true">
+            Spot
+          </th>
+          <th data-sortable="true">
+            Attendees
+          </th>
+          <th>
+            When
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @meetups.each do |meetup| %>
+          <tr class="meetup-row">
+            <td>
+              <%= link_to meetup.title, spot_meetup_path(meetup.spot, meetup) %>
+            </td>
+            <td>
+              <%= link_to meetup.spot.title, spot_path(meetup.spot) %>
+            </td>
+            <td>
+              <%= meetup.meetup_attendees.count %>
+            </td>
+            <td>
+              <%= distance_of_time_in_words_to_now(meetup.time) %> on <%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z") %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>
+      No meetups
+    </p>
+  <% end %>
 
 </div>
