@@ -105,7 +105,7 @@ Vagrant.configure(2) do |config|
     echo "-----------------------------SETTING UP PROJECT"
     mkdir -p ~/fog/bombhills/images
     mkdir /vagrant/public
-    ln -s ~/fog/bombhills/images /vagrant/public
+    # ln -s ~/fog/bombhills/images /vagrant/public doesn't work on windows 10
     gem install bundler
     gem update --system
     cd /vagrant
