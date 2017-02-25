@@ -79,10 +79,25 @@ Vagrant.configure(2) do |config|
     localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
     locale-gen en_US.UTF-8
     sudo apt-get update
-    sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev libcurl4-openssl-dev curl wget
-    sudo apt-get install -y git nodejs
+    sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev libcurl4-openssl-dev curl wget chrpath libxft-dev
+    sudo apt-get install -y git
     sudo apt-get install imagemagick -y
-    sudo apt-get install -y postgresql libpq-dev phantomjs
+    sudo apt-get install -y postgresql libpq-dev
+    sudo apt-get install libfreetype6 libfreetype6-dev
+    sudo apt-get install libfontconfig1 libfontconfig1-dev
+
+    echo "-----------------------------INSTALLING NODE"
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
+    sudo apt-get install -y nodejs
+    echo "prefix=/home/vagrant/.npm-packages" >> /home/vagrant/.npmrc
+
+
+    echo "-----------------------------INSTALLING PHANTOMJS"
+    export PHANTOM_JS="phantomjs-2.1.1-linux-x86_64"
+    wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
+    sudo tar xvjf $PHANTOM_JS.tar.bz2
+    sudo mv $PHANTOM_JS /usr/local/share
+    sudo cp /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
 
 
     echo "-----------------------------INSTALLING RUBY"
