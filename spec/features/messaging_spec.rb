@@ -52,7 +52,7 @@ RSpec.describe 'mailboxer messaging', type: :feature do
     user = create(:user)
     user2 = create(:user)
     login_as user
-    visit show_user_path(user2.username)
+    visit show_user_path(user2)
     click_on 'Message'
     expect(page).to have_current_path(new_conversation_path(user: user2.username))
   end
