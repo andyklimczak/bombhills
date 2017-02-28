@@ -1,4 +1,4 @@
-admin = User.create!(username: 'admin', email: 'bombhillscommunity@gmail.com', password: 'bombhills', motto: 'bomb ass hills')
+admin = User.create!(username: 'Bombhills Admin', email: 'bombhillscommunity@gmail.com', password: 'bombhills', motto: 'bomb ass hills')
 
 # san fran spots
 

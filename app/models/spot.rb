@@ -41,7 +41,7 @@ class Spot < ApplicationRecord
   private
 
   def daily_quota
-    return unless user.username != 'admin' && user.spots.where(created_at: (Time.zone.now.beginning_of_day..Time.zone.now)).count > 2
+    return unless user.username != 'Bombhills Admin' && user.spots.where(created_at: (Time.zone.now.beginning_of_day..Time.zone.now)).count > 2
     errors.add(:spot, 'Exceeded spot limit (3) for day.')
   end
 
