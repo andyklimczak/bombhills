@@ -1,6 +1,6 @@
 <div class="media">
   <div class="media-left">
-    <%= link_to show_user_path(conversation.messages.last.sender.name) do %>
+    <%= link_to show_user_path(conversation.messages.last.sender) do %>
       <%= image_tag conversation.messages.last.sender.avatar.url(:thumb), class: 'media-object message-avatar' %>
     <% end %>
   </div>

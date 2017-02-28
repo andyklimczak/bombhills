@@ -23,7 +23,7 @@
         <%if user_signed_in? %>
           <li>
             <p>
-              <%= link_to ' profile ', show_user_path(current_user.username) %></p>
+              <%= link_to ' profile ', show_user_path(current_user) %></p>
           </li>
         <%else %>
           <li>

@@ -4,7 +4,7 @@
   <ul>
     <% if user_signed_in? %>
 
-      <li><%= link_to 'profile', show_user_path(current_user.username) %></li>
+      <li><%= link_to 'profile', show_user_path(current_user) %></li>
       <li><%= link_to 'settings', edit_user_registration_path %></li>
       <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
 
@@ -35,7 +35,7 @@
 
             <% if user_signed_in? %>
 
-              <li><%= link_to ' profile ', show_user_path(current_user.username) %></li>
+              <li><%= link_to ' profile ', show_user_path(current_user) %></li>
               <li>
                 <%= link_to mailbox_inbox_path do %>
                   inbox

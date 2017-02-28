@@ -13,7 +13,7 @@ RSpec.describe 'the signin process', type: :feature do
       fill_in 'Password', with: 'password123'
     end
     click_button 'Log in'
-    expect(page).to have_current_path(show_user_path(@user.username))
+    expect(page).to have_current_path(show_user_path(@user))
   end
 
   it 'signs me in with username and redirects to profile page' do
@@ -23,6 +23,6 @@ RSpec.describe 'the signin process', type: :feature do
       fill_in 'Password', with: 'password123'
     end
     click_button 'Log in'
-    expect(page).to have_current_path(show_user_path(@user.username))
+    expect(page).to have_current_path(show_user_path(@user))
   end
 end

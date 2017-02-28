@@ -6,7 +6,7 @@ RSpec.describe 'post interactions', type: :feature do
     user = create(:user, username: 'test1')
     spot = create(:spot, user: user)
     login_as user, scope: :user
-    visit show_user_path(user.username)
+    visit show_user_path(user)
     click_on 'Add Post'
     within('#post-modal') do
       click_on 'Video'
@@ -29,7 +29,7 @@ RSpec.describe 'post interactions', type: :feature do
     user = create(:user, username: 'test1')
     spot = create(:spot, user: user)
     login_as user, scope: :user
-    visit show_user_path(user.username)
+    visit show_user_path(user)
     click_on 'Add Post'
     within('#post-modal') do
       click_on 'Picture'

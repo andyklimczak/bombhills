@@ -56,7 +56,7 @@ RSpec.describe 'Posts', type: :request do
       sign_in user
       post('/posts', params: { post: { title: 'Test post', description: 'Test post description', image: fixture_file_upload('pic.jpg', 'image/jpg'), type: 'ImagePost' } })
       expect(Post.count).to eq(1)
-      expect(response).to redirect_to(show_user_path(user.username))
+      expect(response).to redirect_to(show_user_path(user))
       expect(Post.last.title).to eq('Test post')
       expect(Post.last.description).to eq('Test post description')
       expect(Post.last.image).not_to eq(nil)
@@ -68,7 +68,7 @@ RSpec.describe 'Posts', type: :request do
       sign_in user
       post('/posts', params: { post: { title: 'Test post', description: 'Test post description', video_url: 'https://www.youtube.com/watch?v=c7rCyll5AeY', type: 'VideoPost' } })
       expect(Post.count).to eq(1)
-      expect(response).to redirect_to(show_user_path(user.username))
+      expect(response).to redirect_to(show_user_path(user))
       expect(Post.last.title).to eq('Test post')
       expect(Post.last.description).to eq('Test post description')
       expect(Post.last.video_url).not_to eq(nil)
@@ -98,7 +98,7 @@ RSpec.describe 'Posts', type: :request do
       sign_in user
       post('/posts', params: { post: { title: 'Test post', description: 'Test post description', type: 'VideoPost' } })
       expect(Post.count).to eq(0)
-      expect(response).to redirect_to(show_user_path(user.username))
+      expect(response).to redirect_to(show_user_path(user))
     end
   end
 

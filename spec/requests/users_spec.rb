@@ -4,8 +4,8 @@ require 'rails_helper'
 RSpec.describe 'Users', type: :request do
   describe 'GET /users/:username' do
     it 'works!' do
-      create(:user, username: 'testuser')
-      get show_user_path(username: User.last.username)
+      user = create(:user, username: 'testuser')
+      get show_user_path(user)
       expect(response).to have_http_status(200)
     end
   end

@@ -87,7 +87,7 @@ RSpec.describe 'meetup interactions', type: :feature do
     end
 
     it 'redirects to user page' do
-      expect(page).to have_current_path(show_user_path(user.username))
+      expect(page).to have_current_path(show_user_path(user))
     end
   end
 

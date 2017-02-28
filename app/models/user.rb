@@ -22,21 +22,25 @@
 #  avatar_file_size       :integer
 #  avatar_updated_at      :datetime
 #  motto                  :string
+#  slug                   :string
 #
 # Indexes
 #
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#  index_users_on_slug                  (slug) UNIQUE
 #  index_users_on_username              (username) UNIQUE
 #
 
 class User < ApplicationRecord
+  extend FriendlyId
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   acts_as_messageable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   attr_accessor :login
+  friendly_id :username, use: [:slugged, :finders]
 
   has_many :spots, -> { order 'created_at desc' }
   has_many :posts, -> { order 'created_at desc' }

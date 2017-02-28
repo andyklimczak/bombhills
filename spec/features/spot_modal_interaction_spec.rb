@@ -55,7 +55,7 @@ RSpec.describe 'spot modal interactions', type: :feature, js: true do
 
   describe 'spot modal on profile page' do
     before do
-      visit show_user_path(@user.username)
+      visit show_user_path(@user)
       find('.glyphicon-map-marker').click
     end
 

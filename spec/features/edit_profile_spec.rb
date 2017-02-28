@@ -15,7 +15,7 @@ RSpec.describe 'edit user', type: :feature do
       click_button 'Update'
     end
     @user.reload
-    expect(page).to have_current_path(show_user_path(@user.username))
+    expect(page).to have_current_path(show_user_path(@user))
     expect(@user.username).to eq('NewUsername')
   end
 
@@ -27,7 +27,7 @@ RSpec.describe 'edit user', type: :feature do
       click_button 'Update'
     end
     @user.reload
-    expect(page).to have_current_path(show_user_path(@user.username))
+    expect(page).to have_current_path(show_user_path(@user))
     expect(@user.motto).to eq('New Motto')
   end
 
@@ -39,7 +39,7 @@ RSpec.describe 'edit user', type: :feature do
       click_button 'Update'
     end
     @user.reload
-    expect(page).to have_current_path(show_user_path(@user.username))
+    expect(page).to have_current_path(show_user_path(@user))
     expect(@user.email).to eq('new@email.com')
   end
 
@@ -53,7 +53,7 @@ RSpec.describe 'edit user', type: :feature do
     end
     expect { click_on 'Update' }.to change(ActionMailer::Base.deliveries, :count).by(1)
     @user.reload
-    expect(page).to have_current_path(show_user_path(@user.username))
+    expect(page).to have_current_path(show_user_path(@user))
     expect(@user.encrypted_password).not_to eq(old_password_hash)
   end
 
@@ -65,14 +65,14 @@ RSpec.describe 'edit user', type: :feature do
       click_button 'Update'
     end
     @user.reload
-    expect(page).to have_current_path(show_user_path(@user.username))
+    expect(page).to have_current_path(show_user_path(@user))
     expect(@user.avatar_file_name).to eq('pic.jpg')
   end
 
   it 'go to profile page' do
     visit '/users/edit'
     click_link 'see your profile!'
-    expect(page).to have_current_path(show_user_path(@user.username))
+    expect(page).to have_current_path(show_user_path(@user))
   end
 
   it 'delete account', js: true do

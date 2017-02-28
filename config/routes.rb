@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resource :meetup_attendees, only: [:create, :destroy]
 
   devise_for :users, controllers: { registrations: 'registrations' }
-  get 'users/:username' => 'users#show', via: :get, as: 'show_user'
+  get 'users/:id' => 'users#show', via: :get, as: 'show_user'
 
   resources :posts
 

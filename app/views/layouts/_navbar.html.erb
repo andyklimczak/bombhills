@@ -29,7 +29,7 @@
 
             <% if user_signed_in? %>
 
-              <li><%= link_to ' profile ', show_user_path(current_user.username) %></li>
+              <li><%= link_to ' profile ', show_user_path(current_user) %></li>
               <li>
                 <%= link_to mailbox_inbox_path do %>
                   inbox
