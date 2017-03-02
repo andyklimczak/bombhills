@@ -2,6 +2,13 @@
 require 'rails_helper'
 
 RSpec.describe 'Meetups', type: :request do
+  let(:headers) do
+    {
+      'ACCEPT' => 'application/json',
+      'HTTP_ACCEPT' => 'application/json',
+      'CONTENT_TYPE' => 'application/json'
+    }
+  end
   before do
     @spot = create(:spot)
   end
@@ -64,11 +71,6 @@ RSpec.describe 'Meetups', type: :request do
     end
 
     it 'works json' do
-      headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json',
-        'CONTENT_TYPE' => 'application/json'
-      }
       sign_in(create(:user))
       params = { title: 'Test meetup title', description: 'Test meetup description', time: Time.zone.tomorrow }
       post("/spots/#{@spot.id}/meetups", params: params.to_json, headers: headers)
@@ -86,11 +88,6 @@ RSpec.describe 'Meetups', type: :request do
     end
 
     it 'does not create with invalid params json' do
-      headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json',
-        'CONTENT_TYPE' => 'application/json'
-      }
       sign_in(create(:user))
       params = { title: nil, description: 'Test meetup description', time: DateTime.current }
       post("/spots/#{@spot.id}/meetups", params: params.to_json, headers: headers)
@@ -110,11 +107,6 @@ RSpec.describe 'Meetups', type: :request do
     end
 
     it 'works json' do
-      headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json',
-        'CONTENT_TYPE' => 'application/json'
-      }
       user = create(:user)
       sign_in(user)
       meetup = create(:meetup, title: 'Meetup Title 1', user: user)
@@ -134,11 +126,6 @@ RSpec.describe 'Meetups', type: :request do
     end
 
     it 'does not update with invalid params json' do
-      headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json',
-        'CONTENT_TYPE' => 'application/json'
-      }
       user = create(:user)
       sign_in(user)
       meetup = create(:meetup, title: 'Meetup Title 1', user: user)
@@ -160,11 +147,6 @@ RSpec.describe 'Meetups', type: :request do
     end
 
     it 'works json' do
-      headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json',
-        'CONTENT_TYPE' => 'application/json'
-      }
       user = create(:user)
       sign_in user
       meetup = create(:meetup, user: user)

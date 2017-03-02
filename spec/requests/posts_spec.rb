@@ -2,6 +2,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
+  let(:headers) do
+    {
+      'ACCEPT' => 'application/json',
+      'HTTP_ACCEPT' => 'application/json',
+      'CONTENT_TYPE' => 'application/json'
+    }
+  end
+
   describe 'GET /posts' do
     it 'works!' do
       get posts_path
@@ -76,11 +84,6 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'creates a video post json' do
-      headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json',
-        'CONTENT_TYPE' => 'application/json'
-      }
       user = create(:user)
       sign_in user
       params = { title: 'Test post', description: 'Test post description', video_url: 'https://www.youtube.com/watch?v=c7rCyll5AeY', type: 'VideoPost' }
@@ -113,11 +116,6 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'deletes post json' do
-      headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json',
-        'CONTENT_TYPE' => 'application/json'
-      }
       user = create(:user)
       sign_in user
       post = create(:image_post, user: user)
@@ -159,11 +157,6 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'updates post json' do
-      headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json',
-        'CONTENT_TYPE' => 'application/json'
-      }
       user = create(:user)
       sign_in user
       post = create(:image_post, user: user, title: 'Post Title 1')
@@ -177,11 +170,6 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'does not update with invalid params json' do
-      headers = {
-        'ACCEPT' => 'application/json',
-        'HTTP_ACCEPT' => 'application/json',
-        'CONTENT_TYPE' => 'application/json'
-      }
       user = create(:user)
       sign_in user
       post = create(:image_post, user: user, title: 'Post Title 1')
