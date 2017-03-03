@@ -69,7 +69,7 @@
                 <div class="col-sm-6 col-md-6 user-post">
                   <%= link_to post_path(post) do %>
                     <% if post.type == 'ImagePost' %>
-                      <%= image_tag post.image, class: 'img-responsive' %>
+                      <%= image_tag post.image(:thumb), class: 'img-responsive' %>
                     <% else %>
                       <%= preview post.video_url %>
                     <% end %>
