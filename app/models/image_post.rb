@@ -29,7 +29,7 @@
 #
 
 class ImagePost < Post
-  has_attached_file :image, styles: { thumb: '300x300>' }, default_url: 'https://placehold.it/150x150'
+  has_attached_file :image, styles: { thumb: '400x400>' }, default_url: 'https://placehold.it/150x150'
   validates_attachment :image, presence: true, content_type: { content_type: %r{\Aimage\/.*\Z} }, size: { in: 0..10.megabytes }
   default_scope { order(created_at: :desc) }
 end
