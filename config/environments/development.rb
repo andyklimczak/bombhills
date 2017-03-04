@@ -50,7 +50,7 @@ Rails.application.configure do
     storage: :fog,
     fog_credentials: {
       provider: 'Local',
-      local_root: "~/fog/bombhills"
+      local_root: "#{Rails.root}/public/"
     },
     fog_directory: "images",
     fog_host: "http://localhost:3000/images"
