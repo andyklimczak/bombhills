@@ -79,6 +79,42 @@ RSpec.describe User, type: :model do
     expect(user.avatar_url).to match(%r{/pic.jpg})
   end
 
+  context 'dependent destroy' do
+    let(:user) { create(:user) }
+    let(:meetup_attendee) { create(:meetup_attendee, user: user) }
+    let(:spot) { create(:spot, user: user) }
+    let(:post) { create(:video_post, user: user) }
+    let(:meetup) { create(:meetup, user: user) }
+
+    before do
+      user
+      meetup_attendee
+      spot
+      post
+      meetup
+    end
+
+    it 'destroys dependent meetup attendee resources' do
+      expect { user.destroy }.to change { MeetupAttendee.count }.by(-1)
+      expect(Meetup.all).not_to include(meetup)
+    end
+
+    it 'destroys dependent spot resources' do
+      expect { user.destroy }.to change { Spot.count }.by(-1)
+      expect(Spot.all).not_to include(spot)
+    end
+
+    it 'destroys dependent post resources' do
+      expect { user.destroy }.to change { Post.count }.by(-1)
+      expect(Post.all).not_to include(post)
+    end
+
+    it 'destroys dependent meetup resources' do
+      expect { user.destroy }.to change { Meetup.count }.by(-1)
+      expect(Meetup.all).not_to include(meetup)
+    end
+  end
+
   context 'validations' do
     subject { create(:user) }
 

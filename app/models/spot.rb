@@ -30,8 +30,8 @@ class Spot < ApplicationRecord
   friendly_id :slug_candidates, use: [:slugged, :finders]
   acts_as_commentable
   belongs_to :user
-  has_many :posts
-  has_many :meetups
+  has_many :posts, dependent: :destroy
+  has_many :meetups, dependent: :destroy
   validates :latitude, :longitude, :title, :difficulty, :traffic, presence: true
   enum difficulty: [:Beginner, :Intermediate, :Professional]
   validate :daily_quota, on: :create

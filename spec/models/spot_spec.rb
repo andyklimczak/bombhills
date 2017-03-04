@@ -7,6 +7,28 @@ RSpec.describe Spot, type: :model do
     expect(spot.save).to eq(true)
   end
 
+  context 'dependent destroy' do
+    let(:spot) { create(:spot) }
+    let(:post) { create(:image_post, spot: spot) }
+    let(:meetup) { create(:meetup, spot: spot) }
+
+    before do
+      spot
+      post
+      meetup
+    end
+
+    it 'destroys dependent post resources' do
+      expect { spot.destroy }.to change { Post.count }.by(-1)
+      expect(Post.all).not_to include(post)
+    end
+
+    it 'destroys dependent meetup resources' do
+      expect { spot.destroy }.to change { Meetup.count }.by(-1)
+      expect(Meetup.all).not_to include(meetup)
+    end
+  end
+
   context 'validations' do
     subject { create(:spot) }
 

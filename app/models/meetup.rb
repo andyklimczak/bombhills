@@ -28,7 +28,7 @@ class Meetup < ApplicationRecord
   friendly_id :slug_candidates, use: [:slugged, :finders, :scoped], scope: :spot
   belongs_to :spot
   belongs_to :user
-  has_many :meetup_attendees
+  has_many :meetup_attendees, dependent: :destroy
   has_many :attending_users, through: :meetup_attendees, source: 'user'
   validates :title, :description, :time, presence: true
   validate :valid_time, on: :create

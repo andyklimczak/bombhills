@@ -11,6 +11,21 @@ RSpec.describe Meetup, type: :model do
     expect(meetup).to be_invalid
   end
 
+  context 'dependent destroy' do
+    let(:meetup) { create(:meetup) }
+    let(:meetup_attendee) { create(:meetup_attendee, meetup: meetup) }
+
+    before do
+      meetup
+      meetup_attendee
+    end
+
+    it 'destroys dependent meetup attendee resources' do
+      expect { meetup.destroy }.to change { MeetupAttendee.count }.by(-1)
+      expect(MeetupAttendee.all).not_to include(meetup_attendee)
+    end
+  end
+
   context 'validation' do
     subject { create(:meetup) }
 

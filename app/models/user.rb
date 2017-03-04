@@ -42,10 +42,10 @@ class User < ApplicationRecord
   attr_accessor :login
   friendly_id :username, use: [:slugged, :finders]
 
-  has_many :spots, -> { order 'created_at desc' }
-  has_many :posts, -> { order 'created_at desc' }
-  has_many :meetups
-  has_many :meetup_attendees
+  has_many :spots, -> { order 'created_at desc' }, dependent: :destroy
+  has_many :posts, -> { order 'created_at desc' }, dependent: :destroy
+  has_many :meetups, dependent: :destroy
+  has_many :meetup_attendees, dependent: :destroy
   has_many :attending_meetups, through: :meetup_attendees, source: 'meetup'
   has_attached_file :avatar, styles: { large: '800x800#', medium: '300x300>', thumb: '100x100#' }, default_url: ->(_attachment) { ActionController::Base.helpers.asset_path('usertwo.png') }
 
