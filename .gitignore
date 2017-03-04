@@ -48,7 +48,7 @@ bower.json
 # Ignore pow environment settings
 .powenv
 
-public/**
+public
 
 coverage
 
