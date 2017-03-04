@@ -6,6 +6,7 @@ function initDateTimePicker() {
     $('#meetup-datetime-picker').datetimepicker({
       minDate: moment().add(1, 'day'),
       sideBySide: true,
+      format: 'dddd MMMM D, h:mm A',
     });
   }
 }

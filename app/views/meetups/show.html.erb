@@ -44,7 +44,7 @@
 
   <%= link_to 'Back', spot_meetups_path %>
   <% if can_edit(current_user, @meetup) %>
-    <%= link_to 'Edit Meetup', edit_spot_meetup_path(@meetup) %>
+    <%= link_to 'Edit Meetup', edit_spot_meetup_path(@spot, @meetup) %>
   <% end %>
 
 </div>
