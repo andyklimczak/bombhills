@@ -49,6 +49,7 @@ group :development do
   gem 'better_errors'
   gem 'brakeman', require: false
   gem 'bundler-audit'
+  gem 'guard'
   gem 'guard-livereload', require: false
   gem 'pry-rails'
   gem 'rack-livereload'

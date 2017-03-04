@@ -42,7 +42,8 @@ Rails.application.configure do
 
 
   # To live reload locahost when saving a file
-  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
+  config.middleware.insert_before ActionDispatch::DebugExceptions, Rack::LiveReload
+
   Paperclip.options[:command_path] = '/usr/local/bin/'
 
   config.paperclip_defaults = {
@@ -57,6 +58,6 @@ Rails.application.configure do
 
   config.assets.quiet = true
 
-	config.action_mailer.delivery_method = :smtp
-	config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 end

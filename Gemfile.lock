@@ -470,6 +470,7 @@ DEPENDENCIES
   friendly_id
   geocoder
   gon
+  guard
   guard-livereload
   jbuilder
   jquery-rails
