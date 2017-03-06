@@ -1,38 +1,42 @@
-<div class="row">
-  <div class="col-lg-6 col-lg-offset-3">
-    <h1><%= @post.title.upcase %></h1>
-    <%= form_for(@post, as: :post, url: post_path(@post), method: :put) do |f| %>
-      <% if @post.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<% title "Editing #{@post.title}" %>
+<%= render 'layouts/navbar' %>
+<div class="container edit-post-container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <h1><%= @post.title.upcase %></h1>
+      <%= form_for(@post, as: :post, url: post_path(@post), method: :put) do |f| %>
+        <% if @post.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-          <ul>
-            <% @post.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
+            <ul>
+              <% @post.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :description %>
+          <%= f.text_area :description, class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :spot_id, "Tag a spot" %>
+          <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'tag-spot' } %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Save", data: { disable_with: 'Saving...' }, class: 'btn btn-primary' %>
         </div>
       <% end %>
+      <p><%= button_to "Delete", post_path(@post), data: { confirm: "Are you sure?", disable_with: 'Deleting' }, method: :delete, class: 'btn btn-danger' %></p>
 
-      <div class="field">
-        <%= f.label :title %>
-        <%= f.text_field :title, class: 'form-control' %>
-      </div>
-      <div class="field">
-        <%= f.label :description %>
-        <%= f.text_area :description, class: 'form-control' %>
-      </div>
-      <div class="field">
-        <%= f.label :spot_id, "Tag a spot" %>
-        <%= f.select :spot_id, Spot.all.collect{ |u| [u.title, u.id]}, { include_blank: true }, { class: 'form-control chosen-select', id: 'tag-spot' } %>
-      </div>
-      <div class="actions">
-        <%= f.submit "Save", data: { disable_with: 'Saving...' } %>
-      </div>
-    <% end %>
-    <p><%= button_to "Delete", post_path(@post), data: { confirm: "Are you sure?", disable_with: 'Deleting' }, method: :delete %></p>
-
-    <%= link_to 'Show', post_path(@post) %> |
-    <%= link_to 'Back', posts_path %>
+      <%= link_to 'Show', post_path(@post) %> |
+      <%= link_to 'Back', posts_path %>
+    </div>
   </div>
 </div>
