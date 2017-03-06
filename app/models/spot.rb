@@ -38,11 +38,8 @@ class Spot < ApplicationRecord
   reverse_geocoded_by :latitude, :longitude
   after_validation :geocode
 
-  private
-
   def daily_quota
-    return unless user.username != 'Bombhills Admin' && user.spots.where(created_at: (Time.zone.now.beginning_of_day..Time.zone.now)).count > 2
-    errors.add(:spot, 'Exceeded spot limit (3) for day.')
+    errors.add(:spot, 'Exceeded spot limit (3) for day.') if user.username != 'Bombhills Admin' && user.spots.where(created_at: (Time.zone.now.beginning_of_day..Time.zone.now)).count > 2
   end
 
   def should_generate_new_friendly_id?

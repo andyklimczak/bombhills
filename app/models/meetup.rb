@@ -32,10 +32,15 @@ class Meetup < ApplicationRecord
   has_many :attending_users, through: :meetup_attendees, source: 'user'
   validates :title, :description, :time, presence: true
   validate :valid_time, on: :create
+  validate :quota, on: :create
 
   def valid_time
     return unless time < Time.zone.now
     errors.add(:meetup, 'Cannot create meetup starting in the past')
+  end
+
+  def quota
+    errors.add(:meetup, 'Exceeded meetup limit (2) for day.') unless user.meetups.where('time >= :date AND spot_id = :spot_id', date: Time.zone.now, spot_id: spot.id).count < 2
   end
 
   def should_generate_new_friendly_id?

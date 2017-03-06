@@ -29,6 +29,16 @@ RSpec.describe Spot, type: :model do
     end
   end
 
+  context 'daily quota' do
+    it 'cannot create more than 3 spots per day' do
+      user = create(:user)
+      create(:spot, user: user)
+      create(:spot, user: user)
+      create(:spot, user: user)
+      expect { create(:spot, user: user) }.to raise_error(ActiveRecord::RecordInvalid)
+    end
+  end
+
   context 'validations' do
     subject { create(:spot) }
 

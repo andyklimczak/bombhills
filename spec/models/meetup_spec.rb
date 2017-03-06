@@ -26,6 +26,16 @@ RSpec.describe Meetup, type: :model do
     end
   end
 
+  context 'quota' do
+    it 'user cannot create more than 3 upcoming meetups' do
+      user = create(:user)
+      spot = create(:spot)
+      create(:meetup, user: user, spot: spot)
+      create(:meetup, user: user, spot: spot)
+      expect { create(:meetup, user: user, spot: spot) }.to raise_error(ActiveRecord::RecordInvalid)
+    end
+  end
+
   context 'validation' do
     subject { create(:meetup) }
 
