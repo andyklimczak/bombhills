@@ -3,9 +3,9 @@ require 'ffaker'
 
 FactoryGirl.define do
   factory :video_post do
-    title { FFaker::Product.product }
-    video_url { FFaker::Youtube.url }
-    description { FFaker::HipsterIpsum.paragraph }
+    title { "Video Post Title #{Random.rand(10_000)}" }
+    video_url 'https://www.youtube.com/watch?v=e-ORhEE9VVg'
+    description 'Video description'
     user
     spot
   end

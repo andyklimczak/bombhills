@@ -3,11 +3,11 @@ require 'ffaker'
 
 FactoryGirl.define do
   factory :spot, aliases: [:commentable] do
-    title { FFaker::Venue.name + Random.rand(10_000).to_s }
-    traffic { FFaker::HipsterIpsum.phrase }
-    description { FFaker::HipsterIpsum.sentence }
-    latitude { FFaker::Geolocation.lat }
-    longitude { FFaker::Geolocation.lng }
+    title { "Spot Title #{Random.rand(10_000)}" }
+    traffic 'Spot traffic'
+    description 'Spot description'
+    latitude 38
+    longitude 122
     difficulty %w(Beginner Intermediate Professional).sample
     user
   end

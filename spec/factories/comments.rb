@@ -3,7 +3,7 @@ require 'ffaker'
 
 FactoryGirl.define do
   factory :comment do
-    body { FFaker::HipsterIpsum.sentence }
+    body 'Comment body'
     user
     commentable
   end

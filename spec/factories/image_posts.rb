@@ -3,9 +3,9 @@ require 'ffaker'
 
 FactoryGirl.define do
   factory :image_post do
-    title { FFaker::Product.product }
+    title { "Image Post Title #{Random.rand(10_000)}" }
     image { fixture_file_upload 'spec/fixtures/pic.jpg', 'image/jpeg' }
-    description { FFaker::HipsterIpsum.paragraph }
+    description 'Image post description'
     user
     spot
   end

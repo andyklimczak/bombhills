@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 FactoryGirl.define do
   factory :message do
-    name { FFaker::Name.name }
-    email { FFaker::Internet.email }
-    content { FFaker::LoremFR.phrase }
-    subject { FFaker::Sport.name }
+    name 'Message name'
+    email 'message@email.com'
+    content 'Message content'
+    subject 'Message subject'
   end
 end
