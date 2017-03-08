@@ -148,7 +148,7 @@
   background: $white;
 }
 
-.alert {
+.map-alert {
   box-shadow: 1px 17px 31px -9px rgba(0, 0, 0, .75);
   font-size: 16px;
   height: 52px;
@@ -247,7 +247,7 @@
       font-size: 40px;
     }
 
-    .alert {
+    .map-alert {
       background: $primary-color;
       border-color: $primary-color;
       color: $white;
@@ -266,14 +266,14 @@
     left: -100%;
   }
 
-  .alert {
+  .map-alert {
     font-size: 14px;
   }
 
 }
 
 @media only screen and (min-width: 370px) and (max-width: 472px) {
-  .alert {
+  .map-alert {
     font-size: 14px;
   }
 }

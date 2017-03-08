@@ -29,6 +29,10 @@
   .chosen-select {
     color: #333;
   }
+
+  .close {
+    font-size: 45px;
+  }
 }
 
 label {
@@ -52,8 +56,4 @@ input {
   color: $black;
   margin: 15px;
   margin-left: 0;
-}
-
-.close {
-  font-size: 45px;
 }
