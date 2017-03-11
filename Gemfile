@@ -35,6 +35,7 @@ gem 'rails'
 gem 'rails_12factor', group: :production
 gem 'react-rails'
 gem 'sass-rails'
+gem 'sitemap_generator'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'underscore-rails'

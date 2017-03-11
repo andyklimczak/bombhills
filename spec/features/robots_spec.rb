@@ -12,6 +12,7 @@ RSpec.describe 'Robots', type: :feature do
       expect(page).to have_content('User-agent: *')
       expect(page).to have_content('Disallow:')
       expect(page).to have_no_content('Disallow: /')
+      expect(page).to have_content('Sitemap: http://www.bombhills.com/sitemap.xml.gz')
     end
   end
 
