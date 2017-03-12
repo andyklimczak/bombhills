@@ -23,3 +23,11 @@
 .page-alert {
   margin-bottom: 0;
 }
+
+.current-user-nav {
+  color: #586069;
+
+  strong {
+    font-weight: $thin;
+  }
+}

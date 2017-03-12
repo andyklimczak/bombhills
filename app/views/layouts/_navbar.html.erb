@@ -29,7 +29,13 @@
 
             <% if user_signed_in? %>
 
-              <li><%= link_to ' profile ', show_user_path(current_user) %></li>
+              <li class="disabled current-user-nav">
+                Logged in as <strong><%= current_user.username %></strong>
+              </li>
+              <li role="seperator" class="divider"></li>
+              <li>
+                <%= link_to ' profile ', show_user_path(current_user) %>
+              </li>
               <li>
                 <%= link_to mailbox_inbox_path do %>
                   inbox
@@ -38,13 +44,21 @@
                   <% end %>
                 <% end %>
               </li>
-              <li><%= link_to ' edit profile ', edit_user_registration_path %></li>
-              <li><%= link_to " logout ", destroy_user_session_path, method: :delete %></li>
+              <li>
+                <%= link_to ' edit profile ', edit_user_registration_path %>
+              </li>
+              <li>
+                <%= link_to " log out ", destroy_user_session_path, method: :delete %>
+              </li>
 
             <% else %>
 
-              <li><%= link_to " register ", new_user_registration_path %></li>
-              <li><%= link_to " login ", new_user_session_path %></li>
+              <li>
+                <%= link_to " register ", new_user_registration_path %>
+              </li>
+              <li>
+                <%= link_to " login ", new_user_session_path %>
+              </li>
 
             <% end %>
 
