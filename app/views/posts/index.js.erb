@@ -1,0 +1,9 @@
+<% @posts.each_slice(3) do |posts| %>
+    $('#posts-container').append("<div class='row'><%=j render(partial: 'post', collection: posts, format: 'html') %></div>");
+<% end %>
+
+<% if @posts.current_page == @posts.total_pages %>
+  $('#view-more').remove();
+<% else %>
+  $('#view-more a').attr('href', '<%= url_for(page: @posts.current_page + 1) %>');
+<% end %>

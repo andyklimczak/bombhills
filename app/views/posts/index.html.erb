@@ -5,32 +5,13 @@
   <div class="container" id="posts-container">
     <% @posts.each_slice(3) do |posts| %>
       <div class="row">
-        <% posts.each do |post| %>
-          <div class="col-sm-4 col-md-4" id="thumbnail-container">
-            <div class="thumbnail">
-              <%= link_to post_path(post) do %>
-                <% if post.type == "ImagePost" %>
-                  <%= image_tag post.image(:thumb), class: 'img-responsive' %>
-                <% else %>
-                  <%= preview post.video_url %>
-                <% end %>
-              <% end %>
-              <div class="caption">
-                <%= link_to post_path(post) do %>
-                  <h3><%= post.title %></h3>
-                <% end %>
-                <p><%= post.description %></p>
-                <p>
-                  <%= link_to 'User', show_user_path(post.user), :class => 'btn btn-primary', id: 'user-btn' %>
-                  <% if post.spot %>
-                    <%= link_to 'Locate', spots_path(id: post.spot.id), class: 'btn btn-default' %>
-                  <% end %>
-                </p>
-              </div>
-            </div>
-          </div>
-        <% end %>
+        <%= render partial: 'post', collection: posts %>
       </div>
     <% end %>
   </div>
+  <% unless @posts.current_page == @posts.total_pages %>
+    <p id="view-more">
+      <%= link_to('View More', url_for(page: @posts.current_page + 1), remote: true) %>
+    </p>
+  <% end %>
 </div>
