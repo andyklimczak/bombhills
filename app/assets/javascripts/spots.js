@@ -6,7 +6,7 @@ var mymap;
 function initMap() {
   if ($('#map-id').length) {
     var params = {
-      attribution: 'Bombhills 2016',
+      attribution: 'Bombhills',
       maxZoom: 30,
       id: 'andyklimczak.096gbnif',
       accessToken: 'pk.eyJ1IjoiYW5keWtsaW1jemFrIiwiYSI6ImNpb3Vscm54bTAwdWV1bG01bGgzZHIyZ24ifQ.RDMsT_UvZBarJoRPGnjFmg'
