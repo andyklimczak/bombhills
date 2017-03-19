@@ -5,15 +5,19 @@ var mymap;
  */
 function initMap() {
   if ($('#map-id').length) {
-    mymap = L.map('map-id', { zoomControl: false });
-    L.control.zoom({position: 'bottomright'}).addTo(mymap);
-
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    var params = {
       attribution: 'Bombhills 2016',
       maxZoom: 30,
       id: 'andyklimczak.096gbnif',
       accessToken: 'pk.eyJ1IjoiYW5keWtsaW1jemFrIiwiYSI6ImNpb3Vscm54bTAwdWV1bG01bGgzZHIyZ24ifQ.RDMsT_UvZBarJoRPGnjFmg'
-    }).addTo(mymap);
+    };
+    var normalLayer = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', params);
+    var trafficLayer = L.tileLayer('https://api.mapbox.com/styles/v1/andyklimczak/cj0g7o2vn002f2rqfpycenw14/tiles/256/{z}/{x}/{y}?access_token={accessToken}', params);
+    mymap = L.map('map-id', {
+      zoomControl: false,
+      layers: [normalLayer, trafficLayer]
+    });
+    L.control.zoom({position: 'bottomright'}).addTo(mymap);
 
     mymap.on('load', loadPoints);
     mymap.setView(getInitialView(), 12);
