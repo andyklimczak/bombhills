@@ -20,6 +20,8 @@ class Comments extends React.Component {
   renderCommentBox() {
     if(this.props.currentUser) {
       return <CommentBox commentableId={this.props.resource.id} commentableType={this.props.commentableType} handleSubmit={this.handleSubmit} />
+    } else {
+      return <h5>Login to comment</h5>
     }
   }
   renderComments() {
