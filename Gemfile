@@ -37,7 +37,7 @@ gem 'react-rails'
 gem 'sass-rails'
 gem 'sitemap_generator'
 gem 'turbolinks'
-gem 'uglifier'
+gem 'uglifier', '~> 3.0.4'
 gem 'underscore-rails'
 
 group :development, :test do
