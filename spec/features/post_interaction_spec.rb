@@ -45,6 +45,7 @@ RSpec.describe 'post interactions', type: :feature do
     expect(spot.posts.count).to eq(1)
     expect(user.posts.first.title).to eq('Taylor Swift')
     expect(user.posts.first.image_file_name).to eq('pic.jpg')
+    expect(user.posts.first.image.url(:thumb)).not_to eq('pic.jpg')
     expect(user.posts.first.description).to eq('Based')
   end
 

@@ -76,7 +76,12 @@ RSpec.describe User, type: :model do
 
   it 'has avatar url with no image' do
     user = create(:user)
-    expect(user.avatar_url).to match(%r{/pic.jpg})
+    expect(user.avatar.url).not_to be_nil
+  end
+
+  it 'has hashed avatar url' do
+    user = create(:user)
+    expect(user.avatar.url(:thumb)).not_to match(%r{/pic.jpg})
   end
 
   context 'dependent destroy' do

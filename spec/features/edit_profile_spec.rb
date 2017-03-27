@@ -67,6 +67,7 @@ RSpec.describe 'edit user', type: :feature do
     @user.reload
     expect(page).to have_current_path(show_user_path(@user))
     expect(@user.avatar_file_name).to eq('pic.jpg')
+    expect(@user.avatar.url(:thumb)).not_to eq('pic.jpg')
   end
 
   it 'go to profile page' do
