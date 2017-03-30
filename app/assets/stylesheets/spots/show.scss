@@ -77,45 +77,37 @@
   }
 
   .spot-info-container {
-    background: $primary-color;
+    background: $white;
     box-shadow: -5px 3px 18px -3px rgba(0, 0, 0, .30);
     flex-basis: 0;
     flex-grow: 10;
     height: inherit;
+    overflow: auto;
     text-align: left;
-
-    .title-container {
-      background: url('spotinfopic.jpg');
-      background-position: center;
-      background-size: cover;
-      height: 175px;
-      margin-bottom: 25px;
-    }
 
     .show-spot-content {
       height: inherit;
+      padding: 2em 4em;
+
+      a {
+        &:hover {
+          background-color: transparent;
+          color: $primary-color;
+        }
+      }
 
       h1 {
-        color: $white;
-        font-family: $font-sans;
-        font-size: 32px;
+        color: $primary-color;
+        font-family: $font-cursive;
+        font-size: 38px;
         font-weight: $thin;
         letter-spacing: 1px;
         margin-top: 0;
-        padding: 0 15;
-      }
-
-      p {
-        color: $white;
-        font-family: $font-sans;
-        font-size: 18px;
-        font-weight: $thin;
-        padding: 0 15;
+        padding: 1em 0;
       }
 
       mark {
         background: 0;
-        color: $white;
         letter-spacing: 1px;
         padding: 0;
       }
@@ -125,55 +117,34 @@
     // spot meetups content
 
     .spot-meetups-content {
-      font-family: 'Kanit', sans-serif;
-      padding: 0;
+      font-family: $font-cursive;
       text-align: left;
 
-      p {
-        font-size: 18px;
-        line-height: 22px;
-      }
+      .meetups-list {
+        margin: 3em 0;
 
-      a {
-        background: #0f0f0f;
-        border-radius: 6px;
-        box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, .75);
-        color: $white;
-        cursor: pointer;
-        font-size: 26px;
-        font-weight: $thin;
-        margin-left: 15px;
-        padding: 5px 10px;
-      }
+        h2 {
+          font-family: $font-cursive;
+          margin-bottom: 0;
 
-      a:hover {
-        background: #022347;
-        text-decoration: none;
-      }
+        }
 
-      &:hover {
-        text-decoration: none;
+        .time {
+          font-size: small;
+          font-style: italic;
+        }
+
+        .description {
+          font-size: larger;
+          margin: 1em 0;
+        }
       }
     }
 
     //spots posts content
 
     .spot-posts-content {
-      box-flex: 2;
-      overflow: auto;
-      padding: 0;
-    }
-
-    //spots other content
-
-    .spot-other-content {
-      box-flex: 2;
-      overflow: auto;
-      padding: 0;
-    }
-
-    .create-meetup-btn {
-      margin-bottom: 25px;
+      flex-grow: 2;
     }
   }
 }

@@ -18,87 +18,106 @@
       <span class="glyphicon glyphicon-camera"></span>
       <p>POSTS</p>
     </div>
-    <div class="menu-child spot-other">
-      <span class="glyphicon glyphicon-comment"></span>
-      <p>COMMENTS</p>
-    </div>
   </div>
 
   <div class="spot-info-container">
     <div class="spot-info-content show-spot-content" id="spot-info-content">
-      <div class="title-container">
-      </div>
       <div class="content-container">
         <h1>
-        <%= @spot.title %>
+          <%= @spot.title %>
         </h1>
         <p>
           <%= @spot.description %>
         </p>
         <p>
+          <mark>Difficulty:</mark>
           <%= @spot.difficulty %>
         </p>
         <p>
-          <mark>traffic </mark>
+          <mark>Traffic:</mark>
           <%= @spot.traffic%>
         </p>
+      </div>
+      <div class="comments-container">
+        <h2>
+          Comments
+        </h2>
+        <%= react_component('Comments', { resource: JSON.parse(render(template: 'spots/show.json.jbuilder')), commentableType: 'Spot', currentUser: current_user }) %>
       </div>
     </div>
 
     <div class="spot-meetups-content show-spot-content" style="display:none;">
-      <div class="title-container">
-      </div>
-      <p>
-        Set a time to meetup here for a group
-      </p>
-      </br>
-      <%= link_to 'meetup', spot_meetups_path(@spot) %>
-    </div>
-
-    <div class="spot-posts-content show-spot-content" style="display:none;">
-      <div class="title-container">
-      </div>
-      <% if @spot.posts.any? %>
-        <% @spot.posts.each_slice(2) do |posts| %>
-          <div class="row">
-
-            <% posts.each do |post| %>
-              <div class="col-sm-12 col-md-12" id="thumbnail-container">
-                <div class="thumbnail">
-                  <% if post.type == "ImagePost" %>
-                    <%= image_tag post.image.url(:medium) %>
-                  <% else %>
-                    <%= embed post.video_url %>
-                  <% end %>
-                  <div class="caption">
-                    <%= link_to post_path(post) do %>
-                      <h3><%= post.title %></h3>
-                    <% end %>
-                    <p><%= post.description %></p>
-                    <p>
-                      <%= link_to 'User', show_user_path(post.user), :class => 'btn btn-primary', id: 'user-btn' %>
-                      <% if post.spot %>
-                        <%= link_to 'Find', spots_path(id: post.spot.id), class: 'btn btn-default' %>
-                      <% end %>
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <h1>
+        Upcoming Meetups for <%= @spot.title %>
+    </h1>
+    <%= link_to 'All meetups', spot_meetups_path(@spot) %>
+    <% if @spot.meetups.any? %>
+      <div class="meetups-list">
+        <% @spot.meetups.each do |meetup| %>
+          <div class="meetups-list-item">
+            <h2>
+              <%= link_to spot_meetup_path(@spot, meetup) do %>
+                <%= meetup.title %>
+              <% end %>
+            </h2>
+            <p class="time">
+              <%= distance_of_time_in_words_to_now(meetup.time) %> on <%= meetup.time.strftime("%A %B %d %Y %I:%M %p %Z") %>
+            </p>
+            <p class="description">
+              <%= meetup.description %>
+            </p>
+            <% if meetup.meetup_attendees.size > 0 %>
+              <p class="count">
+                <%= meetup.meetup_attendees.size %> attendees
+              </p>
+            <% end %>
+            <% unless meetup == @spot.meetups.last %>
+              <hr>
             <% end %>
           </div>
         <% end %>
-      <% else %>
-        No posts
-      <% end %>
-    </div>
-
-    <div class="spot-other-content show-spot-content" style="display:none;">
-      <div class="title-container">
       </div>
-      <div class="comments-container">
-        <%= react_component('Comments', { resource: JSON.parse(render(template: 'spots/show.json.jbuilder')), commentableType: 'Spot', currentUser: current_user }) %>
-      </div>
-    </div>
+    <% else %>
+      <p>
+        No meetups for this spot, why not create one?
+      </p>
+    <% end %>
   </div>
 
+  <div class="spot-posts-content show-spot-content" style="display:none;">
+    <% if @spot.posts.any? %>
+      <% @spot.posts.each_slice(2) do |posts| %>
+        <div class="row">
+
+          <% posts.each do |post| %>
+            <div class="col-sm-6 col-md-6">
+              <div class="thumbnail">
+                <% if post.type == "ImagePost" %>
+                  <%= image_tag post.image.url(:medium) %>
+                <% else %>
+                  <%= embed post.video_url %>
+                <% end %>
+                <div class="caption">
+                  <h3>
+                    <%= link_to post_path(post) do %>
+                      <%= post.title %>
+                    <% end %>
+                  </h3>
+                  <p><%= post.description %></p>
+                  <p>
+                    <%= link_to 'User', show_user_path(post.user), :class => 'btn btn-primary', id: 'user-btn' %>
+                    <% if post.spot %>
+                      <%= link_to 'Find', spots_path(id: post.spot.id), class: 'btn btn-default' %>
+                    <% end %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% else %>
+      No posts
+    <% end %>
+  </div>
 </div>

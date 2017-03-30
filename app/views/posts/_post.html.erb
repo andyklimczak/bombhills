@@ -8,9 +8,11 @@
       <% end %>
     <% end %>
     <div class="caption">
-      <%= link_to post_path(post) do %>
-        <h3><%= post.title %></h3>
-      <% end %>
+      <h3>
+        <%= link_to post_path(post) do %>
+          <%= post.title %>
+        <% end %>
+      </h3>
       <p><%= post.description %></p>
       <p>
         <%= link_to 'User', show_user_path(post.user), :class => 'btn btn-primary', id: 'user-btn' %>

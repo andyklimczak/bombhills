@@ -13,12 +13,14 @@
     margin-top: 0;
 
     &:hover {
-      background-color: $black;
+      background-color: transparent;
     }
   }
 
   a {
     &:hover {
+      background-color: transparent;
+      color: $primary-color;
       text-decoration: none;
     }
   }

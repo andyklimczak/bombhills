@@ -7,7 +7,6 @@ RSpec.describe 'comment interactions', type: :feature, js: true do
     login_as user, scope: :user
     spot = create(:spot)
     visit spot_path(spot)
-    find('.spot-other').click # open comments section
 
     within('.comment-box') do
       textarea = find('.comment-textarea')
@@ -26,7 +25,6 @@ RSpec.describe 'comment interactions', type: :feature, js: true do
     spot = create(:spot)
     Comment.build_from(spot, user.id, 'Test comment').save
     visit spot_path(spot)
-    find('.spot-other').click # open comments section
 
     expect(spot.comment_threads.size).to eq(1)
     find('.btn-delete').click
