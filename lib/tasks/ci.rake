@@ -9,7 +9,7 @@ namespace :ci do
     sh 'bundle exec rubocop'
     sh 'bundle exec scss-lint'
     sh 'bundle exec brakeman'
-    sh 'bundle exec bundle-audit'
+    sh 'bundle exec bundle-audit check --update'
   end
 
   # run the lint checks and tests
