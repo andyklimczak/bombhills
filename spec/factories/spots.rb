@@ -1,4 +1,30 @@
 # frozen_string_literal: true
+# == Schema Information
+#
+# Table name: spots
+#
+#  id          :integer          not null, primary key
+#  latitude    :decimal(30, 25)
+#  longitude   :decimal(30, 25)
+#  description :string
+#  title       :string
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  traffic     :string
+#  difficulty  :integer
+#  slug        :string
+#
+# Indexes
+#
+#  index_spots_on_slug     (slug) UNIQUE
+#  index_spots_on_user_id  (user_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (user_id => users.id)
+#
+
 require 'ffaker'
 
 FactoryGirl.define do

@@ -10,6 +10,7 @@ AllCops:
     - 'config/**/*'
     - 'bin/**/*'
     - 'vendor/**/*'
+  DisplayCopNames: true
 
 Rails:
   Enabled: true
