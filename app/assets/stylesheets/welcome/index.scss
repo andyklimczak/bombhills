@@ -67,10 +67,8 @@
   background: none;
   height: 600px;
 
-  input {
-    @include placeholder {
-      color: $white;
-    }
+  input::placeholder {
+    color: $white;
   }
 
   // nav
