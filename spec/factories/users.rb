@@ -26,6 +26,9 @@
 #  confirmation_token     :string
 #  confirmed_at           :datetime
 #  confirmation_sent_at   :datetime
+#  failed_attempts        :integer          default(0), not null
+#  unlock_token           :string
+#  locked_at              :datetime
 #
 # Indexes
 #
@@ -33,6 +36,7 @@
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #  index_users_on_slug                  (slug) UNIQUE
+#  index_users_on_unlock_token          (unlock_token) UNIQUE
 #  index_users_on_username              (username) UNIQUE
 #
 
