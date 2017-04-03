@@ -1,9 +1,10 @@
 # frozen_string_literal: true
+
 class MeetupsController < ApplicationController
-  before_action :set_meetup, only: [:show, :edit, :update, :destroy]
+  before_action :set_meetup, only: %i[show edit update destroy]
   before_action :set_spot, except: [:index_all]
-  before_action :authenticate_user!, except: [:show, :index, :index_all]
-  before_action :require_permission, except: [:show, :index, :index_all, :new, :create]
+  before_action :authenticate_user!, except: %i[show index index_all]
+  before_action :require_permission, except: %i[show index index_all new create]
 
   # GET /spots/1/meetups
   # GET /spots/1/meetups.json
@@ -15,7 +16,7 @@ class MeetupsController < ApplicationController
   # GET /meetups.json
   def index_all
     @meetups = Meetup.where('time > ?', DateTime.now.getlocal).order(time: :asc)
-    @meetups = @meetups.includes(:spot).references(:spots).merge(Spot.near(params[:meetup_search], 100)) unless params[:meetup_search].blank?
+    @meetups = @meetups.includes(:spot).references(:spots).merge(Spot.near(params[:meetup_search], 100)) if params[:meetup_search].present?
   end
 
   # GET /spots/1/meetups/1

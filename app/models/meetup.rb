@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: meetups
@@ -25,7 +26,7 @@
 
 class Meetup < ApplicationRecord
   include FriendlyId
-  friendly_id :slug_candidates, use: [:slugged, :finders, :scoped], scope: :spot
+  friendly_id :slug_candidates, use: %i[slugged finders scoped], scope: :spot
   belongs_to :spot
   belongs_to :user
   has_many :meetup_attendees, dependent: :destroy
@@ -50,7 +51,7 @@ class Meetup < ApplicationRecord
   def slug_candidates
     [
       :title,
-      [:title, :time]
+      %i[title time]
     ]
   end
 end

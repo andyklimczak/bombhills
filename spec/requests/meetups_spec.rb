@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Meetups', type: :request do
@@ -9,6 +10,7 @@ RSpec.describe 'Meetups', type: :request do
       'CONTENT_TYPE' => 'application/json'
     }
   end
+
   before do
     @spot = create(:spot)
   end

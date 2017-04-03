@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: posts
@@ -30,7 +31,7 @@
 
 class Post < ApplicationRecord
   include FriendlyId
-  friendly_id :title, use: [:slugged, :finders]
+  friendly_id :title, use: %i[slugged finders]
   acts_as_commentable
   belongs_to :user
   belongs_to :spot

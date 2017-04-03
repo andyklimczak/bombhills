@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module PostsHelper
   def embed(youtube_url)
     youtube_id = youtube_id(youtube_url)

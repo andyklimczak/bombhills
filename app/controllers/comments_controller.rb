@@ -1,7 +1,8 @@
 # frozen_string_literal: true
+
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:destroy]
-  before_action :authenticate_user!, except: [:create, :destroy]
+  before_action :authenticate_user!, except: %i[create destroy]
   before_action :require_permission, except: [:create]
 
   # POST /comments

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class MessageMailer < ApplicationMailer
   default to: 'bombhillscommunity@gmail.com'
   default from: 'bombhillscommunity@gmail.com'

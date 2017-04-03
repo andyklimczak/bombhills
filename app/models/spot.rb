@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: spots
@@ -27,13 +28,13 @@
 
 class Spot < ApplicationRecord
   include FriendlyId
-  friendly_id :slug_candidates, use: [:slugged, :finders]
+  friendly_id :slug_candidates, use: %i[slugged finders]
   acts_as_commentable
   belongs_to :user
   has_many :posts, dependent: :destroy
   has_many :meetups, dependent: :destroy
   validates :latitude, :longitude, :title, :difficulty, :traffic, presence: true
-  enum difficulty: [:Beginner, :Intermediate, :Professional]
+  enum difficulty: %i[Beginner Intermediate Professional]
   validate :daily_quota, on: :create
   reverse_geocoded_by :latitude, :longitude
   after_validation :geocode
@@ -49,7 +50,7 @@ class Spot < ApplicationRecord
   def slug_candidates
     [
       :title,
-      [:title, :latitude, :longitude]
+      %i[title latitude longitude]
     ]
   end
 end

@@ -28,6 +28,8 @@ Metrics/BlockLength:
   Exclude:
     - '**/*_spec.rb'
     - '**/*_helper.rb'
+    - 'lib/tasks/**/*'
+    - 'Guardfile'
 
 RSpec/MultipleExpectations:
   Enabled: false
@@ -37,3 +39,9 @@ RSpec/ExampleLength:
 
 RSpec/InstanceVariable:
   Enabled: false
+
+Style/FileName:
+  Exclude:
+    - 'Gemfile'
+    - 'Vagrantfile'
+    - 'Guardfile'

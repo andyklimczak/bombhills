@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 ruby File.open('.ruby-version', 'rb') { |f| f.read.chomp }
 
@@ -48,7 +50,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'awesome_print', require:'ap'
+  gem 'awesome_print', require: 'ap'
   gem 'better_errors'
   gem 'brakeman', require: false
   gem 'bundler-audit'

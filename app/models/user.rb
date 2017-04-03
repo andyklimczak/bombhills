@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: users
@@ -48,7 +49,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :lockable
   attr_accessor :login
-  friendly_id :username, use: [:slugged, :finders]
+  friendly_id :username, use: %i[slugged finders]
 
   has_many :spots, -> { order 'created_at desc' }, dependent: :destroy
   has_many :posts, -> { order 'created_at desc' }, dependent: :destroy

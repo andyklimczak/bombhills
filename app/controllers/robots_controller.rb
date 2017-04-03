@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class RobotsController < ApplicationController
   # No layout
   layout false

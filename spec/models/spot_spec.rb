@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Spot, type: :model do
@@ -42,7 +43,7 @@ RSpec.describe Spot, type: :model do
   context 'validations' do
     subject { create(:spot) }
 
-    it { is_expected.to define_enum_for(:difficulty).with([:Beginner, :Intermediate, :Professional]) }
+    it { is_expected.to define_enum_for(:difficulty).with(%i[Beginner Intermediate Professional]) }
     it { is_expected.to allow_values('Beginner', 'Intermediate', 'Professional').for(:difficulty) }
     it { is_expected.to allow_values(0, 1, 2).for(:difficulty) }
     it { is_expected.to belong_to :user }

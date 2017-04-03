@@ -1,8 +1,9 @@
 # frozen_string_literal: true
+
 class SpotsController < ApplicationController
-  before_action :set_spot, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index]
-  before_action :require_permission, except: [:show, :index, :create, :new]
+  before_action :set_spot, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[show index]
+  before_action :require_permission, except: %i[show index create new]
 
   # GET /spots
   # GET /spots.json
