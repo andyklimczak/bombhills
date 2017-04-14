@@ -1,0 +1,1 @@
+SqlPatches.patch %w(pg)

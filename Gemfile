@@ -34,6 +34,7 @@ gem 'paperclip'
 gem 'pg'
 gem 'poltergeist'
 gem 'puma'
+gem 'rack-mini-profiler'
 gem 'rack-timeout'
 gem 'rails'
 gem 'rails_12factor', group: :production

@@ -299,6 +299,8 @@ GEM
     rack (2.0.1)
     rack-livereload (0.3.16)
       rack
+    rack-mini-profiler (0.10.2)
+      rack (>= 1.2.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rack-timeout (0.4.2)
@@ -502,6 +504,7 @@ DEPENDENCIES
   pry-rails
   puma
   rack-livereload
+  rack-mini-profiler
   rack-timeout
   rails
   rails_12factor
