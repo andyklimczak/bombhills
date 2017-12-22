@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby File.open('.ruby-version', 'rb') { |f| f.read.chomp }
 
 gem 'acts_as_commentable_with_threading'
-gem 'annotate', git: 'https://github.com/ctran/annotate_models.git', branch: 'develop'
+gem 'annotate'
 gem 'autoprefixer-rails'
 gem 'binding_of_caller'
 gem 'bootstrap-sass'

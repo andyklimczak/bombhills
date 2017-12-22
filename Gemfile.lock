@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/ctran/annotate_models.git
-  revision: 8341983f263e662c5e528b04d0eeec908daec1ad
-  branch: develop
-  specs:
-    annotate (2.7.1)
-      activerecord (>= 3.2, < 6.0)
-      rake (>= 10.4)
-
-GIT
   remote: https://github.com/mailboxer/mailboxer.git
   revision: fbd2f0ffc71e06ae9c3670061547b16600db75e3
   specs:
@@ -61,6 +52,9 @@ GEM
       awesome_nested_set (>= 3.0)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    annotate (2.7.2)
+      activerecord (>= 3.2, < 6.0)
+      rake (>= 10.4, < 13.0)
     arel (7.1.4)
     ast (2.3.0)
     autoprefixer-rails (6.7.7.2)
@@ -336,7 +330,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.2.2)
       rake
-    rake (12.0.0)
+    rake (12.3.0)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
@@ -465,7 +459,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_commentable_with_threading
-  annotate!
+  annotate
   autoprefixer-rails
   awesome_print
   better_errors
