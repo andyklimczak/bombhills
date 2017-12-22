@@ -74,6 +74,6 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec-retry'
   gem 'shoulda'
-  gem 'shoulda-matchers', '~> 3.1'
+  gem 'shoulda-matchers'
   gem 'simplecov', require: false
 end
