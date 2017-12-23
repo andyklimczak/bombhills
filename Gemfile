@@ -38,7 +38,7 @@ gem 'rack-mini-profiler'
 gem 'rack-timeout'
 gem 'rails'
 gem 'rails_12factor', group: :production
-gem 'react-rails'
+gem 'react-rails', '~> 2.3.0'
 gem 'sass-rails'
 gem 'sitemap_generator'
 gem 'turbolinks'

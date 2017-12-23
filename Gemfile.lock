@@ -335,7 +335,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    react-rails (2.1.0)
+    react-rails (2.3.1)
       babel-transpiler (>= 0.7.0)
       connection_pool
       execjs
@@ -505,7 +505,7 @@ DEPENDENCIES
   rack-timeout
   rails
   rails_12factor
-  react-rails
+  react-rails (~> 2.3.0)
   rspec-rails
   rspec-retry
   rubocop
