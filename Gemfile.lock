@@ -189,9 +189,8 @@ GEM
     geocoder (1.4.3)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    gon (6.1.0)
+    gon (6.2.0)
       actionpack (>= 3.0)
-      json
       multi_json
       request_store (>= 1.0)
     guard (2.14.1)
@@ -260,7 +259,7 @@ GEM
     minitest (5.10.3)
     momentjs-rails (2.17.1)
       railties (>= 3.1)
-    multi_json (1.12.1)
+    multi_json (1.12.2)
     nenv (0.3.0)
     nio4r (2.1.0)
     nokogiri (1.8.1)
