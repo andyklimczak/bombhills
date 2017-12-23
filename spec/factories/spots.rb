@@ -28,7 +28,7 @@
 
 require 'ffaker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :spot, aliases: [:commentable] do
     title { "Spot Title #{Random.rand(10_000)}" }
     traffic 'Spot traffic'

@@ -24,7 +24,7 @@
 #  fk_rails_...  (spot_id => spots.id)
 #
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :meetup, aliases: [:attending_meetups] do
     title { "Meetup Title #{Random.rand(10_000)}" }
     description 'Meetup description'

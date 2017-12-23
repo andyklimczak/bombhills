@@ -2,7 +2,7 @@
 
 require 'ffaker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :image_post do
     title { "Image Post Title #{Random.rand(10_000)}" }
     image { fixture_file_upload 'spec/fixtures/pic.jpg', 'image/jpeg' }

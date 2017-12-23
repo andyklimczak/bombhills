@@ -13,7 +13,6 @@ gem 'bootstrap3-datetimepicker-rails'
 gem 'bourbon'
 gem 'chosen-rails'
 gem 'devise'
-gem 'factory_girl_rails'
 gem 'fetch-rails'
 gem 'ffaker'
 gem 'fog-aws'
@@ -46,6 +45,7 @@ gem 'uglifier'
 gem 'underscore-rails'
 
 group :development, :test do
+  gem 'factory_bot_rails'
   gem 'parallel_tests'
   gem 'rspec-rails'
 end

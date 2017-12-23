@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rubygems'
-require 'factory_girl'
+require 'factory_bot'
 require 'capybara/rspec'
 require 'simplecov'
 require 'chosen-rails/rspec'

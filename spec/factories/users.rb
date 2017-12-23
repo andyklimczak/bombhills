@@ -43,7 +43,7 @@
 
 require 'ffaker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :user, aliases: [:attending_users] do
     username { "username#{Random.rand(10_000)}" }
     email { "#{username}@email.com" }
