@@ -12,3 +12,4 @@ Website that helps longboarders find and share media and locations to ride.
 4. `rails s`
 
 More thorough instructions for vagrant can be found on the [wiki pages](https://github.com/andyklimczak/bomb-hills/wiki/Vagrant).
+test
