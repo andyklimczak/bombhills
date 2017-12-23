@@ -516,7 +516,7 @@ DEPENDENCIES
   sass-rails
   scss_lint
   shoulda
-  shoulda-matchers
+  shoulda-matchers (~> 3.1)
   simplecov
   sitemap_generator
   spring
