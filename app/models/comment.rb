@@ -23,7 +23,7 @@
 #  index_comments_on_user_id                              (user_id)
 #
 
-class Comment < ActiveRecord::Base
+class Comment < ApplicationRecord
   default_scope { order(created_at: :asc) }
   acts_as_nested_set scope: %i[commentable_id commentable_type]
 

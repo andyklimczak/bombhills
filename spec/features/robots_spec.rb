@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Robots', type: :feature do
   context 'canonical host' do
-    scenario 'allow robots to index the site' do
+    it 'allow robots to index the site' do
       Capybara.app_host = 'http://www.bombhills.com'
       visit '/robots.txt'
       Capybara.app_host = nil
@@ -18,7 +18,7 @@ RSpec.describe 'Robots', type: :feature do
   end
 
   context 'non-canonical host' do
-    scenario 'deny robots to index the site' do
+    it 'deny robots to index the site' do
       visit '/robots.txt'
 
       expect(page).to have_content('# DISALLOW ROBOTS')

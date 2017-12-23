@@ -51,6 +51,6 @@ FactoryBot.define do
     password_confirmation { password }
     motto 'User motto'
     avatar { fixture_file_upload 'spec/fixtures/pic.jpg', 'image/jpeg' }
-    confirmed_at 7.days.ago
+    confirmed_at { 7.days.ago }
   end
 end

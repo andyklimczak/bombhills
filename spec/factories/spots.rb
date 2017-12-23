@@ -35,7 +35,7 @@ FactoryBot.define do
     description 'Spot description'
     latitude 38
     longitude 122
-    difficulty %w[Beginner Intermediate Professional].sample
+    difficulty { %w[Beginner Intermediate Professional].sample }
     user
   end
 end

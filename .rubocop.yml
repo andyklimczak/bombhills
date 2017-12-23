@@ -40,7 +40,22 @@ RSpec/ExampleLength:
 RSpec/InstanceVariable:
   Enabled: false
 
-Style/FileName:
+RSpec/ContextWording:
+  Enabled: false
+
+Style/DateTime:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Naming/FileName:
   Exclude:
     - 'Gemfile'
     - 'Vagrantfile'
