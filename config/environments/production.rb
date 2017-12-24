@@ -100,7 +100,7 @@ Rails.application.configure do
     :domain               => "gmail.com",
     :user_name            => ENV['GMAIL_USERNAME'],
     :password             => ENV['GMAIL_PASSWORD'],
-    :authentication       => :plain,
+    :authentication       => :authentication,
     :enable_starttls_auto => true
   }
 end
