@@ -35,7 +35,17 @@ Shoulda::Matchers.configure do |config|
 end
 
 Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, window_size: [1920, 1080], phantomjs_logger: File.open(Rails.root.join('log', 'test_phantomjs.log'), 'a'), js_errors: false, timeout: 1.minute)
+  Capybara::Poltergeist::Driver.new(
+    app,
+    window_size: [1920, 1080],
+    phantomjs_logger: File.open(
+      Rails.root.join('log', 'test_phantomjs.log'),
+      'a'
+    ),
+    js_errors: false,
+    timeout: 1.minute,
+    inspector: true
+  )
 end
 Capybara.javascript_driver = :poltergeist
 
