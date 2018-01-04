@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/andyklimczak/bombhills.svg?token=Hk7aGaxbxnnHFYhzvcJG&branch=master)](https://travis-ci.com/andyklimczak/bombhills)
+[![Build Status](https://travis-ci.org/andyklimczak/bombhills.svg?branch=master)](https://travis-ci.org/andyklimczak/bombhills)
 
 ## README
 ### Description
